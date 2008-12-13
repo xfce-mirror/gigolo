@@ -1,13 +1,12 @@
 #!/usr/bin/make -f
 # Waf Makefile wrapper
-WAF_HOME=/home/enrico/projects/sion
 
 all:
-	cd .. && /home/enrico/projects/sion/waf build
+	cd .. && ./waf build
 
 all-debug:
-	cd .. && /home/enrico/projects/sion/waf -v build
+	cd .. && ./waf -v build
 
 clean:
-	cd .. && /home/enrico/projects/sion/waf clean
+	cd .. && ./waf clean
 

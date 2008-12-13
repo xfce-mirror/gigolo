@@ -1,0 +1,5 @@
+2008-12-13  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * configure, Makefile, src/Makefile:
+   Fix creation of the Makefile and usage of --prefix=...
+

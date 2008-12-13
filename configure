@@ -95,7 +95,6 @@ generateMakefile()
 	cat > Makefile << EOF
 #!/usr/bin/make -f
 # Waf Makefile wrapper
-WAF_HOME=$CUR_DIR
 
 all:
 	@$WAF build
@@ -107,17 +106,17 @@ all-progress:
 	@$WAF -p build
 
 install:
-	if test -n "\$(DESTDIR)"; then \\
-		$WAF install --yes --destdir="\$(DESTDIR)" --prefix="$PREFIX"; \\
+	@if test -n "\$(DESTDIR)"; then \\
+		$WAF install --destdir="\$(DESTDIR)"; \\
 	else \\
-		$WAF install --yes --prefix="$PREFIX"; \\
+		$WAF install; \\
 	fi;
 
 uninstall:
 	@if test -n "\$(DESTDIR)"; then \\
-		$WAF uninstall --destdir="\$(DESTDIR)" --prefix="$PREFIX"; \\
+		$WAF uninstall --destdir="\$(DESTDIR)"; \\
 	else \\
-		$WAF uninstall --prefix="$PREFIX"; \\
+		$WAF uninstall; \\
 	fi;
 
 clean:
@@ -144,7 +143,6 @@ EOF
 	cat > src/Makefile << EOF
 #!/usr/bin/make -f
 # Waf Makefile wrapper
-WAF_HOME=$CUR_DIR
 
 all:
 	cd .. && $WAF build
@@ -161,17 +159,8 @@ EOF
 checkPython
 checkWAF
 
-PREFIX=/usr/local
-case $1 in
-    --prefix)
-        PREFIX=$2
-        ;;
-esac
-
-export PREFIX
 generateMakefile
 
-
-"${WAF}" configure --prefix "${PREFIX}"
+"${WAF}" configure $@
 
 exit $?
