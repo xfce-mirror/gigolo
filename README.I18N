@@ -1,0 +1,33 @@
+Quick Guide for new translations
+--------------------------------
+
+If you want to translate Sion into another language, please check
+whether a translation for your language already exists (check the
+po/ subdirectory.
+Get the SVN version of Sion, change to the po directory and
+start the new translation with:
+
+$ msginit -l ll_CC -o ll.po -i sion.pot
+
+Fill in ll with the language code and CC with the country code.
+For example, to translate Sion into Italian you would type:
+
+$ msginit -l it_IT -o it.po -i sion.pot
+
+This will create a file it.po. This file can be opened with a
+text editor or you can also use a graphical interface.
+I can suggest PoEdit (http://www.poedit.net/), but there are
+several other GUIs.
+
+Make sure you add your language to the file po/LINGUAS.
+Just open the file with a text editor and add your code.
+
+When you have finished editing the file, check the file with:
+
+$ msgfmt -c --check-accelerators=_ it.po
+
+Please take care of menu accelerators(strings containing a "_").
+The "_" character should also be in your translation. Additionally,
+it would be nice if these accelerators are not twice for two strings
+inside a dialog or sub menu.
+

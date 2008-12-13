@@ -1,0 +1,326 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-12 18:57+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:41
+msgid "Print a list of supported URI schemes"
+msgstr ""
+
+#: ../src/main.c:42
+msgid "Be verbose"
+msgstr ""
+
+#: ../src/main.c:43
+msgid "Show version information"
+msgstr ""
+
+#: ../src/main.c:97
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr ""
+
+#: ../src/window.c:171
+msgid "Error"
+msgstr ""
+
+#: ../src/window.c:439
+msgid "Non-local mountpoints can't be opened."
+msgstr ""
+
+#: ../src/window.c:440
+msgid "(not yet implemented)"
+msgstr ""
+
+#: ../src/window.c:884
+msgid "_File"
+msgstr ""
+
+#: ../src/window.c:885
+msgid "_Edit"
+msgstr ""
+
+#: ../src/window.c:886
+msgid "_Actions"
+msgstr ""
+
+#: ../src/window.c:887
+msgid "_Help"
+msgstr ""
+
+#: ../src/window.c:891
+msgid "Create _Bookmark"
+msgstr ""
+
+#: ../src/window.c:893
+msgid "_Edit Bookmarks"
+msgstr ""
+
+#: ../src/window.c:904
+msgid "_Bookmarks"
+msgstr ""
+
+#: ../src/window.c:904
+msgid "Choose a bookmark to connect to"
+msgstr ""
+
+#: ../src/window.c:953
+msgid "Mounted"
+msgstr ""
+
+#: ../src/window.c:961 ../src/bookmarkdialog.c:306
+msgid "URI Scheme"
+msgstr ""
+
+#: ../src/window.c:969 ../src/bookmarkdialog.c:298
+msgid "Name"
+msgstr ""
+
+#: ../src/window.c:1031 ../src/window.c:1105 ../sion.desktop.in.h:2
+msgid "Sion"
+msgstr ""
+
+#: ../src/menubuttonaction.c:183
+msgid "Connect"
+msgstr ""
+
+#: ../src/passworddialog.c:105
+msgid "Authentication information needed"
+msgstr ""
+
+#: ../src/passworddialog.c:127
+msgid "_Domain:"
+msgstr ""
+
+#: ../src/passworddialog.c:138
+msgid "_Username:"
+msgstr ""
+
+#: ../src/passworddialog.c:150
+msgid "_Password:"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:314
+msgid "Host"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:322
+msgid "Port"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:330
+msgid "Username"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:387
+msgid "Edit Bookmarks"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:104
+msgid "FTP"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:105
+msgid "SSH"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:106
+msgid "Windows share"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:107
+msgid "Secure WebDAV (HTTPS)"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:108
+msgid "WebDAV (HTTP)"
+msgstr ""
+
+#. must always be the last item
+#: ../src/bookmarkeditdialog.c:110
+msgid "Custom Location"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:513
+msgid "Create Bookmark"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:520
+msgid "Edit Bookmark"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:528
+msgid "Connect to Server"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:581
+msgid "_Bookmark name:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:589
+msgid "Service _type:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:612
+msgid "Set the port to 0 to use the default port."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:615
+msgid "_Location (URI):"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:616
+msgid "_Server:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:617
+msgid "_User Name:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:618
+msgid "Optional information:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:619
+msgid "_Port:"
+msgstr ""
+
+#: ../src/preferencesdialog.c:182
+msgid "Icons"
+msgstr ""
+
+#: ../src/preferencesdialog.c:183
+msgid "Text"
+msgstr ""
+
+#: ../src/preferencesdialog.c:184
+msgid "Both"
+msgstr ""
+
+#: ../src/preferencesdialog.c:185
+msgid "Both horizontal"
+msgstr ""
+
+#: ../src/preferencesdialog.c:204
+msgid "Horizontal"
+msgstr ""
+
+#: ../src/preferencesdialog.c:205
+msgid "Vertical"
+msgstr ""
+
+#: ../src/preferencesdialog.c:224
+msgid "Symbols"
+msgstr ""
+
+#: ../src/preferencesdialog.c:225
+msgid "Detailed"
+msgstr ""
+
+#: ../src/preferencesdialog.c:332
+msgid "General"
+msgstr ""
+
+#: ../src/preferencesdialog.c:342
+msgid "Use _HAL based volume manager"
+msgstr ""
+
+#. / TODO fix this string to be more descriptive and clear
+#: ../src/preferencesdialog.c:344 ../src/preferencesdialog.c:352
+msgid ""
+"This option sets the implementation of the volume manager. In general, this "
+"should be left to HAL. Please note, this option requires a restart of Sion."
+msgstr ""
+
+#: ../src/preferencesdialog.c:351
+msgid "Use _Unix based volume manager"
+msgstr ""
+
+#: ../src/preferencesdialog.c:365
+msgid "_File Manager"
+msgstr ""
+
+#: ../src/preferencesdialog.c:373
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr ""
+
+#: ../src/preferencesdialog.c:379
+msgid "Interface"
+msgstr ""
+
+#: ../src/preferencesdialog.c:389
+msgid "_Save window position and geometry"
+msgstr ""
+
+#: ../src/preferencesdialog.c:390
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr ""
+
+#: ../src/preferencesdialog.c:393
+msgid "Show tray _icon"
+msgstr ""
+
+#: ../src/preferencesdialog.c:396
+msgid "Show _toolbar"
+msgstr ""
+
+#: ../src/preferencesdialog.c:402
+msgid "Toolbar St_yle"
+msgstr ""
+
+#: ../src/preferencesdialog.c:413
+msgid "Toolbar _Orientation"
+msgstr ""
+
+#: ../src/preferencesdialog.c:424
+msgid "_View Mode"
+msgstr ""
+
+#: ../src/preferencesdialog.c:484
+msgid "Preferences"
+msgstr ""
+
+#: ../src/backendgvfs.c:191
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Mounted: Yes\n"
+"Type: %s"
+msgstr ""
+
+#: ../src/backendgvfs.c:204
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr ""
+
+#: ../src/backendgvfs.c:381 ../src/backendgvfs.c:412
+msgid "unknown"
+msgstr ""
+
+#: ../src/backendgvfs.c:385 ../src/backendgvfs.c:464
+#, c-format
+msgid "Mounting of \"%s\" failed."
+msgstr ""
+
+#: ../src/backendgvfs.c:416
+#, c-format
+msgid "Unmounting of \"%s\" failed."
+msgstr ""
+
+#: ../sion.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr ""

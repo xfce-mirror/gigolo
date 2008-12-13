@@ -1,0 +1,71 @@
+Sion
+^^^^
+
+
+About
+=====
+Sion is a frontend to easily manage connections to remote filesystems using
+GIO/GVFS. It allows you to quickly connect/mount a remote filesystem and manage
+bookmarks of such.
+
+
+Requirements
+============
+For compiling Sion, you will need the GTK (>= 2.12.0) libraries
+and header files. You will also need its dependency libraries and header
+files, such as Pango, Cairo, Glib and ATK. All these files are available at
+http://www.gtk.org.
+You also need Python for the included Waf build system.
+
+Furthermore you need, of course, a C compiler as well as the intltool package.
+
+
+Installation
+============
+If you have all the above listed requirements on your system installed,
+building the code is easy:
+
+Run the following commands::
+
+    $ ./waf configure
+    $ ./waf build
+    (maybe as root)
+    % ./waf install
+
+To get a list of available options to customize your build, enable debugging
+or to use a different installation prefix, run::
+
+    $ ./waf help
+
+
+Usage
+=====
+You can start Sion in the following ways:
+
+* From the Desktop Environment menu:
+
+  Choose in your application menu of your used Desktop Environment:
+  System --> Sion.
+
+* From the command line:
+
+  To start Sion from a command line, type the following and press Return::
+
+      % sion
+
+* To get a list of available command line options, run::
+
+      % sion --help
+
+
+License
+=======
+Sion is distributed under the terms of the GNU General Public License
+as published by the Free Software Foundation; version 2 of the license.
+A copy of this license can be found in the file COPYING included with
+the source code of this program.
+
+
+Ideas, questions, patches and bug reports
+=========================================
+Send them to me at enrico(at)xfce(dot)org.

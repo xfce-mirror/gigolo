@@ -1,0 +1,330 @@
+# German translations for Sion.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Enrico Tröger <enrico@xfce.org>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sion 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-12 18:57+0100\n"
+"PO-Revision-Date: 2008-11-30 19:17+0100\n"
+"Last-Translator: Enrico Tröger <enrico@xfce.org>\n"
+"Language-Team: German <xfce-i18n@xfce.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/main.c:41
+msgid "Print a list of supported URI schemes"
+msgstr ""
+
+#: ../src/main.c:42
+msgid "Be verbose"
+msgstr "ausführliche Meldungen"
+
+#: ../src/main.c:43
+msgid "Show version information"
+msgstr "Zeige Versionsinformationen"
+
+#: ../src/main.c:97
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr ""
+
+#: ../src/window.c:171
+msgid "Error"
+msgstr ""
+
+#: ../src/window.c:439
+msgid "Non-local mountpoints can't be opened."
+msgstr ""
+
+#: ../src/window.c:440
+msgid "(not yet implemented)"
+msgstr "Noch nicht implementiert."
+
+#: ../src/window.c:884
+msgid "_File"
+msgstr "_Datei"
+
+#: ../src/window.c:885
+msgid "_Edit"
+msgstr "_Bearbeiten"
+
+#: ../src/window.c:886
+msgid "_Actions"
+msgstr "_Aktionen"
+
+#: ../src/window.c:887
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: ../src/window.c:891
+msgid "Create _Bookmark"
+msgstr "Lesezeichen _erstellen"
+
+#: ../src/window.c:893
+msgid "_Edit Bookmarks"
+msgstr "Lesezeichen _bearbeiten"
+
+#: ../src/window.c:904
+msgid "_Bookmarks"
+msgstr "_Lesezeichen"
+
+#: ../src/window.c:904
+msgid "Choose a bookmark to connect to"
+msgstr ""
+
+#: ../src/window.c:953
+msgid "Mounted"
+msgstr ""
+
+#: ../src/window.c:961 ../src/bookmarkdialog.c:306
+msgid "URI Scheme"
+msgstr ""
+
+#: ../src/window.c:969 ../src/bookmarkdialog.c:298
+msgid "Name"
+msgstr "Name"
+
+#: ../src/window.c:1031 ../src/window.c:1105 ../sion.desktop.in.h:2
+msgid "Sion"
+msgstr "Sion"
+
+#: ../src/menubuttonaction.c:183
+#, fuzzy
+msgid "Connect"
+msgstr "_Verbinden"
+
+#: ../src/passworddialog.c:105
+msgid "Authentication information needed"
+msgstr ""
+
+#: ../src/passworddialog.c:127
+msgid "_Domain:"
+msgstr "_Domäne:"
+
+#: ../src/passworddialog.c:138
+msgid "_Username:"
+msgstr "_Benutzername:"
+
+#: ../src/passworddialog.c:150
+msgid "_Password:"
+msgstr "_Passwort:"
+
+#: ../src/bookmarkdialog.c:314
+msgid "Host"
+msgstr "Host"
+
+#: ../src/bookmarkdialog.c:322
+msgid "Port"
+msgstr "Port"
+
+#: ../src/bookmarkdialog.c:330
+msgid "Username"
+msgstr "Benutzername"
+
+#: ../src/bookmarkdialog.c:387
+msgid "Edit Bookmarks"
+msgstr "Lesezeichen bearbeiten"
+
+#: ../src/bookmarkeditdialog.c:104
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/bookmarkeditdialog.c:105
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/bookmarkeditdialog.c:106
+msgid "Windows share"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:107
+msgid "Secure WebDAV (HTTPS)"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:108
+msgid "WebDAV (HTTP)"
+msgstr ""
+
+#. must always be the last item
+#: ../src/bookmarkeditdialog.c:110
+msgid "Custom Location"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:513
+msgid "Create Bookmark"
+msgstr "Lesezeichen erstellen"
+
+#: ../src/bookmarkeditdialog.c:520
+msgid "Edit Bookmark"
+msgstr "Lesezeichen bearbeiten"
+
+#: ../src/bookmarkeditdialog.c:528
+msgid "Connect to Server"
+msgstr "Verbinde zum Server"
+
+#: ../src/bookmarkeditdialog.c:581
+msgid "_Bookmark name:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:589
+msgid "Service _type:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:612
+msgid "Set the port to 0 to use the default port."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:615
+msgid "_Location (URI):"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:616
+msgid "_Server:"
+msgstr "_Server:"
+
+#: ../src/bookmarkeditdialog.c:617
+msgid "_User Name:"
+msgstr "_Benutzername:"
+
+#: ../src/bookmarkeditdialog.c:618
+msgid "Optional information:"
+msgstr "Optionale Informationen:"
+
+#: ../src/bookmarkeditdialog.c:619
+msgid "_Port:"
+msgstr "_Port:"
+
+#: ../src/preferencesdialog.c:182
+msgid "Icons"
+msgstr "Symbole"
+
+#: ../src/preferencesdialog.c:183
+msgid "Text"
+msgstr "Text"
+
+#: ../src/preferencesdialog.c:184
+msgid "Both"
+msgstr "Beides"
+
+#: ../src/preferencesdialog.c:185
+msgid "Both horizontal"
+msgstr "Beides horizontal"
+
+#: ../src/preferencesdialog.c:204
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: ../src/preferencesdialog.c:205
+msgid "Vertical"
+msgstr "Vertikal"
+
+#: ../src/preferencesdialog.c:224
+msgid "Symbols"
+msgstr ""
+
+#: ../src/preferencesdialog.c:225
+msgid "Detailed"
+msgstr ""
+
+#: ../src/preferencesdialog.c:332
+msgid "General"
+msgstr "Allgemeines"
+
+#: ../src/preferencesdialog.c:342
+msgid "Use _HAL based volume manager"
+msgstr ""
+
+#. / TODO fix this string to be more descriptive and clear
+#: ../src/preferencesdialog.c:344 ../src/preferencesdialog.c:352
+msgid ""
+"This option sets the implementation of the volume manager. In general, this "
+"should be left to HAL. Please note, this option requires a restart of Sion."
+msgstr ""
+
+#: ../src/preferencesdialog.c:351
+msgid "Use _Unix based volume manager"
+msgstr ""
+
+#: ../src/preferencesdialog.c:365
+msgid "_File Manager"
+msgstr "_Dateimanager"
+
+#: ../src/preferencesdialog.c:373
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr ""
+
+#: ../src/preferencesdialog.c:379
+msgid "Interface"
+msgstr "Oberfläche"
+
+#: ../src/preferencesdialog.c:389
+msgid "_Save window position and geometry"
+msgstr "_Fensterposition und -größe speichern"
+
+#: ../src/preferencesdialog.c:390
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr ""
+
+#: ../src/preferencesdialog.c:393
+msgid "Show tray _icon"
+msgstr "_Symbol in der Systemleiste anzeigen"
+
+#: ../src/preferencesdialog.c:396
+msgid "Show _toolbar"
+msgstr "_Werkzeugleiste anzeigen"
+
+#: ../src/preferencesdialog.c:402
+msgid "Toolbar St_yle"
+msgstr "Werk_zeugleistenstil"
+
+#: ../src/preferencesdialog.c:413
+msgid "Toolbar _Orientation"
+msgstr "_Ausrichtung der Werkzeugleiste"
+
+#: ../src/preferencesdialog.c:424
+msgid "_View Mode"
+msgstr ""
+
+#: ../src/preferencesdialog.c:484
+msgid "Preferences"
+msgstr "Einstellungen"
+
+#: ../src/backendgvfs.c:191
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Mounted: Yes\n"
+"Type: %s"
+msgstr ""
+
+#: ../src/backendgvfs.c:204
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr ""
+
+#: ../src/backendgvfs.c:381 ../src/backendgvfs.c:412
+msgid "unknown"
+msgstr "unbekannt"
+
+#: ../src/backendgvfs.c:385 ../src/backendgvfs.c:464
+#, c-format
+msgid "Mounting of \"%s\" failed."
+msgstr ""
+
+#: ../src/backendgvfs.c:416
+#, c-format
+msgid "Unmounting of \"%s\" failed."
+msgstr ""
+
+#: ../sion.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr ""
+
+#~ msgid "<b>Bookmarks</b>"
+#~ msgstr "<b>Lesezeichen</b>"
