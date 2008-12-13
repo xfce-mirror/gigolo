@@ -2,4 +2,6 @@
 
  * configure, Makefile, src/Makefile:
    Fix creation of the Makefile and usage of --prefix=...
+ * src/settings.c:
+   Use "gvfs-open" as default file manager command.
 

@@ -446,8 +446,7 @@ static void load_settings_read_config(SionSettingsPrivate *priv)
 	}
 
 	priv->vm_impl = get_setting_string(k, SECTION_GENERAL, "vm_impl", default_vm_impl);
-	priv->file_manager = get_setting_string(k, SECTION_GENERAL, "file_manager",
-		(sion_is_desktop_xfce() ? "thunar" : "nautilus"));
+	priv->file_manager = get_setting_string(k, SECTION_GENERAL, "file_manager", "gvfs-open");
 
 	priv->save_geometry = get_setting_boolean(k, SECTION_UI, "save_geometry", TRUE);
 	priv->show_trayicon = get_setting_boolean(k, SECTION_UI, "show_trayicon", TRUE);
