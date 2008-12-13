@@ -2,11 +2,11 @@
 # Waf Makefile wrapper
 
 all:
-	cd .. && ./waf build
+	cd .. && /home/enrico/projects/sion/trunk/waf build
 
 all-debug:
-	cd .. && ./waf -v build
+	cd .. && /home/enrico/projects/sion/trunk/waf -v build
 
 clean:
-	cd .. && ./waf clean
+	cd .. && /home/enrico/projects/sion/trunk/waf clean
 

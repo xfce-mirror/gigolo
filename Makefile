@@ -2,44 +2,44 @@
 # Waf Makefile wrapper
 
 all:
-	@./waf build
+	@/home/enrico/projects/sion/trunk/waf build
 
 all-debug:
-	@./waf -v build
+	@/home/enrico/projects/sion/trunk/waf -v build
 
 all-progress:
-	@./waf -p build
+	@/home/enrico/projects/sion/trunk/waf -p build
 
 install:
 	@if test -n "$(DESTDIR)"; then \
-		./waf install --destdir="$(DESTDIR)"; \
+		/home/enrico/projects/sion/trunk/waf install --destdir="$(DESTDIR)"; \
 	else \
-		./waf install; \
+		/home/enrico/projects/sion/trunk/waf install; \
 	fi;
 
 uninstall:
 	@if test -n "$(DESTDIR)"; then \
-		./waf uninstall --destdir="$(DESTDIR)"; \
+		/home/enrico/projects/sion/trunk/waf uninstall --destdir="$(DESTDIR)"; \
 	else \
-		./waf uninstall; \
+		/home/enrico/projects/sion/trunk/waf uninstall; \
 	fi;
 
 clean:
-	@./waf clean
+	@/home/enrico/projects/sion/trunk/waf clean
 
 distclean:
-	@./waf distclean
+	@/home/enrico/projects/sion/trunk/waf distclean
 	@-rm -rf _build_
 	@-rm -f Makefile
 
 distcheck:
-	@./waf distcheck
+	@/home/enrico/projects/sion/trunk/waf distcheck
 
 dist:
-	@./waf dist
+	@/home/enrico/projects/sion/trunk/waf dist
 
 sign:
-	@./waf --sign
+	@/home/enrico/projects/sion/trunk/waf --sign
 
 .PHONY: clean dist distclean check uninstall install all
 
