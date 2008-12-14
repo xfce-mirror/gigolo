@@ -60,6 +60,7 @@ enum
 	COL_HOST,
 	COL_PORT,
 	COL_USERNAME,
+	COL_OTHER,
 	COL_BMREF,
 	ACTION_ADD,
 	ACTION_EDIT,
@@ -108,11 +109,22 @@ static void update_row_in_model(SionBookmarkDialog *dialog, GtkTreeIter *iter, S
 {
 	SionBookmarkDialogPrivate *priv = SION_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
 	gchar port[6];
+	GString *other_text = g_string_new(NULL);
+	const gchar *tmp;
 
 	if (sion_bookmark_get_port(bm) > 0)
 		g_snprintf(port, sizeof(port), "%d", sion_bookmark_get_port(bm));
 	else
 		port[0] = '\0';
+
+	if (NZV(tmp = sion_bookmark_get_domain(bm)))
+		g_string_append_printf(other_text, _("Domain: %s"), tmp);
+	if (NZV(tmp = sion_bookmark_get_share(bm)))
+	{
+		if (other_text->len > 0)
+			g_string_append(other_text, ", ");
+		g_string_append_printf(other_text, _("Share: %s"), tmp);
+	}
 
 	gtk_list_store_set(priv->store, iter,
 			COL_NAME, sion_bookmark_get_name(bm),
@@ -120,9 +132,10 @@ static void update_row_in_model(SionBookmarkDialog *dialog, GtkTreeIter *iter, S
 			COL_HOST, sion_bookmark_get_host(bm),
 			COL_PORT, port,
 			COL_USERNAME, sion_bookmark_get_user(bm),
+			COL_OTHER, other_text->str,
 			COL_BMREF, bm,
 			-1);
-
+	g_string_free(other_text, TRUE);
 }
 
 
@@ -290,8 +303,9 @@ static void tree_prepare(SionBookmarkDialog *dialog)
 	SionBookmarkDialogPrivate *priv = SION_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
 
 	priv->tree = gtk_tree_view_new();
-	priv->store = gtk_list_store_new(6,
-		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER);
+	priv->store = gtk_list_store_new(7,
+		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
+		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER);
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
@@ -330,6 +344,14 @@ static void tree_prepare(SionBookmarkDialog *dialog)
 		_("Username"), renderer, "text", COL_USERNAME, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_USERNAME);
+	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
+	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->tree), column);
+
+	renderer = gtk_cell_renderer_text_new();
+	column = gtk_tree_view_column_new_with_attributes(
+		_("Other information"), renderer, "text", COL_OTHER, NULL);
+	gtk_tree_view_column_set_sort_indicator(column, TRUE);
+	gtk_tree_view_column_set_sort_column_id(column, COL_OTHER);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->tree), column);
 
@@ -392,7 +414,7 @@ static void sion_bookmark_dialog_init(SionBookmarkDialog *dialog)
 
 	gtk_dialog_add_button(GTK_DIALOG(dialog), GTK_STOCK_OK, GTK_RESPONSE_OK);
 
-	gtk_window_set_default_size(GTK_WINDOW(dialog), 450, 350);
+	gtk_window_set_default_size(GTK_WINDOW(dialog), 550, 350);
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
 
 	button_add = gtk_button_new_from_stock("gtk-add");

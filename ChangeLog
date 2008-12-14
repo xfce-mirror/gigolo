@@ -1,4 +1,4 @@
-2008-12-14  Enrico Tröger  <enrico(dot)troeger(at)uvena(dot)de>
+2008-12-14  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/window.c:
    Fix missing clicked callback for the Connect toolbar button.
@@ -11,6 +11,8 @@
    Use default username and domain name provided by GVFS in the password
    dialog.
    Add domain and share fields for bookmarks to improve Samba support.
+ * src/bookmarkeditdialog.c:
+   Display share and domain fields in the bookmark dialog.
 
 
 2008-12-13  Enrico Tröger  <enrico(at)xfce(dot)org>
