@@ -474,10 +474,13 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, gpointer backend)
 
 
 static void set_password_cb(GMountOperation *op, gchar *message, gchar *default_user,
-							gchar *default_domain, GAskPasswordFlags flags, gpointer data)
+							gchar *default_domain, GAskPasswordFlags flags, const gchar *domain)
 {
-	GtkWidget *dialog = sion_password_dialog_new(flags);
 	GMountOperationResult result;
+	GtkWidget *dialog;
+
+	dialog = sion_password_dialog_new(flags, default_user,
+		(domain != NULL) ? domain : default_domain);
 
 	if (gtk_dialog_run(GTK_DIALOG(dialog)) == GTK_RESPONSE_OK)
 	{
@@ -510,7 +513,7 @@ static void set_password_cb(GMountOperation *op, gchar *message, gchar *default_
 }
 
 
-void sion_backend_gvfs_mount_uri(SionBackendGVFS *backend, const gchar *uri)
+void sion_backend_gvfs_mount_uri(SionBackendGVFS *backend, const gchar *uri, const gchar *domain)
 {
 	GMountOperation *op;
 	GFile *file;
@@ -521,7 +524,7 @@ void sion_backend_gvfs_mount_uri(SionBackendGVFS *backend, const gchar *uri)
 	op = g_mount_operation_new();
 	file = g_file_new_for_uri(uri);
 
-	g_signal_connect(op, "ask-password", G_CALLBACK(set_password_cb), NULL);
+	g_signal_connect(op, "ask-password", G_CALLBACK(set_password_cb), (gchar*) domain);
 
 	g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
 		(GAsyncReadyCallback) mount_ready_cb, backend);

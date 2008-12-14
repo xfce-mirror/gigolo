@@ -56,7 +56,7 @@ void				sion_backend_gvfs_get_name_and_uri_from_mount	(GMount *mount, gchar **na
 gboolean			sion_backend_gvfs_mount_volume					(SionBackendGVFS *backend, GVolume *vol);
 void				sion_backend_gvfs_unmount_mount					(SionBackendGVFS *backend, GMount *mount);
 
-void				sion_backend_gvfs_mount_uri						(SionBackendGVFS *backend, const gchar *uri);
+void				sion_backend_gvfs_mount_uri						(SionBackendGVFS *backend, const gchar *uri, const gchar *domain);
 
 gchar*				sion_backend_gvfs_get_volume_identifier			(GVolume *volume);
 

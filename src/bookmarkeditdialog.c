@@ -56,6 +56,12 @@ struct _SionBookmarkEditDialogPrivate
 
 	GtkWidget *user_label;
 	GtkWidget *user_entry;
+
+	GtkWidget *domain_label;
+	GtkWidget *domain_entry;
+
+	GtkWidget *share_label;
+	GtkWidget *share_entry;
 /*
 	GtkWidget *share_entry;
 	GtkWidget *domain_entry;
@@ -153,6 +159,10 @@ static void sion_bookmark_edit_dialog_destroy(GtkObject *object)
 	gtk_widget_destroy(priv->port_spin);
 	gtk_widget_destroy(priv->user_entry);
 	gtk_widget_destroy(priv->user_label);
+	gtk_widget_destroy(priv->domain_entry);
+	gtk_widget_destroy(priv->domain_label);
+	gtk_widget_destroy(priv->share_entry);
+	gtk_widget_destroy(priv->share_label);
 	gtk_widget_destroy(priv->information_label);
 
 	GTK_OBJECT_CLASS(parent_class)->destroy(object);
@@ -265,6 +275,12 @@ static void init_values(SionBookmarkEditDialog *dialog)
 	tmp = sion_bookmark_get_user(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->user_entry), tmp);
+	tmp = sion_bookmark_get_share(priv->bookmark_init);
+	if (tmp != NULL)
+		gtk_entry_set_text(GTK_ENTRY(priv->share_entry), tmp);
+	tmp = sion_bookmark_get_domain(priv->bookmark_init);
+	if (tmp != NULL)
+		gtk_entry_set_text(GTK_ENTRY(priv->domain_entry), tmp);
 	port = sion_bookmark_get_port(priv->bookmark_init);
 	idx = scheme_to_index(sion_bookmark_get_scheme(priv->bookmark_init));
 	if (port == 0)
@@ -312,6 +328,16 @@ static void setup_for_type(SionBookmarkEditDialog *dialog)
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->user_label);
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->user_entry);
 	}
+	if (gtk_widget_get_parent(priv->domain_entry) != NULL)
+	{
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->domain_label);
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->domain_entry);
+	}
+	if (gtk_widget_get_parent(priv->share_entry) != NULL)
+	{
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->share_label);
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->share_entry);
+	}
 	if (gtk_widget_get_parent(priv->information_label) != NULL)
 	{
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->information_label);
@@ -347,6 +373,22 @@ static void setup_for_type(SionBookmarkEditDialog *dialog)
 				  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 		i++;
+
+		if (meth->flags & SHOW_SHARE)
+		{
+			gtk_misc_set_alignment(GTK_MISC(priv->share_label), 0.0, 0.5);
+			gtk_widget_show(priv->share_label);
+			gtk_table_attach(GTK_TABLE(table), priv->share_label,
+					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+
+			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->share_label), priv->share_entry);
+			gtk_widget_show(priv->share_entry);
+			gtk_table_attach(GTK_TABLE(table), priv->share_entry,
+					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+
+			i++;
+		}
+
 	}
 
 	if (meth->flags)
@@ -368,6 +410,21 @@ static void setup_for_type(SionBookmarkEditDialog *dialog)
 			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->port_label), priv->port_spin);
 			gtk_widget_show(priv->port_spin);
 			gtk_table_attach(GTK_TABLE(table), priv->port_spin,
+					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+
+			i++;
+		}
+
+		if (meth->flags & SHOW_DOMAIN)
+		{
+			gtk_misc_set_alignment(GTK_MISC(priv->domain_label), 0.0, 0.5);
+			gtk_widget_show(priv->domain_label);
+			gtk_table_attach(GTK_TABLE(table), priv->domain_label,
+					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+
+			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->domain_label), priv->domain_entry);
+			gtk_widget_show(priv->domain_entry);
+			gtk_table_attach(GTK_TABLE(table), priv->domain_entry,
 					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 			i++;
@@ -476,8 +533,11 @@ void update_bookmark(SionBookmarkEditDialog *dialog)
 		if (*tmp)
 			sion_bookmark_set_host(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->user_entry));
-		if (*tmp)
-			sion_bookmark_set_user(priv->bookmark_update, tmp);
+		sion_bookmark_set_user(priv->bookmark_update, tmp);
+		tmp = gtk_entry_get_text(GTK_ENTRY(priv->domain_entry));
+		sion_bookmark_set_domain(priv->bookmark_update, tmp);
+		tmp = gtk_entry_get_text(GTK_ENTRY(priv->share_entry));
+		sion_bookmark_set_share(priv->bookmark_update, tmp);
 		sion_bookmark_set_port(priv->bookmark_update,
 			gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(priv->port_spin)));
 	}
@@ -611,13 +671,16 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), 0);
 	gtk_widget_set_tooltip_text(priv->port_spin, _("Set the port to 0 to use the default port."));
 	priv->user_entry = gtk_entry_new();
+	priv->domain_entry = gtk_entry_new();
+	priv->share_entry = gtk_entry_new();
 
 	priv->uri_label = gtk_label_new_with_mnemonic(_("_Location (URI):"));
 	priv->server_label = gtk_label_new_with_mnemonic(_("_Server:"));
 	priv->user_label = gtk_label_new_with_mnemonic(_("_User Name:"));
 	priv->information_label = gtk_label_new(_("Optional information:"));
 	priv->port_label = gtk_label_new_with_mnemonic(_("_Port:"));
-
+	priv->domain_label = gtk_label_new_with_mnemonic(_("_Domain:"));
+	priv->share_label = gtk_label_new_with_mnemonic(_("_Share:"));
 
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->uri_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->server_entry), TRUE);
@@ -633,6 +696,10 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	g_object_ref(priv->port_spin);
 	g_object_ref(priv->user_entry);
 	g_object_ref(priv->user_label);
+	g_object_ref(priv->domain_entry);
+	g_object_ref(priv->domain_label);
+	g_object_ref(priv->share_entry);
+	g_object_ref(priv->share_label);
 	g_object_ref(priv->information_label);
 
 	gtk_widget_show_all(vbox);

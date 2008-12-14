@@ -25,6 +25,7 @@
 #include <gtk/gtk.h>
 
 #include "main.h"
+#include "common.h"
 #include "compat.h"
 #include "passworddialog.h"
 
@@ -100,6 +101,7 @@ static void sion_password_dialog_init(SionPasswordDialog *dialog)
 	dialog_vbox = sion_dialog_get_content_area(GTK_DIALOG(dialog));
 
 	gtk_window_set_title(GTK_WINDOW(dialog), _("Authentication information needed"));
+	gtk_window_set_icon_name(GTK_WINDOW(dialog), GTK_STOCK_DIALOG_AUTHENTICATION);
 	//~ gtk_dialog_set_has_separator(GTK_DIALOG(dialog), FALSE);
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
 	gtk_box_set_spacing(GTK_BOX(dialog_vbox), 2);
@@ -124,6 +126,7 @@ static void sion_password_dialog_init(SionPasswordDialog *dialog)
 	priv->entry_domain = gtk_entry_new();
 	g_signal_connect(priv->entry_domain, "activate", G_CALLBACK(entry_activate_cb), dialog);
 	label = gtk_label_new_with_mnemonic(_("_Domain:"));
+	gtk_misc_set_alignment(GTK_MISC(label), 1, 0.5);
 	gtk_label_set_mnemonic_widget(GTK_LABEL(label), priv->entry_domain);
 	priv->box_domain = gtk_hbox_new(FALSE, 3);
 	gtk_box_pack_start(GTK_BOX(priv->box_domain), label, FALSE, FALSE, 0);
@@ -136,6 +139,7 @@ static void sion_password_dialog_init(SionPasswordDialog *dialog)
 	priv->entry_username = gtk_entry_new();
 	g_signal_connect(priv->entry_username, "activate", G_CALLBACK(entry_activate_cb), dialog);
 	label = gtk_label_new_with_mnemonic(_("_Username:"));
+	gtk_misc_set_alignment(GTK_MISC(label), 1, 0.5);
 	gtk_label_set_mnemonic_widget(GTK_LABEL(label), priv->entry_username);
 	priv->box_username = gtk_hbox_new(FALSE, 3);
 	gtk_box_pack_start(GTK_BOX(priv->box_username), label, FALSE, FALSE, 0);
@@ -149,6 +153,7 @@ static void sion_password_dialog_init(SionPasswordDialog *dialog)
 	gtk_entry_set_visibility(GTK_ENTRY(priv->entry_password), FALSE);
 	g_signal_connect(priv->entry_password, "activate", G_CALLBACK(entry_activate_cb), dialog);
 	label = gtk_label_new_with_mnemonic(_("_Password:"));
+	gtk_misc_set_alignment(GTK_MISC(label), 1, 0.5);
 	gtk_label_set_mnemonic_widget(GTK_LABEL(label), priv->entry_password);
 	priv->box_password = gtk_hbox_new(FALSE, 3);
 	gtk_box_pack_start(GTK_BOX(priv->box_password), label, FALSE, FALSE, 0);
@@ -165,12 +170,12 @@ static void sion_password_dialog_init(SionPasswordDialog *dialog)
 }
 
 
-GtkWidget *sion_password_dialog_new(GAskPasswordFlags flags)
+GtkWidget *sion_password_dialog_new(GAskPasswordFlags flags, const gchar *user, const gchar *domain)
 {
 	GtkWidget *dialog = g_object_new(SION_PASSWORD_DIALOG_TYPE, NULL);
 	SionPasswordDialogPrivate *priv = SION_PASSWORD_DIALOG_GET_PRIVATE(dialog);
 
-	/** Implement G_ASK_PASSWORD_SAVING_SUPPORTED */
+	/** TODO Implement G_ASK_PASSWORD_SAVING_SUPPORTED */
 	if (flags & G_ASK_PASSWORD_NEED_PASSWORD)
 	{
 		gtk_widget_show(priv->box_password);
@@ -179,11 +184,15 @@ GtkWidget *sion_password_dialog_new(GAskPasswordFlags flags)
 	if (flags & G_ASK_PASSWORD_NEED_USERNAME)
 	{
 		gtk_widget_show(priv->box_username);
+		if (NZV(user))
+			gtk_entry_set_text(GTK_ENTRY(priv->entry_username), user);
 		gtk_widget_grab_focus(priv->entry_username);
 	}
 	if (flags & G_ASK_PASSWORD_NEED_DOMAIN)
 	{
 		gtk_widget_show(priv->box_domain);
+		if (NZV(domain))
+			gtk_entry_set_text(GTK_ENTRY(priv->entry_domain), domain);
 		gtk_widget_grab_focus(priv->entry_domain);
 	}
 

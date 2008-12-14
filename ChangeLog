@@ -1,3 +1,18 @@
+2008-12-14  Enrico Tröger  <enrico(dot)troeger(at)uvena(dot)de>
+
+ * src/window.c:
+   Fix missing clicked callback for the Connect toolbar button.
+   Various small fixes and cleanup.
+ * src/bookmarkeditdialog.c, src/bookmark.c:
+   Allow empty values for usernames.
+ * src/backendgvfs.c, src/backendgvfs.h, src/bookmark.c,
+   src/bookmarkeditdialog.c, src/bookmark.h, src/passworddialog.c,
+   src/passworddialog.h, src/settings.c:
+   Use default username and domain name provided by GVFS in the password
+   dialog.
+   Add domain and share fields for bookmarks to improve Samba support.
+
+
 2008-12-13  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * configure, Makefile, src/Makefile:

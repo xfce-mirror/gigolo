@@ -169,6 +169,7 @@ void sion_window_error_dialog(GtkWindow *parent, const gchar *text, const gchar 
                                   GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, "%s", text);
 	gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog), "%s", secondary);
 	gtk_window_set_title(GTK_WINDOW(dialog), _("Error"));
+	gtk_window_set_icon_name(GTK_WINDOW(dialog), sion_window_get_icon_name());
 	gtk_dialog_run(GTK_DIALOG(dialog));
 	gtk_widget_destroy(dialog);
 }
@@ -247,7 +248,7 @@ static void mount_from_bookmark(SionWindow *window, SionBookmark *bookmark)
 
 	priv = SION_WINDOW_GET_PRIVATE(window);
 	uri = sion_bookmark_get_uri(bookmark);
-	sion_backend_gvfs_mount_uri(priv->backend_gvfs, uri);
+	sion_backend_gvfs_mount_uri(priv->backend_gvfs, uri, sion_bookmark_get_domain(bookmark));
 
 	g_free(uri);
 }
@@ -324,8 +325,6 @@ static void action_unmount_cb(GtkAction *button, SionWindow *window)
 			sion_backend_gvfs_unmount_mount(priv->backend_gvfs, mnt);
 		}
 	}
-	else
-		debug("Invalid iter");
 }
 
 
@@ -687,7 +686,7 @@ static void action_create_bookmark_cb(GtkAction *button, SionWindow *window)
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
-debug(__func__);
+
 	get_selected_iter(window, &iter);
 	if (gtk_list_store_iter_is_valid(priv->store, &iter))
 	{
@@ -715,11 +714,7 @@ debug(__func__);
 			g_free(uri);
 			g_free(name);
 		}
-		else
-			debug("%s: no mount", __func__);
 	}
-	else
-		debug("%s: invalid iter", __func__);
 }
 
 
@@ -904,6 +899,7 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 		"Bookmarks", _("_Bookmarks"), _("Choose a bookmark to connect to"),
 		sion_find_icon_name("bookmark-new", GTK_STOCK_EDIT));
 	g_signal_connect(priv->action_bookmarks, "item-clicked", G_CALLBACK(action_bookmark_activate_cb), window);
+	g_signal_connect(priv->action_bookmarks, "button-clicked", G_CALLBACK(action_mount_cb), window);
 
 	priv->action_group = gtk_action_group_new("UI");
 	gtk_action_group_set_translation_domain(priv->action_group, GETTEXT_PACKAGE);
@@ -1124,6 +1120,7 @@ GtkWidget *sion_window_new(SionSettings *settings)
 
 	g_object_set(priv->action_bookmarks, "settings", settings, NULL);
 
+	sion_window_show_trayicon(SION_WINDOW(window), sion_settings_get_boolean(settings, "show-trayicon"));
 	sion_window_show_toolbar(SION_WINDOW(window), sion_settings_get_boolean(settings, "show-toolbar"));
 	sion_window_set_toolbar_style(SION_WINDOW(window), sion_settings_get_integer(settings, "toolbar-style"));
 	sion_window_set_toolbar_orientation(SION_WINDOW(window),

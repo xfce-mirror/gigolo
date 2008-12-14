@@ -70,6 +70,12 @@ void				sion_bookmark_set_port		(SionBookmark *bookmark, guint port);
 const gchar*		sion_bookmark_get_user		(SionBookmark *bookmark);
 void				sion_bookmark_set_user		(SionBookmark *bookmark, const gchar *user);
 
+const gchar*		sion_bookmark_get_share		(SionBookmark *bookmark);
+void				sion_bookmark_set_share		(SionBookmark *bookmark, const gchar *share);
+
+const gchar*		sion_bookmark_get_domain	(SionBookmark *bookmark);
+void				sion_bookmark_set_domain	(SionBookmark *bookmark, const gchar *domain);
+
 G_END_DECLS
 
 #endif /* __BOOKMARK_H__ */

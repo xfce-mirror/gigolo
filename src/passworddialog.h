@@ -47,7 +47,7 @@ struct _SionPasswordDialogClass
 };
 
 GType			sion_password_dialog_get_type		(void);
-GtkWidget*		sion_password_dialog_new			(GAskPasswordFlags flags);
+GtkWidget*		sion_password_dialog_new			(GAskPasswordFlags flags, const gchar *user, const gchar *domain);
 
 const gchar*	sion_password_dialog_get_domain		(SionPasswordDialog *dialog);
 const gchar*	sion_password_dialog_get_username	(SionPasswordDialog *dialog);

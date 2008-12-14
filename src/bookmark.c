@@ -38,6 +38,8 @@ struct _SionBookmarkPrivate
 	gchar	*name;
 	gchar	*scheme;
 	gchar	*host;
+	gchar	*domain;
+	gchar	*share;
 	guint	 port;
 	gchar	*user;
 
@@ -84,12 +86,16 @@ static void bookmark_clear(SionBookmark *self)
 	g_free(priv->name);
 	g_free(priv->scheme);
 	g_free(priv->host);
+	g_free(priv->domain);
+	g_free(priv->share);
 	g_free(priv->user);
 
 	priv->name = NULL;
 	priv->scheme = NULL;
 	priv->host = NULL;
 	priv->port = 0;
+	priv->domain = NULL;
+	priv->share = NULL;
 	priv->user = NULL;
 
 	priv->is_valid = TRUE;
@@ -171,7 +177,7 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 		x = s;
 		while (*x != '\0' && x < end && *x != ']')
 		{
-			l++; // count the len of the username
+			l++; // count the len of the hostname
 			x++;
 		}
 		priv->host = g_strndup(s, l);
@@ -183,7 +189,7 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 		x = s;
 		while (*x != '\0' && x < end && *x != ':')
 		{
-			l++; // count the len of the username
+			l++; // count the len of the hostname
 			x++;
 		}
 		priv->host = g_strndup(s, l);
@@ -200,7 +206,7 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 		x = t;
 		while (*x != '\0' && x < end)
 		{
-			l++; // count the len of the username
+			l++; // count the len of the port
 			x++;
 		}
 		// atoi should be enough as it returns simply 0 if there are any errors and 0 marks an
@@ -209,8 +215,12 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 		priv->port = (guint) atoi(tmp);
 		g_free(tmp);
 	}
+	if (NZV(end))
+		priv->share = g_strdup(end + 1);
+
 	return TRUE;
 }
+
 
 
 static void sion_bookmark_init(SionBookmark *self)
@@ -257,6 +267,8 @@ void sion_bookmark_clone(SionBookmark *dst, const SionBookmark *src)
 	priv_dst->name = g_strdup(priv_src->name);
 	priv_dst->host = g_strdup(priv_src->host);
 	priv_dst->scheme = g_strdup(priv_src->scheme);
+	priv_dst->domain = g_strdup(priv_src->domain);
+	priv_dst->share = g_strdup(priv_src->share);
 	priv_dst->user = g_strdup(priv_src->user);
 	priv_dst->port = priv_src->port;
 }
@@ -275,12 +287,14 @@ gchar *sion_bookmark_get_uri(SionBookmark *bookmark)
 		port = g_strdup_printf(":%d", priv->port);
 	}
 
-	result = g_strdup_printf("%s://%s%s%s%s/",
+	result = g_strdup_printf("%s://%s%s%s%s/%s%s",
 		priv->scheme,
 		(NZV(priv->user)) ? priv->user : "",
 		(NZV(priv->user)) ? "@" : "",
 		priv->host,
-		(port) ? port : "");
+		(port) ? port : "",
+		(NZV(priv->share)) ? priv->share : "",
+		(NZV(priv->share)) ? "/" : "");
 
 	g_free(port);
 	return result;
@@ -402,12 +416,56 @@ void sion_bookmark_set_user(SionBookmark *bookmark, const gchar *user)
 	SionBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
-	g_return_if_fail(NZV(user));
+	g_return_if_fail(user != NULL);
 
 	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
 
 	g_free(priv->user);
 	priv->user = g_strdup(user);
+}
+
+
+const gchar *sion_bookmark_get_share(SionBookmark *bookmark)
+{
+	g_return_val_if_fail(bookmark != NULL, NULL);
+
+	return SION_BOOKMARK_GET_PRIVATE(bookmark)->share;
+}
+
+
+void sion_bookmark_set_share(SionBookmark *bookmark, const gchar *share)
+{
+	SionBookmarkPrivate *priv;
+
+	g_return_if_fail(bookmark != NULL);
+	g_return_if_fail(share != NULL);
+
+	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+
+	g_free(priv->share);
+	priv->share = g_strdup(share);
+}
+
+
+const gchar *sion_bookmark_get_domain(SionBookmark *bookmark)
+{
+	g_return_val_if_fail(bookmark != NULL, NULL);
+
+	return SION_BOOKMARK_GET_PRIVATE(bookmark)->domain;
+}
+
+
+void sion_bookmark_set_domain(SionBookmark *bookmark, const gchar *domain)
+{
+	SionBookmarkPrivate *priv;
+
+	g_return_if_fail(bookmark != NULL);
+	g_return_if_fail(domain != NULL);
+
+	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+
+	g_free(priv->domain);
+	priv->domain = g_strdup(domain);
 }
 
 

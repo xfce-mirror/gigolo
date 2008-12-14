@@ -391,6 +391,8 @@ static void write_settings_bookmarks(SionSettings *settings)
 			set_setting_string(k, name, "host", sion_bookmark_get_host(bm));
 			set_setting_string(k, name, "user", sion_bookmark_get_user(bm));
 			set_setting_string(k, name, "scheme", sion_bookmark_get_scheme(bm));
+			set_setting_string(k, name, "share", sion_bookmark_get_share(bm));
+			set_setting_string(k, name, "domain", sion_bookmark_get_domain(bm));
 			set_setting_int(k, name, "port", sion_bookmark_get_port(bm));
 		}
 	}
@@ -485,7 +487,7 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 	GError *error = NULL;
 	gsize len, i;
 	gchar **groups;
-	gchar *scheme, *host, *user;
+	gchar *scheme, *host, *user, *domain, *share;
 	gint port;
 	SionBookmark *bm;
 
@@ -504,6 +506,8 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 		scheme = get_setting_string(k, groups[i], "scheme", "");
 		host = get_setting_string(k, groups[i], "host", "");
 		user = get_setting_string(k, groups[i], "user", "");
+		domain = get_setting_string(k, groups[i], "domain", "");
+		share = get_setting_string(k, groups[i], "share", "");
 		port = get_setting_int(k, groups[i], "port", 0);
 
 		bm = sion_bookmark_new();
@@ -513,6 +517,10 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 			sion_bookmark_set_host(bm, host);
 		if (NZV(user))
 			sion_bookmark_set_user(bm, user);
+		if (NZV(domain))
+			sion_bookmark_set_domain(bm, domain);
+		if (NZV(share))
+			sion_bookmark_set_share(bm, share);
 		sion_bookmark_set_port(bm, port);
 
 		g_ptr_array_add(priv->bookmarks, bm);
@@ -520,6 +528,8 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 		g_free(scheme);
 		g_free(host);
 		g_free(user);
+		g_free(domain);
+		g_free(share);
 	}
 	g_strfreev(groups);
 
