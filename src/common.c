@@ -22,6 +22,7 @@
 
 #include <string.h>
 #include <gtk/gtk.h>
+#include <glib/gi18n.h>
 
 #include "common.h"
 #include "main.h"
@@ -55,20 +56,29 @@ gboolean sion_str_equal(const gchar *a, const gchar *b)
 }
 
 
-gchar *sion_beautify_scheme(const gchar *scheme)
+const gchar *sion_describe_scheme(const gchar *scheme)
 {
-	gchar *result;
-
 	if (sion_str_equal(scheme, "file"))
-	{
-		result = g_strdup(scheme);
-		/* Capitalise first character */
-		result[0] = g_unichar_toupper(scheme[0]);
-	}
-	else
-		result = g_utf8_strup(scheme, -1);
+		return _("Unix Device");
+	else if (sion_str_equal(scheme, "smb"))
+		return _("Windows Share");
+	else if (sion_str_equal(scheme, "ftp"))
+		return _("FTP");
+	else if (sion_str_equal(scheme, "http"))
+		return _("HTTP");
+	else if (sion_str_equal(scheme, "sftp"))
+		return _("SSH");
+	else if (sion_str_equal(scheme, "obex"))
+		/// TODO find something better
+		return _("OBEX");
+	else if (sion_str_equal(scheme, "dav"))
+		return _("WebDAV");
+	else if (sion_str_equal(scheme, "davs"))
+		return _("Secure WebDAV");
+	else if (sion_str_equal(scheme, "network"))
+		return _("Network");
 
-	return result;
+	return NULL;
 }
 
 

@@ -13,6 +13,9 @@
    Add domain and share fields for bookmarks to improve Samba support.
  * src/bookmarkeditdialog.c:
    Display share and domain fields in the bookmark dialog.
+ * src/backendgvfs.c, src/bookmarkdialog.c, src/bookmarkeditdialog.c,
+   src/common.c, src/common.h, src/window.c:
+   Use more descriptive strings when displaying URI schemes.
 
 
 2008-12-13  Enrico Tröger  <enrico(at)xfce(dot)org>

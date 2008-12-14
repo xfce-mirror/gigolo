@@ -188,7 +188,7 @@ static gchar *get_tooltip_text(gpointer ref, gint ref_type, const gchar *type)
 
 			sion_backend_gvfs_get_name_and_uri_from_mount(ref, &name, &uri);
 			result = g_strdup_printf(
-				_("<b>%s</b>\n\nURI: %s\nMounted: Yes\nType: %s"), name, uri, type);
+				_("<b>%s</b>\n\nURI: %s\nMounted: Yes\nService Type: %s"), name, uri, type);
 
 			g_free(uri);
 			g_free(name);
@@ -218,7 +218,8 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, GMount *mnt, gpointer ba
 	GVolume *volume;
 	GIcon *icon;
 	GtkTreeIter iter;
-	gchar *vol_name, *scheme, *uri, *scheme_upper, *tooltip_text;
+	gchar *vol_name, *scheme, *uri, *tooltip_text;
+	const gchar *scheme_name;
 	SionBackendGVFSPrivate *priv = SION_BACKEND_GVFS_GET_PRIVATE(backend);
 
 	gtk_list_store_clear(priv->store);
@@ -231,16 +232,16 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, GMount *mnt, gpointer ba
 		vol_name = g_mount_get_name(mount);
 		file = g_mount_get_root(mount);
 		scheme = g_file_get_uri_scheme(file);
-		scheme_upper = sion_beautify_scheme(scheme);
+		scheme_name = sion_describe_scheme(scheme);
 		uri = g_file_get_uri(file);
 		icon = g_mount_get_icon(mount);
-		tooltip_text = get_tooltip_text(mount, SION_WINDOW_REF_TYPE_MOUNT, scheme_upper);
+		tooltip_text = get_tooltip_text(mount, SION_WINDOW_REF_TYPE_MOUNT, scheme_name);
 
 		gtk_list_store_append(priv->store, &iter);
 		gtk_list_store_set(priv->store, &iter,
 				SION_WINDOW_COL_IS_MOUNTED, TRUE,
 				SION_WINDOW_COL_NAME, vol_name,
-				SION_WINDOW_COL_SCHEME, scheme_upper,
+				SION_WINDOW_COL_SCHEME, scheme_name,
 				SION_WINDOW_COL_REF, mount,
 				SION_WINDOW_COL_REF_TYPE, SION_WINDOW_REF_TYPE_MOUNT,
 				SION_WINDOW_COL_PIXBUF, icon,
@@ -249,7 +250,6 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, GMount *mnt, gpointer ba
 				-1);
 		g_free(vol_name);
 		g_free(scheme);
-		g_free(scheme_upper);
 		g_free(uri);
 		g_free(tooltip_text);
 		g_object_unref(file);
@@ -275,7 +275,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, GMount *mnt, gpointer ba
 			gtk_list_store_set(priv->store, &iter,
 					SION_WINDOW_COL_IS_MOUNTED, FALSE,
 					SION_WINDOW_COL_NAME, vol_name,
-					SION_WINDOW_COL_SCHEME, "",
+					SION_WINDOW_COL_SCHEME, sion_describe_scheme("file"),
 					SION_WINDOW_COL_REF, volume,
 					SION_WINDOW_COL_REF_TYPE, SION_WINDOW_REF_TYPE_VOLUME,
 					SION_WINDOW_COL_PIXBUF, icon,

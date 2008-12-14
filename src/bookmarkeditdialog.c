@@ -81,7 +81,6 @@ struct MethodInfo {
 	const gchar *scheme;
 	guint port;
 	guint flags;
-	const gchar *desc;
 };
 
 enum
@@ -107,13 +106,12 @@ enum {
 };
 
 static struct MethodInfo methods[] = {
-	{ "ftp",  21,	SHOW_PORT | SHOW_USER,					N_("FTP") },
-	{ "sftp", 22,	SHOW_PORT | SHOW_USER,					N_("SSH") },
-	{ "smb",  0,	SHOW_SHARE | SHOW_USER | SHOW_DOMAIN,	N_("Windows share") },
-	{ "davs", 443,	SHOW_PORT | SHOW_USER,					N_("Secure WebDAV (HTTPS)") },
-	{ "dav",  80,	SHOW_PORT | SHOW_USER,					N_("WebDAV (HTTP)") },
-	/* must always be the last item */
-	{ NULL,   0,	0, 										N_("Custom Location") }
+	{ "ftp",  21,	SHOW_PORT | SHOW_USER },
+	{ "sftp", 22,	SHOW_PORT | SHOW_USER },
+	{ "smb",  0,	SHOW_SHARE | SHOW_USER | SHOW_DOMAIN },
+	{ "davs", 443,	SHOW_PORT | SHOW_USER },
+	{ "dav",  80,	SHOW_PORT | SHOW_USER },
+	{ NULL,   0,	0 }
 };
 static guint methods_len = G_N_ELEMENTS(methods);
 
@@ -462,6 +460,7 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 	GtkListStore *store;
 	GtkTreeModel *filter;
 	GtkTreeIter iter;
+	const gchar *scheme;
 	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 
 	/* 0 - method index, 1 - visible/supported flag, 2 - description */
@@ -480,11 +479,17 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 				break;
 			}
 		}
+		if (methods[i].scheme != NULL)
+			scheme = sion_describe_scheme(methods[i].scheme);
+		else
+			scheme = _("Custom Location");
+
 		gtk_list_store_append(store, &iter);
 		gtk_list_store_set(store, &iter,
 			COLUMN_INDEX, i,
 			COLUMN_VISIBLE, visible,
-			COLUMN_DESC, methods[i].desc, -1);
+			COLUMN_DESC, scheme,
+			-1);
 	}
 
 	filter = gtk_tree_model_filter_new(GTK_TREE_MODEL(store), NULL);

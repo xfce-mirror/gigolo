@@ -48,7 +48,7 @@ enum
 };
 
 
-gchar *sion_beautify_scheme(const gchar *scheme);
+const gchar *sion_describe_scheme(const gchar *scheme);
 
 gboolean sion_str_equal(const gchar *a, const gchar *b);
 

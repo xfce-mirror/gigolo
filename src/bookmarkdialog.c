@@ -128,7 +128,7 @@ static void update_row_in_model(SionBookmarkDialog *dialog, GtkTreeIter *iter, S
 
 	gtk_list_store_set(priv->store, iter,
 			COL_NAME, sion_bookmark_get_name(bm),
-			COL_SCHEME, sion_bookmark_get_scheme(bm),
+			COL_SCHEME, sion_describe_scheme(sion_bookmark_get_scheme(bm)),
 			COL_HOST, sion_bookmark_get_host(bm),
 			COL_PORT, port,
 			COL_USERNAME, sion_bookmark_get_user(bm),
@@ -317,7 +317,7 @@ static void tree_prepare(SionBookmarkDialog *dialog)
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("URI Scheme"), renderer, "text", COL_SCHEME, NULL);
+		_("Service Type"), renderer, "text", COL_SCHEME, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_SCHEME);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
