@@ -41,7 +41,7 @@ sources = [ 'src/main.c', 'src/compat.c', 'src/window.c', 'src/bookmark.c', 'src
 
 
 def configure(conf):
-	conf.check_tool('compiler_cc intltool misc')
+	conf.check_tool('compiler_cc intltool misc gnu_dirs')
 
 	conf.check_cfg(package='gtk+-2.0', atleast_version='2.12.0', uselib_store='GTK', mandatory=True)
 	conf.check_cfg(package='gtk+-2.0', args='--cflags --libs', uselib_store='GTK')
@@ -54,11 +54,6 @@ def configure(conf):
 	conf.define('GETTEXT_PACKAGE', APPNAME, 1)
 	conf.define('PACKAGE', APPNAME, 1)
 	conf.define('VERSION', VERSION, 1)
-
-	if Options.options.mandir:
-		conf.define('MANDIR', opt_name, 1)
-	else:
-		conf.define('MANDIR', conf.env['DATADIR'] + '/man', 1)
 
 	conf.write_config_header('config.h')
 
@@ -76,41 +71,40 @@ def configure(conf):
 def set_options(opt):
 	opt.tool_options('compiler_cc')
 	opt.tool_options('intltool')
+	opt.tool_options('gnu_dirs')
 
 	# Features
 	opt.add_option('--enable-debug', action='store_true', default=False,
 		help='enable debug mode [default: No]', dest='debug')
 	opt.add_option('--update-po', action='store_true', default=False,
 		help='update the message catalogs for translation', dest='update_po')
-	# Paths
-	opt.add_option('--mandir', type='string', default='',
-		help='man documentation', dest='mandir')
 
 
 def build(bld):
 	obj = bld.new_task_gen('cc', 'program')
-	obj.name		 = 'sion'
-	obj.target	   = 'sion'
-	obj.source	   = sources
-	obj.uselib	   = 'GTK GIO'
+	obj.name		= 'sion'
+	obj.target		= 'sion'
+	obj.source		= sources
+	obj.includes	= '.'
+	obj.uselib		= 'GTK GIO'
 
 	# Translations
-	obj		 = bld.new_task_gen('intltool_po')
-	obj.podir   = 'po'
-	obj.appname = 'sion'
+	obj			= bld.new_task_gen('intltool_po')
+	obj.podir	= 'po'
+	obj.appname	= 'sion'
 
 	# sion.desktop
-	obj		 = bld.new_task_gen('intltool_in')
-	obj.source  = 'sion.desktop.in'
-	obj.install_path = '${DATADIR}/applications'
-	obj.flags   = '-d'
+	obj					= bld.new_task_gen('intltool_in')
+	obj.source			= 'sion.desktop.in'
+	obj.install_path	= '${DATADIR}/applications'
+	obj.flags			= '-d'
 
 	# sion.1
-	obj		 = bld.new_task_gen('subst')
-	obj.source  = 'sion.1.in'
-	obj.target  = 'sion.1'
-	obj.dict	= { 'VERSION' : VERSION }
-	obj.install_path = 0
+	obj					= bld.new_task_gen('subst')
+	obj.source			= 'sion.1.in'
+	obj.target			= 'sion.1'
+	obj.dict			= { 'VERSION' : VERSION }
+	obj.install_path	= 0
 	bld.install_files('${MANDIR}/man1', 'sion.1')
 
 
@@ -141,11 +135,11 @@ def shutdown():
 				size_old = os.stat('sion.pot').st_size
 			except:
 				size_old = 0
-			subprocess.call(['intltool-update', '--pot', '-g', APPNAME])
+			subprocess.call(['intltool-update', '--pot'])
 			size_new = os.stat('sion.pot').st_size
 			if size_new != size_old:
 				Utils.pprint('CYAN', 'Updated POT file.')
-				launch('intltool-update -r -g %s' % APPNAME, 'Updating translations', 'CYAN')
+				launch('intltool-update -r', 'Updating translations', 'CYAN')
 			else:
 				Utils.pprint('CYAN', 'POT file is up to date.')
 		except:

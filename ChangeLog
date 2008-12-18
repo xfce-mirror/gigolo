@@ -1,3 +1,10 @@
+2008-12-18  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * waf, wscript:
+   Update waf, make use of its 'gnu_dirs' tool and fix some minor
+   issues.
+
+
 2008-12-14  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/window.c:
