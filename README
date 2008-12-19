@@ -22,7 +22,7 @@ Furthermore you need, of course, a C compiler as well as the intltool package.
 
 Installation
 ============
-If you have all the above listed requirements on your system installed,
+If you have all the above listed requirements installed on your system,
 building the code is easy:
 
 Run the following commands::
@@ -36,6 +36,18 @@ To get a list of available options to customize your build, enable debugging
 or to use a different installation prefix, run::
 
     $ ./waf help
+
+
+Alternative installation using autotools
+````````````````````````````````````````
+
+You can use the usual autotools chain to configure, compile and install
+the sources by running::
+
+    $ ./autogen.sh
+
+in the source directory.
+This is mainly intended for distro packagers and people with special needs.
 
 
 Usage

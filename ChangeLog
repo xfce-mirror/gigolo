@@ -1,3 +1,9 @@
+2008-12-19  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/Makefile.am, README, configure.ac, Makefile.am, autogen.sh:
+   Add support for building Sion with autotools.
+
+
 2008-12-18  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * waf, wscript:
