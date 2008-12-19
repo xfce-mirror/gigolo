@@ -672,9 +672,29 @@ static void action_bookmark_activate_cb(SionMenubuttonAction *action, GtkWidget 
 }
 
 
+static gint sort_bookmarks(gconstpointer a, gconstpointer b)
+{
+	SionBookmark *bm_a = SION_BOOKMARK(((GPtrArray*)a)->pdata);
+	SionBookmark *bm_b = SION_BOOKMARK(((GPtrArray*)b)->pdata);
+	const gchar *name_a = sion_bookmark_get_name(bm_a);
+	const gchar *name_b = sion_bookmark_get_name(bm_b);
+
+	if (name_a == NULL)
+		return 1;
+	if (name_b == NULL)
+		return -1;
+
+	return strcmp(name_a, name_b);
+}
+
+
 void sion_window_update_bookmarks(SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	SionBookmarkList *bookmarks = sion_settings_get_bookmarks(priv->settings);
+
+	/* sort the bookmarks */
+	g_ptr_array_sort(bookmarks, sort_bookmarks);
 
 	/* writing to the 'settings' property will update the menus */
 	g_object_set(priv->action_bookmarks, "settings", priv->settings, NULL);

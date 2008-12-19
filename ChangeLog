@@ -5,6 +5,8 @@
  * configure:
    Remove coloured output.
    Remove unnecessary checks and code and avoid using 'which'.
+ * src/window.c:
+   Sort bookmarks always automatically.
 
 
 2008-12-18  Enrico Tröger  <enrico(at)xfce(dot)org>
