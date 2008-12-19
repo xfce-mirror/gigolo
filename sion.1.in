@@ -10,7 +10,7 @@ Sion is a frontend to easily manage connections to remote filesystems using
 GIO/GVFS. It allows you to quickly mount a remote filesystem and manage
 bookmarks to such.
 .PP
-Homepage: http://write me
+Homepage: http://www.uvena.de/sion/
 .SH "OPTIONS"
 If called without any arguments, the sion main window is shown.
 .IP "\fB-l\fP, \fB\-\-list-schemes\fP         " 10

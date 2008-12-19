@@ -1,6 +1,6 @@
 - better program icon
 - libnotify - to notify about new mounts or disappeared mounts (ftp timeout, etc.)
 - progressdialog when mounting
-- display pseudo names instead of URI schemes
 - allow usernames which include a '@' char
+- Fix 'Create Bookmark'
 - sort bookmarks

@@ -125,7 +125,7 @@ gint main(gint argc, gchar** argv)
 	// GVFS currently depends on gnome-mount for HAL-based GVolumeMonitor implementation,
 	// when gnome-mount is not installed, we can use "unix" as GVolumeMonitor implementation.
 	if ((vm_impl = sion_settings_get_vm_impl(settings)) != NULL)
-		setenv("GIO_USE_VOLUME_MONITOR", vm_impl, 0);
+		g_setenv("GIO_USE_VOLUME_MONITOR", vm_impl, 0);
 
 	window = sion_window_new(settings);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
