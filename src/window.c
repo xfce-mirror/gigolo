@@ -679,12 +679,7 @@ static gint sort_bookmarks(gconstpointer a, gconstpointer b)
 	const gchar *name_a = sion_bookmark_get_name(bm_a);
 	const gchar *name_b = sion_bookmark_get_name(bm_b);
 
-	if (name_a == NULL)
-		return 1;
-	if (name_b == NULL)
-		return -1;
-
-	return strcmp(name_a, name_b);
+	return g_strcmp0(name_a, name_b);
 }
 
 
