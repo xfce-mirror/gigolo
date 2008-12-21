@@ -627,6 +627,7 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	gtk_box_set_spacing(GTK_BOX(sion_dialog_get_content_area(GTK_DIALOG(dialog))), 2);
 
 	gtk_dialog_add_buttons(GTK_DIALOG(dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, NULL);
+	gtk_window_set_destroy_with_parent(GTK_WINDOW(dialog), TRUE);
 
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
 
