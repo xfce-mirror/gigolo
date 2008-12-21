@@ -1,3 +1,9 @@
+2008-12-21  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/bookmark.c:
+   Fix crash when parsing an URI without a proper scheme (bug #4730).
+
+
 2008-12-19  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/Makefile.am, README, configure.ac, Makefile.am, autogen.sh:

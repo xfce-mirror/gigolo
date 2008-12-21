@@ -132,6 +132,12 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 	priv->scheme = g_uri_parse_scheme(uri);
 
 	s = strstr(uri, "://");
+	if (priv->scheme == NULL || s == NULL)
+	{
+		verbose("Error parsing URI %s while reading URI scheme", uri);
+		bookmark_clear(bm);
+		return FALSE;
+	}
 	s += 3;
 
 	/* find end of host/port, this is the first slash after the initial double slashes */
