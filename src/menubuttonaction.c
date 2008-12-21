@@ -82,7 +82,7 @@ static void delegate_item_activated(GtkMenuItem *item, SionMenubuttonAction *act
 }
 
 
-static void delegate_button_activated(GtkAction *action)
+static void delegate_button_clicked(GtkToolButton *button, GtkAction *action)
 {
 	g_signal_emit(action, signals[BUTTON_CLICKED], 0);
 }
@@ -103,6 +103,7 @@ static GtkWidget *sion_menu_button_action_create_tool_item(GtkAction *action)
 	GtkWidget *toolitem;
 
 	toolitem = g_object_new(GTK_TYPE_MENU_TOOL_BUTTON, NULL);
+	g_signal_connect(toolitem, "clicked", G_CALLBACK(delegate_button_clicked), action);
 
 	return toolitem;
 }
@@ -209,7 +210,6 @@ static void sion_menu_button_action_class_init(SionMenubuttonActionClass *klass)
 
 	g_object_class->set_property = sion_menu_button_action_set_property;
 
-	action_class->activate = delegate_button_activated;
 	action_class->connect_proxy = sion_menu_button_action_connect_proxy;
 	action_class->create_menu_item = sion_menu_button_action_create_menu_item;
 	action_class->create_tool_item = sion_menu_button_action_create_tool_item;
