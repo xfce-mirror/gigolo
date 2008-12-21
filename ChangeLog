@@ -2,6 +2,8 @@
 
  * src/bookmark.c:
    Fix crash when parsing an URI without a proper scheme (bug #4730).
+ * src/window.c:
+   Minimise to tray if enabled.
 
 
 2008-12-19  Enrico Tröger  <enrico(at)xfce(dot)org>

@@ -122,6 +122,20 @@ GType sion_window_get_type(void)
 }
 
 
+static gboolean sion_window_state_event(GtkWidget *widget, GdkEventWindowState *event)
+{
+	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(widget);
+
+	if ((event->new_window_state & GDK_WINDOW_STATE_ICONIFIED) &&
+		sion_settings_get_boolean(priv->settings, "show-trayicon"))
+	{
+		gtk_widget_hide(widget);
+	}
+
+	return FALSE;
+}
+
+
 static gboolean sion_window_delete_event(GtkWidget *widget, GdkEventAny *event)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(widget);
@@ -139,12 +153,13 @@ static gboolean sion_window_delete_event(GtkWidget *widget, GdkEventAny *event)
 		sion_settings_set_geometry(priv->settings, geo, 5);
 	}
 	gtk_widget_destroy(priv->tree_popup_menu);
+	gtk_widget_destroy(priv->trayicon_popup_menu);
+	gtk_widget_destroy(priv->swin_treeview);
+	gtk_widget_destroy(priv->swin_iconview);
+	gtk_widget_destroy(priv->toolbar);
 	g_object_unref(priv->action_group);
 	g_object_unref(priv->trayicon);
 	g_object_unref(priv->trayicon_popup_menu);
-	g_object_unref(priv->toolbar);
-	g_object_unref(priv->swin_treeview);
-	g_object_unref(priv->swin_iconview);
 	g_object_unref(priv->backend_gvfs);
 
 	return FALSE;
@@ -155,6 +170,7 @@ static void sion_window_class_init(SionWindowClass *klass)
 {
 	GtkWidgetClass *gtkwidget_class = GTK_WIDGET_CLASS(klass);
 	gtkwidget_class->delete_event = sion_window_delete_event;
+	gtkwidget_class->window_state_event = sion_window_state_event;
 
 	parent_class =(GtkWindowClass*)g_type_class_peek(GTK_TYPE_WINDOW);
 	g_type_class_add_private((gpointer)klass, sizeof(SionWindowPrivate));
@@ -191,7 +207,10 @@ static void trayicon_activate_cb(GtkStatusIcon *status_icon, GtkWindow *window)
 	if (gtk_window_is_active(window))
 		gtk_widget_hide(GTK_WIDGET(window));
 	else
+	{
+		gtk_window_deiconify(window);
 		gtk_window_present(window);
+	}
 }
 
 
