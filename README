@@ -76,6 +76,8 @@ Sion is distributed under the terms of the GNU General Public License
 as published by the Free Software Foundation; version 2 of the license.
 A copy of this license can be found in the file COPYING included with
 the source code of this program.
+The included Waf build system ("waf") is licensed under the
+New BSD License (http://www.opensource.org/licenses/bsd-license.php).
 
 
 Ideas, questions, patches and bug reports
