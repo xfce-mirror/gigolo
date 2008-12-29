@@ -1,5 +1,7 @@
 ## Process this file with automake to produce Makefile.in
 
+DOCFILES = README ChangeLog NEWS COPYING AUTHORS TODO
+
 SUBDIRS = src po
 
 EXTRA_DIST =					\
@@ -19,6 +21,18 @@ DISTCLEANFILES =				\
 	intltool-extract			\
 	intltool-merge				\
 	intltool-update
+
+install-data-local:
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(docdir)
+	for file in $(DOCFILES); do \
+	  $(INSTALL_DATA) $(top_srcdir)/$$file $(DESTDIR)$(docdir)/$$file; \
+	done
+
+uninstall-local:
+	for file in $(DOCFILES); do \
+	  rm $(DESTDIR)$(docdir)/$$file; \
+	done
 
 
 man_MANS=sion.1

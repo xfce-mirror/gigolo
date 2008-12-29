@@ -107,6 +107,9 @@ def build(bld):
 	obj.install_path	= 0
 	bld.install_files('${MANDIR}/man1', 'sion.1')
 
+	# Docs
+	bld.install_files('${DOCDIR}', 'AUTHORS ChangeLog COPYING README NEWS TODO')
+
 
 def dist():
 	import md5
