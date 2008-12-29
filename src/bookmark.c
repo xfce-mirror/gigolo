@@ -134,7 +134,7 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 	s = strstr(uri, "://");
 	if (priv->scheme == NULL || s == NULL)
 	{
-		verbose("Error parsing URI %s while reading URI scheme", uri);
+		verbose("Error parsing URI '%s' while reading URI scheme", uri);
 		bookmark_clear(bm);
 		return FALSE;
 	}
@@ -158,7 +158,7 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 		}
 		if (l == 0)
 		{
-			verbose("Error parsing URI %s while reading username", uri);
+			verbose("Error parsing URI '%s' while reading username", uri);
 			bookmark_clear(bm);
 			return FALSE;
 		}
@@ -175,7 +175,7 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 		hostend = strchr(s, ']');
 		if (! hostend || hostend > end)
 		{
-			verbose("Error parsing URI %s, missing ']'", uri);
+			verbose("Error parsing URI '%s', missing ']'", uri);
 			bookmark_clear(bm);
 			return FALSE;
 		}
