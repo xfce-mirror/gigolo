@@ -58,5 +58,6 @@ gboolean sion_is_desktop_xfce(void);
 
 void sion_show_uri(const gchar *uri);
 
+guint sion_get_default_port(const gchar *scheme);
 
 #endif /* __COMMON_H__ */

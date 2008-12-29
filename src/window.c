@@ -493,14 +493,13 @@ static gboolean iter_is_bookmark(SionWindow *window, GtkTreeModel *model, GtkTre
 
 		sion_backend_gvfs_get_name_and_uri_from_mount(ref, NULL, &uri);
 
-		for (i = 0; i < bml->len; i++)
+		for (i = 0; i < bml->len && ! found; i++)
 		{
 			bm = g_ptr_array_index(bml, i);
 			tmp_uri = sion_bookmark_get_uri(bm);
-			if (uri != NULL && tmp_uri != NULL && strcmp(uri, tmp_uri) == 0)
-			{
+			if (sion_str_equal(uri, tmp_uri))
 				found = TRUE;
-			}
+
 			g_free(tmp_uri);
 		}
 		g_free(uri);
@@ -525,7 +524,7 @@ static void update_sensitive_buttons(SionWindow *window, GtkTreeModel *model, Gt
 		//~ gtk_action_set_sensitive(priv->action_connect, (ref_type != SION_WINDOW_REF_TYPE_MOUNT));
 		//~ gtk_action_set_sensitive(priv->action_bookmarks_toolbar, (ref_type != SION_WINDOW_REF_TYPE_MOUNT));
 		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == SION_WINDOW_REF_TYPE_MOUNT));
-		gtk_action_set_sensitive(priv->action_bookmark_create, (ref_type == SION_WINDOW_REF_TYPE_MOUNT));
+		gtk_action_set_sensitive(priv->action_bookmark_create, ! is_bookmark);
 		gtk_action_set_sensitive(priv->action_open, sion_settings_has_file_manager(priv->settings));
 	}
 	else
@@ -729,21 +728,50 @@ static void action_create_bookmark_cb(GtkAction *button, SionWindow *window)
 		gtk_tree_model_get(model, &iter, SION_WINDOW_COL_REF, &mnt, -1);
 		if (sion_backend_gvfs_is_mount(mnt))
 		{
-			gchar *uri;
-			gchar *name;
+			gchar *uri, *tmp_uri, *name;
+			guint i;
+			gboolean found = FALSE;
 			SionBookmark *bm;
+			SionBookmarkList *bml = sion_settings_get_bookmarks(priv->settings);
 
 			sion_backend_gvfs_get_name_and_uri_from_mount(mnt, &name, &uri);
-			bm = sion_bookmark_new_from_uri(name, uri);
-			if (sion_bookmark_is_valid(bm))
+			// check whether the current mount is already a bookmark ...
+			for (i = 0; i < bml->len && ! found; i++)
 			{
-				g_ptr_array_add(sion_settings_get_bookmarks(priv->settings), bm);
-				sion_window_update_bookmarks(window);
+				bm = g_ptr_array_index(bml, i);
+				tmp_uri = sion_bookmark_get_uri(bm);
+				if (sion_str_equal(uri, tmp_uri))
+					found = TRUE;
 
-				/** TODO show message dialog */
+				g_free(tmp_uri);
+			}
+			// ... and add it if not
+			if (! found)
+			{
+				bm = sion_bookmark_new_from_uri(name, uri);
+				if (sion_bookmark_is_valid(bm))
+				{
+					GtkWidget *edit_dialog;
+
+					// show the bookmark edit dialog and add the bookmark only if it was
+					// not cancelled
+					edit_dialog = sion_bookmark_edit_dialog_new_with_bookmark(
+						GTK_WIDGET(window), SION_BE_MODE_EDIT, bm);
+					if (gtk_dialog_run(GTK_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
+					{
+						// this fills the values of the dialog into 'bm'
+						g_object_set(edit_dialog, "bookmark-update", bm, NULL);
+
+						g_ptr_array_add(sion_settings_get_bookmarks(priv->settings),
+							g_object_ref(bm));
+						sion_window_update_bookmarks(window);
+					}
+					gtk_widget_destroy(edit_dialog);
+				}
+				g_object_unref(bm);
 			}
 			else
-				g_object_unref(bm);
+				verbose("Bookmark for %s already exists", uri);
 
 			g_free(uri);
 			g_free(name);

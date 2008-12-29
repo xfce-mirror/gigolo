@@ -288,7 +288,7 @@ gchar *sion_bookmark_get_uri(SionBookmark *bookmark)
 
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	if (priv->port > 0)
+	if (priv->port > 0 && priv->port != sion_get_default_port(priv->scheme))
 	{
 		port = g_strdup_printf(":%d", priv->port);
 	}

@@ -1,3 +1,12 @@
+2008-12-29  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/common.c, src/common.h, src/bookmark.c, src/window.c:
+   Don't add the port number to URIs when it is the default port number.
+   Fix 'Create Bookmark' sensitiveness.
+   When using 'Create Bookmark' show a dialog to edit the new bookmark
+   before saving it.
+
+
 2008-12-28  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * wscript, Makefile.am:

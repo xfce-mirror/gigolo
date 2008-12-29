@@ -82,6 +82,21 @@ const gchar *sion_describe_scheme(const gchar *scheme)
 }
 
 
+guint sion_get_default_port(const gchar *scheme)
+{
+	if (sion_str_equal(scheme, "ftp"))
+		return 21;
+	else if (sion_str_equal(scheme, "sftp"))
+		return 22;
+	else if (sion_str_equal(scheme, "dav"))
+		return 80;
+	else if (sion_str_equal(scheme, "davs"))
+		return 443;
+
+	return 0;
+}
+
+
 /* Are we running in Xfce? */
 gboolean sion_is_desktop_xfce(void)
 {
