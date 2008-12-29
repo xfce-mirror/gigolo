@@ -145,7 +145,7 @@ static void add_button_click_cb(GtkButton *button, GtkWidget *dialog)
 	SionBookmarkDialogPrivate *priv = SION_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
 	SionBookmark *bm = NULL;
 
-	if (gtk_dialog_run(GTK_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
+	if (sion_bookmark_edit_dialog_run(SION_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 	{
 		GtkTreeIter iter;
 
@@ -181,7 +181,7 @@ static void edit_button_click_cb(GtkButton *button, GtkWidget *dialog)
 	gtk_tree_model_get(GTK_TREE_MODEL(priv->store), &iter, COL_BMREF, &bm, -1);
 
 	edit_dialog = sion_bookmark_edit_dialog_new_with_bookmark(dialog, SION_BE_MODE_EDIT, bm);
-	if (gtk_dialog_run(GTK_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
+	if (sion_bookmark_edit_dialog_run(SION_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 	{
 		/* this fills the values of the dialog into 'bm' */
 		g_object_set(edit_dialog, "bookmark-update", bm, NULL);

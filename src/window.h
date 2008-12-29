@@ -48,7 +48,6 @@ struct _SionWindowClass
 GType		sion_window_get_type			(void);
 GtkWidget*	sion_window_new					(SionSettings *settings);
 
-void		sion_window_error_dialog		(GtkWindow *parent, const gchar *text, const gchar *secondary);
 void		sion_window_update_bookmarks	(SionWindow *window);
 
 

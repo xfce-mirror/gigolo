@@ -177,20 +177,6 @@ static void sion_window_class_init(SionWindowClass *klass)
 }
 
 
-void sion_window_error_dialog(GtkWindow *parent, const gchar *text, const gchar *secondary)
-{
-	GtkWidget *dialog;
-
-	dialog = gtk_message_dialog_new(parent, GTK_DIALOG_DESTROY_WITH_PARENT,
-                                  GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, "%s", text);
-	gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog), "%s", secondary);
-	gtk_window_set_title(GTK_WINDOW(dialog), _("Error"));
-	gtk_window_set_icon_name(GTK_WINDOW(dialog), sion_window_get_icon_name());
-	gtk_dialog_run(GTK_DIALOG(dialog));
-	gtk_widget_destroy(dialog);
-}
-
-
 const gchar *sion_window_get_icon_name(void)
 {
 	static const gchar *icon_name = NULL;
@@ -296,20 +282,20 @@ static void action_mount_cb(GtkAction *button, SionWindow *window)
 	if (! handled)
 	{
 		SionBookmark *bm = NULL;
-		GtkWidget *edit_dialog;
+		GtkWidget *dialog;
 
-		edit_dialog = sion_bookmark_edit_dialog_new(GTK_WIDGET(window), SION_BE_MODE_CONNECT);
-		if (gtk_dialog_run(GTK_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
+		dialog = sion_bookmark_edit_dialog_new(GTK_WIDGET(window), SION_BE_MODE_CONNECT);
+		if (sion_bookmark_edit_dialog_run(SION_BOOKMARK_EDIT_DIALOG(dialog)) == GTK_RESPONSE_OK)
 		{
 			bm = sion_bookmark_new();
 			/* this fills the values of the dialog into 'bm' */
-			g_object_set(edit_dialog, "bookmark-update", bm, NULL);
+			g_object_set(dialog, "bookmark-update", bm, NULL);
 
 			mount_from_bookmark(window, bm);
 
 			g_object_unref(bm);
 		}
-		gtk_widget_destroy(edit_dialog);
+		gtk_widget_destroy(dialog);
 	}
 }
 
@@ -591,7 +577,7 @@ static void mounts_changed_cb(SionBackendGVFS *backend, SionWindow *window)
 static void mount_operation_failed(SionBackendGVFS *backend, const gchar *message,
 								   const gchar *error_message, SionWindow *window)
 {
-	sion_window_error_dialog(GTK_WINDOW(window), message, error_message);
+	sion_error_dialog((gpointer) window, message, error_message);
 }
 
 
@@ -757,7 +743,8 @@ static void action_create_bookmark_cb(GtkAction *button, SionWindow *window)
 					// not cancelled
 					edit_dialog = sion_bookmark_edit_dialog_new_with_bookmark(
 						GTK_WIDGET(window), SION_BE_MODE_EDIT, bm);
-					if (gtk_dialog_run(GTK_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
+					if (sion_bookmark_edit_dialog_run(SION_BOOKMARK_EDIT_DIALOG(edit_dialog)) ==
+						GTK_RESPONSE_OK)
 					{
 						// this fills the values of the dialog into 'bm'
 						g_object_set(edit_dialog, "bookmark-update", bm, NULL);

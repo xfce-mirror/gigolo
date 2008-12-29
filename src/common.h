@@ -60,4 +60,6 @@ void sion_show_uri(const gchar *uri);
 
 guint sion_get_default_port(const gchar *scheme);
 
+void sion_error_dialog(gpointer *parent, const gchar *text, const gchar *secondary);
+
 #endif /* __COMMON_H__ */

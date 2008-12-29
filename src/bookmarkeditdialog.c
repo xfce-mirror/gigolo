@@ -167,6 +167,72 @@ static void sion_bookmark_edit_dialog_destroy(GtkObject *object)
 }
 
 
+gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
+{
+	gint res;
+	gboolean error = FALSE;
+	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	const gchar *tmp;
+
+	while (TRUE)
+	{
+		error = FALSE;
+		res = gtk_dialog_run(GTK_DIALOG(dialog));
+
+		if (res != GTK_RESPONSE_OK)
+			break;
+		// perform some error checking and don't return until entered values are sane
+		else
+		{
+			if (GTK_WIDGET_VISIBLE(priv->name_entry))
+			{	// check the name only if we are creating/editing a bookmark
+				tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
+				if (! *tmp)
+				{
+					error = TRUE;
+					sion_error_dialog((gpointer)dialog,
+						_("You must enter a name for the bookmark."), NULL);
+				}
+			}
+			if (! error && gtk_widget_get_parent(priv->server_entry) != NULL)
+			{
+				tmp = gtk_entry_get_text(GTK_ENTRY(priv->server_entry));
+				if (! *tmp)
+				{
+					error = TRUE;
+					sion_error_dialog((gpointer)dialog,
+						_("You must enter a server address or name."), NULL);
+				}
+			}
+			if (! error && gtk_widget_get_parent(priv->share_entry) != NULL)
+			{
+				tmp = gtk_entry_get_text(GTK_ENTRY(priv->share_entry));
+				if (! *tmp)
+				{
+					error = TRUE;
+					sion_error_dialog((gpointer)dialog,
+						_("You must enter a share name."), NULL);
+				}
+			}
+			if (! error && gtk_widget_get_parent(priv->uri_entry) != NULL)
+			{
+				tmp = gtk_entry_get_text(GTK_ENTRY(priv->uri_entry));
+				if (! *tmp)
+				{
+					error = TRUE;
+					sion_error_dialog((gpointer)dialog,
+						_("You must enter a valid URI for the service."), NULL);
+				}
+			}
+			if (! error)
+				break;
+		}
+	}
+
+	return res;
+}
+
+
 static void sion_bookmark_edit_dialog_class_init(SionBookmarkEditDialogClass *klass)
 {
 	GtkObjectClass *gtk_object_class = (GtkObjectClass *)klass;
@@ -502,7 +568,7 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 
 
 /* Update the contents of the bookmark with the values from the dialog. */
-void update_bookmark(SionBookmarkEditDialog *dialog)
+static void update_bookmark(SionBookmarkEditDialog *dialog)
 {
 	SionBookmarkEditDialogPrivate *priv;
 	const gchar *tmp;
@@ -511,14 +577,9 @@ void update_bookmark(SionBookmarkEditDialog *dialog)
 
 	g_return_if_fail(dialog != NULL);
 
-	/// TODO do error checking, at the very least, don't allow empty bookmark names
-
 	priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 	g_return_if_fail(priv->bookmark_update != NULL);
-
-	tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
-	if (*tmp)
-		sion_bookmark_set_name(priv->bookmark_update, tmp);
+	g_return_if_fail(sion_bookmark_is_valid(priv->bookmark_update));
 
 	if (! gtk_combo_box_get_active_iter(GTK_COMBO_BOX(priv->type_combo), &iter))
 		return;
@@ -526,17 +587,23 @@ void update_bookmark(SionBookmarkEditDialog *dialog)
 	gtk_tree_model_get(gtk_combo_box_get_model(GTK_COMBO_BOX(priv->type_combo)),
 			    &iter, COLUMN_INDEX, &idx, -1);
 
+	tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
+	if (*tmp)	// the name might be empty if the dialog is used as a Connect dialog
+		sion_bookmark_set_name(priv->bookmark_update, tmp);
+
 	if (idx == -1)
 		idx = 0;
 	if (methods[idx].scheme == NULL)
+	{
+		sion_bookmark_set_name(priv->bookmark_update, "Custom");
 		sion_bookmark_set_uri(priv->bookmark_update, gtk_entry_get_text(GTK_ENTRY(priv->uri_entry)));
+	}
 	else
 	{
 		sion_bookmark_set_scheme(priv->bookmark_update, methods[idx].scheme);
 
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->server_entry));
-		if (*tmp)
-			sion_bookmark_set_host(priv->bookmark_update, tmp);
+		sion_bookmark_set_host(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->user_entry));
 		sion_bookmark_set_user(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->domain_entry));
@@ -673,8 +740,8 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 
 	priv->uri_entry = gtk_entry_new();
 	priv->server_entry = gtk_entry_new();
-	priv->port_spin = gtk_spin_button_new_with_range(0, 65536, 1);
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), 0);
+	priv->port_spin = gtk_spin_button_new_with_range(0, 65535, 1);
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), 0.0);
 	gtk_widget_set_tooltip_text(priv->port_spin, _("Set the port to 0 to use the default port."));
 	priv->user_entry = gtk_entry_new();
 	priv->domain_entry = gtk_entry_new();
@@ -688,6 +755,7 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	priv->domain_label = gtk_label_new_with_mnemonic(_("_Domain:"));
 	priv->share_label = gtk_label_new_with_mnemonic(_("_Share:"));
 
+	gtk_entry_set_activates_default(GTK_ENTRY(priv->name_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->uri_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->server_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->port_spin), TRUE);
@@ -712,26 +780,24 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 }
 
 
-GtkWidget* sion_bookmark_edit_dialog_new(GtkWidget *parent, SionBookmarkEditDialogMode mode)
+GtkWidget *sion_bookmark_edit_dialog_new(GtkWidget *parent, SionBookmarkEditDialogMode mode)
 {
 	SionBookmarkEditDialog *dialog = g_object_new(SION_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
 		"mode", mode,
 		NULL);
 
-
 	return GTK_WIDGET(dialog);
 }
 
 
-GtkWidget* sion_bookmark_edit_dialog_new_with_bookmark(GtkWidget *parent, SionBookmarkEditDialogMode mode, SionBookmark *bookmark)
+GtkWidget *sion_bookmark_edit_dialog_new_with_bookmark(GtkWidget *parent, SionBookmarkEditDialogMode mode, SionBookmark *bookmark)
 {
 	SionBookmarkEditDialog *dialog = g_object_new(SION_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
 		"bookmark-init", bookmark,
 		"mode", mode,
 		NULL);
-
 
 	return GTK_WIDGET(dialog);
 }

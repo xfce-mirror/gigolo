@@ -5,6 +5,10 @@
    Fix 'Create Bookmark' sensitiveness.
    When using 'Create Bookmark' show a dialog to edit the new bookmark
    before saving it.
+ * src/bookmarkdialog.c, src/bookmarkeditdialog.c, src/window.c,
+   src/bookmarkeditdialog.h, src/common.c, src/common.h, src/window.h:
+   Move sion_error_dialog() into common.c.
+   Implement basic input validation for the Bookmark Edit dialog.
 
 
 2008-12-28  Enrico Tröger  <enrico(at)xfce(dot)org>

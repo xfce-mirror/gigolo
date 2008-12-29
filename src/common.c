@@ -26,6 +26,8 @@
 
 #include "common.h"
 #include "main.h"
+#include "settings.h"
+#include "window.h"
 
 
 const gchar *sion_find_icon_name(const gchar *request, const gchar *fallback)
@@ -119,6 +121,21 @@ gboolean sion_is_desktop_xfce(void)
 		check = FALSE;
 	}
     return is_xfce;
+}
+
+
+void sion_error_dialog(gpointer *parent, const gchar *text, const gchar *secondary)
+{
+	GtkWidget *dialog;
+
+	dialog = gtk_message_dialog_new(GTK_WINDOW(parent), GTK_DIALOG_DESTROY_WITH_PARENT,
+                                  GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, "%s", text);
+	if (secondary != NULL)
+		gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog), "%s", secondary);
+	gtk_window_set_title(GTK_WINDOW(dialog), _("Error"));
+	gtk_window_set_icon_name(GTK_WINDOW(dialog), sion_window_get_icon_name());
+	gtk_dialog_run(GTK_DIALOG(dialog));
+	gtk_widget_destroy(dialog);
 }
 
 
