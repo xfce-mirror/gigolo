@@ -4,6 +4,9 @@
    src/compat.c, src/compat.h, src/main.c, src/menubuttonaction.c,
    src/passworddialog.c, src/preferencesdialog.c, src/window.c, wscript:
    Enable more compiler warning options and fix some warnings.
+ * src/preferencesdialog.c:
+   Add a label for the HAL/Unix volume manager setting to make clearer
+   what the setting is about.
 
 
 2008-12-29  Enrico Tröger  <enrico(at)xfce(dot)org>

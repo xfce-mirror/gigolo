@@ -314,7 +314,7 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 {
 	GtkWidget *frame, *frame_vbox, *align, *vbox, *hbox;
 	GtkWidget *radio1, *radio2, *checkbox, *combo, *entry;
-	GtkWidget *label1, *label2, *label3, *label4, *image;
+	GtkWidget *label1, *label2, *label3, *label4, *label_volman, *image;
 	GSList *rlist;
 	GtkSizeGroup *sg;
 
@@ -339,26 +339,6 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 4); \
 	gtk_container_add(GTK_CONTAINER(align), frame_vbox);
 
-	radio1 = gtk_radio_button_new_with_mnemonic(NULL, _("Use _HAL based volume manager"));
-	/// TODO fix this string to be more descriptive and clear
-	gtk_widget_set_tooltip_text(radio1, _("This option sets the implementation of the volume manager. In general, this should be left to HAL. Please note, this option requires a restart of Sion."));
-	rlist = gtk_radio_button_get_group(GTK_RADIO_BUTTON(radio1));
-	if (strcmp(sion_settings_get_vm_impl(settings), "hal") == 0)
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio1), TRUE);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), radio1, FALSE, FALSE, 0);
-	g_object_set_data(G_OBJECT(radio1), "impl", (gpointer) "hal");
-
-	radio2 = gtk_radio_button_new_with_mnemonic(rlist, _("Use _Unix based volume manager"));
-	gtk_widget_set_tooltip_text(radio2, _("This option sets the implementation of the volume manager. In general, this should be left to HAL. Please note, this option requires a restart of Sion."));
-	rlist = gtk_radio_button_get_group(GTK_RADIO_BUTTON(radio2));
-	if (strcmp(sion_settings_get_vm_impl(settings), "unix") == 0)
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio2), TRUE);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), radio2, FALSE, FALSE, 0);
-	g_object_set_data(G_OBJECT(radio2), "impl", (gpointer) "unix");
-
-	g_signal_connect(radio1, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);
-	g_signal_connect(radio2, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);
-
 	hbox = gtk_hbox_new(FALSE, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
@@ -375,6 +355,31 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	gtk_label_set_mnemonic_widget(GTK_LABEL(label1), entry);
 	gtk_box_pack_start(GTK_BOX(hbox), entry, FALSE, FALSE, 0);
 	entry_check_input(GTK_ENTRY(entry));
+
+	label_volman = gtk_label_new(_("The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\nIf you are unsure, use the HAL based monitor."));
+	gtk_label_set_line_wrap(GTK_LABEL(label_volman), TRUE);
+	gtk_label_set_line_wrap_mode(GTK_LABEL(label_volman), PANGO_WRAP_WORD);
+	gtk_misc_set_alignment(GTK_MISC(label_volman), 0.0f, 0.5f);
+	gtk_box_pack_start(GTK_BOX(frame_vbox), label_volman, TRUE, TRUE, 0);
+
+	radio1 = gtk_radio_button_new_with_mnemonic(NULL, _("Use _HAL based volume manager"));
+	gtk_widget_set_tooltip_markup(radio1, _("<i>Changing this option requires a restart of Sion.</i>"));
+	rlist = gtk_radio_button_get_group(GTK_RADIO_BUTTON(radio1));
+	if (strcmp(sion_settings_get_vm_impl(settings), "hal") == 0)
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio1), TRUE);
+	gtk_box_pack_start(GTK_BOX(frame_vbox), radio1, FALSE, FALSE, 0);
+	g_object_set_data(G_OBJECT(radio1), "impl", (gpointer) "hal");
+
+	radio2 = gtk_radio_button_new_with_mnemonic(rlist, _("Use _Unix based volume manager"));
+	gtk_widget_set_tooltip_markup(radio2, _("<i>Changing this option requires a restart of Sion.</i>"));
+	rlist = gtk_radio_button_get_group(GTK_RADIO_BUTTON(radio2));
+	if (strcmp(sion_settings_get_vm_impl(settings), "unix") == 0)
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio2), TRUE);
+	gtk_box_pack_start(GTK_BOX(frame_vbox), radio2, FALSE, FALSE, 0);
+	g_object_set_data(G_OBJECT(radio2), "impl", (gpointer) "unix");
+
+	g_signal_connect(radio1, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);
+	g_signal_connect(radio2, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);
 
 	frame = hig_frame_new(_("Interface"));
 	gtk_box_pack_start(GTK_BOX(vbox), frame, FALSE, FALSE, 6);
