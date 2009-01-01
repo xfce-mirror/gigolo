@@ -1,7 +1,7 @@
-# German translations for Sion.
+# German translation of Sion.
 # Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# Enrico Tröger <enrico@xfce.org>, 2008.
+# This file is distributed under the same license as Sion.
+# Enrico Tröger <enrico@xfce.org>, 2008-2009.
 #
 msgid ""
 msgstr ""

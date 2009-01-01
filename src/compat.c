@@ -1,7 +1,7 @@
 /*
  *      compat.c
  *
- *      Copyright 2008 Enrico Tröger <enrico(at)xfce(dot)org>
+ *      Copyright 2008-2009 Enrico Tröger <enrico(at)xfce(dot)org>
  *
  *      This program is free software; you can redistribute it and/or modify
  *      it under the terms of the GNU General Public License as published by
@@ -59,7 +59,7 @@ guint32 sion_widget_get_flags(GtkWidget *widget)
 
 	return fgo->flags;
 #else
-	return widget->flags;
+	return GTK_OBJECT(widget)->flags;
 #endif
 }
 
