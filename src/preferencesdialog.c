@@ -113,24 +113,6 @@ static GtkWidget *xfce_header_new(const gchar *icon, const gchar *title)
 }
 
 
-/* Create a frame with no actual frame but a bold label and indentation.
- * (Code from Midori, thanks to Christian Dywan.) */
-static GtkWidget *hig_frame_new(const gchar* title)
-{
-	GtkWidget *frame = gtk_frame_new(NULL);
-	gchar *title_bold = g_strdup_printf("<b>%s</b>", title);
-	GtkWidget *label = gtk_label_new(NULL);
-
-	gtk_label_set_markup(GTK_LABEL(label), title_bold);
-	g_free(title_bold);
-	gtk_frame_set_label_widget(GTK_FRAME(frame), label);
-	gtk_frame_set_shadow_type(GTK_FRAME(frame), GTK_SHADOW_NONE);
-	gtk_container_set_border_width(GTK_CONTAINER(frame), 4);
-
-	return frame;
-}
-
-
 static void vm_imple_toggle_cb(GtkToggleButton *button, SionSettings *settings)
 {
 	sion_settings_set_vm_impl(settings, g_object_get_data(G_OBJECT(button), "impl"));
@@ -143,6 +125,15 @@ static void check_button_toggle_cb(GtkToggleButton *button, SionSettings *settin
     const gchar* property = g_object_get_data(G_OBJECT(button), "property");
 
 	g_object_set(settings, property, toggled, NULL);
+}
+
+
+static void check_toolbar_show_toggle_cb(GtkToggleButton *button, G_GNUC_UNUSED gpointer data)
+{
+    gboolean toggled = gtk_toggle_button_get_active(button);
+
+	gtk_widget_set_sensitive(g_object_get_data(G_OBJECT(button), "combo_toolbar_style"), toggled);
+	gtk_widget_set_sensitive(g_object_get_data(G_OBJECT(button), "combo_toolbar_orient"), toggled);
 }
 
 
@@ -312,8 +303,8 @@ static GtkWidget *add_program_entry(SionSettings *settings, const gchar *propert
 
 static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 {
-	GtkWidget *frame, *frame_vbox, *align, *vbox, *hbox;
-	GtkWidget *radio1, *radio2, *checkbox, *combo, *entry;
+	GtkWidget *frame_vbox, *notebook_vbox, *vbox, *hbox, *notebook;
+	GtkWidget *radio1, *radio2, *checkbox, *combo, *entry, *combo_toolbar_style, *combo_toolbar_orient;
 	GtkWidget *label1, *label2, *label3, *label4, *label_volman, *image;
 	GSList *rlist;
 	GtkSizeGroup *sg;
@@ -329,15 +320,16 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 		gtk_box_pack_start(GTK_BOX(vbox), heading, FALSE, FALSE, 0);
 	}
 
-	frame = hig_frame_new(_("General"));
-	gtk_box_pack_start(GTK_BOX(vbox), frame, FALSE, FALSE, 6);
+	notebook = gtk_notebook_new();
+	gtk_box_pack_start(GTK_BOX(vbox), notebook, FALSE, TRUE, 0);
+	gtk_container_set_border_width(GTK_CONTAINER(notebook), 5);
 
-	align = gtk_alignment_new(0, 0.5, 0, 0);
-	gtk_container_add(GTK_CONTAINER(frame), align);
-
-	frame_vbox = gtk_vbox_new(FALSE, 6);
-	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 4); \
-	gtk_container_add(GTK_CONTAINER(align), frame_vbox);
+#define PAGE_GENERAL
+	notebook_vbox = gtk_vbox_new(FALSE, 2);
+	frame_vbox = gtk_vbox_new(FALSE, 5);
+	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 5);
+	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_vbox, TRUE, TRUE, 5);
+	gtk_notebook_append_page(GTK_NOTEBOOK(notebook), notebook_vbox, gtk_label_new(_("General")));
 
 	hbox = gtk_hbox_new(FALSE, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
@@ -356,11 +348,13 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	gtk_box_pack_start(GTK_BOX(hbox), entry, FALSE, FALSE, 0);
 	entry_check_input(GTK_ENTRY(entry));
 
+	gtk_box_pack_start(GTK_BOX(frame_vbox), gtk_label_new(""), FALSE, FALSE, 0);
+
 	label_volman = gtk_label_new(_("The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\nIf you are unsure, use the HAL based monitor."));
 	gtk_label_set_line_wrap(GTK_LABEL(label_volman), TRUE);
 	gtk_label_set_line_wrap_mode(GTK_LABEL(label_volman), PANGO_WRAP_WORD);
 	gtk_misc_set_alignment(GTK_MISC(label_volman), 0.0f, 0.5f);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), label_volman, TRUE, TRUE, 0);
+	gtk_box_pack_start(GTK_BOX(frame_vbox), label_volman, FALSE, FALSE, 0);
 
 	radio1 = gtk_radio_button_new_with_mnemonic(NULL, _("Use _HAL based volume manager"));
 	gtk_widget_set_tooltip_markup(radio1, _("<i>Changing this option requires a restart of Sion.</i>"));
@@ -381,15 +375,12 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	g_signal_connect(radio1, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);
 	g_signal_connect(radio2, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);
 
-	frame = hig_frame_new(_("Interface"));
-	gtk_box_pack_start(GTK_BOX(vbox), frame, FALSE, FALSE, 6);
-
-	align = gtk_alignment_new(0, 0.5, 0, 0);
-	gtk_container_add(GTK_CONTAINER(frame), align);
-
-	frame_vbox = gtk_vbox_new(FALSE, 6);
-	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 4); \
-	gtk_container_add(GTK_CONTAINER(align), frame_vbox);
+#define PAGE_INTERFACE
+	notebook_vbox = gtk_vbox_new(FALSE, 2);
+	frame_vbox = gtk_vbox_new(FALSE, 5);
+	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 5);
+	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_vbox, TRUE, TRUE, 5);
+	gtk_notebook_append_page(GTK_NOTEBOOK(notebook), notebook_vbox, gtk_label_new(_("Interface")));
 
 	checkbox = add_check_button(settings, "save-geometry", _("_Save window position and geometry"));
 	gtk_widget_set_tooltip_text(checkbox, _("Saves the window position and geometry and restores it at the start"));
@@ -397,31 +388,6 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 
 	checkbox = add_check_button(settings, "show-trayicon", _("Show tray _icon"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
-
-	checkbox = add_check_button(settings, "show-toolbar", _("Show _toolbar"));
-	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
-
-	hbox = gtk_hbox_new(FALSE, 6);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
-
-	label2 = gtk_label_new_with_mnemonic(_("Toolbar St_yle"));
-	gtk_misc_set_alignment(GTK_MISC(label2), 0.0f, 0.5f);
-	gtk_box_pack_start(GTK_BOX(hbox), label2, FALSE, FALSE, 0);
-
-	combo = add_toolbar_style_combo(settings, "toolbar-style");
-	gtk_label_set_mnemonic_widget(GTK_LABEL(label2), combo);
-	gtk_box_pack_start(GTK_BOX(hbox), combo, FALSE, FALSE, 0);
-
-	hbox = gtk_hbox_new(FALSE, 6);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
-
-	label3 = gtk_label_new_with_mnemonic(_("Toolbar _Orientation"));
-	gtk_misc_set_alignment(GTK_MISC(label3), 0.0f, 0.5f);
-	gtk_box_pack_start(GTK_BOX(hbox), label3, FALSE, FALSE, 0);
-
-	combo = add_toolbar_orientation_combo(settings, "toolbar-orientation");
-	gtk_label_set_mnemonic_widget(GTK_LABEL(label3), combo);
-	gtk_box_pack_start(GTK_BOX(hbox), combo, FALSE, FALSE, 0);
 
 	hbox = gtk_hbox_new(FALSE, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
@@ -434,11 +400,47 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	gtk_label_set_mnemonic_widget(GTK_LABEL(label4), combo);
 	gtk_box_pack_start(GTK_BOX(hbox), combo, FALSE, FALSE, 0);
 
+#define PAGE_TOOLBAR
+	notebook_vbox = gtk_vbox_new(FALSE, 2);
+	frame_vbox = gtk_vbox_new(FALSE, 5);
+	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 5);
+	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_vbox, TRUE, TRUE, 5);
+	gtk_notebook_append_page(GTK_NOTEBOOK(notebook), notebook_vbox, gtk_label_new(_("Toolbar")));
+
+	checkbox = add_check_button(settings, "show-toolbar", _("Show _toolbar"));
+	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+
+	hbox = gtk_hbox_new(FALSE, 6);
+	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
+
+	label2 = gtk_label_new_with_mnemonic(_("St_yle"));
+	gtk_misc_set_alignment(GTK_MISC(label2), 0.0f, 0.5f);
+	gtk_box_pack_start(GTK_BOX(hbox), label2, FALSE, FALSE, 0);
+
+	combo_toolbar_style = add_toolbar_style_combo(settings, "toolbar-style");
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label2), combo_toolbar_style);
+	gtk_box_pack_start(GTK_BOX(hbox), combo_toolbar_style, FALSE, FALSE, 0);
+
+	hbox = gtk_hbox_new(FALSE, 6);
+	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
+
+	label3 = gtk_label_new_with_mnemonic(_("_Orientation"));
+	gtk_misc_set_alignment(GTK_MISC(label3), 0.0f, 0.5f);
+	gtk_box_pack_start(GTK_BOX(hbox), label3, FALSE, FALSE, 0);
+
+	combo_toolbar_orient = add_toolbar_orientation_combo(settings, "toolbar-orientation");
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label3), combo_toolbar_orient);
+	gtk_box_pack_start(GTK_BOX(hbox), combo_toolbar_orient, FALSE, FALSE, 0);
+
+	g_object_set_data(G_OBJECT(checkbox), "combo_toolbar_style", combo_toolbar_style);
+	g_object_set_data(G_OBJECT(checkbox), "combo_toolbar_orient", combo_toolbar_orient);
+	g_signal_connect(checkbox, "toggled", G_CALLBACK(check_toolbar_show_toggle_cb), settings);
+
 	sg = gtk_size_group_new(GTK_SIZE_GROUP_HORIZONTAL);
 	gtk_size_group_add_widget(sg, label2);
 	gtk_size_group_add_widget(sg, label3);
-	gtk_size_group_add_widget(sg, label4);
 	g_object_unref(sg);
+
 
 	gtk_widget_show_all(vbox);
 }

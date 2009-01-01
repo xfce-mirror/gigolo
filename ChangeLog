@@ -7,6 +7,8 @@
  * src/preferencesdialog.c:
    Add a label for the HAL/Unix volume manager setting to make clearer
    what the setting is about.
+   Redesign the dialog using a notebook tabs instead of frames for the
+   various settings.
 
 
 2008-12-29  Enrico Tröger  <enrico(at)xfce(dot)org>
