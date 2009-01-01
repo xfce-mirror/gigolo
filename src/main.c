@@ -70,7 +70,7 @@ void verbose(gchar const *format, ...)
 }
 
 
-void print_supported_schemes(void)
+static void print_supported_schemes(void)
 {
 	const gchar* const *supported;
 	gint j;

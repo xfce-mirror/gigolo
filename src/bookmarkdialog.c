@@ -139,7 +139,7 @@ static void update_row_in_model(SionBookmarkDialog *dialog, GtkTreeIter *iter, S
 }
 
 
-static void add_button_click_cb(GtkButton *button, GtkWidget *dialog)
+static void add_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWidget *dialog)
 {
 	GtkWidget *edit_dialog = sion_bookmark_edit_dialog_new(dialog, SION_BE_MODE_CREATE);
 	SionBookmarkDialogPrivate *priv = SION_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
@@ -163,7 +163,7 @@ static void add_button_click_cb(GtkButton *button, GtkWidget *dialog)
 }
 
 
-static void edit_button_click_cb(GtkButton *button, GtkWidget *dialog)
+static void edit_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWidget *dialog)
 {
 	GtkTreeSelection *treesel;
 	GtkTreeIter iter;
@@ -193,7 +193,7 @@ static void edit_button_click_cb(GtkButton *button, GtkWidget *dialog)
 }
 
 
-static void delete_button_click_cb(GtkButton *button, gpointer user_data)
+static void delete_button_click_cb(G_GNUC_UNUSED GtkButton *button, gpointer user_data)
 {
 	GtkTreeSelection *treesel;
 	GtkTreeIter iter;
@@ -234,8 +234,9 @@ static void tree_fill(SionBookmarkDialog *dialog)
 }
 
 
-static void tree_row_activated_cb(GtkTreeView *treeview, GtkTreePath *path,
-								  GtkTreeViewColumn *arg2, gpointer data)
+static void tree_row_activated_cb(G_GNUC_UNUSED GtkTreeView *treeview,
+								  G_GNUC_UNUSED GtkTreePath *path,
+								  G_GNUC_UNUSED GtkTreeViewColumn *arg2, gpointer data)
 {
 	edit_button_click_cb(NULL, data);
 }
@@ -250,7 +251,8 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, gpointer data
 }
 
 
-static gboolean tree_button_press_event_cb(GtkWidget *widget, GdkEventButton *event, gpointer data)
+static gboolean tree_button_press_event_cb(G_GNUC_UNUSED GtkWidget *widget,
+										   GdkEventButton *event, gpointer data)
 {
 	if (event->button == 3)
 	{

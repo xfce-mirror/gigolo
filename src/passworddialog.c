@@ -84,7 +84,7 @@ static void sion_password_dialog_class_init(SionPasswordDialogClass *klass)
 }
 
 
-static void entry_activate_cb(GtkEntry *entry, gpointer user_data)
+static void entry_activate_cb(G_GNUC_UNUSED GtkEntry *entry, gpointer user_data)
 {
 	gtk_dialog_response(GTK_DIALOG(user_data), GTK_RESPONSE_OK);
 }

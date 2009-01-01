@@ -91,10 +91,10 @@ GType sion_backend_gvfs_get_type(void)
 
 static void sion_backend_gvfs_cclosure_marshal_VOID__STRING_STRING(
 											GClosure		*closure,
-											GValue			*return_value,
+							  G_GNUC_UNUSED GValue			*return_value,
 											guint			 n_param_values,
 											const GValue	*param_values,
-											gpointer		 invocation_hint,
+							  G_GNUC_UNUSED gpointer		 invocation_hint,
 											gpointer		 marshal_data)
 {
 	typedef void (*GMarshalFunc_VOID__STRING_STRING) (gpointer		 data1,
@@ -210,7 +210,7 @@ static gchar *get_tooltip_text(gpointer ref, gint ref_type, const gchar *type)
 }
 
 
-static void mount_volume_changed_cb(GVolumeMonitor *vm, GMount *mnt, gpointer backend)
+static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mnt, gpointer backend)
 {
 	GList *mounts, *volumes, *item;
 	GFile *file;
@@ -327,7 +327,7 @@ static void sion_backend_gvfs_set_property(GObject *object, guint prop_id,
 }
 
 
-static void sion_backend_gvfs_init(SionBackendGVFS *self)
+static void sion_backend_gvfs_init(G_GNUC_UNUSED SionBackendGVFS *self)
 {
 }
 
@@ -473,7 +473,7 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, gpointer backend)
 }
 
 
-static void set_password_cb(GMountOperation *op, gchar *message, gchar *default_user,
+static void set_password_cb(GMountOperation *op, G_GNUC_UNUSED gchar *message, gchar *default_user,
 							gchar *default_domain, GAskPasswordFlags flags, const gchar *domain)
 {
 	GMountOperationResult result;

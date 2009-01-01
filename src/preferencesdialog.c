@@ -278,7 +278,7 @@ static void entry_activate_cb(GtkEntry *entry, SionSettings *settings)
 }
 
 
-static gboolean entry_focus_out_event_cb(GtkEntry *entry, GdkEventFocus *event,
+static gboolean entry_focus_out_event_cb(GtkEntry *entry, G_GNUC_UNUSED GdkEventFocus *event,
 										 SionSettings *settings)
 {
 	const gchar *text = gtk_entry_get_text(entry);
@@ -346,7 +346,7 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	if (strcmp(sion_settings_get_vm_impl(settings), "hal") == 0)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio1), TRUE);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), radio1, FALSE, FALSE, 0);
-	g_object_set_data(G_OBJECT(radio1), "impl", "hal");
+	g_object_set_data(G_OBJECT(radio1), "impl", (gpointer) "hal");
 
 	radio2 = gtk_radio_button_new_with_mnemonic(rlist, _("Use _Unix based volume manager"));
 	gtk_widget_set_tooltip_text(radio2, _("This option sets the implementation of the volume manager. In general, this should be left to HAL. Please note, this option requires a restart of Sion."));
@@ -354,7 +354,7 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	if (strcmp(sion_settings_get_vm_impl(settings), "unix") == 0)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio2), TRUE);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), radio2, FALSE, FALSE, 0);
-	g_object_set_data(G_OBJECT(radio2), "impl", "unix");
+	g_object_set_data(G_OBJECT(radio2), "impl", (gpointer) "unix");
 
 	g_signal_connect(radio1, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);
 	g_signal_connect(radio2, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);

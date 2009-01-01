@@ -27,6 +27,7 @@ GtkWidget *sion_dialog_get_content_area(GtkDialog *dialog);
 
 void sion_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *tooltip_text);
 
+guint32 sion_widget_get_flags(GtkWidget *widget);
 
 #endif /* __COMPAT_H__ */
 

@@ -82,13 +82,13 @@ static void delegate_item_activated(GtkMenuItem *item, SionMenubuttonAction *act
 }
 
 
-static void delegate_button_clicked(GtkToolButton *button, GtkAction *action)
+static void delegate_button_clicked(G_GNUC_UNUSED GtkToolButton *button, GtkAction *action)
 {
 	g_signal_emit(action, signals[BUTTON_CLICKED], 0);
 }
 
 
-static GtkWidget *sion_menu_button_action_create_menu_item(GtkAction *action)
+static GtkWidget *sion_menu_button_action_create_menu_item(G_GNUC_UNUSED GtkAction *action)
 {
 	GtkWidget *menuitem;
 
@@ -246,7 +246,7 @@ static void sion_menu_button_action_class_init(SionMenubuttonActionClass *klass)
 }
 
 
-static void sion_menu_button_action_init(SionMenubuttonAction *action)
+static void sion_menu_button_action_init(G_GNUC_UNUSED SionMenubuttonAction *action)
 {
 }
 

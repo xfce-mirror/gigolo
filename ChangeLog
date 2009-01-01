@@ -1,3 +1,11 @@
+2008-12-30  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/backendgvfs.c, src/bookmarkdialog.c, src/bookmarkeditdialog.c,
+   src/compat.c, src/compat.h, src/main.c, src/menubuttonaction.c,
+   src/passworddialog.c, src/preferencesdialog.c, src/window.c, wscript:
+   Enable more compiler warning options and fix some warnings.
+
+
 2008-12-29  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/common.c, src/common.h, src/bookmark.c, src/window.c:

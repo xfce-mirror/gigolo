@@ -184,7 +184,7 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 		// perform some error checking and don't return until entered values are sane
 		else
 		{
-			if (GTK_WIDGET_VISIBLE(priv->name_entry))
+			if (sion_widget_get_flags(priv->name_entry) & GTK_VISIBLE)
 			{	// check the name only if we are creating/editing a bookmark
 				tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
 				if (! *tmp)
@@ -288,7 +288,8 @@ static guint scheme_to_index(const gchar *scheme)
 }
 
 
-gboolean combo_foreach(GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer data)
+static gboolean combo_foreach(GtkTreeModel *model, G_GNUC_UNUSED GtkTreePath *path,
+							  GtkTreeIter *iter, gpointer data)
 {
 	gint idx = GPOINTER_TO_INT(data);
 	gint i;
@@ -369,7 +370,7 @@ static void setup_for_type(SionBookmarkEditDialog *dialog)
 
 	gtk_tree_model_get(gtk_combo_box_get_model(GTK_COMBO_BOX(priv->type_combo)),
 			    &iter, COLUMN_INDEX, &idx, -1);
-	g_return_if_fail(idx < methods_len && idx >= 0);
+	g_return_if_fail(idx < methods_len);
 	meth = &(methods[idx]);
 
 	if (gtk_widget_get_parent(priv->uri_entry) != NULL)
@@ -512,7 +513,8 @@ static void setup_for_type(SionBookmarkEditDialog *dialog)
 }
 
 
-static void combo_changed_callback(GtkComboBox *combo_box, SionBookmarkEditDialog *dialog)
+static void combo_changed_callback(G_GNUC_UNUSED GtkComboBox *combo_box,
+								   SionBookmarkEditDialog *dialog)
 {
 	setup_for_type(dialog);
 }

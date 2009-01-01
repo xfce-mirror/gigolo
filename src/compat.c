@@ -45,6 +45,25 @@ GtkWidget *sion_dialog_get_content_area(GtkDialog *dialog)
 }
 
 
+guint32 sion_widget_get_flags(GtkWidget *widget)
+{
+#ifdef GSEAL_ENABLE
+	/* This is an ugly hack to get GTK_WIDGET_FLAGS() flags working with GSEAL enabled,
+	 * we simply create a fake object which looks like a GtkObject and then access its flags field */
+	typedef struct
+	{
+		GInitiallyUnowned parent_instance;
+		guint32 flags;
+	} FakeGtkObject;
+	FakeGtkObject *fgo = (FakeGtkObject*) widget;
+
+	return fgo->flags;
+#else
+	return widget->flags;
+#endif
+}
+
+
 void sion_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *tooltip_text)
 {
 #if GTK_CHECK_VERSION(2, 16, 0)

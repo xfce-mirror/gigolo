@@ -136,7 +136,7 @@ static gboolean sion_window_state_event(GtkWidget *widget, GdkEventWindowState *
 }
 
 
-static gboolean sion_window_delete_event(GtkWidget *widget, GdkEventAny *event)
+static gboolean sion_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkEventAny *event)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(widget);
 	gint geo[5];
@@ -188,7 +188,7 @@ const gchar *sion_window_get_icon_name(void)
 }
 
 
-static void trayicon_activate_cb(GtkStatusIcon *status_icon, GtkWindow *window)
+static void trayicon_activate_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, GtkWindow *window)
 {
 	if (gtk_window_is_active(window))
 		gtk_widget_hide(GTK_WIDGET(window));
@@ -200,7 +200,7 @@ static void trayicon_activate_cb(GtkStatusIcon *status_icon, GtkWindow *window)
 }
 
 
-static void trayicon_popup_menu_cb(GtkStatusIcon *status_icon, guint button,
+static void trayicon_popup_menu_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, guint button,
 								   guint activate_time, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
@@ -259,7 +259,7 @@ static void mount_from_bookmark(SionWindow *window, SionBookmark *bookmark)
 }
 
 
-static void action_mount_cb(GtkAction *button, SionWindow *window)
+static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
@@ -300,7 +300,7 @@ static void action_mount_cb(GtkAction *button, SionWindow *window)
 }
 
 
-static void action_preferences_cb(GtkAction *button, SionWindow *window)
+static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 {
 	GtkWidget *dialog;
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
@@ -313,7 +313,7 @@ static void action_preferences_cb(GtkAction *button, SionWindow *window)
 }
 
 
-static void action_unmount_cb(GtkAction *button, SionWindow *window)
+static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
@@ -333,14 +333,14 @@ static void action_unmount_cb(GtkAction *button, SionWindow *window)
 }
 
 
-static void action_quit_cb(GtkAction *button, SionWindow *window)
+static void action_quit_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 {
     sion_window_delete_event(GTK_WIDGET(window), NULL);
     gtk_widget_destroy(GTK_WIDGET(window));
 }
 
 
-static void action_bookmark_edit_cb(GtkAction *button, SionWindow *window)
+static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	GtkWidget *dialog;
@@ -352,13 +352,14 @@ static void action_bookmark_edit_cb(GtkAction *button, SionWindow *window)
 }
 
 
-static void about_activate_link(GtkAboutDialog *about, const gchar *uri, gpointer data)
+static void about_activate_link(G_GNUC_UNUSED GtkAboutDialog *dialog,
+								const gchar *uri, G_GNUC_UNUSED gpointer data)
 {
 	sion_show_uri(uri);
 }
 
 
-static void action_about_cb(GtkAction *button, SionWindow *window)
+static void action_about_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 {
     const gchar *authors[]= { "Enrico Tröger <enrico@xfce.org>", NULL };
 
@@ -388,7 +389,7 @@ static void action_about_cb(GtkAction *button, SionWindow *window)
 }
 
 
-static void action_open_cb(GtkAction *button, SionWindow *window)
+static void action_open_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
@@ -558,7 +559,7 @@ static void iconview_selection_changed_cb(GtkIconView *view, SionWindow *window)
 }
 
 
-static void mounts_changed_cb(SionBackendGVFS *backend, SionWindow *window)
+static void mounts_changed_cb(G_GNUC_UNUSED SionBackendGVFS *backend, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	gint view_mode = sion_settings_get_integer(priv->settings, "view-mode");
@@ -574,15 +575,15 @@ static void mounts_changed_cb(SionBackendGVFS *backend, SionWindow *window)
 }
 
 
-static void mount_operation_failed(SionBackendGVFS *backend, const gchar *message,
+static void mount_operation_failed_cb(G_GNUC_UNUSED SionBackendGVFS *backend, const gchar *message,
 								   const gchar *error_message, SionWindow *window)
 {
 	sion_error_dialog((gpointer) window, message, error_message);
 }
 
 
-static void tree_row_activated_cb(GtkTreeView *treeview, GtkTreePath *path,
-								  GtkTreeViewColumn *arg2, SionWindow *window)
+static void tree_row_activated_cb(G_GNUC_UNUSED GtkTreeView *treeview, GtkTreePath *path,
+								  G_GNUC_UNUSED GtkTreeViewColumn *arg2, SionWindow *window)
 {
 	GtkTreeIter iter;
 	gint ref_type;
@@ -605,13 +606,15 @@ static void tree_row_activated_cb(GtkTreeView *treeview, GtkTreePath *path,
 }
 
 
-static void iconview_item_activated_cb(GtkIconView *iconview, GtkTreePath *path, SionWindow *window)
+static void iconview_item_activated_cb(G_GNUC_UNUSED GtkIconView *iconview,
+									   GtkTreePath *path, SionWindow *window)
 {
 	tree_row_activated_cb(NULL, path, NULL, window);
 }
 
 
-static gboolean tree_button_press_event_cb(GtkWidget *widget, GdkEventButton *event, SionWindow *window)
+static gboolean tree_button_press_event_cb(G_GNUC_UNUSED GtkWidget *widget,
+										   GdkEventButton *event, SionWindow *window)
 {
 	if (event->button == 3)
 	{
@@ -668,7 +671,8 @@ static gboolean iconview_button_press_event_cb(GtkWidget *widget, GdkEventButton
 }
 
 
-static void action_bookmark_activate_cb(SionMenubuttonAction *action, GtkWidget *item, SionWindow *window)
+static void action_bookmark_activate_cb(G_GNUC_UNUSED SionMenubuttonAction *action,
+										GtkWidget *item, SionWindow *window)
 {
 	SionBookmark *bm = g_object_get_data(G_OBJECT(item), "bookmark");
 
@@ -700,7 +704,7 @@ void sion_window_update_bookmarks(SionWindow *window)
 }
 
 
-static void action_create_bookmark_cb(GtkAction *button, SionWindow *window)
+static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
@@ -1100,7 +1104,8 @@ static void sion_window_init(SionWindow *window)
 	/* Init the GVFS backend */
 	priv->backend_gvfs = sion_backend_gvfs_new(priv->store);
 	g_signal_connect(priv->backend_gvfs, "mounts-changed", G_CALLBACK(mounts_changed_cb), window);
-	g_signal_connect(priv->backend_gvfs, "operation-failed", G_CALLBACK(mount_operation_failed), window);
+	g_signal_connect(priv->backend_gvfs, "operation-failed",
+		G_CALLBACK(mount_operation_failed_cb), window);
 
 	/* UI Manager */
 	ui_manager = gtk_ui_manager_new();
