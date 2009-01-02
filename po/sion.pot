@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-12 18:57+0100\n"
+"POT-Creation-Date: 2009-01-02 17:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,200 +32,246 @@ msgstr ""
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr ""
 
-#: ../src/window.c:171
-msgid "Error"
+#: ../src/common.c:64
+msgid "Unix Device"
 msgstr ""
 
-#: ../src/window.c:439
-msgid "Non-local mountpoints can't be opened."
+#: ../src/common.c:66
+msgid "Windows Share"
 msgstr ""
 
-#: ../src/window.c:440
-msgid "(not yet implemented)"
-msgstr ""
-
-#: ../src/window.c:884
-msgid "_File"
-msgstr ""
-
-#: ../src/window.c:885
-msgid "_Edit"
-msgstr ""
-
-#: ../src/window.c:886
-msgid "_Actions"
-msgstr ""
-
-#: ../src/window.c:887
-msgid "_Help"
-msgstr ""
-
-#: ../src/window.c:891
-msgid "Create _Bookmark"
-msgstr ""
-
-#: ../src/window.c:893
-msgid "_Edit Bookmarks"
-msgstr ""
-
-#: ../src/window.c:904
-msgid "_Bookmarks"
-msgstr ""
-
-#: ../src/window.c:904
-msgid "Choose a bookmark to connect to"
-msgstr ""
-
-#: ../src/window.c:953
-msgid "Mounted"
-msgstr ""
-
-#: ../src/window.c:961 ../src/bookmarkdialog.c:306
-msgid "URI Scheme"
-msgstr ""
-
-#: ../src/window.c:969 ../src/bookmarkdialog.c:298
-msgid "Name"
-msgstr ""
-
-#: ../src/window.c:1031 ../src/window.c:1105 ../sion.desktop.in.h:2
-msgid "Sion"
-msgstr ""
-
-#: ../src/menubuttonaction.c:183
-msgid "Connect"
-msgstr ""
-
-#: ../src/passworddialog.c:105
-msgid "Authentication information needed"
-msgstr ""
-
-#: ../src/passworddialog.c:127
-msgid "_Domain:"
-msgstr ""
-
-#: ../src/passworddialog.c:138
-msgid "_Username:"
-msgstr ""
-
-#: ../src/passworddialog.c:150
-msgid "_Password:"
-msgstr ""
-
-#: ../src/bookmarkdialog.c:314
-msgid "Host"
-msgstr ""
-
-#: ../src/bookmarkdialog.c:322
-msgid "Port"
-msgstr ""
-
-#: ../src/bookmarkdialog.c:330
-msgid "Username"
-msgstr ""
-
-#: ../src/bookmarkdialog.c:387
-msgid "Edit Bookmarks"
-msgstr ""
-
-#: ../src/bookmarkeditdialog.c:104
+#: ../src/common.c:68
 msgid "FTP"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:105
+#: ../src/common.c:70
+msgid "HTTP"
+msgstr ""
+
+#: ../src/common.c:72
 msgid "SSH"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:106
-msgid "Windows share"
+#. / TODO find something better
+#: ../src/common.c:75
+msgid "OBEX"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:107
-msgid "Secure WebDAV (HTTPS)"
+#: ../src/common.c:77
+msgid "WebDAV"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:108
-msgid "WebDAV (HTTP)"
+#: ../src/common.c:79
+msgid "Secure WebDAV"
 msgstr ""
 
-#. must always be the last item
-#: ../src/bookmarkeditdialog.c:110
+#: ../src/common.c:81
+msgid "Network"
+msgstr ""
+
+#: ../src/common.c:135
+msgid "Error"
+msgstr ""
+
+#: ../src/window.c:375
+msgid "translator-credits"
+msgstr ""
+
+#: ../src/window.c:936
+msgid "_File"
+msgstr ""
+
+#: ../src/window.c:937
+msgid "_Edit"
+msgstr ""
+
+#: ../src/window.c:938
+msgid "_Actions"
+msgstr ""
+
+#: ../src/window.c:939
+msgid "_Help"
+msgstr ""
+
+#: ../src/window.c:943
+msgid "Create _Bookmark"
+msgstr ""
+
+#: ../src/window.c:945
+msgid "_Edit Bookmarks"
+msgstr ""
+
+#: ../src/window.c:956
+msgid "_Bookmarks"
+msgstr ""
+
+#: ../src/window.c:956
+msgid "Choose a bookmark to connect to"
+msgstr ""
+
+#: ../src/window.c:1006
+msgid "Mounted"
+msgstr ""
+
+#: ../src/window.c:1014 ../src/bookmarkdialog.c:322
+msgid "Service Type"
+msgstr ""
+
+#: ../src/window.c:1022 ../src/bookmarkdialog.c:314
+msgid "Name"
+msgstr ""
+
+#: ../src/window.c:1084 ../src/window.c:1159 ../sion.desktop.in.h:2
+msgid "Sion"
+msgstr ""
+
+#: ../src/menubuttonaction.c:184
+msgid "Connect"
+msgstr ""
+
+#: ../src/passworddialog.c:103
+msgid "Authentication information needed"
+msgstr ""
+
+#: ../src/passworddialog.c:128 ../src/bookmarkeditdialog.c:758
+msgid "_Domain:"
+msgstr ""
+
+#: ../src/passworddialog.c:141
+msgid "_Username:"
+msgstr ""
+
+#: ../src/passworddialog.c:155
+msgid "_Password:"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:121
+#, c-format
+msgid "Domain: %s"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:126
+#, c-format
+msgid "Share: %s"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:330
+msgid "Host"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:338
+msgid "Port"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:346
+msgid "Username"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:354
+msgid "Other information"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:411
+msgid "Edit Bookmarks"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:194
+msgid "You must enter a name for the bookmark."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:204
+msgid "You must enter a server address or name."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:214
+msgid "You must enter a share name."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:224
+msgid "You must enter a valid URI for the connection."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:553
 msgid "Custom Location"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:513
+#: ../src/bookmarkeditdialog.c:647
 msgid "Create Bookmark"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:520
+#: ../src/bookmarkeditdialog.c:654
 msgid "Edit Bookmark"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:528
+#: ../src/bookmarkeditdialog.c:662
 msgid "Connect to Server"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:581
+#: ../src/bookmarkeditdialog.c:717
 msgid "_Bookmark name:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:589
+#: ../src/bookmarkeditdialog.c:725
 msgid "Service _type:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:612
-msgid "Set the port to 0 to use the default port."
+#: ../src/bookmarkeditdialog.c:748
+msgid "Set the port to 0 to use the default port"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:615
+#: ../src/bookmarkeditdialog.c:753
 msgid "_Location (URI):"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:616
+#: ../src/bookmarkeditdialog.c:754
 msgid "_Server:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:617
+#: ../src/bookmarkeditdialog.c:755
 msgid "_User Name:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:618
+#: ../src/bookmarkeditdialog.c:756
 msgid "Optional information:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:619
+#: ../src/bookmarkeditdialog.c:757
 msgid "_Port:"
 msgstr ""
 
-#: ../src/preferencesdialog.c:182
+#: ../src/bookmarkeditdialog.c:759
+msgid "_Share:"
+msgstr ""
+
+#: ../src/preferencesdialog.c:173
 msgid "Icons"
 msgstr ""
 
-#: ../src/preferencesdialog.c:183
+#: ../src/preferencesdialog.c:174
 msgid "Text"
 msgstr ""
 
-#: ../src/preferencesdialog.c:184
+#: ../src/preferencesdialog.c:175
 msgid "Both"
 msgstr ""
 
-#: ../src/preferencesdialog.c:185
+#: ../src/preferencesdialog.c:176
 msgid "Both horizontal"
 msgstr ""
 
-#: ../src/preferencesdialog.c:204
+#: ../src/preferencesdialog.c:195
 msgid "Horizontal"
 msgstr ""
 
-#: ../src/preferencesdialog.c:205
+#: ../src/preferencesdialog.c:196
 msgid "Vertical"
 msgstr ""
 
-#: ../src/preferencesdialog.c:224
+#: ../src/preferencesdialog.c:215
 msgid "Symbols"
 msgstr ""
 
-#: ../src/preferencesdialog.c:225
+#: ../src/preferencesdialog.c:216
 msgid "Detailed"
 msgstr ""
 
@@ -233,62 +279,72 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: ../src/preferencesdialog.c:342
-msgid "Use _HAL based volume manager"
-msgstr ""
-
-#. / TODO fix this string to be more descriptive and clear
-#: ../src/preferencesdialog.c:344 ../src/preferencesdialog.c:352
-msgid ""
-"This option sets the implementation of the volume manager. In general, this "
-"should be left to HAL. Please note, this option requires a restart of Sion."
-msgstr ""
-
-#: ../src/preferencesdialog.c:351
-msgid "Use _Unix based volume manager"
-msgstr ""
-
-#: ../src/preferencesdialog.c:365
+#: ../src/preferencesdialog.c:337
 msgid "_File Manager"
 msgstr ""
 
-#: ../src/preferencesdialog.c:373
+#: ../src/preferencesdialog.c:345
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr ""
 
-#: ../src/preferencesdialog.c:379
+#: ../src/preferencesdialog.c:353
+msgid ""
+"The HAL based volume manager implementation requires the tool 'gnome-mount' "
+"to mount local resources like disks. The Unix based volume manager "
+"implementation can mount such resources directly and also lists other local "
+"devices.\n"
+"If you are unsure, use the HAL based monitor."
+msgstr ""
+
+#: ../src/preferencesdialog.c:359
+msgid "Use _HAL based volume manager"
+msgstr ""
+
+#: ../src/preferencesdialog.c:360 ../src/preferencesdialog.c:368
+msgid "<i>Changing this option requires a restart of Sion.</i>"
+msgstr ""
+
+#: ../src/preferencesdialog.c:367
+msgid "Use _Unix based volume manager"
+msgstr ""
+
+#: ../src/preferencesdialog.c:383
 msgid "Interface"
 msgstr ""
 
-#: ../src/preferencesdialog.c:389
+#: ../src/preferencesdialog.c:385
 msgid "_Save window position and geometry"
 msgstr ""
 
-#: ../src/preferencesdialog.c:390
+#: ../src/preferencesdialog.c:386
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr ""
 
-#: ../src/preferencesdialog.c:393
+#: ../src/preferencesdialog.c:389
 msgid "Show tray _icon"
 msgstr ""
 
-#: ../src/preferencesdialog.c:396
-msgid "Show _toolbar"
-msgstr ""
-
-#: ../src/preferencesdialog.c:402
-msgid "Toolbar St_yle"
-msgstr ""
-
-#: ../src/preferencesdialog.c:413
-msgid "Toolbar _Orientation"
-msgstr ""
-
-#: ../src/preferencesdialog.c:424
+#: ../src/preferencesdialog.c:395
 msgid "_View Mode"
 msgstr ""
 
-#: ../src/preferencesdialog.c:484
+#: ../src/preferencesdialog.c:408
+msgid "Toolbar"
+msgstr ""
+
+#: ../src/preferencesdialog.c:410
+msgid "Show _toolbar"
+msgstr ""
+
+#: ../src/preferencesdialog.c:416
+msgid "St_yle"
+msgstr ""
+
+#: ../src/preferencesdialog.c:427
+msgid "_Orientation"
+msgstr ""
+
+#: ../src/preferencesdialog.c:491
 msgid "Preferences"
 msgstr ""
 
@@ -299,7 +355,7 @@ msgid ""
 "\n"
 "URI: %s\n"
 "Mounted: Yes\n"
-"Type: %s"
+"Service Type: %s"
 msgstr ""
 
 #: ../src/backendgvfs.c:204
