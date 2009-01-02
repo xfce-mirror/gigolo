@@ -27,7 +27,7 @@ import sys, os, subprocess, shutil
 
 
 APPNAME = 'sion'
-VERSION = '0.0.1'
+VERSION = '0.1.0'
 
 srcdir = '.'
 blddir = '_build_'
@@ -114,7 +114,6 @@ def build(bld):
 def dist():
 	import md5
 	from Scripting import dist, excludes
-	excludes.remove('Makefile')
 	excludes.append('sion-%s.tar.bz2.sig' % VERSION)
 	filename = dist(APPNAME, VERSION)
 	f = file(filename,'rb')

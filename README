@@ -63,11 +63,11 @@ You can start Sion in the following ways:
 
   To start Sion from a command line, type the following and press Return::
 
-      % sion
+      $ sion
 
 * To get a list of available command line options, run::
 
-      % sion --help
+      $ sion --help
 
 
 License
@@ -82,4 +82,4 @@ New BSD License (http://www.opensource.org/licenses/bsd-license.php).
 
 Ideas, questions, patches and bug reports
 =========================================
-Send them to me at enrico(at)xfce(dot)org.
+Send them to me at enrico(at)xfce(dot)org or http://bugzilla.xfce.org.
