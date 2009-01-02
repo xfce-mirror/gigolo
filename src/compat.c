@@ -73,3 +73,13 @@ void sion_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *
 #endif
 }
 
+
+void sion_toolbar_set_orientation(GtkToolbar *toolbar, GtkOrientation orientation)
+{
+#if GTK_CHECK_VERSION(2, 16, 0)
+	gtk_orientable_set_orientation(GTK_ORIENTABLE(toolbar), orientation);
+#else
+	gtk_toolbar_set_orientation(toolbar, orientation);
+#endif
+}
+

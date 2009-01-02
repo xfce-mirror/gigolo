@@ -1,3 +1,9 @@
+2009-01-02  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/compath.c, src/compat.h:
+   Add sion_toolbar_set_orientation().
+
+
 2008-12-30  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/backendgvfs.c, src/bookmarkdialog.c, src/bookmarkeditdialog.c,

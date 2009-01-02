@@ -29,5 +29,7 @@ void sion_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *
 
 guint32 sion_widget_get_flags(GtkWidget *widget);
 
+void sion_toolbar_set_orientation(GtkToolbar *toolbar, GtkOrientation orientation);
+
 #endif /* __COMPAT_H__ */
 
