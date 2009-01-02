@@ -221,7 +221,7 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 				{
 					error = TRUE;
 					sion_error_dialog((gpointer)dialog,
-						_("You must enter a valid URI for the service."), NULL);
+						_("You must enter a valid URI for the connection."), NULL);
 				}
 			}
 			if (! error)
@@ -684,6 +684,7 @@ static void sion_bookmark_edit_dialog_set_property(GObject *object, guint prop_i
 static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 {
 	GtkWidget *label;
+	GtkWidget *label_tmp;
 	GtkWidget *table;
 	GtkWidget *combo;
 	GtkWidget *entry;
@@ -728,8 +729,8 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	priv->type_combo = combo = gtk_combo_box_new();
 	gtk_table_attach(GTK_TABLE(table), combo, 1, 2, 1, 2, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
-	label = gtk_label_new(" ");
-	gtk_table_attach(GTK_TABLE(table), label, 0, 2, 2, 3, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	label_tmp = gtk_label_new(" ");
+	gtk_table_attach(GTK_TABLE(table), label_tmp, 0, 2, 2, 3, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 	renderer = gtk_cell_renderer_text_new();
 	gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(combo), renderer, TRUE);
@@ -744,7 +745,7 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	priv->server_entry = gtk_entry_new();
 	priv->port_spin = gtk_spin_button_new_with_range(0, 65535, 1);
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), 0.0);
-	gtk_widget_set_tooltip_text(priv->port_spin, _("Set the port to 0 to use the default port."));
+	gtk_widget_set_tooltip_text(priv->port_spin, _("Set the port to 0 to use the default port"));
 	priv->user_entry = gtk_entry_new();
 	priv->domain_entry = gtk_entry_new();
 	priv->share_entry = gtk_entry_new();

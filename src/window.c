@@ -367,10 +367,12 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 	gtk_about_dialog_set_url_hook(about_activate_link, NULL, NULL);
 	gtk_show_about_dialog(GTK_WINDOW(window),
 		"authors", authors,
+		"logo-icon-name", sion_window_get_icon_name(),
 		"comments", "A simple frontend to easily connect to remote filesystems",
 		"copyright", "Copyright 2008-2009 Enrico Tröger",
 		"website", "http://www.uvena.de/sion/",
 		"version", VERSION,
+		"translator-credits", _("translator-credits"),
 		"license",  "Copyright 2008-2009 Enrico Tröger <enrico@xfce.org>\n\n"
 					"This program is free software; you can redistribute it and/or modify\n"
 					"it under the terms of the GNU General Public License as published by\n"
@@ -425,6 +427,7 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 			g_free(file_manager);
 			g_free(uri);
 #else
+/*
 			GFile *file = g_mount_get_root(mnt);
 			gchar *path = g_file_get_path(file);
 
@@ -448,6 +451,7 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 				verbose("Non-local mountpoints can't be opened.");
 			}
 			g_object_unref(file);
+*/
 #endif
 		}
 	}
@@ -809,7 +813,7 @@ static void sion_window_set_toolbar_orientation(SionWindow *window, gint orienta
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 
-	gtk_toolbar_set_orientation(GTK_TOOLBAR(priv->toolbar), orientation);
+	sion_toolbar_set_orientation(GTK_TOOLBAR(priv->toolbar), orientation);
 	if (orientation == GTK_ORIENTATION_HORIZONTAL && priv->vbox != gtk_widget_get_parent(priv->toolbar))
 	{
 		gtk_container_remove(GTK_CONTAINER(priv->hbox), priv->toolbar);

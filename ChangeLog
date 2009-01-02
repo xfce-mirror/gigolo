@@ -2,6 +2,8 @@
 
  * src/compath.c, src/compat.h:
    Add sion_toolbar_set_orientation().
+ * src/bookmarkeditdialog.c, src/window.c:
+   Fix a few strings.
 
 
 2008-12-30  Enrico Tröger  <enrico(at)xfce(dot)org>
