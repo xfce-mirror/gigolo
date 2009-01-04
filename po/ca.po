@@ -1,0 +1,396 @@
+# Catalan translations for sion package
+# Traduccions al català del paquet «sion».
+# Copyright (C) 2009 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the sion package.
+# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sion\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-02 17:44+0100\n"
+"PO-Revision-Date: 2009-01-03 13:14+0100\n"
+"Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
+"Language-Team: Catalan\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/main.c:41
+msgid "Print a list of supported URI schemes"
+msgstr "Mostra una llista dels esquemes de'URI compatibles"
+
+#: ../src/main.c:42
+msgid "Be verbose"
+msgstr "Mostra més informació"
+
+#: ../src/main.c:43
+msgid "Show version information"
+msgstr "Mostra informació de la versió"
+
+#: ../src/main.c:97
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- una interfície simple per connectar-se a sistemes de fitxers remots"
+
+#: ../src/common.c:64
+msgid "Unix Device"
+msgstr "Dispositiu Unix"
+
+#: ../src/common.c:66
+msgid "Windows Share"
+msgstr "Recurs compartit de Windows"
+
+#: ../src/common.c:68
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:70
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:72
+msgid "SSH"
+msgstr "SSH"
+
+#. / TODO find something better
+#: ../src/common.c:75
+msgid "OBEX"
+msgstr "OBEX"
+
+#: ../src/common.c:77
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:79
+msgid "Secure WebDAV"
+msgstr "WebDAV segur"
+
+#: ../src/common.c:81
+msgid "Network"
+msgstr "Xarxa"
+
+#: ../src/common.c:135
+msgid "Error"
+msgstr "Error"
+
+#: ../src/window.c:375
+msgid "translator-credits"
+msgstr "Carles Muñoz Gorriz <carlesmu@internautas.org>"
+
+#: ../src/window.c:936
+msgid "_File"
+msgstr "_Fitxer"
+
+#: ../src/window.c:937
+msgid "_Edit"
+msgstr "_Edita"
+
+#: ../src/window.c:938
+msgid "_Actions"
+msgstr "_Accions"
+
+#: ../src/window.c:939
+msgid "_Help"
+msgstr "A_juda"
+
+#: ../src/window.c:943
+msgid "Create _Bookmark"
+msgstr "Crea un lloc preferit"
+
+#: ../src/window.c:945
+msgid "_Edit Bookmarks"
+msgstr "_Edita preferits"
+
+#: ../src/window.c:956
+msgid "_Bookmarks"
+msgstr "Llocs _preferits"
+
+#: ../src/window.c:956
+msgid "Choose a bookmark to connect to"
+msgstr "Trieu un lloc preferit per connectar-vos"
+
+#: ../src/window.c:1006
+msgid "Mounted"
+msgstr "Muntat"
+
+#: ../src/window.c:1014
+#: ../src/bookmarkdialog.c:322
+msgid "Service Type"
+msgstr "Tipus de servei"
+
+#: ../src/window.c:1022
+#: ../src/bookmarkdialog.c:314
+msgid "Name"
+msgstr "Nom"
+
+#: ../src/window.c:1084
+#: ../src/window.c:1159
+#: ../sion.desktop.in.h:2
+msgid "Sion"
+msgstr "Sion"
+
+#: ../src/menubuttonaction.c:184
+msgid "Connect"
+msgstr "Connecta"
+
+#: ../src/passworddialog.c:103
+msgid "Authentication information needed"
+msgstr "Calen dades d'autenticació"
+
+#: ../src/passworddialog.c:128
+#: ../src/bookmarkeditdialog.c:758
+msgid "_Domain:"
+msgstr "_Domini:"
+
+#: ../src/passworddialog.c:141
+msgid "_Username:"
+msgstr "Nom d'_usuari:"
+
+#: ../src/passworddialog.c:155
+msgid "_Password:"
+msgstr "_Contrasenya:"
+
+#: ../src/bookmarkdialog.c:121
+#, c-format
+msgid "Domain: %s"
+msgstr "Domini: %s"
+
+#: ../src/bookmarkdialog.c:126
+#, c-format
+msgid "Share: %s"
+msgstr "Compartit: %s"
+
+#: ../src/bookmarkdialog.c:330
+msgid "Host"
+msgstr "Màquina"
+
+#: ../src/bookmarkdialog.c:338
+msgid "Port"
+msgstr "Port"
+
+#: ../src/bookmarkdialog.c:346
+msgid "Username"
+msgstr "Nom d'usuari"
+
+#: ../src/bookmarkdialog.c:354
+msgid "Other information"
+msgstr "Altre informació"
+
+#: ../src/bookmarkdialog.c:411
+msgid "Edit Bookmarks"
+msgstr "Edició de llocs proferits"
+
+#: ../src/bookmarkeditdialog.c:194
+msgid "You must enter a name for the bookmark."
+msgstr "Cal que introduïu un nom pel lloc preferit."
+
+#: ../src/bookmarkeditdialog.c:204
+msgid "You must enter a server address or name."
+msgstr "Cal que introduïu el nom o adreça del servidor."
+
+#: ../src/bookmarkeditdialog.c:214
+msgid "You must enter a share name."
+msgstr "Cal que introduïu el nom de la compartició."
+
+#: ../src/bookmarkeditdialog.c:224
+msgid "You must enter a valid URI for the connection."
+msgstr "Cal que introduïu una URI vàlida per la connexió."
+
+#: ../src/bookmarkeditdialog.c:553
+msgid "Custom Location"
+msgstr "Ubicació personanalitzada"
+
+#: ../src/bookmarkeditdialog.c:647
+msgid "Create Bookmark"
+msgstr "Crea un lloc preferit"
+
+#: ../src/bookmarkeditdialog.c:654
+msgid "Edit Bookmark"
+msgstr "Edició del lloc preferit"
+
+#: ../src/bookmarkeditdialog.c:662
+msgid "Connect to Server"
+msgstr "Connecta al servidor"
+
+#: ../src/bookmarkeditdialog.c:717
+msgid "_Bookmark name:"
+msgstr "Nom del lloc preferit:"
+
+#: ../src/bookmarkeditdialog.c:725
+msgid "Service _type:"
+msgstr "_Tipus de servei:"
+
+#: ../src/bookmarkeditdialog.c:748
+msgid "Set the port to 0 to use the default port"
+msgstr "Posa 0 al port per emprar el port per defecte"
+
+#: ../src/bookmarkeditdialog.c:753
+msgid "_Location (URI):"
+msgstr "_Ubicació (URI):"
+
+#: ../src/bookmarkeditdialog.c:754
+msgid "_Server:"
+msgstr "_Servidor:"
+
+#: ../src/bookmarkeditdialog.c:755
+msgid "_User Name:"
+msgstr "_Nom d'usuari:"
+
+#: ../src/bookmarkeditdialog.c:756
+msgid "Optional information:"
+msgstr "Informació opcional:"
+
+#: ../src/bookmarkeditdialog.c:757
+msgid "_Port:"
+msgstr "_Port:"
+
+#: ../src/bookmarkeditdialog.c:759
+msgid "_Share:"
+msgstr "_Compartició:"
+
+#: ../src/preferencesdialog.c:173
+msgid "Icons"
+msgstr "Icones"
+
+#: ../src/preferencesdialog.c:174
+msgid "Text"
+msgstr "Text"
+
+#: ../src/preferencesdialog.c:175
+msgid "Both"
+msgstr "Ambdós"
+
+#: ../src/preferencesdialog.c:176
+msgid "Both horizontal"
+msgstr "Ambdós horitzontals"
+
+#: ../src/preferencesdialog.c:195
+msgid "Horizontal"
+msgstr "Horitzontal"
+
+#: ../src/preferencesdialog.c:196
+msgid "Vertical"
+msgstr "Vertical"
+
+#: ../src/preferencesdialog.c:215
+msgid "Symbols"
+msgstr "Símbols"
+
+#: ../src/preferencesdialog.c:216
+msgid "Detailed"
+msgstr "Detallat"
+
+#: ../src/preferencesdialog.c:332
+msgid "General"
+msgstr "General"
+
+#: ../src/preferencesdialog.c:337
+msgid "_File Manager"
+msgstr "Gestor de _fitxers"
+
+#: ../src/preferencesdialog.c:345
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr "Introduïu el nom del programa que s'emprarà per obrir o veure els punts de muntatge"
+
+#: ../src/preferencesdialog.c:353
+msgid ""
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+"If you are unsure, use the HAL based monitor."
+msgstr ""
+"A la implementació del gestor de volums basat en HAL li cal l'opció «gnome-mount» per muntar els recursos local com els discs. El gestor de volums basat en Unix pot muntar aquests recursos directament així com mostrat la llista d'altres dispositius locals.\n"
+"Si no esteu segur, empreu el gestor basat en HAL."
+
+#: ../src/preferencesdialog.c:359
+msgid "Use _HAL based volume manager"
+msgstr "Empra un gestor de volums basat en HAL"
+
+#: ../src/preferencesdialog.c:360
+#: ../src/preferencesdialog.c:368
+msgid "<i>Changing this option requires a restart of Sion.</i>"
+msgstr "<i>El canvi d'aquesta opció fa que calgui reiniciar Sion.</i>"
+
+#: ../src/preferencesdialog.c:367
+msgid "Use _Unix based volume manager"
+msgstr "Empra un gestor de volums basat en _Unix"
+
+#: ../src/preferencesdialog.c:383
+msgid "Interface"
+msgstr "Interfície"
+
+#: ../src/preferencesdialog.c:385
+msgid "_Save window position and geometry"
+msgstr "_Desa la mida i posició de la finestra"
+
+#: ../src/preferencesdialog.c:386
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "Desa la mida i posició de la finestra i la restaura a l'inici"
+
+#: ../src/preferencesdialog.c:389
+msgid "Show tray _icon"
+msgstr "Mostra la _icona a la safata"
+
+#: ../src/preferencesdialog.c:395
+msgid "_View Mode"
+msgstr "Mode de _visualització"
+
+#: ../src/preferencesdialog.c:408
+msgid "Toolbar"
+msgstr "Barra d'eines"
+
+#: ../src/preferencesdialog.c:410
+msgid "Show _toolbar"
+msgstr "Mostra la barra d'_eines"
+
+#: ../src/preferencesdialog.c:416
+msgid "St_yle"
+msgstr "_Estil"
+
+#: ../src/preferencesdialog.c:427
+msgid "_Orientation"
+msgstr "_Orientació"
+
+#: ../src/preferencesdialog.c:491
+msgid "Preferences"
+msgstr "Preferències"
+
+#: ../src/backendgvfs.c:191
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Mounted: Yes\n"
+"Service Type: %s"
+msgstr ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Muntat: Sí\n"
+"Tipus de servei: %s"
+
+#: ../src/backendgvfs.c:204
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Dispositiu Unix: %s</b>"
+
+#: ../src/backendgvfs.c:381
+#: ../src/backendgvfs.c:412
+msgid "unknown"
+msgstr "desconegut"
+
+#: ../src/backendgvfs.c:385
+#: ../src/backendgvfs.c:464
+#, c-format
+msgid "Mounting of \"%s\" failed."
+msgstr "Ha fallat el muntatge de «%s»."
+
+#: ../src/backendgvfs.c:416
+#, c-format
+msgid "Unmounting of \"%s\" failed."
+msgstr "Ha fallat el desmuntatge de «%s»."
+
+#: ../sion.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Una interfície simple per connectar-se a sistemes de fitxers remots"
+
