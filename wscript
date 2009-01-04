@@ -43,10 +43,10 @@ sources = [ 'src/main.c', 'src/compat.c', 'src/window.c', 'src/bookmark.c', 'src
 def configure(conf):
 	conf.check_tool('compiler_cc intltool misc gnu_dirs')
 
-	conf.check_cfg(package='gtk+-2.0', atleast_version='2.12.0', uselib_store='GTK', mandatory=True)
-	conf.check_cfg(package='gtk+-2.0', args='--cflags --libs', uselib_store='GTK')
-	conf.check_cfg(package='gio-2.0', atleast_version='2.16.0', uselib_store='GIO', mandatory=True)
-	conf.check_cfg(package='gio-2.0', args='--cflags --libs', uselib_store='GIO')
+	conf.check_cfg(package='gtk+-2.0', atleast_version='2.12.0', uselib_store='GTK',
+		mandatory=True, args='--cflags --libs')
+	conf.check_cfg(package='gio-2.0', atleast_version='2.16.0', uselib_store='GIO',
+		mandatory=True, args='--cflags --libs')
 
 	gtk_version = conf.check_cfg(modversion='gtk+-2.0', uselib_store='GTK')
 	gio_version = conf.check_cfg(modversion='gio-2.0', uselib_store='GIO')
