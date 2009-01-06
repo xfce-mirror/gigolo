@@ -147,6 +147,10 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 
 	/* find username */
 	t = strchr(s, '@');
+	// if we found a '@', search for a second one and use the second one as end of the username
+	// as the username itself might contain a '@'
+	if (t != NULL && (x = strchr(t + 1, '@')) != NULL)
+		t = x;
 	if (t != NULL)
 	{
 		l = 0;
@@ -226,7 +230,6 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 
 	return TRUE;
 }
-
 
 
 static void sion_bookmark_init(SionBookmark *self)
