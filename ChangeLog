@@ -1,3 +1,12 @@
+2009-01-06  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/bookmarkdialog.c, src/bookmarkeditdialog.c,
+   src/bookmarkeditdialog.h, src/window.c:
+   Don't allow entering duplicate bookmark names.
+   When any input was missing or wrong in the Bookmark Edit dialog, put
+   the input focus back to the text entry which failed.
+
+
 2009-01-02  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/compath.c, src/compat.h:

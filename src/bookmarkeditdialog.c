@@ -27,6 +27,7 @@
 
 #include "common.h"
 #include "compat.h"
+#include "settings.h"
 #include "bookmark.h"
 #include "bookmarkeditdialog.h"
 
@@ -37,6 +38,8 @@ typedef struct _SionBookmarkEditDialogPrivate			SionBookmarkEditDialogPrivate;
 
 struct _SionBookmarkEditDialogPrivate
 {
+	SionSettings *settings;
+
 	GtkWidget *table;
 
 	GtkWidget *type_combo;
@@ -62,11 +65,7 @@ struct _SionBookmarkEditDialogPrivate
 
 	GtkWidget *share_label;
 	GtkWidget *share_entry;
-/*
-	GtkWidget *share_entry;
-	GtkWidget *domain_entry;
-	GtkWidget *folder_entry;
-*/
+
 	SionBookmark *bookmark_init;
 	SionBookmark *bookmark_update;
 };
@@ -192,6 +191,25 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 					error = TRUE;
 					sion_error_dialog((gpointer)dialog,
 						_("You must enter a name for the bookmark."), NULL);
+					gtk_widget_grab_focus(priv->name_entry);
+				}
+				else
+				{	// check for duplicate bookmark names
+					SionBookmarkList *bml = sion_settings_get_bookmarks(priv->settings);
+					SionBookmark *bm;
+					guint i;
+
+					for (i = 0; i < bml->len && ! error; i++)
+					{
+						bm = g_ptr_array_index(bml, i);
+						if (sion_str_equal(tmp, sion_bookmark_get_name(bm)))
+						{
+							error = TRUE;
+							sion_error_dialog((gpointer)dialog,
+			_("The entered bookmark name is already in use. Please choose another one."), NULL);
+							gtk_widget_grab_focus(priv->name_entry);
+						}
+					}
 				}
 			}
 			if (! error && gtk_widget_get_parent(priv->server_entry) != NULL)
@@ -202,6 +220,7 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 					error = TRUE;
 					sion_error_dialog((gpointer)dialog,
 						_("You must enter a server address or name."), NULL);
+					gtk_widget_grab_focus(priv->server_entry);
 				}
 			}
 			if (! error && gtk_widget_get_parent(priv->share_entry) != NULL)
@@ -212,6 +231,7 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 					error = TRUE;
 					sion_error_dialog((gpointer)dialog,
 						_("You must enter a share name."), NULL);
+					gtk_widget_grab_focus(priv->share_entry);
 				}
 			}
 			if (! error && gtk_widget_get_parent(priv->uri_entry) != NULL)
@@ -222,6 +242,7 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 					error = TRUE;
 					sion_error_dialog((gpointer)dialog,
 						_("You must enter a valid URI for the connection."), NULL);
+					gtk_widget_grab_focus(priv->uri_entry);
 				}
 			}
 			if (! error)
@@ -783,24 +804,28 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 }
 
 
-GtkWidget *sion_bookmark_edit_dialog_new(GtkWidget *parent, SionBookmarkEditDialogMode mode)
+GtkWidget *sion_bookmark_edit_dialog_new(GtkWidget *parent, SionSettings *settings, SionBookmarkEditDialogMode mode)
 {
 	SionBookmarkEditDialog *dialog = g_object_new(SION_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
 		"mode", mode,
 		NULL);
+	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	priv->settings = settings;
 
 	return GTK_WIDGET(dialog);
 }
 
 
-GtkWidget *sion_bookmark_edit_dialog_new_with_bookmark(GtkWidget *parent, SionBookmarkEditDialogMode mode, SionBookmark *bookmark)
+GtkWidget *sion_bookmark_edit_dialog_new_with_bookmark(GtkWidget *parent, SionSettings *settings, SionBookmarkEditDialogMode mode, SionBookmark *bookmark)
 {
 	SionBookmarkEditDialog *dialog = g_object_new(SION_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
 		"bookmark-init", bookmark,
 		"mode", mode,
 		NULL);
+	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	priv->settings = settings;
 
 	return GTK_WIDGET(dialog);
 }

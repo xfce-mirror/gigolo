@@ -284,7 +284,8 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 		SionBookmark *bm = NULL;
 		GtkWidget *dialog;
 
-		dialog = sion_bookmark_edit_dialog_new(GTK_WIDGET(window), SION_BE_MODE_CONNECT);
+		dialog = sion_bookmark_edit_dialog_new(GTK_WIDGET(window),
+			priv->settings, SION_BE_MODE_CONNECT);
 		if (sion_bookmark_edit_dialog_run(SION_BOOKMARK_EDIT_DIALOG(dialog)) == GTK_RESPONSE_OK)
 		{
 			bm = sion_bookmark_new();
@@ -750,7 +751,7 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindo
 					// show the bookmark edit dialog and add the bookmark only if it was
 					// not cancelled
 					edit_dialog = sion_bookmark_edit_dialog_new_with_bookmark(
-						GTK_WIDGET(window), SION_BE_MODE_EDIT, bm);
+						GTK_WIDGET(window), priv->settings, SION_BE_MODE_EDIT, bm);
 					if (sion_bookmark_edit_dialog_run(SION_BOOKMARK_EDIT_DIALOG(edit_dialog)) ==
 						GTK_RESPONSE_OK)
 					{
