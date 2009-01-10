@@ -42,6 +42,8 @@ struct _SionBookmarkPrivate
 	gchar	*share;
 	guint	 port;
 	gchar	*user;
+	gboolean autoconnect;
+	gboolean should_not_autoconnect;
 
 	gboolean is_valid;
 };
@@ -409,6 +411,46 @@ void sion_bookmark_set_port(SionBookmark *bookmark, guint port)
 	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
 
 	priv->port = port;
+}
+
+
+gboolean sion_bookmark_get_autoconnect(SionBookmark *bookmark)
+{
+	g_return_val_if_fail(bookmark != NULL, 0);
+
+	return SION_BOOKMARK_GET_PRIVATE(bookmark)->autoconnect;
+}
+
+
+void sion_bookmark_set_autoconnect(SionBookmark *bookmark, gboolean autoconnect)
+{
+	SionBookmarkPrivate *priv;
+
+	g_return_if_fail(bookmark != NULL);
+
+	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+
+	priv->autoconnect = autoconnect;
+}
+
+
+gboolean sion_bookmark_get_should_not_autoconnect(SionBookmark *bookmark)
+{
+	g_return_val_if_fail(bookmark != NULL, 0);
+
+	return SION_BOOKMARK_GET_PRIVATE(bookmark)->should_not_autoconnect;
+}
+
+
+void sion_bookmark_set_should_not_autoconnect(SionBookmark *bookmark, gboolean should_not_autoconnect)
+{
+	SionBookmarkPrivate *priv;
+
+	g_return_if_fail(bookmark != NULL);
+
+	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+
+	priv->should_not_autoconnect = should_not_autoconnect;
 }
 
 

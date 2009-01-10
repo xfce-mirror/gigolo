@@ -49,6 +49,7 @@ GType		sion_window_get_type			(void);
 GtkWidget*	sion_window_new					(SionSettings *settings);
 
 void		sion_window_update_bookmarks	(SionWindow *window);
+gboolean 	sion_window_do_autoconnect	(gpointer data);
 
 
 const gchar* sion_window_get_icon_name		(void);

@@ -76,6 +76,13 @@ void				sion_bookmark_set_share		(SionBookmark *bookmark, const gchar *share);
 const gchar*		sion_bookmark_get_domain	(SionBookmark *bookmark);
 void				sion_bookmark_set_domain	(SionBookmark *bookmark, const gchar *domain);
 
+gboolean			sion_bookmark_get_autoconnect	(SionBookmark *bookmark);
+void				sion_bookmark_set_autoconnect	(SionBookmark *bookmark, gboolean autoconnect);
+
+gboolean			sion_bookmark_get_should_not_autoconnect	(SionBookmark *bookmark);
+void				sion_bookmark_set_should_not_autoconnect	(SionBookmark *bookmark, gboolean should_not_autoconnect);
+
+
 G_END_DECLS
 
 #endif /* __BOOKMARK_H__ */

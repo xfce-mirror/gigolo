@@ -3,6 +3,10 @@
  * src/bookmarkeditdialog.c:
    Fix "This bookmark already exists" warning when editing an existing
    bookmark (patch by Colin Leroy, thanks).
+ * THANKS, src/bookmark.c, src/bookmark.h, src/settings.c:
+   Try to connect to auto-connect bookmarks at startup and every
+   minute. Clicking Disconnect cancels autoconnection for the
+   running instance (patch by Colin Leroy, thanks).
 
 
 2009-01-06  Enrico Tröger  <enrico(at)xfce(dot)org>

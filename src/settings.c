@@ -394,6 +394,7 @@ static void write_settings_bookmarks(SionSettings *settings)
 			set_setting_string(k, name, "share", sion_bookmark_get_share(bm));
 			set_setting_string(k, name, "domain", sion_bookmark_get_domain(bm));
 			set_setting_int(k, name, "port", sion_bookmark_get_port(bm));
+			set_setting_int(k, name, "autoconnect", sion_bookmark_get_autoconnect(bm));
 		}
 	}
 
@@ -489,6 +490,7 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 	gchar **groups;
 	gchar *scheme, *host, *user, *domain, *share;
 	gint port;
+	gboolean autoconnect;
 	SionBookmark *bm;
 
 	k = g_key_file_new();
@@ -509,6 +511,7 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 		domain = get_setting_string(k, groups[i], "domain", "");
 		share = get_setting_string(k, groups[i], "share", "");
 		port = get_setting_int(k, groups[i], "port", 0);
+		autoconnect = get_setting_int(k, groups[i], "autoconnect", FALSE);
 
 		bm = sion_bookmark_new();
 		sion_bookmark_set_name(bm, groups[i]);
@@ -522,6 +525,7 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 		if (NZV(share))
 			sion_bookmark_set_share(bm, share);
 		sion_bookmark_set_port(bm, port);
+		sion_bookmark_set_autoconnect(bm, autoconnect);
 
 		g_ptr_array_add(priv->bookmarks, bm);
 

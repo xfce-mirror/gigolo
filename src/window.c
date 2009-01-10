@@ -243,6 +243,28 @@ static void get_selected_iter(SionWindow *window, GtkTreeIter *iter)
 }
 
 
+static SionBookmark *get_bookmark_from_uri(SionWindow *window, const gchar *uri)
+{
+	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	SionBookmarkList *bml = sion_settings_get_bookmarks(priv->settings);
+	SionBookmark *bm = NULL;
+	gboolean found = FALSE;
+	gchar *tmp_uri;
+	guint i;
+
+	for (i = 0; i < bml->len && ! found; i++)
+	{
+		bm = g_ptr_array_index(bml, i);
+		tmp_uri = sion_bookmark_get_uri(bm);
+		if (sion_str_equal(uri, tmp_uri))
+			found = TRUE;
+
+		g_free(tmp_uri);
+	}
+	return bm;
+}
+
+
 static void mount_from_bookmark(SionWindow *window, SionBookmark *bookmark)
 {
 	gchar *uri;
@@ -254,6 +276,9 @@ static void mount_from_bookmark(SionWindow *window, SionBookmark *bookmark)
 	priv = SION_WINDOW_GET_PRIVATE(window);
 	uri = sion_bookmark_get_uri(bookmark);
 	sion_backend_gvfs_mount_uri(priv->backend_gvfs, uri, sion_bookmark_get_domain(bookmark));
+
+	if (sion_bookmark_get_autoconnect(bookmark))
+		sion_bookmark_set_should_not_autoconnect(bookmark, FALSE);
 
 	g_free(uri);
 }
@@ -318,6 +343,7 @@ static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *windo
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
+	SionBookmark *bm;
 
 	get_selected_iter(window, &iter);
 	if (gtk_list_store_iter_is_valid(priv->store, &iter))
@@ -328,6 +354,16 @@ static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *windo
 		gtk_tree_model_get(model, &iter, SION_WINDOW_COL_REF, &mnt, -1);
 		if (sion_backend_gvfs_is_mount(mnt))
 		{
+			gchar *uri;
+			sion_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
+			bm = get_bookmark_from_uri(window, uri);
+			if (bm != NULL && sion_bookmark_get_autoconnect(bm))
+			{	/* we don't want auto-connection to reconnect this bookmark right
+				   after we unmount it. */
+				sion_bookmark_set_should_not_autoconnect(bm, TRUE);
+			}
+			g_free(uri);
+
 			sion_backend_gvfs_unmount_mount(priv->backend_gvfs, mnt);
 		}
 	}
@@ -476,24 +512,12 @@ static gboolean iter_is_bookmark(SionWindow *window, GtkTreeModel *model, GtkTre
 	if (ref_type == SION_WINDOW_REF_TYPE_MOUNT)
 	{
 		gchar *uri;
-		gchar *tmp_uri;
-		guint i;
-		SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
-		SionBookmarkList *bml = sion_settings_get_bookmarks(priv->settings);
-		SionBookmark *bm;
 		gboolean found = FALSE;
 
 		sion_backend_gvfs_get_name_and_uri_from_mount(ref, NULL, &uri);
 
-		for (i = 0; i < bml->len && ! found; i++)
-		{
-			bm = g_ptr_array_index(bml, i);
-			tmp_uri = sion_bookmark_get_uri(bm);
-			if (sion_str_equal(uri, tmp_uri))
-				found = TRUE;
+		found = (get_bookmark_from_uri(window, uri) != NULL);
 
-			g_free(tmp_uri);
-		}
 		g_free(uri);
 		return found;
 	}
@@ -709,6 +733,32 @@ void sion_window_update_bookmarks(SionWindow *window)
 }
 
 
+gboolean sion_window_do_autoconnect(gpointer data)
+{
+	static gboolean timeout_added = FALSE;
+	SionWindow *window = SION_WINDOW(data);
+	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	SionBookmarkList *bookmarks = sion_settings_get_bookmarks(priv->settings);
+	guint i;
+
+	for (i = 0; i < bookmarks->len; i++)
+	{
+		SionBookmark *bm = g_ptr_array_index(bookmarks, i);
+		if (sion_bookmark_get_autoconnect(bm) && ! sion_bookmark_get_should_not_autoconnect(bm))
+		{
+			mount_from_bookmark(window, bm);
+		}
+	}
+
+	if (! timeout_added)
+	{
+		g_timeout_add_seconds(60, sion_window_do_autoconnect, data);
+		timeout_added = TRUE;
+	}
+	return TRUE;
+}
+
+
 static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
@@ -723,27 +773,13 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindo
 		gtk_tree_model_get(model, &iter, SION_WINDOW_COL_REF, &mnt, -1);
 		if (sion_backend_gvfs_is_mount(mnt))
 		{
-			gchar *uri, *tmp_uri, *name;
-			guint i;
-			gboolean found = FALSE;
-			SionBookmark *bm;
-			SionBookmarkList *bml = sion_settings_get_bookmarks(priv->settings);
+			gchar *uri, *name;
 
 			sion_backend_gvfs_get_name_and_uri_from_mount(mnt, &name, &uri);
-			// check whether the current mount is already a bookmark ...
-			for (i = 0; i < bml->len && ! found; i++)
-			{
-				bm = g_ptr_array_index(bml, i);
-				tmp_uri = sion_bookmark_get_uri(bm);
-				if (sion_str_equal(uri, tmp_uri))
-					found = TRUE;
 
-				g_free(tmp_uri);
-			}
-			// ... and add it if not
-			if (! found)
+			if (get_bookmark_from_uri(window, uri) == NULL)
 			{
-				bm = sion_bookmark_new_from_uri(name, uri);
+				SionBookmark *bm = sion_bookmark_new_from_uri(name, uri);
 				if (sion_bookmark_is_valid(bm))
 				{
 					GtkWidget *edit_dialog;
@@ -1200,6 +1236,7 @@ GtkWidget *sion_window_new(SionSettings *settings)
 
 	mounts_changed_cb(NULL, SION_WINDOW(window));
 	sion_window_update_bookmarks(SION_WINDOW(window));
+	sion_window_do_autoconnect(SION_WINDOW(window));
 
 	return window;
 }

@@ -59,9 +59,11 @@ enum
 	COL_SCHEME,
 	COL_HOST,
 	COL_PORT,
+	COL_AUTOMOUNT,
 	COL_USERNAME,
 	COL_OTHER,
 	COL_BMREF,
+	N_COLUMNS,
 	ACTION_ADD,
 	ACTION_EDIT,
 	ACTION_DELETE
@@ -131,6 +133,7 @@ static void update_row_in_model(SionBookmarkDialog *dialog, GtkTreeIter *iter, S
 			COL_SCHEME, sion_describe_scheme(sion_bookmark_get_scheme(bm)),
 			COL_HOST, sion_bookmark_get_host(bm),
 			COL_PORT, port,
+			COL_AUTOMOUNT, sion_bookmark_get_autoconnect(bm),
 			COL_USERNAME, sion_bookmark_get_user(bm),
 			COL_OTHER, other_text->str,
 			COL_BMREF, bm,
@@ -189,6 +192,7 @@ static void edit_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWidget *dia
 
 		update_row_in_model(SION_BOOKMARK_DIALOG(dialog), &iter, bm);
 		sion_window_update_bookmarks(SION_WINDOW(priv->parent));
+		sion_window_do_autoconnect(SION_WINDOW(priv->parent));
 	}
 	gtk_widget_destroy(edit_dialog);
 }
@@ -306,9 +310,9 @@ static void tree_prepare(SionBookmarkDialog *dialog)
 	SionBookmarkDialogPrivate *priv = SION_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
 
 	priv->tree = gtk_tree_view_new();
-	priv->store = gtk_list_store_new(7,
+	priv->store = gtk_list_store_new(N_COLUMNS,
 		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
-		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER);
+		G_TYPE_BOOLEAN, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER);
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
@@ -339,6 +343,14 @@ static void tree_prepare(SionBookmarkDialog *dialog)
 		_("Port"), renderer, "text", COL_PORT, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_PORT);
+	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
+	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->tree), column);
+
+	renderer = gtk_cell_renderer_toggle_new();
+	column = gtk_tree_view_column_new_with_attributes(
+		_("Automount"), renderer, "active", COL_AUTOMOUNT, NULL);
+	gtk_tree_view_column_set_sort_indicator(column, TRUE);
+	gtk_tree_view_column_set_sort_column_id(column, COL_AUTOMOUNT);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->tree), column);
 

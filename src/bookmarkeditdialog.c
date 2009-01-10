@@ -48,6 +48,8 @@ struct _SionBookmarkEditDialogPrivate
 	GtkWidget *name_label;
 	GtkWidget *name_entry;
 
+	GtkWidget *autoconnect_checkbtn;
+
 	GtkWidget *uri_label;
 	GtkWidget *uri_entry;
 
@@ -374,6 +376,10 @@ static void init_values(SionBookmarkEditDialog *dialog)
 	if (port == 0)
 		port = methods[idx].port;
 
+	gtk_toggle_button_set_active(
+		GTK_TOGGLE_BUTTON(priv->autoconnect_checkbtn),
+		sion_bookmark_get_autoconnect(priv->bookmark_init));
+
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), port);
 	combo_set_active(priv->type_combo, (gint) idx);
 }
@@ -431,7 +437,7 @@ static void setup_for_type(SionBookmarkEditDialog *dialog)
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->information_label);
 	}
 
-	i = 3;
+	i = 4;
 	table = priv->table;
 
 	if (meth->scheme == NULL)
@@ -599,6 +605,7 @@ static void update_bookmark(SionBookmarkEditDialog *dialog)
 	const gchar *tmp;
 	gint idx;
 	GtkTreeIter iter;
+	gboolean autoconnect;
 
 	g_return_if_fail(dialog != NULL);
 
@@ -620,7 +627,6 @@ static void update_bookmark(SionBookmarkEditDialog *dialog)
 		idx = 0;
 	if (methods[idx].scheme == NULL)
 	{
-		sion_bookmark_set_name(priv->bookmark_update, "Custom");
 		sion_bookmark_set_uri(priv->bookmark_update, gtk_entry_get_text(GTK_ENTRY(priv->uri_entry)));
 	}
 	else
@@ -638,6 +644,9 @@ static void update_bookmark(SionBookmarkEditDialog *dialog)
 		sion_bookmark_set_port(priv->bookmark_update,
 			gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(priv->port_spin)));
 	}
+
+	autoconnect = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(priv->autoconnect_checkbtn));
+	sion_bookmark_set_autoconnect(priv->bookmark_update, autoconnect);
 }
 
 
@@ -687,6 +696,7 @@ static void sion_bookmark_edit_dialog_set_property(GObject *object, guint prop_i
 				combo_set_active(priv->type_combo, 0);
 				gtk_widget_hide(priv->name_label);
 				gtk_widget_hide(priv->name_entry);
+				gtk_widget_hide(priv->autoconnect_checkbtn);
 				break;
 			}
 		}
@@ -732,7 +742,7 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	hbox = gtk_hbox_new(FALSE, 6);
 	gtk_box_pack_start(GTK_BOX(vbox), hbox, FALSE, TRUE, 0);
 
-	priv->table = table = gtk_table_new(8, 2, FALSE);
+	priv->table = table = gtk_table_new(9, 2, FALSE);
 	gtk_table_set_row_spacings(GTK_TABLE(table), 6);
 	gtk_table_set_col_spacings(GTK_TABLE(table), 12);
 	gtk_box_pack_start(GTK_BOX(hbox), table, TRUE, TRUE, 0);
@@ -745,15 +755,23 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->name_label), entry);
 	gtk_table_attach(GTK_TABLE(table), entry, 1, 2, 0, 1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
-	label = gtk_label_new_with_mnemonic(_("Service _type:"));
+	label = gtk_label_new_with_mnemonic(_("_Autoconnect"));
 	gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.5);
 	gtk_table_attach(GTK_TABLE(table), label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
 
+	priv->autoconnect_checkbtn = gtk_check_button_new();
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label), priv->autoconnect_checkbtn);
+	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_checkbtn, 1, 2, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
+
+	label = gtk_label_new_with_mnemonic(_("Service _type:"));
+	gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.5);
+	gtk_table_attach(GTK_TABLE(table), label, 0, 1, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
+
 	priv->type_combo = combo = gtk_combo_box_new();
-	gtk_table_attach(GTK_TABLE(table), combo, 1, 2, 1, 2, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), combo, 1, 2, 2, 3, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 	label_tmp = gtk_label_new(" ");
-	gtk_table_attach(GTK_TABLE(table), label_tmp, 0, 2, 2, 3, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), label_tmp, 0, 2, 3, 4, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 	renderer = gtk_cell_renderer_text_new();
 	gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(combo), renderer, TRUE);
