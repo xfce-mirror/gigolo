@@ -202,6 +202,8 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 					for (i = 0; i < bml->len && ! error; i++)
 					{
 						bm = g_ptr_array_index(bml, i);
+						if (bm == priv->bookmark_init)
+							continue;
 						if (sion_str_equal(tmp, sion_bookmark_get_name(bm)))
 						{
 							error = TRUE;
