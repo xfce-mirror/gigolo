@@ -6,6 +6,9 @@
  * src/bookmarkdialog.c, src/preferencesdialog.c, src/settings.c,
    src/window.c:
    Make bookmark auto connect interval configurable.
+ * src/bookmarkeditdialog.c:
+   Hide auto connect label also for the Connect dialog.
+   Fix mnemonics.
 
 
 2009-01-10  Enrico Tröger  <enrico(at)xfce(dot)org>

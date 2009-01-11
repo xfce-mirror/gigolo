@@ -48,6 +48,7 @@ struct _SionBookmarkEditDialogPrivate
 	GtkWidget *name_label;
 	GtkWidget *name_entry;
 
+	GtkWidget *autoconnect_label;
 	GtkWidget *autoconnect_checkbtn;
 
 	GtkWidget *uri_label;
@@ -696,6 +697,7 @@ static void sion_bookmark_edit_dialog_set_property(GObject *object, guint prop_i
 				combo_set_active(priv->type_combo, 0);
 				gtk_widget_hide(priv->name_label);
 				gtk_widget_hide(priv->name_entry);
+				gtk_widget_hide(priv->autoconnect_label);
 				gtk_widget_hide(priv->autoconnect_checkbtn);
 				break;
 			}
@@ -755,15 +757,15 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->name_label), entry);
 	gtk_table_attach(GTK_TABLE(table), entry, 1, 2, 0, 1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
-	label = gtk_label_new_with_mnemonic(_("_Autoconnect"));
-	gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.5);
-	gtk_table_attach(GTK_TABLE(table), label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
+	priv->autoconnect_label = gtk_label_new_with_mnemonic(_("Au_to-Connect"));
+	gtk_misc_set_alignment(GTK_MISC(priv->autoconnect_label), 0.0, 0.5);
+	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
 
 	priv->autoconnect_checkbtn = gtk_check_button_new();
-	gtk_label_set_mnemonic_widget(GTK_LABEL(label), priv->autoconnect_checkbtn);
+	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->autoconnect_label), priv->autoconnect_checkbtn);
 	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_checkbtn, 1, 2, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
 
-	label = gtk_label_new_with_mnemonic(_("Service _type:"));
+	label = gtk_label_new_with_mnemonic(_("Service t_ype:"));
 	gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.5);
 	gtk_table_attach(GTK_TABLE(table), label, 0, 1, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
 
