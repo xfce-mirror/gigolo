@@ -224,7 +224,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 
 	gtk_list_store_clear(priv->store);
 
-	// list mounts
+	/* list mounts */
 	mounts = g_volume_monitor_get_mounts(vm);
 	for (item = mounts; item != NULL; item = g_list_next(item))
 	{
@@ -258,13 +258,13 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 	g_list_foreach(mounts, (GFunc) g_object_unref, NULL);
 	g_list_free(mounts);
 
-	// list volumes
+	/* list volumes */
 	volumes = g_volume_monitor_get_volumes(vm);
 	for (item = volumes; item != NULL; item = g_list_next(item))
 	{
 		volume = G_VOLUME(item->data);
 		mount = g_volume_get_mount(volume);
-		// display this volume only if it is not mounted, otherwise it will be listed as mounted
+		/* display this volume only if it is not mounted, otherwise it will be listed as mounted */
 		if (mount == NULL)
 		{
 			icon = g_volume_get_icon(volume);
@@ -316,7 +316,7 @@ static void sion_backend_gvfs_set_property(GObject *object, guint prop_id,
 		g_signal_connect(gvm, "volume-changed", G_CALLBACK(mount_volume_changed_cb), object);
 		g_signal_connect(gvm, "volume-removed", G_CALLBACK(mount_volume_changed_cb), object);
 
-		// fill the list store once
+		/* fill the list store once */
 		mount_volume_changed_cb(gvm, NULL, object);
 		break;
 	}
@@ -494,9 +494,9 @@ static void set_password_cb(GMountOperation *op, G_GNUC_UNUSED gchar *message, g
 		{
 			g_mount_operation_set_password(op,
 				sion_password_dialog_get_password(SION_PASSWORD_DIALOG(dialog)));
-			/// TODO make this configurable?
-			//~ g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_FOR_SESSION);
-			//~ g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_NEVER);
+			/* TODO make this configurable? */
+			/* g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_FOR_SESSION); */
+			/* g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_NEVER); */
 			g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_PERMANENTLY);
 		}
 	}

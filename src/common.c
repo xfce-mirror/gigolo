@@ -71,7 +71,7 @@ const gchar *sion_describe_scheme(const gchar *scheme)
 	else if (sion_str_equal(scheme, "sftp"))
 		return _("SSH");
 	else if (sion_str_equal(scheme, "obex"))
-		/// TODO find something better
+		/* TODO find something better */
 		return _("OBEX");
 	else if (sion_str_equal(scheme, "dav"))
 		return _("WebDAV");

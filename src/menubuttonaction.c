@@ -151,11 +151,11 @@ static void update_menus(SionMenubuttonAction *action, SionSettings *settings)
 		}
 
 		if (menu != NULL)
-		{	// clear the old menu items
+		{	/* clear the old menu items */
 			gtk_container_foreach(GTK_CONTAINER(menu), (GtkCallback) gtk_widget_destroy, NULL);
 		}
 		else
-		{	// create new menu
+		{	/* create new menu */
 			menu = gtk_menu_new();
 			set_menu(l->data, menu);
 		}

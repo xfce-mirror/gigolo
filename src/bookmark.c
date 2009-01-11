@@ -145,12 +145,12 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 	/* find end of host/port, this is the first slash after the initial double slashes */
 	end = strchr(s, '/');
 	if (end == NULL)
-		end = s + strlen(s); // there is no trailing '/', so use the whole remaining string
+		end = s + strlen(s); /* there is no trailing '/', so use the whole remaining string */
 
 	/* find username */
 	t = strchr(s, '@');
-	// if we found a '@', search for a second one and use the second one as end of the username
-	// as the username itself might contain a '@'
+	/* if we found a '@', search for a second one and use the second one as end of the username
+	 * as the username itself might contain a '@' */
 	if (t != NULL && (x = strchr(t + 1, '@')) != NULL)
 		t = x;
 	if (t != NULL)
@@ -159,7 +159,7 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 		x = s;
 		while (*x != '\0' && x < t && *x != ':')
 		{
-			l++; // count the len of the username
+			l++; /* count the len of the username */
 			x++;
 		}
 		if (l == 0)
@@ -173,11 +173,11 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 
 	/* find hostname */
 	s = (t) ? t + 1 : s;
-	if (*s == '[') // obex://[00:12:D1:94:1B:28]/ or http://[1080:0:0:0:8:800:200C:417A]/index.html
+	if (*s == '[') /* obex://[00:12:D1:94:1B:28]/ or http://[1080:0:0:0:8:800:200C:417A]/index.html */
 	{
 		gchar *hostend;
 
-		s++; // skip the found '['
+		s++; /* skip the found '[' */
 		hostend = strchr(s, ']');
 		if (! hostend || hostend > end)
 		{
@@ -189,7 +189,7 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 		x = s;
 		while (*x != '\0' && x < end && *x != ']')
 		{
-			l++; // count the len of the hostname
+			l++; /* count the len of the hostname */
 			x++;
 		}
 		priv->host = g_strndup(s, l);
@@ -201,7 +201,7 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 		x = s;
 		while (*x != '\0' && x < end && *x != ':')
 		{
-			l++; // count the len of the hostname
+			l++; /* count the len of the hostname */
 			x++;
 		}
 		priv->host = g_strndup(s, l);
@@ -213,16 +213,16 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 	{
 		gchar *tmp;
 
-		t++; // skip the found ':'
+		t++; /* skip the found ':' */
 		l = 0;
 		x = t;
 		while (*x != '\0' && x < end)
 		{
-			l++; // count the len of the port
+			l++; /* count the len of the port */
 			x++;
 		}
-		// atoi should be enough as it returns simply 0 if there are any errors and 0 marks an
-		// invalid port
+		/* atoi should be enough as it returns simply 0 if there are any errors and 0 marks an
+		 * invalid port */
 		tmp = g_strndup(t, l);
 		priv->port = (guint) atoi(tmp);
 		g_free(tmp);

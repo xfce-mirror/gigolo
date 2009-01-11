@@ -48,10 +48,10 @@ struct _SionSettingsPrivate
 
 	gchar		*file_manager;
 	gint		 autoconnect_interval;
-	gchar		*vm_impl; // GVolumeMonitor implementation to use
-	gint		*geometry; // window size and position, field 4 is a flag for maximized state
+	gchar		*vm_impl; /* GVolumeMonitor implementation to use */
+	gint		*geometry; /* window size and position, field 4 is a flag for maximized state */
 
-	SionBookmarkList *bookmarks; // array of known bookmarks
+	SionBookmarkList *bookmarks; /* array of known bookmarks */
 };
 
 static void sion_settings_class_init		(SionSettingsClass *klass);
@@ -60,7 +60,7 @@ static void sion_settings_finalize			(GObject* object);
 
 static GObjectClass *parent_class = NULL;
 
-// keyfile section names
+/* keyfile section names */
 #define SECTION_GENERAL	"general"
 #define SECTION_UI		"ui"
 
@@ -526,7 +526,7 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 		error = NULL;
 	}
 
-	// read groups for bookmarks
+	/* read groups for bookmarks */
 	groups = g_key_file_get_groups(k, &len);
 	for (i = 0; i < len; i++)
 	{

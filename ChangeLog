@@ -11,6 +11,11 @@
    Fix mnemonics.
  * src/window.c:
    Fix 'Minimize to tray'.
+ * src/backendgvfs.c, src/bookmark.c, src/bookmarkdialog.c, src/main.c,
+   src/bookmarkeditdialog.c, src/common.c, src/menubuttonaction.c,
+   src/passworddialog.c, src/settings.c, src/window.c, wscript:
+   Change used comments to multi-line variants.
+   Add -ansi to debug compile flags.
 
 
 2009-01-10  Enrico Tröger  <enrico(at)xfce(dot)org>

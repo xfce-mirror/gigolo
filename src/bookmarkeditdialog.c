@@ -183,11 +183,11 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 
 		if (res != GTK_RESPONSE_OK)
 			break;
-		// perform some error checking and don't return until entered values are sane
+		/* perform some error checking and don't return until entered values are sane */
 		else
 		{
 			if (sion_widget_get_flags(priv->name_entry) & GTK_VISIBLE)
-			{	// check the name only if we are creating/editing a bookmark
+			{	/* check the name only if we are creating/editing a bookmark */
 				tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
 				if (! *tmp)
 				{
@@ -197,7 +197,7 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 					gtk_widget_grab_focus(priv->name_entry);
 				}
 				else
-				{	// check for duplicate bookmark names
+				{	/* check for duplicate bookmark names */
 					SionBookmarkList *bml = sion_settings_get_bookmarks(priv->settings);
 					SionBookmark *bm;
 					guint i;
@@ -621,7 +621,7 @@ static void update_bookmark(SionBookmarkEditDialog *dialog)
 			    &iter, COLUMN_INDEX, &idx, -1);
 
 	tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
-	if (*tmp)	// the name might be empty if the dialog is used as a Connect dialog
+	if (*tmp)	/* the name might be empty if the dialog is used as a Connect dialog */
 		sion_bookmark_set_name(priv->bookmark_update, tmp);
 
 	if (idx == -1)

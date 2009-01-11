@@ -59,7 +59,7 @@ def configure(conf):
 
 	# debug flags
 	if Options.options.debug:
-		conf.env.append_value('CCFLAGS', '-g -O0 -DDEBUG -DGSEAL_ENABLE -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -D_FORTIFY_SOURCE=2 -fno-common -Waggregate-return -Wcast-align -Wdeclaration-after-statement -Wextra -Wfloat-equal -Wformat=2 -Wformat-nonliteral -Wformat-security -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-field-initializers -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-compare -Wundef -Wwrite-strings')
+		conf.env.append_value('CCFLAGS', '-g -O0 -DDEBUG -DGSEAL_ENABLE -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -D_FORTIFY_SOURCE=2 -ansi -fno-common -Waggregate-return -Wcast-align -Wdeclaration-after-statement -Wextra -Wfloat-equal -Wformat=2 -Wformat-nonliteral -Wformat-security -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-field-initializers -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-compare -Wundef -Wwrite-strings')
 
 	Utils.pprint('BLUE', 'Summary:')
 	print_message(conf, 'Install sion ' + VERSION + ' in', conf.env['PREFIX'])

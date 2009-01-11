@@ -102,10 +102,8 @@ static void sion_password_dialog_init(SionPasswordDialog *dialog)
 
 	gtk_window_set_title(GTK_WINDOW(dialog), _("Authentication information needed"));
 	gtk_window_set_icon_name(GTK_WINDOW(dialog), GTK_STOCK_DIALOG_AUTHENTICATION);
-	//~ gtk_dialog_set_has_separator(GTK_DIALOG(dialog), FALSE);
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
 	gtk_box_set_spacing(GTK_BOX(dialog_vbox), 2);
-	//~ gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
 
 	gtk_dialog_add_buttons(GTK_DIALOG(dialog),
 		GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,

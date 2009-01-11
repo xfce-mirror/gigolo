@@ -271,7 +271,7 @@ static void get_selected_iter(SionWindow *window, GtkTreeIter *iter)
 		for (l = items; l != NULL; l = l->next)
 		{
 			gtk_tree_model_get_iter(model, iter, l->data);
-			// the selection mode is SINGLE, so the list should never have more than one entry
+			/* the selection mode is SINGLE, so the list should never have more than one entry */
 			break;
 		}
 
@@ -516,8 +516,8 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 			}
 			else
 			{
-				/// FIXME make the open command configurable or find a better solution
-				///       maybe gtk_show_uri() ?
+				// FIXME make the open command configurable or find a better solution
+				//       maybe gtk_show_uri() ?
 				GtkWidget *dialog = gtk_message_dialog_new(GTK_WINDOW(window),
 							GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE,
 							_("Non-local mountpoints can't be opened."));
@@ -576,16 +576,16 @@ static void update_sensitive_buttons(SionWindow *window, GtkTreeModel *model, Gt
 		gtk_tree_model_get(model, iter, SION_WINDOW_COL_REF_TYPE, &ref_type, -1);
 		is_bookmark = iter_is_bookmark(window, model, iter);
 
-		//~ gtk_action_set_sensitive(priv->action_connect, (ref_type != SION_WINDOW_REF_TYPE_MOUNT));
-		//~ gtk_action_set_sensitive(priv->action_bookmarks_toolbar, (ref_type != SION_WINDOW_REF_TYPE_MOUNT));
+		/* gtk_action_set_sensitive(priv->action_connect, (ref_type != SION_WINDOW_REF_TYPE_MOUNT)); */
+		/* gtk_action_set_sensitive(priv->action_bookmarks_toolbar, (ref_type != SION_WINDOW_REF_TYPE_MOUNT)); */
 		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == SION_WINDOW_REF_TYPE_MOUNT));
 		gtk_action_set_sensitive(priv->action_bookmark_create, ! is_bookmark);
 		gtk_action_set_sensitive(priv->action_open, sion_settings_has_file_manager(priv->settings));
 	}
 	else
 	{
-		//~ gtk_action_set_sensitive(priv->action_connect, FALSE);
-		//~ gtk_action_set_sensitive(priv->action_bookmarks_toolbar, FALSE);
+		/* gtk_action_set_sensitive(priv->action_connect, FALSE); */
+		/* gtk_action_set_sensitive(priv->action_bookmarks_toolbar, FALSE); */
 		gtk_action_set_sensitive(priv->action_disconnect, FALSE);
 		gtk_action_set_sensitive(priv->action_bookmark_create, FALSE);
 		gtk_action_set_sensitive(priv->action_open, FALSE);
@@ -663,7 +663,7 @@ static void tree_row_activated_cb(G_GNUC_UNUSED GtkTreeView *treeview, GtkTreePa
 			SION_WINDOW_COL_REF_TYPE, &ref_type, -1);
 		if (ref_type == SION_WINDOW_REF_TYPE_MOUNT)
 		{
-			//~ action_unmount_cb(NULL, data);
+			/* action_unmount_cb(NULL, data); */
 			action_open_cb(NULL, window);
 		}
 		else
@@ -835,14 +835,14 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindo
 				{
 					GtkWidget *edit_dialog;
 
-					// show the bookmark edit dialog and add the bookmark only if it was
-					// not cancelled
+					/* show the bookmark edit dialog and add the bookmark only if it was
+					 * not cancelled */
 					edit_dialog = sion_bookmark_edit_dialog_new_with_bookmark(
 						GTK_WIDGET(window), priv->settings, SION_BE_MODE_EDIT, bm);
 					if (sion_bookmark_edit_dialog_run(SION_BOOKMARK_EDIT_DIALOG(edit_dialog)) ==
 						GTK_RESPONSE_OK)
 					{
-						// this fills the values of the dialog into 'bm'
+						/* this fills the values of the dialog into 'bm' */
 						g_object_set(edit_dialog, "bookmark-update", bm, NULL);
 
 						g_ptr_array_add(sion_settings_get_bookmarks(priv->settings),
@@ -1208,7 +1208,7 @@ static void sion_window_init(SionWindow *window)
 	priv->toolbar = gtk_ui_manager_get_widget(ui_manager, "/toolbar");
 	priv->trayicon_popup_menu = gtk_ui_manager_get_widget(ui_manager, "/traymenu");
 	priv->tree_popup_menu = gtk_ui_manager_get_widget(ui_manager, "/treemenu");
-	// increase refcount to keep the widgets after the ui manager is destroyed
+	/* increase refcount to keep the widgets after the ui manager is destroyed */
 	g_object_ref(priv->trayicon_popup_menu);
 	g_object_ref(priv->tree_popup_menu);
 	g_object_ref(priv->toolbar);

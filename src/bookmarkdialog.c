@@ -374,11 +374,11 @@ static void tree_prepare(SionBookmarkDialog *dialog)
 	gtk_tree_view_set_rules_hint(GTK_TREE_VIEW(priv->tree), TRUE);
 	gtk_tree_view_set_headers_clickable(GTK_TREE_VIEW(priv->tree), TRUE);
 
-	// sorting
+	/* sorting */
 	gtk_tree_sortable_set_sort_column_id(
 		GTK_TREE_SORTABLE(priv->store), COL_NAME, GTK_SORT_ASCENDING);
 
-	// selection handling
+	/* selection handling */
 	sel = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->tree));
 	gtk_tree_selection_set_mode(sel, GTK_SELECTION_SINGLE);
 
