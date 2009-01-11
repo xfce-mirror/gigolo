@@ -9,6 +9,8 @@
  * src/bookmarkeditdialog.c:
    Hide auto connect label also for the Connect dialog.
    Fix mnemonics.
+ * src/window.c:
+   Fix 'Minimize to tray'.
 
 
 2009-01-10  Enrico Tröger  <enrico(at)xfce(dot)org>

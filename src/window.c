@@ -127,13 +127,35 @@ GType sion_window_get_type(void)
 static gboolean sion_window_state_event(GtkWidget *widget, GdkEventWindowState *event)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(widget);
+	gboolean show_trayicon = sion_settings_get_boolean(priv->settings, "show-trayicon");
 
-	if ((event->new_window_state & GDK_WINDOW_STATE_ICONIFIED) &&
-		sion_settings_get_boolean(priv->settings, "show-trayicon"))
+	if (show_trayicon)
 	{
-		gtk_widget_hide(widget);
-	}
+		gboolean window_hidden = FALSE;
+		if (event->changed_mask & GDK_WINDOW_STATE_ICONIFIED)
+		{
+			if (event->new_window_state & GDK_WINDOW_STATE_ICONIFIED)
+				window_hidden = TRUE;
+			else
+				window_hidden = FALSE;
+		}
+		if (event->changed_mask & GDK_WINDOW_STATE_WITHDRAWN)
+		{
+			if (event->new_window_state & GDK_WINDOW_STATE_WITHDRAWN)
+				window_hidden = TRUE;
+			else
+				window_hidden = FALSE;
+		}
 
+		if (window_hidden && show_trayicon)
+		{
+			gtk_window_set_skip_taskbar_hint(GTK_WINDOW(widget), TRUE);
+		}
+		else if (! window_hidden)
+		{
+			gtk_window_set_skip_taskbar_hint(GTK_WINDOW(widget), FALSE);
+		}
+	}
 	return FALSE;
 }
 
