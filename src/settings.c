@@ -47,6 +47,7 @@ struct _SionSettingsPrivate
 	gint		view_mode;
 
 	gchar		*file_manager;
+	gint		 autoconnect_interval;
 	gchar		*vm_impl; // GVolumeMonitor implementation to use
 	gint		*geometry; // window size and position, field 4 is a flag for maximized state
 
@@ -63,11 +64,16 @@ static GObjectClass *parent_class = NULL;
 #define SECTION_GENERAL	"general"
 #define SECTION_UI		"ui"
 
+/* default values */
+#define DEFAULT_AUTOCONNECT_INTERVAL	60
+#define DEFAULT_VM_IMPL					"hal"
+
 enum
 {
 	PROP_0,
 
 	PROP_FILE_MANAGER,
+	PROP_AUTOCONNECT_INTERVAL,
 
 	PROP_SAVE_GEOMETRY,
 	PROP_SHOW_TRAYICON,
@@ -76,6 +82,7 @@ enum
 	PROP_TOOLBAR_ORIENTATION,
 	PROP_VIEW_MODE
 };
+
 
 GType sion_settings_get_type(void)
 {
@@ -131,6 +138,9 @@ static void sion_settings_set_property(GObject *object, guint prop_id, const GVa
 		g_free(priv->file_manager);
 		priv->file_manager = g_value_dup_string(value);
 		break;
+	case PROP_AUTOCONNECT_INTERVAL:
+		priv->autoconnect_interval = g_value_get_int(value);
+		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
 		break;
@@ -164,6 +174,11 @@ static void sion_settings_get_property(GObject *object, guint prop_id, GValue *v
 		break;
 	case PROP_FILE_MANAGER:
 		g_value_set_string(value, priv->file_manager);
+		break;
+	case PROP_AUTOCONNECT_INTERVAL:
+		if (priv->autoconnect_interval < 0)
+			g_object_set(object, "autoconnect-interval", DEFAULT_AUTOCONNECT_INTERVAL, NULL);
+		g_value_set_int(value, priv->autoconnect_interval);
 		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
@@ -237,6 +252,14 @@ static void sion_settings_class_init(SionSettingsClass *klass)
 									"file-manager",
 									"A program for use to open mount points",
 									NULL,
+									G_PARAM_READWRITE));
+	g_object_class_install_property(gobject_class,
+									PROP_AUTOCONNECT_INTERVAL,
+									g_param_spec_int(
+									"autoconnect-interval",
+									"autoconnect-interval",
+									"Autoconnect interval",
+									0, G_MAXINT, 0,
 									G_PARAM_READWRITE));
 }
 
@@ -351,6 +374,7 @@ static void write_settings_config(SionSettings *settings)
 		g_key_file_set_string(k, SECTION_GENERAL, "vm_impl", priv->vm_impl);
 	if (priv->file_manager != NULL)
 		g_key_file_set_string(k, SECTION_GENERAL, "file_manager", priv->file_manager);
+	g_key_file_set_integer(k, SECTION_GENERAL, "autoconnect_interval", priv->autoconnect_interval);
 
 	if (priv->geometry != NULL)
 		g_key_file_set_integer_list(k, SECTION_UI, "geometry", priv->geometry, 5);
@@ -437,7 +461,6 @@ static void load_settings_read_config(SionSettingsPrivate *priv)
 {
 	GKeyFile *k;
 	GError *error = NULL;
-	const gchar *default_vm_impl = "hal";
 	gsize i;
 
 	k = g_key_file_new();
@@ -448,8 +471,10 @@ static void load_settings_read_config(SionSettingsPrivate *priv)
 		error = NULL;
 	}
 
-	priv->vm_impl = get_setting_string(k, SECTION_GENERAL, "vm_impl", default_vm_impl);
+	priv->vm_impl = get_setting_string(k, SECTION_GENERAL, "vm_impl", DEFAULT_VM_IMPL);
 	priv->file_manager = get_setting_string(k, SECTION_GENERAL, "file_manager", "gvfs-open");
+	priv->autoconnect_interval = get_setting_int(k, SECTION_GENERAL, "autoconnect_interval",
+		DEFAULT_AUTOCONNECT_INTERVAL);
 
 	priv->save_geometry = get_setting_boolean(k, SECTION_UI, "save_geometry", TRUE);
 	priv->show_trayicon = get_setting_boolean(k, SECTION_UI, "show_trayicon", TRUE);

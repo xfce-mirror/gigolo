@@ -301,10 +301,38 @@ static GtkWidget *add_program_entry(SionSettings *settings, const gchar *propert
 }
 
 
+static void spin_value_changed_cb(GtkSpinButton *spin, SionSettings *settings)
+{
+	gint interval = gtk_spin_button_get_value_as_int(spin);
+	const gchar *property = g_object_get_data(G_OBJECT(spin), "property");
+
+	g_object_set(settings, property, interval, NULL);
+}
+
+
+static GtkWidget *add_spinbutton(SionSettings *settings, const gchar *property)
+{
+	GtkWidget *widget;
+	gint timeout;
+
+	widget = gtk_spin_button_new_with_range(0, G_MAXUINT, 1);
+	g_object_get(settings, property, &timeout, NULL);
+
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(widget), timeout);
+
+	g_object_set_data(G_OBJECT(widget), "property", (gpointer) property);
+	g_signal_connect(widget, "activate", G_CALLBACK(spin_value_changed_cb), settings);
+	g_signal_connect(widget, "value-changed",  G_CALLBACK(spin_value_changed_cb), settings);
+
+	return widget;
+}
+
+
 static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 {
 	GtkWidget *frame_vbox, *notebook_vbox, *vbox, *hbox, *notebook;
-	GtkWidget *radio1, *radio2, *checkbox, *combo, *entry, *combo_toolbar_style, *combo_toolbar_orient;
+	GtkWidget *radio1, *radio2, *checkbox, *combo, *entry, *combo_toolbar_style;
+	GtkWidget *combo_toolbar_orient, *spinbutton;
 	GtkWidget *label1, *label2, *label3, *label4, *label_volman, *image;
 	GSList *rlist;
 	GtkSizeGroup *sg;
@@ -347,6 +375,19 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	gtk_label_set_mnemonic_widget(GTK_LABEL(label1), entry);
 	gtk_box_pack_start(GTK_BOX(hbox), entry, FALSE, FALSE, 0);
 	entry_check_input(GTK_ENTRY(entry));
+
+	hbox = gtk_hbox_new(FALSE, 6);
+	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
+
+	label1 = gtk_label_new_with_mnemonic(_("_Bookmark Auto-Connect Interval"));
+	gtk_misc_set_alignment(GTK_MISC(label1), 0.0f, 0.5f);
+	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
+
+	spinbutton = add_spinbutton(settings, "autoconnect-interval");
+	gtk_widget_set_tooltip_text(spinbutton,
+		_("How often to try auto connecting bookmarks, in seconds. Zero disables checking."));
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label1), spinbutton);
+	gtk_box_pack_start(GTK_BOX(hbox), spinbutton, FALSE, FALSE, 10);
 
 	gtk_box_pack_start(GTK_BOX(frame_vbox), gtk_label_new(""), FALSE, FALSE, 0);
 

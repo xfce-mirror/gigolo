@@ -3,6 +3,9 @@
  * src/backendgvfs.c:
    Fix crashes with older GVFS versions
    (#4794, patch by Colin Leroy, thanks).
+ * src/bookmarkdialog.c, src/preferencesdialog.c, src/settings.c,
+   src/window.c:
+   Make bookmark auto connect interval configurable.
 
 
 2009-01-10  Enrico Tröger  <enrico(at)xfce(dot)org>

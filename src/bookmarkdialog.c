@@ -161,6 +161,7 @@ static void add_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWidget *dial
 
 		update_row_in_model(SION_BOOKMARK_DIALOG(dialog), &iter, bm);
 		sion_window_update_bookmarks(SION_WINDOW(priv->parent));
+		sion_window_do_autoconnect(SION_WINDOW(priv->parent));
 	}
 	gtk_widget_destroy(edit_dialog);
 }

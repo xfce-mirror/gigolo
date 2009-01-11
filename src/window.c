@@ -73,6 +73,8 @@ struct _SionWindowPrivate
 	GtkWidget		*toolbar;
 	GtkStatusIcon	*trayicon;
 	GtkWidget		*trayicon_popup_menu;
+
+	guint			 autoconnect_timeout_id;
 };
 
 enum
@@ -136,10 +138,24 @@ static gboolean sion_window_state_event(GtkWidget *widget, GdkEventWindowState *
 }
 
 
+static void remove_autoconnect_timeout(SionWindow *window)
+{
+	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+
+	if (priv->autoconnect_timeout_id != (guint) -1)
+	{
+		g_source_remove(priv->autoconnect_timeout_id);
+		priv->autoconnect_timeout_id = (guint) -1;
+	}
+}
+
+
 static gboolean sion_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkEventAny *event)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(widget);
 	gint geo[5];
+
+	remove_autoconnect_timeout(SION_WINDOW(widget));
 
 	if (sion_settings_get_boolean(priv->settings, "save-geometry"))
 	{
@@ -334,6 +350,7 @@ static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *w
 	dialog = sion_preferences_dialog_new(GTK_WINDOW(window), priv->settings);
 
 	gtk_dialog_run(GTK_DIALOG(dialog));
+	sion_window_do_autoconnect(window);
 
 	gtk_widget_destroy(dialog);
 }
@@ -735,11 +752,29 @@ void sion_window_update_bookmarks(SionWindow *window)
 
 gboolean sion_window_do_autoconnect(gpointer data)
 {
-	static gboolean timeout_added = FALSE;
 	SionWindow *window = SION_WINDOW(data);
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	SionBookmarkList *bookmarks = sion_settings_get_bookmarks(priv->settings);
+	static gint old_interval = -1;
+	gint interval;
 	guint i;
+
+	interval = sion_settings_get_integer(priv->settings, "autoconnect-interval");
+	if (old_interval != interval)
+	{
+		if (priv->autoconnect_timeout_id != (guint) -1)
+			remove_autoconnect_timeout(window);
+
+		priv->autoconnect_timeout_id = g_timeout_add_seconds(
+			interval, sion_window_do_autoconnect, data);
+		old_interval = interval;
+	}
+
+	if (interval == 0)
+	{
+		remove_autoconnect_timeout(window);
+		return FALSE;
+	}
 
 	for (i = 0; i < bookmarks->len; i++)
 	{
@@ -748,12 +783,6 @@ gboolean sion_window_do_autoconnect(gpointer data)
 		{
 			mount_from_bookmark(window, bm);
 		}
-	}
-
-	if (! timeout_added)
-	{
-		g_timeout_add_seconds(60, sion_window_do_autoconnect, data);
-		timeout_added = TRUE;
 	}
 	return TRUE;
 }
@@ -1117,6 +1146,8 @@ static void sion_window_init(SionWindow *window)
 	GtkWidget *menubar;
 	GtkUIManager *ui_manager;
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+
+	priv->autoconnect_timeout_id = (guint) -1;
 
 	gtk_window_set_title(GTK_WINDOW(window), _("Sion"));
 	gtk_window_set_icon_name(GTK_WINDOW(window), sion_window_get_icon_name());
