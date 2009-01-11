@@ -457,7 +457,7 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, gpointer backend)
 	uri = g_file_get_uri(location);
 	success = g_file_mount_enclosing_volume_finish(location, res, &error);
 
-	if (! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_ALREADY_MOUNTED))
+	if (error != NULL && ! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_ALREADY_MOUNTED))
 	{
 		gchar *msg = g_strdup_printf(_("Mounting of \"%s\" failed."), uri);
 		g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
