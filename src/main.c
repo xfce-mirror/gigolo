@@ -87,6 +87,7 @@ gint main(gint argc, gchar** argv)
 {
 	SionSettings *settings;
 	const gchar *vm_impl;
+	gchar *accel_filename;
 	GOptionContext *context;
 	GtkWidget *window;
 
@@ -122,6 +123,9 @@ gint main(gint argc, gchar** argv)
 
 	settings = sion_settings_new();
 
+	accel_filename = g_build_filename(g_get_user_config_dir(), PACKAGE, "accels", NULL);
+	gtk_accel_map_load(accel_filename);
+
 	/* GVFS currently depends on gnome-mount for HAL-based GVolumeMonitor implementation,
 	 * when gnome-mount is not installed, we can use "unix" as GVolumeMonitor implementation. */
 	if ((vm_impl = sion_settings_get_vm_impl(settings)) != NULL)
@@ -135,6 +139,9 @@ gint main(gint argc, gchar** argv)
 	gtk_main();
 
 	g_object_unref(settings);
+
+	gtk_accel_map_save(accel_filename);
+	g_free(accel_filename);
 
 	return 0;
 }
