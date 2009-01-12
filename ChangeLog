@@ -5,6 +5,8 @@
  * src/preferencesdialog.c:
    Add a separator between the heading and the content in the prefs
    dialog to make it look more like the original.
+ * src/window.c:
+   Add tooltips for toolbar items.
 
 
 2009-01-11  Enrico Tröger  <enrico(at)xfce(dot)org>
