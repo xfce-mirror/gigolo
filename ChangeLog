@@ -2,6 +2,9 @@
 
  * src/main.c:
    Make user-defined keyboard shortcuts for menu items persistent.
+ * src/preferencesdialog.c:
+   Add a separator between the heading and the content in the prefs
+   dialog to make it look more like the original.
 
 
 2009-01-11  Enrico Tröger  <enrico(at)xfce(dot)org>

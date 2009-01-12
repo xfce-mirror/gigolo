@@ -88,6 +88,8 @@ static GtkWidget *xfce_header_new(const gchar *icon, const gchar *title)
 	GtkWidget *hbox;
 	GtkWidget *image;
 	GtkWidget *label;
+	GtkWidget* vbox;
+	GtkWidget* separator;
 	GdkColor *color;
 
 	xfce_heading = gtk_event_box_new();
@@ -109,7 +111,13 @@ static GtkWidget *xfce_header_new(const gchar *icon, const gchar *title)
 
 	gtk_widget_destroy(entry);
 
-	return xfce_heading;
+	vbox = gtk_vbox_new(FALSE, 0);
+	gtk_box_pack_start(GTK_BOX(vbox), xfce_heading, FALSE, FALSE, 0);
+
+	separator = gtk_hseparator_new();
+	gtk_box_pack_start(GTK_BOX(vbox), separator, FALSE, FALSE, 0);
+
+	return vbox;
 }
 
 
