@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sion\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 17:44+0100\n"
-"PO-Revision-Date: 2009-01-03 13:14+0100\n"
+"PO-Revision-Date: 2009-01-11 13:36+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../src/main.c:41
 msgid "Print a list of supported URI schemes"
-msgstr "Mostra una llista dels esquemes de'URI compatibles"
+msgstr "Mostra una llista dels esquemes URI compatibles"
 
 #: ../src/main.c:42
 msgid "Be verbose"
@@ -96,7 +96,7 @@ msgstr "A_juda"
 
 #: ../src/window.c:943
 msgid "Create _Bookmark"
-msgstr "Crea un lloc preferit"
+msgstr "Crea un lloc _preferit"
 
 #: ../src/window.c:945
 msgid "_Edit Bookmarks"
@@ -114,19 +114,15 @@ msgstr "Trieu un lloc preferit per connectar-vos"
 msgid "Mounted"
 msgstr "Muntat"
 
-#: ../src/window.c:1014
-#: ../src/bookmarkdialog.c:322
+#: ../src/window.c:1014 ../src/bookmarkdialog.c:322
 msgid "Service Type"
 msgstr "Tipus de servei"
 
-#: ../src/window.c:1022
-#: ../src/bookmarkdialog.c:314
+#: ../src/window.c:1022 ../src/bookmarkdialog.c:314
 msgid "Name"
 msgstr "Nom"
 
-#: ../src/window.c:1084
-#: ../src/window.c:1159
-#: ../sion.desktop.in.h:2
+#: ../src/window.c:1084 ../src/window.c:1159 ../sion.desktop.in.h:2
 msgid "Sion"
 msgstr "Sion"
 
@@ -138,8 +134,7 @@ msgstr "Connecta"
 msgid "Authentication information needed"
 msgstr "Calen dades d'autenticació"
 
-#: ../src/passworddialog.c:128
-#: ../src/bookmarkeditdialog.c:758
+#: ../src/passworddialog.c:128 ../src/bookmarkeditdialog.c:758
 msgid "_Domain:"
 msgstr "_Domini:"
 
@@ -215,7 +210,7 @@ msgstr "Connecta al servidor"
 
 #: ../src/bookmarkeditdialog.c:717
 msgid "_Bookmark name:"
-msgstr "Nom del lloc preferit:"
+msgstr "Nom del lloc _preferit:"
 
 #: ../src/bookmarkeditdialog.c:725
 msgid "Service _type:"
@@ -291,22 +286,29 @@ msgstr "Gestor de _fitxers"
 
 #: ../src/preferencesdialog.c:345
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Introduïu el nom del programa que s'emprarà per obrir o veure els punts de muntatge"
+msgstr ""
+"Introduïu el nom del programa que s'emprarà per obrir o veure els punts de "
+"muntatge"
 
 #: ../src/preferencesdialog.c:353
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+"The HAL based volume manager implementation requires the tool 'gnome-mount' "
+"to mount local resources like disks. The Unix based volume manager "
+"implementation can mount such resources directly and also lists other local "
+"devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"A la implementació del gestor de volums basat en HAL li cal l'opció «gnome-mount» per muntar els recursos local com els discs. El gestor de volums basat en Unix pot muntar aquests recursos directament així com mostrat la llista d'altres dispositius locals.\n"
+"A la implementació del gestor de volums basat en HAL li cal l'opció «gnome-"
+"mount» per muntar els recursos local com els discs. El gestor de volums "
+"basat en Unix pot muntar aquests recursos directament així com mostrat la "
+"llista d'altres dispositius locals.\n"
 "Si no esteu segur, empreu el gestor basat en HAL."
 
 #: ../src/preferencesdialog.c:359
 msgid "Use _HAL based volume manager"
-msgstr "Empra un gestor de volums basat en HAL"
+msgstr "Empra un gestor de volums basat en _HAL"
 
-#: ../src/preferencesdialog.c:360
-#: ../src/preferencesdialog.c:368
+#: ../src/preferencesdialog.c:360 ../src/preferencesdialog.c:368
 msgid "<i>Changing this option requires a restart of Sion.</i>"
 msgstr "<i>El canvi d'aquesta opció fa que calgui reiniciar Sion.</i>"
 
@@ -374,13 +376,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Dispositiu Unix: %s</b>"
 
-#: ../src/backendgvfs.c:381
-#: ../src/backendgvfs.c:412
+#: ../src/backendgvfs.c:381 ../src/backendgvfs.c:412
 msgid "unknown"
 msgstr "desconegut"
 
-#: ../src/backendgvfs.c:385
-#: ../src/backendgvfs.c:464
+#: ../src/backendgvfs.c:385 ../src/backendgvfs.c:464
 #, c-format
 msgid "Mounting of \"%s\" failed."
 msgstr "Ha fallat el muntatge de «%s»."
@@ -393,4 +393,3 @@ msgstr "Ha fallat el desmuntatge de «%s»."
 #: ../sion.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Una interfície simple per connectar-se a sistemes de fitxers remots"
-
