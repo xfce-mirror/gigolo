@@ -826,7 +826,7 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 }
 
 
-GtkWidget *sion_bookmark_edit_dialog_new(GtkWidget *parent, SionSettings *settings, SionBookmarkEditDialogMode mode)
+GtkWidget *sion_bookmark_edit_dialog_new(GtkWindow *parent, SionSettings *settings, SionBookmarkEditDialogMode mode)
 {
 	SionBookmarkEditDialog *dialog = g_object_new(SION_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
@@ -839,7 +839,7 @@ GtkWidget *sion_bookmark_edit_dialog_new(GtkWidget *parent, SionSettings *settin
 }
 
 
-GtkWidget *sion_bookmark_edit_dialog_new_with_bookmark(GtkWidget *parent, SionSettings *settings, SionBookmarkEditDialogMode mode, SionBookmark *bookmark)
+GtkWidget *sion_bookmark_edit_dialog_new_with_bookmark(GtkWindow *parent, SionSettings *settings, SionBookmarkEditDialogMode mode, SionBookmark *bookmark)
 {
 	SionBookmarkEditDialog *dialog = g_object_new(SION_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,

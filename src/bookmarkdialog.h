@@ -47,7 +47,7 @@ struct _SionBookmarkDialogClass
 };
 
 GType		sion_bookmark_dialog_get_type		(void);
-GtkWidget*	sion_bookmark_dialog_new			(GtkWidget *parent, SionSettings *settings);
+GtkWidget*	sion_bookmark_dialog_new			(GtkWindow *parent, SionSettings *settings);
 
 G_END_DECLS
 

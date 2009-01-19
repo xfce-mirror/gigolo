@@ -40,7 +40,7 @@ struct _SionBookmarkDialogPrivate
 {
 	SionSettings *settings;
 
-	GtkWidget *parent;
+	GtkWindow *parent;
 
 	GtkWidget *tree;
 	GtkListStore *store;
@@ -142,7 +142,7 @@ static void update_row_in_model(SionBookmarkDialog *dialog, GtkTreeIter *iter, S
 }
 
 
-static void add_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWidget *dialog)
+static void add_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWindow *dialog)
 {
 	SionBookmarkDialogPrivate *priv = SION_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
 	GtkWidget *edit_dialog = sion_bookmark_edit_dialog_new(dialog, priv->settings, SION_BE_MODE_CREATE);
@@ -167,7 +167,7 @@ static void add_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWidget *dial
 }
 
 
-static void edit_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWidget *dialog)
+static void edit_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWindow *dialog)
 {
 	GtkTreeSelection *treesel;
 	GtkTreeIter iter;
@@ -279,7 +279,7 @@ static gboolean tree_button_press_event_cb(G_GNUC_UNUSED GtkWidget *widget,
 
 static void tree_popup_activate_cb(GtkCheckMenuItem *item, gpointer user_data)
 {
-	GtkWidget *dialog = g_object_get_data(G_OBJECT(item), "dialog");
+	GtkWindow *dialog = g_object_get_data(G_OBJECT(item), "dialog");
 
 	switch (GPOINTER_TO_INT(user_data))
 	{
@@ -465,7 +465,7 @@ static void sion_bookmark_dialog_init(SionBookmarkDialog *dialog)
 }
 
 
-GtkWidget *sion_bookmark_dialog_new(GtkWidget *parent, SionSettings *settings)
+GtkWidget *sion_bookmark_dialog_new(GtkWindow *parent, SionSettings *settings)
 {
 	GtkWidget *dialog;
 	SionBookmarkDialogPrivate *priv;
