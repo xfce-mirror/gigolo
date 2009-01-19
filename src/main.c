@@ -121,6 +121,10 @@ gint main(gint argc, gchar** argv)
 		return EXIT_SUCCESS;
 	}
 
+	verbose("Sion (GTK+ %u.%u.%u, GLib %u.%u.%u)",
+		gtk_major_version, gtk_minor_version, gtk_micro_version,
+		glib_major_version, glib_minor_version, glib_micro_version);
+
 	settings = sion_settings_new();
 
 	accel_filename = g_build_filename(g_get_user_config_dir(), PACKAGE, "accels", NULL);

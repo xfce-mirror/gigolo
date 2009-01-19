@@ -67,6 +67,7 @@ struct _SionWindowPrivate
 	GtkAction		*action_bookmarks;
 	GtkAction		*action_bookmark_create;
 	GtkAction		*action_open;
+	GtkAction		*action_copyuri;
 
 	GtkActionGroup	*action_group;
 
@@ -467,6 +468,31 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 }
 
 
+static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
+{
+	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GtkTreeIter iter;
+	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
+
+	get_selected_iter(window, &iter);
+	if (gtk_list_store_iter_is_valid(priv->store, &iter))
+	{
+		gpointer mnt;
+
+		gtk_tree_model_get(model, &iter, SION_WINDOW_COL_REF, &mnt, -1);
+		if (sion_backend_gvfs_is_mount(mnt))
+		{
+			gchar *uri;
+
+			sion_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
+			gtk_clipboard_set_text(gtk_clipboard_get(gdk_atom_intern("CLIPBOARD", FALSE)), uri, -1);
+
+			g_free(uri);
+		}
+	}
+}
+
+
 static void action_open_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
@@ -581,6 +607,7 @@ static void update_sensitive_buttons(SionWindow *window, GtkTreeModel *model, Gt
 		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == SION_WINDOW_REF_TYPE_MOUNT));
 		gtk_action_set_sensitive(priv->action_bookmark_create, ! is_bookmark);
 		gtk_action_set_sensitive(priv->action_open, sion_settings_has_file_manager(priv->settings));
+		gtk_action_set_sensitive(priv->action_copyuri, (ref_type == SION_WINDOW_REF_TYPE_MOUNT));
 	}
 	else
 	{
@@ -589,6 +616,7 @@ static void update_sensitive_buttons(SionWindow *window, GtkTreeModel *model, Gt
 		gtk_action_set_sensitive(priv->action_disconnect, FALSE);
 		gtk_action_set_sensitive(priv->action_bookmark_create, FALSE);
 		gtk_action_set_sensitive(priv->action_open, FALSE);
+		gtk_action_set_sensitive(priv->action_copyuri, FALSE);
 	}
 }
 
@@ -985,6 +1013,7 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 				"<menuitem action='Bookmarks'/>"
 				"<separator/>"
 				"<menuitem action='Open'/>"
+				"<menuitem action='CopyURI'/>"
 			"</menu>"
 			"<menu action='Help'>"
 				"<menuitem action='About'/>"
@@ -1003,6 +1032,7 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 
 		"<popup name='treemenu'>"
 			"<menuitem action='Open'/>"
+			"<menuitem action='CopyURI'/>"
 			"<menuitem action='CreateBookmark'/>"
 			"<separator/>"
 			"<menuitem action='Connect'/>"
@@ -1030,12 +1060,15 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 		{ "CreateBookmark", GTK_STOCK_ADD,
 			_("Create _Bookmark"), "<Ctrl>n", NULL, G_CALLBACK(action_create_bookmark_cb) },
 		{ "EditBookmarks", GTK_STOCK_EDIT,
-			_("_Edit Bookmarks"), "<Ctrl>b", _("Open the bookmark manager to add, edit or delete bookmarks"), G_CALLBACK(action_bookmark_edit_cb) },
+			_("_Edit Bookmarks"), "<Ctrl>b",
+			_("Open the bookmark manager to add, edit or delete bookmarks"),
+			G_CALLBACK(action_bookmark_edit_cb) },
 		{ "Connect", GTK_STOCK_CONNECT, NULL, NULL, NULL, G_CALLBACK(action_mount_cb) },
 		{ "Disconnect", GTK_STOCK_DISCONNECT, NULL, NULL,
 			_("Disconnect the selected resource"), G_CALLBACK(action_unmount_cb) },
 		{ "Open", GTK_STOCK_OPEN, NULL, "<Ctrl>o",
 			_("Open the selection resource with a file manager"), G_CALLBACK(action_open_cb) },
+		{ "CopyURI", GTK_STOCK_COPY, _("Copy URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
 		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", _("Quit Sion"), G_CALLBACK(action_quit_cb) },
 		{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
 	};
@@ -1222,6 +1255,7 @@ static void sion_window_init(SionWindow *window)
 	priv->action_disconnect = gtk_action_group_get_action(priv->action_group, "Disconnect");
 	priv->action_bookmark_create = gtk_action_group_get_action(priv->action_group, "CreateBookmark");
 	priv->action_open = gtk_action_group_get_action(priv->action_group, "Open");
+	priv->action_copyuri = gtk_action_group_get_action(priv->action_group, "CopyURI");
 
 	/* Set the is-important property for some toolbar actions */
 /*
