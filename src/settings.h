@@ -35,6 +35,12 @@ typedef struct _SionSettings			SionSettings;
 typedef struct _SionSettingsClass		SionSettingsClass;
 typedef 	   GPtrArray				SionBookmarkList;
 
+typedef enum
+{
+	SION_SETTINGS_PREFERENCES	= (1 << 0),
+	SION_SETTINGS_BOOKMARKS		= (1 << 1)
+} SionSettingsFlags;
+
 struct _SionSettings
 {
 	GObject parent;
@@ -48,7 +54,7 @@ struct _SionSettingsClass
 GType				sion_settings_get_type			(void);
 SionSettings*		sion_settings_new				(void);
 
-void				sion_settings_write				(SionSettings *settings);
+void				sion_settings_write				(SionSettings *settings, SionSettingsFlags flags);
 
 const gchar*		sion_settings_get_vm_impl		(SionSettings *settings);
 void				sion_settings_set_vm_impl		(SionSettings *settings, const gchar *impl);

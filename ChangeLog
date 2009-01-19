@@ -4,6 +4,10 @@
    Print version information when running in verbose mode.
  * src/window.c:
    Add a 'Copy URI' menu item to the actions menu.
+ * src/settings.c, src/settings.h, src/window.c:
+   Save settings when the preferences dialog is closed.
+   Save bookmarks when the bookmark dialog is closed and when a new
+   bookmark was created using the connection menu.
 
 
 2009-01-12  Enrico Tröger  <enrico(at)xfce(dot)org>

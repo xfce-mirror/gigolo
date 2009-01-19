@@ -428,12 +428,14 @@ static void write_settings_bookmarks(SionSettings *settings)
 }
 
 
-void sion_settings_write(SionSettings *settings)
+void sion_settings_write(SionSettings *settings, SionSettingsFlags flags)
 {
 	g_return_if_fail(settings != NULL);
 
-	write_settings_config(settings);
-	write_settings_bookmarks(settings);
+	if (flags & SION_SETTINGS_PREFERENCES)
+		write_settings_config(settings);
+	if (flags & SION_SETTINGS_BOOKMARKS)
+		write_settings_bookmarks(settings);
 }
 
 
@@ -441,7 +443,7 @@ static void sion_settings_finalize(GObject* object)
 {
 	SionSettingsPrivate *priv = SION_SETTINGS_GET_PRIVATE(object);
 
-	sion_settings_write(SION_SETTINGS(object));
+	sion_settings_write(SION_SETTINGS(object), SION_SETTINGS_PREFERENCES | SION_SETTINGS_BOOKMARKS);
 
 	g_free(priv->vm_impl);
 	g_free(priv->geometry);

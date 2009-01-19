@@ -374,6 +374,7 @@ static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *w
 
 	gtk_dialog_run(GTK_DIALOG(dialog));
 	sion_window_do_autoconnect(window);
+	sion_settings_write(priv->settings, SION_SETTINGS_PREFERENCES);
 
 	gtk_widget_destroy(dialog);
 }
@@ -419,13 +420,15 @@ static void action_quit_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 
 static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	GtkWidget *dialog;
+	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 
-	dialog = sion_bookmark_dialog_new(GTK_WIDGET(window), priv->settings);
+	dialog = sion_bookmark_dialog_new(GTK_WINDOW(window), priv->settings);
 
-	g_signal_connect(dialog, "response", G_CALLBACK(gtk_widget_destroy), NULL);
-	gtk_widget_show(dialog);
+	gtk_dialog_run(GTK_DIALOG(dialog));
+	sion_settings_write(priv->settings, SION_SETTINGS_BOOKMARKS);
+
+	gtk_widget_destroy(dialog);
 }
 
 
@@ -876,6 +879,7 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindo
 						g_ptr_array_add(sion_settings_get_bookmarks(priv->settings),
 							g_object_ref(bm));
 						sion_window_update_bookmarks(window);
+						sion_settings_write(priv->settings, SION_SETTINGS_BOOKMARKS);
 					}
 					gtk_widget_destroy(edit_dialog);
 				}
