@@ -62,4 +62,6 @@ guint sion_get_default_port(const gchar *scheme);
 
 void sion_error_dialog(gpointer *parent, const gchar *text, const gchar *secondary);
 
+const gchar *sion_get_application_icon_name(void);
+
 #endif /* __COMMON_H__ */

@@ -36,6 +36,7 @@
 #include "menubuttonaction.h"
 #include "preferencesdialog.h"
 #include "backendgvfs.h"
+#include "mountdialog.h"
 #include "main.h"
 
 
@@ -216,17 +217,6 @@ static void sion_window_class_init(SionWindowClass *klass)
 }
 
 
-const gchar *sion_window_get_icon_name(void)
-{
-	static const gchar *icon_name = NULL;
-
-	if (icon_name == NULL)
-		icon_name = sion_find_icon_name("gtk-network", "gtk-connect");
-
-	return icon_name;
-}
-
-
 static void systray_icon_activate_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, GtkWindow *window)
 {
 	if (gtk_window_is_active(window))
@@ -304,17 +294,31 @@ static SionBookmark *get_bookmark_from_uri(SionWindow *window, const gchar *uri)
 }
 
 
-static void mount_from_bookmark(SionWindow *window, SionBookmark *bookmark)
+static void mount_from_bookmark(SionWindow *window, SionBookmark *bookmark, gboolean show_dialog)
 {
 	gchar *uri;
+	GtkWidget *dialog = NULL;
 	SionWindowPrivate *priv;
 
 	g_return_if_fail(window != NULL);
 	g_return_if_fail(bookmark != NULL);
 
 	priv = SION_WINDOW_GET_PRIVATE(window);
+
 	uri = sion_bookmark_get_uri(bookmark);
-	sion_backend_gvfs_mount_uri(priv->backend_gvfs, uri, sion_bookmark_get_domain(bookmark));
+
+	if (show_dialog)
+	{
+		const gchar *name = sion_bookmark_get_name(bookmark);
+		gchar *label = g_strdup_printf(_("Mounting \"%s\""), (name != NULL) ? name : uri);
+
+		dialog = sion_mount_dialog_new(GTK_WINDOW(window), label);
+		gtk_widget_show_all(dialog);
+
+		g_free(label);
+	}
+
+	sion_backend_gvfs_mount_uri(priv->backend_gvfs, uri, sion_bookmark_get_domain(bookmark), dialog);
 
 	if (sion_bookmark_get_autoconnect(bookmark))
 		sion_bookmark_set_should_not_autoconnect(bookmark, FALSE);
@@ -356,7 +360,7 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 			/* this fills the values of the dialog into 'bm' */
 			g_object_set(dialog, "bookmark-update", bm, NULL);
 
-			mount_from_bookmark(window, bm);
+			mount_from_bookmark(window, bm, TRUE);
 
 			g_object_unref(bm);
 		}
@@ -447,7 +451,7 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 	gtk_about_dialog_set_url_hook(about_activate_link, NULL, NULL);
 	gtk_show_about_dialog(GTK_WINDOW(window),
 		"authors", authors,
-		"logo-icon-name", sion_window_get_icon_name(),
+		"logo-icon-name", sion_get_application_icon_name(),
 		"comments", "A simple frontend to easily connect to remote filesystems",
 		"copyright", "Copyright 2008-2009 Enrico Tröger",
 		"website", "http://www.uvena.de/sion/",
@@ -775,7 +779,7 @@ static void action_bookmark_activate_cb(G_GNUC_UNUSED SionMenubuttonAction *acti
 {
 	SionBookmark *bm = g_object_get_data(G_OBJECT(item), "bookmark");
 
-	mount_from_bookmark(window, bm);
+	mount_from_bookmark(window, bm, TRUE);
 }
 
 
@@ -834,7 +838,7 @@ gboolean sion_window_do_autoconnect(gpointer data)
 		SionBookmark *bm = g_ptr_array_index(bookmarks, i);
 		if (sion_bookmark_get_autoconnect(bm) && ! sion_bookmark_get_should_not_autoconnect(bm))
 		{
-			mount_from_bookmark(window, bm);
+			mount_from_bookmark(window, bm, FALSE);
 		}
 	}
 	return TRUE;
@@ -1211,7 +1215,7 @@ static void sion_window_init(SionWindow *window)
 	priv->autoconnect_timeout_id = (guint) -1;
 
 	gtk_window_set_title(GTK_WINDOW(window), _("Sion"));
-	gtk_window_set_icon_name(GTK_WINDOW(window), sion_window_get_icon_name());
+	gtk_window_set_icon_name(GTK_WINDOW(window), sion_get_application_icon_name());
 	gtk_window_set_default_size(GTK_WINDOW(window), 550, 350);
 
 	/* Init liststore */
@@ -1285,7 +1289,7 @@ static void sion_window_init(SionWindow *window)
 	gtk_widget_show_all(priv->swin_treeview);
 
 	/* Status icon */
-	priv->systray_icon = gtk_status_icon_new_from_icon_name(sion_window_get_icon_name());
+	priv->systray_icon = gtk_status_icon_new_from_icon_name(sion_get_application_icon_name());
 	sion_status_icon_set_tooltip_text(priv->systray_icon, _("Sion"));
 	g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
 	g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);

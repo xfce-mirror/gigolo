@@ -48,6 +48,11 @@ enum
 };
 static guint signals[LAST_SIGNAL];
 
+typedef struct
+{
+	SionBackendGVFS *self;
+	GtkWidget *dialog;
+} MountInfo;
 
 struct _SionBackendGVFSPrivate
 {
@@ -448,7 +453,7 @@ void sion_backend_gvfs_unmount_mount(SionBackendGVFS *backend, GMount *mount)
 }
 
 
-static void mount_ready_cb(GFile *location, GAsyncResult *res, gpointer backend)
+static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 {
 	gchar *uri;
 	gboolean success;
@@ -460,14 +465,18 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, gpointer backend)
 	if (error != NULL && ! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_ALREADY_MOUNTED))
 	{
 		gchar *msg = g_strdup_printf(_("Mounting of \"%s\" failed."), uri);
-		g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
+		g_signal_emit(mi->self, signals[OPERATION_FAILED], 0, msg, error->message);
 		g_free(msg);
 	}
 
 	if (error != NULL)
 		g_error_free(error);
 
+	if (mi->dialog != NULL)
+		gtk_widget_destroy(mi->dialog);
+
 	g_free(uri);
+	g_free(mi);
 }
 
 
@@ -511,21 +520,26 @@ static void set_password_cb(GMountOperation *op, G_GNUC_UNUSED gchar *message, g
 }
 
 
-void sion_backend_gvfs_mount_uri(SionBackendGVFS *backend, const gchar *uri, const gchar *domain)
+void sion_backend_gvfs_mount_uri(SionBackendGVFS *backend, const gchar *uri,
+								 const gchar *domain, GtkWidget *dialog)
 {
 	GMountOperation *op;
 	GFile *file;
+	MountInfo *mi;
 
 	g_return_if_fail(uri != NULL);
 	g_return_if_fail(backend != NULL);
 
 	op = g_mount_operation_new();
 	file = g_file_new_for_uri(uri);
+	mi = g_new0(MountInfo, 1);
+	mi->self = backend;
+	mi->dialog = dialog;
 
 	g_signal_connect(op, "ask-password", G_CALLBACK(set_password_cb), (gchar*) domain);
 
 	g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
-		(GAsyncReadyCallback) mount_ready_cb, backend);
+		(GAsyncReadyCallback) mount_ready_cb, mi);
 
 	g_object_unref(file);
 }

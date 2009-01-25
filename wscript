@@ -36,7 +36,7 @@ blddir = '_build_'
 sources = [ 'src/main.c', 'src/compat.c', 'src/window.c', 'src/bookmark.c', 'src/settings.c',
 			'src/menubuttonaction.c', 'src/passworddialog.c', 'src/bookmarkdialog.c',
 			'src/bookmarkeditdialog.c', 'src/preferencesdialog.c', 'src/backendgvfs.c',
-			'src/common.c' ]
+			'src/common.c', 'src/mountdialog.c' ]
 
 
 

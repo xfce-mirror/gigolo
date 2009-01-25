@@ -10,6 +10,7 @@ sion_SOURCES = 									\
 	settings.c settings.h						\
 	backendgvfs.c backendgvfs.h					\
 	menubuttonaction.c menubuttonaction.h		\
+	mountdialog.c mountdialog.h					\
 	passworddialog.c passworddialog.h			\
 	bookmarkdialog.c bookmarkdialog.h			\
 	bookmarkeditdialog.c bookmarkeditdialog.h	\

@@ -27,7 +27,6 @@
 #include "common.h"
 #include "compat.h"
 #include "settings.h"
-#include "window.h"
 #include "preferencesdialog.h"
 
 
@@ -35,11 +34,6 @@ typedef struct _SionPreferencesDialogPrivate			SionPreferencesDialogPrivate;
 
 #define SION_PREFERENCES_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
 			SION_PREFERENCES_DIALOG_TYPE, SionPreferencesDialogPrivate))
-
-struct _SionPreferencesDialogPrivate
-{
-	SionWindow	*window;
-};
 
 static void sion_preferences_dialog_class_init			(SionPreferencesDialogClass *klass);
 static void sion_preferences_dialog_init      			(SionPreferencesDialog *dialog);
@@ -351,7 +345,7 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
     {
 		GtkWidget *heading;
 		heading = xfce_header_new(
-			sion_window_get_icon_name(),
+			sion_get_application_icon_name(),
 			gtk_window_get_title(GTK_WINDOW(dialog)));
 		gtk_box_pack_start(GTK_BOX(vbox), heading, FALSE, FALSE, 0);
 	}
@@ -532,7 +526,6 @@ static void sion_preferences_dialog_class_init(SionPreferencesDialogClass *klass
 									G_PARAM_WRITABLE));
 
 	parent_class = (GtkDialogClass*)g_type_class_peek(GTK_TYPE_DIALOG);
-	g_type_class_add_private((gpointer)klass, sizeof(SionPreferencesDialogPrivate));
 }
 
 

@@ -91,9 +91,9 @@ gint main(gint argc, gchar** argv)
 	GOptionContext *context;
 	GtkWidget *window;
 
-    bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
-    bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
-    textdomain(GETTEXT_PACKAGE);
+	bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
+	bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
+	textdomain(GETTEXT_PACKAGE);
 
 	context = g_option_context_new(_("- a simple frontend to easily connect to remote filesystems"));
 	g_option_context_add_main_entries(context, cli_options, GETTEXT_PACKAGE);

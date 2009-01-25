@@ -31,6 +31,7 @@
 #include "bookmark.h"
 #include "bookmarkeditdialog.h"
 
+
 typedef struct _SionBookmarkEditDialogPrivate			SionBookmarkEditDialogPrivate;
 
 #define SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\

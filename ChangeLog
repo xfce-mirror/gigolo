@@ -7,6 +7,13 @@
    tells to not support it (GVfs bug #538461).
  * README, sion.1.in, src/main.c, src/window.c:
    Fix spelling of GVfs.
+ * po/POTFILES.in, src/Makefile.am, src/backendgvfs.c,
+   src/backendgvfs.h, src/common.c, src/common.h,
+   src/mountdialog.c, src/mountdialog.h, src/preferencesdialog.c,
+   src/window.c, src/window.h:
+   Show a progressbar dialog when mounting bookmarks.
+   Move sion_get_application_icon_name() to common.c.
+   Some minor cleanups.
 
 
 2009-01-19  Enrico Tröger  <enrico(at)xfce(dot)org>

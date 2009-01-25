@@ -32,6 +32,7 @@ G_BEGIN_DECLS
 #define IS_SION_WINDOW_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass), SION_WINDOW_TYPE))
 
 
+
 typedef struct _SionWindow				SionWindow;
 typedef struct _SionWindowClass			SionWindowClass;
 
@@ -51,8 +52,6 @@ GtkWidget*	sion_window_new					(SionSettings *settings);
 void		sion_window_update_bookmarks	(SionWindow *window);
 gboolean 	sion_window_do_autoconnect	(gpointer data);
 
-
-const gchar* sion_window_get_icon_name		(void);
 
 G_END_DECLS
 

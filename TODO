@@ -1,4 +1,2 @@
 - better program icon
 - libnotify - to notify about new mounts or disappeared mounts (ftp timeout, etc.)
-- progressdialog when mounting
-- allow usernames which include a '@' char
