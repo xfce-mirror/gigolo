@@ -104,15 +104,25 @@ enum {
 enum {
 	COLUMN_INDEX,
 	COLUMN_VISIBLE,
-	COLUMN_DESC,
+	COLUMN_DESC
+};
+
+/* this enum must be in sync with the 'methods' array below */
+enum {
+	SCHEME_FTP,
+	SCHEME_SFTP,
+	SCHEME_SMB,
+	SCHEME_DAV,
+	SCHEME_DAVS,
+	SCHEME_CUSTOM
 };
 
 static struct MethodInfo methods[] = {
 	{ "ftp",  21,	SHOW_PORT | SHOW_USER },
 	{ "sftp", 22,	SHOW_PORT | SHOW_USER },
 	{ "smb",  0,	SHOW_SHARE | SHOW_USER | SHOW_DOMAIN },
-	{ "davs", 443,	SHOW_PORT | SHOW_USER },
 	{ "dav",  80,	SHOW_PORT | SHOW_USER },
+	{ "davs", 443,	SHOW_PORT | SHOW_USER },
 	{ NULL,   0,	0 }
 };
 static guint methods_len = G_N_ELEMENTS(methods);
@@ -554,6 +564,7 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 {
 	guint i, j;
 	gboolean visible;
+	gboolean have_webdav = FALSE;
 	const gchar* const *supported;
 	GtkListStore *store;
 	GtkTreeModel *filter;
@@ -571,16 +582,26 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 		visible = FALSE;
 		for (j = 0; supported[j] != NULL; j++)
 		{
-			if (methods[i].scheme == NULL || sion_str_equal(methods[i].scheme, supported[j]))
+			/* Hack: list 'davs://' even if GVfs reports to not support it.
+			 * See http://bugzilla.gnome.org/show_bug.cgi?id=538461 */
+			if (i == SCHEME_DAV && sion_str_equal(methods[i].scheme, supported[j]))
+			{
+				visible = TRUE;
+				have_webdav = TRUE;
+				break;
+			}
+			if (i == SCHEME_DAVS && have_webdav)
+			{
+				visible = TRUE;
+				break;
+			}
+			else if (methods[i].scheme == NULL || sion_str_equal(methods[i].scheme, supported[j]))
 			{
 				visible = TRUE;
 				break;
 			}
 		}
-		if (methods[i].scheme != NULL)
-			scheme = sion_describe_scheme(methods[i].scheme);
-		else
-			scheme = _("Custom Location");
+		scheme = sion_describe_scheme(methods[i].scheme);
 
 		gtk_list_store_append(store, &iter);
 		gtk_list_store_set(store, &iter,
@@ -589,6 +610,8 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 			COLUMN_DESC, scheme,
 			-1);
 	}
+
+	gtk_tree_sortable_set_sort_column_id(GTK_TREE_SORTABLE(store), COLUMN_DESC, GTK_SORT_ASCENDING);
 
 	filter = gtk_tree_model_filter_new(GTK_TREE_MODEL(store), NULL);
 	gtk_tree_model_filter_set_visible_column(GTK_TREE_MODEL_FILTER(filter), COLUMN_VISIBLE);

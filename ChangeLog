@@ -2,6 +2,9 @@
 
  * src/main.c, src/preferencesdialog.c, src/window.c:
    Add an option to start minimized.
+ * src/bookmarkeditdialog.c, src/common.c:
+   Add a hack to make the 'davs://' scheme also available even if GVfs
+   tells to not support it (GVfs bug #538461).
 
 
 2009-01-19  Enrico Tröger  <enrico(at)xfce(dot)org>
