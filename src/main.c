@@ -138,7 +138,8 @@ gint main(gint argc, gchar** argv)
 	window = sion_window_new(settings);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
-	gtk_widget_show(window);
+	if (! sion_settings_get_boolean(settings, "start-in-systray"))
+		gtk_widget_show(window);
 
 	gtk_main();
 

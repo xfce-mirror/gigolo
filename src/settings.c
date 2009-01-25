@@ -41,6 +41,7 @@ struct _SionSettingsPrivate
 
 	gboolean	save_geometry;
 	gboolean	show_in_systray;
+	gboolean	start_in_systray;
 	gboolean	show_toolbar;
 	gint		toolbar_style;
 	gint		toolbar_orientation;
@@ -77,6 +78,7 @@ enum
 
 	PROP_SAVE_GEOMETRY,
 	PROP_SHOW_IN_SYSTRAY,
+	PROP_START_IN_SYSTRAY,
 	PROP_SHOW_TOOLBAR,
 	PROP_TOOLBAR_STYLE,
 	PROP_TOOLBAR_ORIENTATION,
@@ -122,6 +124,9 @@ static void sion_settings_set_property(GObject *object, guint prop_id, const GVa
 	case PROP_SHOW_IN_SYSTRAY:
 		priv->show_in_systray = g_value_get_boolean(value);
 		break;
+	case PROP_START_IN_SYSTRAY:
+		priv->start_in_systray = g_value_get_boolean(value);
+		break;
 	case PROP_SHOW_TOOLBAR:
 		priv->show_toolbar = g_value_get_boolean(value);
 		break;
@@ -159,6 +164,9 @@ static void sion_settings_get_property(GObject *object, guint prop_id, GValue *v
 		break;
 	case PROP_SHOW_IN_SYSTRAY:
 		g_value_set_boolean(value, priv->show_in_systray);
+		break;
+	case PROP_START_IN_SYSTRAY:
+		g_value_set_boolean(value, priv->start_in_systray);
 		break;
 	case PROP_SHOW_TOOLBAR:
 		g_value_set_boolean(value, priv->show_toolbar);
@@ -212,6 +220,14 @@ static void sion_settings_class_init(SionSettingsClass *klass)
 									"show-in-systray",
 									"Whether to show an icon in the notification area",
 									TRUE,
+									G_PARAM_READWRITE));
+	g_object_class_install_property(gobject_class,
+									PROP_START_IN_SYSTRAY,
+									g_param_spec_boolean(
+									"start-in-systray",
+									"start-in-systray",
+									"Whether to start the application minimised in the notification area",
+									FALSE,
 									G_PARAM_READWRITE));
 	g_object_class_install_property(gobject_class,
 									PROP_SHOW_TOOLBAR,
@@ -380,6 +396,7 @@ static void write_settings_config(SionSettings *settings)
 		g_key_file_set_integer_list(k, SECTION_UI, "geometry", priv->geometry, 5);
 	g_key_file_set_boolean(k, SECTION_UI, "save_geometry", priv->save_geometry);
 	g_key_file_set_boolean(k, SECTION_UI, "show_in_systray", priv->show_in_systray);
+	g_key_file_set_boolean(k, SECTION_UI, "start_in_systray", priv->start_in_systray);
 	g_key_file_set_boolean(k, SECTION_UI, "show_toolbar", priv->show_toolbar);
 	g_key_file_set_integer(k, SECTION_UI, "toolbar_style", priv->toolbar_style);
 	g_key_file_set_integer(k, SECTION_UI, "toolbar_orientation", priv->toolbar_orientation);
@@ -480,6 +497,7 @@ static void load_settings_read_config(SionSettingsPrivate *priv)
 
 	priv->save_geometry = get_setting_boolean(k, SECTION_UI, "save_geometry", TRUE);
 	priv->show_in_systray = get_setting_boolean(k, SECTION_UI, "show_in_systray", TRUE);
+	priv->start_in_systray = get_setting_boolean(k, SECTION_UI, "start_in_systray", FALSE);
 	priv->show_toolbar = get_setting_boolean(k, SECTION_UI, "show_toolbar", TRUE);
 	priv->toolbar_style = get_setting_int(k, SECTION_UI, "toolbar_style", -1);
 	priv->toolbar_orientation = get_setting_int(k, SECTION_UI, "toolbar_orientation", 0);

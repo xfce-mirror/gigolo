@@ -438,6 +438,9 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	checkbox = add_check_button(settings, "show-in-systray", _("Show status _icon in the Notification Area"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
+	checkbox = add_check_button(settings, "start-in-systray", _("Start minimized in the Notification Area"));
+	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+
 	hbox = gtk_hbox_new(FALSE, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 

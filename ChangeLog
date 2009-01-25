@@ -1,4 +1,10 @@
-2009-01-19  Enrico Tröger  <enrico(dot)troeger(at)uvena(dot)de>
+2009-01-25  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/main.c, src/preferencesdialog.c, src/window.c:
+   Add an option to start minimized.
+
+
+2009-01-19  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/main.c:
    Print version information when running in verbose mode.
