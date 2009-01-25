@@ -98,7 +98,6 @@ static void sion_mount_dialog_destroy(GtkObject *widget)
 {
 	SionMountDialogPrivate *priv = SION_MOUNT_DIALOG_GET_PRIVATE(widget);
 
-	debug(__func__);
 	if (priv->timer_id != (guint) -1)
 	{
 		g_source_remove(priv->timer_id);

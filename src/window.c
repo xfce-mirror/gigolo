@@ -1104,6 +1104,24 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 }
 
 
+static void tree_mounted_col_toggled_cb(G_GNUC_UNUSED GtkCellRendererToggle *cell,
+										gchar *pth, SionWindow *window)
+{
+	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GtkTreeSelection *selection;
+	GtkTreePath *path;
+
+	path = gtk_tree_path_new_from_string(pth);
+	selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview));
+
+	gtk_tree_selection_select_path(selection, path);
+
+	action_unmount_cb(NULL, window);
+
+	gtk_tree_path_free(path);
+}
+
+
 static void create_tree_view(SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
@@ -1139,6 +1157,7 @@ static void create_tree_view(SionWindow *window)
 	gtk_tree_view_column_set_sort_column_id(column, SION_WINDOW_COL_IS_MOUNTED);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
+	g_signal_connect(renderer, "toggled", G_CALLBACK(tree_mounted_col_toggled_cb), window);
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
