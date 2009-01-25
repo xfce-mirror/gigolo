@@ -435,7 +435,7 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	gtk_widget_set_tooltip_text(checkbox, _("Saves the window position and geometry and restores it at the start"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
-	checkbox = add_check_button(settings, "show-trayicon", _("Show tray _icon"));
+	checkbox = add_check_button(settings, "show-in-systray", _("Show status _icon in the Notification Area"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
 	hbox = gtk_hbox_new(FALSE, 6);

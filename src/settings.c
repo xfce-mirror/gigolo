@@ -40,7 +40,7 @@ struct _SionSettingsPrivate
 	gchar		*bookmarks_filename;
 
 	gboolean	save_geometry;
-	gboolean	show_trayicon;
+	gboolean	show_in_systray;
 	gboolean	show_toolbar;
 	gint		toolbar_style;
 	gint		toolbar_orientation;
@@ -76,7 +76,7 @@ enum
 	PROP_AUTOCONNECT_INTERVAL,
 
 	PROP_SAVE_GEOMETRY,
-	PROP_SHOW_TRAYICON,
+	PROP_SHOW_IN_SYSTRAY,
 	PROP_SHOW_TOOLBAR,
 	PROP_TOOLBAR_STYLE,
 	PROP_TOOLBAR_ORIENTATION,
@@ -119,8 +119,8 @@ static void sion_settings_set_property(GObject *object, guint prop_id, const GVa
 	case PROP_SAVE_GEOMETRY:
 		priv->save_geometry = g_value_get_boolean(value);
 		break;
-	case PROP_SHOW_TRAYICON:
-		priv->show_trayicon = g_value_get_boolean(value);
+	case PROP_SHOW_IN_SYSTRAY:
+		priv->show_in_systray = g_value_get_boolean(value);
 		break;
 	case PROP_SHOW_TOOLBAR:
 		priv->show_toolbar = g_value_get_boolean(value);
@@ -157,8 +157,8 @@ static void sion_settings_get_property(GObject *object, guint prop_id, GValue *v
 	case PROP_SAVE_GEOMETRY:
 		g_value_set_boolean(value, priv->save_geometry);
 		break;
-	case PROP_SHOW_TRAYICON:
-		g_value_set_boolean(value, priv->show_trayicon);
+	case PROP_SHOW_IN_SYSTRAY:
+		g_value_set_boolean(value, priv->show_in_systray);
 		break;
 	case PROP_SHOW_TOOLBAR:
 		g_value_set_boolean(value, priv->show_toolbar);
@@ -206,11 +206,11 @@ static void sion_settings_class_init(SionSettingsClass *klass)
 									TRUE,
 									G_PARAM_READWRITE));
 	g_object_class_install_property(gobject_class,
-									PROP_SHOW_TRAYICON,
+									PROP_SHOW_IN_SYSTRAY,
 									g_param_spec_boolean(
-									"show-trayicon",
-									"show-trayicon",
-									"Whether to show the trayicon",
+									"show-in-systray",
+									"show-in-systray",
+									"Whether to show an icon in the notification area",
 									TRUE,
 									G_PARAM_READWRITE));
 	g_object_class_install_property(gobject_class,
@@ -379,7 +379,7 @@ static void write_settings_config(SionSettings *settings)
 	if (priv->geometry != NULL)
 		g_key_file_set_integer_list(k, SECTION_UI, "geometry", priv->geometry, 5);
 	g_key_file_set_boolean(k, SECTION_UI, "save_geometry", priv->save_geometry);
-	g_key_file_set_boolean(k, SECTION_UI, "show_trayicon", priv->show_trayicon);
+	g_key_file_set_boolean(k, SECTION_UI, "show_in_systray", priv->show_in_systray);
 	g_key_file_set_boolean(k, SECTION_UI, "show_toolbar", priv->show_toolbar);
 	g_key_file_set_integer(k, SECTION_UI, "toolbar_style", priv->toolbar_style);
 	g_key_file_set_integer(k, SECTION_UI, "toolbar_orientation", priv->toolbar_orientation);
@@ -479,7 +479,7 @@ static void load_settings_read_config(SionSettingsPrivate *priv)
 		DEFAULT_AUTOCONNECT_INTERVAL);
 
 	priv->save_geometry = get_setting_boolean(k, SECTION_UI, "save_geometry", TRUE);
-	priv->show_trayicon = get_setting_boolean(k, SECTION_UI, "show_trayicon", TRUE);
+	priv->show_in_systray = get_setting_boolean(k, SECTION_UI, "show_in_systray", TRUE);
 	priv->show_toolbar = get_setting_boolean(k, SECTION_UI, "show_toolbar", TRUE);
 	priv->toolbar_style = get_setting_int(k, SECTION_UI, "toolbar_style", -1);
 	priv->toolbar_orientation = get_setting_int(k, SECTION_UI, "toolbar_orientation", 0);

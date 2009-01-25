@@ -72,8 +72,8 @@ struct _SionWindowPrivate
 	GtkActionGroup	*action_group;
 
 	GtkWidget		*toolbar;
-	GtkStatusIcon	*trayicon;
-	GtkWidget		*trayicon_popup_menu;
+	GtkStatusIcon	*systray_icon;
+	GtkWidget		*systray_icon_popup_menu;
 
 	guint			 autoconnect_timeout_id;
 };
@@ -128,9 +128,9 @@ GType sion_window_get_type(void)
 static gboolean sion_window_state_event(GtkWidget *widget, GdkEventWindowState *event)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(widget);
-	gboolean show_trayicon = sion_settings_get_boolean(priv->settings, "show-trayicon");
+	gboolean show_systray_icon = sion_settings_get_boolean(priv->settings, "show-in-systray");
 
-	if (show_trayicon)
+	if (show_systray_icon)
 	{
 		gboolean window_hidden = FALSE;
 		if (event->changed_mask & GDK_WINDOW_STATE_ICONIFIED)
@@ -148,7 +148,7 @@ static gboolean sion_window_state_event(GtkWidget *widget, GdkEventWindowState *
 				window_hidden = FALSE;
 		}
 
-		if (window_hidden && show_trayicon)
+		if (window_hidden && show_systray_icon)
 		{
 			gtk_window_set_skip_taskbar_hint(GTK_WINDOW(widget), TRUE);
 		}
@@ -192,13 +192,13 @@ static gboolean sion_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkEve
 		sion_settings_set_geometry(priv->settings, geo, 5);
 	}
 	gtk_widget_destroy(priv->tree_popup_menu);
-	gtk_widget_destroy(priv->trayicon_popup_menu);
+	gtk_widget_destroy(priv->systray_icon_popup_menu);
 	gtk_widget_destroy(priv->swin_treeview);
 	gtk_widget_destroy(priv->swin_iconview);
 	gtk_widget_destroy(priv->toolbar);
 	g_object_unref(priv->action_group);
-	g_object_unref(priv->trayicon);
-	g_object_unref(priv->trayicon_popup_menu);
+	g_object_unref(priv->systray_icon);
+	g_object_unref(priv->systray_icon_popup_menu);
 	g_object_unref(priv->backend_gvfs);
 
 	return FALSE;
@@ -227,7 +227,7 @@ const gchar *sion_window_get_icon_name(void)
 }
 
 
-static void trayicon_activate_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, GtkWindow *window)
+static void systray_icon_activate_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, GtkWindow *window)
 {
 	if (gtk_window_is_active(window))
 		gtk_widget_hide(GTK_WIDGET(window));
@@ -239,13 +239,13 @@ static void trayicon_activate_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, GtkWi
 }
 
 
-static void trayicon_popup_menu_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, guint button,
+static void systray_icon_popup_menu_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, guint button,
 								   guint activate_time, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 
 	if (button == 3)
-		gtk_menu_popup(GTK_MENU(priv->trayicon_popup_menu), NULL, NULL, NULL, NULL,
+		gtk_menu_popup(GTK_MENU(priv->systray_icon_popup_menu), NULL, NULL, NULL, NULL,
 			button, activate_time);
 }
 
@@ -895,11 +895,11 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindo
 }
 
 
-static void sion_window_show_trayicon(SionWindow *window, gboolean show)
+static void sion_window_show_systray_icon(SionWindow *window, gboolean show)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 
-	gtk_status_icon_set_visible(priv->trayicon, show);
+	gtk_status_icon_set_visible(priv->systray_icon, show);
 }
 
 
@@ -981,8 +981,8 @@ static void sion_window_settings_notify_cb(SionSettings *settings, GParamSpec *p
 
 	if (name == g_intern_string("show-toolbar"))
 		sion_window_show_toolbar(window, g_value_get_boolean(value));
-	else if (name == g_intern_string("show-trayicon"))
-		sion_window_show_trayicon(window, g_value_get_boolean(value));
+	else if (name == g_intern_string("show-in-systray"))
+		sion_window_show_systray_icon(window, g_value_get_boolean(value));
 	else if (name == g_intern_string("toolbar-style"))
 		sion_window_set_toolbar_style(window, g_value_get_int(value));
 	else if (name == g_intern_string("toolbar-orientation"))
@@ -1024,7 +1024,7 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 			"</menu>"
 		"</menubar>"
 
-		"<popup name='traymenu'>"
+		"<popup name='systraymenu'>"
 			"<menuitem action='Connect'/>"
 			"<menuitem action='Bookmarks'/>"
 			"<separator/>"
@@ -1245,10 +1245,10 @@ static void sion_window_init(SionWindow *window)
 	create_ui_elements(window, ui_manager);
 	menubar = gtk_ui_manager_get_widget(ui_manager, "/menubar");
 	priv->toolbar = gtk_ui_manager_get_widget(ui_manager, "/toolbar");
-	priv->trayicon_popup_menu = gtk_ui_manager_get_widget(ui_manager, "/traymenu");
+	priv->systray_icon_popup_menu = gtk_ui_manager_get_widget(ui_manager, "/systraymenu");
 	priv->tree_popup_menu = gtk_ui_manager_get_widget(ui_manager, "/treemenu");
 	/* increase refcount to keep the widgets after the ui manager is destroyed */
-	g_object_ref(priv->trayicon_popup_menu);
+	g_object_ref(priv->systray_icon_popup_menu);
 	g_object_ref(priv->tree_popup_menu);
 	g_object_ref(priv->toolbar);
 	g_object_ref(priv->swin_treeview);
@@ -1285,10 +1285,10 @@ static void sion_window_init(SionWindow *window)
 	gtk_widget_show_all(priv->swin_treeview);
 
 	/* Status icon */
-	priv->trayicon = gtk_status_icon_new_from_icon_name(sion_window_get_icon_name());
-	sion_status_icon_set_tooltip_text(priv->trayicon, _("Sion"));
-	g_signal_connect(priv->trayicon, "activate", G_CALLBACK(trayicon_activate_cb), window);
-	g_signal_connect(priv->trayicon, "popup-menu", G_CALLBACK(trayicon_popup_menu_cb), window);
+	priv->systray_icon = gtk_status_icon_new_from_icon_name(sion_window_get_icon_name());
+	sion_status_icon_set_tooltip_text(priv->systray_icon, _("Sion"));
+	g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
+	g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 
 	g_object_unref(ui_manager);
 }
@@ -1308,7 +1308,7 @@ GtkWidget *sion_window_new(SionSettings *settings)
 
 	g_object_set(priv->action_bookmarks, "settings", settings, NULL);
 
-	sion_window_show_trayicon(SION_WINDOW(window), sion_settings_get_boolean(settings, "show-trayicon"));
+	sion_window_show_systray_icon(SION_WINDOW(window), sion_settings_get_boolean(settings, "show-in-systray"));
 	sion_window_show_toolbar(SION_WINDOW(window), sion_settings_get_boolean(settings, "show-toolbar"));
 	sion_window_set_toolbar_style(SION_WINDOW(window), sion_settings_get_integer(settings, "toolbar-style"));
 	sion_window_set_toolbar_orientation(SION_WINDOW(window),
