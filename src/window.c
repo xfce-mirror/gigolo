@@ -1059,25 +1059,25 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 		"</toolbar>"
 	"</ui>";
 	const GtkActionEntry entries[] = {
-		{ "File", NULL, _("_File"), NULL, NULL, NULL },
-		{ "Edit", NULL, _("_Edit"), NULL, NULL, NULL },
-		{ "Actions", NULL, _("_Actions"), NULL, NULL, NULL },
-		{ "Help", NULL, _("_Help"), NULL, NULL, NULL },
+		{ "File", NULL, N_("_File"), NULL, NULL, NULL },
+		{ "Edit", NULL, N_("_Edit"), NULL, NULL, NULL },
+		{ "Actions", NULL, N_("_Actions"), NULL, NULL, NULL },
+		{ "Help", NULL, N_("_Help"), NULL, NULL, NULL },
 		{ "Preferences", GTK_STOCK_PREFERENCES,
 			NULL, "<Ctrl>p", NULL, G_CALLBACK(action_preferences_cb) },
 		{ "CreateBookmark", GTK_STOCK_ADD,
-			_("Create _Bookmark"), "<Ctrl>n", NULL, G_CALLBACK(action_create_bookmark_cb) },
+			N_("Create _Bookmark"), "<Ctrl>n", NULL, G_CALLBACK(action_create_bookmark_cb) },
 		{ "EditBookmarks", GTK_STOCK_EDIT,
-			_("_Edit Bookmarks"), "<Ctrl>b",
-			_("Open the bookmark manager to add, edit or delete bookmarks"),
+			N_("_Edit Bookmarks"), "<Ctrl>b",
+			N_("Open the bookmark manager to add, edit or delete bookmarks"),
 			G_CALLBACK(action_bookmark_edit_cb) },
 		{ "Connect", GTK_STOCK_CONNECT, NULL, NULL, NULL, G_CALLBACK(action_mount_cb) },
 		{ "Disconnect", GTK_STOCK_DISCONNECT, NULL, NULL,
-			_("Disconnect the selected resource"), G_CALLBACK(action_unmount_cb) },
+			N_("Disconnect the selected resource"), G_CALLBACK(action_unmount_cb) },
 		{ "Open", GTK_STOCK_OPEN, NULL, "<Ctrl>o",
-			_("Open the selection resource with a file manager"), G_CALLBACK(action_open_cb) },
-		{ "CopyURI", GTK_STOCK_COPY, _("Copy URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
-		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", _("Quit Sion"), G_CALLBACK(action_quit_cb) },
+			N_("Open the selection resource with a file manager"), G_CALLBACK(action_open_cb) },
+		{ "CopyURI", GTK_STOCK_COPY, N_("Copy URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
+		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Sion"), G_CALLBACK(action_quit_cb) },
 		{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
 	};
 	const guint entries_n = G_N_ELEMENTS(entries);

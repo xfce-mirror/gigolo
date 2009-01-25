@@ -41,7 +41,7 @@ typedef enum
 {
 	SION_BE_MODE_CREATE,
 	SION_BE_MODE_EDIT,
-	SION_BE_MODE_CONNECT,
+	SION_BE_MODE_CONNECT
 } SionBookmarkEditDialogMode;
 
 struct _SionBookmarkEditDialog
