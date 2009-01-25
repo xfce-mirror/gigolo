@@ -1234,7 +1234,7 @@ static void sion_window_init(SionWindow *window)
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(priv->swin_iconview), GTK_SHADOW_IN);
 	gtk_container_add(GTK_CONTAINER(priv->swin_iconview), priv->iconview);
 
-	/* Init the GVFS backend */
+	/* Init the GVfs backend */
 	priv->backend_gvfs = sion_backend_gvfs_new(priv->store);
 	g_signal_connect(priv->backend_gvfs, "mounts-changed", G_CALLBACK(mounts_changed_cb), window);
 	g_signal_connect(priv->backend_gvfs, "operation-failed",

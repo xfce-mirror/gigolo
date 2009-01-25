@@ -130,7 +130,7 @@ gint main(gint argc, gchar** argv)
 	accel_filename = g_build_filename(g_get_user_config_dir(), PACKAGE, "accels", NULL);
 	gtk_accel_map_load(accel_filename);
 
-	/* GVFS currently depends on gnome-mount for HAL-based GVolumeMonitor implementation,
+	/* GVfs currently depends on gnome-mount for HAL-based GVolumeMonitor implementation,
 	 * when gnome-mount is not installed, we can use "unix" as GVolumeMonitor implementation. */
 	if ((vm_impl = sion_settings_get_vm_impl(settings)) != NULL)
 		g_setenv("GIO_USE_VOLUME_MONITOR", vm_impl, 0);

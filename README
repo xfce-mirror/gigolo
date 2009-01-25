@@ -5,8 +5,15 @@ Sion
 About
 =====
 Sion is a frontend to easily manage connections to remote filesystems using
-GIO/GVFS. It allows you to quickly connect/mount a remote filesystem and manage
+GIO/GVfs. It allows you to quickly connect/mount a remote filesystem and manage
 bookmarks of such.
+
+GVfs is an userspace virtual filesystem and the successor of GnomeVfs but doesn't
+depend on Gnome itself. It only requires a recent GLib version and a properly setup
+DBus system. Then it provides almost transparent access to remote
+resources like FTP or SFTP (SSH) connections, SMB (windows shares) or special resources
+like the Trash (trash://), Burn (burn://) or even accessing your digital photo camera
+(gphoto2://).
 
 
 Requirements

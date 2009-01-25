@@ -5,6 +5,8 @@
  * src/bookmarkeditdialog.c, src/common.c:
    Add a hack to make the 'davs://' scheme also available even if GVfs
    tells to not support it (GVfs bug #538461).
+ * README, sion.1.in, src/main.c, src/window.c:
+   Fix spelling of GVfs.
 
 
 2009-01-19  Enrico Tröger  <enrico(at)xfce(dot)org>

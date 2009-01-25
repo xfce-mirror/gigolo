@@ -1,13 +1,13 @@
 .TH "SION" "1" "" "sion @VERSION@" ""
 .SH "NAME"
-sion \(em a simple frontend to easily connect to remote filesystems with GIO/GVFS
+sion \(em a simple frontend to easily connect to remote filesystems with GIO/GVfs
 .SH "SYNOPSIS"
 .PP
 \fBsion\fR [\fBoption\fP]
 .SH "DESCRIPTION"
 .PP
 Sion is a frontend to easily manage connections to remote filesystems using
-GIO/GVFS. It allows you to quickly mount a remote filesystem and manage
+GIO/GVfs. It allows you to quickly mount a remote filesystem and manage
 bookmarks to such.
 .PP
 Homepage: http://www.uvena.de/sion/
