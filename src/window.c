@@ -1102,8 +1102,7 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 }
 
 
-static void tree_mounted_col_toggled_cb(G_GNUC_UNUSED GtkCellRendererToggle *cell,
-										gchar *pth, SionWindow *window)
+static void tree_mounted_col_toggled_cb(GtkCellRendererToggle *cell, gchar *pth, SionWindow *window)
 {
 	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
 	GtkTreeSelection *selection;
@@ -1114,7 +1113,10 @@ static void tree_mounted_col_toggled_cb(G_GNUC_UNUSED GtkCellRendererToggle *cel
 
 	gtk_tree_selection_select_path(selection, path);
 
-	action_unmount_cb(NULL, window);
+	if (gtk_cell_renderer_toggle_get_active(cell))
+		action_unmount_cb(NULL, window);
+	else
+		action_mount_cb(NULL, window);
 
 	gtk_tree_path_free(path);
 }

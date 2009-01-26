@@ -2,6 +2,7 @@
 
  * src/window.c:
    Make 'Connect' insensitive for connected resources.
+   Allow also mounting resources by toggling the 'Mounted' checkbox.
  * src/backendgvfs.c:
    Ignore empty CDs which are listed as mounted by GVfs.
 
