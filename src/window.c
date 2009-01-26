@@ -609,8 +609,7 @@ static void update_sensitive_buttons(SionWindow *window, GtkTreeModel *model, Gt
 		gtk_tree_model_get(model, iter, SION_WINDOW_COL_REF_TYPE, &ref_type, -1);
 		is_bookmark = iter_is_bookmark(window, model, iter);
 
-		/* gtk_action_set_sensitive(priv->action_connect, (ref_type != SION_WINDOW_REF_TYPE_MOUNT)); */
-		/* gtk_action_set_sensitive(priv->action_bookmarks_toolbar, (ref_type != SION_WINDOW_REF_TYPE_MOUNT)); */
+		gtk_action_set_sensitive(priv->action_connect, (ref_type != SION_WINDOW_REF_TYPE_MOUNT));
 		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == SION_WINDOW_REF_TYPE_MOUNT));
 		gtk_action_set_sensitive(priv->action_bookmark_create, ! is_bookmark);
 		gtk_action_set_sensitive(priv->action_open, sion_settings_has_file_manager(priv->settings));
@@ -619,7 +618,6 @@ static void update_sensitive_buttons(SionWindow *window, GtkTreeModel *model, Gt
 	else
 	{
 		/* gtk_action_set_sensitive(priv->action_connect, FALSE); */
-		/* gtk_action_set_sensitive(priv->action_bookmarks_toolbar, FALSE); */
 		gtk_action_set_sensitive(priv->action_disconnect, FALSE);
 		gtk_action_set_sensitive(priv->action_bookmark_create, FALSE);
 		gtk_action_set_sensitive(priv->action_open, FALSE);

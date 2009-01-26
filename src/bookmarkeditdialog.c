@@ -602,7 +602,7 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 				break;
 			}
 		}
-		scheme = sion_describe_scheme(methods[i].scheme);
+		scheme = sion_describe_scheme((methods[i].scheme != NULL) ? methods[i].scheme : "custom");
 
 		gtk_list_store_append(store, &iter);
 		gtk_list_store_set(store, &iter,

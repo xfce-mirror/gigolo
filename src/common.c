@@ -88,8 +88,10 @@ const gchar *sion_describe_scheme(const gchar *scheme)
 		return _("WebDAV (secure)");
 	else if (sion_str_equal(scheme, "network"))
 		return _("Network");
+	else if (sion_str_equal(scheme, "custom"))
+		return _("Custom Location");
 
-	return _("Custom Location");
+	return NULL;
 }
 
 

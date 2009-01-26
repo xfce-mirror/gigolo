@@ -1,3 +1,11 @@
+2009-01-26  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/window.c:
+   Make 'Connect' insensitive for connected resources.
+ * src/backendgvfs.c:
+   Ignore empty CDs which are listed as mounted by GVfs.
+
+
 2009-01-25  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/main.c, src/preferencesdialog.c, src/window.c:

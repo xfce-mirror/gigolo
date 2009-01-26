@@ -237,6 +237,13 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 		vol_name = g_mount_get_name(mount);
 		file = g_mount_get_root(mount);
 		scheme = g_file_get_uri_scheme(file);
+		if (sion_str_equal(scheme, "burn"))
+		{	/* ignore empty CDs which are listed as mounted to burn:// */
+			g_free(vol_name);
+			g_free(scheme);
+			g_object_unref(file);
+			continue;
+		}
 		scheme_name = sion_describe_scheme(scheme);
 		uri = g_file_get_uri(file);
 		icon = g_mount_get_icon(mount);
@@ -386,7 +393,7 @@ static void volume_mount_finished_cb(GObject *src, GAsyncResult *res, gpointer b
 				name = g_strdup(_("unknown"));
 		}
 
-		g_warning("Mounting of \"%s\" failed (%s)", name, error->message);
+		g_warning("Mounting of \"%s\" failed: %s", name, error->message);
 		msg = g_strdup_printf(_("Mounting of \"%s\" failed."), name);
 
 		g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
