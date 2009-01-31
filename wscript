@@ -22,8 +22,8 @@
 
 
 
-import Build, Configure, Options, Runner, Task, Utils
-import sys, os, subprocess, shutil
+import Build, Configure, Options, Utils
+import sys, os, shutil
 
 
 APPNAME = 'gigolo'
@@ -59,7 +59,7 @@ def configure(conf):
 
 	# debug flags
 	if Options.options.debug:
-		conf.env.append_value('CCFLAGS', '-g -O0 -DDEBUG -DGSEAL_ENABLE -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -D_FORTIFY_SOURCE=2 -ansi -fno-common -Waggregate-return -Wcast-align -Wdeclaration-after-statement -Wextra -Wfloat-equal -Wformat=2 -Wformat-nonliteral -Wformat-security -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-field-initializers -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-compare -Wundef -Wwrite-strings')
+		conf.env.append_value('CCFLAGS', '-g -O0 -DDEBUG '.split())
 
 	Utils.pprint('BLUE', 'Summary:')
 	print_message(conf, 'Install Gigolo ' + VERSION + ' in', conf.env['PREFIX'])
@@ -81,30 +81,38 @@ def set_options(opt):
 
 
 def build(bld):
-	obj = bld.new_task_gen('cc', 'program')
-	obj.name		= 'gigolo'
-	obj.target		= 'gigolo'
-	obj.source		= sources
-	obj.includes	= '.'
-	obj.uselib		= 'GTK GIO'
+	bld.new_task_gen(
+		features		= 'cc cprogram',
+		name			= 'gigolo',
+		target			= 'gigolo',
+		source			= sources,
+		includes		= '.',
+		uselib			= 'GTK GIO',
+	)
 
 	# Translations
-	obj			= bld.new_task_gen('intltool_po')
-	obj.podir	= 'po'
-	obj.appname	= 'gigolo'
+	bld.new_task_gen(
+		features		= 'intltool_po',
+		podir			= 'po',
+		appname			= 'gigolo'
+	)
 
 	# gigolo.desktop
-	obj					= bld.new_task_gen('intltool_in')
-	obj.source			= 'gigolo.desktop.in'
-	obj.install_path	= '${DATADIR}/applications'
-	obj.flags			= '-d'
+	bld.new_task_gen(
+		features		= 'intltool_in',
+		source			= 'gigolo.desktop.in',
+		flags			= '-d',
+		install_path	= '${DATADIR}/applications'
+	)
 
 	# gigolo.1
-	obj					= bld.new_task_gen('subst')
-	obj.source			= 'gigolo.1.in'
-	obj.target			= 'gigolo.1'
-	obj.dict			= { 'VERSION' : VERSION }
-	obj.install_path	= '${MANDIR}/man1'
+	bld.new_task_gen(
+		features		= 'subst',
+		source			= 'gigolo.1.in',
+		target			= 'gigolo.1',
+		dict			= { 'VERSION' : VERSION },
+		install_path	= '${MANDIR}/man1'
+	)
 
 	# Docs
 	bld.install_files('${DOCDIR}', 'AUTHORS ChangeLog COPYING README NEWS TODO')
@@ -129,18 +137,32 @@ def dist():
 
 
 def shutdown():
-	if Options.options.update_po:
+	# the following code was taken from midori's WAF script, thanks
+	if Options.commands['install'] or Options.commands['uninstall']:
+		dir = Build.bld.get_install_path('${DATADIR}/icons/hicolor')
+		icon_cache_updated = False
+		if not Options.options.destdir:
+			try:
+				if not Utils.exec_command('gtk-update-icon-cache -q -f -t %s' % dir):
+					Utils.pprint('YELLOW', "Updated Gtk icon cache.")
+					icon_cache_updated = True
+			except:
+				Utils.pprint('RED', "Failed to update icon cache.")
+		if not icon_cache_updated:
+			Utils.pprint('YELLOW', "Icon cache not updated. After install, run this:")
+			Utils.pprint('YELLOW', "gtk-update-icon-cache -q -f -t %s" % dir)
+	elif Options.options.update_po:
 		os.chdir('%s/po' % srcdir)
 		try:
 			try:
 				size_old = os.stat('gigolo.pot').st_size
 			except:
 				size_old = 0
-			subprocess.call(['intltool-update', '--pot'])
+			Utils.exec_command(['intltool-update', '--pot', '-g', APPNAME])
 			size_new = os.stat('gigolo.pot').st_size
 			if size_new != size_old:
 				Utils.pprint('CYAN', 'Updated POT file.')
-				launch('intltool-update -r', 'Updating translations', 'CYAN')
+				launch('intltool-update -r %s' % APPNAME, 'Updating translations', 'CYAN')
 			else:
 				Utils.pprint('CYAN', 'POT file is up to date.')
 		except:
@@ -153,7 +175,7 @@ def launch(command, status, success_color='GREEN'):
 	ret = 0
 	Utils.pprint(success_color, status)
 	try:
-		ret = subprocess.call(command.split())
+		ret = Utils.exec_command(command.split())
 	except:
 		ret = 1
 

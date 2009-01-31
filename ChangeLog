@@ -3,6 +3,8 @@
  * *.*:
    Change application name to 'Gigolo'.
    Rename everything to 'Gigolo'.
+ * waf, wscript:
+   Update to Waf 1.5.3 and use new syntax in the wscript.
 
 
 2009-01-26  Enrico Tröger  <enrico(at)xfce(dot)org>
