@@ -32,14 +32,14 @@
 #include "bookmarkeditdialog.h"
 
 
-typedef struct _SionBookmarkEditDialogPrivate			SionBookmarkEditDialogPrivate;
+typedef struct _GigoloBookmarkEditDialogPrivate			GigoloBookmarkEditDialogPrivate;
 
-#define SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			SION_BOOKMARK_EDIT_DIALOG_TYPE, SionBookmarkEditDialogPrivate))
+#define GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(obj)	(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
+			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE, GigoloBookmarkEditDialogPrivate))
 
-struct _SionBookmarkEditDialogPrivate
+struct _GigoloBookmarkEditDialogPrivate
 {
-	SionSettings *settings;
+	GigoloSettings *settings;
 
 	GtkWidget *table;
 
@@ -70,14 +70,14 @@ struct _SionBookmarkEditDialogPrivate
 	GtkWidget *share_label;
 	GtkWidget *share_entry;
 
-	SionBookmark *bookmark_init;
-	SionBookmark *bookmark_update;
+	GigoloBookmark *bookmark_init;
+	GigoloBookmark *bookmark_update;
 };
 
-static void sion_bookmark_edit_dialog_class_init			(SionBookmarkEditDialogClass *klass);
-static void sion_bookmark_edit_dialog_set_property			(GObject *object, guint prop_id,
+static void gigolo_bookmark_edit_dialog_class_init			(GigoloBookmarkEditDialogClass *klass);
+static void gigolo_bookmark_edit_dialog_set_property		(GObject *object, guint prop_id,
 															 const GValue *value, GParamSpec *pspec);
-static void sion_bookmark_edit_dialog_init      			(SionBookmarkEditDialog *dialog);
+static void gigolo_bookmark_edit_dialog_init      			(GigoloBookmarkEditDialog *dialog);
 
 
 struct MethodInfo {
@@ -132,35 +132,35 @@ static guint methods_len = G_N_ELEMENTS(methods);
 static GtkDialogClass *parent_class = NULL;
 
 
-GType sion_bookmark_edit_dialog_get_type(void)
+GType gigolo_bookmark_edit_dialog_get_type(void)
 {
 	static GType self_type = 0;
 	if (! self_type)
 	{
 		static const GTypeInfo self_info =
 		{
-			sizeof(SionBookmarkEditDialogClass),
+			sizeof(GigoloBookmarkEditDialogClass),
 			NULL, /* base_init */
 			NULL, /* base_finalize */
-			(GClassInitFunc)sion_bookmark_edit_dialog_class_init,
+			(GClassInitFunc)gigolo_bookmark_edit_dialog_class_init,
 			NULL, /* class_finalize */
 			NULL, /* class_data */
-			sizeof(SionBookmarkEditDialog),
+			sizeof(GigoloBookmarkEditDialog),
 			0,
-			(GInstanceInitFunc)sion_bookmark_edit_dialog_init,
+			(GInstanceInitFunc)gigolo_bookmark_edit_dialog_init,
 			NULL /* value_table */
 		};
 
-		self_type = g_type_register_static(GTK_TYPE_DIALOG, "SionBookmarkEditDialog", &self_info, 0);
+		self_type = g_type_register_static(GTK_TYPE_DIALOG, "GigoloBookmarkEditDialog", &self_info, 0);
 	}
 
 	return self_type;
 }
 
 
-static void sion_bookmark_edit_dialog_destroy(GtkObject *object)
+static void gigolo_bookmark_edit_dialog_destroy(GtkObject *object)
 {
-	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(object);
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(object);
 
 	gtk_widget_destroy(priv->uri_entry);
 	gtk_widget_destroy(priv->uri_label);
@@ -180,11 +180,11 @@ static void sion_bookmark_edit_dialog_destroy(GtkObject *object)
 }
 
 
-gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
+gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 {
 	gint res;
 	gboolean error = FALSE;
-	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 	const gchar *tmp;
 
 	while (TRUE)
@@ -197,20 +197,20 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 		/* perform some error checking and don't return until entered values are sane */
 		else
 		{
-			if (sion_widget_get_flags(priv->name_entry) & GTK_VISIBLE)
+			if (gigolo_widget_get_flags(priv->name_entry) & GTK_VISIBLE)
 			{	/* check the name only if we are creating/editing a bookmark */
 				tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
 				if (! *tmp)
 				{
 					error = TRUE;
-					sion_error_dialog((gpointer)dialog,
+					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a name for the bookmark."), NULL);
 					gtk_widget_grab_focus(priv->name_entry);
 				}
 				else
 				{	/* check for duplicate bookmark names */
-					SionBookmarkList *bml = sion_settings_get_bookmarks(priv->settings);
-					SionBookmark *bm;
+					GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(priv->settings);
+					GigoloBookmark *bm;
 					guint i;
 
 					for (i = 0; i < bml->len && ! error; i++)
@@ -218,10 +218,10 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 						bm = g_ptr_array_index(bml, i);
 						if (bm == priv->bookmark_init)
 							continue;
-						if (sion_str_equal(tmp, sion_bookmark_get_name(bm)))
+						if (gigolo_str_equal(tmp, gigolo_bookmark_get_name(bm)))
 						{
 							error = TRUE;
-							sion_error_dialog((gpointer)dialog,
+							gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
 			_("The entered bookmark name is already in use. Please choose another one."), NULL);
 							gtk_widget_grab_focus(priv->name_entry);
 						}
@@ -234,7 +234,7 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 				if (! *tmp)
 				{
 					error = TRUE;
-					sion_error_dialog((gpointer)dialog,
+					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a server address or name."), NULL);
 					gtk_widget_grab_focus(priv->server_entry);
 				}
@@ -245,7 +245,7 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 				if (! *tmp)
 				{
 					error = TRUE;
-					sion_error_dialog((gpointer)dialog,
+					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a share name."), NULL);
 					gtk_widget_grab_focus(priv->share_entry);
 				}
@@ -256,7 +256,7 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 				if (! *tmp)
 				{
 					error = TRUE;
-					sion_error_dialog((gpointer)dialog,
+					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a valid URI for the connection."), NULL);
 					gtk_widget_grab_focus(priv->uri_entry);
 				}
@@ -270,17 +270,17 @@ gint sion_bookmark_edit_dialog_run(SionBookmarkEditDialog *dialog)
 }
 
 
-static void sion_bookmark_edit_dialog_class_init(SionBookmarkEditDialogClass *klass)
+static void gigolo_bookmark_edit_dialog_class_init(GigoloBookmarkEditDialogClass *klass)
 {
 	GtkObjectClass *gtk_object_class = (GtkObjectClass *)klass;
 	GObjectClass *g_object_class = G_OBJECT_CLASS(klass);
 
-	gtk_object_class->destroy = sion_bookmark_edit_dialog_destroy;
+	gtk_object_class->destroy = gigolo_bookmark_edit_dialog_destroy;
 
-	g_object_class->set_property = sion_bookmark_edit_dialog_set_property;
+	g_object_class->set_property = gigolo_bookmark_edit_dialog_set_property;
 
 	parent_class = (GtkDialogClass*)g_type_class_peek(GTK_TYPE_DIALOG);
-	g_type_class_add_private((gpointer)klass, sizeof(SionBookmarkEditDialogPrivate));
+	g_type_class_add_private((gpointer)klass, sizeof(GigoloBookmarkEditDialogPrivate));
 
 	g_object_class_install_property(g_object_class,
 									PROP_MODE,
@@ -288,7 +288,7 @@ static void sion_bookmark_edit_dialog_class_init(SionBookmarkEditDialogClass *kl
 									"mode",
 									"Mode",
 									"Operation mode",
-									0, G_MAXINT, SION_BE_MODE_CREATE,
+									0, G_MAXINT, GIGOLO_BE_MODE_CREATE,
 									G_PARAM_WRITABLE));
 	g_object_class_install_property(g_object_class,
 									PROP_BOOKMARK_INIT,
@@ -296,7 +296,7 @@ static void sion_bookmark_edit_dialog_class_init(SionBookmarkEditDialogClass *kl
 									"bookmark-init",
 									"Bookmark-init",
 									"Bookmark instance to provide default values",
-									SION_BOOKMARK_TYPE,
+									GIGOLO_BOOKMARK_TYPE,
 									G_PARAM_WRITABLE));
 	g_object_class_install_property(g_object_class,
 									PROP_BOOKMARK_UPDATE,
@@ -304,7 +304,7 @@ static void sion_bookmark_edit_dialog_class_init(SionBookmarkEditDialogClass *kl
 									"bookmark-update",
 									"Bookmark-update",
 									"Bookmark instance",
-									SION_BOOKMARK_TYPE,
+									GIGOLO_BOOKMARK_TYPE,
 									G_PARAM_WRITABLE));
 }
 
@@ -315,7 +315,7 @@ static guint scheme_to_index(const gchar *scheme)
 
 	for (i = 0; i < methods_len; i++)
 	{
-		if (sion_str_equal(scheme, methods[i].scheme))
+		if (gigolo_str_equal(scheme, methods[i].scheme))
 		{
 			return i;
 		}
@@ -351,60 +351,60 @@ static void combo_set_active(GtkWidget *combo, gint idx)
 }
 
 
-static void init_values(SionBookmarkEditDialog *dialog)
+static void init_values(GigoloBookmarkEditDialog *dialog)
 {
-	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 	gchar *uri;
 	const gchar *tmp;
 	guint port;
 	guint idx;
 
-	tmp = sion_bookmark_get_name(priv->bookmark_init);
+	tmp = gigolo_bookmark_get_name(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->name_entry), tmp);
-		tmp = sion_bookmark_get_name(priv->bookmark_init);
-	uri = sion_bookmark_get_uri(priv->bookmark_init);
+		tmp = gigolo_bookmark_get_name(priv->bookmark_init);
+	uri = gigolo_bookmark_get_uri(priv->bookmark_init);
 	if (uri != NULL)
 	{
 		gtk_entry_set_text(GTK_ENTRY(priv->uri_entry), uri);
-		tmp = sion_bookmark_get_uri(priv->bookmark_init);
+		tmp = gigolo_bookmark_get_uri(priv->bookmark_init);
 		g_free(uri);
 	}
-	tmp = sion_bookmark_get_host(priv->bookmark_init);
+	tmp = gigolo_bookmark_get_host(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->server_entry), tmp);
-		tmp = sion_bookmark_get_name(priv->bookmark_init);
-	tmp = sion_bookmark_get_user(priv->bookmark_init);
+		tmp = gigolo_bookmark_get_name(priv->bookmark_init);
+	tmp = gigolo_bookmark_get_user(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->user_entry), tmp);
-	tmp = sion_bookmark_get_share(priv->bookmark_init);
+	tmp = gigolo_bookmark_get_share(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->share_entry), tmp);
-	tmp = sion_bookmark_get_domain(priv->bookmark_init);
+	tmp = gigolo_bookmark_get_domain(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->domain_entry), tmp);
-	port = sion_bookmark_get_port(priv->bookmark_init);
-	idx = scheme_to_index(sion_bookmark_get_scheme(priv->bookmark_init));
+	port = gigolo_bookmark_get_port(priv->bookmark_init);
+	idx = scheme_to_index(gigolo_bookmark_get_scheme(priv->bookmark_init));
 	if (port == 0)
 		port = methods[idx].port;
 
 	gtk_toggle_button_set_active(
 		GTK_TOGGLE_BUTTON(priv->autoconnect_checkbtn),
-		sion_bookmark_get_autoconnect(priv->bookmark_init));
+		gigolo_bookmark_get_autoconnect(priv->bookmark_init));
 
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), port);
 	combo_set_active(priv->type_combo, (gint) idx);
 }
 
 
-static void setup_for_type(SionBookmarkEditDialog *dialog)
+static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 {
 	struct MethodInfo *meth;
 	guint i;
 	guint idx;
 	GtkWidget *table;
 	GtkTreeIter iter;
-	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 
 	if (! gtk_combo_box_get_active_iter(GTK_COMBO_BOX(priv->type_combo), &iter))
 		return;
@@ -555,13 +555,13 @@ static void setup_for_type(SionBookmarkEditDialog *dialog)
 
 
 static void combo_changed_callback(G_GNUC_UNUSED GtkComboBox *combo_box,
-								   SionBookmarkEditDialog *dialog)
+								   GigoloBookmarkEditDialog *dialog)
 {
 	setup_for_type(dialog);
 }
 
 
-static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
+static void fill_method_combo_box(GigoloBookmarkEditDialog *dialog)
 {
 	guint i, j;
 	gboolean visible;
@@ -571,7 +571,7 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 	GtkTreeModel *filter;
 	GtkTreeIter iter;
 	const gchar *scheme;
-	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 
 	/* 0 - method index, 1 - visible/supported flag, 2 - description */
 	store = gtk_list_store_new(3, G_TYPE_INT, G_TYPE_BOOLEAN, G_TYPE_STRING);
@@ -585,7 +585,7 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 		{
 			/* Hack: list 'davs://' even if GVfs reports to not support it.
 			 * See http://bugzilla.gnome.org/show_bug.cgi?id=538461 */
-			if (i == SCHEME_DAV && sion_str_equal(methods[i].scheme, supported[j]))
+			if (i == SCHEME_DAV && gigolo_str_equal(methods[i].scheme, supported[j]))
 			{
 				visible = TRUE;
 				have_webdav = TRUE;
@@ -596,13 +596,13 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 				visible = TRUE;
 				break;
 			}
-			else if (methods[i].scheme == NULL || sion_str_equal(methods[i].scheme, supported[j]))
+			else if (methods[i].scheme == NULL || gigolo_str_equal(methods[i].scheme, supported[j]))
 			{
 				visible = TRUE;
 				break;
 			}
 		}
-		scheme = sion_describe_scheme((methods[i].scheme != NULL) ? methods[i].scheme : "custom");
+		scheme = gigolo_describe_scheme((methods[i].scheme != NULL) ? methods[i].scheme : "custom");
 
 		gtk_list_store_append(store, &iter);
 		gtk_list_store_set(store, &iter,
@@ -624,9 +624,9 @@ static void fill_method_combo_box(SionBookmarkEditDialog *dialog)
 
 
 /* Update the contents of the bookmark with the values from the dialog. */
-static void update_bookmark(SionBookmarkEditDialog *dialog)
+static void update_bookmark(GigoloBookmarkEditDialog *dialog)
 {
-	SionBookmarkEditDialogPrivate *priv;
+	GigoloBookmarkEditDialogPrivate *priv;
 	const gchar *tmp;
 	gint idx;
 	GtkTreeIter iter;
@@ -634,9 +634,9 @@ static void update_bookmark(SionBookmarkEditDialog *dialog)
 
 	g_return_if_fail(dialog != NULL);
 
-	priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 	g_return_if_fail(priv->bookmark_update != NULL);
-	g_return_if_fail(sion_bookmark_is_valid(priv->bookmark_update));
+	g_return_if_fail(gigolo_bookmark_is_valid(priv->bookmark_update));
 
 	if (! gtk_combo_box_get_active_iter(GTK_COMBO_BOX(priv->type_combo), &iter))
 		return;
@@ -646,40 +646,40 @@ static void update_bookmark(SionBookmarkEditDialog *dialog)
 
 	tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
 	if (*tmp)	/* the name might be empty if the dialog is used as a Connect dialog */
-		sion_bookmark_set_name(priv->bookmark_update, tmp);
+		gigolo_bookmark_set_name(priv->bookmark_update, tmp);
 
 	if (idx == -1)
 		idx = 0;
 	if (methods[idx].scheme == NULL)
 	{
-		sion_bookmark_set_uri(priv->bookmark_update, gtk_entry_get_text(GTK_ENTRY(priv->uri_entry)));
+		gigolo_bookmark_set_uri(priv->bookmark_update, gtk_entry_get_text(GTK_ENTRY(priv->uri_entry)));
 	}
 	else
 	{
-		sion_bookmark_set_scheme(priv->bookmark_update, methods[idx].scheme);
+		gigolo_bookmark_set_scheme(priv->bookmark_update, methods[idx].scheme);
 
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->server_entry));
-		sion_bookmark_set_host(priv->bookmark_update, tmp);
+		gigolo_bookmark_set_host(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->user_entry));
-		sion_bookmark_set_user(priv->bookmark_update, tmp);
+		gigolo_bookmark_set_user(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->domain_entry));
-		sion_bookmark_set_domain(priv->bookmark_update, tmp);
+		gigolo_bookmark_set_domain(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->share_entry));
-		sion_bookmark_set_share(priv->bookmark_update, tmp);
-		sion_bookmark_set_port(priv->bookmark_update,
+		gigolo_bookmark_set_share(priv->bookmark_update, tmp);
+		gigolo_bookmark_set_port(priv->bookmark_update,
 			gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(priv->port_spin)));
 	}
 
 	autoconnect = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(priv->autoconnect_checkbtn));
-	sion_bookmark_set_autoconnect(priv->bookmark_update, autoconnect);
+	gigolo_bookmark_set_autoconnect(priv->bookmark_update, autoconnect);
 }
 
 
-static void sion_bookmark_edit_dialog_set_property(GObject *object, guint prop_id,
+static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop_id,
 												   const GValue *value, GParamSpec *pspec)
 {
- 	SionBookmarkEditDialog *dialog = SION_BOOKMARK_EDIT_DIALOG(object);
- 	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+ 	GigoloBookmarkEditDialog *dialog = GIGOLO_BOOKMARK_EDIT_DIALOG(object);
+ 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 
 	switch (prop_id)
     {
@@ -699,21 +699,21 @@ static void sion_bookmark_edit_dialog_set_property(GObject *object, guint prop_i
 
 		switch (g_value_get_int(value))
 		{
-			case SION_BE_MODE_CREATE:
+			case GIGOLO_BE_MODE_CREATE:
 			{
 				title = _("Create Bookmark");
 				button_stock_id = stock_id = GTK_STOCK_ADD;
 				combo_set_active(priv->type_combo, 0);
 				break;
 			}
-			case SION_BE_MODE_EDIT:
+			case GIGOLO_BE_MODE_EDIT:
 			{
 				title = _("Edit Bookmark");
 				stock_id = GTK_STOCK_EDIT;
 				button_stock_id = GTK_STOCK_OK;
 				break;
 			}
-			case SION_BE_MODE_CONNECT:
+			case GIGOLO_BE_MODE_CONNECT:
 			default:
 			{
 				title = _("Connect to Server");
@@ -740,7 +740,7 @@ static void sion_bookmark_edit_dialog_set_property(GObject *object, guint prop_i
 }
 
 
-static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
+static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 {
 	GtkWidget *label;
 	GtkWidget *label_tmp;
@@ -750,10 +750,10 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 	GtkWidget *hbox;
 	GtkWidget *vbox;
 	GtkCellRenderer *renderer;
-	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
-	gtk_box_set_spacing(GTK_BOX(sion_dialog_get_content_area(GTK_DIALOG(dialog))), 2);
+	gtk_box_set_spacing(GTK_BOX(gigolo_dialog_get_content_area(GTK_DIALOG(dialog))), 2);
 
 	gtk_dialog_add_buttons(GTK_DIALOG(dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, NULL);
 	gtk_window_set_destroy_with_parent(GTK_WINDOW(dialog), TRUE);
@@ -762,7 +762,7 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 
 	vbox = gtk_vbox_new(FALSE, 6);
 	gtk_container_set_border_width(GTK_CONTAINER (vbox), 5);
-	gtk_box_pack_start(GTK_BOX(sion_dialog_get_content_area(GTK_DIALOG(dialog))),
+	gtk_box_pack_start(GTK_BOX(gigolo_dialog_get_content_area(GTK_DIALOG(dialog))),
 		vbox, FALSE, TRUE, 0);
 
 	hbox = gtk_hbox_new(FALSE, 6);
@@ -850,27 +850,29 @@ static void sion_bookmark_edit_dialog_init(SionBookmarkEditDialog *dialog)
 }
 
 
-GtkWidget *sion_bookmark_edit_dialog_new(GtkWindow *parent, SionSettings *settings, SionBookmarkEditDialogMode mode)
+GtkWidget *gigolo_bookmark_edit_dialog_new(GtkWindow *parent,
+		GigoloSettings *settings, GigoloBookmarkEditDialogMode mode)
 {
-	SionBookmarkEditDialog *dialog = g_object_new(SION_BOOKMARK_EDIT_DIALOG_TYPE,
+	GigoloBookmarkEditDialog *dialog = g_object_new(GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
 		"mode", mode,
 		NULL);
-	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 	priv->settings = settings;
 
 	return GTK_WIDGET(dialog);
 }
 
 
-GtkWidget *sion_bookmark_edit_dialog_new_with_bookmark(GtkWindow *parent, SionSettings *settings, SionBookmarkEditDialogMode mode, SionBookmark *bookmark)
+GtkWidget *gigolo_bookmark_edit_dialog_new_with_bookmark(GtkWindow *parent,
+		GigoloSettings *settings, GigoloBookmarkEditDialogMode mode, GigoloBookmark *bookmark)
 {
-	SionBookmarkEditDialog *dialog = g_object_new(SION_BOOKMARK_EDIT_DIALOG_TYPE,
+	GigoloBookmarkEditDialog *dialog = g_object_new(GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
 		"bookmark-init", bookmark,
 		"mode", mode,
 		NULL);
-	SionBookmarkEditDialogPrivate *priv = SION_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 	priv->settings = settings;
 
 	return GTK_WIDGET(dialog);

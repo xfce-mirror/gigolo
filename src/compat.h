@@ -21,15 +21,15 @@
 #define __COMPAT_H__
 
 
-GdkWindow *sion_widget_get_window(GtkWidget *widget);
+GdkWindow *gigolo_widget_get_window(GtkWidget *widget);
 
-GtkWidget *sion_dialog_get_content_area(GtkDialog *dialog);
+GtkWidget *gigolo_dialog_get_content_area(GtkDialog *dialog);
 
-void sion_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *tooltip_text);
+void gigolo_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *tooltip_text);
 
-guint32 sion_widget_get_flags(GtkWidget *widget);
+guint32 gigolo_widget_get_flags(GtkWidget *widget);
 
-void sion_toolbar_set_orientation(GtkToolbar *toolbar, GtkOrientation orientation);
+void gigolo_toolbar_set_orientation(GtkToolbar *toolbar, GtkOrientation orientation);
 
 #endif /* __COMPAT_H__ */
 

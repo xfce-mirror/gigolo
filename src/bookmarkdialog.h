@@ -23,31 +23,31 @@
 
 G_BEGIN_DECLS
 
-#define SION_BOOKMARK_DIALOG_TYPE				(sion_bookmark_dialog_get_type())
-#define SION_BOOKMARK_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			SION_BOOKMARK_DIALOG_TYPE, SionBookmarkDialog))
-#define SION_BOOKMARK_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			SION_BOOKMARK_DIALOG_TYPE, SionBookmarkDialogClass))
-#define IS_SION_BOOKMARK_DIALOG(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			SION_BOOKMARK_DIALOG_TYPE))
-#define IS_SION_BOOKMARK_DIALOG_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			SION_BOOKMARK_DIALOG_TYPE))
+#define GIGOLO_BOOKMARK_DIALOG_TYPE				(gigolo_bookmark_dialog_get_type())
+#define GIGOLO_BOOKMARK_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+			GIGOLO_BOOKMARK_DIALOG_TYPE, GigoloBookmarkDialog))
+#define GIGOLO_BOOKMARK_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
+			GIGOLO_BOOKMARK_DIALOG_TYPE, GigoloBookmarkDialogClass))
+#define IS_GIGOLO_BOOKMARK_DIALOG(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
+			GIGOLO_BOOKMARK_DIALOG_TYPE))
+#define IS_GIGOLO_BOOKMARK_DIALOG_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
+			GIGOLO_BOOKMARK_DIALOG_TYPE))
 
-typedef struct _SionBookmarkDialog				SionBookmarkDialog;
-typedef struct _SionBookmarkDialogClass			SionBookmarkDialogClass;
+typedef struct _GigoloBookmarkDialog			GigoloBookmarkDialog;
+typedef struct _GigoloBookmarkDialogClass		GigoloBookmarkDialogClass;
 
-struct _SionBookmarkDialog
+struct _GigoloBookmarkDialog
 {
 	GtkDialog parent;
 };
 
-struct _SionBookmarkDialogClass
+struct _GigoloBookmarkDialogClass
 {
 	GtkDialogClass parent_class;
 };
 
-GType		sion_bookmark_dialog_get_type		(void);
-GtkWidget*	sion_bookmark_dialog_new			(GtkWindow *parent, SionSettings *settings);
+GType		gigolo_bookmark_dialog_get_type		(void);
+GtkWidget*	gigolo_bookmark_dialog_new			(GtkWindow *parent, GigoloSettings *settings);
 
 G_END_DECLS
 

@@ -1,10 +1,10 @@
-Sion
-^^^^
+Gigolo
+^^^^^^
 
 
 About
 =====
-Sion is a frontend to easily manage connections to remote filesystems using
+Gigolo is a frontend to easily manage connections to remote filesystems using
 GIO/GVfs. It allows you to quickly connect/mount a remote filesystem and manage
 bookmarks of such.
 
@@ -18,7 +18,7 @@ like the Trash (trash://), Burn (burn://) or even accessing your digital photo c
 
 Requirements
 ============
-For compiling Sion, you will need the GTK (>= 2.12.0) libraries
+For compiling Gigolo, you will need the GTK (>= 2.12.0) libraries
 and header files. You will also need its dependency libraries and header
 files, such as Pango, Cairo, Glib and ATK. All these files are available at
 http://www.gtk.org.
@@ -59,27 +59,27 @@ This is mainly intended for distro packagers and people with special needs.
 
 Usage
 =====
-You can start Sion in the following ways:
+You can start Gigolo in the following ways:
 
 * From the Desktop Environment menu:
 
   Choose in your application menu of your used Desktop Environment:
-  System --> Sion.
+  System --> Gigolo.
 
 * From the command line:
 
-  To start Sion from a command line, type the following and press Return::
+  To start Gigolo from a command line, type the following and press Return::
 
-      $ sion
+      $ gigolo
 
 * To get a list of available command line options, run::
 
-      $ sion --help
+      $ gigolo --help
 
 
 License
 =======
-Sion is distributed under the terms of the GNU General Public License
+Gigolo is distributed under the terms of the GNU General Public License
 as published by the Free Software Foundation; version 2 of the license.
 A copy of this license can be found in the file COPYING included with
 the source code of this program.

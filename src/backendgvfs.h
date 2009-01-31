@@ -23,45 +23,45 @@
 
 G_BEGIN_DECLS
 
-#define SION_BACKEND_GVFS_TYPE				(sion_backend_gvfs_get_type())
-#define SION_BACKEND_GVFS(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			SION_BACKEND_GVFS_TYPE, SionBackendGVFS))
-#define SION_BACKEND_GVFS_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			SION_BACKEND_GVFS_TYPE, SionBackendGVFSClass))
-#define IS_SION_BACKEND_GVFS(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			SION_BACKEND_GVFS_TYPE))
-#define IS_SION_BACKEND_GVFS_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			SION_BACKEND_GVFS_TYPE))
+#define GIGOLO_BACKEND_GVFS_TYPE				(gigolo_backend_gvfs_get_type())
+#define GIGOLO_BACKEND_GVFS(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+			GIGOLO_BACKEND_GVFS_TYPE, GigoloBackendGVFS))
+#define GIGOLO_BACKEND_GVFS_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
+			GIGOLO_BACKEND_GVFS_TYPE, GigoloBackendGVFSClass))
+#define IS_GIGOLO_BACKEND_GVFS(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
+			GIGOLO_BACKEND_GVFS_TYPE))
+#define IS_GIGOLO_BACKEND_GVFS_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass),\
+			GIGOLO_BACKEND_GVFS_TYPE))
 
 
-typedef struct _SionBackendGVFS			SionBackendGVFS;
-typedef struct _SionBackendGVFSClass	SionBackendGVFSClass;
+typedef struct _GigoloBackendGVFS				GigoloBackendGVFS;
+typedef struct _GigoloBackendGVFSClass			GigoloBackendGVFSClass;
 
-struct _SionBackendGVFS
+struct _GigoloBackendGVFS
 {
 	GObject parent;
 };
 
-struct _SionBackendGVFSClass
+struct _GigoloBackendGVFSClass
 {
 	GObjectClass parent_class;
 };
 
-GType				sion_backend_gvfs_get_type						(void);
-SionBackendGVFS*	sion_backend_gvfs_new							(GtkListStore *store);
+GType				gigolo_backend_gvfs_get_type					(void);
+GigoloBackendGVFS*	gigolo_backend_gvfs_new							(GtkListStore *store);
 
-gboolean			sion_backend_gvfs_is_mount						(gpointer mnt);
-void				sion_backend_gvfs_get_name_and_uri_from_mount	(GMount *mount, gchar **name, gchar **uri);
+gboolean			gigolo_backend_gvfs_is_mount					(gpointer mnt);
+void				gigolo_backend_gvfs_get_name_and_uri_from_mount	(GMount *mount, gchar **name, gchar **uri);
 
-gboolean			sion_backend_gvfs_mount_volume					(SionBackendGVFS *backend, GVolume *vol);
-void				sion_backend_gvfs_unmount_mount					(SionBackendGVFS *backend, GMount *mount);
+gboolean			gigolo_backend_gvfs_mount_volume				(GigoloBackendGVFS *backend, GVolume *vol);
+void				gigolo_backend_gvfs_unmount_mount				(GigoloBackendGVFS *backend, GMount *mount);
 
-void				sion_backend_gvfs_mount_uri						(SionBackendGVFS *backend,
+void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 																	 const gchar *uri,
 																	 const gchar *domain,
 																	 GtkWidget *dialog);
 
-gchar*				sion_backend_gvfs_get_volume_identifier			(GVolume *volume);
+gchar*				gigolo_backend_gvfs_get_volume_identifier		(GVolume *volume);
 
 G_END_DECLS
 

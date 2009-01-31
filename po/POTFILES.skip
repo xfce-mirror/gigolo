@@ -1,4 +1,4 @@
 # List of source files containing translatable strings but should be ignored.
 
-# sion.desktop.in will be translated
-sion.desktop.in
+# gigolo.desktop.in will be translated
+gigolo.desktop.in

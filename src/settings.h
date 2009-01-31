@@ -23,51 +23,51 @@
 
 G_BEGIN_DECLS
 
-#define SION_SETTINGS_TYPE				(sion_settings_get_type())
-#define SION_SETTINGS(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-		SION_SETTINGS_TYPE, SionSettings))
-#define SION_SETTINGS_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-		SION_SETTINGS_TYPE, SionSettingsClass))
-#define IS_SION_SETTINGS(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj), SION_SETTINGS_TYPE))
-#define IS_SION_SETTINGS_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass), SION_SETTINGS_TYPE))
+#define GIGOLO_SETTINGS_TYPE				(gigolo_settings_get_type())
+#define GIGOLO_SETTINGS(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+		GIGOLO_SETTINGS_TYPE, GigoloSettings))
+#define GIGOLO_SETTINGS_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
+		GIGOLO_SETTINGS_TYPE, GigoloSettingsClass))
+#define IS_GIGOLO_SETTINGS(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj), GIGOLO_SETTINGS_TYPE))
+#define IS_GIGOLO_SETTINGS_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass), GIGOLO_SETTINGS_TYPE))
 
-typedef struct _SionSettings			SionSettings;
-typedef struct _SionSettingsClass		SionSettingsClass;
-typedef 	   GPtrArray				SionBookmarkList;
+typedef struct _GigoloSettings			GigoloSettings;
+typedef struct _GigoloSettingsClass		GigoloSettingsClass;
+typedef 	   GPtrArray				GigoloBookmarkList;
 
 typedef enum
 {
-	SION_SETTINGS_PREFERENCES	= (1 << 0),
-	SION_SETTINGS_BOOKMARKS		= (1 << 1)
-} SionSettingsFlags;
+	GIGOLO_SETTINGS_PREFERENCES		= (1 << 0),
+	GIGOLO_SETTINGS_BOOKMARKS		= (1 << 1)
+} GigoloSettingsFlags;
 
-struct _SionSettings
+struct _GigoloSettings
 {
 	GObject parent;
 };
 
-struct _SionSettingsClass
+struct _GigoloSettingsClass
 {
 	GObjectClass parent_class;
 };
 
-GType				sion_settings_get_type			(void);
-SionSettings*		sion_settings_new				(void);
+GType				gigolo_settings_get_type			(void);
+GigoloSettings*		gigolo_settings_new					(void);
 
-void				sion_settings_write				(SionSettings *settings, SionSettingsFlags flags);
+void				gigolo_settings_write				(GigoloSettings *settings, GigoloSettingsFlags flags);
 
-const gchar*		sion_settings_get_vm_impl		(SionSettings *settings);
-void				sion_settings_set_vm_impl		(SionSettings *settings, const gchar *impl);
+const gchar*		gigolo_settings_get_vm_impl			(GigoloSettings *settings);
+void				gigolo_settings_set_vm_impl			(GigoloSettings *settings, const gchar *impl);
 
-const gint*			sion_settings_get_geometry		(SionSettings *settings);
-void				sion_settings_set_geometry		(SionSettings *settings, const gint *geometry, gsize len);
+const gint*			gigolo_settings_get_geometry		(GigoloSettings *settings);
+void				gigolo_settings_set_geometry		(GigoloSettings *settings, const gint *geometry, gsize len);
 
-SionBookmarkList*	sion_settings_get_bookmarks		(SionSettings *settings);
-gboolean			sion_settings_has_file_manager	(SionSettings *settings);
+GigoloBookmarkList*	gigolo_settings_get_bookmarks		(GigoloSettings *settings);
+gboolean			gigolo_settings_has_file_manager	(GigoloSettings *settings);
 
-gboolean			sion_settings_get_boolean		(SionSettings *settings, const gchar *property);
-gint				sion_settings_get_integer		(SionSettings *settings, const gchar *property);
-gchar*				sion_settings_get_string		(SionSettings *settings, const gchar *property);
+gboolean			gigolo_settings_get_boolean			(GigoloSettings *settings, const gchar *property);
+gint				gigolo_settings_get_integer			(GigoloSettings *settings, const gchar *property);
+gchar*				gigolo_settings_get_string			(GigoloSettings *settings, const gchar *property);
 
 
 G_END_DECLS

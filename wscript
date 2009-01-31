@@ -26,8 +26,8 @@ import Build, Configure, Options, Runner, Task, Utils
 import sys, os, subprocess, shutil
 
 
-APPNAME = 'sion'
-VERSION = '0.1.0'
+APPNAME = 'gigolo'
+VERSION = '0.2.0'
 
 srcdir = '.'
 blddir = '_build_'
@@ -62,7 +62,7 @@ def configure(conf):
 		conf.env.append_value('CCFLAGS', '-g -O0 -DDEBUG -DGSEAL_ENABLE -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -D_FORTIFY_SOURCE=2 -ansi -fno-common -Waggregate-return -Wcast-align -Wdeclaration-after-statement -Wextra -Wfloat-equal -Wformat=2 -Wformat-nonliteral -Wformat-security -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-field-initializers -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-compare -Wundef -Wwrite-strings')
 
 	Utils.pprint('BLUE', 'Summary:')
-	print_message(conf, 'Install sion ' + VERSION + ' in', conf.env['PREFIX'])
+	print_message(conf, 'Install Gigolo ' + VERSION + ' in', conf.env['PREFIX'])
 	print_message(conf, 'Using GTK version', gtk_version or 'Unknown')
 	print_message(conf, 'Using GIO version', gio_version or 'Unknown')
 	print_message(conf, 'Compiling with debugging support', Options.options.debug and 'yes' or 'no')
@@ -82,8 +82,8 @@ def set_options(opt):
 
 def build(bld):
 	obj = bld.new_task_gen('cc', 'program')
-	obj.name		= 'sion'
-	obj.target		= 'sion'
+	obj.name		= 'gigolo'
+	obj.target		= 'gigolo'
 	obj.source		= sources
 	obj.includes	= '.'
 	obj.uselib		= 'GTK GIO'
@@ -91,21 +91,20 @@ def build(bld):
 	# Translations
 	obj			= bld.new_task_gen('intltool_po')
 	obj.podir	= 'po'
-	obj.appname	= 'sion'
+	obj.appname	= 'gigolo'
 
-	# sion.desktop
+	# gigolo.desktop
 	obj					= bld.new_task_gen('intltool_in')
-	obj.source			= 'sion.desktop.in'
+	obj.source			= 'gigolo.desktop.in'
 	obj.install_path	= '${DATADIR}/applications'
 	obj.flags			= '-d'
 
-	# sion.1
+	# gigolo.1
 	obj					= bld.new_task_gen('subst')
-	obj.source			= 'sion.1.in'
-	obj.target			= 'sion.1'
+	obj.source			= 'gigolo.1.in'
+	obj.target			= 'gigolo.1'
 	obj.dict			= { 'VERSION' : VERSION }
-	obj.install_path	= 0
-	bld.install_files('${MANDIR}/man1', 'sion.1')
+	obj.install_path	= '${MANDIR}/man1'
 
 	# Docs
 	bld.install_files('${DOCDIR}', 'AUTHORS ChangeLog COPYING README NEWS TODO')
@@ -114,7 +113,7 @@ def build(bld):
 def dist():
 	import md5
 	from Scripting import dist, excludes
-	excludes.append('sion-%s.tar.bz2.sig' % VERSION)
+	excludes.append('gigolo-%s.tar.bz2.sig' % VERSION)
 	filename = dist(APPNAME, VERSION)
 	f = file(filename,'rb')
 	m = md5.md5()
@@ -134,11 +133,11 @@ def shutdown():
 		os.chdir('%s/po' % srcdir)
 		try:
 			try:
-				size_old = os.stat('sion.pot').st_size
+				size_old = os.stat('gigolo.pot').st_size
 			except:
 				size_old = 0
 			subprocess.call(['intltool-update', '--pot'])
-			size_new = os.stat('sion.pot').st_size
+			size_new = os.stat('gigolo.pot').st_size
 			if size_new != size_old:
 				Utils.pprint('CYAN', 'Updated POT file.')
 				launch('intltool-update -r', 'Updating translations', 'CYAN')

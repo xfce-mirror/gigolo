@@ -23,22 +23,22 @@
 
 G_BEGIN_DECLS
 
-#define SION_MOUNT_DIALOG_TYPE				(sion_mount_dialog_get_type())
-#define SION_MOUNT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			SION_MOUNT_DIALOG_TYPE, SionMountDialog))
-#define SION_MOUNT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			SION_MOUNT_DIALOG_TYPE, SionMountDialogClass))
-#define IS_SION_MOUNT_DIALOG(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			SION_MOUNT_DIALOG_TYPE))
-#define IS_SION_MOUNT_DIALOG_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			SION_MOUNT_DIALOG_TYPE))
+#define GIGOLO_MOUNT_DIALOG_TYPE				(gigolo_mount_dialog_get_type())
+#define GIGOLO_MOUNT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+			GIGOLO_MOUNT_DIALOG_TYPE, GigoloMountDialog))
+#define GIGOLO_MOUNT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
+			GIGOLO_MOUNT_DIALOG_TYPE, GigoloMountDialogClass))
+#define IS_GIGOLO_MOUNT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
+			GIGOLO_MOUNT_DIALOG_TYPE))
+#define IS_GIGOLO_MOUNT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass),\
+			GIGOLO_MOUNT_DIALOG_TYPE))
 
-typedef struct _SionMountDialog				SionMountDialog;
-typedef struct _SionMountDialogClass		SionMountDialogClass;
+typedef struct _GigoloMountDialog				GigoloMountDialog;
+typedef struct _GigoloMountDialogClass			GigoloMountDialogClass;
 
 
-GType		sion_mount_dialog_get_type		(void);
-GtkWidget*	sion_mount_dialog_new			(GtkWindow *parent, const gchar *label);
+GType		gigolo_mount_dialog_get_type		(void);
+GtkWidget*	gigolo_mount_dialog_new				(GtkWindow *parent, const gchar *label);
 
 G_END_DECLS
 

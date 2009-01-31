@@ -23,64 +23,64 @@
 
 G_BEGIN_DECLS
 
-#define SION_BOOKMARK_TYPE					(sion_bookmark_get_type())
-#define SION_BOOKMARK(obj)					(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			SION_BOOKMARK_TYPE, SionBookmark))
-#define SION_BOOKMARK_CLASS(klass)			(G_TYPE_CHECK_CLASS_CAST((klass),\
-			SION_BOOKMARK_TYPE, SionBookmarkClass))
-#define IS_SION_BOOKMARK(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj), SION_BOOKMARK_TYPE))
-#define IS_SION_BOOKMARK_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass), SION_BOOKMARK_TYPE))
+#define GIGOLO_BOOKMARK_TYPE					(gigolo_bookmark_get_type())
+#define GIGOLO_BOOKMARK(obj)					(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+			GIGOLO_BOOKMARK_TYPE, GigoloBookmark))
+#define GIGOLO_BOOKMARK_CLASS(klass)			(G_TYPE_CHECK_CLASS_CAST((klass),\
+			GIGOLO_BOOKMARK_TYPE, GigoloBookmarkClass))
+#define IS_GIGOLO_BOOKMARK(obj)					(G_TYPE_CHECK_INSTANCE_TYPE((obj), GIGOLO_BOOKMARK_TYPE))
+#define IS_GIGOLO_BOOKMARK_CLASS(klass)			(G_TYPE_CHECK_CLASS_TYPE((klass), GIGOLO_BOOKMARK_TYPE))
 
-typedef struct _SionBookmark				SionBookmark;
-typedef struct _SionBookmarkClass			SionBookmarkClass;
+typedef struct _GigoloBookmark					GigoloBookmark;
+typedef struct _GigoloBookmarkClass				GigoloBookmarkClass;
 
-struct _SionBookmark
+struct _GigoloBookmark
 {
 	GObject parent;
 };
 
-struct _SionBookmarkClass
+struct _GigoloBookmarkClass
 {
 	GObjectClass parent_class;
 };
 
-GType				sion_bookmark_get_type		(void);
-SionBookmark*		sion_bookmark_new			(void);
-SionBookmark*		sion_bookmark_new_from_uri	(const gchar *name, const gchar *uri);
+GType				gigolo_bookmark_get_type		(void);
+GigoloBookmark*		gigolo_bookmark_new				(void);
+GigoloBookmark*		gigolo_bookmark_new_from_uri	(const gchar *name, const gchar *uri);
 
-gboolean			sion_bookmark_is_valid		(SionBookmark *bookmark);
+gboolean			gigolo_bookmark_is_valid		(GigoloBookmark *bookmark);
 
-void				sion_bookmark_clone			(SionBookmark *dst, const SionBookmark *src);
+void				gigolo_bookmark_clone			(GigoloBookmark *dst, const GigoloBookmark *src);
 
-gchar*				sion_bookmark_get_uri		(SionBookmark *bookmark);
-void				sion_bookmark_set_uri		(SionBookmark *bookmark, const gchar *uri);
+gchar*				gigolo_bookmark_get_uri			(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_uri			(GigoloBookmark *bookmark, const gchar *uri);
 
-const gchar*		sion_bookmark_get_name		(SionBookmark *bookmark);
-void				sion_bookmark_set_name		(SionBookmark *bookmark, const gchar *name);
+const gchar*		gigolo_bookmark_get_name		(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_name		(GigoloBookmark *bookmark, const gchar *name);
 
-const gchar*		sion_bookmark_get_scheme	(SionBookmark *bookmark);
-void				sion_bookmark_set_scheme	(SionBookmark *bookmark, const gchar *scheme);
+const gchar*		gigolo_bookmark_get_scheme		(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_scheme		(GigoloBookmark *bookmark, const gchar *scheme);
 
-const gchar*		sion_bookmark_get_host		(SionBookmark *bookmark);
-void				sion_bookmark_set_host		(SionBookmark *bookmark, const gchar *host);
+const gchar*		gigolo_bookmark_get_host		(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_host		(GigoloBookmark *bookmark, const gchar *host);
 
-guint				sion_bookmark_get_port		(SionBookmark *bookmark);
-void				sion_bookmark_set_port		(SionBookmark *bookmark, guint port);
+guint				gigolo_bookmark_get_port		(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_port		(GigoloBookmark *bookmark, guint port);
 
-const gchar*		sion_bookmark_get_user		(SionBookmark *bookmark);
-void				sion_bookmark_set_user		(SionBookmark *bookmark, const gchar *user);
+const gchar*		gigolo_bookmark_get_user		(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_user		(GigoloBookmark *bookmark, const gchar *user);
 
-const gchar*		sion_bookmark_get_share		(SionBookmark *bookmark);
-void				sion_bookmark_set_share		(SionBookmark *bookmark, const gchar *share);
+const gchar*		gigolo_bookmark_get_share		(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_share		(GigoloBookmark *bookmark, const gchar *share);
 
-const gchar*		sion_bookmark_get_domain	(SionBookmark *bookmark);
-void				sion_bookmark_set_domain	(SionBookmark *bookmark, const gchar *domain);
+const gchar*		gigolo_bookmark_get_domain		(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_domain		(GigoloBookmark *bookmark, const gchar *domain);
 
-gboolean			sion_bookmark_get_autoconnect	(SionBookmark *bookmark);
-void				sion_bookmark_set_autoconnect	(SionBookmark *bookmark, gboolean autoconnect);
+gboolean			gigolo_bookmark_get_autoconnect	(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_autoconnect	(GigoloBookmark *bookmark, gboolean autoconnect);
 
-gboolean			sion_bookmark_get_should_not_autoconnect	(SionBookmark *bookmark);
-void				sion_bookmark_set_should_not_autoconnect	(SionBookmark *bookmark, gboolean should_not_autoconnect);
+gboolean			gigolo_bookmark_get_should_not_autoconnect	(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_should_not_autoconnect	(GigoloBookmark *bookmark, gboolean should_not_autoconnect);
 
 
 G_END_DECLS

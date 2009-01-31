@@ -30,13 +30,13 @@
 #include "preferencesdialog.h"
 
 
-typedef struct _SionPreferencesDialogPrivate			SionPreferencesDialogPrivate;
+typedef struct _GigoloPreferencesDialogPrivate			GigoloPreferencesDialogPrivate;
 
-#define SION_PREFERENCES_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			SION_PREFERENCES_DIALOG_TYPE, SionPreferencesDialogPrivate))
+#define GIGOLO_PREFERENCES_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
+			GIGOLO_PREFERENCES_DIALOG_TYPE, GigoloPreferencesDialogPrivate))
 
-static void sion_preferences_dialog_class_init			(SionPreferencesDialogClass *klass);
-static void sion_preferences_dialog_init      			(SionPreferencesDialog *dialog);
+static void gigolo_preferences_dialog_class_init		(GigoloPreferencesDialogClass *klass);
+static void gigolo_preferences_dialog_init      		(GigoloPreferencesDialog *dialog);
 
 static GtkDialogClass *parent_class = NULL;
 
@@ -46,26 +46,26 @@ enum
     PROP_SETTINGS
 };
 
-GType sion_preferences_dialog_get_type(void)
+GType gigolo_preferences_dialog_get_type(void)
 {
 	static GType self_type = 0;
 	if (! self_type)
 	{
 		static const GTypeInfo self_info =
 		{
-			sizeof(SionPreferencesDialogClass),
+			sizeof(GigoloPreferencesDialogClass),
 			NULL, /* base_init */
 			NULL, /* base_finalize */
-			(GClassInitFunc)sion_preferences_dialog_class_init,
+			(GClassInitFunc)gigolo_preferences_dialog_class_init,
 			NULL, /* class_finalize */
 			NULL, /* class_data */
-			sizeof(SionPreferencesDialog),
+			sizeof(GigoloPreferencesDialog),
 			0,
-			(GInstanceInitFunc)sion_preferences_dialog_init,
+			(GInstanceInitFunc)gigolo_preferences_dialog_init,
 			NULL /* value_table */
 		};
 
-		self_type = g_type_register_static(GTK_TYPE_DIALOG, "SionPreferencesDialog", &self_info, 0);
+		self_type = g_type_register_static(GTK_TYPE_DIALOG, "GigoloPreferencesDialog", &self_info, 0);
 	}
 
 	return self_type;
@@ -115,13 +115,13 @@ static GtkWidget *xfce_header_new(const gchar *icon, const gchar *title)
 }
 
 
-static void vm_imple_toggle_cb(GtkToggleButton *button, SionSettings *settings)
+static void vm_imple_toggle_cb(GtkToggleButton *button, GigoloSettings *settings)
 {
-	sion_settings_set_vm_impl(settings, g_object_get_data(G_OBJECT(button), "impl"));
+	gigolo_settings_set_vm_impl(settings, g_object_get_data(G_OBJECT(button), "impl"));
 }
 
 
-static void check_button_toggle_cb(GtkToggleButton *button, SionSettings *settings)
+static void check_button_toggle_cb(GtkToggleButton *button, GigoloSettings *settings)
 {
     gboolean toggled = gtk_toggle_button_get_active(button);
     const gchar* property = g_object_get_data(G_OBJECT(button), "property");
@@ -139,7 +139,7 @@ static void check_toolbar_show_toggle_cb(GtkToggleButton *button, G_GNUC_UNUSED 
 }
 
 
-static GtkWidget *add_check_button(SionSettings *settings, const gchar *property, const gchar *text)
+static GtkWidget *add_check_button(GigoloSettings *settings, const gchar *property, const gchar *text)
 {
 	gboolean toggled;
 	GtkWidget *widget;
@@ -155,7 +155,7 @@ static GtkWidget *add_check_button(SionSettings *settings, const gchar *property
 }
 
 
-static void combo_box_changed_cb(GtkComboBox* button, SionSettings *settings)
+static void combo_box_changed_cb(GtkComboBox* button, GigoloSettings *settings)
 {
     gint value = gtk_combo_box_get_active(button);
     const gchar *property = g_object_get_data(G_OBJECT(button), "property");
@@ -164,7 +164,7 @@ static void combo_box_changed_cb(GtkComboBox* button, SionSettings *settings)
 }
 
 
-static GtkWidget *add_toolbar_style_combo(SionSettings *settings, const gchar *property)
+static GtkWidget *add_toolbar_style_combo(GigoloSettings *settings, const gchar *property)
 {
 	gint value;
 	GtkWidget *widget;
@@ -186,7 +186,7 @@ static GtkWidget *add_toolbar_style_combo(SionSettings *settings, const gchar *p
 }
 
 
-static GtkWidget *add_toolbar_orientation_combo(SionSettings *settings, const gchar *property)
+static GtkWidget *add_toolbar_orientation_combo(GigoloSettings *settings, const gchar *property)
 {
 	gint value;
 	GtkWidget *widget;
@@ -206,7 +206,7 @@ static GtkWidget *add_toolbar_orientation_combo(SionSettings *settings, const gc
 }
 
 
-static GtkWidget *add_view_mode_combo(SionSettings *settings, const gchar *property)
+static GtkWidget *add_view_mode_combo(GigoloSettings *settings, const gchar *property)
 {
 	gint value;
 	GtkWidget *widget;
@@ -261,7 +261,7 @@ static void entry_check_input(GtkEntry *entry)
 }
 
 
-static void entry_activate_cb(GtkEntry *entry, SionSettings *settings)
+static void entry_activate_cb(GtkEntry *entry, GigoloSettings *settings)
 {
 	const gchar *text = gtk_entry_get_text(entry);
 	const gchar *property = g_object_get_data(G_OBJECT(entry), "property");
@@ -272,7 +272,7 @@ static void entry_activate_cb(GtkEntry *entry, SionSettings *settings)
 
 
 static gboolean entry_focus_out_event_cb(GtkEntry *entry, G_GNUC_UNUSED GdkEventFocus *event,
-										 SionSettings *settings)
+										 GigoloSettings *settings)
 {
 	const gchar *text = gtk_entry_get_text(entry);
 	const gchar *property = g_object_get_data(G_OBJECT(entry), "property");
@@ -284,7 +284,7 @@ static gboolean entry_focus_out_event_cb(GtkEntry *entry, G_GNUC_UNUSED GdkEvent
 }
 
 
-static GtkWidget *add_program_entry(SionSettings *settings, const gchar *property)
+static GtkWidget *add_program_entry(GigoloSettings *settings, const gchar *property)
 {
 	GtkWidget *widget;
 	gchar *string;
@@ -303,7 +303,7 @@ static GtkWidget *add_program_entry(SionSettings *settings, const gchar *propert
 }
 
 
-static void spin_value_changed_cb(GtkSpinButton *spin, SionSettings *settings)
+static void spin_value_changed_cb(GtkSpinButton *spin, GigoloSettings *settings)
 {
 	gint interval = gtk_spin_button_get_value_as_int(spin);
 	const gchar *property = g_object_get_data(G_OBJECT(spin), "property");
@@ -312,7 +312,7 @@ static void spin_value_changed_cb(GtkSpinButton *spin, SionSettings *settings)
 }
 
 
-static GtkWidget *add_spinbutton(SionSettings *settings, const gchar *property)
+static GtkWidget *add_spinbutton(GigoloSettings *settings, const gchar *property)
 {
 	GtkWidget *widget;
 	gint timeout;
@@ -330,7 +330,7 @@ static GtkWidget *add_spinbutton(SionSettings *settings, const gchar *property)
 }
 
 
-static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
+static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settings)
 {
 	GtkWidget *frame_vbox, *notebook_vbox, *vbox, *hbox, *notebook;
 	GtkWidget *radio1, *radio2, *checkbox, *combo, *entry, *combo_toolbar_style;
@@ -339,13 +339,13 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	GSList *rlist;
 	GtkSizeGroup *sg;
 
-    vbox = sion_dialog_get_content_area(GTK_DIALOG(dialog));
+    vbox = gigolo_dialog_get_content_area(GTK_DIALOG(dialog));
 
-	if (sion_is_desktop_xfce())
+	if (gigolo_is_desktop_xfce())
     {
 		GtkWidget *heading;
 		heading = xfce_header_new(
-			sion_get_application_icon_name(),
+			gigolo_get_application_icon_name(),
 			gtk_window_get_title(GTK_WINDOW(dialog)));
 		gtk_box_pack_start(GTK_BOX(vbox), heading, FALSE, FALSE, 0);
 	}
@@ -400,17 +400,17 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 	gtk_box_pack_start(GTK_BOX(frame_vbox), label_volman, FALSE, FALSE, 0);
 
 	radio1 = gtk_radio_button_new_with_mnemonic(NULL, _("Use _HAL based volume manager"));
-	gtk_widget_set_tooltip_markup(radio1, _("<i>Changing this option requires a restart of Sion.</i>"));
+	gtk_widget_set_tooltip_markup(radio1, _("<i>Changing this option requires a restart of Gigolo.</i>"));
 	rlist = gtk_radio_button_get_group(GTK_RADIO_BUTTON(radio1));
-	if (strcmp(sion_settings_get_vm_impl(settings), "hal") == 0)
+	if (strcmp(gigolo_settings_get_vm_impl(settings), "hal") == 0)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio1), TRUE);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), radio1, FALSE, FALSE, 0);
 	g_object_set_data(G_OBJECT(radio1), "impl", (gpointer) "hal");
 
 	radio2 = gtk_radio_button_new_with_mnemonic(rlist, _("Use _Unix based volume manager"));
-	gtk_widget_set_tooltip_markup(radio2, _("<i>Changing this option requires a restart of Sion.</i>"));
+	gtk_widget_set_tooltip_markup(radio2, _("<i>Changing this option requires a restart of Gigolo.</i>"));
 	rlist = gtk_radio_button_get_group(GTK_RADIO_BUTTON(radio2));
-	if (strcmp(sion_settings_get_vm_impl(settings), "unix") == 0)
+	if (strcmp(gigolo_settings_get_vm_impl(settings), "unix") == 0)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio2), TRUE);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), radio2, FALSE, FALSE, 0);
 	g_object_set_data(G_OBJECT(radio2), "impl", (gpointer) "unix");
@@ -492,10 +492,10 @@ static void set_settings(SionPreferencesDialog *dialog, SionSettings *settings)
 }
 
 
-static void sion_preferences_dialog_set_property(GObject *object, guint prop_id,
+static void gigolo_preferences_dialog_set_property(GObject *object, guint prop_id,
 												 const GValue *value, GParamSpec *pspec)
 {
-	SionPreferencesDialog *preferences = SION_PREFERENCES_DIALOG(object);
+	GigoloPreferencesDialog *preferences = GIGOLO_PREFERENCES_DIALOG(object);
 
 	switch (prop_id)
 	{
@@ -511,10 +511,10 @@ static void sion_preferences_dialog_set_property(GObject *object, guint prop_id,
 }
 
 
-static void sion_preferences_dialog_class_init(SionPreferencesDialogClass *klass)
+static void gigolo_preferences_dialog_class_init(GigoloPreferencesDialogClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS(klass);
-	gobject_class->set_property = sion_preferences_dialog_set_property;
+	gobject_class->set_property = gigolo_preferences_dialog_set_property;
 
 	g_object_class_install_property(gobject_class,
 									PROP_SETTINGS,
@@ -522,14 +522,14 @@ static void sion_preferences_dialog_class_init(SionPreferencesDialogClass *klass
 									"settings",
 									"Settings",
 									"Settings instance to provide properties",
-									SION_SETTINGS_TYPE,
+									GIGOLO_SETTINGS_TYPE,
 									G_PARAM_WRITABLE));
 
 	parent_class = (GtkDialogClass*)g_type_class_peek(GTK_TYPE_DIALOG);
 }
 
 
-static void sion_preferences_dialog_init(SionPreferencesDialog *dialog)
+static void gigolo_preferences_dialog_init(GigoloPreferencesDialog *dialog)
 {
     g_object_set(dialog,
 		"icon-name", GTK_STOCK_PREFERENCES,
@@ -540,11 +540,11 @@ static void sion_preferences_dialog_init(SionPreferencesDialog *dialog)
 }
 
 
-GtkWidget *sion_preferences_dialog_new(GtkWindow *parent, SionSettings *settings)
+GtkWidget *gigolo_preferences_dialog_new(GtkWindow *parent, GigoloSettings *settings)
 {
 	GtkWidget *dialog;
 
-	dialog = g_object_new(SION_PREFERENCES_DIALOG_TYPE,
+	dialog = g_object_new(GIGOLO_PREFERENCES_DIALOG_TYPE,
 		"transient-for", parent,
 		"destroy-with-parent", TRUE,
 		"settings", settings,

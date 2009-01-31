@@ -29,12 +29,12 @@
 #include "compat.h"
 #include "passworddialog.h"
 
-typedef struct _SionPasswordDialogPrivate			SionPasswordDialogPrivate;
+typedef struct _GigoloPasswordDialogPrivate			GigoloPasswordDialogPrivate;
 
-#define SION_PASSWORD_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			SION_PASSWORD_DIALOG_TYPE, SionPasswordDialogPrivate))
+#define GIGOLO_PASSWORD_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
+			GIGOLO_PASSWORD_DIALOG_TYPE, GigoloPasswordDialogPrivate))
 
-struct _SionPasswordDialogPrivate
+struct _GigoloPasswordDialogPrivate
 {
 	GtkWidget *box_domain;
 	GtkWidget *box_username;
@@ -45,42 +45,42 @@ struct _SionPasswordDialogPrivate
 	GtkWidget *entry_password;
 };
 
-static void sion_password_dialog_class_init			(SionPasswordDialogClass *klass);
-static void sion_password_dialog_init      			(SionPasswordDialog *dialog);
+static void gigolo_password_dialog_class_init		(GigoloPasswordDialogClass *klass);
+static void gigolo_password_dialog_init      		(GigoloPasswordDialog *dialog);
 
 /* Local data */
 static GtkDialogClass *parent_class = NULL;
 
-GType sion_password_dialog_get_type(void)
+GType gigolo_password_dialog_get_type(void)
 {
 	static GType self_type = 0;
 	if (! self_type)
 	{
 		static const GTypeInfo self_info =
 		{
-			sizeof(SionPasswordDialogClass),
+			sizeof(GigoloPasswordDialogClass),
 			NULL, /* base_init */
 			NULL, /* base_finalize */
-			(GClassInitFunc)sion_password_dialog_class_init,
+			(GClassInitFunc)gigolo_password_dialog_class_init,
 			NULL, /* class_finalize */
 			NULL, /* class_data */
-			sizeof(SionPasswordDialog),
+			sizeof(GigoloPasswordDialog),
 			0,
-			(GInstanceInitFunc)sion_password_dialog_init,
+			(GInstanceInitFunc)gigolo_password_dialog_init,
 			NULL /* value_table */
 		};
 
-		self_type = g_type_register_static(GTK_TYPE_DIALOG, "SionPasswordDialog", &self_info, 0);
+		self_type = g_type_register_static(GTK_TYPE_DIALOG, "GigoloPasswordDialog", &self_info, 0);
 	}
 
 	return self_type;
 }
 
 
-static void sion_password_dialog_class_init(SionPasswordDialogClass *klass)
+static void gigolo_password_dialog_class_init(GigoloPasswordDialogClass *klass)
 {
 	parent_class = (GtkDialogClass*)g_type_class_peek(GTK_TYPE_DIALOG);
-	g_type_class_add_private((gpointer)klass, sizeof(SionPasswordDialogPrivate));
+	g_type_class_add_private((gpointer)klass, sizeof(GigoloPasswordDialogPrivate));
 }
 
 
@@ -90,15 +90,15 @@ static void entry_activate_cb(G_GNUC_UNUSED GtkEntry *entry, gpointer user_data)
 }
 
 
-static void sion_password_dialog_init(SionPasswordDialog *dialog)
+static void gigolo_password_dialog_init(GigoloPasswordDialog *dialog)
 {
 	GtkWidget *vbox;
 	GtkWidget *dialog_vbox;
 	GtkWidget *label;
 	GtkSizeGroup *size_group;
-	SionPasswordDialogPrivate *priv = SION_PASSWORD_DIALOG_GET_PRIVATE(dialog);
+	GigoloPasswordDialogPrivate *priv = GIGOLO_PASSWORD_DIALOG_GET_PRIVATE(dialog);
 
-	dialog_vbox = sion_dialog_get_content_area(GTK_DIALOG(dialog));
+	dialog_vbox = gigolo_dialog_get_content_area(GTK_DIALOG(dialog));
 
 	gtk_window_set_title(GTK_WINDOW(dialog), _("Authentication information needed"));
 	gtk_window_set_icon_name(GTK_WINDOW(dialog), GTK_STOCK_DIALOG_AUTHENTICATION);
@@ -168,10 +168,10 @@ static void sion_password_dialog_init(SionPasswordDialog *dialog)
 }
 
 
-GtkWidget *sion_password_dialog_new(GAskPasswordFlags flags, const gchar *user, const gchar *domain)
+GtkWidget *gigolo_password_dialog_new(GAskPasswordFlags flags, const gchar *user, const gchar *domain)
 {
-	GtkWidget *dialog = g_object_new(SION_PASSWORD_DIALOG_TYPE, NULL);
-	SionPasswordDialogPrivate *priv = SION_PASSWORD_DIALOG_GET_PRIVATE(dialog);
+	GtkWidget *dialog = g_object_new(GIGOLO_PASSWORD_DIALOG_TYPE, NULL);
+	GigoloPasswordDialogPrivate *priv = GIGOLO_PASSWORD_DIALOG_GET_PRIVATE(dialog);
 
 	/** TODO Implement G_ASK_PASSWORD_SAVING_SUPPORTED */
 	if (flags & G_ASK_PASSWORD_NEED_PASSWORD)
@@ -198,29 +198,29 @@ GtkWidget *sion_password_dialog_new(GAskPasswordFlags flags, const gchar *user, 
 }
 
 
-const gchar *sion_password_dialog_get_domain(SionPasswordDialog *dialog)
+const gchar *gigolo_password_dialog_get_domain(GigoloPasswordDialog *dialog)
 {
 	g_return_val_if_fail(dialog != NULL, NULL);
 
 	return gtk_entry_get_text(GTK_ENTRY(
-		SION_PASSWORD_DIALOG_GET_PRIVATE(dialog)->entry_domain));
+		GIGOLO_PASSWORD_DIALOG_GET_PRIVATE(dialog)->entry_domain));
 }
 
 
-const gchar *sion_password_dialog_get_username(SionPasswordDialog *dialog)
+const gchar *gigolo_password_dialog_get_username(GigoloPasswordDialog *dialog)
 {
 	g_return_val_if_fail(dialog != NULL, NULL);
 
 	return gtk_entry_get_text(GTK_ENTRY(
-		SION_PASSWORD_DIALOG_GET_PRIVATE(dialog)->entry_username));
+		GIGOLO_PASSWORD_DIALOG_GET_PRIVATE(dialog)->entry_username));
 }
 
 
-const gchar *sion_password_dialog_get_password(SionPasswordDialog *dialog)
+const gchar *gigolo_password_dialog_get_password(GigoloPasswordDialog *dialog)
 {
 	g_return_val_if_fail(dialog != NULL, NULL);
 
 	return gtk_entry_get_text(GTK_ENTRY(
-		SION_PASSWORD_DIALOG_GET_PRIVATE(dialog)->entry_password));
+		GIGOLO_PASSWORD_DIALOG_GET_PRIVATE(dialog)->entry_password));
 }
 

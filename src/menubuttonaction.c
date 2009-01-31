@@ -45,38 +45,38 @@ enum
 static guint signals[LAST_SIGNAL];
 
 
-static void sion_menu_button_action_class_init			(SionMenubuttonActionClass *klass);
-static void sion_menu_button_action_init      			(SionMenubuttonAction *action);
+static void gigolo_menu_button_action_class_init	(GigoloMenubuttonActionClass *klass);
+static void gigolo_menu_button_action_init      	(GigoloMenubuttonAction *action);
 
 static GtkActionClass *parent_class = NULL;
 
-GType sion_menu_button_action_get_type(void)
+GType gigolo_menu_button_action_get_type(void)
 {
 	static GType self_type = 0;
 	if (! self_type)
 	{
 		static const GTypeInfo self_info =
 		{
-			sizeof(SionMenubuttonActionClass),
+			sizeof(GigoloMenubuttonActionClass),
 			NULL, /* base_init */
 			NULL, /* base_finalize */
-			(GClassInitFunc)sion_menu_button_action_class_init,
+			(GClassInitFunc)gigolo_menu_button_action_class_init,
 			NULL, /* class_finalize */
 			NULL, /* class_data */
-			sizeof(SionMenubuttonAction),
+			sizeof(GigoloMenubuttonAction),
 			0,
-			(GInstanceInitFunc)sion_menu_button_action_init,
+			(GInstanceInitFunc)gigolo_menu_button_action_init,
 			NULL /* value_table */
 		};
 
-		self_type = g_type_register_static(GTK_TYPE_ACTION, "SionMenubuttonAction", &self_info, 0);
+		self_type = g_type_register_static(GTK_TYPE_ACTION, "GigoloMenubuttonAction", &self_info, 0);
 	}
 
 	return self_type;
 }
 
 
-static void delegate_item_activated(GtkMenuItem *item, SionMenubuttonAction *action)
+static void delegate_item_activated(GtkMenuItem *item, GigoloMenubuttonAction *action)
 {
 	g_signal_emit(action, signals[ITEM_CLICKED], 0, item);
 }
@@ -88,7 +88,7 @@ static void delegate_button_clicked(G_GNUC_UNUSED GtkToolButton *button, GtkActi
 }
 
 
-static GtkWidget *sion_menu_button_action_create_menu_item(G_GNUC_UNUSED GtkAction *action)
+static GtkWidget *gigolo_menu_button_action_create_menu_item(G_GNUC_UNUSED GtkAction *action)
 {
 	GtkWidget *menuitem;
 
@@ -98,7 +98,7 @@ static GtkWidget *sion_menu_button_action_create_menu_item(G_GNUC_UNUSED GtkActi
 }
 
 
-static GtkWidget *sion_menu_button_action_create_tool_item(GtkAction *action)
+static GtkWidget *gigolo_menu_button_action_create_tool_item(GtkAction *action)
 {
 	GtkWidget *toolitem;
 
@@ -127,14 +127,14 @@ static GtkWidget *get_menu(GtkWidget *item)
 }
 
 
-static void update_menus(SionMenubuttonAction *action, SionSettings *settings)
+static void update_menus(GigoloMenubuttonAction *action, GigoloSettings *settings)
 {
 	GSList *l;
 	GtkWidget *menu;
 	guint i;
 	GtkWidget *item;
-	SionBookmark *bm;
-	SionBookmarkList *bml = sion_settings_get_bookmarks(settings);
+	GigoloBookmark *bm;
+	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(settings);
 
 	for (l = gtk_action_get_proxies(GTK_ACTION(action)); l; l = l->next)
 	{
@@ -163,7 +163,7 @@ static void update_menus(SionMenubuttonAction *action, SionSettings *settings)
 		for (i = 0; i < bml->len; i++)
 		{
 			bm = g_ptr_array_index(bml, i);
-			item = gtk_menu_item_new_with_label(sion_bookmark_get_name(bm));
+			item = gtk_menu_item_new_with_label(gigolo_bookmark_get_name(bm));
 			g_object_set_data(G_OBJECT(item), "bookmark", bm);
 			gtk_container_add(GTK_CONTAINER(menu), item);
 			gtk_widget_show(item);
@@ -173,7 +173,7 @@ static void update_menus(SionMenubuttonAction *action, SionSettings *settings)
 }
 
 
-static void sion_menu_button_action_connect_proxy(GtkAction *action, GtkWidget *widget)
+static void gigolo_menu_button_action_connect_proxy(GtkAction *action, GtkWidget *widget)
 {
 	GTK_ACTION_CLASS(parent_class)->connect_proxy(action, widget);
 
@@ -186,10 +186,10 @@ static void sion_menu_button_action_connect_proxy(GtkAction *action, GtkWidget *
 }
 
 
-static void sion_menu_button_action_set_property(GObject *object, guint prop_id,
+static void gigolo_menu_button_action_set_property(GObject *object, guint prop_id,
 												 const GValue *value, GParamSpec *pspec)
 {
-	SionMenubuttonAction *action = SION_MENU_BUTTON_ACTION(object);
+	GigoloMenubuttonAction *action = GIGOLO_MENU_BUTTON_ACTION(object);
 
 	switch (prop_id)
 	{
@@ -203,16 +203,16 @@ static void sion_menu_button_action_set_property(GObject *object, guint prop_id,
 }
 
 
-static void sion_menu_button_action_class_init(SionMenubuttonActionClass *klass)
+static void gigolo_menu_button_action_class_init(GigoloMenubuttonActionClass *klass)
 {
 	GObjectClass *g_object_class = G_OBJECT_CLASS(klass);
 	GtkActionClass *action_class = GTK_ACTION_CLASS(klass);
 
-	g_object_class->set_property = sion_menu_button_action_set_property;
+	g_object_class->set_property = gigolo_menu_button_action_set_property;
 
-	action_class->connect_proxy = sion_menu_button_action_connect_proxy;
-	action_class->create_menu_item = sion_menu_button_action_create_menu_item;
-	action_class->create_tool_item = sion_menu_button_action_create_tool_item;
+	action_class->connect_proxy = gigolo_menu_button_action_connect_proxy;
+	action_class->create_menu_item = gigolo_menu_button_action_create_menu_item;
+	action_class->create_tool_item = gigolo_menu_button_action_create_tool_item;
 	action_class->menu_item_type = GTK_TYPE_IMAGE_MENU_ITEM;
 	action_class->toolbar_item_type = GTK_TYPE_MENU_TOOL_BUTTON;
 
@@ -224,7 +224,7 @@ static void sion_menu_button_action_class_init(SionMenubuttonActionClass *klass)
 										"settings",
 										"Settings",
 										"The associated settings",
-										SION_SETTINGS_TYPE,
+										GIGOLO_SETTINGS_TYPE,
 										G_PARAM_WRITABLE));
 
 	signals[ITEM_CLICKED] = g_signal_new("item-clicked",
@@ -246,15 +246,15 @@ static void sion_menu_button_action_class_init(SionMenubuttonActionClass *klass)
 }
 
 
-static void sion_menu_button_action_init(G_GNUC_UNUSED SionMenubuttonAction *action)
+static void gigolo_menu_button_action_init(G_GNUC_UNUSED GigoloMenubuttonAction *action)
 {
 }
 
 
-GtkAction *sion_menu_button_action_new(const gchar *name, const gchar *label,
+GtkAction *gigolo_menu_button_action_new(const gchar *name, const gchar *label,
 									   const gchar *tooltip, const gchar *icon_name)
 {
-	GtkAction *action = g_object_new(SION_MENU_BUTTON_ACTION_TYPE,
+	GtkAction *action = g_object_new(GIGOLO_MENU_BUTTON_ACTION_TYPE,
 		"name", name, "label", label, "tooltip", tooltip, "icon-name", icon_name, NULL);
 
 	return action;

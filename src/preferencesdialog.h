@@ -23,31 +23,31 @@
 
 G_BEGIN_DECLS
 
-#define SION_PREFERENCES_DIALOG_TYPE				(sion_preferences_dialog_get_type())
-#define SION_PREFERENCES_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			SION_PREFERENCES_DIALOG_TYPE, SionPreferencesDialog))
-#define SION_PREFERENCES_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			SION_PREFERENCES_DIALOG_TYPE, SionPreferencesDialogClass))
-#define IS_SION_PREFERENCES_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			SION_PREFERENCES_DIALOG_TYPE))
-#define IS_SION_PREFERENCES_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			SION_PREFERENCES_DIALOG_TYPE))
+#define GIGOLO_PREFERENCES_DIALOG_TYPE				(gigolo_preferences_dialog_get_type())
+#define GIGOLO_PREFERENCES_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+			GIGOLO_PREFERENCES_DIALOG_TYPE, GigoloPreferencesDialog))
+#define GIGOLO_PREFERENCES_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
+			GIGOLO_PREFERENCES_DIALOG_TYPE, GigoloPreferencesDialogClass))
+#define IS_GIGOLO_PREFERENCES_DIALOG(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
+			GIGOLO_PREFERENCES_DIALOG_TYPE))
+#define IS_GIGOLO_PREFERENCES_DIALOG_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
+			GIGOLO_PREFERENCES_DIALOG_TYPE))
 
-typedef struct _SionPreferencesDialog				SionPreferencesDialog;
-typedef struct _SionPreferencesDialogClass			SionPreferencesDialogClass;
+typedef struct _GigoloPreferencesDialog				GigoloPreferencesDialog;
+typedef struct _GigoloPreferencesDialogClass		GigoloPreferencesDialogClass;
 
-struct _SionPreferencesDialog
+struct _GigoloPreferencesDialog
 {
 	GtkDialog parent;
 };
 
-struct _SionPreferencesDialogClass
+struct _GigoloPreferencesDialogClass
 {
 	GtkDialogClass parent_class;
 };
 
-GType		sion_preferences_dialog_get_type		(void);
-GtkWidget*	sion_preferences_dialog_new				(GtkWindow *parent, SionSettings *settings);
+GType		gigolo_preferences_dialog_get_type		(void);
+GtkWidget*	gigolo_preferences_dialog_new			(GtkWindow *parent, GigoloSettings *settings);
 
 G_END_DECLS
 

@@ -25,7 +25,7 @@
 #include "compat.h"
 
 
-GdkWindow *sion_widget_get_window(GtkWidget *widget)
+GdkWindow *gigolo_widget_get_window(GtkWidget *widget)
 {
 #if GTK_CHECK_VERSION(2, 14, 0)
 	return gtk_widget_get_window(widget);
@@ -35,7 +35,7 @@ GdkWindow *sion_widget_get_window(GtkWidget *widget)
 }
 
 
-GtkWidget *sion_dialog_get_content_area(GtkDialog *dialog)
+GtkWidget *gigolo_dialog_get_content_area(GtkDialog *dialog)
 {
 #if GTK_CHECK_VERSION(2, 14, 0)
 	return gtk_dialog_get_content_area(dialog);
@@ -45,7 +45,7 @@ GtkWidget *sion_dialog_get_content_area(GtkDialog *dialog)
 }
 
 
-guint32 sion_widget_get_flags(GtkWidget *widget)
+guint32 gigolo_widget_get_flags(GtkWidget *widget)
 {
 #ifdef GSEAL_ENABLE
 	/* This is an ugly hack to get GTK_WIDGET_FLAGS() flags working with GSEAL enabled,
@@ -64,7 +64,7 @@ guint32 sion_widget_get_flags(GtkWidget *widget)
 }
 
 
-void sion_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *tooltip_text)
+void gigolo_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *tooltip_text)
 {
 #if GTK_CHECK_VERSION(2, 16, 0)
 	gtk_status_icon_set_tooltip_text(status_icon, tooltip_text);
@@ -74,7 +74,7 @@ void sion_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *
 }
 
 
-void sion_toolbar_set_orientation(GtkToolbar *toolbar, GtkOrientation orientation)
+void gigolo_toolbar_set_orientation(GtkToolbar *toolbar, GtkOrientation orientation)
 {
 #if GTK_CHECK_VERSION(2, 16, 0)
 	gtk_orientable_set_orientation(GTK_ORIENTABLE(toolbar), orientation);

@@ -28,10 +28,10 @@
 #include "passworddialog.h"
 #include "main.h"
 
-typedef struct _SionBackendGVFSPrivate			SionBackendGVFSPrivate;
+typedef struct _GigoloBackendGVFSPrivate			GigoloBackendGVFSPrivate;
 
-#define SION_BACKEND_GVFS_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			SION_BACKEND_GVFS_TYPE, SionBackendGVFSPrivate))
+#define GIGOLO_BACKEND_GVFS_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
+			GIGOLO_BACKEND_GVFS_TYPE, GigoloBackendGVFSPrivate))
 
 enum
 {
@@ -50,51 +50,51 @@ static guint signals[LAST_SIGNAL];
 
 typedef struct
 {
-	SionBackendGVFS *self;
+	GigoloBackendGVFS *self;
 	GtkWidget *dialog;
 } MountInfo;
 
-struct _SionBackendGVFSPrivate
+struct _GigoloBackendGVFSPrivate
 {
 	GtkListStore *store;
 };
 
-static void sion_backend_gvfs_class_init			(SionBackendGVFSClass *klass);
-static void sion_backend_gvfs_init      			(SionBackendGVFS *self);
-static void sion_backend_gvfs_finalize  			(GObject *object);
-static void sion_backend_gvfs_set_property			(GObject *object, guint prop_id,
+static void gigolo_backend_gvfs_class_init			(GigoloBackendGVFSClass *klass);
+static void gigolo_backend_gvfs_init      			(GigoloBackendGVFS *self);
+static void gigolo_backend_gvfs_finalize  			(GObject *object);
+static void gigolo_backend_gvfs_set_property		(GObject *object, guint prop_id,
 													 const GValue *value, GParamSpec *pspec);
 
 
 static GObjectClass *parent_class = NULL;
 
-GType sion_backend_gvfs_get_type(void)
+GType gigolo_backend_gvfs_get_type(void)
 {
 	static GType self_type = 0;
 	if (! self_type)
 	{
 		static const GTypeInfo self_info =
 		{
-			sizeof(SionBackendGVFSClass),
+			sizeof(GigoloBackendGVFSClass),
 			NULL, /* base_init */
 			NULL, /* base_finalize */
-			(GClassInitFunc)sion_backend_gvfs_class_init,
+			(GClassInitFunc)gigolo_backend_gvfs_class_init,
 			NULL, /* class_finalize */
 			NULL, /* class_data */
-			sizeof(SionBackendGVFS),
+			sizeof(GigoloBackendGVFS),
 			0,
-			(GInstanceInitFunc)sion_backend_gvfs_init,
+			(GInstanceInitFunc)gigolo_backend_gvfs_init,
 			NULL /* value_table */
 		};
 
-		self_type = g_type_register_static(G_TYPE_OBJECT, "SionBackendGVFS", &self_info, 0);
+		self_type = g_type_register_static(G_TYPE_OBJECT, "GigoloBackendGVFS", &self_info, 0);
 	}
 
 	return self_type;
 }
 
 
-static void sion_backend_gvfs_cclosure_marshal_VOID__STRING_STRING(
+static void gigolo_backend_gvfs_cclosure_marshal_VOID__STRING_STRING(
 											GClosure		*closure,
 							  G_GNUC_UNUSED GValue			*return_value,
 											guint			 n_param_values,
@@ -131,17 +131,17 @@ static void sion_backend_gvfs_cclosure_marshal_VOID__STRING_STRING(
 }
 
 
-static void sion_backend_gvfs_class_init(SionBackendGVFSClass *klass)
+static void gigolo_backend_gvfs_class_init(GigoloBackendGVFSClass *klass)
 {
 	GObjectClass *g_object_class;
 
 	g_object_class = G_OBJECT_CLASS(klass);
 
-	g_object_class->finalize = sion_backend_gvfs_finalize;
-	g_object_class->set_property = sion_backend_gvfs_set_property;
+	g_object_class->finalize = gigolo_backend_gvfs_finalize;
+	g_object_class->set_property = gigolo_backend_gvfs_set_property;
 
 	parent_class = (GObjectClass*)g_type_class_peek(G_TYPE_OBJECT);
-	g_type_class_add_private((gpointer)klass, sizeof(SionBackendGVFSPrivate));
+	g_type_class_add_private((gpointer)klass, sizeof(GigoloBackendGVFSPrivate));
 
 	g_object_class_install_property(g_object_class,
 										PROP_STORE,
@@ -166,16 +166,16 @@ static void sion_backend_gvfs_class_init(SionBackendGVFSClass *klass)
 										0,
 										0,
 										NULL,
-										sion_backend_gvfs_cclosure_marshal_VOID__STRING_STRING,
+										gigolo_backend_gvfs_cclosure_marshal_VOID__STRING_STRING,
 										G_TYPE_NONE, 2, G_TYPE_STRING, G_TYPE_STRING);
 }
 
 
-static void sion_backend_gvfs_finalize(GObject *object)
+static void gigolo_backend_gvfs_finalize(GObject *object)
 {
-	SionBackendGVFS *self;
+	GigoloBackendGVFS *self;
 
-	self = SION_BACKEND_GVFS(object);
+	self = GIGOLO_BACKEND_GVFS(object);
 
 	if (G_OBJECT_CLASS(parent_class)->finalize)
 		(* G_OBJECT_CLASS(parent_class)->finalize)(object);
@@ -187,11 +187,11 @@ static gchar *get_tooltip_text(gpointer ref, gint ref_type, const gchar *type)
 	gchar *result = NULL;
 	switch (ref_type)
 	{
-		case SION_WINDOW_REF_TYPE_MOUNT:
+		case GIGOLO_WINDOW_REF_TYPE_MOUNT:
 		{
 			gchar *uri, *name;
 
-			sion_backend_gvfs_get_name_and_uri_from_mount(ref, &name, &uri);
+			gigolo_backend_gvfs_get_name_and_uri_from_mount(ref, &name, &uri);
 			result = g_strdup_printf(
 				_("<b>%s</b>\n\nURI: %s\nMounted: Yes\nService Type: %s"), name, uri, type);
 
@@ -199,10 +199,10 @@ static gchar *get_tooltip_text(gpointer ref, gint ref_type, const gchar *type)
 			g_free(name);
 			return result;
 		}
-		case SION_WINDOW_REF_TYPE_VOLUME:
+		case GIGOLO_WINDOW_REF_TYPE_VOLUME:
 		default:
 		{
-			gchar *label = sion_backend_gvfs_get_volume_identifier(ref);
+			gchar *label = gigolo_backend_gvfs_get_volume_identifier(ref);
 
 			if (NZV(label))
 			{
@@ -225,7 +225,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 	GtkTreeIter iter;
 	gchar *vol_name, *scheme, *uri, *tooltip_text;
 	const gchar *scheme_name;
-	SionBackendGVFSPrivate *priv = SION_BACKEND_GVFS_GET_PRIVATE(backend);
+	GigoloBackendGVFSPrivate *priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
 
 	gtk_list_store_clear(priv->store);
 
@@ -237,28 +237,28 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 		vol_name = g_mount_get_name(mount);
 		file = g_mount_get_root(mount);
 		scheme = g_file_get_uri_scheme(file);
-		if (sion_str_equal(scheme, "burn"))
+		if (gigolo_str_equal(scheme, "burn"))
 		{	/* ignore empty CDs which are listed as mounted to burn:// */
 			g_free(vol_name);
 			g_free(scheme);
 			g_object_unref(file);
 			continue;
 		}
-		scheme_name = sion_describe_scheme(scheme);
+		scheme_name = gigolo_describe_scheme(scheme);
 		uri = g_file_get_uri(file);
 		icon = g_mount_get_icon(mount);
-		tooltip_text = get_tooltip_text(mount, SION_WINDOW_REF_TYPE_MOUNT, scheme_name);
+		tooltip_text = get_tooltip_text(mount, GIGOLO_WINDOW_REF_TYPE_MOUNT, scheme_name);
 
 		gtk_list_store_append(priv->store, &iter);
 		gtk_list_store_set(priv->store, &iter,
-				SION_WINDOW_COL_IS_MOUNTED, TRUE,
-				SION_WINDOW_COL_NAME, vol_name,
-				SION_WINDOW_COL_SCHEME, scheme_name,
-				SION_WINDOW_COL_REF, mount,
-				SION_WINDOW_COL_REF_TYPE, SION_WINDOW_REF_TYPE_MOUNT,
-				SION_WINDOW_COL_PIXBUF, icon,
-				SION_WINDOW_COL_ICON_NAME, "folder-remote",
-				SION_WINDOW_COL_TOOLTIP, tooltip_text,
+				GIGOLO_WINDOW_COL_IS_MOUNTED, TRUE,
+				GIGOLO_WINDOW_COL_NAME, vol_name,
+				GIGOLO_WINDOW_COL_SCHEME, scheme_name,
+				GIGOLO_WINDOW_COL_REF, mount,
+				GIGOLO_WINDOW_COL_REF_TYPE, GIGOLO_WINDOW_REF_TYPE_MOUNT,
+				GIGOLO_WINDOW_COL_PIXBUF, icon,
+				GIGOLO_WINDOW_COL_ICON_NAME, "folder-remote",
+				GIGOLO_WINDOW_COL_TOOLTIP, tooltip_text,
 				-1);
 		g_free(vol_name);
 		g_free(scheme);
@@ -281,18 +281,18 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 		{
 			icon = g_volume_get_icon(volume);
 			vol_name = g_volume_get_name(volume);
-			tooltip_text = get_tooltip_text(volume, SION_WINDOW_REF_TYPE_VOLUME, NULL);
+			tooltip_text = get_tooltip_text(volume, GIGOLO_WINDOW_REF_TYPE_VOLUME, NULL);
 
 			gtk_list_store_append(priv->store, &iter);
 			gtk_list_store_set(priv->store, &iter,
-					SION_WINDOW_COL_IS_MOUNTED, FALSE,
-					SION_WINDOW_COL_NAME, vol_name,
-					SION_WINDOW_COL_SCHEME, sion_describe_scheme("file"),
-					SION_WINDOW_COL_REF, volume,
-					SION_WINDOW_COL_REF_TYPE, SION_WINDOW_REF_TYPE_VOLUME,
-					SION_WINDOW_COL_PIXBUF, icon,
-					SION_WINDOW_COL_ICON_NAME, "folder-remote",
-					SION_WINDOW_COL_TOOLTIP, tooltip_text,
+					GIGOLO_WINDOW_COL_IS_MOUNTED, FALSE,
+					GIGOLO_WINDOW_COL_NAME, vol_name,
+					GIGOLO_WINDOW_COL_SCHEME, gigolo_describe_scheme("file"),
+					GIGOLO_WINDOW_COL_REF, volume,
+					GIGOLO_WINDOW_COL_REF_TYPE, GIGOLO_WINDOW_REF_TYPE_VOLUME,
+					GIGOLO_WINDOW_COL_PIXBUF, icon,
+					GIGOLO_WINDOW_COL_ICON_NAME, "folder-remote",
+					GIGOLO_WINDOW_COL_TOOLTIP, tooltip_text,
 					-1);
 			g_free(vol_name);
 			g_free(tooltip_text);
@@ -308,7 +308,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 }
 
 
-static void sion_backend_gvfs_set_property(GObject *object, guint prop_id,
+static void gigolo_backend_gvfs_set_property(GObject *object, guint prop_id,
 										   const GValue *value, GParamSpec *pspec)
 {
 	switch (prop_id)
@@ -316,7 +316,7 @@ static void sion_backend_gvfs_set_property(GObject *object, guint prop_id,
 	case PROP_STORE:
 	{
 		GVolumeMonitor *gvm;
-		SionBackendGVFSPrivate *priv = SION_BACKEND_GVFS_GET_PRIVATE(object);
+		GigoloBackendGVFSPrivate *priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(object);
 
 		priv->store = g_value_get_object(value);
 
@@ -339,20 +339,20 @@ static void sion_backend_gvfs_set_property(GObject *object, guint prop_id,
 }
 
 
-static void sion_backend_gvfs_init(G_GNUC_UNUSED SionBackendGVFS *self)
+static void gigolo_backend_gvfs_init(G_GNUC_UNUSED GigoloBackendGVFS *self)
 {
 }
 
 
-SionBackendGVFS *sion_backend_gvfs_new(GtkListStore *store)
+GigoloBackendGVFS *gigolo_backend_gvfs_new(GtkListStore *store)
 {
-	SionBackendGVFS *backend = g_object_new(SION_BACKEND_GVFS_TYPE, "store", store, NULL);
+	GigoloBackendGVFS *backend = g_object_new(GIGOLO_BACKEND_GVFS_TYPE, "store", store, NULL);
 
 	return backend;
 }
 
 
-gboolean sion_backend_gvfs_is_mount(gpointer mnt)
+gboolean gigolo_backend_gvfs_is_mount(gpointer mnt)
 {
 	g_return_val_if_fail(mnt != NULL, FALSE);
 
@@ -360,7 +360,7 @@ gboolean sion_backend_gvfs_is_mount(gpointer mnt)
 }
 
 
-void sion_backend_gvfs_get_name_and_uri_from_mount(GMount *mount, gchar **name, gchar **uri)
+void gigolo_backend_gvfs_get_name_and_uri_from_mount(GMount *mount, gchar **name, gchar **uri)
 {
 	GFile *file;
 
@@ -388,7 +388,7 @@ static void volume_mount_finished_cb(GObject *src, GAsyncResult *res, gpointer b
 			name = g_volume_get_name(G_VOLUME(src));
 		else
 		{
-			sion_backend_gvfs_get_name_and_uri_from_mount(G_MOUNT(src), &name, NULL);
+			gigolo_backend_gvfs_get_name_and_uri_from_mount(G_MOUNT(src), &name, NULL);
 			if (name == NULL)
 				name = g_strdup(_("unknown"));
 		}
@@ -419,7 +419,7 @@ static void unmount_finished_cb(GObject *src, GAsyncResult *res, gpointer backen
 			name = g_volume_get_name(G_VOLUME(src));
 		else
 		{
-			sion_backend_gvfs_get_name_and_uri_from_mount(G_MOUNT(src), &name, NULL);
+			gigolo_backend_gvfs_get_name_and_uri_from_mount(G_MOUNT(src), &name, NULL);
 			if (name == NULL)
 				name = g_strdup(_("unknown"));
 		}
@@ -436,7 +436,7 @@ static void unmount_finished_cb(GObject *src, GAsyncResult *res, gpointer backen
 }
 
 
-gboolean sion_backend_gvfs_mount_volume(SionBackendGVFS *backend, GVolume *vol)
+gboolean gigolo_backend_gvfs_mount_volume(GigoloBackendGVFS *backend, GVolume *vol)
 {
 	g_return_val_if_fail(backend != NULL, FALSE);
 	g_return_val_if_fail(vol != NULL, FALSE);
@@ -451,7 +451,7 @@ gboolean sion_backend_gvfs_mount_volume(SionBackendGVFS *backend, GVolume *vol)
 }
 
 
-void sion_backend_gvfs_unmount_mount(SionBackendGVFS *backend, GMount *mount)
+void gigolo_backend_gvfs_unmount_mount(GigoloBackendGVFS *backend, GMount *mount)
 {
 	g_return_if_fail(backend != NULL);
 	g_return_if_fail(mount != NULL);
@@ -493,7 +493,7 @@ static void set_password_cb(GMountOperation *op, G_GNUC_UNUSED gchar *message, g
 	GMountOperationResult result;
 	GtkWidget *dialog;
 
-	dialog = sion_password_dialog_new(flags, default_user,
+	dialog = gigolo_password_dialog_new(flags, default_user,
 		(domain != NULL) ? domain : default_domain);
 
 	if (gtk_dialog_run(GTK_DIALOG(dialog)) == GTK_RESPONSE_OK)
@@ -502,16 +502,16 @@ static void set_password_cb(GMountOperation *op, G_GNUC_UNUSED gchar *message, g
 
 		if (flags & G_ASK_PASSWORD_NEED_DOMAIN)
 			g_mount_operation_set_domain(op,
-				sion_password_dialog_get_domain(SION_PASSWORD_DIALOG(dialog)));
+				gigolo_password_dialog_get_domain(GIGOLO_PASSWORD_DIALOG(dialog)));
 		if (flags & G_ASK_PASSWORD_NEED_USERNAME)
 			g_mount_operation_set_username(op,
-				sion_password_dialog_get_username(SION_PASSWORD_DIALOG(dialog)));
+				gigolo_password_dialog_get_username(GIGOLO_PASSWORD_DIALOG(dialog)));
 		if (flags & G_ASK_PASSWORD_NEED_PASSWORD)
 		{
 			g_mount_operation_set_password(op,
-				sion_password_dialog_get_password(SION_PASSWORD_DIALOG(dialog)));
+				gigolo_password_dialog_get_password(GIGOLO_PASSWORD_DIALOG(dialog)));
 			/* TODO make this configurable? */
-			/* g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_FOR_SESSION); */
+			/* g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_FOR_SESGIGOLO); */
 			/* g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_NEVER); */
 			g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_PERMANENTLY);
 		}
@@ -527,7 +527,7 @@ static void set_password_cb(GMountOperation *op, G_GNUC_UNUSED gchar *message, g
 }
 
 
-void sion_backend_gvfs_mount_uri(SionBackendGVFS *backend, const gchar *uri,
+void gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
 								 const gchar *domain, GtkWidget *dialog)
 {
 	GMountOperation *op;
@@ -552,7 +552,7 @@ void sion_backend_gvfs_mount_uri(SionBackendGVFS *backend, const gchar *uri,
 }
 
 
-gchar *sion_backend_gvfs_get_volume_identifier(GVolume *volume)
+gchar *gigolo_backend_gvfs_get_volume_identifier(GVolume *volume)
 {
 	g_return_val_if_fail(volume != NULL, NULL);
 

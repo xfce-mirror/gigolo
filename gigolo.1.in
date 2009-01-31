@@ -1,18 +1,18 @@
-.TH "SION" "1" "" "sion @VERSION@" ""
+.TH "GIGOLO" "1" "" "gigolo @VERSION@" ""
 .SH "NAME"
-sion \(em a simple frontend to easily connect to remote filesystems with GIO/GVfs
+Gigolo \(em a simple frontend to easily connect to remote filesystems with GIO/GVFS
 .SH "SYNOPSIS"
 .PP
-\fBsion\fR [\fBoption\fP]
+\fBgigolo\fR [\fBoption\fP]
 .SH "DESCRIPTION"
 .PP
-Sion is a frontend to easily manage connections to remote filesystems using
+Gigolo is a frontend to easily manage connections to remote filesystems using
 GIO/GVfs. It allows you to quickly mount a remote filesystem and manage
 bookmarks to such.
 .PP
-Homepage: http://www.uvena.de/sion/
+Homepage: http://www.uvena.de/gigolo/
 .SH "OPTIONS"
-If called without any arguments, the sion main window is shown.
+If called without any arguments, the Gigolo main window is shown.
 .IP "\fB-l\fP, \fB\-\-list-schemes\fP         " 10
 Print a list of supported URI schemes and exit.
 .IP "\fB-v\fP, \fB\-\-verbose\fP         " 10
@@ -22,7 +22,7 @@ Show version information.
 .IP "\fB-?\fP, \fB\-\-help\fP         " 10
 Show help information and exit.
 .PP
-Sion supports all generic GTK options, a list is available on the help screen.
+Gigolo supports all generic GTK options, a list is available on the help screen.
 .SH "AUTHOR"
 .PP
 This manual page was written by Enrico Troeger. Permission is granted to copy,

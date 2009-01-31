@@ -40,19 +40,19 @@
 #include "main.h"
 
 
-typedef struct _SionWindowPrivate			SionWindowPrivate;
+typedef struct _GigoloWindowPrivate			GigoloWindowPrivate;
 
-#define SION_WINDOW_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-		SION_WINDOW_TYPE, SionWindowPrivate))
+#define GIGOLO_WINDOW_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
+		GIGOLO_WINDOW_TYPE, GigoloWindowPrivate))
 
 /* Returns: TRUE if @a ptr points to a non-zero value. */
 #define NZV(ptr) \
 	((ptr) && (ptr)[0])
 
-struct _SionWindowPrivate
+struct _GigoloWindowPrivate
 {
-	SionSettings	*settings;
-	SionBackendGVFS	*backend_gvfs;
+	GigoloSettings	*settings;
+	GigoloBackendGVFS	*backend_gvfs;
 
 	GtkWidget		*vbox;
 	GtkWidget		*hbox;
@@ -93,13 +93,13 @@ enum
 	VIEW_MODE_TREEVIEW
 };
 
-static void sion_window_class_init			(SionWindowClass *klass);
-static void sion_window_init				(SionWindow *window);
+static void gigolo_window_class_init			(GigoloWindowClass *klass);
+static void gigolo_window_init					(GigoloWindow *window);
 
 static GtkWindowClass *parent_class = NULL;
 
 
-GType sion_window_get_type(void)
+GType gigolo_window_get_type(void)
 {
 	static GType self_type = 0;
 
@@ -107,29 +107,29 @@ GType sion_window_get_type(void)
 	{
 		static const GTypeInfo self_info =
 		{
-			sizeof(SionWindowClass),
+			sizeof(GigoloWindowClass),
 			NULL, /* base_init */
 			NULL, /* base_finalize */
-			(GClassInitFunc)sion_window_class_init,
+			(GClassInitFunc)gigolo_window_class_init,
 			NULL, /* class_finalize */
 			NULL, /* class_data */
-			sizeof(SionWindow),
+			sizeof(GigoloWindow),
 			0,
-			(GInstanceInitFunc)sion_window_init,
+			(GInstanceInitFunc)gigolo_window_init,
 			NULL /* value_table */
 		};
 
-		self_type = g_type_register_static(GTK_TYPE_WINDOW, "SionWindow", &self_info, 0);
+		self_type = g_type_register_static(GTK_TYPE_WINDOW, "GigoloWindow", &self_info, 0);
 	}
 
 	return self_type;
 }
 
 
-static gboolean sion_window_state_event(GtkWidget *widget, GdkEventWindowState *event)
+static gboolean gigolo_window_state_event(GtkWidget *widget, GdkEventWindowState *event)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(widget);
-	gboolean show_systray_icon = sion_settings_get_boolean(priv->settings, "show-in-systray");
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(widget);
+	gboolean show_systray_icon = gigolo_settings_get_boolean(priv->settings, "show-in-systray");
 
 	if (show_systray_icon)
 	{
@@ -162,9 +162,9 @@ static gboolean sion_window_state_event(GtkWidget *widget, GdkEventWindowState *
 }
 
 
-static void remove_autoconnect_timeout(SionWindow *window)
+static void remove_autoconnect_timeout(GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	if (priv->autoconnect_timeout_id != (guint) -1)
 	{
@@ -174,23 +174,23 @@ static void remove_autoconnect_timeout(SionWindow *window)
 }
 
 
-static gboolean sion_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkEventAny *event)
+static gboolean gigolo_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkEventAny *event)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(widget);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(widget);
 	gint geo[5];
 
-	remove_autoconnect_timeout(SION_WINDOW(widget));
+	remove_autoconnect_timeout(GIGOLO_WINDOW(widget));
 
-	if (sion_settings_get_boolean(priv->settings, "save-geometry"))
+	if (gigolo_settings_get_boolean(priv->settings, "save-geometry"))
 	{
 		gtk_window_get_position(GTK_WINDOW(widget), &geo[0], &geo[1]);
 		gtk_window_get_size(GTK_WINDOW(widget), &geo[2], &geo[3]);
-		if (gdk_window_get_state(sion_widget_get_window(widget)) & GDK_WINDOW_STATE_MAXIMIZED)
+		if (gdk_window_get_state(gigolo_widget_get_window(widget)) & GDK_WINDOW_STATE_MAXIMIZED)
 			geo[4] = 1;
 		else
 			geo[4] = 0;
 
-		sion_settings_set_geometry(priv->settings, geo, 5);
+		gigolo_settings_set_geometry(priv->settings, geo, 5);
 	}
 	gtk_widget_destroy(priv->tree_popup_menu);
 	gtk_widget_destroy(priv->systray_icon_popup_menu);
@@ -206,14 +206,14 @@ static gboolean sion_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkEve
 }
 
 
-static void sion_window_class_init(SionWindowClass *klass)
+static void gigolo_window_class_init(GigoloWindowClass *klass)
 {
 	GtkWidgetClass *gtkwidget_class = GTK_WIDGET_CLASS(klass);
-	gtkwidget_class->delete_event = sion_window_delete_event;
-	gtkwidget_class->window_state_event = sion_window_state_event;
+	gtkwidget_class->delete_event = gigolo_window_delete_event;
+	gtkwidget_class->window_state_event = gigolo_window_state_event;
 
 	parent_class =(GtkWindowClass*)g_type_class_peek(GTK_TYPE_WINDOW);
-	g_type_class_add_private((gpointer)klass, sizeof(SionWindowPrivate));
+	g_type_class_add_private((gpointer)klass, sizeof(GigoloWindowPrivate));
 }
 
 
@@ -230,9 +230,9 @@ static void systray_icon_activate_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, G
 
 
 static void systray_icon_popup_menu_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, guint button,
-								   guint activate_time, SionWindow *window)
+								   guint activate_time, GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	if (button == 3)
 		gtk_menu_popup(GTK_MENU(priv->systray_icon_popup_menu), NULL, NULL, NULL, NULL,
@@ -242,14 +242,14 @@ static void systray_icon_popup_menu_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon,
 
 /* Convenience function to get the selected GtkTreeIter from the icon view or the treeview
  * whichever is currently used for display. */
-static void get_selected_iter(SionWindow *window, GtkTreeIter *iter)
+static void get_selected_iter(GigoloWindow *window, GtkTreeIter *iter)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	g_return_if_fail(window != NULL);
 	g_return_if_fail(iter != NULL);
 
-	if (sion_settings_get_integer(priv->settings, "view-mode") == VIEW_MODE_TREEVIEW)
+	if (gigolo_settings_get_integer(priv->settings, "view-mode") == VIEW_MODE_TREEVIEW)
 	{
 		GtkTreeSelection *selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview));
 		gtk_tree_selection_get_selected(selection, NULL, iter);
@@ -272,11 +272,11 @@ static void get_selected_iter(SionWindow *window, GtkTreeIter *iter)
 }
 
 
-static SionBookmark *get_bookmark_from_uri(SionWindow *window, const gchar *uri)
+static GigoloBookmark *get_bookmark_from_uri(GigoloWindow *window, const gchar *uri)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
-	SionBookmarkList *bml = sion_settings_get_bookmarks(priv->settings);
-	SionBookmark *bm = NULL;
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(priv->settings);
+	GigoloBookmark *bm = NULL;
 	gboolean found = FALSE;
 	gchar *tmp_uri;
 	guint i;
@@ -284,8 +284,8 @@ static SionBookmark *get_bookmark_from_uri(SionWindow *window, const gchar *uri)
 	for (i = 0; i < bml->len && ! found; i++)
 	{
 		bm = g_ptr_array_index(bml, i);
-		tmp_uri = sion_bookmark_get_uri(bm);
-		if (sion_str_equal(uri, tmp_uri))
+		tmp_uri = gigolo_bookmark_get_uri(bm);
+		if (gigolo_str_equal(uri, tmp_uri))
 			found = TRUE;
 
 		g_free(tmp_uri);
@@ -294,42 +294,42 @@ static SionBookmark *get_bookmark_from_uri(SionWindow *window, const gchar *uri)
 }
 
 
-static void mount_from_bookmark(SionWindow *window, SionBookmark *bookmark, gboolean show_dialog)
+static void mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark, gboolean show_dialog)
 {
 	gchar *uri;
 	GtkWidget *dialog = NULL;
-	SionWindowPrivate *priv;
+	GigoloWindowPrivate *priv;
 
 	g_return_if_fail(window != NULL);
 	g_return_if_fail(bookmark != NULL);
 
-	priv = SION_WINDOW_GET_PRIVATE(window);
+	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	uri = sion_bookmark_get_uri(bookmark);
+	uri = gigolo_bookmark_get_uri(bookmark);
 
 	if (show_dialog)
 	{
-		const gchar *name = sion_bookmark_get_name(bookmark);
+		const gchar *name = gigolo_bookmark_get_name(bookmark);
 		gchar *label = g_strdup_printf(_("Mounting \"%s\""), (name != NULL) ? name : uri);
 
-		dialog = sion_mount_dialog_new(GTK_WINDOW(window), label);
+		dialog = gigolo_mount_dialog_new(GTK_WINDOW(window), label);
 		gtk_widget_show_all(dialog);
 
 		g_free(label);
 	}
 
-	sion_backend_gvfs_mount_uri(priv->backend_gvfs, uri, sion_bookmark_get_domain(bookmark), dialog);
+	gigolo_backend_gvfs_mount_uri(priv->backend_gvfs, uri, gigolo_bookmark_get_domain(bookmark), dialog);
 
-	if (sion_bookmark_get_autoconnect(bookmark))
-		sion_bookmark_set_should_not_autoconnect(bookmark, FALSE);
+	if (gigolo_bookmark_get_autoconnect(bookmark))
+		gigolo_bookmark_set_should_not_autoconnect(bookmark, FALSE);
 
 	g_free(uri);
 }
 
 
-static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
+static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
 	gpointer vol;
@@ -340,23 +340,23 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 	if (gtk_list_store_iter_is_valid(priv->store, &iter))
 	{
 		gtk_tree_model_get(model, &iter,
-			SION_WINDOW_COL_REF_TYPE, &ref_type,
-			SION_WINDOW_COL_REF, &vol, -1);
+			GIGOLO_WINDOW_COL_REF_TYPE, &ref_type,
+			GIGOLO_WINDOW_COL_REF, &vol, -1);
 
-		if (ref_type == SION_WINDOW_REF_TYPE_VOLUME)
-			handled = sion_backend_gvfs_mount_volume(priv->backend_gvfs, vol);
+		if (ref_type == GIGOLO_WINDOW_REF_TYPE_VOLUME)
+			handled = gigolo_backend_gvfs_mount_volume(priv->backend_gvfs, vol);
 	}
 
 	if (! handled)
 	{
-		SionBookmark *bm = NULL;
+		GigoloBookmark *bm = NULL;
 		GtkWidget *dialog;
 
-		dialog = sion_bookmark_edit_dialog_new(GTK_WINDOW(window),
-			priv->settings, SION_BE_MODE_CONNECT);
-		if (sion_bookmark_edit_dialog_run(SION_BOOKMARK_EDIT_DIALOG(dialog)) == GTK_RESPONSE_OK)
+		dialog = gigolo_bookmark_edit_dialog_new(GTK_WINDOW(window),
+			priv->settings, GIGOLO_BE_MODE_CONNECT);
+		if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(dialog)) == GTK_RESPONSE_OK)
 		{
-			bm = sion_bookmark_new();
+			bm = gigolo_bookmark_new();
 			/* this fills the values of the dialog into 'bm' */
 			g_object_set(dialog, "bookmark-update", bm, NULL);
 
@@ -369,26 +369,26 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 }
 
 
-static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
+static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
 	GtkWidget *dialog;
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	dialog = sion_preferences_dialog_new(GTK_WINDOW(window), priv->settings);
+	dialog = gigolo_preferences_dialog_new(GTK_WINDOW(window), priv->settings);
 
 	gtk_dialog_run(GTK_DIALOG(dialog));
-	sion_window_do_autoconnect(window);
-	sion_settings_write(priv->settings, SION_SETTINGS_PREFERENCES);
+	gigolo_window_do_autoconnect(window);
+	gigolo_settings_write(priv->settings, GIGOLO_SETTINGS_PREFERENCES);
 
 	gtk_widget_destroy(dialog);
 }
 
 
-static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
+static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
-	SionBookmark *bm;
+	GigoloBookmark *bm;
 
 	get_selected_iter(window, &iter);
 	if (gtk_list_store_iter_is_valid(priv->store, &iter))
@@ -396,41 +396,41 @@ static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *windo
 		gpointer mnt;
 		GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
 
-		gtk_tree_model_get(model, &iter, SION_WINDOW_COL_REF, &mnt, -1);
-		if (sion_backend_gvfs_is_mount(mnt))
+		gtk_tree_model_get(model, &iter, GIGOLO_WINDOW_COL_REF, &mnt, -1);
+		if (gigolo_backend_gvfs_is_mount(mnt))
 		{
 			gchar *uri;
-			sion_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
+			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
 			bm = get_bookmark_from_uri(window, uri);
-			if (bm != NULL && sion_bookmark_get_autoconnect(bm))
+			if (bm != NULL && gigolo_bookmark_get_autoconnect(bm))
 			{	/* we don't want auto-connection to reconnect this bookmark right
 				   after we unmount it. */
-				sion_bookmark_set_should_not_autoconnect(bm, TRUE);
+				gigolo_bookmark_set_should_not_autoconnect(bm, TRUE);
 			}
 			g_free(uri);
 
-			sion_backend_gvfs_unmount_mount(priv->backend_gvfs, mnt);
+			gigolo_backend_gvfs_unmount_mount(priv->backend_gvfs, mnt);
 		}
 	}
 }
 
 
-static void action_quit_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
+static void action_quit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-    sion_window_delete_event(GTK_WIDGET(window), NULL);
+    gigolo_window_delete_event(GTK_WIDGET(window), NULL);
     gtk_widget_destroy(GTK_WIDGET(window));
 }
 
 
-static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
+static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
 	GtkWidget *dialog;
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	dialog = sion_bookmark_dialog_new(GTK_WINDOW(window), priv->settings);
+	dialog = gigolo_bookmark_dialog_new(GTK_WINDOW(window), priv->settings);
 
 	gtk_dialog_run(GTK_DIALOG(dialog));
-	sion_settings_write(priv->settings, SION_SETTINGS_BOOKMARKS);
+	gigolo_settings_write(priv->settings, GIGOLO_SETTINGS_BOOKMARKS);
 
 	gtk_widget_destroy(dialog);
 }
@@ -439,11 +439,11 @@ static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, SionWindow 
 static void about_activate_link(G_GNUC_UNUSED GtkAboutDialog *dialog,
 								const gchar *uri, G_GNUC_UNUSED gpointer data)
 {
-	sion_show_uri(uri);
+	gigolo_show_uri(uri);
 }
 
 
-static void action_about_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
+static void action_about_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
     const gchar *authors[]= { "Enrico Tröger <enrico@xfce.org>", NULL };
 
@@ -451,17 +451,16 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 	gtk_about_dialog_set_url_hook(about_activate_link, NULL, NULL);
 	gtk_show_about_dialog(GTK_WINDOW(window),
 		"authors", authors,
-		"logo-icon-name", sion_get_application_icon_name(),
+		"logo-icon-name", gigolo_get_application_icon_name(),
 		"comments", "A simple frontend to easily connect to remote filesystems",
 		"copyright", "Copyright 2008-2009 Enrico Tröger",
-		"website", "http://www.uvena.de/sion/",
+		"website", "http://www.uvena.de/gigolo/",
 		"version", VERSION,
 		"translator-credits", _("translator-credits"),
 		"license",  "Copyright 2008-2009 Enrico Tröger <enrico@xfce.org>\n\n"
 					"This program is free software; you can redistribute it and/or modify\n"
 					"it under the terms of the GNU General Public License as published by\n"
-					"the Free Software Foundation; either version 2 of the License, or\n"
-					"(at your option) any later version.\n"
+					"the Free Software Foundation; version 2 of the License.\n"
 					"\n"
 					"This program is distributed in the hope that it will be useful,\n"
 					"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -475,9 +474,9 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 }
 
 
-static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
+static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
 
@@ -486,12 +485,12 @@ static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *wind
 	{
 		gpointer mnt;
 
-		gtk_tree_model_get(model, &iter, SION_WINDOW_COL_REF, &mnt, -1);
-		if (sion_backend_gvfs_is_mount(mnt))
+		gtk_tree_model_get(model, &iter, GIGOLO_WINDOW_COL_REF, &mnt, -1);
+		if (gigolo_backend_gvfs_is_mount(mnt))
 		{
 			gchar *uri;
 
-			sion_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
+			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
 			gtk_clipboard_set_text(gtk_clipboard_get(gdk_atom_intern("CLIPBOARD", FALSE)), uri, -1);
 
 			g_free(uri);
@@ -500,21 +499,21 @@ static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *wind
 }
 
 
-static void action_open_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
+static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
 
-	if (! sion_settings_has_file_manager(priv->settings))
+	if (! gigolo_settings_has_file_manager(priv->settings))
 		return;
 
 	get_selected_iter(window, &iter);
 	if (gtk_list_store_iter_is_valid(priv->store, &iter))
 	{
 		gpointer mnt;
-		gtk_tree_model_get(model, &iter, SION_WINDOW_COL_REF, &mnt, -1);
-		if (sion_backend_gvfs_is_mount(mnt))
+		gtk_tree_model_get(model, &iter, GIGOLO_WINDOW_COL_REF, &mnt, -1);
+		if (gigolo_backend_gvfs_is_mount(mnt))
 		{
 #if 1
 			GError *error = NULL;
@@ -522,8 +521,8 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, SionWindow *window)
 			gchar *file_manager;
 			gchar *cmd;
 
-			file_manager = sion_settings_get_string(priv->settings, "file-manager");
-			sion_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
+			file_manager = gigolo_settings_get_string(priv->settings, "file-manager");
+			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
 			cmd = g_strconcat(file_manager, " ", uri, NULL);
 
 			if (! g_spawn_command_line_async(cmd, &error))
@@ -573,20 +572,20 @@ static void tree_realize_cb(GtkWidget *widget)
 }
 
 
-static gboolean iter_is_bookmark(SionWindow *window, GtkTreeModel *model, GtkTreeIter *iter)
+static gboolean iter_is_bookmark(GigoloWindow *window, GtkTreeModel *model, GtkTreeIter *iter)
 {
 	gint ref_type;
 	gpointer ref;
 
-	gtk_tree_model_get(model, iter, SION_WINDOW_COL_REF_TYPE, &ref_type,
-									SION_WINDOW_COL_REF, &ref, -1);
+	gtk_tree_model_get(model, iter, GIGOLO_WINDOW_COL_REF_TYPE, &ref_type,
+									GIGOLO_WINDOW_COL_REF, &ref, -1);
 
-	if (ref_type == SION_WINDOW_REF_TYPE_MOUNT)
+	if (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT)
 	{
 		gchar *uri;
 		gboolean found = FALSE;
 
-		sion_backend_gvfs_get_name_and_uri_from_mount(ref, NULL, &uri);
+		gigolo_backend_gvfs_get_name_and_uri_from_mount(ref, NULL, &uri);
 
 		found = (get_bookmark_from_uri(window, uri) != NULL);
 
@@ -598,22 +597,22 @@ static gboolean iter_is_bookmark(SionWindow *window, GtkTreeModel *model, GtkTre
 }
 
 
-static void update_sensitive_buttons(SionWindow *window, GtkTreeModel *model, GtkTreeIter *iter)
+static void update_sensitive_buttons(GigoloWindow *window, GtkTreeModel *model, GtkTreeIter *iter)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	gint ref_type;
 	gboolean is_bookmark = FALSE;
 
 	if (iter != NULL && gtk_list_store_iter_is_valid(priv->store, iter))
 	{
-		gtk_tree_model_get(model, iter, SION_WINDOW_COL_REF_TYPE, &ref_type, -1);
+		gtk_tree_model_get(model, iter, GIGOLO_WINDOW_COL_REF_TYPE, &ref_type, -1);
 		is_bookmark = iter_is_bookmark(window, model, iter);
 
-		gtk_action_set_sensitive(priv->action_connect, (ref_type != SION_WINDOW_REF_TYPE_MOUNT));
-		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == SION_WINDOW_REF_TYPE_MOUNT));
+		gtk_action_set_sensitive(priv->action_connect, (ref_type != GIGOLO_WINDOW_REF_TYPE_MOUNT));
+		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
 		gtk_action_set_sensitive(priv->action_bookmark_create, ! is_bookmark);
-		gtk_action_set_sensitive(priv->action_open, sion_settings_has_file_manager(priv->settings));
-		gtk_action_set_sensitive(priv->action_copyuri, (ref_type == SION_WINDOW_REF_TYPE_MOUNT));
+		gtk_action_set_sensitive(priv->action_open, gigolo_settings_has_file_manager(priv->settings));
+		gtk_action_set_sensitive(priv->action_copyuri, (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
 	}
 	else
 	{
@@ -626,11 +625,11 @@ static void update_sensitive_buttons(SionWindow *window, GtkTreeModel *model, Gt
 }
 
 
-static void tree_selection_changed_cb(GtkTreeSelection *selection, SionWindow *window)
+static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloWindow *window)
 {
 	GtkTreeIter iter;
 	GtkTreeModel *model;
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	if (selection == NULL)
 		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview));
@@ -641,7 +640,7 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, SionWindow *w
 }
 
 
-static void iconview_selection_changed_cb(GtkIconView *view, SionWindow *window)
+static void iconview_selection_changed_cb(GtkIconView *view, GigoloWindow *window)
 {
 	GList *l, *items = gtk_icon_view_get_selected_items(view);
 	GtkTreeIter iter;
@@ -660,10 +659,10 @@ static void iconview_selection_changed_cb(GtkIconView *view, SionWindow *window)
 }
 
 
-static void mounts_changed_cb(G_GNUC_UNUSED SionBackendGVFS *backend, SionWindow *window)
+static void mounts_changed_cb(G_GNUC_UNUSED GigoloBackendGVFS *backend, GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
-	gint view_mode = sion_settings_get_integer(priv->settings, "view-mode");
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	gint view_mode = gigolo_settings_get_integer(priv->settings, "view-mode");
 
 	if (view_mode == VIEW_MODE_ICONVIEW)
 	{
@@ -676,27 +675,26 @@ static void mounts_changed_cb(G_GNUC_UNUSED SionBackendGVFS *backend, SionWindow
 }
 
 
-static void mount_operation_failed_cb(G_GNUC_UNUSED SionBackendGVFS *backend, const gchar *message,
-								   const gchar *error_message, SionWindow *window)
+static void mount_operation_failed_cb(G_GNUC_UNUSED GigoloBackendGVFS *backend, const gchar *message,
+								   const gchar *error_message, GigoloWindow *window)
 {
-	sion_error_dialog((gpointer) window, message, error_message);
+	gigolo_message_dialog((gpointer) window, GTK_MESSAGE_ERROR, _("Error"), message, error_message);
 }
 
 
 static void tree_row_activated_cb(G_GNUC_UNUSED GtkTreeView *treeview, GtkTreePath *path,
-								  G_GNUC_UNUSED GtkTreeViewColumn *arg2, SionWindow *window)
+								  G_GNUC_UNUSED GtkTreeViewColumn *arg2, GigoloWindow *window)
 {
 	GtkTreeIter iter;
 	gint ref_type;
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	if (gtk_tree_model_get_iter(GTK_TREE_MODEL(priv->store), &iter, path))
 	{
 		gtk_tree_model_get(GTK_TREE_MODEL(priv->store), &iter,
-			SION_WINDOW_COL_REF_TYPE, &ref_type, -1);
-		if (ref_type == SION_WINDOW_REF_TYPE_MOUNT)
-		{
-			/* action_unmount_cb(NULL, data); */
+			GIGOLO_WINDOW_COL_REF_TYPE, &ref_type, -1);
+		if (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT)
+		{	/* action_unmount_cb(NULL, data); */
 			action_open_cb(NULL, window);
 		}
 		else
@@ -708,18 +706,18 @@ static void tree_row_activated_cb(G_GNUC_UNUSED GtkTreeView *treeview, GtkTreePa
 
 
 static void iconview_item_activated_cb(G_GNUC_UNUSED GtkIconView *iconview,
-									   GtkTreePath *path, SionWindow *window)
+									   GtkTreePath *path, GigoloWindow *window)
 {
 	tree_row_activated_cb(NULL, path, NULL, window);
 }
 
 
 static gboolean tree_button_press_event_cb(G_GNUC_UNUSED GtkWidget *widget,
-										   GdkEventButton *event, SionWindow *window)
+										   GdkEventButton *event, GigoloWindow *window)
 {
 	if (event->button == 3)
 	{
-		SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+		GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 		GtkTreeSelection *treesel = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview));
 		gboolean have_sel = (gtk_tree_selection_count_selected_rows(treesel) > 0);
 
@@ -749,11 +747,11 @@ static void iconview_select_item(GtkIconView *view, gdouble wx, gdouble wy)
 }
 
 
-static gboolean iconview_button_press_event_cb(GtkWidget *widget, GdkEventButton *event, SionWindow *window)
+static gboolean iconview_button_press_event_cb(GtkWidget *widget, GdkEventButton *event, GigoloWindow *window)
 {
 	if (event->button == 3)
 	{
-		SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+		GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 		GList *items;
 		gboolean have_sel;
 
@@ -772,10 +770,10 @@ static gboolean iconview_button_press_event_cb(GtkWidget *widget, GdkEventButton
 }
 
 
-static void action_bookmark_activate_cb(G_GNUC_UNUSED SionMenubuttonAction *action,
-										GtkWidget *item, SionWindow *window)
+static void action_bookmark_activate_cb(G_GNUC_UNUSED GigoloMenubuttonAction *action,
+										GtkWidget *item, GigoloWindow *window)
 {
-	SionBookmark *bm = g_object_get_data(G_OBJECT(item), "bookmark");
+	GigoloBookmark *bm = g_object_get_data(G_OBJECT(item), "bookmark");
 
 	mount_from_bookmark(window, bm, TRUE);
 }
@@ -783,19 +781,19 @@ static void action_bookmark_activate_cb(G_GNUC_UNUSED SionMenubuttonAction *acti
 
 static gint sort_bookmarks(gconstpointer a, gconstpointer b)
 {
-	SionBookmark *bm_a = SION_BOOKMARK(((GPtrArray*)a)->pdata);
-	SionBookmark *bm_b = SION_BOOKMARK(((GPtrArray*)b)->pdata);
-	const gchar *name_a = sion_bookmark_get_name(bm_a);
-	const gchar *name_b = sion_bookmark_get_name(bm_b);
+	GigoloBookmark *bm_a = GIGOLO_BOOKMARK(((GPtrArray*)a)->pdata);
+	GigoloBookmark *bm_b = GIGOLO_BOOKMARK(((GPtrArray*)b)->pdata);
+	const gchar *name_a = gigolo_bookmark_get_name(bm_a);
+	const gchar *name_b = gigolo_bookmark_get_name(bm_b);
 
 	return g_strcmp0(name_a, name_b);
 }
 
 
-void sion_window_update_bookmarks(SionWindow *window)
+void gigolo_window_update_bookmarks(GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
-	SionBookmarkList *bookmarks = sion_settings_get_bookmarks(priv->settings);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloBookmarkList *bookmarks = gigolo_settings_get_bookmarks(priv->settings);
 
 	/* sort the bookmarks */
 	g_ptr_array_sort(bookmarks, sort_bookmarks);
@@ -805,23 +803,23 @@ void sion_window_update_bookmarks(SionWindow *window)
 }
 
 
-gboolean sion_window_do_autoconnect(gpointer data)
+gboolean gigolo_window_do_autoconnect(gpointer data)
 {
-	SionWindow *window = SION_WINDOW(data);
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
-	SionBookmarkList *bookmarks = sion_settings_get_bookmarks(priv->settings);
+	GigoloWindow *window = GIGOLO_WINDOW(data);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloBookmarkList *bookmarks = gigolo_settings_get_bookmarks(priv->settings);
 	static gint old_interval = -1;
 	gint interval;
 	guint i;
 
-	interval = sion_settings_get_integer(priv->settings, "autoconnect-interval");
+	interval = gigolo_settings_get_integer(priv->settings, "autoconnect-interval");
 	if (old_interval != interval)
 	{
 		if (priv->autoconnect_timeout_id != (guint) -1)
 			remove_autoconnect_timeout(window);
 
 		priv->autoconnect_timeout_id = g_timeout_add_seconds(
-			interval, sion_window_do_autoconnect, data);
+			interval, gigolo_window_do_autoconnect, data);
 		old_interval = interval;
 	}
 
@@ -833,8 +831,8 @@ gboolean sion_window_do_autoconnect(gpointer data)
 
 	for (i = 0; i < bookmarks->len; i++)
 	{
-		SionBookmark *bm = g_ptr_array_index(bookmarks, i);
-		if (sion_bookmark_get_autoconnect(bm) && ! sion_bookmark_get_should_not_autoconnect(bm))
+		GigoloBookmark *bm = g_ptr_array_index(bookmarks, i);
+		if (gigolo_bookmark_get_autoconnect(bm) && ! gigolo_bookmark_get_should_not_autoconnect(bm))
 		{
 			mount_from_bookmark(window, bm, FALSE);
 		}
@@ -843,9 +841,9 @@ gboolean sion_window_do_autoconnect(gpointer data)
 }
 
 
-static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindow *window)
+static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
 
@@ -854,34 +852,34 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindo
 	{
 		gpointer mnt;
 
-		gtk_tree_model_get(model, &iter, SION_WINDOW_COL_REF, &mnt, -1);
-		if (sion_backend_gvfs_is_mount(mnt))
+		gtk_tree_model_get(model, &iter, GIGOLO_WINDOW_COL_REF, &mnt, -1);
+		if (gigolo_backend_gvfs_is_mount(mnt))
 		{
 			gchar *uri, *name;
 
-			sion_backend_gvfs_get_name_and_uri_from_mount(mnt, &name, &uri);
+			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, &name, &uri);
 
 			if (get_bookmark_from_uri(window, uri) == NULL)
 			{
-				SionBookmark *bm = sion_bookmark_new_from_uri(name, uri);
-				if (sion_bookmark_is_valid(bm))
+				GigoloBookmark *bm = gigolo_bookmark_new_from_uri(name, uri);
+				if (gigolo_bookmark_is_valid(bm))
 				{
 					GtkWidget *edit_dialog;
 
 					/* show the bookmark edit dialog and add the bookmark only if it was
 					 * not cancelled */
-					edit_dialog = sion_bookmark_edit_dialog_new_with_bookmark(
-						GTK_WINDOW(window), priv->settings, SION_BE_MODE_EDIT, bm);
-					if (sion_bookmark_edit_dialog_run(SION_BOOKMARK_EDIT_DIALOG(edit_dialog)) ==
+					edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(
+						GTK_WINDOW(window), priv->settings, GIGOLO_BE_MODE_EDIT, bm);
+					if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) ==
 						GTK_RESPONSE_OK)
 					{
 						/* this fills the values of the dialog into 'bm' */
 						g_object_set(edit_dialog, "bookmark-update", bm, NULL);
 
-						g_ptr_array_add(sion_settings_get_bookmarks(priv->settings),
+						g_ptr_array_add(gigolo_settings_get_bookmarks(priv->settings),
 							g_object_ref(bm));
-						sion_window_update_bookmarks(window);
-						sion_settings_write(priv->settings, SION_SETTINGS_BOOKMARKS);
+						gigolo_window_update_bookmarks(window);
+						gigolo_settings_write(priv->settings, GIGOLO_SETTINGS_BOOKMARKS);
 					}
 					gtk_widget_destroy(edit_dialog);
 				}
@@ -897,17 +895,17 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, SionWindo
 }
 
 
-static void sion_window_show_systray_icon(SionWindow *window, gboolean show)
+static void gigolo_window_show_systray_icon(GigoloWindow *window, gboolean show)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	gtk_status_icon_set_visible(priv->systray_icon, show);
 }
 
 
-static void sion_window_show_toolbar(SionWindow *window, gboolean show)
+static void gigolo_window_show_toolbar(GigoloWindow *window, gboolean show)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	if (show)
 		gtk_widget_show(priv->toolbar);
@@ -916,9 +914,9 @@ static void sion_window_show_toolbar(SionWindow *window, gboolean show)
 }
 
 
-static void sion_window_set_toolbar_style(SionWindow *window, gint style)
+static void gigolo_window_set_toolbar_style(GigoloWindow *window, gint style)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	if (style == -1)
 	{
 		g_object_get(gtk_widget_get_settings(GTK_WIDGET(window)), "gtk-toolbar-style", &style, NULL);
@@ -931,11 +929,11 @@ static void sion_window_set_toolbar_style(SionWindow *window, gint style)
 }
 
 
-static void sion_window_set_toolbar_orientation(SionWindow *window, gint orientation)
+static void gigolo_window_set_toolbar_orientation(GigoloWindow *window, gint orientation)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	sion_toolbar_set_orientation(GTK_TOOLBAR(priv->toolbar), orientation);
+	gigolo_toolbar_set_orientation(GTK_TOOLBAR(priv->toolbar), orientation);
 	if (orientation == GTK_ORIENTATION_HORIZONTAL && priv->vbox != gtk_widget_get_parent(priv->toolbar))
 	{
 		gtk_container_remove(GTK_CONTAINER(priv->hbox), priv->toolbar);
@@ -952,9 +950,9 @@ static void sion_window_set_toolbar_orientation(SionWindow *window, gint orienta
 }
 
 
-static void sion_window_set_view_mode(SionWindow *window, gint mode)
+static void gigolo_window_set_view_mode(GigoloWindow *window, gint mode)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	if (mode == VIEW_MODE_ICONVIEW && priv->hbox != gtk_widget_get_parent(priv->swin_iconview))
 	{
@@ -971,7 +969,7 @@ static void sion_window_set_view_mode(SionWindow *window, gint mode)
 }
 
 
-static void sion_window_settings_notify_cb(SionSettings *settings, GParamSpec *pspec, SionWindow *window)
+static void gigolo_window_settings_notify_cb(GigoloSettings *settings, GParamSpec *pspec, GigoloWindow *window)
 {
 	const gchar *name;
 	GValue *value;
@@ -982,15 +980,15 @@ static void sion_window_settings_notify_cb(SionSettings *settings, GParamSpec *p
 	g_object_get_property(G_OBJECT(settings), name, value);
 
 	if (name == g_intern_string("show-toolbar"))
-		sion_window_show_toolbar(window, g_value_get_boolean(value));
+		gigolo_window_show_toolbar(window, g_value_get_boolean(value));
 	else if (name == g_intern_string("show-in-systray"))
-		sion_window_show_systray_icon(window, g_value_get_boolean(value));
+		gigolo_window_show_systray_icon(window, g_value_get_boolean(value));
 	else if (name == g_intern_string("toolbar-style"))
-		sion_window_set_toolbar_style(window, g_value_get_int(value));
+		gigolo_window_set_toolbar_style(window, g_value_get_int(value));
 	else if (name == g_intern_string("toolbar-orientation"))
-		sion_window_set_toolbar_orientation(window, g_value_get_int(value));
+		gigolo_window_set_toolbar_orientation(window, g_value_get_int(value));
 	else if (name == g_intern_string("view-mode"))
-		sion_window_set_view_mode(window, g_value_get_int(value));
+		gigolo_window_set_view_mode(window, g_value_get_int(value));
 	else if (! g_object_class_find_property(G_OBJECT_GET_CLASS(settings), name))
 		 verbose("Unexpected setting '%s'", name);
 	g_value_unset(value);
@@ -998,10 +996,10 @@ static void sion_window_settings_notify_cb(SionSettings *settings, GParamSpec *p
 }
 
 
-static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
+static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 {
 	GError *error = NULL;
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	const gchar *ui_markup =
 	"<ui>"
 		"<menubar>"
@@ -1075,16 +1073,17 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 		{ "Open", GTK_STOCK_OPEN, NULL, "<Ctrl>o",
 			N_("Open the selection resource with a file manager"), G_CALLBACK(action_open_cb) },
 		{ "CopyURI", GTK_STOCK_COPY, N_("Copy URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
-		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Sion"), G_CALLBACK(action_quit_cb) },
+		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb) },
 		{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
 	};
 	const guint entries_n = G_N_ELEMENTS(entries);
 
 
-	priv->action_bookmarks = sion_menu_button_action_new(
+	priv->action_bookmarks = gigolo_menu_button_action_new(
 		"Bookmarks", _("_Bookmarks"), _("Choose a bookmark to connect to"),
-		sion_find_icon_name("bookmark-new", GTK_STOCK_EDIT));
-	g_signal_connect(priv->action_bookmarks, "item-clicked", G_CALLBACK(action_bookmark_activate_cb), window);
+		gigolo_find_icon_name("bookmark-new", GTK_STOCK_EDIT));
+	g_signal_connect(priv->action_bookmarks, "item-clicked",
+		G_CALLBACK(action_bookmark_activate_cb), window);
 	g_signal_connect(priv->action_bookmarks, "button-clicked", G_CALLBACK(action_mount_cb), window);
 
 	priv->action_group = gtk_action_group_new("UI");
@@ -1102,9 +1101,9 @@ static void create_ui_elements(SionWindow *window, GtkUIManager *ui_manager)
 }
 
 
-static void tree_mounted_col_toggled_cb(GtkCellRendererToggle *cell, gchar *pth, SionWindow *window)
+static void tree_mounted_col_toggled_cb(GtkCellRendererToggle *cell, gchar *pth, GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	GtkTreeSelection *selection;
 	GtkTreePath *path;
 
@@ -1122,20 +1121,20 @@ static void tree_mounted_col_toggled_cb(GtkCellRendererToggle *cell, gchar *pth,
 }
 
 
-static void create_tree_view(SionWindow *window)
+static void create_tree_view(GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
 	GtkTreeSelection *sel;
 
 	priv->treeview = gtk_tree_view_new();
 	gtk_widget_set_has_tooltip(priv->treeview, TRUE);
-	gtk_tree_view_set_tooltip_column(GTK_TREE_VIEW(priv->treeview), SION_WINDOW_COL_TOOLTIP);
+	gtk_tree_view_set_tooltip_column(GTK_TREE_VIEW(priv->treeview), GIGOLO_WINDOW_COL_TOOLTIP);
 	gtk_tree_view_set_headers_clickable(GTK_TREE_VIEW(priv->treeview), TRUE);
 	gtk_tree_view_set_enable_search(GTK_TREE_VIEW(priv->treeview), FALSE);
 	gtk_tree_sortable_set_sort_column_id(
-		GTK_TREE_SORTABLE(priv->store), SION_WINDOW_COL_NAME, GTK_SORT_ASCENDING);
+		GTK_TREE_SORTABLE(priv->store), GIGOLO_WINDOW_COL_NAME, GTK_SORT_ASCENDING);
 
 	sel = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview));
 	gtk_tree_selection_set_mode(sel, GTK_SELECTION_SINGLE);
@@ -1144,7 +1143,7 @@ static void create_tree_view(SionWindow *window)
 	{
 		renderer = gtk_cell_renderer_pixbuf_new();
 		column = gtk_tree_view_column_new_with_attributes(NULL, renderer,
-			"gicon", SION_WINDOW_COL_PIXBUF, NULL);
+			"gicon", GIGOLO_WINDOW_COL_PIXBUF, NULL);
 		gtk_tree_view_column_set_sort_indicator(column, FALSE);
 		gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
 		gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
@@ -1152,26 +1151,26 @@ static void create_tree_view(SionWindow *window)
 
 	renderer = gtk_cell_renderer_toggle_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Mounted"), renderer, "active", SION_WINDOW_COL_IS_MOUNTED, NULL);
+		_("Mounted"), renderer, "active", GIGOLO_WINDOW_COL_IS_MOUNTED, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
-	gtk_tree_view_column_set_sort_column_id(column, SION_WINDOW_COL_IS_MOUNTED);
+	gtk_tree_view_column_set_sort_column_id(column, GIGOLO_WINDOW_COL_IS_MOUNTED);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
 	g_signal_connect(renderer, "toggled", G_CALLBACK(tree_mounted_col_toggled_cb), window);
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Service Type"), renderer, "text", SION_WINDOW_COL_SCHEME, NULL);
+		_("Service Type"), renderer, "text", GIGOLO_WINDOW_COL_SCHEME, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
-	gtk_tree_view_column_set_sort_column_id(column, SION_WINDOW_COL_SCHEME);
+	gtk_tree_view_column_set_sort_column_id(column, GIGOLO_WINDOW_COL_SCHEME);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Name"), renderer, "text", SION_WINDOW_COL_NAME, NULL);
+		_("Name"), renderer, "text", GIGOLO_WINDOW_COL_NAME, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
-	gtk_tree_view_column_set_sort_column_id(column, SION_WINDOW_COL_NAME);
+	gtk_tree_view_column_set_sort_column_id(column, GIGOLO_WINDOW_COL_NAME);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
 
@@ -1184,14 +1183,14 @@ static void create_tree_view(SionWindow *window)
 }
 
 
-static void create_icon_view(SionWindow *window)
+static void create_icon_view(GigoloWindow *window)
 {
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	GtkCellRenderer *renderer;
 
 	priv->iconview = gtk_icon_view_new();
 	gtk_widget_set_has_tooltip(priv->iconview, TRUE);
-	gtk_icon_view_set_tooltip_column(GTK_ICON_VIEW(priv->iconview), SION_WINDOW_COL_TOOLTIP);
+	gtk_icon_view_set_tooltip_column(GTK_ICON_VIEW(priv->iconview), GIGOLO_WINDOW_COL_TOOLTIP);
 	gtk_icon_view_set_selection_mode(GTK_ICON_VIEW(priv->iconview), GTK_SELECTION_SINGLE);
 	gtk_icon_view_set_spacing(GTK_ICON_VIEW(priv->iconview), 3);
 	gtk_icon_view_set_column_spacing(GTK_ICON_VIEW(priv->iconview), 30);
@@ -1206,39 +1205,42 @@ static void create_icon_view(SionWindow *window)
 	gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(priv->iconview), renderer, FALSE);
 	if (gtk_check_version(2, 14, 0) == NULL)
 		gtk_cell_layout_add_attribute(GTK_CELL_LAYOUT(priv->iconview), renderer,
-			"gicon", SION_WINDOW_COL_PIXBUF);
+			"gicon", GIGOLO_WINDOW_COL_PIXBUF);
 	else
 		gtk_cell_layout_add_attribute(GTK_CELL_LAYOUT(priv->iconview), renderer,
-			"icon-name", SION_WINDOW_COL_ICON_NAME);
+			"icon-name", GIGOLO_WINDOW_COL_ICON_NAME);
 
 	renderer = gtk_cell_renderer_text_new();
 	g_object_set(renderer, "xalign", 0.5, "yalign", 1.0, NULL);
 	gtk_cell_layout_pack_end(GTK_CELL_LAYOUT(priv->iconview), renderer, TRUE);
 	gtk_cell_layout_set_attributes(GTK_CELL_LAYOUT(priv->iconview), renderer,
-		"text", SION_WINDOW_COL_NAME, NULL);
+		"text", GIGOLO_WINDOW_COL_NAME, NULL);
 
 	gtk_icon_view_set_model(GTK_ICON_VIEW(priv->iconview), GTK_TREE_MODEL(priv->store));
 
-	g_signal_connect(priv->iconview, "selection-changed", G_CALLBACK(iconview_selection_changed_cb), window);
-	g_signal_connect(priv->iconview, "button-press-event", G_CALLBACK(iconview_button_press_event_cb), window);
-	g_signal_connect(priv->iconview, "item-activated", G_CALLBACK(iconview_item_activated_cb), window);
+	g_signal_connect(priv->iconview, "selection-changed",
+		G_CALLBACK(iconview_selection_changed_cb), window);
+	g_signal_connect(priv->iconview, "button-press-event",
+		G_CALLBACK(iconview_button_press_event_cb), window);
+	g_signal_connect(priv->iconview, "item-activated",
+		G_CALLBACK(iconview_item_activated_cb), window);
 }
 
 
-static void sion_window_init(SionWindow *window)
+static void gigolo_window_init(GigoloWindow *window)
 {
 	GtkWidget *menubar;
 	GtkUIManager *ui_manager;
-	SionWindowPrivate *priv = SION_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	priv->autoconnect_timeout_id = (guint) -1;
 
-	gtk_window_set_title(GTK_WINDOW(window), _("Sion"));
-	gtk_window_set_icon_name(GTK_WINDOW(window), sion_get_application_icon_name());
+	gtk_window_set_title(GTK_WINDOW(window), _("Gigolo"));
+	gtk_window_set_icon_name(GTK_WINDOW(window), gigolo_get_application_icon_name());
 	gtk_window_set_default_size(GTK_WINDOW(window), 550, 350);
 
 	/* Init liststore */
-	priv->store = gtk_list_store_new(SION_WINDOW_N_COLUMNS,
+	priv->store = gtk_list_store_new(GIGOLO_WINDOW_N_COLUMNS,
 		G_TYPE_BOOLEAN, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER,
 		G_TYPE_INT, G_TYPE_ICON, G_TYPE_STRING, G_TYPE_STRING);
 
@@ -1258,7 +1260,7 @@ static void sion_window_init(SionWindow *window)
 	gtk_container_add(GTK_CONTAINER(priv->swin_iconview), priv->iconview);
 
 	/* Init the GVfs backend */
-	priv->backend_gvfs = sion_backend_gvfs_new(priv->store);
+	priv->backend_gvfs = gigolo_backend_gvfs_new(priv->store);
 	g_signal_connect(priv->backend_gvfs, "mounts-changed", G_CALLBACK(mounts_changed_cb), window);
 	g_signal_connect(priv->backend_gvfs, "operation-failed",
 		G_CALLBACK(mount_operation_failed_cb), window);
@@ -1284,13 +1286,6 @@ static void sion_window_init(SionWindow *window)
 	priv->action_open = gtk_action_group_get_action(priv->action_group, "Open");
 	priv->action_copyuri = gtk_action_group_get_action(priv->action_group, "CopyURI");
 
-	/* Set the is-important property for some toolbar actions */
-/*
-	g_object_set(gtk_action_group_get_action(priv->action_group, "EditBookmarks"), "is-important", TRUE, NULL);
-	g_object_set(priv->action_connect, "is-important", TRUE, NULL);
-	g_object_set(priv->action_disconnect, "is-important", TRUE, NULL);
-	g_object_set(priv->action_bookmarks, "is-important", TRUE, NULL);
-*/
 	/* Pack the widgets altogether */
 	priv->vbox = gtk_vbox_new(FALSE, 0);
 	priv->hbox = gtk_hbox_new(FALSE, 0);
@@ -1308,8 +1303,8 @@ static void sion_window_init(SionWindow *window)
 	gtk_widget_show_all(priv->swin_treeview);
 
 	/* Status icon */
-	priv->systray_icon = gtk_status_icon_new_from_icon_name(sion_get_application_icon_name());
-	sion_status_icon_set_tooltip_text(priv->systray_icon, _("Sion"));
+	priv->systray_icon = gtk_status_icon_new_from_icon_name(gigolo_get_application_icon_name());
+	gigolo_status_icon_set_tooltip_text(priv->systray_icon, _("Gigolo"));
 	g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
 	g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 
@@ -1318,29 +1313,33 @@ static void sion_window_init(SionWindow *window)
 
 
 
-GtkWidget *sion_window_new(SionSettings *settings)
+GtkWidget *gigolo_window_new(GigoloSettings *settings)
 {
 	GtkWidget *window;
-	SionWindowPrivate *priv;
+	GigoloWindowPrivate *priv;
 	const gint *geo;
 
-	window = g_object_new(SION_WINDOW_TYPE, NULL);
-	priv = SION_WINDOW_GET_PRIVATE(window);
+	window = g_object_new(GIGOLO_WINDOW_TYPE, NULL);
+	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	priv->settings = settings;
-	g_signal_connect(settings, "notify", G_CALLBACK(sion_window_settings_notify_cb), window);
+	g_signal_connect(settings, "notify", G_CALLBACK(gigolo_window_settings_notify_cb), window);
 
 	g_object_set(priv->action_bookmarks, "settings", settings, NULL);
 
-	sion_window_show_systray_icon(SION_WINDOW(window), sion_settings_get_boolean(settings, "show-in-systray"));
-	sion_window_show_toolbar(SION_WINDOW(window), sion_settings_get_boolean(settings, "show-toolbar"));
-	sion_window_set_toolbar_style(SION_WINDOW(window), sion_settings_get_integer(settings, "toolbar-style"));
-	sion_window_set_toolbar_orientation(SION_WINDOW(window),
-		sion_settings_get_integer(settings, "toolbar-orientation"));
-	sion_window_set_view_mode(SION_WINDOW(window), sion_settings_get_integer(settings, "view-mode"));
+	gigolo_window_show_systray_icon(GIGOLO_WINDOW(window),
+		gigolo_settings_get_boolean(settings, "show-in-systray"));
+	gigolo_window_show_toolbar(GIGOLO_WINDOW(window),
+		gigolo_settings_get_boolean(settings, "show-toolbar"));
+	gigolo_window_set_toolbar_style(GIGOLO_WINDOW(window),
+		gigolo_settings_get_integer(settings, "toolbar-style"));
+	gigolo_window_set_toolbar_orientation(GIGOLO_WINDOW(window),
+		gigolo_settings_get_integer(settings, "toolbar-orientation"));
+	gigolo_window_set_view_mode(GIGOLO_WINDOW(window),
+		gigolo_settings_get_integer(settings, "view-mode"));
 
-	if (sion_settings_get_boolean(settings, "save-geometry"))
+	if (gigolo_settings_get_boolean(settings, "save-geometry"))
 	{
-		geo = sion_settings_get_geometry(settings);
+		geo = gigolo_settings_get_geometry(settings);
 		if (geo != NULL && *geo != -1)
 		{
 			gtk_window_move(GTK_WINDOW(window), geo[0], geo[1]);
@@ -1350,9 +1349,9 @@ GtkWidget *sion_window_new(SionSettings *settings)
 		}
 	}
 
-	mounts_changed_cb(NULL, SION_WINDOW(window));
-	sion_window_update_bookmarks(SION_WINDOW(window));
-	sion_window_do_autoconnect(SION_WINDOW(window));
+	mounts_changed_cb(NULL, GIGOLO_WINDOW(window));
+	gigolo_window_update_bookmarks(GIGOLO_WINDOW(window));
+	gigolo_window_do_autoconnect(GIGOLO_WINDOW(window));
 
 	return window;
 }

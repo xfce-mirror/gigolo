@@ -23,35 +23,35 @@
 
 G_BEGIN_DECLS
 
-#define SION_PASSWORD_DIALOG_TYPE				(sion_password_dialog_get_type())
-#define SION_PASSWORD_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			SION_PASSWORD_DIALOG_TYPE, SionPasswordDialog))
-#define SION_PASSWORD_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			SION_PASSWORD_DIALOG_TYPE, SionPasswordDialogClass))
-#define IS_SION_PASSWORD_DIALOG(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			SION_PASSWORD_DIALOG_TYPE))
-#define IS_SION_PASSWORD_DIALOG_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			SION_PASSWORD_DIALOG_TYPE))
+#define GIGOLO_PASSWORD_DIALOG_TYPE				(gigolo_password_dialog_get_type())
+#define GIGOLO_PASSWORD_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+			GIGOLO_PASSWORD_DIALOG_TYPE, GigoloPasswordDialog))
+#define GIGOLO_PASSWORD_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
+			GIGOLO_PASSWORD_DIALOG_TYPE, GigoloPasswordDialogClass))
+#define IS_GIGOLO_PASSWORD_DIALOG(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
+			GIGOLO_PASSWORD_DIALOG_TYPE))
+#define IS_GIGOLO_PASSWORD_DIALOG_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
+			GIGOLO_PASSWORD_DIALOG_TYPE))
 
-typedef struct _SionPasswordDialog			SionPasswordDialog;
-typedef struct _SionPasswordDialogClass		SionPasswordDialogClass;
+typedef struct _GigoloPasswordDialog			GigoloPasswordDialog;
+typedef struct _GigoloPasswordDialogClass		GigoloPasswordDialogClass;
 
-struct _SionPasswordDialog
+struct _GigoloPasswordDialog
 {
 	GtkDialog parent;
 };
 
-struct _SionPasswordDialogClass
+struct _GigoloPasswordDialogClass
 {
 	GtkDialogClass parent_class;
 };
 
-GType			sion_password_dialog_get_type		(void);
-GtkWidget*		sion_password_dialog_new			(GAskPasswordFlags flags, const gchar *user, const gchar *domain);
+GType			gigolo_password_dialog_get_type		(void);
+GtkWidget*		gigolo_password_dialog_new			(GAskPasswordFlags flags, const gchar *user, const gchar *domain);
 
-const gchar*	sion_password_dialog_get_domain		(SionPasswordDialog *dialog);
-const gchar*	sion_password_dialog_get_username	(SionPasswordDialog *dialog);
-const gchar*	sion_password_dialog_get_password	(SionPasswordDialog *dialog);
+const gchar*	gigolo_password_dialog_get_domain	(GigoloPasswordDialog *dialog);
+const gchar*	gigolo_password_dialog_get_username	(GigoloPasswordDialog *dialog);
+const gchar*	gigolo_password_dialog_get_password	(GigoloPasswordDialog *dialog);
 
 G_END_DECLS
 

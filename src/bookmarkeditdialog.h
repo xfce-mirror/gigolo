@@ -23,41 +23,46 @@
 
 G_BEGIN_DECLS
 
-#define SION_BOOKMARK_EDIT_DIALOG_TYPE				(sion_bookmark_edit_dialog_get_type())
-#define SION_BOOKMARK_EDIT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			SION_BOOKMARK_EDIT_DIALOG_TYPE, SionBookmarkEditDialog))
-#define SION_BOOKMARK_EDIT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			SION_BOOKMARK_EDIT_DIALOG_TYPE, SionBookmarkEditDialogClass))
-#define IS_SION_BOOKMARK_EDIT_DIALOG(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			SION_BOOKMARK_EDIT_DIALOG_TYPE))
-#define IS_SION_BOOKMARK_EDIT_DIALOG_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			SION_BOOKMARK_EDIT_DIALOG_TYPE))
+#define GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE				(gigolo_bookmark_edit_dialog_get_type())
+#define GIGOLO_BOOKMARK_EDIT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE, GigoloBookmarkEditDialog))
+#define GIGOLO_BOOKMARK_EDIT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
+			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE, GigoloBookmarkEditDialogClass))
+#define IS_GIGOLO_BOOKMARK_EDIT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
+			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE))
+#define IS_GIGOLO_BOOKMARK_EDIT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass),\
+			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE))
 
-typedef struct _SionBookmarkEditDialog				SionBookmarkEditDialog;
-typedef struct _SionBookmarkEditDialogClass			SionBookmarkEditDialogClass;
+typedef struct _GigoloBookmarkEditDialog				GigoloBookmarkEditDialog;
+typedef struct _GigoloBookmarkEditDialogClass			GigoloBookmarkEditDialogClass;
 
 
 typedef enum
 {
-	SION_BE_MODE_CREATE,
-	SION_BE_MODE_EDIT,
-	SION_BE_MODE_CONNECT
-} SionBookmarkEditDialogMode;
+	GIGOLO_BE_MODE_CREATE,
+	GIGOLO_BE_MODE_EDIT,
+	GIGOLO_BE_MODE_CONNECT
+} GigoloBookmarkEditDialogMode;
 
-struct _SionBookmarkEditDialog
+struct _GigoloBookmarkEditDialog
 {
 	GtkDialog parent;
 };
 
-struct _SionBookmarkEditDialogClass
+struct _GigoloBookmarkEditDialogClass
 {
 	GtkDialogClass parent_class;
 };
 
-GType		sion_bookmark_edit_dialog_get_type			(void);
-GtkWidget*	sion_bookmark_edit_dialog_new				(GtkWindow *parent, SionSettings *settings, SionBookmarkEditDialogMode mode);
-GtkWidget*	sion_bookmark_edit_dialog_new_with_bookmark	(GtkWindow *parent, SionSettings *settings, SionBookmarkEditDialogMode, SionBookmark *bookmark);
-gint		sion_bookmark_edit_dialog_run				(SionBookmarkEditDialog *dialog);
+GType		gigolo_bookmark_edit_dialog_get_type			(void);
+GtkWidget*	gigolo_bookmark_edit_dialog_new					(GtkWindow *parent,
+															 GigoloSettings *settings,
+															 GigoloBookmarkEditDialogMode mode);
+GtkWidget*	gigolo_bookmark_edit_dialog_new_with_bookmark	(GtkWindow *parent,
+															 GigoloSettings *settings,
+															 GigoloBookmarkEditDialogMode,
+															 GigoloBookmark *bookmark);
+gint		gigolo_bookmark_edit_dialog_run					(GigoloBookmarkEditDialog *dialog);
 
 G_END_DECLS
 

@@ -9,15 +9,15 @@ EXTRA_DIST =					\
 	wscript						\
 	waf							\
 	README.I18N					\
-	sion.desktop.in				\
+	gigolo.desktop.in			\
 	intltool-extract.in			\
 	intltool-merge.in			\
 	intltool-update.in
 
 
 DISTCLEANFILES =				\
-	sion.1						\
-	sion.desktop				\
+	gigolo.1					\
+	gigolo.desktop				\
 	intltool-extract			\
 	intltool-merge				\
 	intltool-update
@@ -35,9 +35,9 @@ uninstall-local:
 	done
 
 
-man_MANS=sion.1
+man_MANS=gigolo.1
 
 desktopdir = $(datadir)/applications
-desktop_in_files = sion.desktop
+desktop_in_files = gigolo.desktop
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@

@@ -1,7 +1,7 @@
 
-bin_PROGRAMS = sion
+bin_PROGRAMS = gigolo
 
-sion_SOURCES = 									\
+gigolo_SOURCES = 								\
 	main.c main.h								\
 	compat.c compat.h							\
 	common.c common.h							\
@@ -22,4 +22,4 @@ AM_CFLAGS = -DLOCALEDIR=\""$(localedir)"\"
 
 INCLUDES = @GTK_CFLAGS@
 
-sion_LDADD = @GTK_LIBS@ $(INTLLIBS)
+gigolo_LDADD = @GTK_LIBS@ $(INTLLIBS)

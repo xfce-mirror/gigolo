@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-_Name=Sion
-_GenericName=Sion
+_Name=Gigolo
+_GenericName=Gigolo
 _Comment=A simple frontend to easily connect to remote filesystems
-Exec=sion
+Exec=gigolo
 Icon=gtk-network
 Terminal=false
 Categories=System;GTK;Filesystem;

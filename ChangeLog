@@ -1,3 +1,10 @@
+2009-01-31  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * *.*:
+   Change application name to 'Gigolo'.
+   Rename everything to 'Gigolo'.
+
+
 2009-01-26  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/window.c:

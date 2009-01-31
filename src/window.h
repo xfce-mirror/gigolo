@@ -23,34 +23,34 @@
 
 G_BEGIN_DECLS
 
-#define SION_WINDOW_TYPE				(sion_window_get_type())
-#define SION_WINDOW(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-		SION_WINDOW_TYPE, SionWindow))
-#define SION_WINDOW_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-		SION_WINDOW_TYPE, SionWindowClass))
-#define IS_SION_WINDOW(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj), SION_WINDOW_TYPE))
-#define IS_SION_WINDOW_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass), SION_WINDOW_TYPE))
+#define GIGOLO_WINDOW_TYPE					(gigolo_window_get_type())
+#define GIGOLO_WINDOW(obj)					(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+		GIGOLO_WINDOW_TYPE, GigoloWindow))
+#define GIGOLO_WINDOW_CLASS(klass)			(G_TYPE_CHECK_CLASS_CAST((klass),\
+		GIGOLO_WINDOW_TYPE, GigoloWindowClass))
+#define IS_GIGOLO_WINDOW(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj), GIGOLO_WINDOW_TYPE))
+#define IS_GIGOLO_WINDOW_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass), GIGOLO_WINDOW_TYPE))
 
 
 
-typedef struct _SionWindow				SionWindow;
-typedef struct _SionWindowClass			SionWindowClass;
+typedef struct _GigoloWindow				GigoloWindow;
+typedef struct _GigoloWindowClass			GigoloWindowClass;
 
-struct _SionWindow
+struct _GigoloWindow
 {
 	GtkWindow parent;
 };
 
-struct _SionWindowClass
+struct _GigoloWindowClass
 {
 	GtkWindowClass parent_class;
 };
 
-GType		sion_window_get_type			(void);
-GtkWidget*	sion_window_new					(SionSettings *settings);
+GType		gigolo_window_get_type			(void);
+GtkWidget*	gigolo_window_new				(GigoloSettings *settings);
 
-void		sion_window_update_bookmarks	(SionWindow *window);
-gboolean 	sion_window_do_autoconnect	(gpointer data);
+void		gigolo_window_update_bookmarks	(GigoloWindow *window);
+gboolean 	gigolo_window_do_autoconnect	(gpointer data);
 
 
 G_END_DECLS

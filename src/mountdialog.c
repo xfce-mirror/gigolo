@@ -29,74 +29,74 @@
 #include "mountdialog.h"
 
 
-typedef struct _SionMountDialogPrivate			SionMountDialogPrivate;
+typedef struct _GigoloMountDialogPrivate			GigoloMountDialogPrivate;
 
-#define SION_MOUNT_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			SION_MOUNT_DIALOG_TYPE, SionMountDialogPrivate))
+#define GIGOLO_MOUNT_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
+			GIGOLO_MOUNT_DIALOG_TYPE, GigoloMountDialogPrivate))
 
-struct _SionMountDialog
+struct _GigoloMountDialog
 {
 	GtkDialog parent;
 };
 
-struct _SionMountDialogClass
+struct _GigoloMountDialogClass
 {
 	GtkDialogClass parent_class;
 };
 
-struct _SionMountDialogPrivate
+struct _GigoloMountDialogPrivate
 {
 	GtkWidget *label;
 	guint timer_id;
 };
 
-static void sion_mount_dialog_class_init			(SionMountDialogClass *klass);
-static void sion_mount_dialog_init      			(SionMountDialog *self);
-static void sion_mount_dialog_destroy				(GtkObject *widget);
+static void gigolo_mount_dialog_class_init			(GigoloMountDialogClass *klass);
+static void gigolo_mount_dialog_init      			(GigoloMountDialog *self);
+static void gigolo_mount_dialog_destroy				(GtkObject *widget);
 
 /* Local data */
 static GtkDialogClass *parent_class = NULL;
 
-GType sion_mount_dialog_get_type(void)
+GType gigolo_mount_dialog_get_type(void)
 {
 	static GType self_type = 0;
 	if (! self_type)
 	{
 		static const GTypeInfo self_info =
 		{
-			sizeof(SionMountDialogClass),
+			sizeof(GigoloMountDialogClass),
 			NULL, /* base_init */
 			NULL, /* base_finalize */
-			(GClassInitFunc)sion_mount_dialog_class_init,
+			(GClassInitFunc)gigolo_mount_dialog_class_init,
 			NULL, /* class_finalize */
 			NULL, /* class_data */
-			sizeof(SionMountDialog),
+			sizeof(GigoloMountDialog),
 			0,
-			(GInstanceInitFunc)sion_mount_dialog_init,
+			(GInstanceInitFunc)gigolo_mount_dialog_init,
 			NULL /* value_table */
 		};
 
-		self_type = g_type_register_static(GTK_TYPE_DIALOG, "SionMountDialog", &self_info, 0);
+		self_type = g_type_register_static(GTK_TYPE_DIALOG, "GigoloMountDialog", &self_info, 0);
 	}
 
 	return self_type;
 }
 
 
-static void sion_mount_dialog_class_init(SionMountDialogClass *klass)
+static void gigolo_mount_dialog_class_init(GigoloMountDialogClass *klass)
 {
 	GtkObjectClass *object_class = GTK_OBJECT_CLASS(klass);
 
-	object_class->destroy = sion_mount_dialog_destroy;
+	object_class->destroy = gigolo_mount_dialog_destroy;
 
 	parent_class = (GtkDialogClass*)g_type_class_peek(GTK_TYPE_DIALOG);
-	g_type_class_add_private((gpointer)klass, sizeof(SionMountDialogPrivate));
+	g_type_class_add_private((gpointer)klass, sizeof(GigoloMountDialogPrivate));
 }
 
 
-static void sion_mount_dialog_destroy(GtkObject *widget)
+static void gigolo_mount_dialog_destroy(GtkObject *widget)
 {
-	SionMountDialogPrivate *priv = SION_MOUNT_DIALOG_GET_PRIVATE(widget);
+	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(widget);
 
 	if (priv->timer_id != (guint) -1)
 	{
@@ -116,10 +116,10 @@ static gboolean do_pulse(gpointer data)
 }
 
 
-static void sion_mount_dialog_init(SionMountDialog *self)
+static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 {
 	GtkWidget *vbox, *progress;
-	SionMountDialogPrivate *priv = SION_MOUNT_DIALOG_GET_PRIVATE(self);
+	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(self);
 
 	priv->timer_id = (guint) -1;
 
@@ -130,7 +130,7 @@ static void sion_mount_dialog_init(SionMountDialog *self)
 
 	vbox = gtk_vbox_new(FALSE, 0);
 	gtk_container_set_border_width(GTK_CONTAINER(vbox), 5);
-	gtk_container_add(GTK_CONTAINER(sion_dialog_get_content_area(GTK_DIALOG(self))), vbox);
+	gtk_container_add(GTK_CONTAINER(gigolo_dialog_get_content_area(GTK_DIALOG(self))), vbox);
 
 	priv->label = gtk_label_new(NULL);
 	gtk_misc_set_alignment(GTK_MISC(priv->label), 0.1, 0.5);
@@ -143,13 +143,13 @@ static void sion_mount_dialog_init(SionMountDialog *self)
 }
 
 
-GtkWidget *sion_mount_dialog_new(GtkWindow *parent, const gchar *label)
+GtkWidget *gigolo_mount_dialog_new(GtkWindow *parent, const gchar *label)
 {
-	GtkWidget *dialog = g_object_new(SION_MOUNT_DIALOG_TYPE,
+	GtkWidget *dialog = g_object_new(GIGOLO_MOUNT_DIALOG_TYPE,
 		"transient-for", parent,
-		"icon-name", sion_get_application_icon_name(),
+		"icon-name", gigolo_get_application_icon_name(),
 		NULL);
-	SionMountDialogPrivate *priv = SION_MOUNT_DIALOG_GET_PRIVATE(dialog);
+	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(dialog);
 
 	gtk_label_set_text(GTK_LABEL(priv->label), label);
 

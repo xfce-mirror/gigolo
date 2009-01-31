@@ -19,7 +19,12 @@
 
 #include "config.h"
 
+#include <gtk/gtk.h>
 #include <glib-object.h>
+#include <glib/gstdio.h>
+#include <glib/gi18n.h>
+#include <errno.h>
+#include <stdlib.h>
 #include <string.h>
 
 #include "settings.h"
@@ -28,12 +33,12 @@
 #include "main.h"
 
 
-typedef struct _SionSettingsPrivate			SionSettingsPrivate;
+typedef struct _GigoloSettingsPrivate			GigoloSettingsPrivate;
 
-#define SION_SETTINGS_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-		SION_SETTINGS_TYPE, SionSettingsPrivate))
+#define GIGOLO_SETTINGS_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
+		GIGOLO_SETTINGS_TYPE, GigoloSettingsPrivate))
 
-struct _SionSettingsPrivate
+struct _GigoloSettingsPrivate
 {
 	gchar		*config_path;
 	gchar		*config_filename;
@@ -52,12 +57,12 @@ struct _SionSettingsPrivate
 	gchar		*vm_impl; /* GVolumeMonitor implementation to use */
 	gint		*geometry; /* window size and position, field 4 is a flag for maximized state */
 
-	SionBookmarkList *bookmarks; /* array of known bookmarks */
+	GigoloBookmarkList *bookmarks; /* array of known bookmarks */
 };
 
-static void sion_settings_class_init		(SionSettingsClass *klass);
-static void sion_settings_init				(SionSettings *self);
-static void sion_settings_finalize			(GObject* object);
+static void gigolo_settings_class_init			(GigoloSettingsClass *klass);
+static void gigolo_settings_init				(GigoloSettings *self);
+static void gigolo_settings_finalize			(GObject* object);
 
 static GObjectClass *parent_class = NULL;
 
@@ -86,35 +91,35 @@ enum
 };
 
 
-GType sion_settings_get_type(void)
+GType gigolo_settings_get_type(void)
 {
 	static GType self_type = 0;
 	if (! self_type)
 	{
 		static const GTypeInfo self_info =
 		{
-			sizeof(SionSettingsClass),
+			sizeof(GigoloSettingsClass),
 			NULL, /* base_init */
 			NULL, /* base_finalize */
-			(GClassInitFunc)sion_settings_class_init,
+			(GClassInitFunc)gigolo_settings_class_init,
 			NULL, /* class_finalize */
 			NULL, /* class_data */
-			sizeof(SionSettings),
+			sizeof(GigoloSettings),
 			0,
-			(GInstanceInitFunc)sion_settings_init,
+			(GInstanceInitFunc)gigolo_settings_init,
 			NULL /* value_table */
 		};
 
-		self_type = g_type_register_static(G_TYPE_OBJECT, "SionSettings", &self_info, 0);
+		self_type = g_type_register_static(G_TYPE_OBJECT, "GigoloSettings", &self_info, 0);
 	}
 
 	return self_type;
 }
 
 
-static void sion_settings_set_property(GObject *object, guint prop_id, const GValue *value, GParamSpec *pspec)
+static void gigolo_settings_set_property(GObject *object, guint prop_id, const GValue *value, GParamSpec *pspec)
 {
-	SionSettingsPrivate *priv = SION_SETTINGS_GET_PRIVATE(object);
+	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(object);
 
 	switch (prop_id)
 	{
@@ -153,9 +158,9 @@ static void sion_settings_set_property(GObject *object, guint prop_id, const GVa
 }
 
 
-static void sion_settings_get_property(GObject *object, guint prop_id, GValue *value, GParamSpec *pspec)
+static void gigolo_settings_get_property(GObject *object, guint prop_id, GValue *value, GParamSpec *pspec)
 {
-	SionSettingsPrivate *priv = SION_SETTINGS_GET_PRIVATE(object);
+	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(object);
 
 	switch (prop_id)
 	{
@@ -195,15 +200,15 @@ static void sion_settings_get_property(GObject *object, guint prop_id, GValue *v
 }
 
 
-static void sion_settings_class_init(SionSettingsClass *klass)
+static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS(klass);
-	gobject_class->finalize = sion_settings_finalize;
-	gobject_class->get_property = sion_settings_get_property;
-	gobject_class->set_property = sion_settings_set_property;
+	gobject_class->finalize = gigolo_settings_finalize;
+	gobject_class->get_property = gigolo_settings_get_property;
+	gobject_class->set_property = gigolo_settings_set_property;
 
 	parent_class = (GObjectClass*)g_type_class_peek(G_TYPE_OBJECT);
-	g_type_class_add_private((gpointer)klass, sizeof(SionSettingsPrivate));
+	g_type_class_add_private((gpointer)klass, sizeof(GigoloSettingsPrivate));
 
 	g_object_class_install_property(gobject_class,
 									PROP_SAVE_GEOMETRY,
@@ -376,10 +381,10 @@ static void write_data(GKeyFile *k, const gchar *filename)
 }
 
 
-static void write_settings_config(SionSettings *settings)
+static void write_settings_config(GigoloSettings *settings)
 {
 	GKeyFile *k;
-	SionSettingsPrivate *priv = SION_SETTINGS_GET_PRIVATE(settings);
+	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
 
 	if (! g_file_test(priv->config_path, G_FILE_TEST_IS_DIR))
 		g_mkdir_with_parents(priv->config_path, 0700);
@@ -408,34 +413,34 @@ static void write_settings_config(SionSettings *settings)
 }
 
 
-static void write_settings_bookmarks(SionSettings *settings)
+static void write_settings_bookmarks(GigoloSettings *settings)
 {
 	GKeyFile *k;
 	const gchar *name;
 	gsize i;
-	SionBookmark *bm;
-	SionBookmarkList *bml;
-	SionSettingsPrivate *priv = SION_SETTINGS_GET_PRIVATE(settings);
+	GigoloBookmark *bm;
+	GigoloBookmarkList *bml;
+	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
 
 	if (! g_file_test(priv->config_path, G_FILE_TEST_IS_DIR))
 		g_mkdir_with_parents(priv->config_path, 0700);
 
 	k = g_key_file_new();
 
-	bml = sion_settings_get_bookmarks(settings);
+	bml = gigolo_settings_get_bookmarks(settings);
 	for (i = 0; i < bml->len; i++)
 	{
 		bm = g_ptr_array_index(bml, i);
-		if (IS_SION_BOOKMARK(bm))
+		if (IS_GIGOLO_BOOKMARK(bm))
 		{
-			name = sion_bookmark_get_name(bm);
-			set_setting_string(k, name, "host", sion_bookmark_get_host(bm));
-			set_setting_string(k, name, "user", sion_bookmark_get_user(bm));
-			set_setting_string(k, name, "scheme", sion_bookmark_get_scheme(bm));
-			set_setting_string(k, name, "share", sion_bookmark_get_share(bm));
-			set_setting_string(k, name, "domain", sion_bookmark_get_domain(bm));
-			set_setting_int(k, name, "port", sion_bookmark_get_port(bm));
-			set_setting_int(k, name, "autoconnect", sion_bookmark_get_autoconnect(bm));
+			name = gigolo_bookmark_get_name(bm);
+			set_setting_string(k, name, "host", gigolo_bookmark_get_host(bm));
+			set_setting_string(k, name, "user", gigolo_bookmark_get_user(bm));
+			set_setting_string(k, name, "scheme", gigolo_bookmark_get_scheme(bm));
+			set_setting_string(k, name, "share", gigolo_bookmark_get_share(bm));
+			set_setting_string(k, name, "domain", gigolo_bookmark_get_domain(bm));
+			set_setting_int(k, name, "port", gigolo_bookmark_get_port(bm));
+			set_setting_int(k, name, "autoconnect", gigolo_bookmark_get_autoconnect(bm));
 		}
 	}
 
@@ -445,22 +450,23 @@ static void write_settings_bookmarks(SionSettings *settings)
 }
 
 
-void sion_settings_write(SionSettings *settings, SionSettingsFlags flags)
+void gigolo_settings_write(GigoloSettings *settings, GigoloSettingsFlags flags)
 {
 	g_return_if_fail(settings != NULL);
 
-	if (flags & SION_SETTINGS_PREFERENCES)
+	if (flags & GIGOLO_SETTINGS_PREFERENCES)
 		write_settings_config(settings);
-	if (flags & SION_SETTINGS_BOOKMARKS)
+	if (flags & GIGOLO_SETTINGS_BOOKMARKS)
 		write_settings_bookmarks(settings);
 }
 
 
-static void sion_settings_finalize(GObject* object)
+static void gigolo_settings_finalize(GObject* object)
 {
-	SionSettingsPrivate *priv = SION_SETTINGS_GET_PRIVATE(object);
+	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(object);
 
-	sion_settings_write(SION_SETTINGS(object), SION_SETTINGS_PREFERENCES | SION_SETTINGS_BOOKMARKS);
+	gigolo_settings_write(GIGOLO_SETTINGS(object),
+		GIGOLO_SETTINGS_PREFERENCES | GIGOLO_SETTINGS_BOOKMARKS);
 
 	g_free(priv->vm_impl);
 	g_free(priv->geometry);
@@ -476,7 +482,7 @@ static void sion_settings_finalize(GObject* object)
 }
 
 
-static void load_settings_read_config(SionSettingsPrivate *priv)
+static void load_settings_read_config(GigoloSettingsPrivate *priv)
 {
 	GKeyFile *k;
 	GError *error = NULL;
@@ -527,7 +533,7 @@ static void load_settings_read_config(SionSettingsPrivate *priv)
 }
 
 
-static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
+static void load_settings_read_bookmarks(GigoloSettingsPrivate *priv)
 {
 	GKeyFile *k;
 	GError *error = NULL;
@@ -536,7 +542,7 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 	gchar *scheme, *host, *user, *domain, *share;
 	gint port;
 	gboolean autoconnect;
-	SionBookmark *bm;
+	GigoloBookmark *bm;
 
 	k = g_key_file_new();
 	if (! g_key_file_load_from_file(k, priv->bookmarks_filename, G_KEY_FILE_NONE, &error))
@@ -558,19 +564,19 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 		port = get_setting_int(k, groups[i], "port", 0);
 		autoconnect = get_setting_int(k, groups[i], "autoconnect", FALSE);
 
-		bm = sion_bookmark_new();
-		sion_bookmark_set_name(bm, groups[i]);
-		sion_bookmark_set_scheme(bm, scheme);
+		bm = gigolo_bookmark_new();
+		gigolo_bookmark_set_name(bm, groups[i]);
+		gigolo_bookmark_set_scheme(bm, scheme);
 		if (NZV(host))
-			sion_bookmark_set_host(bm, host);
+			gigolo_bookmark_set_host(bm, host);
 		if (NZV(user))
-			sion_bookmark_set_user(bm, user);
+			gigolo_bookmark_set_user(bm, user);
 		if (NZV(domain))
-			sion_bookmark_set_domain(bm, domain);
+			gigolo_bookmark_set_domain(bm, domain);
 		if (NZV(share))
-			sion_bookmark_set_share(bm, share);
-		sion_bookmark_set_port(bm, port);
-		sion_bookmark_set_autoconnect(bm, autoconnect);
+			gigolo_bookmark_set_share(bm, share);
+		gigolo_bookmark_set_port(bm, port);
+		gigolo_bookmark_set_autoconnect(bm, autoconnect);
 
 		g_ptr_array_add(priv->bookmarks, bm);
 
@@ -586,9 +592,34 @@ static void load_settings_read_bookmarks(SionSettingsPrivate *priv)
 }
 
 
-static void sion_settings_init(SionSettings *self)
+static void check_for_old_dir(GigoloSettingsPrivate *priv)
 {
-	SionSettingsPrivate *priv = SION_SETTINGS_GET_PRIVATE(self);
+	gchar *old_dir = g_build_filename(g_get_user_config_dir(), "sion", NULL);
+	/* move the old config dir if it exists */
+	if (g_file_test(old_dir, G_FILE_TEST_EXISTS))
+	{
+		if (! gigolo_message_dialog(NULL, GTK_MESSAGE_QUESTION, _("Move it now?"),
+			_("Gigolo needs to move your old configuration directory before starting."), NULL))
+			exit(0);
+
+		if (g_rename(old_dir, priv->config_path) != 0)
+		{
+			/* for translators: the third %s in brackets is the error message which
+			 * describes why moving the dir didn't work */
+			gchar *msg = g_strdup_printf(
+				_("Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+				  "Please move manually the directory to the new location."),
+				old_dir, priv->config_path, g_strerror(errno));
+			gigolo_message_dialog(NULL, GTK_MESSAGE_WARNING, _("Warning"), msg, NULL);
+		}
+	}
+	g_free(old_dir);
+}
+
+
+static void gigolo_settings_init(GigoloSettings *self)
+{
+	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(self);
 
 	priv->config_path = g_build_filename(g_get_user_config_dir(), PACKAGE, NULL);
 	priv->config_filename = g_build_filename(priv->config_path, "config", NULL);
@@ -596,32 +627,34 @@ static void sion_settings_init(SionSettings *self)
 
 	priv->bookmarks = g_ptr_array_new();
 
+	check_for_old_dir(priv);
+
 	load_settings_read_config(priv);
 	load_settings_read_bookmarks(priv);
 }
 
 
-SionSettings *sion_settings_new(void)
+GigoloSettings *gigolo_settings_new(void)
 {
-	return (SionSettings*) g_object_new(SION_SETTINGS_TYPE, NULL);
+	return (GigoloSettings*) g_object_new(GIGOLO_SETTINGS_TYPE, NULL);
 }
 
 
-const gchar *sion_settings_get_vm_impl(SionSettings *settings)
+const gchar *gigolo_settings_get_vm_impl(GigoloSettings *settings)
 {
 	g_return_val_if_fail(settings != NULL, NULL);
 
-	return SION_SETTINGS_GET_PRIVATE(settings)->vm_impl;
+	return GIGOLO_SETTINGS_GET_PRIVATE(settings)->vm_impl;
 }
 
 
-void sion_settings_set_vm_impl(SionSettings *settings, const gchar *impl)
+void gigolo_settings_set_vm_impl(GigoloSettings *settings, const gchar *impl)
 {
-	SionSettingsPrivate *priv;
+	GigoloSettingsPrivate *priv;
 
 	g_return_if_fail(settings != NULL);
 
-	priv = SION_SETTINGS_GET_PRIVATE(settings);
+	priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
 
 	if (impl == NULL)
 		impl = "hal";
@@ -631,24 +664,24 @@ void sion_settings_set_vm_impl(SionSettings *settings, const gchar *impl)
 }
 
 
-const gint *sion_settings_get_geometry(SionSettings *settings)
+const gint *gigolo_settings_get_geometry(GigoloSettings *settings)
 {
 	g_return_val_if_fail(settings != NULL, NULL);
 
-	return SION_SETTINGS_GET_PRIVATE(settings)->geometry;
+	return GIGOLO_SETTINGS_GET_PRIVATE(settings)->geometry;
 }
 
 
-void sion_settings_set_geometry(SionSettings *settings, const gint *geometry, gsize len)
+void gigolo_settings_set_geometry(GigoloSettings *settings, const gint *geometry, gsize len)
 {
-	SionSettingsPrivate *priv;
+	GigoloSettingsPrivate *priv;
 	guint i;
 
 	g_return_if_fail(settings != NULL);
 	g_return_if_fail(geometry != NULL);
 	g_return_if_fail(len > 0);
 
-	priv = SION_SETTINGS_GET_PRIVATE(settings);
+	priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
 
 	g_free(priv->geometry);
 	priv->geometry = g_new(gint, len);
@@ -660,15 +693,15 @@ void sion_settings_set_geometry(SionSettings *settings, const gint *geometry, gs
 }
 
 
-SionBookmarkList *sion_settings_get_bookmarks(SionSettings *settings)
+GigoloBookmarkList *gigolo_settings_get_bookmarks(GigoloSettings *settings)
 {
 	g_return_val_if_fail(settings != NULL, NULL);
 
-	return SION_SETTINGS_GET_PRIVATE(settings)->bookmarks;
+	return GIGOLO_SETTINGS_GET_PRIVATE(settings)->bookmarks;
 }
 
 
-gboolean sion_settings_get_boolean(SionSettings *settings, const gchar *property)
+gboolean gigolo_settings_get_boolean(GigoloSettings *settings, const gchar *property)
 {
 	gboolean value;
 
@@ -681,7 +714,7 @@ gboolean sion_settings_get_boolean(SionSettings *settings, const gchar *property
 }
 
 
-gint sion_settings_get_integer(SionSettings *settings, const gchar *property)
+gint gigolo_settings_get_integer(GigoloSettings *settings, const gchar *property)
 {
 	gint value;
 
@@ -694,7 +727,7 @@ gint sion_settings_get_integer(SionSettings *settings, const gchar *property)
 }
 
 
-gchar *sion_settings_get_string(SionSettings *settings, const gchar *property)
+gchar *gigolo_settings_get_string(GigoloSettings *settings, const gchar *property)
 {
 	gchar *value;
 
@@ -707,13 +740,13 @@ gchar *sion_settings_get_string(SionSettings *settings, const gchar *property)
 }
 
 
-gboolean sion_settings_has_file_manager(SionSettings *settings)
+gboolean gigolo_settings_has_file_manager(GigoloSettings *settings)
 {
-	SionSettingsPrivate *priv;
+	GigoloSettingsPrivate *priv;
 
 	g_return_val_if_fail(settings != NULL, FALSE);
 
-	priv = SION_SETTINGS_GET_PRIVATE(settings);
+	priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
 
 	return NZV(priv->file_manager);
 }

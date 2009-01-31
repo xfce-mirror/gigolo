@@ -85,7 +85,7 @@ static void print_supported_schemes(void)
 
 gint main(gint argc, gchar** argv)
 {
-	SionSettings *settings;
+	GigoloSettings *settings;
 	const gchar *vm_impl;
 	gchar *accel_filename;
 	GOptionContext *context;
@@ -121,24 +121,24 @@ gint main(gint argc, gchar** argv)
 		return EXIT_SUCCESS;
 	}
 
-	verbose("Sion (GTK+ %u.%u.%u, GLib %u.%u.%u)",
+	verbose("Gigolo (GTK+ %u.%u.%u, GLib %u.%u.%u)",
 		gtk_major_version, gtk_minor_version, gtk_micro_version,
 		glib_major_version, glib_minor_version, glib_micro_version);
 
-	settings = sion_settings_new();
+	settings = gigolo_settings_new();
 
 	accel_filename = g_build_filename(g_get_user_config_dir(), PACKAGE, "accels", NULL);
 	gtk_accel_map_load(accel_filename);
 
 	/* GVfs currently depends on gnome-mount for HAL-based GVolumeMonitor implementation,
 	 * when gnome-mount is not installed, we can use "unix" as GVolumeMonitor implementation. */
-	if ((vm_impl = sion_settings_get_vm_impl(settings)) != NULL)
+	if ((vm_impl = gigolo_settings_get_vm_impl(settings)) != NULL)
 		g_setenv("GIO_USE_VOLUME_MONITOR", vm_impl, 0);
 
-	window = sion_window_new(settings);
+	window = gigolo_window_new(settings);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
-	if (! sion_settings_get_boolean(settings, "start-in-systray"))
+	if (! gigolo_settings_get_boolean(settings, "start-in-systray"))
 		gtk_widget_show(window);
 
 	gtk_main();

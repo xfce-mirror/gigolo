@@ -28,18 +28,18 @@
 #include "main.h"
 
 
-const gchar *sion_get_application_icon_name(void)
+const gchar *gigolo_get_application_icon_name(void)
 {
 	static const gchar *icon_name = NULL;
 
 	if (icon_name == NULL)
-		icon_name = sion_find_icon_name("gtk-network", "gtk-connect");
+		icon_name = gigolo_find_icon_name("gtk-network", "gtk-connect");
 
 	return icon_name;
 }
 
 
-const gchar *sion_find_icon_name(const gchar *request, const gchar *fallback)
+const gchar *gigolo_find_icon_name(const gchar *request, const gchar *fallback)
 {
 	GtkIconTheme *theme = gtk_icon_theme_get_default();
 
@@ -54,7 +54,7 @@ const gchar *sion_find_icon_name(const gchar *request, const gchar *fallback)
 
 
 /* NULL-safe string comparison */
-gboolean sion_str_equal(const gchar *a, const gchar *b)
+gboolean gigolo_str_equal(const gchar *a, const gchar *b)
 {
 	if (a == NULL && b == NULL) return TRUE;
 	else if (a == NULL || b == NULL) return FALSE;
@@ -67,43 +67,43 @@ gboolean sion_str_equal(const gchar *a, const gchar *b)
 }
 
 
-const gchar *sion_describe_scheme(const gchar *scheme)
+const gchar *gigolo_describe_scheme(const gchar *scheme)
 {
-	if (sion_str_equal(scheme, "file"))
+	if (gigolo_str_equal(scheme, "file"))
 		return _("Unix Device");
-	else if (sion_str_equal(scheme, "smb"))
+	else if (gigolo_str_equal(scheme, "smb"))
 		return _("Windows Share");
-	else if (sion_str_equal(scheme, "ftp"))
+	else if (gigolo_str_equal(scheme, "ftp"))
 		return _("FTP");
-	else if (sion_str_equal(scheme, "http"))
+	else if (gigolo_str_equal(scheme, "http"))
 		return _("HTTP");
-	else if (sion_str_equal(scheme, "sftp"))
+	else if (gigolo_str_equal(scheme, "sftp"))
 		return _("SSH");
-	else if (sion_str_equal(scheme, "obex"))
+	else if (gigolo_str_equal(scheme, "obex"))
 		/* TODO find something better */
 		return _("OBEX");
-	else if (sion_str_equal(scheme, "dav"))
+	else if (gigolo_str_equal(scheme, "dav"))
 		return _("WebDAV");
-	else if (sion_str_equal(scheme, "davs"))
+	else if (gigolo_str_equal(scheme, "davs"))
 		return _("WebDAV (secure)");
-	else if (sion_str_equal(scheme, "network"))
+	else if (gigolo_str_equal(scheme, "network"))
 		return _("Network");
-	else if (sion_str_equal(scheme, "custom"))
+	else if (gigolo_str_equal(scheme, "custom"))
 		return _("Custom Location");
 
 	return NULL;
 }
 
 
-guint sion_get_default_port(const gchar *scheme)
+guint gigolo_get_default_port(const gchar *scheme)
 {
-	if (sion_str_equal(scheme, "ftp"))
+	if (gigolo_str_equal(scheme, "ftp"))
 		return 21;
-	else if (sion_str_equal(scheme, "sftp"))
+	else if (gigolo_str_equal(scheme, "sftp"))
 		return 22;
-	else if (sion_str_equal(scheme, "dav"))
+	else if (gigolo_str_equal(scheme, "dav"))
 		return 80;
-	else if (sion_str_equal(scheme, "davs"))
+	else if (gigolo_str_equal(scheme, "davs"))
 		return 443;
 
 	return 0;
@@ -111,7 +111,7 @@ guint sion_get_default_port(const gchar *scheme)
 
 
 /* Are we running in Xfce? */
-gboolean sion_is_desktop_xfce(void)
+gboolean gigolo_is_desktop_xfce(void)
 {
 	static gboolean check = TRUE;
 	static gboolean is_xfce = FALSE;
@@ -135,29 +135,39 @@ gboolean sion_is_desktop_xfce(void)
 }
 
 
-void sion_error_dialog(gpointer *parent, const gchar *text, const gchar *secondary)
+gboolean gigolo_message_dialog(gpointer *parent, gint type, const gchar *title,
+							   const gchar *text, const gchar *secondary)
 {
+	gboolean ret = FALSE;
 	GtkWidget *dialog;
+	GtkButtonsType button_type = (type == GTK_MESSAGE_QUESTION) ?
+		GTK_BUTTONS_YES_NO : GTK_BUTTONS_OK;
 
 	dialog = gtk_message_dialog_new(GTK_WINDOW(parent), GTK_DIALOG_DESTROY_WITH_PARENT,
-                                  GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, "%s", text);
+                                  type, button_type, "%s", text);
+
 	if (secondary != NULL)
 		gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog), "%s", secondary);
-	gtk_window_set_title(GTK_WINDOW(dialog), _("Error"));
-	gtk_window_set_icon_name(GTK_WINDOW(dialog), sion_get_application_icon_name());
-	gtk_dialog_run(GTK_DIALOG(dialog));
+	gtk_window_set_title(GTK_WINDOW(dialog), title);
+	gtk_window_set_icon_name(GTK_WINDOW(dialog), gigolo_get_application_icon_name());
+
+	if (gtk_dialog_run(GTK_DIALOG(dialog)) == GTK_RESPONSE_YES)
+		ret = TRUE;
+
 	gtk_widget_destroy(dialog);
+
+	return ret;
 }
 
 
 /* Can open URLs and email addresses using xdg/exo/gnome-open */
-void sion_show_uri(const gchar *uri)
+void gigolo_show_uri(const gchar *uri)
 {
 	gchar *cmd;
 	gchar *open_cmd = g_find_program_in_path("xdg-open");
 
 	if (open_cmd == NULL)
-		open_cmd = g_strdup((sion_is_desktop_xfce()) ? "exo-open" : "gnome-open");
+		open_cmd = g_strdup((gigolo_is_desktop_xfce()) ? "exo-open" : "gnome-open");
 
 	cmd = g_strconcat(open_cmd, " ", uri, NULL);
 	g_spawn_command_line_async(cmd, NULL);

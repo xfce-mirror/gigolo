@@ -23,31 +23,31 @@
 
 G_BEGIN_DECLS
 
-#define SION_MENU_BUTTON_ACTION_TYPE				(sion_menu_button_action_get_type())
-#define SION_MENU_BUTTON_ACTION(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			SION_MENU_BUTTON_ACTION_TYPE, SionMenubuttonAction))
-#define SION_MENU_BUTTON_ACTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			SION_MENU_BUTTON_ACTION_TYPE, SionMenubuttonActionClass))
-#define IS_SION_MENU_BUTTON_ACTION(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			SION_MENU_BUTTON_ACTION_TYPE))
-#define IS_SION_MENU_BUTTON_ACTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			SION_MENU_BUTTON_ACTION_TYPE))
+#define GIGOLO_MENU_BUTTON_ACTION_TYPE				(gigolo_menu_button_action_get_type())
+#define GIGOLO_MENU_BUTTON_ACTION(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
+			GIGOLO_MENU_BUTTON_ACTION_TYPE, GigoloMenubuttonAction))
+#define GIGOLO_MENU_BUTTON_ACTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
+			GIGOLO_MENU_BUTTON_ACTION_TYPE, GigoloMenubuttonActionClass))
+#define IS_GIGOLO_MENU_BUTTON_ACTION(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
+			GIGOLO_MENU_BUTTON_ACTION_TYPE))
+#define IS_GIGOLO_MENU_BUTTON_ACTION_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
+			GIGOLO_MENU_BUTTON_ACTION_TYPE))
 
-typedef struct _SionMenubuttonAction			SionMenubuttonAction;
-typedef struct _SionMenubuttonActionClass		SionMenubuttonActionClass;
+typedef struct _GigoloMenubuttonAction			GigoloMenubuttonAction;
+typedef struct _GigoloMenubuttonActionClass		GigoloMenubuttonActionClass;
 
-struct _SionMenubuttonAction
+struct _GigoloMenubuttonAction
 {
 	GtkAction parent;
 };
 
-struct _SionMenubuttonActionClass
+struct _GigoloMenubuttonActionClass
 {
 	GtkActionClass parent_class;
 };
 
-GType		sion_menu_button_action_get_type	(void);
-GtkAction*	sion_menu_button_action_new			(const gchar	*name,
+GType		gigolo_menu_button_action_get_type	(void);
+GtkAction*	gigolo_menu_button_action_new		(const gchar	*name,
 												 const gchar	*label,
 												 const gchar	*tooltip,
 												 const gchar	*icon_name);

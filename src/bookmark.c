@@ -28,12 +28,12 @@
 #include "main.h"
 
 
-typedef struct _SionBookmarkPrivate			SionBookmarkPrivate;
+typedef struct _GigoloBookmarkPrivate			GigoloBookmarkPrivate;
 
-#define SION_BOOKMARK_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			SION_BOOKMARK_TYPE, SionBookmarkPrivate))
+#define GIGOLO_BOOKMARK_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
+			GIGOLO_BOOKMARK_TYPE, GigoloBookmarkPrivate))
 
-struct _SionBookmarkPrivate
+struct _GigoloBookmarkPrivate
 {
 	gchar	*name;
 	gchar	*scheme;
@@ -48,42 +48,42 @@ struct _SionBookmarkPrivate
 	gboolean is_valid;
 };
 
-static void sion_bookmark_class_init		(SionBookmarkClass *klass);
-static void sion_bookmark_init      		(SionBookmark *self);
-static void sion_bookmark_finalize  		(GObject *object);
+static void gigolo_bookmark_class_init		(GigoloBookmarkClass *klass);
+static void gigolo_bookmark_init      		(GigoloBookmark *self);
+static void gigolo_bookmark_finalize  		(GObject *object);
 
 /* Local data */
 static GObjectClass *parent_class = NULL;
 
-GType sion_bookmark_get_type(void)
+GType gigolo_bookmark_get_type(void)
 {
 	static GType self_type = 0;
 	if (! self_type)
 	{
 		static const GTypeInfo self_info =
 		{
-			sizeof(SionBookmarkClass),
+			sizeof(GigoloBookmarkClass),
 			NULL, /* base_init */
 			NULL, /* base_finalize */
-			(GClassInitFunc)sion_bookmark_class_init,
+			(GClassInitFunc)gigolo_bookmark_class_init,
 			NULL, /* class_finalize */
 			NULL, /* class_data */
-			sizeof(SionBookmark),
+			sizeof(GigoloBookmark),
 			0,
-			(GInstanceInitFunc)sion_bookmark_init,
+			(GInstanceInitFunc)gigolo_bookmark_init,
 			NULL /* value_table */
 		};
 
-		self_type = g_type_register_static(G_TYPE_OBJECT, "SionBookmark", &self_info, 0);
+		self_type = g_type_register_static(G_TYPE_OBJECT, "GigoloBookmark", &self_info, 0);
 	}
 
 	return self_type;
 }
 
 
-static void bookmark_clear(SionBookmark *self)
+static void bookmark_clear(GigoloBookmark *self)
 {
-	SionBookmarkPrivate *priv = SION_BOOKMARK_GET_PRIVATE(self);
+	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(self);
 
 	g_free(priv->name);
 	g_free(priv->scheme);
@@ -104,32 +104,32 @@ static void bookmark_clear(SionBookmark *self)
 }
 
 
-static void sion_bookmark_class_init(SionBookmarkClass *klass)
+static void gigolo_bookmark_class_init(GigoloBookmarkClass *klass)
 {
 	GObjectClass *g_object_class;
 
 	g_object_class = G_OBJECT_CLASS(klass);
 
-	g_object_class->finalize = sion_bookmark_finalize;
+	g_object_class->finalize = gigolo_bookmark_finalize;
 
 	parent_class = (GObjectClass*)g_type_class_peek(G_TYPE_OBJECT);
-	g_type_class_add_private((gpointer)klass, sizeof(SionBookmarkPrivate));
+	g_type_class_add_private((gpointer)klass, sizeof(GigoloBookmarkPrivate));
 }
 
 
-static void sion_bookmark_finalize(GObject *object)
+static void gigolo_bookmark_finalize(GObject *object)
 {
-	bookmark_clear(SION_BOOKMARK(object));
+	bookmark_clear(GIGOLO_BOOKMARK(object));
 
 	G_OBJECT_CLASS(parent_class)->finalize(object);
 }
 
 
-static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
+static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 {
 	gchar *s, *t, *x, *end;
 	guint l;
-	SionBookmarkPrivate *priv = SION_BOOKMARK_GET_PRIVATE(bm);
+	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bm);
 
 	priv->scheme = g_uri_parse_scheme(uri);
 
@@ -234,24 +234,24 @@ static gboolean parse_uri(SionBookmark *bm, const gchar *uri)
 }
 
 
-static void sion_bookmark_init(SionBookmark *self)
+static void gigolo_bookmark_init(GigoloBookmark *self)
 {
 	bookmark_clear(self);
 }
 
 
-SionBookmark *sion_bookmark_new(void)
+GigoloBookmark *gigolo_bookmark_new(void)
 {
-	return (SionBookmark*) g_object_new(SION_BOOKMARK_TYPE, NULL);
+	return (GigoloBookmark*) g_object_new(GIGOLO_BOOKMARK_TYPE, NULL);
 }
 
 
-SionBookmark *sion_bookmark_new_from_uri(const gchar *name, const gchar *uri)
+GigoloBookmark *gigolo_bookmark_new_from_uri(const gchar *name, const gchar *uri)
 {
-	SionBookmark *bm = g_object_new(SION_BOOKMARK_TYPE, NULL);
-	SionBookmarkPrivate *priv = SION_BOOKMARK_GET_PRIVATE(bm);
+	GigoloBookmark *bm = g_object_new(GIGOLO_BOOKMARK_TYPE, NULL);
+	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bm);
 
-	sion_bookmark_set_name(bm, name);
+	gigolo_bookmark_set_name(bm, name);
 	if (! parse_uri(bm, uri))
 		priv->is_valid = FALSE;
 
@@ -260,16 +260,16 @@ SionBookmark *sion_bookmark_new_from_uri(const gchar *name, const gchar *uri)
 
 
 /* Copy the contents of the bookmark 'src' into the existing bookmark 'dest' */
-void sion_bookmark_clone(SionBookmark *dst, const SionBookmark *src)
+void gigolo_bookmark_clone(GigoloBookmark *dst, const GigoloBookmark *src)
 {
-	SionBookmarkPrivate *priv_dst;
-	const SionBookmarkPrivate *priv_src;
+	GigoloBookmarkPrivate *priv_dst;
+	const GigoloBookmarkPrivate *priv_src;
 
 	g_return_if_fail(dst != NULL);
 	g_return_if_fail(src != NULL);
 
-	priv_dst = SION_BOOKMARK_GET_PRIVATE(dst);
-	priv_src = SION_BOOKMARK_GET_PRIVATE(src);
+	priv_dst = GIGOLO_BOOKMARK_GET_PRIVATE(dst);
+	priv_src = GIGOLO_BOOKMARK_GET_PRIVATE(src);
 
 	/* free existing strings and data */
 	bookmark_clear(dst);
@@ -285,15 +285,15 @@ void sion_bookmark_clone(SionBookmark *dst, const SionBookmark *src)
 }
 
 
-gchar *sion_bookmark_get_uri(SionBookmark *bookmark)
+gchar *gigolo_bookmark_get_uri(GigoloBookmark *bookmark)
 {
-	SionBookmarkPrivate *priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 	gchar *result;
 	gchar *port = NULL;
 
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	if (priv->port > 0 && priv->port != sion_get_default_port(priv->scheme))
+	if (priv->port > 0 && priv->port != gigolo_get_default_port(priv->scheme))
 	{
 		port = g_strdup_printf(":%d", priv->port);
 	}
@@ -312,221 +312,221 @@ gchar *sion_bookmark_get_uri(SionBookmark *bookmark)
 }
 
 
-void sion_bookmark_set_uri(SionBookmark *bookmark, const gchar *uri)
+void gigolo_bookmark_set_uri(GigoloBookmark *bookmark, const gchar *uri)
 {
-	SionBookmarkPrivate *priv;
-	SionBookmark *tmp;
+	GigoloBookmarkPrivate *priv;
+	GigoloBookmark *tmp;
 
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(NZV(uri));
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
-	tmp = sion_bookmark_new_from_uri(priv->name, uri);
-	if (sion_bookmark_is_valid(tmp))
-		sion_bookmark_clone(bookmark, tmp);
+	tmp = gigolo_bookmark_new_from_uri(priv->name, uri);
+	if (gigolo_bookmark_is_valid(tmp))
+		gigolo_bookmark_clone(bookmark, tmp);
 }
 
 
-const gchar *sion_bookmark_get_name(SionBookmark *bookmark)
+const gchar *gigolo_bookmark_get_name(GigoloBookmark *bookmark)
 {
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return SION_BOOKMARK_GET_PRIVATE(bookmark)->name;
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->name;
 }
 
 
-void sion_bookmark_set_name(SionBookmark *bookmark, const gchar *name)
+void gigolo_bookmark_set_name(GigoloBookmark *bookmark, const gchar *name)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(NZV(name));
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	g_free(priv->name);
 	priv->name = g_strdup(name);
 }
 
 
-const gchar *sion_bookmark_get_scheme(SionBookmark *bookmark)
+const gchar *gigolo_bookmark_get_scheme(GigoloBookmark *bookmark)
 {
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return SION_BOOKMARK_GET_PRIVATE(bookmark)->scheme;
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->scheme;
 }
 
 
-void sion_bookmark_set_scheme(SionBookmark *bookmark, const gchar *scheme)
+void gigolo_bookmark_set_scheme(GigoloBookmark *bookmark, const gchar *scheme)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(NZV(scheme));
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	g_free(priv->scheme);
 	priv->scheme = g_strdup(scheme);
 }
 
 
-const gchar *sion_bookmark_get_host(SionBookmark *bookmark)
+const gchar *gigolo_bookmark_get_host(GigoloBookmark *bookmark)
 {
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return SION_BOOKMARK_GET_PRIVATE(bookmark)->host;
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->host;
 }
 
 
-void sion_bookmark_set_host(SionBookmark *bookmark, const gchar *host)
+void gigolo_bookmark_set_host(GigoloBookmark *bookmark, const gchar *host)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(NZV(host));
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	g_free(priv->host);
 	priv->host = g_strdup(host);
 }
 
 
-guint sion_bookmark_get_port(SionBookmark *bookmark)
+guint gigolo_bookmark_get_port(GigoloBookmark *bookmark)
 {
 	g_return_val_if_fail(bookmark != NULL, 0);
 
-	return SION_BOOKMARK_GET_PRIVATE(bookmark)->port;
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->port;
 }
 
 
-void sion_bookmark_set_port(SionBookmark *bookmark, guint port)
+void gigolo_bookmark_set_port(GigoloBookmark *bookmark, guint port)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	priv->port = port;
 }
 
 
-gboolean sion_bookmark_get_autoconnect(SionBookmark *bookmark)
+gboolean gigolo_bookmark_get_autoconnect(GigoloBookmark *bookmark)
 {
 	g_return_val_if_fail(bookmark != NULL, 0);
 
-	return SION_BOOKMARK_GET_PRIVATE(bookmark)->autoconnect;
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->autoconnect;
 }
 
 
-void sion_bookmark_set_autoconnect(SionBookmark *bookmark, gboolean autoconnect)
+void gigolo_bookmark_set_autoconnect(GigoloBookmark *bookmark, gboolean autoconnect)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	priv->autoconnect = autoconnect;
 }
 
 
-gboolean sion_bookmark_get_should_not_autoconnect(SionBookmark *bookmark)
+gboolean gigolo_bookmark_get_should_not_autoconnect(GigoloBookmark *bookmark)
 {
 	g_return_val_if_fail(bookmark != NULL, 0);
 
-	return SION_BOOKMARK_GET_PRIVATE(bookmark)->should_not_autoconnect;
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->should_not_autoconnect;
 }
 
 
-void sion_bookmark_set_should_not_autoconnect(SionBookmark *bookmark, gboolean should_not_autoconnect)
+void gigolo_bookmark_set_should_not_autoconnect(GigoloBookmark *bookmark, gboolean should_not_autoconnect)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	priv->should_not_autoconnect = should_not_autoconnect;
 }
 
 
-const gchar *sion_bookmark_get_user(SionBookmark *bookmark)
+const gchar *gigolo_bookmark_get_user(GigoloBookmark *bookmark)
 {
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return SION_BOOKMARK_GET_PRIVATE(bookmark)->user;
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->user;
 }
 
 
-void sion_bookmark_set_user(SionBookmark *bookmark, const gchar *user)
+void gigolo_bookmark_set_user(GigoloBookmark *bookmark, const gchar *user)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(user != NULL);
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	g_free(priv->user);
 	priv->user = g_strdup(user);
 }
 
 
-const gchar *sion_bookmark_get_share(SionBookmark *bookmark)
+const gchar *gigolo_bookmark_get_share(GigoloBookmark *bookmark)
 {
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return SION_BOOKMARK_GET_PRIVATE(bookmark)->share;
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->share;
 }
 
 
-void sion_bookmark_set_share(SionBookmark *bookmark, const gchar *share)
+void gigolo_bookmark_set_share(GigoloBookmark *bookmark, const gchar *share)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(share != NULL);
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	g_free(priv->share);
 	priv->share = g_strdup(share);
 }
 
 
-const gchar *sion_bookmark_get_domain(SionBookmark *bookmark)
+const gchar *gigolo_bookmark_get_domain(GigoloBookmark *bookmark)
 {
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return SION_BOOKMARK_GET_PRIVATE(bookmark)->domain;
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->domain;
 }
 
 
-void sion_bookmark_set_domain(SionBookmark *bookmark, const gchar *domain)
+void gigolo_bookmark_set_domain(GigoloBookmark *bookmark, const gchar *domain)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(domain != NULL);
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	g_free(priv->domain);
 	priv->domain = g_strdup(domain);
 }
 
 
-gboolean sion_bookmark_is_valid(SionBookmark *bookmark)
+gboolean gigolo_bookmark_is_valid(GigoloBookmark *bookmark)
 {
-	SionBookmarkPrivate *priv;
+	GigoloBookmarkPrivate *priv;
 
 	g_return_val_if_fail(bookmark != NULL, FALSE);
 
-	priv = SION_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	return priv->is_valid;
 }

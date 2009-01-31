@@ -13,4 +13,4 @@ src/bookmarkeditdialog.c
 src/preferencesdialog.c
 src/backendgvfs.c
 src/mountdialog.c
-sion.desktop.in
+gigolo.desktop.in

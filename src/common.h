@@ -30,38 +30,39 @@
 
 enum
 {
-	SION_WINDOW_COL_IS_MOUNTED,
-	SION_WINDOW_COL_SCHEME,
-	SION_WINDOW_COL_NAME,
-	SION_WINDOW_COL_REF,
-	SION_WINDOW_COL_REF_TYPE, /* volume or mount, see enum below */
-	SION_WINDOW_COL_PIXBUF,
-	SION_WINDOW_COL_ICON_NAME,
-	SION_WINDOW_COL_TOOLTIP,
-	SION_WINDOW_N_COLUMNS
+	GIGOLO_WINDOW_COL_IS_MOUNTED,
+	GIGOLO_WINDOW_COL_SCHEME,
+	GIGOLO_WINDOW_COL_NAME,
+	GIGOLO_WINDOW_COL_REF,
+	GIGOLO_WINDOW_COL_REF_TYPE, /* volume or mount, see enum below */
+	GIGOLO_WINDOW_COL_PIXBUF,
+	GIGOLO_WINDOW_COL_ICON_NAME,
+	GIGOLO_WINDOW_COL_TOOLTIP,
+	GIGOLO_WINDOW_N_COLUMNS
 };
 
 enum
 {
-	SION_WINDOW_REF_TYPE_VOLUME,
-	SION_WINDOW_REF_TYPE_MOUNT /* mounted volume */
+	GIGOLO_WINDOW_REF_TYPE_VOLUME,
+	GIGOLO_WINDOW_REF_TYPE_MOUNT /* mounted volume */
 };
 
 
-const gchar *sion_describe_scheme(const gchar *scheme);
+const gchar *gigolo_describe_scheme(const gchar *scheme);
 
-gboolean sion_str_equal(const gchar *a, const gchar *b);
+gboolean gigolo_str_equal(const gchar *a, const gchar *b);
 
-const gchar *sion_find_icon_name(const gchar *request, const gchar *fallback);
+const gchar *gigolo_find_icon_name(const gchar *request, const gchar *fallback);
 
-gboolean sion_is_desktop_xfce(void);
+gboolean gigolo_is_desktop_xfce(void);
 
-void sion_show_uri(const gchar *uri);
+void gigolo_show_uri(const gchar *uri);
 
-guint sion_get_default_port(const gchar *scheme);
+guint gigolo_get_default_port(const gchar *scheme);
 
-void sion_error_dialog(gpointer *parent, const gchar *text, const gchar *secondary);
+gboolean gigolo_message_dialog(gpointer *parent, gint type, const gchar *title,
+							   const gchar *text, const gchar *secondary);
 
-const gchar *sion_get_application_icon_name(void);
+const gchar *gigolo_get_application_icon_name(void);
 
 #endif /* __COMMON_H__ */

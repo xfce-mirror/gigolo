@@ -1,65 +1,65 @@
-# German translation of Gigolo.
-# Copyright (C) 2008-2009 Enrico Tröger
-# This file is distributed under the same license as Gigolo.
-# Enrico Tröger <enrico@xfce.org>, 2008-2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo 0.2.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-31 16:56+0100\n"
-"PO-Revision-Date: 2009-01-29 14:47+0100\n"
-"Last-Translator: Enrico Tröger <enrico@xfce.org>\n"
-"Language-Team: German <xfce-i18n-de@xfce.org>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:41
 msgid "Print a list of supported URI schemes"
-msgstr "Gibt eine Liste unterstützter URI-Formate aus"
+msgstr ""
 
 #: ../src/main.c:42
 msgid "Be verbose"
-msgstr "ausführliche Meldungen"
+msgstr ""
 
 #: ../src/main.c:43
 msgid "Show version information"
-msgstr "Zeige Versionsinformationen"
+msgstr ""
 
 #: ../src/main.c:98
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- eine einfache Oberfläche um entfernte Dateisysteme einzubinden"
+msgstr ""
 
 #: ../src/common.c:73
 msgid "Unix Device"
-msgstr "Unix-Gerät"
+msgstr ""
 
 #: ../src/common.c:75
 msgid "Windows Share"
-msgstr "Windows-Freigabe"
+msgstr ""
 
 #: ../src/common.c:77
 msgid "FTP"
-msgstr "FTP"
+msgstr ""
 
 #: ../src/common.c:79
 msgid "HTTP"
-msgstr "HTTP"
+msgstr ""
 
 #: ../src/common.c:81
 msgid "SSH"
-msgstr "SSH"
+msgstr ""
 
 #. TODO find something better
 #: ../src/common.c:84
 msgid "OBEX"
-msgstr "OBEX"
+msgstr ""
 
 #: ../src/common.c:86
 msgid "WebDAV"
-msgstr "WebDAV"
+msgstr ""
 
 #: ../src/common.c:88
 msgid "WebDAV (secure)"
@@ -67,50 +67,50 @@ msgstr ""
 
 #: ../src/common.c:90
 msgid "Network"
-msgstr "Netzwerk"
+msgstr ""
 
 #: ../src/common.c:92
 msgid "Custom Location"
-msgstr "Eigene Adresse"
+msgstr ""
 
 #: ../src/window.c:313
 #, c-format
 msgid "Mounting \"%s\""
-msgstr "»%s« wird eingebunden..."
+msgstr ""
 
 #: ../src/window.c:459
 msgid "translator-credits"
-msgstr "Enrico Tröger <enrico@xfce.org>"
+msgstr ""
 
 #: ../src/window.c:681 ../src/bookmarkeditdialog.c:206
 #: ../src/bookmarkeditdialog.c:224 ../src/bookmarkeditdialog.c:237
 #: ../src/bookmarkeditdialog.c:248 ../src/bookmarkeditdialog.c:259
 msgid "Error"
-msgstr "Fehler"
+msgstr ""
 
 #: ../src/window.c:1058
 msgid "_File"
-msgstr "_Datei"
+msgstr ""
 
 #: ../src/window.c:1059
 msgid "_Edit"
-msgstr "_Bearbeiten"
+msgstr ""
 
 #: ../src/window.c:1060
 msgid "_Actions"
-msgstr "_Aktionen"
+msgstr ""
 
 #: ../src/window.c:1061
 msgid "_Help"
-msgstr "_Hilfe"
+msgstr ""
 
 #: ../src/window.c:1065
 msgid "Create _Bookmark"
-msgstr "Lesezeichen _erstellen"
+msgstr ""
 
 #: ../src/window.c:1067
 msgid "_Edit Bookmarks"
-msgstr "Lesezeichen _bearbeiten"
+msgstr ""
 
 #: ../src/window.c:1068
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
@@ -126,36 +126,35 @@ msgstr ""
 
 #: ../src/window.c:1075
 msgid "Copy URI"
-msgstr "URI kopieren"
+msgstr ""
 
 #: ../src/window.c:1076
 msgid "Quit Gigolo"
-msgstr "Gigolo beenden"
+msgstr ""
 
 #: ../src/window.c:1083
 msgid "_Bookmarks"
-msgstr "_Lesezeichen"
+msgstr ""
 
 #: ../src/window.c:1083
 msgid "Choose a bookmark to connect to"
 msgstr ""
-"Wählen Sie ein Lesezeichen für das eine Verbindung aufgebaut werden soll"
 
 #: ../src/window.c:1154
 msgid "Mounted"
-msgstr " Eingehängt"
+msgstr ""
 
 #: ../src/window.c:1163 ../src/bookmarkdialog.c:328
 msgid "Service Type"
-msgstr "Verbindungstyp"
+msgstr ""
 
 #: ../src/window.c:1171 ../src/bookmarkdialog.c:320
 msgid "Name"
-msgstr "Name"
+msgstr ""
 
 #: ../src/window.c:1238 ../src/window.c:1307 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
-msgstr "Gigolo"
+msgstr ""
 
 #: ../src/settings.c:601
 msgid "Move it now?"
@@ -178,61 +177,61 @@ msgstr ""
 
 #: ../src/menubuttonaction.c:184
 msgid "Connect"
-msgstr "Verbinden"
+msgstr ""
 
 #: ../src/passworddialog.c:103
 msgid "Authentication information needed"
-msgstr "Authentifizierungsinformationen benötigt"
+msgstr ""
 
 #: ../src/passworddialog.c:126 ../src/bookmarkeditdialog.c:825
 msgid "_Domain:"
-msgstr "_Domäne:"
+msgstr ""
 
 #: ../src/passworddialog.c:139
 msgid "_Username:"
-msgstr "_Benutzername:"
+msgstr ""
 
 #: ../src/passworddialog.c:153
 msgid "_Password:"
-msgstr "_Passwort:"
+msgstr ""
 
 #: ../src/bookmarkdialog.c:123
 #, c-format
 msgid "Domain: %s"
-msgstr "Domäne: %s"
+msgstr ""
 
 #: ../src/bookmarkdialog.c:128
 #, c-format
 msgid "Share: %s"
-msgstr "Freigabe: %s"
+msgstr ""
 
 #: ../src/bookmarkdialog.c:336
 msgid "Host"
-msgstr "Host"
+msgstr ""
 
 #: ../src/bookmarkdialog.c:344
 msgid "Port"
-msgstr "Port"
+msgstr ""
 
 #: ../src/bookmarkdialog.c:352
 msgid "Automount"
-msgstr "Automatisch einhängen"
+msgstr ""
 
 #: ../src/bookmarkdialog.c:360
 msgid "Username"
-msgstr "Benutzername"
+msgstr ""
 
 #: ../src/bookmarkdialog.c:368
 msgid "Other information"
-msgstr "Andere Angaben"
+msgstr ""
 
 #: ../src/bookmarkdialog.c:425
 msgid "Edit Bookmarks"
-msgstr "Lesezeichen bearbeiten"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:207
 msgid "You must enter a name for the bookmark."
-msgstr "Sie müssen einen Namen für das Lesezeichen angeben."
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:225
 msgid "The entered bookmark name is already in use. Please choose another one."
@@ -240,114 +239,111 @@ msgstr ""
 
 #: ../src/bookmarkeditdialog.c:238
 msgid "You must enter a server address or name."
-msgstr "Sie müssen die Adresse oder den Namen eines Servers angeben."
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:249
 msgid "You must enter a share name."
-msgstr "Sie müssen den Namen einer Freigabe angeben."
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:260
 msgid "You must enter a valid URI for the connection."
-msgstr "Sie müssen eine gültige URI für die Verbindung angeben."
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:704
 msgid "Create Bookmark"
-msgstr "Lesezeichen erstellen"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:711
 msgid "Edit Bookmark"
-msgstr "Lesezeichen bearbeiten"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:719
 msgid "Connect to Server"
-msgstr "Verbinde zum Server"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:776
 msgid "_Bookmark name:"
-msgstr "_Lesezeichenname:"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:784
-#, fuzzy
 msgid "Au_to-Connect"
-msgstr "Verbinden"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:792
 msgid "Service t_ype:"
-msgstr "_Verbindungstyp:"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:815
 msgid "Set the port to 0 to use the default port"
-msgstr "Setzen Sie den Port auf 0, um den Standardwert zu benutzen"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:820
 msgid "_Location (URI):"
-msgstr "Adresse (_URI):"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:821
 msgid "_Server:"
-msgstr "_Server:"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:822
 msgid "_User Name:"
-msgstr "_Benutzername:"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:823
 msgid "Optional information:"
-msgstr "Optionale Angaben:"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:824
 msgid "_Port:"
-msgstr "_Port:"
+msgstr ""
 
 #: ../src/bookmarkeditdialog.c:826
 msgid "_Share:"
-msgstr "_Freigabe:"
+msgstr ""
 
 #: ../src/preferencesdialog.c:175
 msgid "Icons"
-msgstr "Symbole"
+msgstr ""
 
 #: ../src/preferencesdialog.c:176
 msgid "Text"
-msgstr "Text"
+msgstr ""
 
 #: ../src/preferencesdialog.c:177
 msgid "Both"
-msgstr "Beides"
+msgstr ""
 
 #: ../src/preferencesdialog.c:178
 msgid "Both horizontal"
-msgstr "Beides horizontal"
+msgstr ""
 
 #: ../src/preferencesdialog.c:197
 msgid "Horizontal"
-msgstr "Horizontal"
+msgstr ""
 
 #: ../src/preferencesdialog.c:198
 msgid "Vertical"
-msgstr "Vertikal"
+msgstr ""
 
 #: ../src/preferencesdialog.c:217
 msgid "Symbols"
-msgstr "Symbole"
+msgstr ""
 
 #: ../src/preferencesdialog.c:218
 msgid "Detailed"
-msgstr "Details"
+msgstr ""
 
 #: ../src/preferencesdialog.c:362
 msgid "General"
-msgstr "Allgemein"
+msgstr ""
 
 #: ../src/preferencesdialog.c:367
 msgid "_File Manager"
-msgstr "_Dateimanager"
+msgstr ""
 
 #: ../src/preferencesdialog.c:375
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr ""
-"Geben Sie den Namen eines Programms ein zum Anzeigen oder Öffnen von "
-"Einhängepunkten"
 
 #: ../src/preferencesdialog.c:384
 msgid "_Bookmark Auto-Connect Interval"
@@ -367,70 +363,62 @@ msgid ""
 "devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Der HAL-basierte Medienmanager benötigt das Programm 'gnome-mount' um lokale "
-"Resourcen wie Laufwerke, einzuhängen. Die Unix-basierte Variante kann solche "
-"Resourcen direkt einbinden und zeigt auch andere lokale Geräte an.\n"
-"Wenn Sie unsicher sind, benutzen Sie die HAL-basierte Variante."
 
 #: ../src/preferencesdialog.c:402
 msgid "Use _HAL based volume manager"
-msgstr "_HAL-basierten Medienmanager benutzen"
+msgstr ""
 
 #: ../src/preferencesdialog.c:403 ../src/preferencesdialog.c:411
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr ""
-"<i>Änderungen an dieser Einstellungen werden erst nach einem Neustart von "
-"Gigolo wirksam .</i>"
 
 #: ../src/preferencesdialog.c:410
 msgid "Use _Unix based volume manager"
-msgstr "_Unix-basierten Medienmanager benutzen"
+msgstr ""
 
 #: ../src/preferencesdialog.c:426
 msgid "Interface"
-msgstr "Oberfläche"
+msgstr ""
 
 #: ../src/preferencesdialog.c:428
 msgid "_Save window position and geometry"
-msgstr "_Fensterposition und -größe speichern"
+msgstr ""
 
 #: ../src/preferencesdialog.c:429
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr ""
-"Speichert die Fensterposition und die Fenstergröße und stellt sie beim "
-"nächsten Start wieder her."
 
 #: ../src/preferencesdialog.c:432
 msgid "Show status _icon in the Notification Area"
-msgstr "Zeige ein Statussymbol im _Benachrichtigungsfeld."
+msgstr ""
 
 #: ../src/preferencesdialog.c:435
 msgid "Start minimized in the Notification Area"
-msgstr "Minimiert im Benachrichtigungsfeld starten"
+msgstr ""
 
 #: ../src/preferencesdialog.c:441
 msgid "_View Mode"
-msgstr "_Ansicht"
+msgstr ""
 
 #: ../src/preferencesdialog.c:454
 msgid "Toolbar"
-msgstr "Werkzeugleiste"
+msgstr ""
 
 #: ../src/preferencesdialog.c:456
 msgid "Show _toolbar"
-msgstr "_Werkzeugleiste anzeigen"
+msgstr ""
 
 #: ../src/preferencesdialog.c:462
 msgid "St_yle"
-msgstr "_Stil"
+msgstr ""
 
 #: ../src/preferencesdialog.c:473
 msgid "_Orientation"
-msgstr "_Ausrichtung"
+msgstr ""
 
 #: ../src/preferencesdialog.c:536
 msgid "Preferences"
-msgstr "Einstellungen"
+msgstr ""
 
 #: ../src/backendgvfs.c:196
 #, c-format
@@ -441,52 +429,30 @@ msgid ""
 "Mounted: Yes\n"
 "Service Type: %s"
 msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"Eingehängt: Ja\n"
-"Verbindungstyp: %s"
 
 #: ../src/backendgvfs.c:209
 #, c-format
 msgid "<b>Unix device: %s</b>"
-msgstr "<b>Unix-Gerät: %s</b>"
+msgstr ""
 
 #: ../src/backendgvfs.c:393 ../src/backendgvfs.c:424
 msgid "unknown"
-msgstr "unbekannt"
+msgstr ""
 
 #: ../src/backendgvfs.c:397 ../src/backendgvfs.c:474
 #, c-format
 msgid "Mounting of \"%s\" failed."
-msgstr "Einhängen von »%s« ist fehlgeschlagen."
+msgstr ""
 
 #: ../src/backendgvfs.c:428
 #, c-format
 msgid "Unmounting of \"%s\" failed."
-msgstr "Aushängen von »%s« ist fehlgeschlagen."
+msgstr ""
 
 #: ../src/mountdialog.c:129
-#, fuzzy
 msgid "Mounting"
-msgstr " Eingehängt"
+msgstr ""
 
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Eine einfache Oberfläche um entfernte Dateisysteme einzubinden"
-
-#~ msgid "Secure WebDAV"
-#~ msgstr "WebDAV (sicher)"
-
-#~ msgid "Show tray _icon"
-#~ msgstr "_Symbol in der Systemleiste anzeigen"
-
-#, fuzzy
-#~ msgid "Domain"
-#~ msgstr "_Domäne:"
-
-#~ msgid "(not yet implemented)"
-#~ msgstr "Noch nicht implementiert."
-
-#~ msgid "<b>Bookmarks</b>"
-#~ msgstr "<b>Lesezeichen</b>"
+msgstr ""
