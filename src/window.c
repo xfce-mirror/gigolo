@@ -1071,7 +1071,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 		{ "Disconnect", GTK_STOCK_DISCONNECT, NULL, NULL,
 			N_("Disconnect the selected resource"), G_CALLBACK(action_unmount_cb) },
 		{ "Open", GTK_STOCK_OPEN, NULL, "<Ctrl>o",
-			N_("Open the selection resource with a file manager"), G_CALLBACK(action_open_cb) },
+			N_("Open the selected resource with a file manager"), G_CALLBACK(action_open_cb) },
 		{ "CopyURI", GTK_STOCK_COPY, N_("Copy URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
 		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb) },
 		{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
