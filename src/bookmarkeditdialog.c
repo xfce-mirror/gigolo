@@ -346,8 +346,19 @@ static gboolean combo_foreach(GtkTreeModel *model, G_GNUC_UNUSED GtkTreePath *pa
 
 static void combo_set_active(GtkWidget *combo, gint idx)
 {
-	gtk_tree_model_foreach(gtk_combo_box_get_model(GTK_COMBO_BOX(combo)),
-		combo_foreach, GINT_TO_POINTER(idx));
+	GtkTreeIter iter;
+	GtkTreeModel *model = gtk_combo_box_get_model(GTK_COMBO_BOX(combo));
+	gboolean visible = FALSE;
+	gboolean is_valid;
+
+	gtk_tree_model_foreach(model, combo_foreach, GINT_TO_POINTER(idx));
+
+	/* Prevent setting an invisible/unsupported scheme, fallback to Custom Location. */
+	is_valid = gtk_combo_box_get_active_iter(GTK_COMBO_BOX(combo), &iter);
+	if (is_valid)
+		gtk_tree_model_get(model, &iter, COLUMN_VISIBLE, &visible, -1);
+	if (! visible || !is_valid)
+		gtk_tree_model_foreach(model, combo_foreach, GINT_TO_POINTER(SCHEME_CUSTOM));
 }
 
 
