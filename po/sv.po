@@ -7,27 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-01 17:17+0100\n"
-"PO-Revision-Date: 2009-02-01 17:28+0100\n"
+"POT-Creation-Date: 2009-02-09 00:26+0100\n"
+"PO-Revision-Date: 2009-02-09 00:29+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:41
+#: ../src/main.c:42
 msgid "Print a list of supported URI schemes"
 msgstr "Skriv ut en lista över URI-scheman som stöds"
 
-#: ../src/main.c:42
+#: ../src/main.c:43
 msgid "Be verbose"
 msgstr "Var informativ"
 
-#: ../src/main.c:43
+#: ../src/main.c:44
 msgid "Show version information"
 msgstr "Visa versionsinformation"
 
-#: ../src/main.c:98
+#: ../src/main.c:99
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- ett enkelt gränssnitt för att enkelt ansluta till fjärrfilsystem"
 
@@ -86,11 +86,11 @@ msgstr ""
 "<tp-sv@listor.tp-sv.se>."
 
 #: ../src/window.c:681
-#: ../src/bookmarkeditdialog.c:206
-#: ../src/bookmarkeditdialog.c:224
-#: ../src/bookmarkeditdialog.c:237
-#: ../src/bookmarkeditdialog.c:248
-#: ../src/bookmarkeditdialog.c:259
+#: ../src/bookmarkeditdialog.c:207
+#: ../src/bookmarkeditdialog.c:225
+#: ../src/bookmarkeditdialog.c:238
+#: ../src/bookmarkeditdialog.c:249
+#: ../src/bookmarkeditdialog.c:260
 msgid "Error"
 msgstr "Fel"
 
@@ -127,7 +127,7 @@ msgid "Disconnect the selected resource"
 msgstr "Koppla från markerad resurs"
 
 #: ../src/window.c:1074
-msgid "Open the selection resource with a file manager"
+msgid "Open the selected resource with a file manager"
 msgstr "Öppna markerad resurs med en filhanterare"
 
 #: ../src/window.c:1075
@@ -192,7 +192,7 @@ msgid "Authentication information needed"
 msgstr "Autentiseringsinformation behövs"
 
 #: ../src/passworddialog.c:126
-#: ../src/bookmarkeditdialog.c:825
+#: ../src/bookmarkeditdialog.c:837
 msgid "_Domain:"
 msgstr "_Domän:"
 
@@ -238,75 +238,75 @@ msgstr "Annan information"
 msgid "Edit Bookmarks"
 msgstr "Redigera bokmärken"
 
-#: ../src/bookmarkeditdialog.c:207
+#: ../src/bookmarkeditdialog.c:208
 msgid "You must enter a name for the bookmark."
 msgstr "Du måste ange ett namn för bokmärket."
 
-#: ../src/bookmarkeditdialog.c:225
+#: ../src/bookmarkeditdialog.c:226
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr "Det angivna bokmärkesnamnet används redan. Välj ett annat namn."
 
-#: ../src/bookmarkeditdialog.c:238
+#: ../src/bookmarkeditdialog.c:239
 msgid "You must enter a server address or name."
 msgstr "Du måste ange en serveradress eller ett namn."
 
-#: ../src/bookmarkeditdialog.c:249
+#: ../src/bookmarkeditdialog.c:250
 msgid "You must enter a share name."
 msgstr "Du måste ange ett utdelningsnamn."
 
-#: ../src/bookmarkeditdialog.c:260
+#: ../src/bookmarkeditdialog.c:261
 msgid "You must enter a valid URI for the connection."
 msgstr "Du måste ange en giltig URI för anslutningen."
 
-#: ../src/bookmarkeditdialog.c:704
+#: ../src/bookmarkeditdialog.c:716
 msgid "Create Bookmark"
 msgstr "Skapa bokmärke"
 
-#: ../src/bookmarkeditdialog.c:711
+#: ../src/bookmarkeditdialog.c:723
 msgid "Edit Bookmark"
 msgstr "Redigera bokmärke"
 
-#: ../src/bookmarkeditdialog.c:719
+#: ../src/bookmarkeditdialog.c:731
 msgid "Connect to Server"
 msgstr "Anslut till server"
 
-#: ../src/bookmarkeditdialog.c:776
+#: ../src/bookmarkeditdialog.c:788
 msgid "_Bookmark name:"
 msgstr "_Bokmärkesnamn:"
 
-#: ../src/bookmarkeditdialog.c:784
+#: ../src/bookmarkeditdialog.c:796
 msgid "Au_to-Connect"
 msgstr "Anslut a_utomatiskt"
 
-#: ../src/bookmarkeditdialog.c:792
+#: ../src/bookmarkeditdialog.c:804
 msgid "Service t_ype:"
 msgstr "Tjänste_typ:"
 
-#: ../src/bookmarkeditdialog.c:815
+#: ../src/bookmarkeditdialog.c:827
 msgid "Set the port to 0 to use the default port"
 msgstr "Ställ in porten till 0 för att använda standardporten"
 
-#: ../src/bookmarkeditdialog.c:820
+#: ../src/bookmarkeditdialog.c:832
 msgid "_Location (URI):"
 msgstr "_Plats (URI):"
 
-#: ../src/bookmarkeditdialog.c:821
+#: ../src/bookmarkeditdialog.c:833
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:822
+#: ../src/bookmarkeditdialog.c:834
 msgid "_User Name:"
 msgstr "_Användarnamn:"
 
-#: ../src/bookmarkeditdialog.c:823
+#: ../src/bookmarkeditdialog.c:835
 msgid "Optional information:"
 msgstr "Valfri information:"
 
-#: ../src/bookmarkeditdialog.c:824
+#: ../src/bookmarkeditdialog.c:836
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:826
+#: ../src/bookmarkeditdialog.c:838
 msgid "_Share:"
 msgstr "_Utdelning:"
 
