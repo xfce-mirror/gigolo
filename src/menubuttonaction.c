@@ -45,35 +45,8 @@ enum
 static guint signals[LAST_SIGNAL];
 
 
-static void gigolo_menu_button_action_class_init	(GigoloMenubuttonActionClass *klass);
-static void gigolo_menu_button_action_init      	(GigoloMenubuttonAction *action);
 
-static GtkActionClass *parent_class = NULL;
-
-GType gigolo_menu_button_action_get_type(void)
-{
-	static GType self_type = 0;
-	if (! self_type)
-	{
-		static const GTypeInfo self_info =
-		{
-			sizeof(GigoloMenubuttonActionClass),
-			NULL, /* base_init */
-			NULL, /* base_finalize */
-			(GClassInitFunc)gigolo_menu_button_action_class_init,
-			NULL, /* class_finalize */
-			NULL, /* class_data */
-			sizeof(GigoloMenubuttonAction),
-			0,
-			(GInstanceInitFunc)gigolo_menu_button_action_init,
-			NULL /* value_table */
-		};
-
-		self_type = g_type_register_static(GTK_TYPE_ACTION, "GigoloMenubuttonAction", &self_info, 0);
-	}
-
-	return self_type;
-}
+G_DEFINE_TYPE(GigoloMenubuttonAction, gigolo_menu_button_action, GTK_TYPE_ACTION);
 
 
 static void delegate_item_activated(GtkMenuItem *item, GigoloMenubuttonAction *action)
@@ -175,7 +148,7 @@ static void update_menus(GigoloMenubuttonAction *action, GigoloSettings *setting
 
 static void gigolo_menu_button_action_connect_proxy(GtkAction *action, GtkWidget *widget)
 {
-	GTK_ACTION_CLASS(parent_class)->connect_proxy(action, widget);
+	GTK_ACTION_CLASS(gigolo_menu_button_action_parent_class)->connect_proxy(action, widget);
 
 	/* Overwrite the icon and label of the toolbar button */
 	if (GTK_IS_TOOL_BUTTON(widget))
@@ -215,8 +188,6 @@ static void gigolo_menu_button_action_class_init(GigoloMenubuttonActionClass *kl
 	action_class->create_tool_item = gigolo_menu_button_action_create_tool_item;
 	action_class->menu_item_type = GTK_TYPE_IMAGE_MENU_ITEM;
 	action_class->toolbar_item_type = GTK_TYPE_MENU_TOOL_BUTTON;
-
-	parent_class = (GtkActionClass*)g_type_class_peek(GTK_TYPE_ACTION);
 
 	g_object_class_install_property(g_object_class,
 										PROP_SETTINGS,

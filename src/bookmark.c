@@ -48,37 +48,9 @@ struct _GigoloBookmarkPrivate
 	gboolean is_valid;
 };
 
-static void gigolo_bookmark_class_init		(GigoloBookmarkClass *klass);
-static void gigolo_bookmark_init      		(GigoloBookmark *self);
 static void gigolo_bookmark_finalize  		(GObject *object);
 
-/* Local data */
-static GObjectClass *parent_class = NULL;
-
-GType gigolo_bookmark_get_type(void)
-{
-	static GType self_type = 0;
-	if (! self_type)
-	{
-		static const GTypeInfo self_info =
-		{
-			sizeof(GigoloBookmarkClass),
-			NULL, /* base_init */
-			NULL, /* base_finalize */
-			(GClassInitFunc)gigolo_bookmark_class_init,
-			NULL, /* class_finalize */
-			NULL, /* class_data */
-			sizeof(GigoloBookmark),
-			0,
-			(GInstanceInitFunc)gigolo_bookmark_init,
-			NULL /* value_table */
-		};
-
-		self_type = g_type_register_static(G_TYPE_OBJECT, "GigoloBookmark", &self_info, 0);
-	}
-
-	return self_type;
-}
+G_DEFINE_TYPE(GigoloBookmark, gigolo_bookmark, G_TYPE_OBJECT);
 
 
 static void bookmark_clear(GigoloBookmark *self)
@@ -112,8 +84,7 @@ static void gigolo_bookmark_class_init(GigoloBookmarkClass *klass)
 
 	g_object_class->finalize = gigolo_bookmark_finalize;
 
-	parent_class = (GObjectClass*)g_type_class_peek(G_TYPE_OBJECT);
-	g_type_class_add_private((gpointer)klass, sizeof(GigoloBookmarkPrivate));
+	g_type_class_add_private(klass, sizeof(GigoloBookmarkPrivate));
 }
 
 
@@ -121,7 +92,7 @@ static void gigolo_bookmark_finalize(GObject *object)
 {
 	bookmark_clear(GIGOLO_BOOKMARK(object));
 
-	G_OBJECT_CLASS(parent_class)->finalize(object);
+	G_OBJECT_CLASS(gigolo_bookmark_parent_class)->finalize(object);
 }
 
 

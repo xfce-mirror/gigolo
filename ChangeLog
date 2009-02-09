@@ -3,6 +3,11 @@
  * src/main.c:
    Fix missing startup completion notification when
    "start-in-systray" is used.
+ * src/backendgvfs.c, src/bookmark.c, src/bookmarkdialog.c,
+   src/bookmarkeditdialog.c, src/menubuttonaction.c, src/mountdialog.c,
+   src/passworddialog.c, src/preferencesdialog.c, src/settings.c,
+   src/window.c:
+   Use the G_DEFINE_TYPE() macro to generate the *_get_type() code.
 
 
 2009-02-04  Enrico Tröger  <enrico(at)xfce(dot)org>

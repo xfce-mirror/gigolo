@@ -69,41 +69,13 @@ enum
 	ACTION_DELETE
 };
 
-static void gigolo_bookmark_dialog_class_init		(GigoloBookmarkDialogClass *klass);
-static void gigolo_bookmark_dialog_init      		(GigoloBookmarkDialog *dialog);
 
-static GtkDialogClass *parent_class = NULL;
-
-GType gigolo_bookmark_dialog_get_type(void)
-{
-	static GType self_type = 0;
-	if (! self_type)
-	{
-		static const GTypeInfo self_info =
-		{
-			sizeof(GigoloBookmarkDialogClass),
-			NULL, /* base_init */
-			NULL, /* base_finalize */
-			(GClassInitFunc)gigolo_bookmark_dialog_class_init,
-			NULL, /* class_finalize */
-			NULL, /* class_data */
-			sizeof(GigoloBookmarkDialog),
-			0,
-			(GInstanceInitFunc)gigolo_bookmark_dialog_init,
-			NULL /* value_table */
-		};
-
-		self_type = g_type_register_static(GTK_TYPE_DIALOG, "GigoloBookmarkDialog", &self_info, 0);
-	}
-
-	return self_type;
-}
+G_DEFINE_TYPE(GigoloBookmarkDialog, gigolo_bookmark_dialog, GTK_TYPE_DIALOG);
 
 
 static void gigolo_bookmark_dialog_class_init(GigoloBookmarkDialogClass *klass)
 {
-	parent_class = (GtkDialogClass*)g_type_class_peek(GTK_TYPE_DIALOG);
-	g_type_class_add_private((gpointer)klass, sizeof(GigoloBookmarkDialogPrivate));
+	g_type_class_add_private(klass, sizeof(GigoloBookmarkDialogPrivate));
 }
 
 

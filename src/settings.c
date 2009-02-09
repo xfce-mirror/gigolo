@@ -60,11 +60,8 @@ struct _GigoloSettingsPrivate
 	GigoloBookmarkList *bookmarks; /* array of known bookmarks */
 };
 
-static void gigolo_settings_class_init			(GigoloSettingsClass *klass);
-static void gigolo_settings_init				(GigoloSettings *self);
 static void gigolo_settings_finalize			(GObject* object);
 
-static GObjectClass *parent_class = NULL;
 
 /* keyfile section names */
 #define SECTION_GENERAL	"general"
@@ -91,30 +88,7 @@ enum
 };
 
 
-GType gigolo_settings_get_type(void)
-{
-	static GType self_type = 0;
-	if (! self_type)
-	{
-		static const GTypeInfo self_info =
-		{
-			sizeof(GigoloSettingsClass),
-			NULL, /* base_init */
-			NULL, /* base_finalize */
-			(GClassInitFunc)gigolo_settings_class_init,
-			NULL, /* class_finalize */
-			NULL, /* class_data */
-			sizeof(GigoloSettings),
-			0,
-			(GInstanceInitFunc)gigolo_settings_init,
-			NULL /* value_table */
-		};
-
-		self_type = g_type_register_static(G_TYPE_OBJECT, "GigoloSettings", &self_info, 0);
-	}
-
-	return self_type;
-}
+G_DEFINE_TYPE(GigoloSettings, gigolo_settings, G_TYPE_OBJECT);
 
 
 static void gigolo_settings_set_property(GObject *object, guint prop_id, const GValue *value, GParamSpec *pspec)
@@ -207,8 +181,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 	gobject_class->get_property = gigolo_settings_get_property;
 	gobject_class->set_property = gigolo_settings_set_property;
 
-	parent_class = (GObjectClass*)g_type_class_peek(G_TYPE_OBJECT);
-	g_type_class_add_private((gpointer)klass, sizeof(GigoloSettingsPrivate));
+	g_type_class_add_private(klass, sizeof(GigoloSettingsPrivate));
 
 	g_object_class_install_property(gobject_class,
 									PROP_SAVE_GEOMETRY,
@@ -478,7 +451,7 @@ static void gigolo_settings_finalize(GObject* object)
 	g_free(priv->bookmarks_filename);
 	g_free(priv->config_path);
 
-	G_OBJECT_CLASS(parent_class)->finalize(object);
+	G_OBJECT_CLASS(gigolo_settings_parent_class)->finalize(object);
 }
 
 

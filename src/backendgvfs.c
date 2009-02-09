@@ -59,39 +59,13 @@ struct _GigoloBackendGVFSPrivate
 	GtkListStore *store;
 };
 
-static void gigolo_backend_gvfs_class_init			(GigoloBackendGVFSClass *klass);
-static void gigolo_backend_gvfs_init      			(GigoloBackendGVFS *self);
 static void gigolo_backend_gvfs_finalize  			(GObject *object);
 static void gigolo_backend_gvfs_set_property		(GObject *object, guint prop_id,
 													 const GValue *value, GParamSpec *pspec);
 
 
-static GObjectClass *parent_class = NULL;
+G_DEFINE_TYPE(GigoloBackendGVFS, gigolo_backend_gvfs, G_TYPE_OBJECT);
 
-GType gigolo_backend_gvfs_get_type(void)
-{
-	static GType self_type = 0;
-	if (! self_type)
-	{
-		static const GTypeInfo self_info =
-		{
-			sizeof(GigoloBackendGVFSClass),
-			NULL, /* base_init */
-			NULL, /* base_finalize */
-			(GClassInitFunc)gigolo_backend_gvfs_class_init,
-			NULL, /* class_finalize */
-			NULL, /* class_data */
-			sizeof(GigoloBackendGVFS),
-			0,
-			(GInstanceInitFunc)gigolo_backend_gvfs_init,
-			NULL /* value_table */
-		};
-
-		self_type = g_type_register_static(G_TYPE_OBJECT, "GigoloBackendGVFS", &self_info, 0);
-	}
-
-	return self_type;
-}
 
 
 static void gigolo_backend_gvfs_cclosure_marshal_VOID__STRING_STRING(
@@ -140,8 +114,7 @@ static void gigolo_backend_gvfs_class_init(GigoloBackendGVFSClass *klass)
 	g_object_class->finalize = gigolo_backend_gvfs_finalize;
 	g_object_class->set_property = gigolo_backend_gvfs_set_property;
 
-	parent_class = (GObjectClass*)g_type_class_peek(G_TYPE_OBJECT);
-	g_type_class_add_private((gpointer)klass, sizeof(GigoloBackendGVFSPrivate));
+	g_type_class_add_private(klass, sizeof(GigoloBackendGVFSPrivate));
 
 	g_object_class_install_property(g_object_class,
 										PROP_STORE,
@@ -177,8 +150,7 @@ static void gigolo_backend_gvfs_finalize(GObject *object)
 
 	self = GIGOLO_BACKEND_GVFS(object);
 
-	if (G_OBJECT_CLASS(parent_class)->finalize)
-		(* G_OBJECT_CLASS(parent_class)->finalize)(object);
+	G_OBJECT_CLASS(gigolo_backend_gvfs_parent_class)->finalize(object);
 }
 
 

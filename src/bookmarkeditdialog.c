@@ -75,10 +75,8 @@ struct _GigoloBookmarkEditDialogPrivate
 	GigoloBookmark *bookmark_update;
 };
 
-static void gigolo_bookmark_edit_dialog_class_init			(GigoloBookmarkEditDialogClass *klass);
 static void gigolo_bookmark_edit_dialog_set_property		(GObject *object, guint prop_id,
 															 const GValue *value, GParamSpec *pspec);
-static void gigolo_bookmark_edit_dialog_init      			(GigoloBookmarkEditDialog *dialog);
 
 
 struct MethodInfo {
@@ -130,33 +128,9 @@ static struct MethodInfo methods[] = {
 static guint methods_len = G_N_ELEMENTS(methods);
 
 
-static GtkDialogClass *parent_class = NULL;
 
+G_DEFINE_TYPE(GigoloBookmarkEditDialog, gigolo_bookmark_edit_dialog, GTK_TYPE_DIALOG);
 
-GType gigolo_bookmark_edit_dialog_get_type(void)
-{
-	static GType self_type = 0;
-	if (! self_type)
-	{
-		static const GTypeInfo self_info =
-		{
-			sizeof(GigoloBookmarkEditDialogClass),
-			NULL, /* base_init */
-			NULL, /* base_finalize */
-			(GClassInitFunc)gigolo_bookmark_edit_dialog_class_init,
-			NULL, /* class_finalize */
-			NULL, /* class_data */
-			sizeof(GigoloBookmarkEditDialog),
-			0,
-			(GInstanceInitFunc)gigolo_bookmark_edit_dialog_init,
-			NULL /* value_table */
-		};
-
-		self_type = g_type_register_static(GTK_TYPE_DIALOG, "GigoloBookmarkEditDialog", &self_info, 0);
-	}
-
-	return self_type;
-}
 
 
 static void gigolo_bookmark_edit_dialog_destroy(GtkObject *object)
@@ -177,7 +151,7 @@ static void gigolo_bookmark_edit_dialog_destroy(GtkObject *object)
 	gtk_widget_destroy(priv->share_label);
 	gtk_widget_destroy(priv->information_label);
 
-	GTK_OBJECT_CLASS(parent_class)->destroy(object);
+	GTK_OBJECT_CLASS(gigolo_bookmark_edit_dialog_parent_class)->destroy(object);
 }
 
 
@@ -273,15 +247,14 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 
 static void gigolo_bookmark_edit_dialog_class_init(GigoloBookmarkEditDialogClass *klass)
 {
-	GtkObjectClass *gtk_object_class = (GtkObjectClass *)klass;
+	GtkObjectClass *gtk_object_class = (GtkObjectClass *) klass;
 	GObjectClass *g_object_class = G_OBJECT_CLASS(klass);
 
 	gtk_object_class->destroy = gigolo_bookmark_edit_dialog_destroy;
 
 	g_object_class->set_property = gigolo_bookmark_edit_dialog_set_property;
 
-	parent_class = (GtkDialogClass*)g_type_class_peek(GTK_TYPE_DIALOG);
-	g_type_class_add_private((gpointer)klass, sizeof(GigoloBookmarkEditDialogPrivate));
+	g_type_class_add_private(klass, sizeof(GigoloBookmarkEditDialogPrivate));
 
 	g_object_class_install_property(g_object_class,
 									PROP_MODE,

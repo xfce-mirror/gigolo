@@ -45,42 +45,13 @@ struct _GigoloPasswordDialogPrivate
 	GtkWidget *entry_password;
 };
 
-static void gigolo_password_dialog_class_init		(GigoloPasswordDialogClass *klass);
-static void gigolo_password_dialog_init      		(GigoloPasswordDialog *dialog);
 
-/* Local data */
-static GtkDialogClass *parent_class = NULL;
-
-GType gigolo_password_dialog_get_type(void)
-{
-	static GType self_type = 0;
-	if (! self_type)
-	{
-		static const GTypeInfo self_info =
-		{
-			sizeof(GigoloPasswordDialogClass),
-			NULL, /* base_init */
-			NULL, /* base_finalize */
-			(GClassInitFunc)gigolo_password_dialog_class_init,
-			NULL, /* class_finalize */
-			NULL, /* class_data */
-			sizeof(GigoloPasswordDialog),
-			0,
-			(GInstanceInitFunc)gigolo_password_dialog_init,
-			NULL /* value_table */
-		};
-
-		self_type = g_type_register_static(GTK_TYPE_DIALOG, "GigoloPasswordDialog", &self_info, 0);
-	}
-
-	return self_type;
-}
+G_DEFINE_TYPE(GigoloPasswordDialog, gigolo_password_dialog, GTK_TYPE_DIALOG);
 
 
 static void gigolo_password_dialog_class_init(GigoloPasswordDialogClass *klass)
 {
-	parent_class = (GtkDialogClass*)g_type_class_peek(GTK_TYPE_DIALOG);
-	g_type_class_add_private((gpointer)klass, sizeof(GigoloPasswordDialogPrivate));
+	g_type_class_add_private(klass, sizeof(GigoloPasswordDialogPrivate));
 }
 
 

@@ -93,37 +93,8 @@ enum
 	VIEW_MODE_TREEVIEW
 };
 
-static void gigolo_window_class_init			(GigoloWindowClass *klass);
-static void gigolo_window_init					(GigoloWindow *window);
 
-static GtkWindowClass *parent_class = NULL;
-
-
-GType gigolo_window_get_type(void)
-{
-	static GType self_type = 0;
-
-	if (! self_type)
-	{
-		static const GTypeInfo self_info =
-		{
-			sizeof(GigoloWindowClass),
-			NULL, /* base_init */
-			NULL, /* base_finalize */
-			(GClassInitFunc)gigolo_window_class_init,
-			NULL, /* class_finalize */
-			NULL, /* class_data */
-			sizeof(GigoloWindow),
-			0,
-			(GInstanceInitFunc)gigolo_window_init,
-			NULL /* value_table */
-		};
-
-		self_type = g_type_register_static(GTK_TYPE_WINDOW, "GigoloWindow", &self_info, 0);
-	}
-
-	return self_type;
-}
+G_DEFINE_TYPE(GigoloWindow, gigolo_window, GTK_TYPE_WINDOW);
 
 
 static gboolean gigolo_window_state_event(GtkWidget *widget, GdkEventWindowState *event)
@@ -212,8 +183,7 @@ static void gigolo_window_class_init(GigoloWindowClass *klass)
 	gtkwidget_class->delete_event = gigolo_window_delete_event;
 	gtkwidget_class->window_state_event = gigolo_window_state_event;
 
-	parent_class =(GtkWindowClass*)g_type_class_peek(GTK_TYPE_WINDOW);
-	g_type_class_add_private((gpointer)klass, sizeof(GigoloWindowPrivate));
+	g_type_class_add_private(klass, sizeof(GigoloWindowPrivate));
 }
 
 
@@ -1310,7 +1280,6 @@ static void gigolo_window_init(GigoloWindow *window)
 
 	g_object_unref(ui_manager);
 }
-
 
 
 GtkWidget *gigolo_window_new(GigoloSettings *settings)

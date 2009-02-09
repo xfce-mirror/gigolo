@@ -35,10 +35,6 @@ typedef struct _GigoloPreferencesDialogPrivate			GigoloPreferencesDialogPrivate;
 #define GIGOLO_PREFERENCES_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
 			GIGOLO_PREFERENCES_DIALOG_TYPE, GigoloPreferencesDialogPrivate))
 
-static void gigolo_preferences_dialog_class_init		(GigoloPreferencesDialogClass *klass);
-static void gigolo_preferences_dialog_init      		(GigoloPreferencesDialog *dialog);
-
-static GtkDialogClass *parent_class = NULL;
 
 enum
 {
@@ -46,30 +42,7 @@ enum
     PROP_SETTINGS
 };
 
-GType gigolo_preferences_dialog_get_type(void)
-{
-	static GType self_type = 0;
-	if (! self_type)
-	{
-		static const GTypeInfo self_info =
-		{
-			sizeof(GigoloPreferencesDialogClass),
-			NULL, /* base_init */
-			NULL, /* base_finalize */
-			(GClassInitFunc)gigolo_preferences_dialog_class_init,
-			NULL, /* class_finalize */
-			NULL, /* class_data */
-			sizeof(GigoloPreferencesDialog),
-			0,
-			(GInstanceInitFunc)gigolo_preferences_dialog_init,
-			NULL /* value_table */
-		};
-
-		self_type = g_type_register_static(GTK_TYPE_DIALOG, "GigoloPreferencesDialog", &self_info, 0);
-	}
-
-	return self_type;
-}
+G_DEFINE_TYPE(GigoloPreferencesDialog, gigolo_preferences_dialog, GTK_TYPE_DIALOG);
 
 
 /* Create an Xfce header with icon and title (only used on Xfce).
@@ -524,8 +497,6 @@ static void gigolo_preferences_dialog_class_init(GigoloPreferencesDialogClass *k
 									"Settings instance to provide properties",
 									GIGOLO_SETTINGS_TYPE,
 									G_PARAM_WRITABLE));
-
-	parent_class = (GtkDialogClass*)g_type_class_peek(GTK_TYPE_DIALOG);
 }
 
 
