@@ -139,7 +139,9 @@ gint main(gint argc, gchar** argv)
 	window = gigolo_window_new(settings);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
-	if (! gigolo_settings_get_boolean(settings, "start-in-systray"))
+	if (gigolo_settings_get_boolean(settings, "start-in-systray"))
+		gdk_notify_startup_complete();
+	else
 		gtk_widget_show(window);
 
 	gtk_main();
