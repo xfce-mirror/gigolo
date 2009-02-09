@@ -165,7 +165,7 @@ static gchar *get_tooltip_text(gpointer ref, gint ref_type, const gchar *type)
 
 			gigolo_backend_gvfs_get_name_and_uri_from_mount(ref, &name, &uri);
 			result = g_strdup_printf(
-				_("<b>%s</b>\n\nURI: %s\nMounted: Yes\nService Type: %s"), name, uri, type);
+				_("<b>%s</b>\n\nURI: %s\nConnected: Yes\nService Type: %s"), name, uri, type);
 
 			g_free(uri);
 			g_free(name);
@@ -366,7 +366,7 @@ static void volume_mount_finished_cb(GObject *src, GAsyncResult *res, gpointer b
 		}
 
 		g_warning("Mounting of \"%s\" failed: %s", name, error->message);
-		msg = g_strdup_printf(_("Mounting of \"%s\" failed."), name);
+		msg = g_strdup_printf(_("Connecting to \"%s\" failed."), name);
 
 		g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
 
@@ -397,7 +397,7 @@ static void unmount_finished_cb(GObject *src, GAsyncResult *res, gpointer backen
 		}
 
 		g_warning("Unmounting of \"%s\" failed: %s", name, error->message);
-		msg = g_strdup_printf(_("Unmounting of \"%s\" failed."), name);
+		msg = g_strdup_printf(_("Disconnecting from \"%s\" failed."), name);
 
 		g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
 
@@ -443,7 +443,7 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 
 	if (error != NULL && ! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_ALREADY_MOUNTED))
 	{
-		gchar *msg = g_strdup_printf(_("Mounting of \"%s\" failed."), uri);
+		gchar *msg = g_strdup_printf(_("Connecting to \"%s\" failed."), uri);
 		g_signal_emit(mi->self, signals[OPERATION_FAILED], 0, msg, error->message);
 		g_free(msg);
 	}

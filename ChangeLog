@@ -8,6 +8,9 @@
    src/passworddialog.c, src/preferencesdialog.c, src/settings.c,
    src/window.c:
    Use the G_DEFINE_TYPE() macro to generate the *_get_type() code.
+ * src/window.c, src/backendgvfs.c, src/mountdialog.c,
+   src/bookmarkdialog.c, src/preferencesdialog.c:
+   Prefer 'Connect' to 'Mount' in user-visible strings for consistency.
 
 
 2009-02-04  Enrico Tröger  <enrico(at)xfce(dot)org>

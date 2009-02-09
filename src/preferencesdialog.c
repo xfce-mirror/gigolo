@@ -405,7 +405,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	checkbox = add_check_button(settings, "show-in-systray", _("Show status _icon in the Notification Area"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
-	checkbox = add_check_button(settings, "start-in-systray", _("Start minimized in the Notification Area"));
+	checkbox = add_check_button(settings, "start-in-systray", _("Start _minimized in the Notification Area"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
 	hbox = gtk_hbox_new(FALSE, 6);

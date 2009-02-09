@@ -1,3 +1,9 @@
+2009-02-09  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+	* gigolo.pot, *.po: Message catalog updated
+	* de.po: German translation update
+	* ca.po: Catalan translation update (Carles Muñoz Gorriz)
+
 2009-02-09  Alexander Toresson <eulex@xfce.org>
 
 	* sv.po: Swedish translation update (Daniel Nylander)

@@ -321,7 +321,7 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 
 	renderer = gtk_cell_renderer_toggle_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Automount"), renderer, "active", COL_AUTOMOUNT, NULL);
+		_("Auto-Connect"), renderer, "active", COL_AUTOMOUNT, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_AUTOMOUNT);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);

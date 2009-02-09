@@ -280,7 +280,7 @@ static void mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark, 
 	if (show_dialog)
 	{
 		const gchar *name = gigolo_bookmark_get_name(bookmark);
-		gchar *label = g_strdup_printf(_("Mounting \"%s\""), (name != NULL) ? name : uri);
+		gchar *label = g_strdup_printf(_("Connecting to \"%s\""), (name != NULL) ? name : uri);
 
 		dialog = gigolo_mount_dialog_new(GTK_WINDOW(window), label);
 		gtk_widget_show_all(dialog);
@@ -1042,7 +1042,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 			N_("Disconnect the selected resource"), G_CALLBACK(action_unmount_cb) },
 		{ "Open", GTK_STOCK_OPEN, NULL, "<Ctrl>o",
 			N_("Open the selected resource with a file manager"), G_CALLBACK(action_open_cb) },
-		{ "CopyURI", GTK_STOCK_COPY, N_("Copy URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
+		{ "CopyURI", GTK_STOCK_COPY, N_("Copy _URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
 		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb) },
 		{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
 	};
@@ -1121,7 +1121,7 @@ static void create_tree_view(GigoloWindow *window)
 
 	renderer = gtk_cell_renderer_toggle_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Mounted"), renderer, "active", GIGOLO_WINDOW_COL_IS_MOUNTED, NULL);
+		_("Connected"), renderer, "active", GIGOLO_WINDOW_COL_IS_MOUNTED, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, GIGOLO_WINDOW_COL_IS_MOUNTED);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
