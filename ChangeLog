@@ -11,6 +11,9 @@
  * src/window.c, src/backendgvfs.c, src/mountdialog.c,
    src/bookmarkdialog.c, src/preferencesdialog.c:
    Prefer 'Connect' to 'Mount' in user-visible strings for consistency.
+ * src/window.c:
+   Remember the main window's show state and don't query the window's
+   maximised state on exit when it is not shown at all.
 
 
 2009-02-04  Enrico Tröger  <enrico(at)xfce(dot)org>

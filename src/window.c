@@ -77,6 +77,7 @@ struct _GigoloWindowPrivate
 	GtkWidget		*systray_icon_popup_menu;
 
 	guint			 autoconnect_timeout_id;
+	gboolean		 window_hidden;
 };
 
 enum
@@ -104,27 +105,26 @@ static gboolean gigolo_window_state_event(GtkWidget *widget, GdkEventWindowState
 
 	if (show_systray_icon)
 	{
-		gboolean window_hidden = FALSE;
 		if (event->changed_mask & GDK_WINDOW_STATE_ICONIFIED)
 		{
 			if (event->new_window_state & GDK_WINDOW_STATE_ICONIFIED)
-				window_hidden = TRUE;
+				priv->window_hidden = TRUE;
 			else
-				window_hidden = FALSE;
+				priv->window_hidden = FALSE;
 		}
 		if (event->changed_mask & GDK_WINDOW_STATE_WITHDRAWN)
 		{
 			if (event->new_window_state & GDK_WINDOW_STATE_WITHDRAWN)
-				window_hidden = TRUE;
+				priv->window_hidden = TRUE;
 			else
-				window_hidden = FALSE;
+				priv->window_hidden = FALSE;
 		}
 
-		if (window_hidden && show_systray_icon)
+		if (priv->window_hidden && show_systray_icon)
 		{
 			gtk_window_set_skip_taskbar_hint(GTK_WINDOW(widget), TRUE);
 		}
-		else if (! window_hidden)
+		else if (! priv->window_hidden)
 		{
 			gtk_window_set_skip_taskbar_hint(GTK_WINDOW(widget), FALSE);
 		}
@@ -156,7 +156,8 @@ static gboolean gigolo_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkE
 	{
 		gtk_window_get_position(GTK_WINDOW(widget), &geo[0], &geo[1]);
 		gtk_window_get_size(GTK_WINDOW(widget), &geo[2], &geo[3]);
-		if (gdk_window_get_state(gigolo_widget_get_window(widget)) & GDK_WINDOW_STATE_MAXIMIZED)
+		if (priv->window_hidden && gdk_window_get_state(
+			gigolo_widget_get_window(widget)) & GDK_WINDOW_STATE_MAXIMIZED)
 			geo[4] = 1;
 		else
 			geo[4] = 0;
