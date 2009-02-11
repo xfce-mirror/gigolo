@@ -138,20 +138,21 @@ def dist():
 
 def shutdown():
 	# the following code was taken from midori's WAF script, thanks
-	if Options.commands['install'] or Options.commands['uninstall']:
-		dir = Build.bld.get_install_path('${DATADIR}/icons/hicolor')
-		icon_cache_updated = False
-		if not Options.options.destdir:
-			try:
-				if not Utils.exec_command('gtk-update-icon-cache -q -f -t %s' % dir):
-					Utils.pprint('YELLOW', "Updated Gtk icon cache.")
-					icon_cache_updated = True
-			except:
-				Utils.pprint('RED', "Failed to update icon cache.")
-		if not icon_cache_updated:
-			Utils.pprint('YELLOW', "Icon cache not updated. After install, run this:")
-			Utils.pprint('YELLOW', "gtk-update-icon-cache -q -f -t %s" % dir)
-	elif Options.options.update_po:
+	# (disabled because we don't need it at all as long as we don't have an own icon :( )
+	#~ if Options.commands['install'] or Options.commands['uninstall']:
+		#~ dir = Build.bld.get_install_path('${DATADIR}/icons/hicolor')
+		#~ icon_cache_updated = False
+		#~ if not Options.options.destdir:
+			#~ try:
+				#~ if not Utils.exec_command('gtk-update-icon-cache -q -f -t %s' % dir):
+					#~ Utils.pprint('YELLOW', "Updated Gtk icon cache.")
+					#~ icon_cache_updated = True
+			#~ except:
+				#~ Utils.pprint('RED', "Failed to update icon cache.")
+		#~ if not icon_cache_updated:
+			#~ Utils.pprint('YELLOW', "Icon cache not updated. After install, run this:")
+			#~ Utils.pprint('YELLOW', "gtk-update-icon-cache -q -f -t %s" % dir)
+	if Options.options.update_po:
 		os.chdir('%s/po' % srcdir)
 		try:
 			try:
