@@ -57,19 +57,14 @@ static GtkWidget *xfce_header_new(const gchar *icon, const gchar *title)
 	GtkWidget *label;
 	GtkWidget* vbox;
 	GtkWidget* separator;
-	GdkColor *color;
 
 	xfce_heading = gtk_event_box_new();
 	entry = gtk_entry_new();
-	color = &(gtk_widget_get_style(entry)->base[GTK_STATE_NORMAL]);
-	gtk_widget_modify_bg(xfce_heading, GTK_STATE_NORMAL, color);
 	hbox = gtk_hbox_new(FALSE, 12);
 	gtk_container_set_border_width(GTK_CONTAINER(hbox), 6);
 	image = gtk_image_new_from_icon_name(icon, GTK_ICON_SIZE_DIALOG);
 	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 0);
 	label = gtk_label_new(NULL);
-	color = &(gtk_widget_get_style(entry)->text[GTK_STATE_NORMAL]);
-	gtk_widget_modify_fg(label, GTK_STATE_NORMAL, color);
 	markup = g_strdup_printf("<span size='large' weight='bold'>%s</span>", title);
 	gtk_label_set_markup(GTK_LABEL(label), markup);
 	gtk_box_pack_start(GTK_BOX(hbox), label, FALSE, FALSE, 0);

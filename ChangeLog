@@ -1,4 +1,10 @@
-2009-02-09  Enrico Tröger  <enrico(dot)troeger(at)uvena(dot)de>
+2009-02-13  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/preferencesdialog.c:
+   Don't modify the colours of the Xfce header widget.
+
+
+2009-02-09  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/main.c:
    Fix missing startup completion notification when
