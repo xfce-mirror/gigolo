@@ -1,4 +1,18 @@
+Gigolo 0.2.0 (February 12, 2009)
+
+	* Application renamed to "Gigolo"
+	* Bookmarks can be connected automatically at startup and at a
+	  given interval (patch by Colin Leroy, thanks)
+	* Make user-defined keyboard shortcuts for menu items persistent
+	* Add a 'Copy URI' menu item to the actions menu
+	* Allow (un)mounting resources by toggling the 'Mounted' checkbox
+	  in the detailed view
+	* Show a progressbar dialog when mounting bookmarks
+	* Add an option to start minimized
+	* Many minor improvements and fixes
+
+
 Sion 0.1.0 (January 02, 2009)
 
-    * First public release of Sion.
+	* First public release of Sion.
 

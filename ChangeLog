@@ -2,6 +2,7 @@
 
  * src/preferencesdialog.c:
    Don't modify the colours of the Xfce header widget.
+ * New release: Gigolo 0.2.0.
 
 
 2009-02-09  Enrico Tröger  <enrico(at)xfce(dot)org>
