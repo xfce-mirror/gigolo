@@ -122,7 +122,8 @@ gint main(gint argc, gchar** argv)
 		return EXIT_SUCCESS;
 	}
 
-	verbose("Gigolo (GTK+ %u.%u.%u, GLib %u.%u.%u)",
+	verbose("Gigolo %s (GTK+ %u.%u.%u, GLib %u.%u.%u)",
+		VERSION,
 		gtk_major_version, gtk_minor_version, gtk_micro_version,
 		glib_major_version, glib_minor_version, glib_micro_version);
 
