@@ -146,7 +146,7 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 	s = (t) ? t + 1 : s;
 	if (*s == '[') /* obex://[00:12:D1:94:1B:28]/ or http://[1080:0:0:0:8:800:200C:417A]/index.html */
 	{
-		gchar *hostend;
+		gchar *hostend, *tmp;
 
 		s++; /* skip the found '[' */
 		hostend = strchr(s, ']');
@@ -163,7 +163,9 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 			l++; /* count the len of the hostname */
 			x++;
 		}
-		priv->host = g_strndup(s, l);
+		tmp = g_strndup(s, l);
+		priv->host = g_strconcat("[", tmp, "]", NULL);
+		g_free(tmp);
 		s = hostend;
 	}
 	else

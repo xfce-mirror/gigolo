@@ -1,3 +1,10 @@
+2009-02-16  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/bookmarks.c:
+   Don't strip the square brackets when parsing Obex URIs to prevent
+   storing invalid URIs.
+
+
 2009-02-13  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/preferencesdialog.c:
