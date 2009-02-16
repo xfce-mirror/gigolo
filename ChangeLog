@@ -6,6 +6,9 @@
  * src/window.c:
    Fix a wrong check when checking for existing bookmarks, fixes always
    disabled 'Create Bookmark' menu item.
+ * src/backendgvfs.c, src/bookmark.c, src/bookmark.h,
+   src/bookmarkeditdialog.c, src/window.c:
+   Escape the userinfo part of URIs to allow at-signs.
 
 
 2009-02-13  Enrico Tröger  <enrico(at)xfce(dot)org>

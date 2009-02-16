@@ -161,12 +161,14 @@ static gchar *get_tooltip_text(gpointer ref, gint ref_type, const gchar *type)
 	{
 		case GIGOLO_WINDOW_REF_TYPE_MOUNT:
 		{
-			gchar *uri, *name;
+			gchar *uri, *name, *clean_uri;
 
 			gigolo_backend_gvfs_get_name_and_uri_from_mount(ref, &name, &uri);
+			clean_uri = g_uri_unescape_string(uri, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO);
 			result = g_strdup_printf(
-				_("<b>%s</b>\n\nURI: %s\nConnected: Yes\nService Type: %s"), name, uri, type);
+				_("<b>%s</b>\n\nURI: %s\nConnected: Yes\nService Type: %s"), name, clean_uri, type);
 
+			g_free(clean_uri);
 			g_free(uri);
 			g_free(name);
 			return result;

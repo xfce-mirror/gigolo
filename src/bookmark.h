@@ -53,6 +53,7 @@ gboolean			gigolo_bookmark_is_valid		(GigoloBookmark *bookmark);
 void				gigolo_bookmark_clone			(GigoloBookmark *dst, const GigoloBookmark *src);
 
 gchar*				gigolo_bookmark_get_uri			(GigoloBookmark *bookmark);
+gchar*				gigolo_bookmark_get_uri_escaped	(GigoloBookmark *bookmark);
 void				gigolo_bookmark_set_uri			(GigoloBookmark *bookmark, const gchar *uri);
 
 const gchar*		gigolo_bookmark_get_name		(GigoloBookmark *bookmark);
@@ -68,6 +69,7 @@ guint				gigolo_bookmark_get_port		(GigoloBookmark *bookmark);
 void				gigolo_bookmark_set_port		(GigoloBookmark *bookmark, guint port);
 
 const gchar*		gigolo_bookmark_get_user		(GigoloBookmark *bookmark);
+gchar*				gigolo_bookmark_get_user_unescaped(GigoloBookmark *bookmark);
 void				gigolo_bookmark_set_user		(GigoloBookmark *bookmark, const gchar *user);
 
 const gchar*		gigolo_bookmark_get_share		(GigoloBookmark *bookmark);

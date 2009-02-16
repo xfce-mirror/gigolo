@@ -255,7 +255,7 @@ static GigoloBookmark *get_bookmark_from_uri(GigoloWindow *window, const gchar *
 	for (i = 0; i < bml->len && ! found; i++)
 	{
 		bm = g_ptr_array_index(bml, i);
-		tmp_uri = gigolo_bookmark_get_uri(bm);
+		tmp_uri = gigolo_bookmark_get_uri_escaped(bm);
 		if (gigolo_str_equal(uri, tmp_uri))
 			found = TRUE;
 
@@ -276,7 +276,7 @@ static void mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark, 
 
 	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	uri = gigolo_bookmark_get_uri(bookmark);
+	uri = gigolo_bookmark_get_uri_escaped(bookmark);
 
 	if (show_dialog)
 	{

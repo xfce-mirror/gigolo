@@ -258,10 +258,11 @@ void gigolo_bookmark_clone(GigoloBookmark *dst, const GigoloBookmark *src)
 }
 
 
-gchar *gigolo_bookmark_get_uri(GigoloBookmark *bookmark)
+static gchar *gigolo_bookmark_get_uri_real(GigoloBookmark *bookmark, gboolean escaped)
 {
 	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 	gchar *result;
+	gchar *user = NULL;
 	gchar *port = NULL;
 
 	g_return_val_if_fail(bookmark != NULL, NULL);
@@ -271,17 +272,36 @@ gchar *gigolo_bookmark_get_uri(GigoloBookmark *bookmark)
 		port = g_strdup_printf(":%d", priv->port);
 	}
 
+	/* Escape the userinfo part to allow '@' characters even if RFC3986 doesn't seem to allow them. */
+	if (escaped && NZV(priv->user))
+		user = g_uri_escape_string(priv->user, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO, FALSE);
+	else
+		user = g_strdup(priv->user);
+
 	result = g_strdup_printf("%s://%s%s%s%s/%s%s",
 		priv->scheme,
-		(NZV(priv->user)) ? priv->user : "",
-		(NZV(priv->user)) ? "@" : "",
+		(NZV(user)) ? user : "",
+		(NZV(user)) ? "@" : "",
 		priv->host,
 		(port) ? port : "",
 		(NZV(priv->share)) ? priv->share : "",
 		(NZV(priv->share)) ? "/" : "");
 
 	g_free(port);
+	g_free(user);
 	return result;
+}
+
+
+gchar *gigolo_bookmark_get_uri(GigoloBookmark *bookmark)
+{
+	return gigolo_bookmark_get_uri_real(bookmark, FALSE);
+}
+
+
+gchar *gigolo_bookmark_get_uri_escaped(GigoloBookmark *bookmark)
+{
+	return gigolo_bookmark_get_uri_real(bookmark, TRUE);
 }
 
 
@@ -424,6 +444,24 @@ void gigolo_bookmark_set_should_not_autoconnect(GigoloBookmark *bookmark, gboole
 	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	priv->should_not_autoconnect = should_not_autoconnect;
+}
+
+
+gchar *gigolo_bookmark_get_user_unescaped(GigoloBookmark *bookmark)
+{
+	gchar *username;
+	GigoloBookmarkPrivate *priv;
+
+	g_return_val_if_fail(bookmark != NULL, NULL);
+
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+
+	if (NZV(priv->user))
+		username = g_uri_unescape_string(priv->user, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO);
+	else
+		username = g_strdup(priv->user);
+
+	return username;
 }
 
 

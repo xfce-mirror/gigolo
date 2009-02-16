@@ -339,7 +339,7 @@ static void combo_set_active(GtkWidget *combo, gint idx)
 static void init_values(GigoloBookmarkEditDialog *dialog)
 {
 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
-	gchar *uri;
+	gchar *uri, *user;
 	const gchar *tmp;
 	guint port;
 	guint idx;
@@ -347,21 +347,21 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 	tmp = gigolo_bookmark_get_name(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->name_entry), tmp);
-		tmp = gigolo_bookmark_get_name(priv->bookmark_init);
 	uri = gigolo_bookmark_get_uri(priv->bookmark_init);
 	if (uri != NULL)
 	{
 		gtk_entry_set_text(GTK_ENTRY(priv->uri_entry), uri);
-		tmp = gigolo_bookmark_get_uri(priv->bookmark_init);
 		g_free(uri);
 	}
 	tmp = gigolo_bookmark_get_host(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->server_entry), tmp);
-		tmp = gigolo_bookmark_get_name(priv->bookmark_init);
-	tmp = gigolo_bookmark_get_user(priv->bookmark_init);
-	if (tmp != NULL)
-		gtk_entry_set_text(GTK_ENTRY(priv->user_entry), tmp);
+	user = gigolo_bookmark_get_user_unescaped(priv->bookmark_init);
+	if (user != NULL)
+	{
+		gtk_entry_set_text(GTK_ENTRY(priv->user_entry), user);
+		g_free(user);
+	}
 	tmp = gigolo_bookmark_get_share(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->share_entry), tmp);
