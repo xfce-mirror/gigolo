@@ -3,6 +3,9 @@
  * src/bookmarks.c:
    Don't strip the square brackets when parsing Obex URIs to prevent
    storing invalid URIs.
+ * src/window.c:
+   Fix a wrong check when checking for existing bookmarks, fixes always
+   disabled 'Create Bookmark' menu item.
 
 
 2009-02-13  Enrico Tröger  <enrico(at)xfce(dot)org>

@@ -261,7 +261,7 @@ static GigoloBookmark *get_bookmark_from_uri(GigoloWindow *window, const gchar *
 
 		g_free(tmp_uri);
 	}
-	return bm;
+	return (found) ? bm : NULL;
 }
 
 
