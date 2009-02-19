@@ -1,0 +1,465 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Gigolo Plugin Turkish translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-09 19:56+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Samed Beyribey <ras0ir@eventualis.org>\n"
+"Language-Team: Xfce-TR <xfce-tr@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Country: TURKEY\n"
+
+#: ../src/main.c:42
+msgid "Print a list of supported URI schemes"
+msgstr "Desteklenen URI şemaları listesini göster"
+
+#: ../src/main.c:43
+msgid "Be verbose"
+msgstr "Detaylı çıktı göster"
+
+#: ../src/main.c:44
+msgid "Show version information"
+msgstr "Sürüm bilgisini göster"
+
+#: ../src/main.c:99
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- uzak dosya sistemlerine bağlanmak için tasarlanmış basit bir arayüz uygulaması"
+
+#: ../src/common.c:73
+msgid "Unix Device"
+msgstr "Unix Aygıtı"
+
+#: ../src/common.c:75
+msgid "Windows Share"
+msgstr "Windows Paylaşımı"
+
+#: ../src/common.c:77
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:79
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:81
+msgid "SSH"
+msgstr "SSH"
+
+#. TODO find something better
+#: ../src/common.c:84
+msgid "OBEX"
+msgstr "OBEX"
+
+#: ../src/common.c:86
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:88
+msgid "WebDAV (secure)"
+msgstr "WebDAV (güvenli)"
+
+#: ../src/common.c:90
+msgid "Network"
+msgstr "Ağ"
+
+#: ../src/common.c:92
+msgid "Custom Location"
+msgstr "Özel Konum"
+
+#: ../src/window.c:283
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "\"%s\" dosya sistemine bağlanılıyor"
+
+#: ../src/window.c:429
+msgid "translator-credits"
+msgstr "Samed Beyribey <ras0ir@eventualis.org>, 2009 "
+
+#: ../src/window.c:651
+#: ../src/bookmarkeditdialog.c:181
+#: ../src/bookmarkeditdialog.c:199
+#: ../src/bookmarkeditdialog.c:212
+#: ../src/bookmarkeditdialog.c:223
+#: ../src/bookmarkeditdialog.c:234
+msgid "Error"
+msgstr "Hata"
+
+#: ../src/window.c:1028
+msgid "_File"
+msgstr "_Dosya"
+
+#: ../src/window.c:1029
+msgid "_Edit"
+msgstr "Düz_en"
+
+#: ../src/window.c:1030
+msgid "_Actions"
+msgstr "İşle_mler"
+
+#: ../src/window.c:1031
+msgid "_Help"
+msgstr "_Yardım"
+
+#: ../src/window.c:1035
+msgid "Create _Bookmark"
+msgstr "Sık Kullanılan Oluş_tur"
+
+#: ../src/window.c:1037
+msgid "_Edit Bookmarks"
+msgstr "_Sık Kullanılanları Düzenle"
+
+#: ../src/window.c:1038
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Sık kullanılanlar yöneticisini aç "
+
+#: ../src/window.c:1042
+msgid "Disconnect the selected resource"
+msgstr "Seçilen kaynak ile olan bağlantıyı kes"
+
+#: ../src/window.c:1044
+msgid "Open the selected resource with a file manager"
+msgstr "Seçilen kaynağı dosya yöneticisi ile aç"
+
+#: ../src/window.c:1045
+msgid "Copy _URI"
+msgstr "_URI'yi Kopyala"
+
+#: ../src/window.c:1046
+msgid "Quit Gigolo"
+msgstr "Gigolo'yu Kapat"
+
+#: ../src/window.c:1053
+msgid "_Bookmarks"
+msgstr "Sık _Kullanılanlar"
+
+#: ../src/window.c:1053
+msgid "Choose a bookmark to connect to"
+msgstr "Bağlanmak için bir sık kullanılan seçin"
+
+#: ../src/window.c:1124
+msgid "Connected"
+msgstr "Bağlandı"
+
+#: ../src/window.c:1133
+#: ../src/bookmarkdialog.c:300
+msgid "Service Type"
+msgstr "Servis Türü"
+
+#: ../src/window.c:1141
+#: ../src/bookmarkdialog.c:292
+msgid "Name"
+msgstr "İsim"
+
+#: ../src/window.c:1208
+#: ../src/window.c:1277
+#: ../gigolo.desktop.in.h:2
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:574
+msgid "Move it now?"
+msgstr "Şimdi taşınmasını istiyor musunuz?"
+
+#: ../src/settings.c:575
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Gigolo çalıştırılmadan önce eski yapılandırma dizininizin taşınmasına ihtiyaç duyuyor."
+
+#: ../src/settings.c:583
+#, c-format
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Eski yapılandırma dizini \"%s\" yeni hedef \"%s\" altına taşınamıyor (%s). Lütfen dizini manuel olarak yeni konumuna taşıyın."
+
+#: ../src/settings.c:586
+msgid "Warning"
+msgstr "Uyarı"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "Bağlan"
+
+#: ../src/passworddialog.c:74
+msgid "Authentication information needed"
+msgstr "Kimlik denetimi bilgisi gerekli"
+
+#: ../src/passworddialog.c:97
+#: ../src/bookmarkeditdialog.c:810
+msgid "_Domain:"
+msgstr "_Alan Adı:"
+
+#: ../src/passworddialog.c:110
+msgid "_Username:"
+msgstr "_Kullanıcı Adı:"
+
+#: ../src/passworddialog.c:124
+msgid "_Password:"
+msgstr "_Parola:"
+
+#: ../src/bookmarkdialog.c:95
+#, c-format
+msgid "Domain: %s"
+msgstr "Alan Adı: %s"
+
+#: ../src/bookmarkdialog.c:100
+#, c-format
+msgid "Share: %s"
+msgstr "Paylaşım: %s"
+
+#: ../src/bookmarkdialog.c:308
+msgid "Host"
+msgstr "Sunucu"
+
+#: ../src/bookmarkdialog.c:316
+msgid "Port"
+msgstr "Port"
+
+#: ../src/bookmarkdialog.c:324
+msgid "Auto-Connect"
+msgstr "Otomatik-Bağlan"
+
+#: ../src/bookmarkdialog.c:332
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+#: ../src/bookmarkdialog.c:340
+msgid "Other information"
+msgstr "Diğer bilgi"
+
+#: ../src/bookmarkdialog.c:397
+msgid "Edit Bookmarks"
+msgstr "Sık Kullanılanları Düzenle"
+
+#: ../src/bookmarkeditdialog.c:182
+msgid "You must enter a name for the bookmark."
+msgstr "Sık kullanılan öğesi için bir isim girmelisiniz."
+
+#: ../src/bookmarkeditdialog.c:200
+msgid "The entered bookmark name is already in use. Please choose another one."
+msgstr "Sık kullanılan için yazdığınız isim kullanımda. Lütfen farklı bir isim seçin."
+
+#: ../src/bookmarkeditdialog.c:213
+msgid "You must enter a server address or name."
+msgstr "Sunucu adresi veya sunucu adı girmelisiniz."
+
+#: ../src/bookmarkeditdialog.c:224
+msgid "You must enter a share name."
+msgstr "Paylaşım adı girmeniz gerekmektedir."
+
+#: ../src/bookmarkeditdialog.c:235
+msgid "You must enter a valid URI for the connection."
+msgstr "Bağlantı kurmak için geçerli bir URI değeri girmeniz gerekmektedir."
+
+#: ../src/bookmarkeditdialog.c:689
+msgid "Create Bookmark"
+msgstr "Sık Kullanılan Oluştur"
+
+#: ../src/bookmarkeditdialog.c:696
+msgid "Edit Bookmark"
+msgstr "Sık Kullanılanı Düzenle"
+
+#: ../src/bookmarkeditdialog.c:704
+msgid "Connect to Server"
+msgstr "Sunucuya Bağlan"
+
+#: ../src/bookmarkeditdialog.c:761
+msgid "_Bookmark name:"
+msgstr "_Sık kullanılan adı:"
+
+#: ../src/bookmarkeditdialog.c:769
+msgid "Au_to-Connect"
+msgstr "O_tomatik-Bağlan"
+
+#: ../src/bookmarkeditdialog.c:777
+msgid "Service t_ype:"
+msgstr "Servis tü_rü:"
+
+#: ../src/bookmarkeditdialog.c:800
+msgid "Set the port to 0 to use the default port"
+msgstr "Öntanımlı portu kullanmak için 0 yazabilirsiniz"
+
+#: ../src/bookmarkeditdialog.c:805
+msgid "_Location (URI):"
+msgstr "K_onum (URI):"
+
+#: ../src/bookmarkeditdialog.c:806
+msgid "_Server:"
+msgstr "_Sunucu:"
+
+#: ../src/bookmarkeditdialog.c:807
+msgid "_User Name:"
+msgstr "_Kullanıcı Adı:"
+
+#: ../src/bookmarkeditdialog.c:808
+msgid "Optional information:"
+msgstr "İsteğe bağlı bilgi:"
+
+#: ../src/bookmarkeditdialog.c:809
+msgid "_Port:"
+msgstr "_Port:"
+
+#: ../src/bookmarkeditdialog.c:811
+msgid "_Share:"
+msgstr "P_aylaşım:"
+
+#: ../src/preferencesdialog.c:148
+msgid "Icons"
+msgstr "Simge"
+
+#: ../src/preferencesdialog.c:149
+msgid "Text"
+msgstr "Yazı"
+
+#: ../src/preferencesdialog.c:150
+msgid "Both"
+msgstr "Her ikisi de"
+
+#: ../src/preferencesdialog.c:151
+msgid "Both horizontal"
+msgstr "Her ikisi de yatay"
+
+#: ../src/preferencesdialog.c:170
+msgid "Horizontal"
+msgstr "Yatay"
+
+#: ../src/preferencesdialog.c:171
+msgid "Vertical"
+msgstr "Dikey"
+
+#: ../src/preferencesdialog.c:190
+msgid "Symbols"
+msgstr "Semboller"
+
+#: ../src/preferencesdialog.c:191
+msgid "Detailed"
+msgstr "Detaylı"
+
+#: ../src/preferencesdialog.c:335
+msgid "General"
+msgstr "Genel"
+
+#: ../src/preferencesdialog.c:340
+msgid "_File Manager"
+msgstr "_Dosya Yöneticisi"
+
+#: ../src/preferencesdialog.c:348
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr "Bağlama noktalarını açmak veya görüntülemek için bir uygulama adı girin"
+
+#: ../src/preferencesdialog.c:357
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "_Sık kullanılana Otomatik-Bağlanma Aralığı"
+
+#: ../src/preferencesdialog.c:363
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Sık kullanılana kaç saniyede bir otomatik bağlanılacağını tanımlar. Sıfır değeri bu işlemi etkisizleştirir."
+
+#: ../src/preferencesdialog.c:369
+msgid ""
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+"If you are unsure, use the HAL based monitor."
+msgstr ""
+"HAL tabanlı birim yöneticisi yerel kaynakları bağlamak için 'gnome-mount' aracına ihtiyaç duymaktadır. Unix tabanlı birim yöneticisi çeşitli kaynaklı doğrudan bağlayabilir ve diğer yerel aygıtları listeleyebilir.\n"
+"Eğer emin değilseniz, HAL tabanlı birim yöneticisini kullanın."
+
+#: ../src/preferencesdialog.c:375
+msgid "Use _HAL based volume manager"
+msgstr "_HAL tabanlı birim yöneticisini kullan"
+
+#: ../src/preferencesdialog.c:376
+#: ../src/preferencesdialog.c:384
+msgid "<i>Changing this option requires a restart of Gigolo.</i>"
+msgstr "<i>Bu seçeneği değiştirdiğinizde Gigolo'yu tekrar başlatmalısınız.</i>"
+
+#: ../src/preferencesdialog.c:383
+msgid "Use _Unix based volume manager"
+msgstr "_Unix tabanlı birim yöneticisini kullan"
+
+#: ../src/preferencesdialog.c:399
+msgid "Interface"
+msgstr "Arabirim"
+
+#: ../src/preferencesdialog.c:401
+msgid "_Save window position and geometry"
+msgstr "Pencere konumunu ve boyutunu _kaydet"
+
+#: ../src/preferencesdialog.c:402
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "Pencere konumunu ve boyutunu kaydeder ve tekrar kullandığınızda aynı boyutlarda kullanmanızı sağlar"
+
+#: ../src/preferencesdialog.c:405
+msgid "Show status _icon in the Notification Area"
+msgstr "Bildirim alanında durum s_imgesini göster"
+
+#: ../src/preferencesdialog.c:408
+msgid "Start _minimized in the Notification Area"
+msgstr "Bildiri_m alanında küçültümüş olarak başlat"
+
+#: ../src/preferencesdialog.c:414
+msgid "_View Mode"
+msgstr "_Görünüm Kipi"
+
+#: ../src/preferencesdialog.c:427
+msgid "Toolbar"
+msgstr "Araç Çubuğu"
+
+#: ../src/preferencesdialog.c:429
+msgid "Show _toolbar"
+msgstr "Araç çubuğunu gös_ter"
+
+#: ../src/preferencesdialog.c:435
+msgid "St_yle"
+msgstr "Görünü_m"
+
+#: ../src/preferencesdialog.c:446
+msgid "_Orientation"
+msgstr "_Dizilim"
+
+#: ../src/preferencesdialog.c:507
+msgid "Preferences"
+msgstr "Tercihler"
+
+#: ../src/backendgvfs.c:168
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s"
+msgstr ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Bağlandı: Evet\n"
+"Servis Türü: %s"
+
+#: ../src/backendgvfs.c:181
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Unix aygıtı: %s</b>"
+
+#: ../src/backendgvfs.c:365
+#: ../src/backendgvfs.c:396
+msgid "unknown"
+msgstr "bilinmiyor"
+
+#: ../src/backendgvfs.c:369
+#: ../src/backendgvfs.c:446
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "\"%s\" ile iletişim kurulamadı."
+
+#: ../src/backendgvfs.c:400
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "\"%s\" ile aradaki bağlantıyı sonlandırma işlemi başarısız oldu."
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "Bağlanıyor"
+
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Uzaktaki dosya sistemlerine bağlanmak için basit bir arayüz"
+
