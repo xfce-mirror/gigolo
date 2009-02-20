@@ -1,6 +1,10 @@
+2009-02-20  Maximilian Schleiss <maximilian@xfce.org>
+
+	* ca.po: Catalan translation udpate (Carles Muñoz Gorriz)
+
 2009-02-20  Stavros Giannouris <stavrosg@hellug.gr>
 
-	* el.po, LINGUAS: Greek translation added ()
+	* el.po, LINGUAS: Greek translation added
 
 2009-02-19 Per Kongtad <pko@xfce.org>
 

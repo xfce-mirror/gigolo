@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-09 19:56+0100\n"
-"PO-Revision-Date: 2009-02-01 12:43+0100\n"
+"PO-Revision-Date: 2009-02-15 21:31+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -75,9 +75,9 @@ msgid "Custom Location"
 msgstr "Ubicació personalitzada"
 
 #: ../src/window.c:283
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to \"%s\""
-msgstr "S'està muntant «%s»"
+msgstr "S'està connectant a «%s»"
 
 #: ../src/window.c:429
 msgid "translator-credits"
@@ -128,9 +128,8 @@ msgid "Open the selected resource with a file manager"
 msgstr "Obre el recurs seleccionat amb un gestor de fitxers"
 
 #: ../src/window.c:1045
-#, fuzzy
 msgid "Copy _URI"
-msgstr "Copia URI"
+msgstr "Copia _URI"
 
 #: ../src/window.c:1046
 msgid "Quit Gigolo"
@@ -145,9 +144,8 @@ msgid "Choose a bookmark to connect to"
 msgstr "Trieu un lloc preferit per connectar-vos"
 
 #: ../src/window.c:1124
-#, fuzzy
 msgid "Connected"
-msgstr "Connecta"
+msgstr "Connectat"
 
 #: ../src/window.c:1133 ../src/bookmarkdialog.c:300
 msgid "Service Type"
@@ -223,9 +221,8 @@ msgid "Port"
 msgstr "Port"
 
 #: ../src/bookmarkdialog.c:324
-#, fuzzy
 msgid "Auto-Connect"
-msgstr "Co_nnexió automàtica"
+msgstr "Connexió automàtica"
 
 #: ../src/bookmarkdialog.c:332
 msgid "Username"
@@ -413,9 +410,8 @@ msgid "Show status _icon in the Notification Area"
 msgstr "Mostra la _icona d'estat a l'espai de notificacions del sistema"
 
 #: ../src/preferencesdialog.c:408
-#, fuzzy
 msgid "Start _minimized in the Notification Area"
-msgstr "Inicia minimitzat a l'espai de notificacions del sistema"
+msgstr "Inicia _minimitzat a l'espai de notificacions del sistema"
 
 #: ../src/preferencesdialog.c:414
 msgid "_View Mode"
@@ -442,7 +438,7 @@ msgid "Preferences"
 msgstr "Preferències"
 
 #: ../src/backendgvfs.c:168
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
@@ -453,7 +449,7 @@ msgstr ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
-"Muntat: Sí\n"
+"Connectat: Sí\n"
 "Tipus de servei: %s"
 
 #: ../src/backendgvfs.c:181
@@ -466,19 +462,18 @@ msgid "unknown"
 msgstr "desconegut"
 
 #: ../src/backendgvfs.c:369 ../src/backendgvfs.c:446
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Ha fallat el muntatge de «%s»."
+msgstr "Ha fallat la connexió amb «%s»."
 
 #: ../src/backendgvfs.c:400
-#, fuzzy, c-format
+#, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Ha fallat el muntatge de «%s»."
+msgstr "Ha fallat la desconnexió amb «%s»."
 
 #: ../src/mountdialog.c:102
-#, fuzzy
 msgid "Connecting"
-msgstr "Connecta"
+msgstr "Connectant-se"
 
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
