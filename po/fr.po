@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-09 19:56+0100\n"
+"POT-Creation-Date: 2009-02-22 23:40+0100\n"
 "PO-Revision-Date: 2008-12-13 22:48+0100\n"
 "Last-Translator: Maximilian Schleiss <maximilian@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -76,89 +76,97 @@ msgstr ""
 msgid "Custom Location"
 msgstr "Emplacement personnalisé"
 
-#: ../src/window.c:283
+#: ../src/window.c:284
 #, fuzzy, c-format
 msgid "Connecting to \"%s\""
 msgstr "Montage de \"%s\" échoué."
 
-#: ../src/window.c:429
+#: ../src/window.c:426 ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Une interface pour la connexion de systèmes de fichiers à distance"
+
+#: ../src/window.c:427
+msgid "Copyright 2008-2009 Enrico Tröger"
+msgstr ""
+
+#: ../src/window.c:430
 msgid "translator-credits"
 msgstr ""
 
-#: ../src/window.c:651 ../src/bookmarkeditdialog.c:181
+#: ../src/window.c:652 ../src/bookmarkeditdialog.c:181
 #: ../src/bookmarkeditdialog.c:199 ../src/bookmarkeditdialog.c:212
 #: ../src/bookmarkeditdialog.c:223 ../src/bookmarkeditdialog.c:234
 msgid "Error"
 msgstr "Erreur"
 
-#: ../src/window.c:1028
+#: ../src/window.c:1029
 msgid "_File"
 msgstr "_Fichier"
 
-#: ../src/window.c:1029
+#: ../src/window.c:1030
 msgid "_Edit"
 msgstr "_Editer"
 
-#: ../src/window.c:1030
+#: ../src/window.c:1031
 msgid "_Actions"
 msgstr "_Actions"
 
-#: ../src/window.c:1031
+#: ../src/window.c:1032
 msgid "_Help"
 msgstr "_Aide"
 
-#: ../src/window.c:1035
+#: ../src/window.c:1036
 msgid "Create _Bookmark"
 msgstr "Ajouter un _signet"
 
-#: ../src/window.c:1037
+#: ../src/window.c:1038
 msgid "_Edit Bookmarks"
 msgstr "_Editer les signets"
 
-#: ../src/window.c:1038
+#: ../src/window.c:1039
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr ""
 
-#: ../src/window.c:1042
+#: ../src/window.c:1043
 msgid "Disconnect the selected resource"
 msgstr ""
 
-#: ../src/window.c:1044
+#: ../src/window.c:1045
 msgid "Open the selected resource with a file manager"
 msgstr ""
 
-#: ../src/window.c:1045
+#: ../src/window.c:1046
 msgid "Copy _URI"
 msgstr ""
 
-#: ../src/window.c:1046
+#: ../src/window.c:1047
 #, fuzzy
 msgid "Quit Gigolo"
 msgstr "Gigolo"
 
-#: ../src/window.c:1053
+#: ../src/window.c:1054
 msgid "_Bookmarks"
 msgstr "_Signets"
 
-#: ../src/window.c:1053
+#: ../src/window.c:1054
 msgid "Choose a bookmark to connect to"
 msgstr "Choisissez un signet auquel vous connecter"
 
-#: ../src/window.c:1124
+#: ../src/window.c:1125
 #, fuzzy
 msgid "Connected"
 msgstr "Se connecter"
 
-#: ../src/window.c:1133 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1134 ../src/bookmarkdialog.c:300
 #, fuzzy
 msgid "Service Type"
 msgstr "_Type de service :"
 
-#: ../src/window.c:1141 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1142 ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Nom"
 
-#: ../src/window.c:1208 ../src/window.c:1277 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1209 ../src/window.c:1278 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -313,62 +321,62 @@ msgstr "_Port :"
 msgid "_Share:"
 msgstr "_Serveur :"
 
-#: ../src/preferencesdialog.c:148
+#: ../src/preferencesdialog.c:143
 msgid "Icons"
 msgstr "Icônes"
 
-#: ../src/preferencesdialog.c:149
+#: ../src/preferencesdialog.c:144
 msgid "Text"
 msgstr "Texte"
 
-#: ../src/preferencesdialog.c:150
+#: ../src/preferencesdialog.c:145
 msgid "Both"
 msgstr "Les deux"
 
-#: ../src/preferencesdialog.c:151
+#: ../src/preferencesdialog.c:146
 msgid "Both horizontal"
 msgstr "Les deux horizontalement"
 
-#: ../src/preferencesdialog.c:170
+#: ../src/preferencesdialog.c:165
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: ../src/preferencesdialog.c:171
+#: ../src/preferencesdialog.c:166
 msgid "Vertical"
 msgstr "Vertical"
 
-#: ../src/preferencesdialog.c:190
+#: ../src/preferencesdialog.c:185
 msgid "Symbols"
 msgstr "Symboles"
 
-#: ../src/preferencesdialog.c:191
+#: ../src/preferencesdialog.c:186
 msgid "Detailed"
 msgstr "Détaillée"
 
-#: ../src/preferencesdialog.c:335
+#: ../src/preferencesdialog.c:330
 msgid "General"
 msgstr "Général"
 
-#: ../src/preferencesdialog.c:340
+#: ../src/preferencesdialog.c:335
 msgid "_File Manager"
 msgstr "Gestionnaire de _fichiers"
 
-#: ../src/preferencesdialog.c:348
+#: ../src/preferencesdialog.c:343
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr ""
 "Saisir le nom de l'application à utiliser pour ouvrir les points de montage"
 
-#: ../src/preferencesdialog.c:357
+#: ../src/preferencesdialog.c:352
 msgid "_Bookmark Auto-Connect Interval"
 msgstr ""
 
-#: ../src/preferencesdialog.c:363
+#: ../src/preferencesdialog.c:358
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
 msgstr ""
 
-#: ../src/preferencesdialog.c:369
+#: ../src/preferencesdialog.c:364
 msgid ""
 "The HAL based volume manager implementation requires the tool 'gnome-mount' "
 "to mount local resources like disks. The Unix based volume manager "
@@ -377,68 +385,68 @@ msgid ""
 "If you are unsure, use the HAL based monitor."
 msgstr ""
 
-#: ../src/preferencesdialog.c:375
+#: ../src/preferencesdialog.c:370
 msgid "Use _HAL based volume manager"
 msgstr "Utiliser le gestionnaire de volumes _HAL"
 
-#: ../src/preferencesdialog.c:376 ../src/preferencesdialog.c:384
+#: ../src/preferencesdialog.c:371 ../src/preferencesdialog.c:379
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr ""
 
-#: ../src/preferencesdialog.c:383
+#: ../src/preferencesdialog.c:378
 msgid "Use _Unix based volume manager"
 msgstr "Utiliser le gestionnaire de volumes _Unix"
 
-#: ../src/preferencesdialog.c:399
+#: ../src/preferencesdialog.c:394
 msgid "Interface"
 msgstr "Interface"
 
-#: ../src/preferencesdialog.c:401
+#: ../src/preferencesdialog.c:396
 msgid "_Save window position and geometry"
 msgstr "_Enregistrer la position et géométrie de la fenêtre"
 
-#: ../src/preferencesdialog.c:402
+#: ../src/preferencesdialog.c:397
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr ""
 "Enregistre la position et géométrie de la fenêtre pour la restaurer "
 "ultérieurement"
 
-#: ../src/preferencesdialog.c:405
+#: ../src/preferencesdialog.c:400
 msgid "Show status _icon in the Notification Area"
 msgstr ""
 
-#: ../src/preferencesdialog.c:408
+#: ../src/preferencesdialog.c:403
 msgid "Start _minimized in the Notification Area"
 msgstr ""
 
-#: ../src/preferencesdialog.c:414
+#: ../src/preferencesdialog.c:409
 msgid "_View Mode"
 msgstr "_Mode d'affichage"
 
-#: ../src/preferencesdialog.c:427
+#: ../src/preferencesdialog.c:422
 #, fuzzy
 msgid "Toolbar"
 msgstr "St_yle de la barre d'outils"
 
-#: ../src/preferencesdialog.c:429
+#: ../src/preferencesdialog.c:424
 msgid "Show _toolbar"
 msgstr "Afficher la barre d'ou_tils"
 
-#: ../src/preferencesdialog.c:435
+#: ../src/preferencesdialog.c:430
 #, fuzzy
 msgid "St_yle"
 msgstr "St_yle de la barre d'outils"
 
-#: ../src/preferencesdialog.c:446
+#: ../src/preferencesdialog.c:441
 #, fuzzy
 msgid "_Orientation"
 msgstr "_Orientation de la barre d'outils"
 
-#: ../src/preferencesdialog.c:507
+#: ../src/preferencesdialog.c:502
 msgid "Preferences"
 msgstr "Préférences"
 
-#: ../src/backendgvfs.c:168
+#: ../src/backendgvfs.c:169
 #, fuzzy, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -453,21 +461,21 @@ msgstr ""
 "Monté: Oui\n"
 "Type: %s"
 
-#: ../src/backendgvfs.c:181
+#: ../src/backendgvfs.c:183
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Périphérique Unix : %s</b>"
 
-#: ../src/backendgvfs.c:365 ../src/backendgvfs.c:396
+#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
 msgid "unknown"
 msgstr "inconnu"
 
-#: ../src/backendgvfs.c:369 ../src/backendgvfs.c:446
+#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
 #, fuzzy, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Montage de \"%s\" échoué."
 
-#: ../src/backendgvfs.c:400
+#: ../src/backendgvfs.c:402
 #, fuzzy, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Montage de \"%s\" échoué."
@@ -476,10 +484,6 @@ msgstr "Montage de \"%s\" échoué."
 #, fuzzy
 msgid "Connecting"
 msgstr "Se connecter"
-
-#: ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Une interface pour la connexion de systèmes de fichiers à distance"
 
 #~ msgid "Mounted"
 #~ msgstr "Monté"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-09 19:56+0100\n"
+"POT-Creation-Date: 2009-02-22 23:40+0100\n"
 "PO-Revision-Date: 2009-02-15 15:01+0100\n"
 "Last-Translator: Muflone <muflone@vbsimple.net>\n"
 "Language-Team: Italian\n"
@@ -73,87 +73,96 @@ msgstr "Rete"
 msgid "Custom Location"
 msgstr "Posizione personalizzata"
 
-#: ../src/window.c:283
+#: ../src/window.c:284
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Connessione a «%s»"
 
-#: ../src/window.c:429
+#: ../src/window.c:426 ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Una semplice interfaccia per connettersi a filesystem remoti"
+
+#: ../src/window.c:427
+msgid "Copyright 2008-2009 Enrico Tröger"
+msgstr ""
+
+#: ../src/window.c:430
 msgid "translator-credits"
 msgstr "Muflone <muflone@vbsimple.net>"
 
-#: ../src/window.c:651 ../src/bookmarkeditdialog.c:181
+#: ../src/window.c:652 ../src/bookmarkeditdialog.c:181
 #: ../src/bookmarkeditdialog.c:199 ../src/bookmarkeditdialog.c:212
 #: ../src/bookmarkeditdialog.c:223 ../src/bookmarkeditdialog.c:234
 msgid "Error"
 msgstr "Errore"
 
-#: ../src/window.c:1028
+#: ../src/window.c:1029
 msgid "_File"
 msgstr "_File"
 
-#: ../src/window.c:1029
+#: ../src/window.c:1030
 msgid "_Edit"
 msgstr "_Modifica"
 
-#: ../src/window.c:1030
+#: ../src/window.c:1031
 msgid "_Actions"
 msgstr "_Azioni"
 
-#: ../src/window.c:1031
+#: ../src/window.c:1032
 msgid "_Help"
 msgstr "A_iuto"
 
-#: ../src/window.c:1035
+#: ../src/window.c:1036
 msgid "Create _Bookmark"
 msgstr "Crea un s_egnalibro"
 
-#: ../src/window.c:1037
+#: ../src/window.c:1038
 msgid "_Edit Bookmarks"
 msgstr "_Modifica segnalibri"
 
-#: ../src/window.c:1038
+#: ../src/window.c:1039
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Apre il gestore di segnalibri per aggiungere, modificare o eliminare "
-"i collegamenti preferiti"
+msgstr ""
+"Apre il gestore di segnalibri per aggiungere, modificare o eliminare i "
+"collegamenti preferiti"
 
-#: ../src/window.c:1042
+#: ../src/window.c:1043
 msgid "Disconnect the selected resource"
 msgstr "Disconnette la risorsa selezionata"
 
-#: ../src/window.c:1044
+#: ../src/window.c:1045
 msgid "Open the selected resource with a file manager"
 msgstr "Apre la risorsa selezionata con un gestore di file"
 
-#: ../src/window.c:1045
+#: ../src/window.c:1046
 msgid "Copy _URI"
 msgstr "Copia _URI"
 
-#: ../src/window.c:1046
+#: ../src/window.c:1047
 msgid "Quit Gigolo"
 msgstr "Esci da Gigolo"
 
-#: ../src/window.c:1053
+#: ../src/window.c:1054
 msgid "_Bookmarks"
 msgstr "S_egnalibri"
 
-#: ../src/window.c:1053
+#: ../src/window.c:1054
 msgid "Choose a bookmark to connect to"
 msgstr "Scegli un segnalibro a cui connettersi"
 
-#: ../src/window.c:1124
+#: ../src/window.c:1125
 msgid "Connected"
 msgstr "Connesso"
 
-#: ../src/window.c:1133 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1134 ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "Tipo di servizio"
 
-#: ../src/window.c:1141 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1142 ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Nome"
 
-#: ../src/window.c:1208 ../src/window.c:1277 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1209 ../src/window.c:1278 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -163,16 +172,18 @@ msgstr "Spostare adesso?"
 
 #: ../src/settings.c:575
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Gigolo ha bisogno di spostare la vecchia cartella di configurazione "
-"prima di avviarsi."
+msgstr ""
+"Gigolo ha bisogno di spostare la vecchia cartella di configurazione prima di "
+"avviarsi."
 
 #: ../src/settings.c:583
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "La precedente cartella di configurazione «%s» non può essere spostata "
-"su «%s» (%s). Per favore sposta manualmente la cartella al nuovo percorso."
+msgstr ""
+"La precedente cartella di configurazione «%s» non può essere spostata su «%"
+"s» (%s). Per favore sposta manualmente la cartella al nuovo percorso."
 
 #: ../src/settings.c:586
 msgid "Warning"
@@ -304,63 +315,65 @@ msgstr "_Porta:"
 msgid "_Share:"
 msgstr "_Condivisione:"
 
-#: ../src/preferencesdialog.c:148
+#: ../src/preferencesdialog.c:143
 msgid "Icons"
 msgstr "Icone"
 
-#: ../src/preferencesdialog.c:149
+#: ../src/preferencesdialog.c:144
 msgid "Text"
 msgstr "Testo"
 
-#: ../src/preferencesdialog.c:150
+#: ../src/preferencesdialog.c:145
 msgid "Both"
 msgstr "Entrambi"
 
-#: ../src/preferencesdialog.c:151
+#: ../src/preferencesdialog.c:146
 msgid "Both horizontal"
 msgstr "Entrambi orizzontalmente"
 
-#: ../src/preferencesdialog.c:170
+#: ../src/preferencesdialog.c:165
 msgid "Horizontal"
 msgstr "Orizzontalmente"
 
-#: ../src/preferencesdialog.c:171
+#: ../src/preferencesdialog.c:166
 msgid "Vertical"
 msgstr "Verticalmente"
 
-#: ../src/preferencesdialog.c:190
+#: ../src/preferencesdialog.c:185
 msgid "Symbols"
 msgstr "Icone"
 
-#: ../src/preferencesdialog.c:191
+#: ../src/preferencesdialog.c:186
 msgid "Detailed"
 msgstr "Dettaglio"
 
-#: ../src/preferencesdialog.c:335
+#: ../src/preferencesdialog.c:330
 msgid "General"
 msgstr "Generale"
 
-#: ../src/preferencesdialog.c:340
+#: ../src/preferencesdialog.c:335
 msgid "_File Manager"
 msgstr "Gestore di _file"
 
-#: ../src/preferencesdialog.c:348
+#: ../src/preferencesdialog.c:343
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Inserire il nome del programma da utilizzare per aprire o visualizzare "
-"i punti di montaggio"
+msgstr ""
+"Inserire il nome del programma da utilizzare per aprire o visualizzare i "
+"punti di montaggio"
 
-#: ../src/preferencesdialog.c:357
+#: ../src/preferencesdialog.c:352
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Intervallo di connessione automatica"
 
-#: ../src/preferencesdialog.c:363
+#: ../src/preferencesdialog.c:358
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr "Quanto spesso provare la connessione automatica al segnalinro, in "
-"secondi. Indicando zero disabilita il controllo."
+msgstr ""
+"Quanto spesso provare la connessione automatica al segnalinro, in secondi. "
+"Indicando zero disabilita il controllo."
 
-#: ../src/preferencesdialog.c:369
+#: ../src/preferencesdialog.c:364
 msgid ""
 "The HAL based volume manager implementation requires the tool 'gnome-mount' "
 "to mount local resources like disks. The Unix based volume manager "
@@ -374,63 +387,64 @@ msgstr ""
 "dispositivi locali.\n"
 "Se si è nel dubbio, utilizzare il gestore basato su HAL."
 
-#: ../src/preferencesdialog.c:375
+#: ../src/preferencesdialog.c:370
 msgid "Use _HAL based volume manager"
 msgstr "Utilizza il gestore di volumi basato su _HAL"
 
-#: ../src/preferencesdialog.c:376 ../src/preferencesdialog.c:384
+#: ../src/preferencesdialog.c:371 ../src/preferencesdialog.c:379
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>La modifica di questa opzione richiede il riavvio di Gigolo.</i>"
 
-#: ../src/preferencesdialog.c:383
+#: ../src/preferencesdialog.c:378
 msgid "Use _Unix based volume manager"
 msgstr "Utilizza il gestore di volumi basato su _Unix"
 
-#: ../src/preferencesdialog.c:399
+#: ../src/preferencesdialog.c:394
 msgid "Interface"
 msgstr "Interfaccia"
 
-#: ../src/preferencesdialog.c:401
+#: ../src/preferencesdialog.c:396
 msgid "_Save window position and geometry"
 msgstr "_Salva la posizione la dimensione della finestra"
 
-#: ../src/preferencesdialog.c:402
+#: ../src/preferencesdialog.c:397
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Salva la posizione e la dimensione della finestra e le ripristina all'avvio"
+msgstr ""
+"Salva la posizione e la dimensione della finestra e le ripristina all'avvio"
 
-#: ../src/preferencesdialog.c:405
+#: ../src/preferencesdialog.c:400
 msgid "Show status _icon in the Notification Area"
 msgstr "Mostra l'_icona di stato sulla barra di notifica"
 
-#: ../src/preferencesdialog.c:408
+#: ../src/preferencesdialog.c:403
 msgid "Start _minimized in the Notification Area"
 msgstr "Avvia _minimizzato nella barra di notifica"
 
-#: ../src/preferencesdialog.c:414
+#: ../src/preferencesdialog.c:409
 msgid "_View Mode"
 msgstr "Modalità di _visualizzazione"
 
-#: ../src/preferencesdialog.c:427
+#: ../src/preferencesdialog.c:422
 msgid "Toolbar"
 msgstr "Barra degli strumenti"
 
-#: ../src/preferencesdialog.c:429
+#: ../src/preferencesdialog.c:424
 msgid "Show _toolbar"
 msgstr "Mostra la barra degli _strumenti"
 
-#: ../src/preferencesdialog.c:435
+#: ../src/preferencesdialog.c:430
 msgid "St_yle"
 msgstr "S_tile"
 
-#: ../src/preferencesdialog.c:446
+#: ../src/preferencesdialog.c:441
 msgid "_Orientation"
 msgstr "_Orientamento"
 
-#: ../src/preferencesdialog.c:507
+#: ../src/preferencesdialog.c:502
 msgid "Preferences"
 msgstr "Preferenze"
 
-#: ../src/backendgvfs.c:168
+#: ../src/backendgvfs.c:169
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -445,21 +459,21 @@ msgstr ""
 "Connesso: Si\n"
 "Tipo di servizio: %s"
 
-#: ../src/backendgvfs.c:181
+#: ../src/backendgvfs.c:183
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Dispositivo Unix: %s</b>"
 
-#: ../src/backendgvfs.c:365 ../src/backendgvfs.c:396
+#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
 msgid "unknown"
 msgstr "sconosciuto"
 
-#: ../src/backendgvfs.c:369 ../src/backendgvfs.c:446
+#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Connessione a «%s» fallita."
 
-#: ../src/backendgvfs.c:400
+#: ../src/backendgvfs.c:402
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Disconnessione da «%s» fallita."
@@ -467,8 +481,3 @@ msgstr "Disconnessione da «%s» fallita."
 #: ../src/mountdialog.c:102
 msgid "Connecting"
 msgstr "In connessione"
-
-#: ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Una semplice interfaccia per connettersi a filesystem remoti"
-

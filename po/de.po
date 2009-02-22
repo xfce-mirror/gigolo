@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-09 19:56+0100\n"
-"PO-Revision-Date: 2009-02-09 19:15+0100\n"
+"POT-Creation-Date: 2009-02-22 23:40+0100\n"
+"PO-Revision-Date: 2009-02-22 23:41+0100\n"
 "Last-Translator: Enrico Tröger <enrico@xfce.org>\n"
 "Language-Team: German <xfce-i18n-de@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,87 +74,102 @@ msgstr "Netzwerk"
 msgid "Custom Location"
 msgstr "Eigene Adresse"
 
-#: ../src/window.c:283
+#: ../src/window.c:284
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Verbinde zu »%s« ..."
 
-#: ../src/window.c:429
+#: ../src/window.c:426
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Eine einfache Oberfläche um entfernte Dateisysteme einzubinden"
+
+#: ../src/window.c:427
+msgid "Copyright 2008-2009 Enrico Tröger"
+msgstr "Copyright 2008-2009 Enrico Tröger"
+
+#: ../src/window.c:430
 msgid "translator-credits"
 msgstr "Enrico Tröger <enrico@xfce.org>"
 
-#: ../src/window.c:651 ../src/bookmarkeditdialog.c:181
-#: ../src/bookmarkeditdialog.c:199 ../src/bookmarkeditdialog.c:212
-#: ../src/bookmarkeditdialog.c:223 ../src/bookmarkeditdialog.c:234
+#: ../src/window.c:652
+#: ../src/bookmarkeditdialog.c:181
+#: ../src/bookmarkeditdialog.c:199
+#: ../src/bookmarkeditdialog.c:212
+#: ../src/bookmarkeditdialog.c:223
+#: ../src/bookmarkeditdialog.c:234
 msgid "Error"
 msgstr "Fehler"
 
-#: ../src/window.c:1028
+#: ../src/window.c:1029
 msgid "_File"
 msgstr "_Datei"
 
-#: ../src/window.c:1029
+#: ../src/window.c:1030
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#: ../src/window.c:1030
+#: ../src/window.c:1031
 msgid "_Actions"
 msgstr "_Aktionen"
 
-#: ../src/window.c:1031
+#: ../src/window.c:1032
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/window.c:1035
+#: ../src/window.c:1036
 msgid "Create _Bookmark"
 msgstr "Lesezeichen _erstellen"
 
-#: ../src/window.c:1037
+#: ../src/window.c:1038
 msgid "_Edit Bookmarks"
 msgstr "Lesezeichen _bearbeiten"
 
-#: ../src/window.c:1038
+#: ../src/window.c:1039
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "Öffnet den Lesezeicheneditor"
 
-#: ../src/window.c:1042
+#: ../src/window.c:1043
 msgid "Disconnect the selected resource"
 msgstr "Trennt die ausgewählte Verbindung"
 
-#: ../src/window.c:1044
+#: ../src/window.c:1045
 msgid "Open the selected resource with a file manager"
 msgstr "Öffnet die ausgewählte Verbindung in einem Dateimanager"
 
-#: ../src/window.c:1045
+#: ../src/window.c:1046
 msgid "Copy _URI"
 msgstr "_URI kopieren"
 
-#: ../src/window.c:1046
+#: ../src/window.c:1047
 msgid "Quit Gigolo"
 msgstr "Gigolo beenden"
 
-#: ../src/window.c:1053
+#: ../src/window.c:1054
 msgid "_Bookmarks"
 msgstr "_Lesezeichen"
 
-#: ../src/window.c:1053
+#: ../src/window.c:1054
 msgid "Choose a bookmark to connect to"
-msgstr ""
-"Wählen Sie ein Lesezeichen, für das eine Verbindung aufgebaut werden soll"
+msgstr "Wählen Sie ein Lesezeichen, für das eine Verbindung aufgebaut werden soll"
 
-#: ../src/window.c:1124
+#: ../src/window.c:1125
 msgid "Connected"
 msgstr "Verbunden"
 
-#: ../src/window.c:1133 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1134
+#: ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "Verbindungstyp"
 
-#: ../src/window.c:1141 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1142
+#: ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Name"
 
-#: ../src/window.c:1208 ../src/window.c:1277 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1209
+#: ../src/window.c:1278
+#: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -164,18 +179,12 @@ msgstr "Soll es jetzt verschoben werden?"
 
 #: ../src/settings.c:575
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo muss Ihr aktuelles Konfigurationsverzeichnis an einen neuen Ort "
-"verschieben, bevor es gestartet wird."
+msgstr "Gigolo muss Ihr aktuelles Konfigurationsverzeichnis an einen neuen Ort verschieben, bevor es gestartet wird."
 
 #: ../src/settings.c:583
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Ihr altes Konfigurationsverzeichnis »%s« konnte nicht nach »%s« verschoben "
-"werden. Fehlermeldung: %s. Bitte führen Sie die Aktion manuell aus."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Ihr altes Konfigurationsverzeichnis »%s« konnte nicht nach »%s« verschoben werden. Fehlermeldung: %s. Bitte führen Sie die Aktion manuell aus."
 
 #: ../src/settings.c:586
 msgid "Warning"
@@ -189,7 +198,8 @@ msgstr "Verbinden"
 msgid "Authentication information needed"
 msgstr "Authentifizierungsinformationen benötigt"
 
-#: ../src/passworddialog.c:97 ../src/bookmarkeditdialog.c:810
+#: ../src/passworddialog.c:97
+#: ../src/bookmarkeditdialog.c:810
 msgid "_Domain:"
 msgstr "_Domäne:"
 
@@ -241,9 +251,7 @@ msgstr "Sie müssen einen Namen für das Lesezeichen angeben."
 
 #: ../src/bookmarkeditdialog.c:200
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
-"Der angegebene Name für das Lesezeichen ist bereits vergeben. Bitte wählen "
-"Sie einen anderen Namen."
+msgstr "Der angegebene Name für das Lesezeichen ist bereits vergeben. Bitte wählen Sie einen anderen Namen."
 
 #: ../src/bookmarkeditdialog.c:213
 msgid "You must enter a server address or name."
@@ -309,138 +317,124 @@ msgstr "_Port:"
 msgid "_Share:"
 msgstr "_Freigabe:"
 
-#: ../src/preferencesdialog.c:148
+#: ../src/preferencesdialog.c:143
 msgid "Icons"
 msgstr "Symbole"
 
-#: ../src/preferencesdialog.c:149
+#: ../src/preferencesdialog.c:144
 msgid "Text"
 msgstr "Text"
 
-#: ../src/preferencesdialog.c:150
+#: ../src/preferencesdialog.c:145
 msgid "Both"
 msgstr "Beides"
 
-#: ../src/preferencesdialog.c:151
+#: ../src/preferencesdialog.c:146
 msgid "Both horizontal"
 msgstr "Beides horizontal"
 
-#: ../src/preferencesdialog.c:170
+#: ../src/preferencesdialog.c:165
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: ../src/preferencesdialog.c:171
+#: ../src/preferencesdialog.c:166
 msgid "Vertical"
 msgstr "Vertikal"
 
-#: ../src/preferencesdialog.c:190
+#: ../src/preferencesdialog.c:185
 msgid "Symbols"
 msgstr "Symbole"
 
-#: ../src/preferencesdialog.c:191
+#: ../src/preferencesdialog.c:186
 msgid "Detailed"
 msgstr "Details"
 
-#: ../src/preferencesdialog.c:335
+#: ../src/preferencesdialog.c:330
 msgid "General"
 msgstr "Allgemein"
 
-#: ../src/preferencesdialog.c:340
+#: ../src/preferencesdialog.c:335
 msgid "_File Manager"
 msgstr "_Dateimanager"
 
-#: ../src/preferencesdialog.c:348
+#: ../src/preferencesdialog.c:343
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Geben Sie den Namen eines Programms ein zum Anzeigen oder Öffnen von "
-"Einhängepunkten"
+msgstr "Geben Sie den Namen eines Programms ein zum Anzeigen oder Öffnen von Einhängepunkten"
 
-#: ../src/preferencesdialog.c:357
+#: ../src/preferencesdialog.c:352
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Zeitintervall für autom. Verbinden"
 
-#: ../src/preferencesdialog.c:363
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Zeitspanne, nach der versucht werden soll, als automatisch gekennzeichnete "
-"Lesezeichen zu verbinden"
+#: ../src/preferencesdialog.c:358
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Zeitspanne, nach der versucht werden soll, als automatisch gekennzeichnete Lesezeichen zu verbinden"
 
-#: ../src/preferencesdialog.c:369
+#: ../src/preferencesdialog.c:364
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' "
-"to mount local resources like disks. The Unix based volume manager "
-"implementation can mount such resources directly and also lists other local "
-"devices.\n"
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Der HAL-basierte Medienmanager benötigt das Programm 'gnome-mount' um lokale "
-"Resourcen wie Laufwerke, einzuhängen. Die Unix-basierte Variante kann solche "
-"Resourcen direkt einbinden und zeigt auch andere lokale Geräte an.\n"
+"Der HAL-basierte Medienmanager benötigt das Programm 'gnome-mount' um lokale Resourcen wie Laufwerke, einzuhängen. Die Unix-basierte Variante kann solche Resourcen direkt einbinden und zeigt auch andere lokale Geräte an.\n"
 "Wenn Sie unsicher sind, benutzen Sie die HAL-basierte Variante."
 
-#: ../src/preferencesdialog.c:375
+#: ../src/preferencesdialog.c:370
 msgid "Use _HAL based volume manager"
 msgstr "_HAL-basierten Medienmanager benutzen"
 
-#: ../src/preferencesdialog.c:376 ../src/preferencesdialog.c:384
+#: ../src/preferencesdialog.c:371
+#: ../src/preferencesdialog.c:379
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr ""
-"<i>Änderungen an dieser Einstellungen werden erst nach einem Neustart von "
-"Gigolo wirksam .</i>"
+msgstr "<i>Änderungen an dieser Einstellungen werden erst nach einem Neustart von Gigolo wirksam .</i>"
 
-#: ../src/preferencesdialog.c:383
+#: ../src/preferencesdialog.c:378
 msgid "Use _Unix based volume manager"
 msgstr "_Unix-basierten Medienmanager benutzen"
 
-#: ../src/preferencesdialog.c:399
+#: ../src/preferencesdialog.c:394
 msgid "Interface"
 msgstr "Oberfläche"
 
-#: ../src/preferencesdialog.c:401
+#: ../src/preferencesdialog.c:396
 msgid "_Save window position and geometry"
 msgstr "_Fensterposition und -größe speichern"
 
-#: ../src/preferencesdialog.c:402
+#: ../src/preferencesdialog.c:397
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
-"Speichert die Fensterposition und die Fenstergröße und stellt sie beim "
-"nächsten Start wieder her."
+msgstr "Speichert die Fensterposition und die Fenstergröße und stellt sie beim nächsten Start wieder her."
 
-#: ../src/preferencesdialog.c:405
+#: ../src/preferencesdialog.c:400
 msgid "Show status _icon in the Notification Area"
 msgstr "Zeige ein Statussymbol im _Benachrichtigungsfeld."
 
-#: ../src/preferencesdialog.c:408
+#: ../src/preferencesdialog.c:403
 msgid "Start _minimized in the Notification Area"
 msgstr "Im Benachrichtigungsfeld _minimiert starten"
 
-#: ../src/preferencesdialog.c:414
+#: ../src/preferencesdialog.c:409
 msgid "_View Mode"
 msgstr "_Ansicht"
 
-#: ../src/preferencesdialog.c:427
+#: ../src/preferencesdialog.c:422
 msgid "Toolbar"
 msgstr "Werkzeugleiste"
 
-#: ../src/preferencesdialog.c:429
+#: ../src/preferencesdialog.c:424
 msgid "Show _toolbar"
 msgstr "_Werkzeugleiste anzeigen"
 
-#: ../src/preferencesdialog.c:435
+#: ../src/preferencesdialog.c:430
 msgid "St_yle"
 msgstr "_Stil"
 
-#: ../src/preferencesdialog.c:446
+#: ../src/preferencesdialog.c:441
 msgid "_Orientation"
 msgstr "_Ausrichtung"
 
-#: ../src/preferencesdialog.c:507
+#: ../src/preferencesdialog.c:502
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: ../src/backendgvfs.c:168
+#: ../src/backendgvfs.c:169
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -455,21 +449,23 @@ msgstr ""
 "Verbunden: Ja\n"
 "Verbindungstyp: %s"
 
-#: ../src/backendgvfs.c:181
+#: ../src/backendgvfs.c:183
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix-Gerät: %s</b>"
 
-#: ../src/backendgvfs.c:365 ../src/backendgvfs.c:396
+#: ../src/backendgvfs.c:367
+#: ../src/backendgvfs.c:398
 msgid "unknown"
 msgstr "unbekannt"
 
-#: ../src/backendgvfs.c:369 ../src/backendgvfs.c:446
+#: ../src/backendgvfs.c:371
+#: ../src/backendgvfs.c:448
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Verbinden zu »%s« ist fehlgeschlagen."
 
-#: ../src/backendgvfs.c:400
+#: ../src/backendgvfs.c:402
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Trennen von »%s« ist fehlgeschlagen."
@@ -478,34 +474,24 @@ msgstr "Trennen von »%s« ist fehlgeschlagen."
 msgid "Connecting"
 msgstr "Verbinden"
 
-#: ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Eine einfache Oberfläche um entfernte Dateisysteme einzubinden"
-
 #~ msgid "Mounted"
 #~ msgstr " Eingehängt"
-
 #~ msgid "Unmounting of \"%s\" failed."
 #~ msgstr "Aushängen von »%s« ist fehlgeschlagen."
-
 #~ msgid "Mounting"
 #~ msgstr "Wird eingebunden"
-
 #~ msgid "Automount"
 #~ msgstr "Automatisch verbinden"
-
 #~ msgid "Secure WebDAV"
 #~ msgstr "WebDAV (sicher)"
-
 #~ msgid "Show tray _icon"
 #~ msgstr "_Symbol in der Systemleiste anzeigen"
 
 #, fuzzy
 #~ msgid "Domain"
 #~ msgstr "_Domäne:"
-
 #~ msgid "(not yet implemented)"
 #~ msgstr "Noch nicht implementiert."
-
 #~ msgid "<b>Bookmarks</b>"
 #~ msgstr "<b>Lesezeichen</b>"
+
