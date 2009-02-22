@@ -1,3 +1,10 @@
+Gigolo 0.2.1 (February 22, 2009)
+
+	* Fix wrong saving of Obex URIs
+	* Fix always disabled 'Create Bookmark' menu item
+	* Escape the userinfo part of URIs to allow at-signs.
+
+
 Gigolo 0.2.0 (February 12, 2009)
 
 	* Application renamed to "Gigolo"
