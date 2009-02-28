@@ -52,6 +52,7 @@ typedef struct
 {
 	GigoloBackendGVFS *self;
 	GtkWidget *dialog;
+	gchar *domain;
 } MountInfo;
 
 struct _GigoloBackendGVFSPrivate
@@ -457,18 +458,19 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 		gtk_widget_destroy(mi->dialog);
 
 	g_free(uri);
+	g_free(mi->domain);
 	g_free(mi);
 }
 
 
 static void set_password_cb(GMountOperation *op, G_GNUC_UNUSED gchar *message, gchar *default_user,
-							gchar *default_domain, GAskPasswordFlags flags, const gchar *domain)
+							gchar *default_domain, GAskPasswordFlags flags, MountInfo *mi)
 {
 	GMountOperationResult result;
 	GtkWidget *dialog;
 
 	dialog = gigolo_password_dialog_new(flags, default_user,
-		(domain != NULL) ? domain : default_domain);
+		(mi->domain != NULL) ? mi->domain : default_domain);
 
 	if (gtk_dialog_run(GTK_DIALOG(dialog)) == GTK_RESPONSE_OK)
 	{
@@ -486,8 +488,8 @@ static void set_password_cb(GMountOperation *op, G_GNUC_UNUSED gchar *message, g
 				gigolo_password_dialog_get_password(GIGOLO_PASSWORD_DIALOG(dialog)));
 			/* TODO make this configurable? */
 			/* g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_FOR_SESGIGOLO); */
-			/* g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_NEVER); */
-			g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_PERMANENTLY);
+			g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_NEVER);
+			/*g_mount_operation_set_password_save(op, G_PASSWORD_SAVE_PERMANENTLY);*/
 		}
 	}
 	else
@@ -516,8 +518,9 @@ void gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
 	mi = g_new0(MountInfo, 1);
 	mi->self = backend;
 	mi->dialog = dialog;
+	mi->domain = g_strdup(domain);
 
-	g_signal_connect(op, "ask-password", G_CALLBACK(set_password_cb), (gchar*) domain);
+	g_signal_connect(op, "ask-password", G_CALLBACK(set_password_cb), mi);
 
 	g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
 		(GAsyncReadyCallback) mount_ready_cb, mi);
