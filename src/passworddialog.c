@@ -139,7 +139,7 @@ static void gigolo_password_dialog_init(GigoloPasswordDialog *dialog)
 }
 
 
-GtkWidget *gigolo_password_dialog_new(GAskPasswordFlags flags, const gchar *user, const gchar *domain)
+GtkWidget *gigolo_password_dialog_new(GAskPasswordFlags flags, const gchar *user)
 {
 	GtkWidget *dialog = g_object_new(GIGOLO_PASSWORD_DIALOG_TYPE, NULL);
 	GigoloPasswordDialogPrivate *priv = GIGOLO_PASSWORD_DIALOG_GET_PRIVATE(dialog);
@@ -160,8 +160,6 @@ GtkWidget *gigolo_password_dialog_new(GAskPasswordFlags flags, const gchar *user
 	if (flags & G_ASK_PASSWORD_NEED_DOMAIN)
 	{
 		gtk_widget_show(priv->box_domain);
-		if (NZV(domain))
-			gtk_entry_set_text(GTK_ENTRY(priv->entry_domain), domain);
 		gtk_widget_grab_focus(priv->entry_domain);
 	}
 

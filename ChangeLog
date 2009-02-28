@@ -2,6 +2,10 @@
 
  * src/backendgvfs.c:
    Cache the domain string when it is passed to the password dialog.
+ * src/backendgvfs.c, src/backendgvfs.h, src/bookmark.c,
+   src/passworddialog.c, src/passworddialog.h, src/window.c:
+   Instead of passing a stored domain value to the password dialog,
+   pass it already in the URI while connecting.
 
 
 2009-02-22  Enrico Tröger  <enrico(at)xfce(dot)org>

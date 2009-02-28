@@ -58,7 +58,6 @@ void				gigolo_backend_gvfs_unmount_mount				(GigoloBackendGVFS *backend, GMount
 
 void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 																	 const gchar *uri,
-																	 const gchar *domain,
 																	 GtkWidget *dialog);
 
 gchar*				gigolo_backend_gvfs_get_volume_identifier		(GVolume *volume);

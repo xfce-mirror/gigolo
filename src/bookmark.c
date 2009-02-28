@@ -262,6 +262,7 @@ static gchar *gigolo_bookmark_get_uri_real(GigoloBookmark *bookmark, gboolean es
 {
 	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 	gchar *result;
+	const gchar *domain = NULL;
 	gchar *user = NULL;
 	gchar *port = NULL;
 
@@ -278,8 +279,12 @@ static gchar *gigolo_bookmark_get_uri_real(GigoloBookmark *bookmark, gboolean es
 	else
 		user = g_strdup(priv->user);
 
-	result = g_strdup_printf("%s://%s%s%s%s/%s%s",
+	domain = gigolo_bookmark_get_domain(bookmark);
+
+	result = g_strdup_printf("%s://%s%s%s%s%s%s/%s%s",
 		priv->scheme,
+		(NZV(domain)) ? domain : "",
+		(NZV(domain)) ? ";" : "",
 		(NZV(user)) ? user : "",
 		(NZV(user)) ? "@" : "",
 		priv->host,

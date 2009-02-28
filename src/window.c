@@ -289,7 +289,7 @@ static void mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark, 
 		g_free(label);
 	}
 
-	gigolo_backend_gvfs_mount_uri(priv->backend_gvfs, uri, gigolo_bookmark_get_domain(bookmark), dialog);
+	gigolo_backend_gvfs_mount_uri(priv->backend_gvfs, uri, dialog);
 
 	if (gigolo_bookmark_get_autoconnect(bookmark))
 		gigolo_bookmark_set_should_not_autoconnect(bookmark, FALSE);
@@ -841,8 +841,8 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWin
 					 * not cancelled */
 					edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(
 						GTK_WINDOW(window), priv->settings, GIGOLO_BE_MODE_EDIT, bm);
-					if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) ==
-						GTK_RESPONSE_OK)
+					if (gigolo_bookmark_edit_dialog_run(
+							GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 					{
 						/* this fills the values of the dialog into 'bm' */
 						g_object_set(edit_dialog, "bookmark-update", bm, NULL);

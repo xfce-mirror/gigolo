@@ -47,7 +47,7 @@ struct _GigoloPasswordDialogClass
 };
 
 GType			gigolo_password_dialog_get_type		(void);
-GtkWidget*		gigolo_password_dialog_new			(GAskPasswordFlags flags, const gchar *user, const gchar *domain);
+GtkWidget*		gigolo_password_dialog_new			(GAskPasswordFlags flags, const gchar *user);
 
 const gchar*	gigolo_password_dialog_get_domain	(GigoloPasswordDialog *dialog);
 const gchar*	gigolo_password_dialog_get_username	(GigoloPasswordDialog *dialog);
