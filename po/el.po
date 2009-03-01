@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-22 23:40+0100\n"
-"PO-Revision-Date: 2009-02-20 17:27+0200\n"
-"Last-Translator: Stavros Giannouris <stavrosg@hellug.gr>\n"
+"PO-Revision-Date: 2009-02-23 22:41+0200\n"
+"Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskass.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,8 +30,7 @@ msgstr "Εμφάνιση πληροφορίες έκδοσης"
 
 #: ../src/main.c:99
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- μία απλή εφαρμογή για να συνδέονται εύκολα απομακρυσμένα συστήματα αρχείων"
+msgstr "- μία απλή εφαρμογή για να συνδέονται εύκολα απομακρυσμένα συστήματα αρχείων"
 
 #: ../src/common.c:73
 msgid "Unix Device"
@@ -43,24 +42,24 @@ msgstr "Κοινόχρηστος πόρος windows"
 
 #: ../src/common.c:77
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: ../src/common.c:79
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #: ../src/common.c:81
 msgid "SSH"
-msgstr ""
+msgstr "SSH"
 
 #. TODO find something better
 #: ../src/common.c:84
 msgid "OBEX"
-msgstr ""
+msgstr "OBEX"
 
 #: ../src/common.c:86
 msgid "WebDAV"
-msgstr ""
+msgstr "WebDAV"
 
 #: ../src/common.c:88
 msgid "WebDAV (secure)"
@@ -75,26 +74,29 @@ msgid "Custom Location"
 msgstr "Προσαρμοσμένη τοποθεσία"
 
 #: ../src/window.c:284
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to \"%s\""
-msgstr "Προσάρτηση  \"%s\""
+msgstr "Σύνδεση στο \"%s\""
 
-#: ../src/window.c:426 ../gigolo.desktop.in.h:1
+#: ../src/window.c:426
+#: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
-"Ένα απλό εργαλείο για την εύκολο σύνδεση σε απομακρυσμένα συστήματα αρχείων"
+msgstr "Ένα απλό εργαλείο για την εύκολο σύνδεση σε απομακρυσμένα συστήματα αρχείων"
 
 #: ../src/window.c:427
 msgid "Copyright 2008-2009 Enrico Tröger"
-msgstr ""
+msgstr "Δικαιώματα 2008-2009 Enrico Tröger"
 
 #: ../src/window.c:430
 msgid "translator-credits"
 msgstr "Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2009"
 
-#: ../src/window.c:652 ../src/bookmarkeditdialog.c:181
-#: ../src/bookmarkeditdialog.c:199 ../src/bookmarkeditdialog.c:212
-#: ../src/bookmarkeditdialog.c:223 ../src/bookmarkeditdialog.c:234
+#: ../src/window.c:652
+#: ../src/bookmarkeditdialog.c:181
+#: ../src/bookmarkeditdialog.c:199
+#: ../src/bookmarkeditdialog.c:212
+#: ../src/bookmarkeditdialog.c:223
+#: ../src/bookmarkeditdialog.c:234
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -124,23 +126,19 @@ msgstr "_Επεξεργασία συνδέσμων"
 
 #: ../src/window.c:1039
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Άνοιγμα του διαχειριστή συνδέσμων για προσθήκη, επεξεργασία ή διαγραφή "
-"συνδέσμων"
+msgstr "Άνοιγμα του διαχειριστή συνδέσμων για προσθήκη, επεξεργασία ή διαγραφή συνδέσμων"
 
 #: ../src/window.c:1043
 msgid "Disconnect the selected resource"
 msgstr "Αποσύνδεση του επιλεγμένου πόρου"
 
 #: ../src/window.c:1045
-#, fuzzy
 msgid "Open the selected resource with a file manager"
-msgstr "Άνοιγμα του επιλεγμένου πόρου με έναν διαχειριστή αρχείων"
+msgstr "Άνοιγμα της επιλεγμένης πηγής με έναν διαχειριστή αρχείων"
 
 #: ../src/window.c:1046
-#, fuzzy
 msgid "Copy _URI"
-msgstr "Αντιγραφή URI"
+msgstr "Αντιγραφή _URI"
 
 #: ../src/window.c:1047
 msgid "Quit Gigolo"
@@ -155,21 +153,24 @@ msgid "Choose a bookmark to connect to"
 msgstr "Επιλογή ενός συνδέσμου για σύνδεση"
 
 #: ../src/window.c:1125
-#, fuzzy
 msgid "Connected"
-msgstr "Σύνδεση"
+msgstr "Συνδέθηκε"
 
-#: ../src/window.c:1134 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1134
+#: ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "Τύπος υπηρεσίας"
 
-#: ../src/window.c:1142 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1142
+#: ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Όνομα"
 
-#: ../src/window.c:1209 ../src/window.c:1278 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1209
+#: ../src/window.c:1278
+#: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
-msgstr ""
+msgstr "Gigolo"
 
 #: ../src/settings.c:574
 msgid "Move it now?"
@@ -177,18 +178,12 @@ msgstr "Να μετακινηθεί τώρα;"
 
 #: ../src/settings.c:575
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Πριν εκκινήσετε το gigolo χρειάζεται να μετακινήσετε το παλιό κατάλογο "
-"ρυθμίσεων."
+msgstr "Πριν εκκινήσετε το gigolo χρειάζεται να μετακινήσετε το παλιό κατάλογο ρυθμίσεων."
 
 #: ../src/settings.c:583
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Ο παλιός κατάλογος ρυθμίσεων \"%s\" δεν μπορεί να μετακινηθεί στο  \"%s\" (%"
-"s). Παρακαλώ μετακινήστε χειροκίνητα τον κατάλογο σε μία νέα τοποθεσία."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Ο παλιός κατάλογος ρυθμίσεων \"%s\" δεν μπορεί να μετακινηθεί στο  \"%s\" (%s). Παρακαλώ μετακινήστε χειροκίνητα τον κατάλογο σε μία νέα τοποθεσία."
 
 #: ../src/settings.c:586
 msgid "Warning"
@@ -202,7 +197,8 @@ msgstr "Σύνδεση"
 msgid "Authentication information needed"
 msgstr "Χρειάζονται πληροφορίες πιστοποίησης"
 
-#: ../src/passworddialog.c:97 ../src/bookmarkeditdialog.c:810
+#: ../src/passworddialog.c:97
+#: ../src/bookmarkeditdialog.c:810
 msgid "_Domain:"
 msgstr "_Τομέας:"
 
@@ -233,9 +229,8 @@ msgid "Port"
 msgstr "Πόρτα"
 
 #: ../src/bookmarkdialog.c:324
-#, fuzzy
 msgid "Auto-Connect"
-msgstr "Αυτ_όματη σύνδεση"
+msgstr "Αυτόματη σύνδεση"
 
 #: ../src/bookmarkdialog.c:332
 msgid "Username"
@@ -255,9 +250,7 @@ msgstr "Πρέπει να εισάγετε ένα όνομα για την σύ�
 
 #: ../src/bookmarkeditdialog.c:200
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
-"Το όνομα του συνδέσμου που δώσατε είναι ήδη σε χρήση. Παρακαλώ επιλέξτε ένα "
-"άλλο."
+msgstr "Το όνομα του συνδέσμου που δώσατε είναι ήδη σε χρήση. Παρακαλώ επιλέξτε ένα άλλο."
 
 #: ../src/bookmarkeditdialog.c:213
 msgid "You must enter a server address or name."
@@ -365,45 +358,32 @@ msgstr "_Διαχειριστής αρχείων"
 
 #: ../src/preferencesdialog.c:343
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Εισάγετε το όνομα ενός προγράμματος για χρήση για άνοιγμα ή εμφάνιση των "
-"σημείων προσάρτησης"
+msgstr "Εισάγετε το όνομα ενός προγράμματος για χρήση για άνοιγμα ή εμφάνιση των σημείων προσάρτησης"
 
 #: ../src/preferencesdialog.c:352
 msgid "_Bookmark Auto-Connect Interval"
-msgstr ""
+msgstr "Εσωτερική αυτόματη σύνδεση σ_υνδέσμου"
 
 #: ../src/preferencesdialog.c:358
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Πόσο συχνά να προσπαθεί να επανασυνδέσοι τους συνδέσμους, σε δευτερόλεπτα. "
-"Το μηδέν απενεργοποιεί τον έλεγχο."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Πόσο συχνά να προσπαθεί να επανασυνδέσοι τους συνδέσμους, σε δευτερόλεπτα. Το μηδέν απενεργοποιεί τον έλεγχο."
 
 #: ../src/preferencesdialog.c:364
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' "
-"to mount local resources like disks. The Unix based volume manager "
-"implementation can mount such resources directly and also lists other local "
-"devices.\n"
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Η υλοποίηση του διαχειριστή τόμων βασισμένος στο HAL χρειάζεται στο εργαλείο "
-"'gnome-mount' για να προσαρτήση τις τοπικές πηγές όπως τους δίσκους. Η "
-"υλοποίηση του διαχειριστή τομέων βασισμένο στο UNIX μπορεί να προσαρτήσει "
-"τέτοιες πηγές απευθείας και επίσης να εμφανίσει σε λίστα άλλες τοπικές "
-"συσκευές.\n"
+"Η υλοποίηση του διαχειριστή τόμων βασισμένος στο HAL χρειάζεται στο εργαλείο 'gnome-mount' για να προσαρτήση τις τοπικές πηγές όπως τους δίσκους. Η υλοποίηση του διαχειριστή τομέων βασισμένο στο UNIX μπορεί να προσαρτήσει τέτοιες πηγές απευθείας και επίσης να εμφανίσει σε λίστα άλλες τοπικές συσκευές.\n"
 "Αν δεν είστε σίγουροι, χρησιμοποιήστε τον ελεκτή βασισμένο στο HAL."
 
 #: ../src/preferencesdialog.c:370
 msgid "Use _HAL based volume manager"
 msgstr "Χρήση του διαχειριστή τόμων βασισμένο στο HAL"
 
-#: ../src/preferencesdialog.c:371 ../src/preferencesdialog.c:379
+#: ../src/preferencesdialog.c:371
+#: ../src/preferencesdialog.c:379
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr ""
-"<i>Τροποποιώντας αυτή την επιλογή το gigolo χρειάζεται επανεκκίνηση.</i>"
+msgstr "<i>Τροποποιώντας αυτή την επιλογή το gigolo χρειάζεται επανεκκίνηση.</i>"
 
 #: ../src/preferencesdialog.c:378
 msgid "Use _Unix based volume manager"
@@ -419,18 +399,15 @@ msgstr "_Αποθήκευση θέσης και γεωμετρίας παραθ�
 
 #: ../src/preferencesdialog.c:397
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
-"Αποθηκεύει την θέση και γεωμετρία των παραθύρων και τα επαναφέρει κατά την "
-"εκκίνηση"
+msgstr "Αποθηκεύει την θέση και γεωμετρία των παραθύρων και τα επαναφέρει κατά την εκκίνηση"
 
 #: ../src/preferencesdialog.c:400
 msgid "Show status _icon in the Notification Area"
 msgstr "Εμφάνιση εικονιδίου κατάστασης στην περιοχή ειδοποιήσεων"
 
 #: ../src/preferencesdialog.c:403
-#, fuzzy
 msgid "Start _minimized in the Notification Area"
-msgstr "Ελαχιστοποιημένη εκκίνηση στην περιοχή ειδοποιήσεων"
+msgstr "Εκκίνηση στην περιοχή ειδοποιήσεων ελ_αχιστοποιημένα"
 
 #: ../src/preferencesdialog.c:409
 msgid "_View Mode"
@@ -457,7 +434,7 @@ msgid "Preferences"
 msgstr "Προτιμήσεις"
 
 #: ../src/backendgvfs.c:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
@@ -468,41 +445,40 @@ msgstr ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
-"Προσαρτημένο: Ναι\n"
-"Τύποι υπηρεσίας: %s"
+"Συνδέθηκε: Ναι\n"
+"Τύπος υπηρεσίας: %s"
 
 #: ../src/backendgvfs.c:183
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Συσκευή Unix: %s</b>"
 
-#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
+#: ../src/backendgvfs.c:367
+#: ../src/backendgvfs.c:398
 msgid "unknown"
 msgstr "άγνωστο"
 
-#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
-#, fuzzy, c-format
+#: ../src/backendgvfs.c:371
+#: ../src/backendgvfs.c:448
+#, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Η προσάρτηση του  \"%s\" απέτυχε."
+msgstr "Η σύνδεση στο \"%s\" απέτυχε."
 
 #: ../src/backendgvfs.c:402
-#, fuzzy, c-format
+#, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Η προσάρτηση του  \"%s\" απέτυχε."
+msgstr "Η αποσύνδεση από το  \"%s\" απέτυχε."
 
 #: ../src/mountdialog.c:102
-#, fuzzy
 msgid "Connecting"
-msgstr "Σύνδεση"
+msgstr "Συνδέεται"
 
 #~ msgid "Mounted"
 #~ msgstr "Προσαρτημένο"
-
 #~ msgid "Automount"
 #~ msgstr "Αυτόματη προσάρτηση"
-
 #~ msgid "Unmounting of \"%s\" failed."
 #~ msgstr "Η αποπροσάρτηση του  \"%s\" απέτυχε."
-
 #~ msgid "Mounting"
 #~ msgstr "Προσάρτηση"
+
