@@ -30,6 +30,7 @@
 #include "compat.h"
 #include "settings.h"
 #include "bookmark.h"
+#include "backendgvfs.h"
 #include "bookmarkeditdialog.h"
 
 
@@ -69,6 +70,8 @@ struct _GigoloBookmarkEditDialogPrivate
 	GtkWidget *domain_entry;
 
 	GtkWidget *share_label;
+	GtkWidget *share_combo;
+	GtkWidget *share_button;
 	GtkWidget *share_entry;
 
 	GigoloBookmark *bookmark_init;
@@ -147,7 +150,8 @@ static void gigolo_bookmark_edit_dialog_destroy(GtkObject *object)
 	gtk_widget_destroy(priv->user_label);
 	gtk_widget_destroy(priv->domain_entry);
 	gtk_widget_destroy(priv->domain_label);
-	gtk_widget_destroy(priv->share_entry);
+	gtk_widget_destroy(priv->share_combo);
+	gtk_widget_destroy(priv->share_button);
 	gtk_widget_destroy(priv->share_label);
 	gtk_widget_destroy(priv->information_label);
 
@@ -214,7 +218,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 					gtk_widget_grab_focus(priv->server_entry);
 				}
 			}
-			if (! error && gtk_widget_get_parent(priv->share_entry) != NULL)
+			if (! error && gtk_widget_get_parent(priv->share_combo) != NULL)
 			{
 				tmp = gtk_entry_get_text(GTK_ENTRY(priv->share_entry));
 				if (! *tmp)
@@ -222,7 +226,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 					error = TRUE;
 					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a share name."), NULL);
-					gtk_widget_grab_focus(priv->share_entry);
+					gtk_widget_grab_focus(priv->share_combo);
 				}
 			}
 			if (! error && gtk_widget_get_parent(priv->uri_entry) != NULL)
@@ -424,10 +428,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->domain_label);
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->domain_entry);
 	}
-	if (gtk_widget_get_parent(priv->share_entry) != NULL)
+	if (gtk_widget_get_parent(priv->share_combo) != NULL)
 	{
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->share_label);
-		gtk_container_remove(GTK_CONTAINER(priv->table), priv->share_entry);
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->share_combo);
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->share_button);
 	}
 	if (gtk_widget_get_parent(priv->information_label) != NULL)
 	{
@@ -472,10 +477,14 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 			gtk_table_attach(GTK_TABLE(table), priv->share_label,
 					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
 
-			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->share_label), priv->share_entry);
-			gtk_widget_show(priv->share_entry);
-			gtk_table_attach(GTK_TABLE(table), priv->share_entry,
+			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->share_label), priv->share_combo);
+			gtk_widget_show(priv->share_combo);
+			gtk_table_attach(GTK_TABLE(table), priv->share_combo,
 					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+
+			gtk_widget_show(priv->share_button);
+			gtk_table_attach(GTK_TABLE(table), priv->share_button,
+					  2, 3, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 			i++;
 		}
@@ -725,6 +734,45 @@ static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop
 }
 
 
+static void share_button_clicked_cb(GtkWidget *btn, GigoloBookmarkEditDialog *dialog)
+{
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	const gchar *hostname;
+	gchar **shares;
+
+	gtk_list_store_clear(GTK_LIST_STORE(gtk_combo_box_get_model(GTK_COMBO_BOX(priv->share_combo))));
+
+	hostname = gtk_entry_get_text(GTK_ENTRY(priv->server_entry));
+	if (! NZV(hostname))
+		return;
+
+	gtk_widget_set_sensitive(btn, FALSE);
+
+	/* FIXME for now we ignore username and domain when browsing for shares as this is not yet
+	 * supported by GVfs (1.0.x). */
+	shares = gigolo_backend_gvfs_get_smb_shares(hostname, NULL, NULL);
+
+	if (shares != NULL)
+	{
+		guint i, len = g_strv_length(shares);
+		for (i = 0; i < len; i++)
+		{
+			gtk_combo_box_append_text(GTK_COMBO_BOX(priv->share_combo), shares[i]);
+		}
+		g_strfreev(shares);
+	}
+	gtk_widget_set_sensitive(btn, TRUE);
+}
+
+
+static void server_entry_changed_cb(GtkEditable *editable, GtkWidget *btn)
+{
+	const gchar *text = gtk_entry_get_text(GTK_ENTRY(editable));
+
+	gtk_widget_set_sensitive(btn, NZV(text));
+}
+
+
 static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 {
 	GtkWidget *label;
@@ -753,7 +801,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	hbox = gtk_hbox_new(FALSE, 6);
 	gtk_box_pack_start(GTK_BOX(vbox), hbox, FALSE, TRUE, 0);
 
-	priv->table = table = gtk_table_new(9, 2, FALSE);
+	priv->table = table = gtk_table_new(9, 3, FALSE);
 	gtk_table_set_row_spacings(GTK_TABLE(table), 6);
 	gtk_table_set_col_spacings(GTK_TABLE(table), 12);
 	gtk_box_pack_start(GTK_BOX(hbox), table, TRUE, TRUE, 0);
@@ -800,7 +848,8 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	gtk_widget_set_tooltip_text(priv->port_spin, _("Set the port to 0 to use the default port"));
 	priv->user_entry = gtk_entry_new();
 	priv->domain_entry = gtk_entry_new();
-	priv->share_entry = gtk_entry_new();
+	priv->share_combo = gtk_combo_box_entry_new_text();
+	priv->share_entry = gtk_bin_get_child(GTK_BIN(priv->share_combo));
 
 	priv->uri_label = gtk_label_new_with_mnemonic(_("_Location (URI):"));
 	priv->server_label = gtk_label_new_with_mnemonic(_("_Server:"));
@@ -816,6 +865,15 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->port_spin), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->user_entry), TRUE);
 
+	priv->share_button = gtk_button_new();
+	gtk_button_set_image(GTK_BUTTON(priv->share_button),
+		gtk_image_new_from_stock(GTK_STOCK_REFRESH, GTK_ICON_SIZE_MENU));
+	gtk_widget_set_sensitive(priv->share_button, FALSE);
+	g_signal_connect(priv->share_button, "clicked", G_CALLBACK(share_button_clicked_cb), dialog);
+
+	g_signal_connect(priv->server_entry, "changed",
+		G_CALLBACK(server_entry_changed_cb), priv->share_button);
+
 	/* We need an extra ref so we can remove them from the table */
 	g_object_ref(priv->uri_entry);
 	g_object_ref(priv->uri_label);
@@ -827,7 +885,8 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	g_object_ref(priv->user_label);
 	g_object_ref(priv->domain_entry);
 	g_object_ref(priv->domain_label);
-	g_object_ref(priv->share_entry);
+	g_object_ref(priv->share_combo);
+	g_object_ref(priv->share_button);
 	g_object_ref(priv->share_label);
 	g_object_ref(priv->information_label);
 

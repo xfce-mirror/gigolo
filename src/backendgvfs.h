@@ -63,6 +63,10 @@ void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 
 gchar*				gigolo_backend_gvfs_get_volume_identifier		(GVolume *volume);
 
+gchar**				gigolo_backend_gvfs_get_smb_shares				(const gchar *hostname,
+																	 const gchar *user,
+																	 const gchar *domain);
+
 G_END_DECLS
 
 #endif /* __BACKENDGVFS_H__ */

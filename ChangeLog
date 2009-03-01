@@ -7,6 +7,9 @@
    authentication information are needed.
    This implicitly allows choosing the method to store passwords
    (never, session, forever).
+ * src/backendgvfs.c, src/backendgvfs.h, src/bookmarkeditdialog.c:
+   Implement browsing for smb shares in the Connect/Bookmark Edit
+   dialogs to easily select them.
 
 
 2009-02-28  Enrico Tröger  <enrico(at)xfce(dot)org>

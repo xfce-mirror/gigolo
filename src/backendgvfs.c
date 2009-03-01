@@ -492,3 +492,67 @@ gchar *gigolo_backend_gvfs_get_volume_identifier(GVolume *volume)
 }
 
 
+gchar **gigolo_backend_gvfs_get_smb_shares(const gchar *hostname, const gchar *user, const gchar *domain)
+{
+	gchar **shares = NULL;
+	gchar *uri;
+	GList *l, *shares_list = NULL;
+	GFile *file;
+	GFileInfo *info;
+	GError *error = NULL;
+	GFileEnumerator *e;
+
+	g_return_val_if_fail(hostname != NULL, NULL);
+
+	uri = g_strdup_printf("smb://%s%s%s%s%s/",
+		(NZV(domain)) ? domain : "",
+		(NZV(domain)) ? ";" : "",
+		(NZV(user)) ? user : "",
+		(NZV(user) || NZV(domain)) ? "@" : "",
+		hostname);
+
+	verbose("Querying \"%s\" for available shares", uri);
+
+	file = g_file_new_for_uri(uri);
+
+	e = g_file_enumerate_children(file,
+		G_FILE_ATTRIBUTE_MOUNTABLE_CAN_MOUNT "," G_FILE_ATTRIBUTE_STANDARD_NAME,
+		G_FILE_QUERY_INFO_NONE, NULL, &error);
+
+	if (error != NULL)
+	{
+		verbose("%s: %s", G_STRFUNC, error->message);
+		g_error_free(error);
+	}
+	else
+	{
+		guint i, len;
+
+		while ((info = g_file_enumerator_next_file(e, NULL, NULL)) != NULL)
+		{
+			shares_list = g_list_append(shares_list, g_strdup(g_file_info_get_name(info)));
+
+			g_object_unref(info);
+		}
+		g_object_unref(e);
+
+		i = 0;
+		len = g_list_length(shares_list);
+		shares = g_new(gchar*, len + 1);
+
+		for (l = shares_list; l != NULL; l = g_list_next(l))
+		{
+			shares[i] = l->data;
+			i++;
+		}
+		shares[i] = NULL;
+		g_list_free(shares_list);
+	}
+
+	g_object_unref(file);
+	g_free(uri);
+
+	return shares;
+}
+
+
