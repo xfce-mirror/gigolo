@@ -11,7 +11,7 @@ gigolo_SOURCES = 								\
 	backendgvfs.c backendgvfs.h					\
 	menubuttonaction.c menubuttonaction.h		\
 	mountdialog.c mountdialog.h					\
-	passworddialog.c passworddialog.h			\
+	mountoperation.c mountoperation.h			\
 	bookmarkdialog.c bookmarkdialog.h			\
 	bookmarkeditdialog.c bookmarkeditdialog.h	\
 	preferencesdialog.c preferencesdialog.h

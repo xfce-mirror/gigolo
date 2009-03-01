@@ -45,6 +45,16 @@ GtkWidget *gigolo_dialog_get_content_area(GtkDialog *dialog)
 }
 
 
+GtkWidget *gigolo_dialog_get_action_area(GtkDialog *dialog)
+{
+#if GTK_CHECK_VERSION(2, 14, 0)
+	return gtk_dialog_get_action_area(dialog);
+#else
+	return dialog->action_area;
+#endif
+}
+
+
 guint32 gigolo_widget_get_flags(GtkWidget *widget)
 {
 #ifdef GSEAL_ENABLE

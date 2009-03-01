@@ -25,6 +25,8 @@ GdkWindow *gigolo_widget_get_window(GtkWidget *widget);
 
 GtkWidget *gigolo_dialog_get_content_area(GtkDialog *dialog);
 
+GtkWidget *gigolo_dialog_get_action_area(GtkDialog *dialog);
+
 void gigolo_status_icon_set_tooltip_text(GtkStatusIcon *status_icon, const gchar *tooltip_text);
 
 guint32 gigolo_widget_get_flags(GtkWidget *widget);

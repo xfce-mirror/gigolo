@@ -7,7 +7,7 @@ src/window.c
 src/bookmark.c
 src/settings.c
 src/menubuttonaction.c
-src/passworddialog.c
+src/mountoperation.c
 src/bookmarkdialog.c
 src/bookmarkeditdialog.c
 src/preferencesdialog.c
