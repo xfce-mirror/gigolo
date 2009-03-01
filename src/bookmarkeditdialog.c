@@ -570,7 +570,7 @@ static void fill_method_combo_box(GigoloBookmarkEditDialog *dialog)
 	/* 0 - method index, 1 - visible/supported flag, 2 - description */
 	store = gtk_list_store_new(3, G_TYPE_INT, G_TYPE_BOOLEAN, G_TYPE_STRING);
 
-	supported = g_vfs_get_supported_uri_schemes(g_vfs_get_default());
+	supported = gigolo_backend_gvfs_get_supported_uri_schemes();
 
 	for (i = 0; i < methods_len; i++)
 	{

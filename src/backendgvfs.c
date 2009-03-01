@@ -556,3 +556,7 @@ gchar **gigolo_backend_gvfs_get_smb_shares(const gchar *hostname, const gchar *u
 }
 
 
+const gchar *const *gigolo_backend_gvfs_get_supported_uri_schemes(void)
+{
+	return g_vfs_get_supported_uri_schemes(g_vfs_get_default());
+}

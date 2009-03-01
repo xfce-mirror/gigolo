@@ -31,6 +31,7 @@
 #include "main.h"
 #include "settings.h"
 #include "window.h"
+#include "backendgvfs.h"
 
 
 static gboolean show_version = FALSE;
@@ -76,7 +77,7 @@ static void print_supported_schemes(void)
 	const gchar* const *supported;
 	gint j;
 
-	supported = g_vfs_get_supported_uri_schemes(g_vfs_get_default());
+	supported = gigolo_backend_gvfs_get_supported_uri_schemes();
 	for (j = 0; supported[j] != NULL; j++)
 	{
 		g_print("%s\n", supported[j]);

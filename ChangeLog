@@ -13,6 +13,10 @@
  * src/bookmark.c:
    Fix creation of smb:// URIs from bookmarks when a domain is set but
    no username.
+ * src/backendgvfs.c, src/backendgvfs.h, src/main.c,
+   src/bookmarkeditdialog.c:
+   Add gigolo_backend_gvfs_get_supported_uri_schemes() and use it to
+   avoid calling GIO/GVfs functions outside of the backend class.
 
 
 2009-02-28  Enrico Tröger  <enrico(at)xfce(dot)org>
