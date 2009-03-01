@@ -10,6 +10,9 @@
  * src/backendgvfs.c, src/backendgvfs.h, src/bookmarkeditdialog.c:
    Implement browsing for smb shares in the Connect/Bookmark Edit
    dialogs to easily select them.
+ * src/bookmark.c:
+   Fix creation of smb:// URIs from bookmarks when a domain is set but
+   no username.
 
 
 2009-02-28  Enrico Tröger  <enrico(at)xfce(dot)org>

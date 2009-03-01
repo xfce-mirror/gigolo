@@ -286,7 +286,7 @@ static gchar *gigolo_bookmark_get_uri_real(GigoloBookmark *bookmark, gboolean es
 		(NZV(domain)) ? domain : "",
 		(NZV(domain)) ? ";" : "",
 		(NZV(user)) ? user : "",
-		(NZV(user)) ? "@" : "",
+		(NZV(user) || NZV(domain)) ? "@" : "",
 		priv->host,
 		(port) ? port : "",
 		(NZV(priv->share)) ? priv->share : "",
