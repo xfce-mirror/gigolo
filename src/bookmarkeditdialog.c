@@ -101,7 +101,8 @@ enum {
 	SHOW_SHARE     = 0x00000010,
 	SHOW_PORT      = 0x00000020,
 	SHOW_USER      = 0x00000040,
-	SHOW_DOMAIN    = 0x00000080
+	SHOW_DOMAIN    = 0x00000080,
+	SHOW_DEVICE    = 0x00000100
 };
 
 enum {
@@ -117,6 +118,7 @@ enum {
 	SCHEME_SMB,
 	SCHEME_DAV,
 	SCHEME_DAVS,
+	SCHEME_OBEX,
 	SCHEME_CUSTOM
 };
 
@@ -126,6 +128,7 @@ static struct MethodInfo methods[] = {
 	{ "smb",  0,	SHOW_SHARE | SHOW_USER | SHOW_DOMAIN },
 	{ "dav",  80,	SHOW_PORT | SHOW_USER },
 	{ "davs", 443,	SHOW_PORT | SHOW_USER },
+	{ "obex", 0,	SHOW_DEVICE },
 	{ NULL,   0,	0 }
 };
 static guint methods_len = G_N_ELEMENTS(methods);
@@ -359,7 +362,21 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 	}
 	tmp = gigolo_bookmark_get_host(priv->bookmark_init);
 	if (tmp != NULL)
-		gtk_entry_set_text(GTK_ENTRY(priv->server_entry), tmp);
+	{
+		gchar *server;
+		if (tmp[0] == '[' && gigolo_str_equal("obex", gigolo_bookmark_get_scheme(priv->bookmark_init)))
+		{
+			gsize len = strlen(tmp);
+			/* tmp is something like [00:00:00:00:00] and we want to strip the brackets */
+			server = g_strndup(tmp + 1, len - 2);
+		}
+		else
+			server = (gchar *) tmp;
+
+		gtk_entry_set_text(GTK_ENTRY(priv->server_entry), server);
+		if (tmp != server)
+			g_free(server);
+	}
 	user = gigolo_bookmark_get_user_unescaped(priv->bookmark_init);
 	if (user != NULL)
 	{
@@ -458,6 +475,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 	}
 	else
 	{
+		if (meth->flags & SHOW_DEVICE)
+			gtk_label_set_text_with_mnemonic(GTK_LABEL(priv->server_label), _("_Device:"));
+		else
+			gtk_label_set_text_with_mnemonic(GTK_LABEL(priv->server_label), _("_Server:"));
+
 		gtk_misc_set_alignment(GTK_MISC(priv->server_label), 0.0, 0.5);
 		gtk_widget_show(priv->server_label);
 		gtk_table_attach(GTK_TABLE(table), priv->server_label,
@@ -488,10 +510,9 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 
 			i++;
 		}
-
 	}
 
-	if (meth->flags)
+	if (meth->flags & (SHOW_PORT | SHOW_DOMAIN | SHOW_USER))
 	{
 		gtk_misc_set_alignment(GTK_MISC(priv->information_label), 0.0, 0.5);
 		gtk_widget_show(priv->information_label);
@@ -647,6 +668,23 @@ static void update_bookmark(GigoloBookmarkEditDialog *dialog)
 	if (methods[idx].scheme == NULL)
 	{
 		gigolo_bookmark_set_uri(priv->bookmark_update, gtk_entry_get_text(GTK_ENTRY(priv->uri_entry)));
+	}
+	else if (idx == SCHEME_OBEX)
+	{
+		gchar *server;
+
+		gigolo_bookmark_set_scheme(priv->bookmark_update, methods[idx].scheme);
+
+		tmp = gtk_entry_get_text(GTK_ENTRY(priv->server_entry));
+
+		if (tmp[0] != '[')
+			server = g_strconcat("[", tmp, "]", NULL);
+		else
+			server = (gchar *) tmp;
+
+		gigolo_bookmark_set_host(priv->bookmark_update, server);
+		if (tmp != server)
+			g_free(server);
 	}
 	else
 	{

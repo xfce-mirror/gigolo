@@ -1,3 +1,10 @@
+2009-03-02  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/common.c, src/bookmarkeditdialog.c:
+   Add a separate service type for Obex connections in the
+   Connect/Bookmark Edit dialogs.
+
+
 2009-03-01  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * po/POTFILES.in, src/Makefile.am, src/backendgvfs.c,

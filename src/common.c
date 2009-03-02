@@ -80,8 +80,7 @@ const gchar *gigolo_describe_scheme(const gchar *scheme)
 	else if (gigolo_str_equal(scheme, "sftp"))
 		return _("SSH");
 	else if (gigolo_str_equal(scheme, "obex"))
-		/* TODO find something better */
-		return _("OBEX");
+		return _("Obex");
 	else if (gigolo_str_equal(scheme, "dav"))
 		return _("WebDAV");
 	else if (gigolo_str_equal(scheme, "davs"))
