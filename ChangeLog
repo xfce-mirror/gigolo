@@ -3,6 +3,8 @@
  * src/common.c, src/bookmarkeditdialog.c:
    Add a separate service type for Obex connections in the
    Connect/Bookmark Edit dialogs.
+ * src/window.c:
+   Add Online Help and Supported Protocols help menu items.
 
 
 2009-03-01  Enrico Tröger  <enrico(at)xfce(dot)org>

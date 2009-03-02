@@ -445,6 +445,45 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 }
 
 
+static void action_help_cb(G_GNUC_UNUSED GtkAction *action, G_GNUC_UNUSED GigoloWindow *window)
+{
+	gigolo_show_uri("http://www.uvena.de/gigolo/help.html");
+}
+
+
+static void action_supported_schemes_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+{
+	const gchar* const *supported;
+	const gchar *description;
+	GString *str;
+	GtkWidget *dialog;
+	guint j;
+
+	str = g_string_new(_("Gigolo can use the following protocols provided by GVfs:"));
+	g_string_append(str, "\n\n");
+
+	supported = gigolo_backend_gvfs_get_supported_uri_schemes();
+	for (j = 0; supported[j] != NULL; j++)
+	{
+		description = gigolo_describe_scheme(supported[j]);
+		if (description != NULL)
+		{
+			g_string_append_printf(str, "%s (%s)", description, supported[j]);
+			g_string_append_c(str, '\n');
+		}
+	}
+
+	dialog = gtk_message_dialog_new(GTK_WINDOW(window),
+		GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_INFO,
+		GTK_BUTTONS_OK, "%s", str->str);
+
+	gtk_dialog_run(GTK_DIALOG(dialog));
+
+	gtk_widget_destroy(dialog);
+	g_string_free(str, TRUE);
+}
+
+
 static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
@@ -991,6 +1030,9 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 				"<menuitem action='CopyURI'/>"
 			"</menu>"
 			"<menu action='Help'>"
+				"<menuitem action='OnlineHelp'/>"
+				"<menuitem action='SupportedSchemes'/>"
+				"<separator/>"
 				"<menuitem action='About'/>"
 			"</menu>"
 		"</menubar>"
@@ -1045,6 +1087,8 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 			N_("Open the selected resource with a file manager"), G_CALLBACK(action_open_cb) },
 		{ "CopyURI", GTK_STOCK_COPY, N_("Copy _URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
 		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb) },
+		{ "OnlineHelp", GTK_STOCK_HELP, _("Online Help"), NULL, NULL, G_CALLBACK(action_help_cb) },
+		{ "SupportedSchemes", NULL, _("Supported Protocols"), NULL, NULL, G_CALLBACK(action_supported_schemes_cb) },
 		{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
 	};
 	const guint entries_n = G_N_ELEMENTS(entries);
