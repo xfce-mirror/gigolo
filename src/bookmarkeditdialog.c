@@ -57,8 +57,8 @@ struct _GigoloBookmarkEditDialogPrivate
 	GtkWidget *uri_label;
 	GtkWidget *uri_entry;
 
-	GtkWidget *server_label;
-	GtkWidget *server_entry;
+	GtkWidget *host_label;
+	GtkWidget *host_entry;
 
 	GtkWidget *port_label;
 	GtkWidget *port_spin;
@@ -145,8 +145,8 @@ static void gigolo_bookmark_edit_dialog_destroy(GtkObject *object)
 
 	gtk_widget_destroy(priv->uri_entry);
 	gtk_widget_destroy(priv->uri_label);
-	gtk_widget_destroy(priv->server_entry);
-	gtk_widget_destroy(priv->server_label);
+	gtk_widget_destroy(priv->host_entry);
+	gtk_widget_destroy(priv->host_label);
 	gtk_widget_destroy(priv->port_label);
 	gtk_widget_destroy(priv->port_spin);
 	gtk_widget_destroy(priv->user_entry);
@@ -210,15 +210,15 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 					}
 				}
 			}
-			if (! error && gtk_widget_get_parent(priv->server_entry) != NULL)
+			if (! error && gtk_widget_get_parent(priv->host_entry) != NULL)
 			{
-				tmp = gtk_entry_get_text(GTK_ENTRY(priv->server_entry));
+				tmp = gtk_entry_get_text(GTK_ENTRY(priv->host_entry));
 				if (! *tmp)
 				{
 					error = TRUE;
 					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a server address or name."), NULL);
-					gtk_widget_grab_focus(priv->server_entry);
+					gtk_widget_grab_focus(priv->host_entry);
 				}
 			}
 			if (! error && gtk_widget_get_parent(priv->share_combo) != NULL)
@@ -363,19 +363,19 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 	tmp = gigolo_bookmark_get_host(priv->bookmark_init);
 	if (tmp != NULL)
 	{
-		gchar *server;
+		gchar *host;
 		if (tmp[0] == '[' && gigolo_str_equal("obex", gigolo_bookmark_get_scheme(priv->bookmark_init)))
 		{
 			gsize len = strlen(tmp);
 			/* tmp is something like [00:00:00:00:00] and we want to strip the brackets */
-			server = g_strndup(tmp + 1, len - 2);
+			host = g_strndup(tmp + 1, len - 2);
 		}
 		else
-			server = (gchar *) tmp;
+			host = (gchar *) tmp;
 
-		gtk_entry_set_text(GTK_ENTRY(priv->server_entry), server);
-		if (tmp != server)
-			g_free(server);
+		gtk_entry_set_text(GTK_ENTRY(priv->host_entry), host);
+		if (tmp != host)
+			g_free(host);
 	}
 	user = gigolo_bookmark_get_user_unescaped(priv->bookmark_init);
 	if (user != NULL)
@@ -425,10 +425,10 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->uri_label);
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->uri_entry);
 	}
-	if (gtk_widget_get_parent(priv->server_entry) != NULL)
+	if (gtk_widget_get_parent(priv->host_entry) != NULL)
 	{
-		gtk_container_remove(GTK_CONTAINER(priv->table), priv->server_label);
-		gtk_container_remove(GTK_CONTAINER(priv->table), priv->server_entry);
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->host_label);
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->host_entry);
 	}
 	if (gtk_widget_get_parent(priv->port_spin) != NULL)
 	{
@@ -476,18 +476,18 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 	else
 	{
 		if (meth->flags & SHOW_DEVICE)
-			gtk_label_set_text_with_mnemonic(GTK_LABEL(priv->server_label), _("_Device:"));
+			gtk_label_set_text_with_mnemonic(GTK_LABEL(priv->host_label), _("_Device:"));
 		else
-			gtk_label_set_text_with_mnemonic(GTK_LABEL(priv->server_label), _("_Server:"));
+			gtk_label_set_text_with_mnemonic(GTK_LABEL(priv->host_label), _("_Server:"));
 
-		gtk_misc_set_alignment(GTK_MISC(priv->server_label), 0.0, 0.5);
-		gtk_widget_show(priv->server_label);
-		gtk_table_attach(GTK_TABLE(table), priv->server_label,
+		gtk_misc_set_alignment(GTK_MISC(priv->host_label), 0.0, 0.5);
+		gtk_widget_show(priv->host_label);
+		gtk_table_attach(GTK_TABLE(table), priv->host_label,
 				  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
 
-		gtk_label_set_mnemonic_widget(GTK_LABEL(priv->server_label), priv->server_entry);
-		gtk_widget_show(priv->server_entry);
-		gtk_table_attach(GTK_TABLE(table), priv->server_entry,
+		gtk_label_set_mnemonic_widget(GTK_LABEL(priv->host_label), priv->host_entry);
+		gtk_widget_show(priv->host_entry);
+		gtk_table_attach(GTK_TABLE(table), priv->host_entry,
 				  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 		i++;
@@ -671,26 +671,26 @@ static void update_bookmark(GigoloBookmarkEditDialog *dialog)
 	}
 	else if (idx == SCHEME_OBEX)
 	{
-		gchar *server;
+		gchar *host;
 
 		gigolo_bookmark_set_scheme(priv->bookmark_update, methods[idx].scheme);
 
-		tmp = gtk_entry_get_text(GTK_ENTRY(priv->server_entry));
+		tmp = gtk_entry_get_text(GTK_ENTRY(priv->host_entry));
 
 		if (tmp[0] != '[')
-			server = g_strconcat("[", tmp, "]", NULL);
+			host = g_strconcat("[", tmp, "]", NULL);
 		else
-			server = (gchar *) tmp;
+			host = (gchar *) tmp;
 
-		gigolo_bookmark_set_host(priv->bookmark_update, server);
-		if (tmp != server)
-			g_free(server);
+		gigolo_bookmark_set_host(priv->bookmark_update, host);
+		if (tmp != host)
+			g_free(host);
 	}
 	else
 	{
 		gigolo_bookmark_set_scheme(priv->bookmark_update, methods[idx].scheme);
 
-		tmp = gtk_entry_get_text(GTK_ENTRY(priv->server_entry));
+		tmp = gtk_entry_get_text(GTK_ENTRY(priv->host_entry));
 		gigolo_bookmark_set_host(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->user_entry));
 		gigolo_bookmark_set_user(priv->bookmark_update, tmp);
@@ -780,7 +780,7 @@ static void share_button_clicked_cb(GtkWidget *btn, GigoloBookmarkEditDialog *di
 
 	gtk_list_store_clear(GTK_LIST_STORE(gtk_combo_box_get_model(GTK_COMBO_BOX(priv->share_combo))));
 
-	hostname = gtk_entry_get_text(GTK_ENTRY(priv->server_entry));
+	hostname = gtk_entry_get_text(GTK_ENTRY(priv->host_entry));
 	if (! NZV(hostname))
 		return;
 
@@ -803,7 +803,7 @@ static void share_button_clicked_cb(GtkWidget *btn, GigoloBookmarkEditDialog *di
 }
 
 
-static void server_entry_changed_cb(GtkEditable *editable, GtkWidget *btn)
+static void host_entry_changed_cb(GtkEditable *editable, GtkWidget *btn)
 {
 	const gchar *text = gtk_entry_get_text(GTK_ENTRY(editable));
 
@@ -880,7 +880,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	g_signal_connect(combo, "changed", G_CALLBACK(combo_changed_callback), dialog);
 
 	priv->uri_entry = gtk_entry_new();
-	priv->server_entry = gtk_entry_new();
+	priv->host_entry = gtk_entry_new();
 	priv->port_spin = gtk_spin_button_new_with_range(0, 65535, 1);
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), 0.0);
 	gtk_widget_set_tooltip_text(priv->port_spin, _("Set the port to 0 to use the default port"));
@@ -890,7 +890,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	priv->share_entry = gtk_bin_get_child(GTK_BIN(priv->share_combo));
 
 	priv->uri_label = gtk_label_new_with_mnemonic(_("_Location (URI):"));
-	priv->server_label = gtk_label_new_with_mnemonic(_("_Server:"));
+	priv->host_label = gtk_label_new_with_mnemonic(_("_Server:"));
 	priv->user_label = gtk_label_new_with_mnemonic(_("_User Name:"));
 	priv->information_label = gtk_label_new(_("Optional information:"));
 	priv->port_label = gtk_label_new_with_mnemonic(_("_Port:"));
@@ -899,7 +899,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->name_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->uri_entry), TRUE);
-	gtk_entry_set_activates_default(GTK_ENTRY(priv->server_entry), TRUE);
+	gtk_entry_set_activates_default(GTK_ENTRY(priv->host_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->port_spin), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->user_entry), TRUE);
 
@@ -909,14 +909,14 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	gtk_widget_set_sensitive(priv->share_button, FALSE);
 	g_signal_connect(priv->share_button, "clicked", G_CALLBACK(share_button_clicked_cb), dialog);
 
-	g_signal_connect(priv->server_entry, "changed",
-		G_CALLBACK(server_entry_changed_cb), priv->share_button);
+	g_signal_connect(priv->host_entry, "changed",
+		G_CALLBACK(host_entry_changed_cb), priv->share_button);
 
 	/* We need an extra ref so we can remove them from the table */
 	g_object_ref(priv->uri_entry);
 	g_object_ref(priv->uri_label);
-	g_object_ref(priv->server_entry);
-	g_object_ref(priv->server_label);
+	g_object_ref(priv->host_entry);
+	g_object_ref(priv->host_label);
 	g_object_ref(priv->port_label);
 	g_object_ref(priv->port_spin);
 	g_object_ref(priv->user_entry);
