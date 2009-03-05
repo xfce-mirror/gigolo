@@ -52,6 +52,8 @@ GtkWidget*	gigolo_window_new				(GigoloSettings *settings);
 void		gigolo_window_update_bookmarks	(GigoloWindow *window);
 gboolean 	gigolo_window_do_autoconnect	(gpointer data);
 
+void		gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark,
+											  gboolean show_dialog);
 
 G_END_DECLS
 

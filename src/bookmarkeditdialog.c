@@ -309,8 +309,8 @@ static guint scheme_to_index(const gchar *scheme)
 static gboolean combo_foreach(GtkTreeModel *model, G_GNUC_UNUSED GtkTreePath *path,
 							  GtkTreeIter *iter, gpointer data)
 {
-	gint idx = GPOINTER_TO_INT(data);
-	gint i;
+	guint idx = GPOINTER_TO_UINT(data);
+	guint i;
 
 	gtk_tree_model_get(model, iter, COLUMN_INDEX, &i, -1);
 
@@ -325,21 +325,25 @@ static gboolean combo_foreach(GtkTreeModel *model, G_GNUC_UNUSED GtkTreePath *pa
 }
 
 
-static void combo_set_active(GtkWidget *combo, gint idx)
+static void combo_set_active(GtkWidget *combo, guint idx)
 {
 	GtkTreeIter iter;
 	GtkTreeModel *model = gtk_combo_box_get_model(GTK_COMBO_BOX(combo));
 	gboolean visible = FALSE;
 	gboolean is_valid;
 
-	gtk_tree_model_foreach(model, combo_foreach, GINT_TO_POINTER(idx));
+	/* Don't do anything if the initial scheme has been set already. */
+	if (gtk_combo_box_get_active_iter(GTK_COMBO_BOX(combo), &iter))
+		return;
+
+	gtk_tree_model_foreach(model, combo_foreach, GUINT_TO_POINTER(idx));
 
 	/* Prevent setting an invisible/unsupported scheme, fallback to Custom Location. */
 	is_valid = gtk_combo_box_get_active_iter(GTK_COMBO_BOX(combo), &iter);
 	if (is_valid)
 		gtk_tree_model_get(model, &iter, COLUMN_VISIBLE, &visible, -1);
-	if (! visible || !is_valid)
-		gtk_tree_model_foreach(model, combo_foreach, GINT_TO_POINTER(SCHEME_CUSTOM));
+	if (! visible || ! is_valid)
+		gtk_tree_model_foreach(model, combo_foreach, GUINT_TO_POINTER(SCHEME_CUSTOM));
 }
 
 
@@ -351,15 +355,18 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 	guint port;
 	guint idx;
 
+	/* Name */
 	tmp = gigolo_bookmark_get_name(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->name_entry), tmp);
+	/* URI */
 	uri = gigolo_bookmark_get_uri(priv->bookmark_init);
 	if (uri != NULL)
 	{
 		gtk_entry_set_text(GTK_ENTRY(priv->uri_entry), uri);
 		g_free(uri);
 	}
+	/* Host */
 	tmp = gigolo_bookmark_get_host(priv->bookmark_init);
 	if (tmp != NULL)
 	{
@@ -377,29 +384,35 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 		if (tmp != host)
 			g_free(host);
 	}
+	/* Host */
 	user = gigolo_bookmark_get_user_unescaped(priv->bookmark_init);
 	if (user != NULL)
 	{
 		gtk_entry_set_text(GTK_ENTRY(priv->user_entry), user);
 		g_free(user);
 	}
+	/* Share */
 	tmp = gigolo_bookmark_get_share(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->share_entry), tmp);
+	/* Domain */
 	tmp = gigolo_bookmark_get_domain(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->domain_entry), tmp);
+	/* Port */
 	port = gigolo_bookmark_get_port(priv->bookmark_init);
+
 	idx = scheme_to_index(gigolo_bookmark_get_scheme(priv->bookmark_init));
-	if (port == 0)
-		port = methods[idx].port;
 
 	gtk_toggle_button_set_active(
 		GTK_TOGGLE_BUTTON(priv->autoconnect_checkbtn),
 		gigolo_bookmark_get_autoconnect(priv->bookmark_init));
 
+	if (port == 0)
+		port = methods[idx].port;
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), port);
-	combo_set_active(priv->type_combo, (gint) idx);
+
+	combo_set_active(priv->type_combo, idx);
 }
 
 
@@ -589,7 +602,7 @@ static void fill_method_combo_box(GigoloBookmarkEditDialog *dialog)
 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 
 	/* 0 - method index, 1 - visible/supported flag, 2 - description */
-	store = gtk_list_store_new(3, G_TYPE_INT, G_TYPE_BOOLEAN, G_TYPE_STRING);
+	store = gtk_list_store_new(3, G_TYPE_UINT, G_TYPE_BOOLEAN, G_TYPE_STRING);
 
 	supported = gigolo_backend_gvfs_get_supported_uri_schemes();
 

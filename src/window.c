@@ -37,6 +37,7 @@
 #include "preferencesdialog.h"
 #include "backendgvfs.h"
 #include "mountdialog.h"
+#include "browsenetworkdialog.h"
 #include "main.h"
 
 
@@ -265,7 +266,7 @@ static GigoloBookmark *get_bookmark_from_uri(GigoloWindow *window, const gchar *
 }
 
 
-static void mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark, gboolean show_dialog)
+void gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark, gboolean show_dialog)
 {
 	gchar *uri;
 	GtkWidget *dialog = NULL;
@@ -331,7 +332,7 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 			/* this fills the values of the dialog into 'bm' */
 			g_object_set(dialog, "bookmark-update", bm, NULL);
 
-			mount_from_bookmark(window, bm, TRUE);
+			gigolo_window_mount_from_bookmark(window, bm, TRUE);
 
 			g_object_unref(bm);
 		}
@@ -383,6 +384,17 @@ static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *win
 			gigolo_backend_gvfs_unmount_mount(priv->backend_gvfs, mnt);
 		}
 	}
+}
+
+
+static void action_browse_network_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+{
+	GtkWidget *dialog;
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+
+	dialog = gigolo_browse_network_dialog_new(GTK_WINDOW(window), priv->settings);
+
+	gtk_widget_show(dialog);
 }
 
 
@@ -785,7 +797,7 @@ static void action_bookmark_activate_cb(G_GNUC_UNUSED GigoloMenubuttonAction *ac
 {
 	GigoloBookmark *bm = g_object_get_data(G_OBJECT(item), "bookmark");
 
-	mount_from_bookmark(window, bm, TRUE);
+	gigolo_window_mount_from_bookmark(window, bm, TRUE);
 }
 
 
@@ -844,7 +856,7 @@ gboolean gigolo_window_do_autoconnect(gpointer data)
 		GigoloBookmark *bm = g_ptr_array_index(bookmarks, i);
 		if (gigolo_bookmark_get_autoconnect(bm) && ! gigolo_bookmark_get_should_not_autoconnect(bm))
 		{
-			mount_from_bookmark(window, bm, FALSE);
+			gigolo_window_mount_from_bookmark(window, bm, FALSE);
 		}
 	}
 	return TRUE;
@@ -1025,6 +1037,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 				"<menuitem action='Connect'/>"
 				"<menuitem action='Disconnect'/>"
 				"<menuitem action='Bookmarks'/>"
+				"<menuitem action='BrowseNetwork'/>"
 				"<separator/>"
 				"<menuitem action='Open'/>"
 				"<menuitem action='CopyURI'/>"
@@ -1060,6 +1073,8 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 			"<toolitem action='Bookmarks'/>"
 			"<toolitem action='Disconnect'/>"
 			"<separator/>"
+			"<toolitem action='BrowseNetwork'/>"
+			"<separator/>"
 			"<toolitem action='EditBookmarks'/>"
 			"<separator/>"
 			"<toolitem action='Open'/>"
@@ -1089,6 +1104,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb) },
 		{ "OnlineHelp", GTK_STOCK_HELP, _("Online Help"), NULL, NULL, G_CALLBACK(action_help_cb) },
 		{ "SupportedSchemes", NULL, _("Supported Protocols"), NULL, NULL, G_CALLBACK(action_supported_schemes_cb) },
+		{ "BrowseNetwork", GTK_STOCK_FIND, _("Browse Network"), NULL, NULL, G_CALLBACK(action_browse_network_cb) },
 		{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
 	};
 	const guint entries_n = G_N_ELEMENTS(entries);
@@ -1324,6 +1340,9 @@ static void gigolo_window_init(GigoloWindow *window)
 	g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 
 	g_object_unref(ui_manager);
+
+	gtk_action_set_sensitive(gtk_action_group_get_action(priv->action_group, "BrowseNetwork"),
+		gigolo_backend_gvfs_is_scheme_supported("smb"));
 }
 
 

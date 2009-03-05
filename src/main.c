@@ -30,6 +30,7 @@
 
 #include "main.h"
 #include "settings.h"
+#include "bookmark.h"
 #include "window.h"
 #include "backendgvfs.h"
 

@@ -47,6 +47,14 @@ struct _GigoloBackendGVFSClass
 	GObjectClass parent_class;
 };
 
+typedef struct
+{
+	gchar *name;
+	gchar *uri;
+	GIcon *icon;
+} GigoloHostUri;
+
+
 GType				gigolo_backend_gvfs_get_type					(void);
 GigoloBackendGVFS*	gigolo_backend_gvfs_new							(GtkListStore *store);
 
@@ -63,11 +71,19 @@ void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 
 gchar*				gigolo_backend_gvfs_get_volume_identifier		(GVolume *volume);
 
+gchar**				gigolo_backend_gvfs_get_smb_shares_from_uri		(const gchar *uri);
+
 gchar**				gigolo_backend_gvfs_get_smb_shares				(const gchar *hostname,
 																	 const gchar *user,
 																	 const gchar *domain);
 
+GigoloHostUri**		gigolo_backend_gvfs_browse_network				(void);
+
 const gchar *const* gigolo_backend_gvfs_get_supported_uri_schemes	(void);
+
+gboolean			gigolo_backend_gvfs_is_scheme_supported			(const gchar *scheme);
+
+gpointer			gigolo_backend_gvfs_get_share_icon				(void);
 
 G_END_DECLS
 

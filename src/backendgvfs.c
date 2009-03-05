@@ -492,24 +492,16 @@ gchar *gigolo_backend_gvfs_get_volume_identifier(GVolume *volume)
 }
 
 
-gchar **gigolo_backend_gvfs_get_smb_shares(const gchar *hostname, const gchar *user, const gchar *domain)
+gchar **gigolo_backend_gvfs_get_smb_shares_from_uri(const gchar *uri)
 {
 	gchar **shares = NULL;
-	gchar *uri;
 	GList *l, *shares_list = NULL;
 	GFile *file;
 	GFileInfo *info;
 	GError *error = NULL;
 	GFileEnumerator *e;
 
-	g_return_val_if_fail(hostname != NULL, NULL);
-
-	uri = g_strdup_printf("smb://%s%s%s%s%s/",
-		(NZV(domain)) ? domain : "",
-		(NZV(domain)) ? ";" : "",
-		(NZV(user)) ? user : "",
-		(NZV(user) || NZV(domain)) ? "@" : "",
-		hostname);
+	g_return_val_if_fail(uri != NULL, NULL);
 
 	verbose("Querying \"%s\" for available shares", uri);
 
@@ -550,13 +542,119 @@ gchar **gigolo_backend_gvfs_get_smb_shares(const gchar *hostname, const gchar *u
 	}
 
 	g_object_unref(file);
+
+	return shares;
+}
+
+
+gchar **gigolo_backend_gvfs_get_smb_shares(const gchar *hostname, const gchar *user, const gchar *domain)
+{
+	gchar **shares = NULL;
+	gchar *uri;
+
+	g_return_val_if_fail(hostname != NULL, NULL);
+
+	uri = g_strdup_printf("smb://%s%s%s%s%s/",
+		(NZV(domain)) ? domain : "",
+		(NZV(domain)) ? ";" : "",
+		(NZV(user)) ? user : "",
+		(NZV(user) || NZV(domain)) ? "@" : "",
+		hostname);
+
+	shares = gigolo_backend_gvfs_get_smb_shares_from_uri(uri);
 	g_free(uri);
 
 	return shares;
 }
 
 
+GigoloHostUri **gigolo_backend_gvfs_browse_network(void)
+{
+	GigoloHostUri *h, **hosts = NULL;
+	GList *l, *hosts_list = NULL;
+	GFile *file;
+	GFileInfo *info;
+	GError *error = NULL;
+	GFileEnumerator *e;
+
+	file = g_file_new_for_uri("network://");
+
+	e = g_file_enumerate_children(file,
+		G_FILE_ATTRIBUTE_MOUNTABLE_CAN_MOUNT ","
+		G_FILE_ATTRIBUTE_STANDARD_TARGET_URI ","
+		G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME ","
+		G_FILE_ATTRIBUTE_STANDARD_ICON,
+		G_FILE_QUERY_INFO_NONE, NULL, &error);
+
+	if (error != NULL)
+	{
+		verbose("%s: %s", G_STRFUNC, error->message);
+		g_error_free(error);
+	}
+	else
+	{
+		guint i, len;
+		const gchar *uri;
+
+		while ((info = g_file_enumerator_next_file(e, NULL, NULL)) != NULL)
+		{
+			uri = g_file_info_get_attribute_string(info, G_FILE_ATTRIBUTE_STANDARD_TARGET_URI);
+			if (uri != NULL && g_str_has_prefix(uri, "smb://"))
+			{
+				h = g_new(GigoloHostUri, 1);
+				h->name = g_strdup(g_file_info_get_display_name(info));
+				h->uri = g_strdup(uri);
+				h->icon = g_object_ref(g_file_info_get_icon(info));
+				//~ h->icon = g_file_info_get_icon(info);
+				hosts_list = g_list_append(hosts_list, h);
+			}
+			g_object_unref(info);
+		}
+		g_object_unref(e);
+
+		i = 0;
+		len = g_list_length(hosts_list);
+		hosts = g_new(GigoloHostUri*, len + 1);
+
+		for (l = hosts_list; l != NULL; l = g_list_next(l))
+		{
+			hosts[i] = (GigoloHostUri*) l->data;
+			i++;
+		}
+		hosts[i] = NULL;
+		g_list_free(hosts_list);
+	}
+
+	g_object_unref(file);
+
+	return hosts;
+}
+
+
+gpointer gigolo_backend_gvfs_get_share_icon(void)
+{
+	return g_themed_icon_new("folder-remote");
+}
+
+
 const gchar *const *gigolo_backend_gvfs_get_supported_uri_schemes(void)
 {
 	return g_vfs_get_supported_uri_schemes(g_vfs_get_default());
+}
+
+
+gboolean gigolo_backend_gvfs_is_scheme_supported(const gchar *scheme)
+{
+	const gchar *const *schemes = gigolo_backend_gvfs_get_supported_uri_schemes();
+	guint i;
+
+	g_return_val_if_fail(scheme != NULL, FALSE);
+
+	for (i = 0; schemes[i] != NULL; i++)
+	{
+		if (gigolo_str_equal(schemes[i], scheme))
+			return TRUE;
+	}
+
+	return FALSE;
 }

@@ -14,6 +14,7 @@ gigolo_SOURCES = 								\
 	mountoperation.c mountoperation.h			\
 	bookmarkdialog.c bookmarkdialog.h			\
 	bookmarkeditdialog.c bookmarkeditdialog.h	\
+	browsenetworkdialog.c browsenetworkdialog.h	\
 	preferencesdialog.c preferencesdialog.h
 
 
