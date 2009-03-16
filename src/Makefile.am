@@ -15,6 +15,7 @@ gigolo_SOURCES = 								\
 	bookmarkdialog.c bookmarkdialog.h			\
 	bookmarkeditdialog.c bookmarkeditdialog.h	\
 	browsenetworkdialog.c browsenetworkdialog.h	\
+	singleinstance.c singleinstance.h			\
 	preferencesdialog.c preferencesdialog.h
 
 

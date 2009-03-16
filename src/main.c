@@ -33,14 +33,17 @@
 #include "bookmark.h"
 #include "window.h"
 #include "backendgvfs.h"
+#include "singleinstance.h"
 
 
 static gboolean show_version = FALSE;
 static gboolean verbose_mode = FALSE;
 static gboolean list_schemes = FALSE;
+static gboolean new_instance = FALSE;
 
 static GOptionEntry cli_options[] =
 {
+	{ "new-instance", 'i', 0, G_OPTION_ARG_NONE, &new_instance, N_("Ignore running instances, enforce opening a new instance"), NULL },
 	{ "list-schemes", 'l', 0, G_OPTION_ARG_NONE, &list_schemes, N_("Print a list of supported URI schemes"), NULL },
 	{ "verbose", 'v', 0, G_OPTION_ARG_NONE, &verbose_mode, N_("Be verbose"), NULL },
 	{ "version", 'V', 0, G_OPTION_ARG_NONE, &show_version, N_("Show version information"), NULL },
@@ -89,6 +92,7 @@ static void print_supported_schemes(void)
 gint main(gint argc, gchar** argv)
 {
 	GigoloSettings *settings;
+	GigoloSingleInstance *gis = NULL;
 	const gchar *vm_impl;
 	gchar *accel_filename;
 	GOptionContext *context;
@@ -124,6 +128,17 @@ gint main(gint argc, gchar** argv)
 		return EXIT_SUCCESS;
 	}
 
+	if (! new_instance)
+	{
+		gis = gigolo_single_instance_new();
+		if (gigolo_single_instance_is_running(gis))
+		{
+			gigolo_single_instance_present(gis);
+			g_object_unref(gis);
+			exit(0);
+		}
+	}
+
 	verbose("Gigolo %s (GTK+ %u.%u.%u, GLib %u.%u.%u)",
 		VERSION,
 		gtk_major_version, gtk_minor_version, gtk_micro_version,
@@ -142,6 +157,9 @@ gint main(gint argc, gchar** argv)
 	window = gigolo_window_new(settings);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
+	if (gis != NULL)
+		gigolo_single_instance_set_parent(gis, GTK_WINDOW(window));
+
 	if (gigolo_settings_get_boolean(settings, "start-in-systray"))
 		gdk_notify_startup_complete();
 	else
@@ -150,6 +168,8 @@ gint main(gint argc, gchar** argv)
 	gtk_main();
 
 	g_object_unref(settings);
+	if (gis != NULL)
+		g_object_unref(gis);
 
 	gtk_accel_map_save(accel_filename);
 	g_free(accel_filename);

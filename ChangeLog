@@ -1,3 +1,13 @@
+2009-03-17  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * gigolo.1.in, src/Makefile.am, src/main.c, src/singleinstance.c,
+   src/singleinstance.h, wscript:
+   Detect an already running instance and show its window instead of
+   starting a new instance.
+   Add command line option "--new-instance" ("-i") to restore the
+   old behaviour.
+
+
 2009-03-05  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/backendgvfs.c, src/backendgvfs.h, src/bookmarkeditdialog.c,

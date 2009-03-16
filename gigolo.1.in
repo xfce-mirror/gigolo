@@ -1,6 +1,6 @@
 .TH "GIGOLO" "1" "" "gigolo @VERSION@" ""
 .SH "NAME"
-Gigolo \(em a simple frontend to easily connect to remote filesystems with GIO/GVFS
+Gigolo \(em a simple frontend to easily connect to remote filesystems with GIO/GVfs
 .SH "SYNOPSIS"
 .PP
 \fBgigolo\fR [\fBoption\fP]
@@ -13,6 +13,9 @@ bookmarks to such.
 Homepage: http://www.uvena.de/gigolo/
 .SH "OPTIONS"
 If called without any arguments, the Gigolo main window is shown.
+.IP "\fB-i\fP, \fB\-\-new-instance\fP         " 10
+Don't find and show an already running instance of Gigolo, instead
+force opening a new instance.
 .IP "\fB-l\fP, \fB\-\-list-schemes\fP         " 10
 Print a list of supported URI schemes and exit.
 .IP "\fB-v\fP, \fB\-\-verbose\fP         " 10
