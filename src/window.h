@@ -46,14 +46,18 @@ struct _GigoloWindowClass
 	GtkWindowClass parent_class;
 };
 
-GType		gigolo_window_get_type			(void);
-GtkWidget*	gigolo_window_new				(GigoloSettings *settings);
+GType			gigolo_window_get_type				(void);
+GtkWidget*		gigolo_window_new					(GigoloSettings *settings);
 
-void		gigolo_window_update_bookmarks	(GigoloWindow *window);
-gboolean 	gigolo_window_do_autoconnect	(gpointer data);
+void			gigolo_window_update_bookmarks		(GigoloWindow *window);
+gboolean 		gigolo_window_do_autoconnect		(gpointer data);
 
-void		gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark,
-											  gboolean show_dialog);
+void			gigolo_window_mount_from_bookmark	(GigoloWindow *window,
+													 GigoloBookmark *bookmark,
+													 gboolean show_dialog);
+
+GigoloBookmark*	gigolo_window_find_bookmark_by_uri	(GigoloWindow *window, const gchar *uri);
+
 
 G_END_DECLS
 

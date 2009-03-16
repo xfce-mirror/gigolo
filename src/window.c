@@ -244,14 +244,20 @@ static void get_selected_iter(GigoloWindow *window, GtkTreeIter *iter)
 }
 
 
-static GigoloBookmark *get_bookmark_from_uri(GigoloWindow *window, const gchar *uri)
+GigoloBookmark *gigolo_window_find_bookmark_by_uri(GigoloWindow *window, const gchar *uri)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
-	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(priv->settings);
+	GigoloWindowPrivate *priv;
+	GigoloBookmarkList *bml;
 	GigoloBookmark *bm = NULL;
 	gboolean found = FALSE;
 	gchar *tmp_uri;
 	guint i;
+
+	g_return_val_if_fail(window != NULL, FALSE);
+	g_return_val_if_fail(uri != NULL, FALSE);
+
+	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	bml = gigolo_settings_get_bookmarks(priv->settings);
 
 	for (i = 0; i < bml->len && ! found; i++)
 	{
@@ -373,7 +379,7 @@ static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *win
 		{
 			gchar *uri;
 			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
-			bm = get_bookmark_from_uri(window, uri);
+			bm = gigolo_window_find_bookmark_by_uri(window, uri);
 			if (bm != NULL && gigolo_bookmark_get_autoconnect(bm))
 			{	/* we don't want auto-connection to reconnect this bookmark right
 				   after we unmount it. */
@@ -609,7 +615,7 @@ static gboolean iter_is_bookmark(GigoloWindow *window, GtkTreeModel *model, GtkT
 
 		gigolo_backend_gvfs_get_name_and_uri_from_mount(ref, NULL, &uri);
 
-		found = (get_bookmark_from_uri(window, uri) != NULL);
+		found = (gigolo_window_find_bookmark_by_uri(window, uri) != NULL);
 
 		g_free(uri);
 		return found;
@@ -881,7 +887,7 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWin
 
 			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, &name, &uri);
 
-			if (get_bookmark_from_uri(window, uri) == NULL)
+			if (gigolo_window_find_bookmark_by_uri(window, uri) == NULL)
 			{
 				GigoloBookmark *bm = gigolo_bookmark_new_from_uri(name, uri);
 				if (gigolo_bookmark_is_valid(bm))

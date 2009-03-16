@@ -61,7 +61,6 @@ enum
 {
 	COLUMN_NAME,
 	COLUMN_URI,
-	COLUMN_SHARE,
 	COLUMN_ICON,
 	COLUMN_CAN_MOUNT,
 	N_COLUMNS,
@@ -352,16 +351,34 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseN
 	GtkTreeModel *model;
 	GtkTreeIter iter;
 	gboolean set = FALSE;
+	gboolean is_bookmark = FALSE;
 
 	if (selection != NULL && gtk_tree_selection_get_selected(selection, &model, &iter))
 	{
-		gtk_tree_model_get(model, &iter, COLUMN_CAN_MOUNT, &set, -1);
+		gchar *uri, *share;
+		gtk_tree_model_get(model, &iter,
+			COLUMN_CAN_MOUNT, &set,
+			COLUMN_URI, &uri,
+			COLUMN_NAME, &share,
+			-1);
+
+		if (set)
+		{
+			gchar *full_uri = g_strconcat(uri, share, "/", NULL);
+
+			is_bookmark = (gigolo_window_find_bookmark_by_uri(
+								GIGOLO_WINDOW(priv->parent), full_uri) != NULL);
+
+			g_free(full_uri);
+		}
+		g_free(share);
+		g_free(uri);
 	}
 
 	gtk_widget_set_sensitive(priv->button_connect, set);
-	gtk_widget_set_sensitive(priv->button_bookmark, set);
+	gtk_widget_set_sensitive(priv->button_bookmark, set && ! is_bookmark);
 	gtk_widget_set_sensitive(priv->item_connect, set);
-	gtk_widget_set_sensitive(priv->item_bookmark, set);
+	gtk_widget_set_sensitive(priv->item_bookmark, set && ! is_bookmark);
 }
 
 
@@ -376,7 +393,7 @@ static void tree_prepare(GigoloBrowseNetworkDialog *dialog)
 
 	tree = gtk_tree_view_new();
 	store = gtk_tree_store_new(N_COLUMNS,
-		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_ICON, G_TYPE_BOOLEAN);
+		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_ICON, G_TYPE_BOOLEAN);
 
     column = gtk_tree_view_column_new();
 

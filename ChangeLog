@@ -11,6 +11,9 @@
    Network' dialog on parent items.
  * src/bookmarkdialog.c:
    Use a Close button to close the dialog instead of a OK button.
+ * src/browsenetworkdialog.c, src/window.c, src/window.h:
+   Disable the 'Create Bookmark' action in the 'Browse Network' dialog
+   when the selected share is already bookmarked.
 
 
 2009-03-05  Enrico Tröger  <enrico(at)xfce(dot)org>
