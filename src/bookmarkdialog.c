@@ -400,11 +400,11 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	vbox = gigolo_dialog_get_content_area(GTK_DIALOG(dialog));
 	gtk_box_set_spacing(GTK_BOX(vbox), 2);
 
-	gtk_dialog_add_button(GTK_DIALOG(dialog), GTK_STOCK_OK, GTK_RESPONSE_OK);
+	gtk_dialog_add_button(GTK_DIALOG(dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
 
 	gtk_window_set_destroy_with_parent(GTK_WINDOW(dialog), TRUE);
 	gtk_window_set_default_size(GTK_WINDOW(dialog), 550, 350);
-	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
+	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_CLOSE);
 
 	button_add = gtk_button_new_from_stock("gtk-add");
 	g_signal_connect(button_add, "clicked", G_CALLBACK(add_button_click_cb), dialog);

@@ -9,6 +9,8 @@
  * src/browsenetworkdialog.c:
    Disable the Connect and Create Bookmark actions in the 'Browse
    Network' dialog on parent items.
+ * src/bookmarkdialog.c:
+   Use a Close button to close the dialog instead of a OK button.
 
 
 2009-03-05  Enrico Tröger  <enrico(at)xfce(dot)org>
