@@ -605,7 +605,6 @@ GigoloHostUri **gigolo_backend_gvfs_browse_network(void)
 				h->name = g_strdup(g_file_info_get_display_name(info));
 				h->uri = g_strdup(uri);
 				h->icon = g_object_ref(g_file_info_get_icon(info));
-				//~ h->icon = g_file_info_get_icon(info);
 				hosts_list = g_list_append(hosts_list, h);
 			}
 			g_object_unref(info);
