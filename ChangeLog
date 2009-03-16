@@ -6,6 +6,9 @@
    starting a new instance.
    Add command line option "--new-instance" ("-i") to restore the
    old behaviour.
+ * src/browsenetworkdialog.c:
+   Disable the Connect and Create Bookmark actions in the 'Browse
+   Network' dialog on parent items.
 
 
 2009-03-05  Enrico Tröger  <enrico(at)xfce(dot)org>

@@ -63,6 +63,7 @@ enum
 	COLUMN_URI,
 	COLUMN_SHARE,
 	COLUMN_ICON,
+	COLUMN_CAN_MOUNT,
 	N_COLUMNS,
 	ACTION_BOOKMARK,
 	ACTION_CONNECT
@@ -197,6 +198,7 @@ static void gigolo_browse_network_dialog_refresh(GigoloBrowseNetworkDialog *dial
 				COLUMN_URI, hosts[i]->uri,
 				COLUMN_NAME, hosts[i]->name,
 				COLUMN_ICON, hosts[i]->icon,
+				COLUMN_CAN_MOUNT, FALSE,
 				-1);
 
 			if (gigolo_str_equal(hosts[i]->uri, "smb:///"))
@@ -217,6 +219,7 @@ static void gigolo_browse_network_dialog_refresh(GigoloBrowseNetworkDialog *dial
 							COLUMN_NAME, shares[j],
 							COLUMN_URI, hosts[i]->uri,
 							COLUMN_ICON, icon_share,
+							COLUMN_CAN_MOUNT, TRUE,
 							-1);
 					}
 					g_strfreev(shares);
@@ -348,10 +351,12 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseN
 	GigoloBrowseNetworkDialogPrivate *priv = GIGOLO_BROWSE_NETWORK_DIALOG_GET_PRIVATE(dialog);
 	GtkTreeModel *model;
 	GtkTreeIter iter;
-	gboolean set;
+	gboolean set = FALSE;
 
-	set = (selection != NULL && gtk_tree_selection_get_selected(selection, &model, &iter) &&
-		   ! gtk_tree_model_iter_has_child(model, &iter));
+	if (selection != NULL && gtk_tree_selection_get_selected(selection, &model, &iter))
+	{
+		gtk_tree_model_get(model, &iter, COLUMN_CAN_MOUNT, &set, -1);
+	}
 
 	gtk_widget_set_sensitive(priv->button_connect, set);
 	gtk_widget_set_sensitive(priv->button_bookmark, set);
@@ -370,7 +375,8 @@ static void tree_prepare(GigoloBrowseNetworkDialog *dialog)
 	GigoloBrowseNetworkDialogPrivate *priv = GIGOLO_BROWSE_NETWORK_DIALOG_GET_PRIVATE(dialog);
 
 	tree = gtk_tree_view_new();
-	store = gtk_tree_store_new(N_COLUMNS, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_ICON);
+	store = gtk_tree_store_new(N_COLUMNS,
+		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_ICON, G_TYPE_BOOLEAN);
 
     column = gtk_tree_view_column_new();
 
