@@ -7,27 +7,31 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-22 23:40+0100\n"
-"PO-Revision-Date: 2009-02-09 00:29+0100\n"
+"POT-Creation-Date: 2009-03-19 23:05+0100\n"
+"PO-Revision-Date: 2009-03-19 23:08+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:42
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Ignorera körande instanser, tvinga öppnande av en ny instans"
+
+#: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
 msgstr "Skriv ut en lista över URI-scheman som stöds"
 
-#: ../src/main.c:43
+#: ../src/main.c:48
 msgid "Be verbose"
 msgstr "Var informativ"
 
-#: ../src/main.c:44
+#: ../src/main.c:49
 msgid "Show version information"
 msgstr "Visa versionsinformation"
 
-#: ../src/main.c:99
+#: ../src/main.c:105
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- ett enkelt gränssnitt för att enkelt ansluta till fjärrfilsystem"
 
@@ -51,41 +55,41 @@ msgstr "HTTP"
 msgid "SSH"
 msgstr "SSH"
 
-#. TODO find something better
-#: ../src/common.c:84
-msgid "OBEX"
-msgstr "OBEX"
+#: ../src/common.c:83
+msgid "Obex"
+msgstr "Obex"
 
-#: ../src/common.c:86
+#: ../src/common.c:85
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: ../src/common.c:88
+#: ../src/common.c:87
 msgid "WebDAV (secure)"
 msgstr "WebDAV (säker)"
 
-#: ../src/common.c:90
+#: ../src/common.c:89
 msgid "Network"
 msgstr "Nätverk"
 
-#: ../src/common.c:92
+#: ../src/common.c:91
 msgid "Custom Location"
 msgstr "Anpassad plats"
 
-#: ../src/window.c:284
-#, fuzzy, c-format
+#: ../src/window.c:291
+#, c-format
 msgid "Connecting to \"%s\""
-msgstr "Monterar \"%s\""
+msgstr "Ansluter till \"%s\""
 
-#: ../src/window.c:426 ../gigolo.desktop.in.h:1
+#: ../src/window.c:444
+#: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Ett enkelt gränssnitt för att enkelt ansluta till fjärrfilsystem"
 
-#: ../src/window.c:427
+#: ../src/window.c:445
 msgid "Copyright 2008-2009 Enrico Tröger"
-msgstr ""
+msgstr "Copyright 2008-2009 Enrico Tröger"
 
-#: ../src/window.c:430
+#: ../src/window.c:448
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -93,81 +97,103 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>."
 
-#: ../src/window.c:652 ../src/bookmarkeditdialog.c:181
-#: ../src/bookmarkeditdialog.c:199 ../src/bookmarkeditdialog.c:212
-#: ../src/bookmarkeditdialog.c:223 ../src/bookmarkeditdialog.c:234
+#: ../src/window.c:480
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Gigolo kan använda följande protokoll som tillhandahålls av GVfs:"
+
+#: ../src/window.c:709
+#: ../src/bookmarkeditdialog.c:188
+#: ../src/bookmarkeditdialog.c:206
+#: ../src/bookmarkeditdialog.c:219
+#: ../src/bookmarkeditdialog.c:230
+#: ../src/bookmarkeditdialog.c:241
 msgid "Error"
 msgstr "Fel"
 
-#: ../src/window.c:1029
+#: ../src/window.c:1092
 msgid "_File"
 msgstr "_Arkiv"
 
-#: ../src/window.c:1030
+#: ../src/window.c:1093
 msgid "_Edit"
 msgstr "R_edigera"
 
-#: ../src/window.c:1031
+#: ../src/window.c:1094
 msgid "_Actions"
 msgstr "_Åtgärder"
 
-#: ../src/window.c:1032
+#: ../src/window.c:1095
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../src/window.c:1036
+#: ../src/window.c:1099
+#: ../src/browsenetworkdialog.c:437
+#: ../src/browsenetworkdialog.c:480
 msgid "Create _Bookmark"
 msgstr "Skapa _bokmärke"
 
-#: ../src/window.c:1038
+#: ../src/window.c:1101
 msgid "_Edit Bookmarks"
 msgstr "_Redigera bokmärken"
 
-#: ../src/window.c:1039
+#: ../src/window.c:1102
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Öppna bokmärkeshanteraren för att lägga till, redigera eller ta bort "
-"bokmärken"
+msgstr "Öppna bokmärkeshanteraren för att lägga till, redigera eller ta bort bokmärken"
 
-#: ../src/window.c:1043
+#: ../src/window.c:1106
 msgid "Disconnect the selected resource"
 msgstr "Koppla från markerad resurs"
 
-#: ../src/window.c:1045
+#: ../src/window.c:1108
 msgid "Open the selected resource with a file manager"
 msgstr "Öppna markerad resurs med en filhanterare"
 
-#: ../src/window.c:1046
-#, fuzzy
+#: ../src/window.c:1109
 msgid "Copy _URI"
-msgstr "Kopiera URI"
+msgstr "Kopiera _URI"
 
-#: ../src/window.c:1047
+#: ../src/window.c:1110
 msgid "Quit Gigolo"
 msgstr "Avsluta Gigolo"
 
-#: ../src/window.c:1054
+#: ../src/window.c:1111
+msgid "Online Help"
+msgstr "Hjälp på nätet"
+
+#: ../src/window.c:1112
+msgid "Supported Protocols"
+msgstr "Protokoll som stöds"
+
+#: ../src/window.c:1113
+#: ../src/browsenetworkdialog.c:470
+msgid "Browse Network"
+msgstr "Bläddra i nätverk"
+
+#: ../src/window.c:1120
 msgid "_Bookmarks"
 msgstr "_Bokmärken"
 
-#: ../src/window.c:1054
+#: ../src/window.c:1120
 msgid "Choose a bookmark to connect to"
 msgstr "Välj ett bokmärke att ansluta till"
 
-#: ../src/window.c:1125
-#, fuzzy
+#: ../src/window.c:1191
 msgid "Connected"
-msgstr "Anslut"
+msgstr "Ansluten"
 
-#: ../src/window.c:1134 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1200
+#: ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "Tjänstetyp"
 
-#: ../src/window.c:1142 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1208
+#: ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Namn"
 
-#: ../src/window.c:1209 ../src/window.c:1278 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1275
+#: ../src/window.c:1344
+#: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -181,12 +207,8 @@ msgstr "Gigolo behöver flytta din gamla konfigurationskatalog innan start."
 
 #: ../src/settings.c:583
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Din gamla konfigurationskatalog \"%s\" kunde inte flyttas till \"%s\" (%s). "
-"Flytta katalogen manuellt till dess nya plats."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Din gamla konfigurationskatalog \"%s\" kunde inte flyttas till \"%s\" (%s). Flytta katalogen manuellt till dess nya plats."
 
 #: ../src/settings.c:586
 msgid "Warning"
@@ -195,22 +217,6 @@ msgstr "Varning"
 #: ../src/menubuttonaction.c:157
 msgid "Connect"
 msgstr "Anslut"
-
-#: ../src/passworddialog.c:74
-msgid "Authentication information needed"
-msgstr "Autentiseringsinformation behövs"
-
-#: ../src/passworddialog.c:97 ../src/bookmarkeditdialog.c:810
-msgid "_Domain:"
-msgstr "_Domän:"
-
-#: ../src/passworddialog.c:110
-msgid "_Username:"
-msgstr "_Användarnamn:"
-
-#: ../src/passworddialog.c:124
-msgid "_Password:"
-msgstr "_Lösenord:"
 
 #: ../src/bookmarkdialog.c:95
 #, c-format
@@ -231,9 +237,8 @@ msgid "Port"
 msgstr "Port"
 
 #: ../src/bookmarkdialog.c:324
-#, fuzzy
 msgid "Auto-Connect"
-msgstr "Anslut a_utomatiskt"
+msgstr "Anslut automatiskt"
 
 #: ../src/bookmarkdialog.c:332
 msgid "Username"
@@ -247,75 +252,84 @@ msgstr "Annan information"
 msgid "Edit Bookmarks"
 msgstr "Redigera bokmärken"
 
-#: ../src/bookmarkeditdialog.c:182
+#: ../src/bookmarkeditdialog.c:189
 msgid "You must enter a name for the bookmark."
 msgstr "Du måste ange ett namn för bokmärket."
 
-#: ../src/bookmarkeditdialog.c:200
+#: ../src/bookmarkeditdialog.c:207
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr "Det angivna bokmärkesnamnet används redan. Välj ett annat namn."
 
-#: ../src/bookmarkeditdialog.c:213
+#: ../src/bookmarkeditdialog.c:220
 msgid "You must enter a server address or name."
 msgstr "Du måste ange en serveradress eller ett namn."
 
-#: ../src/bookmarkeditdialog.c:224
+#: ../src/bookmarkeditdialog.c:231
 msgid "You must enter a share name."
 msgstr "Du måste ange ett utdelningsnamn."
 
-#: ../src/bookmarkeditdialog.c:235
+#: ../src/bookmarkeditdialog.c:242
 msgid "You must enter a valid URI for the connection."
 msgstr "Du måste ange en giltig URI för anslutningen."
 
-#: ../src/bookmarkeditdialog.c:689
-msgid "Create Bookmark"
-msgstr "Skapa bokmärke"
+#: ../src/bookmarkeditdialog.c:492
+msgid "_Device:"
+msgstr "_Enhet:"
 
-#: ../src/bookmarkeditdialog.c:696
-msgid "Edit Bookmark"
-msgstr "Redigera bokmärke"
-
-#: ../src/bookmarkeditdialog.c:704
-msgid "Connect to Server"
-msgstr "Anslut till server"
-
-#: ../src/bookmarkeditdialog.c:761
-msgid "_Bookmark name:"
-msgstr "_Bokmärkesnamn:"
-
-#: ../src/bookmarkeditdialog.c:769
-msgid "Au_to-Connect"
-msgstr "Anslut a_utomatiskt"
-
-#: ../src/bookmarkeditdialog.c:777
-msgid "Service t_ype:"
-msgstr "Tjänste_typ:"
-
-#: ../src/bookmarkeditdialog.c:800
-msgid "Set the port to 0 to use the default port"
-msgstr "Ställ in porten till 0 för att använda standardporten"
-
-#: ../src/bookmarkeditdialog.c:805
-msgid "_Location (URI):"
-msgstr "_Plats (URI):"
-
-#: ../src/bookmarkeditdialog.c:806
+#: ../src/bookmarkeditdialog.c:494
+#: ../src/bookmarkeditdialog.c:906
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:807
+#: ../src/bookmarkeditdialog.c:749
+msgid "Create Bookmark"
+msgstr "Skapa bokmärke"
+
+#: ../src/bookmarkeditdialog.c:756
+msgid "Edit Bookmark"
+msgstr "Redigera bokmärke"
+
+#: ../src/bookmarkeditdialog.c:764
+msgid "Connect to Server"
+msgstr "Anslut till server"
+
+#: ../src/bookmarkeditdialog.c:860
+msgid "_Bookmark name:"
+msgstr "_Bokmärkesnamn:"
+
+#: ../src/bookmarkeditdialog.c:868
+msgid "Au_to-Connect"
+msgstr "Anslut a_utomatiskt"
+
+#: ../src/bookmarkeditdialog.c:876
+msgid "Service t_ype:"
+msgstr "Tjänste_typ:"
+
+#: ../src/bookmarkeditdialog.c:899
+msgid "Set the port to 0 to use the default port"
+msgstr "Ställ in porten till 0 för att använda standardporten"
+
+#: ../src/bookmarkeditdialog.c:905
+msgid "_Location (URI):"
+msgstr "_Plats (URI):"
+
+#: ../src/bookmarkeditdialog.c:907
 msgid "_User Name:"
 msgstr "_Användarnamn:"
 
-#: ../src/bookmarkeditdialog.c:808
+#: ../src/bookmarkeditdialog.c:908
 msgid "Optional information:"
 msgstr "Valfri information:"
 
-#: ../src/bookmarkeditdialog.c:809
+#: ../src/bookmarkeditdialog.c:909
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:811
+#: ../src/bookmarkeditdialog.c:910
+msgid "_Domain:"
+msgstr "_Domän:"
+
+#: ../src/bookmarkeditdialog.c:911
 msgid "_Share:"
 msgstr "_Utdelning:"
 
@@ -361,41 +375,30 @@ msgstr "_Filhanterare"
 
 #: ../src/preferencesdialog.c:343
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Ange namnet på ett program att använda för att öppna eller visa "
-"monteringspunkter"
+msgstr "Ange namnet på ett program att använda för att öppna eller visa monteringspunkter"
 
 #: ../src/preferencesdialog.c:352
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "Au_tomatiskt anslutningsintervall för bokmärke"
 
 #: ../src/preferencesdialog.c:358
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Hur ofta automatisk anslutning av bokmärken ska provas, i sekunder. Noll "
-"inaktiverar kontrollen."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Hur ofta automatisk anslutning av bokmärken ska provas, i sekunder. Noll inaktiverar kontrollen."
 
 #: ../src/preferencesdialog.c:364
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' "
-"to mount local resources like disks. The Unix based volume manager "
-"implementation can mount such resources directly and also lists other local "
-"devices.\n"
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Implementationen av den HAL-baserade volymhanteraren kräver verktyget "
-"\"gnome-mount\" för att montera lokala resurser såsom diskar. "
-"Implementationen av den Unix-baserade volymhanteraren kan montera sådan "
-"resurser direkt och listar även andra lokala enheter.\n"
+"Implementationen av den HAL-baserade volymhanteraren kräver verktyget \"gnome-mount\" för att montera lokala resurser såsom diskar. Implementationen av den Unix-baserade volymhanteraren kan montera sådan resurser direkt och listar även andra lokala enheter.\n"
 "Om du är osäker, använd den HAL-baserade övervakaren."
 
 #: ../src/preferencesdialog.c:370
 msgid "Use _HAL based volume manager"
 msgstr "Använd _HAL-baserad volymhanterare"
 
-#: ../src/preferencesdialog.c:371 ../src/preferencesdialog.c:379
+#: ../src/preferencesdialog.c:371
+#: ../src/preferencesdialog.c:379
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>Ändring av detta alternativ kräver en omstart av Gigolo.</i>"
 
@@ -420,9 +423,8 @@ msgid "Show status _icon in the Notification Area"
 msgstr "Visa status_ikon i notifieringsytan"
 
 #: ../src/preferencesdialog.c:403
-#, fuzzy
 msgid "Start _minimized in the Notification Area"
-msgstr "Starta minimerad i notifieringsytan"
+msgstr "Starta _minimerad i notifieringsytan"
 
 #: ../src/preferencesdialog.c:409
 msgid "_View Mode"
@@ -449,7 +451,7 @@ msgid "Preferences"
 msgstr "Inställningar"
 
 #: ../src/backendgvfs.c:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
@@ -460,7 +462,7 @@ msgstr ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
-"Monterad: Ja\n"
+"Ansluten: Ja\n"
 "Tjänstetyp: %s"
 
 #: ../src/backendgvfs.c:183
@@ -468,39 +470,44 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix-enhet: %s</b>"
 
-#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
+#: ../src/backendgvfs.c:367
+#: ../src/backendgvfs.c:398
 msgid "unknown"
 msgstr "okänd"
 
-#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
-#, fuzzy, c-format
+#: ../src/backendgvfs.c:371
+#: ../src/backendgvfs.c:448
+#, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Montering av \"%s\" misslyckades."
+msgstr "Anslutning till \"%s\" misslyckades."
 
 #: ../src/backendgvfs.c:402
-#, fuzzy, c-format
+#, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Montering av \"%s\" misslyckades."
+msgstr "Frånkoppling från \"%s\" misslyckades."
 
 #: ../src/mountdialog.c:102
-#, fuzzy
 msgid "Connecting"
-msgstr "Anslut"
+msgstr "Ansluter"
 
+#~ msgid "OBEX"
+#~ msgstr "OBEX"
 #~ msgid "Mounted"
 #~ msgstr "Monterad"
-
+#~ msgid "Authentication information needed"
+#~ msgstr "Autentiseringsinformation behövs"
+#~ msgid "_Username:"
+#~ msgstr "_Användarnamn:"
+#~ msgid "_Password:"
+#~ msgstr "_Lösenord:"
 #~ msgid "Automount"
 #~ msgstr "Montera automatiskt"
-
 #~ msgid "Unmounting of \"%s\" failed."
 #~ msgstr "Avmontering av \"%s\" misslyckades."
-
 #~ msgid "Mounting"
 #~ msgstr "Monterar"
-
 #~ msgid "(not yet implemented)"
 #~ msgstr "(ännu inte implementerat)"
-
 #~ msgid "Secure WebDAV (HTTPS)"
 #~ msgstr "Säker WebDAV (HTTPS)"
+
