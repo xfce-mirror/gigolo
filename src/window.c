@@ -37,7 +37,7 @@
 #include "preferencesdialog.h"
 #include "backendgvfs.h"
 #include "mountdialog.h"
-#include "browsenetworkdialog.h"
+#include "browsenetworkpanel.h"
 #include "main.h"
 
 
@@ -56,8 +56,10 @@ struct _GigoloWindowPrivate
 	GigoloBackendGVFS	*backend_gvfs;
 
 	GtkWidget		*vbox;
-	GtkWidget		*hbox;
+	GtkWidget		*hbox_pane;
+	GtkWidget		*hbox_view;
 
+	GtkWidget		*browse_panel;
 	GtkWidget		*treeview;
 	GtkWidget		*iconview;
 	GtkWidget		*swin_treeview;
@@ -390,17 +392,6 @@ static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *win
 			gigolo_backend_gvfs_unmount_mount(priv->backend_gvfs, mnt);
 		}
 	}
-}
-
-
-static void action_browse_network_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
-{
-	GtkWidget *dialog;
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
-
-	dialog = gigolo_browse_network_dialog_new(GTK_WINDOW(window), priv->settings);
-
-	gtk_widget_show(dialog);
 }
 
 
@@ -923,6 +914,17 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWin
 }
 
 
+static void gigolo_window_show_side_panel(GigoloWindow *window, gboolean show)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+
+	if (show)
+		gtk_widget_show(priv->hbox_pane);
+	else
+		gtk_widget_hide(priv->hbox_pane);
+}
+
+
 static void gigolo_window_show_systray_icon(GigoloWindow *window, gboolean show)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
@@ -964,16 +966,16 @@ static void gigolo_window_set_toolbar_orientation(GigoloWindow *window, gint ori
 	gigolo_toolbar_set_orientation(GTK_TOOLBAR(priv->toolbar), orientation);
 	if (orientation == GTK_ORIENTATION_HORIZONTAL && priv->vbox != gtk_widget_get_parent(priv->toolbar))
 	{
-		gtk_container_remove(GTK_CONTAINER(priv->hbox), priv->toolbar);
+		gtk_container_remove(GTK_CONTAINER(priv->hbox_view), priv->toolbar);
 		gtk_container_add(GTK_CONTAINER(priv->vbox), priv->toolbar);
 		gtk_box_set_child_packing(GTK_BOX(priv->vbox), priv->toolbar, FALSE, FALSE, 0, GTK_PACK_START);
 		gtk_box_reorder_child(GTK_BOX(priv->vbox), priv->toolbar, 1);
 	}
-	else if (orientation == GTK_ORIENTATION_VERTICAL && priv->hbox != gtk_widget_get_parent(priv->toolbar))
+	else if (orientation == GTK_ORIENTATION_VERTICAL && priv->hbox_view != gtk_widget_get_parent(priv->toolbar))
 	{
 		gtk_container_remove(GTK_CONTAINER(priv->vbox), priv->toolbar);
-		gtk_container_add(GTK_CONTAINER(priv->hbox), priv->toolbar);
-		gtk_box_set_child_packing(GTK_BOX(priv->hbox), priv->toolbar, FALSE, FALSE, 0, GTK_PACK_START);
+		gtk_container_add(GTK_CONTAINER(priv->hbox_view), priv->toolbar);
+		gtk_box_set_child_packing(GTK_BOX(priv->hbox_view), priv->toolbar, FALSE, FALSE, 0, GTK_PACK_START);
 	}
 }
 
@@ -982,17 +984,17 @@ static void gigolo_window_set_view_mode(GigoloWindow *window, gint mode)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	if (mode == VIEW_MODE_ICONVIEW && priv->hbox != gtk_widget_get_parent(priv->swin_iconview))
+	if (mode == VIEW_MODE_ICONVIEW && priv->hbox_view != gtk_widget_get_parent(priv->swin_iconview))
 	{
 		gtk_tree_selection_unselect_all(gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview)));
-		gtk_container_remove(GTK_CONTAINER(priv->hbox), priv->swin_treeview);
-		gtk_container_add(GTK_CONTAINER(priv->hbox), priv->swin_iconview);
+		gtk_container_remove(GTK_CONTAINER(priv->hbox_view), priv->swin_treeview);
+		gtk_container_add(GTK_CONTAINER(priv->hbox_view), priv->swin_iconview);
 	}
-	else if (mode == VIEW_MODE_TREEVIEW &&  priv->hbox != gtk_widget_get_parent(priv->swin_treeview))
+	else if (mode == VIEW_MODE_TREEVIEW &&  priv->hbox_view != gtk_widget_get_parent(priv->swin_treeview))
 	{
 		gtk_icon_view_unselect_all(GTK_ICON_VIEW(priv->iconview));
-		gtk_container_remove(GTK_CONTAINER(priv->hbox), priv->swin_iconview);
-		gtk_container_add(GTK_CONTAINER(priv->hbox), priv->swin_treeview);
+		gtk_container_remove(GTK_CONTAINER(priv->hbox_view), priv->swin_iconview);
+		gtk_container_add(GTK_CONTAINER(priv->hbox_view), priv->swin_treeview);
 	}
 }
 
@@ -1024,6 +1026,12 @@ static void gigolo_window_settings_notify_cb(GigoloSettings *settings, GParamSpe
 }
 
 
+static void panel_hide_request_cb(G_GNUC_UNUSED GigoloBrowseNetworkPanel *pnl, GigoloWindow *window)
+{
+	gigolo_window_show_side_panel(window, FALSE);
+}
+
+
 static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 {
 	GError *error = NULL;
@@ -1043,7 +1051,6 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 				"<menuitem action='Connect'/>"
 				"<menuitem action='Disconnect'/>"
 				"<menuitem action='Bookmarks'/>"
-				"<menuitem action='BrowseNetwork'/>"
 				"<separator/>"
 				"<menuitem action='Open'/>"
 				"<menuitem action='CopyURI'/>"
@@ -1079,8 +1086,6 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 			"<toolitem action='Bookmarks'/>"
 			"<toolitem action='Disconnect'/>"
 			"<separator/>"
-			"<toolitem action='BrowseNetwork'/>"
-			"<separator/>"
 			"<toolitem action='EditBookmarks'/>"
 			"<separator/>"
 			"<toolitem action='Open'/>"
@@ -1110,7 +1115,6 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb) },
 		{ "OnlineHelp", GTK_STOCK_HELP, _("Online Help"), NULL, NULL, G_CALLBACK(action_help_cb) },
 		{ "SupportedSchemes", NULL, _("Supported Protocols"), NULL, NULL, G_CALLBACK(action_supported_schemes_cb) },
-		{ "BrowseNetwork", GTK_STOCK_FIND, _("Browse Network"), NULL, NULL, G_CALLBACK(action_browse_network_cb) },
 		{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
 	};
 	const guint entries_n = G_N_ELEMENTS(entries);
@@ -1266,7 +1270,7 @@ static void create_icon_view(GigoloWindow *window)
 
 static void gigolo_window_init(GigoloWindow *window)
 {
-	GtkWidget *menubar;
+	GtkWidget *menubar, *panel_pane;
 	GtkUIManager *ui_manager;
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
@@ -1274,7 +1278,7 @@ static void gigolo_window_init(GigoloWindow *window)
 
 	gtk_window_set_title(GTK_WINDOW(window), _("Gigolo"));
 	gtk_window_set_icon_name(GTK_WINDOW(window), gigolo_get_application_icon_name());
-	gtk_window_set_default_size(GTK_WINDOW(window), 550, 350);
+	gtk_window_set_default_size(GTK_WINDOW(window), 650, 350);
 
 	/* Init liststore */
 	priv->store = gtk_list_store_new(GIGOLO_WINDOW_N_COLUMNS,
@@ -1323,15 +1327,28 @@ static void gigolo_window_init(GigoloWindow *window)
 	priv->action_open = gtk_action_group_get_action(priv->action_group, "Open");
 	priv->action_copyuri = gtk_action_group_get_action(priv->action_group, "CopyURI");
 
+	/* Panel */
+	panel_pane = gtk_hpaned_new();
+	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
+
+	priv->browse_panel = gigolo_browse_network_panel_new(GTK_WINDOW(window));
+	g_signal_connect(priv->browse_panel, "hide-panel", G_CALLBACK(panel_hide_request_cb), window);
+	gtk_widget_show(priv->browse_panel);
+
 	/* Pack the widgets altogether */
 	priv->vbox = gtk_vbox_new(FALSE, 0);
-	priv->hbox = gtk_hbox_new(FALSE, 0);
+	priv->hbox_view = gtk_hbox_new(FALSE, 0);
+	priv->hbox_pane = gtk_hbox_new(FALSE, 0);
+
+	gtk_paned_add1(GTK_PANED(panel_pane), priv->hbox_pane);
+	gtk_paned_add2(GTK_PANED(panel_pane), priv->hbox_view);
+	gtk_box_pack_start(GTK_BOX(priv->hbox_pane), priv->browse_panel, TRUE, TRUE, 0);
 
 	gtk_box_pack_start(GTK_BOX(priv->vbox), menubar, FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(priv->vbox), priv->toolbar, FALSE, FALSE, 0);
 
-	gtk_box_pack_start(GTK_BOX(priv->hbox), priv->swin_iconview, TRUE, TRUE, 0);
-	gtk_box_pack_start(GTK_BOX(priv->vbox), priv->hbox, TRUE, TRUE, 0);
+	gtk_box_pack_start(GTK_BOX(priv->hbox_view), priv->swin_iconview, TRUE, TRUE, 0);
+	gtk_box_pack_start(GTK_BOX(priv->vbox), panel_pane, TRUE, TRUE, 0);
 
 	gtk_container_add(GTK_CONTAINER(window), priv->vbox);
 
@@ -1346,9 +1363,6 @@ static void gigolo_window_init(GigoloWindow *window)
 	g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 
 	g_object_unref(ui_manager);
-
-	gtk_action_set_sensitive(gtk_action_group_get_action(priv->action_group, "BrowseNetwork"),
-		gigolo_backend_gvfs_is_scheme_supported("smb"));
 }
 
 
@@ -1364,6 +1378,9 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	g_signal_connect(settings, "notify", G_CALLBACK(gigolo_window_settings_notify_cb), window);
 
 	g_object_set(priv->action_bookmarks, "settings", settings, NULL);
+	g_object_set(priv->browse_panel, "settings", settings, NULL);
+
+	gigolo_window_show_side_panel(GIGOLO_WINDOW(window), TRUE);
 
 	gigolo_window_show_systray_icon(GIGOLO_WINDOW(window),
 		gigolo_settings_get_boolean(settings, "show-in-systray"));
@@ -1394,5 +1411,3 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 
 	return window;
 }
-
-

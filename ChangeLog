@@ -1,3 +1,11 @@
+2009-03-20  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * po/POTFILES.in, src/browsenetworkpanel.c,
+   src/browsenetworkpanel.h, src/Makefile.am, src/window.c, wscript:
+   Remove the 'Browse Network' dialog and add a side panel instead to
+   show a list of Samba shares/workgroups.
+
+
 2009-03-19  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/browsenetworkdialog.c, src/backendgvfs.c, src/backendgvfs.h:
