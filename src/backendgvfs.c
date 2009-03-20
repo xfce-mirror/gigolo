@@ -528,8 +528,10 @@ gchar **gigolo_backend_gvfs_get_smb_shares_from_uri(const gchar *uri)
 		}
 		g_object_unref(e);
 
-		i = 0;
 		len = g_list_length(shares_list);
+		if (len > 0)
+		{
+			i = 0;
 		shares = g_new(gchar*, len + 1);
 
 		for (l = shares_list; l != NULL; l = g_list_next(l))
@@ -538,6 +540,7 @@ gchar **gigolo_backend_gvfs_get_smb_shares_from_uri(const gchar *uri)
 			i++;
 		}
 		shares[i] = NULL;
+		}
 		g_list_free(shares_list);
 	}
 
@@ -568,7 +571,7 @@ gchar **gigolo_backend_gvfs_get_smb_shares(const gchar *hostname, const gchar *u
 }
 
 
-GigoloHostUri **gigolo_backend_gvfs_browse_network(void)
+GigoloHostUri **gigolo_backend_gvfs_browse_network(const gchar *uri)
 {
 	GigoloHostUri *h, **hosts = NULL;
 	GList *l, *hosts_list = NULL;
@@ -577,7 +580,14 @@ GigoloHostUri **gigolo_backend_gvfs_browse_network(void)
 	GError *error = NULL;
 	GFileEnumerator *e;
 
-	file = g_file_new_for_uri("network://");
+	/* If a uri is passed, we assume this is an URI pointing to a workgroup like
+	 * "smb://WORKGROUP/", if passed NULL, we use "smb://" to search for workgroups */
+	if (uri == NULL)
+		uri = "smb://";
+
+	verbose("Querying \"%s\" for available groups/hosts", uri);
+
+	file = g_file_new_for_uri(uri);
 
 	e = g_file_enumerate_children(file,
 		G_FILE_ATTRIBUTE_MOUNTABLE_CAN_MOUNT ","
@@ -594,16 +604,16 @@ GigoloHostUri **gigolo_backend_gvfs_browse_network(void)
 	else
 	{
 		guint i, len;
-		const gchar *uri;
+		const gchar *h_uri;
 
 		while ((info = g_file_enumerator_next_file(e, NULL, NULL)) != NULL)
 		{
-			uri = g_file_info_get_attribute_string(info, G_FILE_ATTRIBUTE_STANDARD_TARGET_URI);
-			if (uri != NULL && g_str_has_prefix(uri, "smb://"))
+			h_uri = g_file_info_get_attribute_string(info, G_FILE_ATTRIBUTE_STANDARD_TARGET_URI);
+			if (h_uri != NULL && g_str_has_prefix(h_uri, "smb://"))
 			{
 				h = g_new(GigoloHostUri, 1);
 				h->name = g_strdup(g_file_info_get_display_name(info));
-				h->uri = g_strdup(uri);
+				h->uri = g_strdup(h_uri);
 				h->icon = g_object_ref(g_file_info_get_icon(info));
 				hosts_list = g_list_append(hosts_list, h);
 			}
@@ -611,8 +621,10 @@ GigoloHostUri **gigolo_backend_gvfs_browse_network(void)
 		}
 		g_object_unref(e);
 
-		i = 0;
 		len = g_list_length(hosts_list);
+		if (len > 0)
+		{
+			i = 0;
 		hosts = g_new(GigoloHostUri*, len + 1);
 
 		for (l = hosts_list; l != NULL; l = g_list_next(l))
@@ -621,9 +633,9 @@ GigoloHostUri **gigolo_backend_gvfs_browse_network(void)
 			i++;
 		}
 		hosts[i] = NULL;
+		}
 		g_list_free(hosts_list);
 	}
-
 	g_object_unref(file);
 
 	return hosts;
@@ -632,7 +644,10 @@ GigoloHostUri **gigolo_backend_gvfs_browse_network(void)
 
 gpointer gigolo_backend_gvfs_get_share_icon(void)
 {
+	if (gtk_check_version(2, 14, 0) == NULL)
 	return g_themed_icon_new("folder-remote");
+	else
+		return NULL;
 }
 
 

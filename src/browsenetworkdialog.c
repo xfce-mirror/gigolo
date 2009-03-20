@@ -173,26 +173,40 @@ static void button_connect_click_cb(G_GNUC_UNUSED GtkButton *btn, GigoloBrowseNe
 static void gigolo_browse_network_dialog_refresh(GigoloBrowseNetworkDialog *dialog)
 {
 	GigoloBrowseNetworkDialogPrivate *priv = GIGOLO_BROWSE_NETWORK_DIALOG_GET_PRIVATE(dialog);
+	GigoloHostUri **groups;
 	GigoloHostUri **hosts;
+	guint g, i, j;
+	GtkTreeIter iter_group, iter_host, iter_share;
+	gchar **shares;
+	gpointer icon_share = NULL;
 
 	gtk_widget_set_sensitive(priv->button_refresh, FALSE);
 	gtk_tree_store_clear(priv->store);
 
 	/* TODO make this async? */
-	hosts = gigolo_backend_gvfs_browse_network();
-	if (hosts != NULL)
+
+	/* Iterate over workgroups */
+	groups = gigolo_backend_gvfs_browse_network(NULL);
+	if (groups != NULL)
 	{
-		guint i;
-		GtkTreeIter iter_host, iter_share;
-		GtkTreeIter *iter_root = NULL;
-		gpointer icon_share = NULL;
-
-		if (gtk_check_version(2, 14, 0) == NULL)
 			icon_share = gigolo_backend_gvfs_get_share_icon();
+		for (g = 0; groups[g] != NULL; g++)
+		{
+			gtk_tree_store_append(priv->store, &iter_group, NULL);
+			gtk_tree_store_set(priv->store, &iter_group,
+				COLUMN_URI, groups[g]->uri,
+				COLUMN_NAME, groups[g]->name,
+				COLUMN_ICON, groups[g]->icon,
+				COLUMN_CAN_MOUNT, FALSE,
+				-1);
 
+			/* Iterate over hosts */
+			hosts = gigolo_backend_gvfs_browse_network(groups[g]->uri);
+			if (hosts != NULL)
+			{
 		for (i = 0; hosts[i] != NULL; i++)
 		{
-			gtk_tree_store_append(priv->store, &iter_host, iter_root);
+					gtk_tree_store_append(priv->store, &iter_host, &iter_group);
 			gtk_tree_store_set(priv->store, &iter_host,
 				COLUMN_URI, hosts[i]->uri,
 				COLUMN_NAME, hosts[i]->name,
@@ -200,17 +214,10 @@ static void gigolo_browse_network_dialog_refresh(GigoloBrowseNetworkDialog *dial
 				COLUMN_CAN_MOUNT, FALSE,
 				-1);
 
-			if (gigolo_str_equal(hosts[i]->uri, "smb:///"))
-			{	/* Cache the root element("Windows Network") and use it as parent for found hosts. */
-				if (iter_root == NULL)
-					iter_root = gtk_tree_iter_copy(&iter_host);
-			}
-			else
-			{	/* Now we have a host, look for shares. */
-				gchar **shares = gigolo_backend_gvfs_get_smb_shares_from_uri(hosts[i]->uri);
+					/* Iterate over shares */
+					shares = gigolo_backend_gvfs_get_smb_shares_from_uri(hosts[i]->uri);
 				if (shares != NULL)
 				{
-					guint j;
 					for (j = 0; shares[j] != NULL; j++)
 					{
 						gtk_tree_store_append(priv->store, &iter_share, &iter_host);
@@ -222,18 +229,32 @@ static void gigolo_browse_network_dialog_refresh(GigoloBrowseNetworkDialog *dial
 							-1);
 					}
 					g_strfreev(shares);
-				}
-			}
+
 			g_object_unref(hosts[i]->icon);
 			g_free(hosts[i]->uri);
 			g_free(hosts[i]->name);
 			g_free(hosts[i]);
 		}
-		gtk_tree_iter_free(iter_root);
+					else
+						verbose("No shares found for %s", hosts[i]);
+				}
+				g_free(hosts);
+
+				g_object_unref(groups[i]->icon);
+				g_free(groups[i]->uri);
+				g_free(groups[i]->name);
+				g_free(groups[i]);
+			}
+			else
+				verbose("No hosts found for %s", groups[g]);
+		}
+		g_free(groups);
 		if (icon_share !=  NULL)
 			g_object_unref(icon_share);
-		g_free(hosts);
 	}
+	else
+		verbose("No workgroups found");
+
 	gtk_tree_view_expand_all(GTK_TREE_VIEW(priv->tree));
 
 	gdk_window_set_cursor(gigolo_widget_get_window(GTK_WIDGET(dialog)), NULL);

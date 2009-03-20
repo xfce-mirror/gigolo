@@ -77,7 +77,7 @@ gchar**				gigolo_backend_gvfs_get_smb_shares				(const gchar *hostname,
 																	 const gchar *user,
 																	 const gchar *domain);
 
-GigoloHostUri**		gigolo_backend_gvfs_browse_network				(void);
+GigoloHostUri**		gigolo_backend_gvfs_browse_network				(const gchar *uri);
 
 const gchar *const* gigolo_backend_gvfs_get_supported_uri_schemes	(void);
 
