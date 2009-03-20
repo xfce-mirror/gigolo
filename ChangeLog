@@ -4,6 +4,9 @@
    src/browsenetworkpanel.h, src/Makefile.am, src/window.c, wscript:
    Remove the 'Browse Network' dialog and add a side panel instead to
    show a list of Samba shares/workgroups.
+ * src/browsenetworkpanel.c, src/preferencesdialog.c, src/settings.c,
+   src/window.c:
+   Add a preference to show/hide the 'Browse Network' side panel.
 
 
 2009-03-19  Enrico Tröger  <enrico(at)xfce(dot)org>

@@ -74,12 +74,6 @@ enum
     PROP_SETTINGS
 };
 
-enum
-{
-	HIDE_PANEL,
-	LAST_SIGNAL
-};
-static guint signals[LAST_SIGNAL];
 
 
 static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseNetworkPanel *panel);
@@ -128,15 +122,6 @@ static void gigolo_browse_network_panel_class_init(GigoloBrowseNetworkPanelClass
 
 	gigolo_browse_network_panel_parent_class = (GtkVBoxClass*) g_type_class_peek(GTK_TYPE_VBOX);
 	g_type_class_add_private(klass, sizeof(GigoloBrowseNetworkPanelPrivate));
-
-	signals[HIDE_PANEL] = g_signal_new("hide-panel",
-										G_TYPE_FROM_CLASS(klass),
-										(GSignalFlags) 0,
-										0,
-										0,
-										NULL,
-										g_cclosure_marshal_VOID__VOID,
-										G_TYPE_NONE, 0);
 
 	g_object_class_install_property(g_object_class,
 									PROP_SETTINGS,
@@ -340,7 +325,9 @@ static void button_refresh_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrow
 
 static void button_close_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrowseNetworkPanel *panel)
 {
-	g_signal_emit(panel, signals[HIDE_PANEL], 0);
+	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	/* hide the panel by setting the property to FALSE */
+	g_object_set(priv->settings, "show-panel", FALSE, NULL);
 }
 
 

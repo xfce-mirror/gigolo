@@ -918,7 +918,7 @@ static void gigolo_window_show_side_panel(GigoloWindow *window, gboolean show)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	if (show)
+	if (show && gigolo_backend_gvfs_is_scheme_supported("smb"))
 		gtk_widget_show(priv->hbox_pane);
 	else
 		gtk_widget_hide(priv->hbox_pane);
@@ -1019,16 +1019,12 @@ static void gigolo_window_settings_notify_cb(GigoloSettings *settings, GParamSpe
 		gigolo_window_set_toolbar_orientation(window, g_value_get_int(value));
 	else if (name == g_intern_string("view-mode"))
 		gigolo_window_set_view_mode(window, g_value_get_int(value));
+	else if (name == g_intern_string("show-panel"))
+		gigolo_window_show_side_panel(window, g_value_get_boolean(value));
 	else if (! g_object_class_find_property(G_OBJECT_GET_CLASS(settings), name))
 		 verbose("Unexpected setting '%s'", name);
 	g_value_unset(value);
 	g_free(value);
-}
-
-
-static void panel_hide_request_cb(G_GNUC_UNUSED GigoloBrowseNetworkPanel *pnl, GigoloWindow *window)
-{
-	gigolo_window_show_side_panel(window, FALSE);
 }
 
 
@@ -1332,7 +1328,6 @@ static void gigolo_window_init(GigoloWindow *window)
 	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
 
 	priv->browse_panel = gigolo_browse_network_panel_new(GTK_WINDOW(window));
-	g_signal_connect(priv->browse_panel, "hide-panel", G_CALLBACK(panel_hide_request_cb), window);
 	gtk_widget_show(priv->browse_panel);
 
 	/* Pack the widgets altogether */
@@ -1380,8 +1375,6 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	g_object_set(priv->action_bookmarks, "settings", settings, NULL);
 	g_object_set(priv->browse_panel, "settings", settings, NULL);
 
-	gigolo_window_show_side_panel(GIGOLO_WINDOW(window), TRUE);
-
 	gigolo_window_show_systray_icon(GIGOLO_WINDOW(window),
 		gigolo_settings_get_boolean(settings, "show-in-systray"));
 	gigolo_window_show_toolbar(GIGOLO_WINDOW(window),
@@ -1392,6 +1385,8 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 		gigolo_settings_get_integer(settings, "toolbar-orientation"));
 	gigolo_window_set_view_mode(GIGOLO_WINDOW(window),
 		gigolo_settings_get_integer(settings, "view-mode"));
+	gigolo_window_show_side_panel(GIGOLO_WINDOW(window),
+		gigolo_settings_get_integer(settings, "show-panel"));
 
 	if (gigolo_settings_get_boolean(settings, "save-geometry"))
 	{
