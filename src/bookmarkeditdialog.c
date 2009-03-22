@@ -42,7 +42,7 @@ typedef struct _GigoloBookmarkEditDialogPrivate			GigoloBookmarkEditDialogPrivat
 
 struct _GigoloBookmarkEditDialogPrivate
 {
-	GtkWindow *parent;
+	GigoloWindow *parent;
 
 	GtkWidget *table;
 
@@ -947,7 +947,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 }
 
 
-GtkWidget *gigolo_bookmark_edit_dialog_new(GtkWindow *parent, GigoloBookmarkEditDialogMode mode)
+GtkWidget *gigolo_bookmark_edit_dialog_new(GigoloWindow *parent, GigoloBookmarkEditDialogMode mode)
 {
 	GigoloBookmarkEditDialog *dialog = g_object_new(GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
@@ -960,7 +960,7 @@ GtkWidget *gigolo_bookmark_edit_dialog_new(GtkWindow *parent, GigoloBookmarkEdit
 }
 
 
-GtkWidget *gigolo_bookmark_edit_dialog_new_with_bookmark(GtkWindow *parent,
+GtkWidget *gigolo_bookmark_edit_dialog_new_with_bookmark(GigoloWindow *parent,
 		GigoloBookmarkEditDialogMode mode, GigoloBookmark *bookmark)
 {
 	GigoloBookmarkEditDialog *dialog = g_object_new(GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE,

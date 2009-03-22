@@ -41,7 +41,7 @@ typedef struct _GigoloBrowseNetworkPanelPrivate			GigoloBrowseNetworkPanelPrivat
 
 struct _GigoloBrowseNetworkPanelPrivate
 {
-	GtkWindow *parent;
+	GigoloWindow *parent;
 
 	GtkWidget *button_refresh;
 	GtkWidget *button_connect;
@@ -558,7 +558,7 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 }
 
 
-GtkWidget *gigolo_browse_network_panel_new(GtkWindow *parent)
+GtkWidget *gigolo_browse_network_panel_new(GigoloWindow *parent)
 {
 	GtkWidget *self;
 	GigoloBrowseNetworkPanelPrivate *priv;

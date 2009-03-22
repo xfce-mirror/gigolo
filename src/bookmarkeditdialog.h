@@ -55,9 +55,9 @@ struct _GigoloBookmarkEditDialogClass
 };
 
 GType		gigolo_bookmark_edit_dialog_get_type			(void);
-GtkWidget*	gigolo_bookmark_edit_dialog_new					(GtkWindow *parent,
+GtkWidget*	gigolo_bookmark_edit_dialog_new					(GigoloWindow *parent,
 															 GigoloBookmarkEditDialogMode mode);
-GtkWidget*	gigolo_bookmark_edit_dialog_new_with_bookmark	(GtkWindow *parent,
+GtkWidget*	gigolo_bookmark_edit_dialog_new_with_bookmark	(GigoloWindow *parent,
 															 GigoloBookmarkEditDialogMode,
 															 GigoloBookmark *bookmark);
 gint		gigolo_bookmark_edit_dialog_run					(GigoloBookmarkEditDialog *dialog);

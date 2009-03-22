@@ -25,11 +25,11 @@
 
 #include "settings.h"
 #include "bookmark.h"
+#include "window.h"
+#include "compat.h"
+#include "common.h"
 #include "bookmarkdialog.h"
 #include "bookmarkeditdialog.h"
-#include "window.h"
-#include "common.h"
-#include "compat.h"
 
 typedef struct _GigoloBookmarkDialogPrivate			GigoloBookmarkDialogPrivate;
 
@@ -38,7 +38,7 @@ typedef struct _GigoloBookmarkDialogPrivate			GigoloBookmarkDialogPrivate;
 
 struct _GigoloBookmarkDialogPrivate
 {
-	GtkWindow *parent;
+	GigoloWindow *parent;
 
 	GtkWidget *tree;
 	GtkListStore *store;
@@ -437,7 +437,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 }
 
 
-GtkWidget *gigolo_bookmark_dialog_new(GtkWindow *parent)
+GtkWidget *gigolo_bookmark_dialog_new(GigoloWindow *parent)
 {
 	GtkWidget *dialog;
 	GigoloBookmarkDialogPrivate *priv;

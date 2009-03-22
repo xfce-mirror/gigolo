@@ -332,7 +332,7 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 		GigoloBookmark *bm = NULL;
 		GtkWidget *dialog;
 
-		dialog = gigolo_bookmark_edit_dialog_new(GTK_WINDOW(window), GIGOLO_BE_MODE_CONNECT);
+		dialog = gigolo_bookmark_edit_dialog_new(window, GIGOLO_BE_MODE_CONNECT);
 		if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(dialog)) == GTK_RESPONSE_OK)
 		{
 			bm = gigolo_bookmark_new();
@@ -434,7 +434,7 @@ static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindo
 	GtkWidget *dialog;
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	dialog = gigolo_bookmark_dialog_new(GTK_WINDOW(window));
+	dialog = gigolo_bookmark_dialog_new(window);
 
 	gtk_dialog_run(GTK_DIALOG(dialog));
 	gigolo_settings_write(priv->settings, GIGOLO_SETTINGS_BOOKMARKS);
@@ -915,7 +915,7 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWin
 					/* show the bookmark edit dialog and add the bookmark only if it was
 					 * not cancelled */
 					edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(
-						GTK_WINDOW(window), GIGOLO_BE_MODE_EDIT, bm);
+						window, GIGOLO_BE_MODE_EDIT, bm);
 					if (gigolo_bookmark_edit_dialog_run(
 							GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 					{
@@ -1425,7 +1425,7 @@ static void gigolo_window_init(GigoloWindow *window)
 	panel_pane = gtk_hpaned_new();
 	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
 
-	priv->browse_panel = gigolo_browse_network_panel_new(GTK_WINDOW(window));
+	priv->browse_panel = gigolo_browse_network_panel_new(window);
 	gtk_widget_show(priv->browse_panel);
 
 	/* Pack the widgets altogether */

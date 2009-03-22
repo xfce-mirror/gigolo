@@ -49,7 +49,7 @@ struct _GigoloBrowseNetworkPanelClass
 
 
 GType		gigolo_browse_network_panel_get_type	(void);
-GtkWidget*	gigolo_browse_network_panel_new			(GtkWindow *parent);
+GtkWidget*	gigolo_browse_network_panel_new			(GigoloWindow *parent);
 
 G_END_DECLS
 
