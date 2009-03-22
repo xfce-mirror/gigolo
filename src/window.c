@@ -363,6 +363,34 @@ static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow 
 }
 
 
+static void action_toggle_view_cb(GtkToggleAction *action, GigoloWindow *window)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	gboolean active = gtk_toggle_action_get_active(action);
+	const gchar *property = NULL;
+
+	if (gtk_action_get_name(GTK_ACTION(action)) == g_intern_string("ShowPanel"))
+		property = "show-panel";
+	else if (gtk_action_get_name(GTK_ACTION(action)) == g_intern_string("ShowToolbar"))
+		property = "show-toolbar";
+	else if (gtk_action_get_name(GTK_ACTION(action)) == g_intern_string("ShowInSystray"))
+		property = "show-in-systray";
+
+	if (property != NULL)
+		g_object_set(priv->settings, property, active, NULL);
+}
+
+
+static void action_view_mode_change_cb(G_GNUC_UNUSED GtkRadioAction *action,
+									   GtkRadioAction *current, GigoloWindow *window)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	gint mode = gtk_radio_action_get_current_value(current);
+
+	g_object_set(priv->settings, "view-mode", mode, NULL);
+}
+
+
 static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
@@ -998,6 +1026,33 @@ static void gigolo_window_set_view_mode(GigoloWindow *window, gint mode)
 }
 
 
+static void toggle_action_set_active(GigoloWindow *window, const gchar *name, gboolean set)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GtkAction *action = gtk_action_group_get_action(priv->action_group, name);
+
+	gtk_toggle_action_set_active(GTK_TOGGLE_ACTION(action), set);
+}
+
+
+static void view_mode_action_set_active(GigoloWindow *window, gint val)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GtkAction *action = gtk_action_group_get_action(priv->action_group, "ViewSymbols");
+
+	gtk_radio_action_set_current_value(GTK_RADIO_ACTION(action), val);
+}
+
+
+static void action_set_sensitive(GigoloWindow *window, const gchar *name, gboolean set)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GtkAction *action = gtk_action_group_get_action(priv->action_group, name);
+
+	gtk_action_set_sensitive(action, set);
+}
+
+
 static void gigolo_window_settings_notify_cb(GigoloSettings *settings, GParamSpec *pspec, GigoloWindow *window)
 {
 	const gchar *name;
@@ -1009,17 +1064,33 @@ static void gigolo_window_settings_notify_cb(GigoloSettings *settings, GParamSpe
 	g_object_get_property(G_OBJECT(settings), name, value);
 
 	if (name == g_intern_string("show-toolbar"))
-		gigolo_window_show_toolbar(window, g_value_get_boolean(value));
+	{
+		gboolean state = g_value_get_boolean(value);
+		gigolo_window_show_toolbar(window, state);
+		toggle_action_set_active(window, "ShowToolbar", state);
+	}
 	else if (name == g_intern_string("show-in-systray"))
-		gigolo_window_show_systray_icon(window, g_value_get_boolean(value));
+	{
+		gboolean state = g_value_get_boolean(value);
+		gigolo_window_show_systray_icon(window, state);
+		toggle_action_set_active(window, "ShowInSystray", state);
+	}
 	else if (name == g_intern_string("toolbar-style"))
 		gigolo_window_set_toolbar_style(window, g_value_get_int(value));
 	else if (name == g_intern_string("toolbar-orientation"))
 		gigolo_window_set_toolbar_orientation(window, g_value_get_int(value));
 	else if (name == g_intern_string("view-mode"))
-		gigolo_window_set_view_mode(window, g_value_get_int(value));
+	{
+		gint mode = g_value_get_int(value);
+		gigolo_window_set_view_mode(window, mode);
+		view_mode_action_set_active(GIGOLO_WINDOW(window), mode);
+	}
 	else if (name == g_intern_string("show-panel"))
-		gigolo_window_show_side_panel(window, g_value_get_boolean(value));
+	{
+		gboolean state = g_value_get_boolean(value);
+		gigolo_window_show_side_panel(window, state);
+		toggle_action_set_active(window, "ShowPanel", state);
+	}
 	else if (! g_object_class_find_property(G_OBJECT_GET_CLASS(settings), name))
 		 verbose("Unexpected setting '%s'", name);
 	g_value_unset(value);
@@ -1041,6 +1112,14 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 				"<menuitem action='EditBookmarks'/>"
 				"<separator/>"
 				"<menuitem action='Preferences'/>"
+			"</menu>"
+			"<menu action='View'>"
+				"<menuitem action='ShowToolbar'/>"
+				"<menuitem action='ShowPanel'/>"
+				"<menuitem action='ShowInSystray'/>"
+				"<separator/>"
+				"<menuitem action='ViewDetailed'/>"
+				"<menuitem action='ViewSymbols'/>"
 			"</menu>"
 			"<menu action='Actions'>"
 				"<menuitem action='Connect'/>"
@@ -1092,6 +1171,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 		{ "File", NULL, N_("_File"), NULL, NULL, NULL },
 		{ "Edit", NULL, N_("_Edit"), NULL, NULL, NULL },
 		{ "Actions", NULL, N_("_Actions"), NULL, NULL, NULL },
+		{ "View", NULL, N_("_View"), NULL, NULL, NULL },
 		{ "Help", NULL, N_("_Help"), NULL, NULL, NULL },
 		{ "Preferences", GTK_STOCK_PREFERENCES,
 			NULL, "<Ctrl>p", NULL, G_CALLBACK(action_preferences_cb) },
@@ -1114,6 +1194,22 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 	};
 	const guint entries_n = G_N_ELEMENTS(entries);
 
+	const GtkToggleActionEntry toggle_entries[] = {
+		{ "ShowPanel", NULL, N_("Side _Panel"),
+			NULL, NULL, G_CALLBACK(action_toggle_view_cb), FALSE },
+		{ "ShowToolbar", NULL, N_("_Toolbar"),
+			NULL, NULL, G_CALLBACK(action_toggle_view_cb), FALSE },
+		{ "ShowInSystray", NULL, N_("Status _Icon"),
+			NULL, NULL, G_CALLBACK(action_toggle_view_cb), FALSE }
+	};
+	const guint toggle_entries_n = G_N_ELEMENTS(toggle_entries);
+
+	const GtkRadioActionEntry radio_entries[] = {
+		{ "ViewDetailed", NULL, N_("View as _Symbols"), NULL, NULL, 0 },
+		{ "ViewSymbols", NULL, N_("View as _Detailed List"), NULL, NULL, 1 },
+	};
+	const guint radio_entries_n = G_N_ELEMENTS(radio_entries);
+
 
 	priv->action_bookmarks = gigolo_menu_button_action_new(
 		"Bookmarks", _("_Bookmarks"), _("Choose a bookmark to connect to"),
@@ -1125,6 +1221,9 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 	priv->action_group = gtk_action_group_new("UI");
 	gtk_action_group_set_translation_domain(priv->action_group, GETTEXT_PACKAGE);
 	gtk_action_group_add_actions(priv->action_group, entries, entries_n, window);
+	gtk_action_group_add_toggle_actions(priv->action_group, toggle_entries, toggle_entries_n, window);
+	gtk_action_group_add_radio_actions(priv->action_group, radio_entries, radio_entries_n, -1,
+		G_CALLBACK(action_view_mode_change_cb), window);
 	gtk_action_group_add_action(priv->action_group, priv->action_bookmarks);
 	gtk_ui_manager_insert_action_group(ui_manager, priv->action_group, 0);
 	gtk_window_add_accel_group(GTK_WINDOW(window), gtk_ui_manager_get_accel_group(ui_manager));
@@ -1365,6 +1464,8 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	GtkWidget *window;
 	GigoloWindowPrivate *priv;
 	const gint *geo;
+	gboolean state;
+	gint value;
 
 	window = g_object_new(GIGOLO_WINDOW_TYPE, NULL);
 	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
@@ -1373,18 +1474,27 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 
 	g_object_set(priv->action_bookmarks, "settings", settings, NULL);
 
-	gigolo_window_show_systray_icon(GIGOLO_WINDOW(window),
-		gigolo_settings_get_boolean(settings, "show-in-systray"));
-	gigolo_window_show_toolbar(GIGOLO_WINDOW(window),
-		gigolo_settings_get_boolean(settings, "show-toolbar"));
 	gigolo_window_set_toolbar_style(GIGOLO_WINDOW(window),
 		gigolo_settings_get_integer(settings, "toolbar-style"));
 	gigolo_window_set_toolbar_orientation(GIGOLO_WINDOW(window),
 		gigolo_settings_get_integer(settings, "toolbar-orientation"));
-	gigolo_window_set_view_mode(GIGOLO_WINDOW(window),
-		gigolo_settings_get_integer(settings, "view-mode"));
-	gigolo_window_show_side_panel(GIGOLO_WINDOW(window),
-		gigolo_settings_get_integer(settings, "show-panel"));
+	/* Show Panel */
+	state = gigolo_settings_get_boolean(settings, "show-panel");
+	gigolo_window_show_side_panel(GIGOLO_WINDOW(window), state);
+	toggle_action_set_active(GIGOLO_WINDOW(window), "ShowPanel", state);
+	action_set_sensitive(GIGOLO_WINDOW(window), "ShowPanel", gigolo_backend_gvfs_is_scheme_supported("smb"));
+	/* Show Toolbar */
+	state = gigolo_settings_get_boolean(settings, "show-toolbar");
+	gigolo_window_show_toolbar(GIGOLO_WINDOW(window), state);
+	toggle_action_set_active(GIGOLO_WINDOW(window), "ShowToolbar", state);
+	/* Show Status Icon */
+	state = gigolo_settings_get_boolean(settings, "show-in-systray");
+	gigolo_window_show_systray_icon(GIGOLO_WINDOW(window), state);
+	toggle_action_set_active(GIGOLO_WINDOW(window), "ShowInSystray", state);
+	/* View Mode */
+	value = gigolo_settings_get_integer(settings, "view-mode");
+	gigolo_window_set_view_mode(GIGOLO_WINDOW(window), value);
+	view_mode_action_set_active(GIGOLO_WINDOW(window), value);
 
 	if (gigolo_settings_get_boolean(settings, "save-geometry"))
 	{

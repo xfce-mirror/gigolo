@@ -5,6 +5,8 @@
    src/preferencesdialog.c, src/window.c, src/window.h:
    Add gigolo_window_get_settings() to not have to pass the settings
    object to so many other classes.
+ * src/window.c:
+   Add a View menu to quickly change GUI preferences.
 
 
 2009-03-20  Enrico Tröger  <enrico(at)xfce(dot)org>
