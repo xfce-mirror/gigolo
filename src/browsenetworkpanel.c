@@ -42,7 +42,6 @@ typedef struct _GigoloBrowseNetworkPanelPrivate			GigoloBrowseNetworkPanelPrivat
 struct _GigoloBrowseNetworkPanelPrivate
 {
 	GtkWindow *parent;
-	GigoloSettings *settings;
 
 	GtkWidget *button_refresh;
 	GtkWidget *button_connect;
@@ -68,12 +67,6 @@ enum
 	ACTION_CONNECT
 };
 
-enum
-{
-    PROP_0,
-    PROP_SETTINGS
-};
-
 
 
 static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseNetworkPanel *panel);
@@ -93,44 +86,15 @@ static void gigolo_browse_network_panel_finalize(GObject *object)
 }
 
 
-static void gigolo_browse_network_panel_set_property(GObject *object, guint prop_id,
-													 const GValue *value, GParamSpec *pspec)
-{
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(object);
-
-	switch (prop_id)
-	{
-	case PROP_SETTINGS:
-	{
-		priv->settings = g_value_get_object(value);
-		break;
-	}
-	default:
-		G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
-		break;
-	}
-}
-
-
 static void gigolo_browse_network_panel_class_init(GigoloBrowseNetworkPanelClass *klass)
 {
 	GObjectClass *g_object_class;
 
 	g_object_class = G_OBJECT_CLASS(klass);
 	g_object_class->finalize = gigolo_browse_network_panel_finalize;
-	g_object_class->set_property = gigolo_browse_network_panel_set_property;
 
 	gigolo_browse_network_panel_parent_class = (GtkVBoxClass*) g_type_class_peek(GTK_TYPE_VBOX);
 	g_type_class_add_private(klass, sizeof(GigoloBrowseNetworkPanelPrivate));
-
-	g_object_class_install_property(g_object_class,
-									PROP_SETTINGS,
-									g_param_spec_object(
-									"settings",
-									"Settings",
-									"Settings instance to provide properties",
-									GIGOLO_SETTINGS_TYPE,
-									G_PARAM_WRITABLE));
 }
 
 
@@ -157,7 +121,7 @@ static void mount_share(GigoloBrowseNetworkPanel *panel, GigoloBookmarkEditDialo
 			GtkWidget *edit_dialog;
 
 			edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(
-				GTK_WINDOW(priv->parent), priv->settings, mode, bm);
+				GTK_WINDOW(priv->parent), mode, bm);
 
 			if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 			{
@@ -170,9 +134,10 @@ static void mount_share(GigoloBrowseNetworkPanel *panel, GigoloBookmarkEditDialo
 				}
 				else
 				{
-					g_ptr_array_add(gigolo_settings_get_bookmarks(priv->settings), g_object_ref(bm));
+					GigoloSettings *settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
+					g_ptr_array_add(gigolo_settings_get_bookmarks(settings), g_object_ref(bm));
 					gigolo_window_update_bookmarks(GIGOLO_WINDOW(priv->parent));
-					gigolo_settings_write(priv->settings, GIGOLO_SETTINGS_BOOKMARKS);
+					gigolo_settings_write(settings, GIGOLO_SETTINGS_BOOKMARKS);
 
 					tree_selection_changed_cb(NULL, panel);
 				}
@@ -326,8 +291,9 @@ static void button_refresh_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrow
 static void button_close_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrowseNetworkPanel *panel)
 {
 	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	GigoloSettings *settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
 	/* hide the panel by setting the property to FALSE */
-	g_object_set(priv->settings, "show-panel", FALSE, NULL);
+	g_object_set(settings, "show-panel", FALSE, NULL);
 }
 
 

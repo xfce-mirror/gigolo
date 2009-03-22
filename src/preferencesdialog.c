@@ -522,7 +522,6 @@ GtkWidget *gigolo_preferences_dialog_new(GtkWindow *parent, GigoloSettings *sett
 		"settings", settings,
 		NULL);
 
-
 	return dialog;
 }
 

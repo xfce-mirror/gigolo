@@ -30,6 +30,7 @@
 #include "compat.h"
 #include "settings.h"
 #include "bookmark.h"
+#include "window.h"
 #include "backendgvfs.h"
 #include "bookmarkeditdialog.h"
 
@@ -41,7 +42,7 @@ typedef struct _GigoloBookmarkEditDialogPrivate			GigoloBookmarkEditDialogPrivat
 
 struct _GigoloBookmarkEditDialogPrivate
 {
-	GigoloSettings *settings;
+	GtkWindow *parent;
 
 	GtkWidget *table;
 
@@ -191,7 +192,8 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 				}
 				else
 				{	/* check for duplicate bookmark names */
-					GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(priv->settings);
+					GigoloSettings *settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
+					GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(settings);
 					GigoloBookmark *bm;
 					guint i;
 
@@ -945,22 +947,21 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 }
 
 
-GtkWidget *gigolo_bookmark_edit_dialog_new(GtkWindow *parent,
-		GigoloSettings *settings, GigoloBookmarkEditDialogMode mode)
+GtkWidget *gigolo_bookmark_edit_dialog_new(GtkWindow *parent, GigoloBookmarkEditDialogMode mode)
 {
 	GigoloBookmarkEditDialog *dialog = g_object_new(GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
 		"mode", mode,
 		NULL);
 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
-	priv->settings = settings;
+	priv->parent = parent;
 
 	return GTK_WIDGET(dialog);
 }
 
 
 GtkWidget *gigolo_bookmark_edit_dialog_new_with_bookmark(GtkWindow *parent,
-		GigoloSettings *settings, GigoloBookmarkEditDialogMode mode, GigoloBookmark *bookmark)
+		GigoloBookmarkEditDialogMode mode, GigoloBookmark *bookmark)
 {
 	GigoloBookmarkEditDialog *dialog = g_object_new(GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
@@ -968,7 +969,7 @@ GtkWidget *gigolo_bookmark_edit_dialog_new_with_bookmark(GtkWindow *parent,
 		"mode", mode,
 		NULL);
 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
-	priv->settings = settings;
+	priv->parent = parent;
 
 	return GTK_WIDGET(dialog);
 }

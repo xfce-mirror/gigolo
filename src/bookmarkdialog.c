@@ -38,8 +38,6 @@ typedef struct _GigoloBookmarkDialogPrivate			GigoloBookmarkDialogPrivate;
 
 struct _GigoloBookmarkDialogPrivate
 {
-	GigoloSettings *settings;
-
 	GtkWindow *parent;
 
 	GtkWidget *tree;
@@ -117,18 +115,19 @@ static void update_row_in_model(GigoloBookmarkDialog *dialog, GtkTreeIter *iter,
 static void add_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWindow *dialog)
 {
 	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
-	GtkWidget *edit_dialog = gigolo_bookmark_edit_dialog_new(dialog, priv->settings, GIGOLO_BE_MODE_CREATE);
+	GtkWidget *edit_dialog = gigolo_bookmark_edit_dialog_new(dialog, GIGOLO_BE_MODE_CREATE);
 	GigoloBookmark *bm = NULL;
 
 	if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 	{
 		GtkTreeIter iter;
+		GigoloSettings *settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
 
 		bm = gigolo_bookmark_new();
 		/* this fills the values of the dialog into 'bm' */
 		g_object_set(edit_dialog, "bookmark-update", bm, NULL);
 
-		g_ptr_array_add(gigolo_settings_get_bookmarks(priv->settings), bm);
+		g_ptr_array_add(gigolo_settings_get_bookmarks(settings), bm);
 		gtk_list_store_append(priv->store, &iter);
 
 		update_row_in_model(GIGOLO_BOOKMARK_DIALOG(dialog), &iter, bm);
@@ -156,8 +155,7 @@ static void edit_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWindow *dia
 
 	gtk_tree_model_get(GTK_TREE_MODEL(priv->store), &iter, COL_BMREF, &bm, -1);
 
-	edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(dialog,
-		priv->settings, GIGOLO_BE_MODE_EDIT, bm);
+	edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(dialog, GIGOLO_BE_MODE_EDIT, bm);
 	if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 	{
 		/* this fills the values of the dialog into 'bm' */
@@ -177,7 +175,8 @@ static void delete_button_click_cb(G_GNUC_UNUSED GtkButton *button, gpointer use
 	GtkTreeIter iter;
 	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(user_data);
 	GigoloBookmark *bm;
-	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(priv->settings);
+	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(
+		gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent)));
 
 	treesel = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->tree));
 
@@ -199,7 +198,8 @@ static void tree_fill(GigoloBookmarkDialog *dialog)
 	guint i;
 	GigoloBookmark *bm;
 	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
-	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(priv->settings);
+	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(
+		gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent)));
 	GtkTreeIter iter;
 
 	for (i = 0; i < bml->len; i++)
@@ -437,7 +437,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 }
 
 
-GtkWidget *gigolo_bookmark_dialog_new(GtkWindow *parent, GigoloSettings *settings)
+GtkWidget *gigolo_bookmark_dialog_new(GtkWindow *parent)
 {
 	GtkWidget *dialog;
 	GigoloBookmarkDialogPrivate *priv;
@@ -445,7 +445,6 @@ GtkWidget *gigolo_bookmark_dialog_new(GtkWindow *parent, GigoloSettings *setting
 	dialog = g_object_new(GIGOLO_BOOKMARK_DIALOG_TYPE, "transient-for", parent, NULL);
 	priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
 
-	priv->settings = settings;
 	priv->parent = parent;
 
 	tree_fill(GIGOLO_BOOKMARK_DIALOG(dialog));

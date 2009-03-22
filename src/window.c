@@ -332,8 +332,7 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 		GigoloBookmark *bm = NULL;
 		GtkWidget *dialog;
 
-		dialog = gigolo_bookmark_edit_dialog_new(GTK_WINDOW(window),
-			priv->settings, GIGOLO_BE_MODE_CONNECT);
+		dialog = gigolo_bookmark_edit_dialog_new(GTK_WINDOW(window), GIGOLO_BE_MODE_CONNECT);
 		if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(dialog)) == GTK_RESPONSE_OK)
 		{
 			bm = gigolo_bookmark_new();
@@ -407,7 +406,7 @@ static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindo
 	GtkWidget *dialog;
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	dialog = gigolo_bookmark_dialog_new(GTK_WINDOW(window), priv->settings);
+	dialog = gigolo_bookmark_dialog_new(GTK_WINDOW(window));
 
 	gtk_dialog_run(GTK_DIALOG(dialog));
 	gigolo_settings_write(priv->settings, GIGOLO_SETTINGS_BOOKMARKS);
@@ -888,7 +887,7 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWin
 					/* show the bookmark edit dialog and add the bookmark only if it was
 					 * not cancelled */
 					edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(
-						GTK_WINDOW(window), priv->settings, GIGOLO_BE_MODE_EDIT, bm);
+						GTK_WINDOW(window), GIGOLO_BE_MODE_EDIT, bm);
 					if (gigolo_bookmark_edit_dialog_run(
 							GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 					{
@@ -1373,7 +1372,6 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	g_signal_connect(settings, "notify", G_CALLBACK(gigolo_window_settings_notify_cb), window);
 
 	g_object_set(priv->action_bookmarks, "settings", settings, NULL);
-	g_object_set(priv->browse_panel, "settings", settings, NULL);
 
 	gigolo_window_show_systray_icon(GIGOLO_WINDOW(window),
 		gigolo_settings_get_boolean(settings, "show-in-systray"));
@@ -1406,3 +1404,17 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 
 	return window;
 }
+
+
+GigoloSettings *gigolo_window_get_settings(GigoloWindow *window)
+{
+	GigoloWindowPrivate *priv;
+
+	g_return_val_if_fail(window != NULL, NULL);
+
+	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+
+	return priv->settings;
+}
+
+

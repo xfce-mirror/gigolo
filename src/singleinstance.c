@@ -140,7 +140,8 @@ static void gigolo_single_instance_finalize(GObject *object)
 }
 
 
-static gboolean message_received(GtkWidget *w, GdkEventClient *ev, GigoloSingleInstance *gis)
+static gboolean message_received(G_GNUC_UNUSED GtkWidget *widget,
+								 GdkEventClient *ev, GigoloSingleInstance *gis)
 {
 	if (ev->data_format == 8 && gigolo_str_equal(ev->data.b, GIGOLO_SI_CMD))
 	{
@@ -261,7 +262,8 @@ void gigolo_single_instance_present(GigoloSingleInstance *gis)
 /* When creating a new object of this class we search an already running instance of Gigolo
  * and in case we found one, we set the 'found_instance' member to TRUE.
  * Otherwise, we register ourselves as new single running instance. */
-GigoloSingleInstance *gigolo_single_instance_new(void)
+GigoloSingleInstance *
+gigolo_single_instance_new(void)
 {
 	GigoloSingleInstance *gis = g_object_new(GIGOLO_SINGLE_INSTANCE_TYPE, NULL);
 	GigoloSingleInstancePrivate *priv = GIGOLO_SINGLE_INSTANCE_GET_PRIVATE(gis);

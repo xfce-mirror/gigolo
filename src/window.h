@@ -58,6 +58,7 @@ void			gigolo_window_mount_from_bookmark	(GigoloWindow *window,
 
 GigoloBookmark*	gigolo_window_find_bookmark_by_uri	(GigoloWindow *window, const gchar *uri);
 
+GigoloSettings*	gigolo_window_get_settings			(GigoloWindow *window);
 
 G_END_DECLS
 

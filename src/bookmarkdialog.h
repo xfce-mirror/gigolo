@@ -47,7 +47,7 @@ struct _GigoloBookmarkDialogClass
 };
 
 GType		gigolo_bookmark_dialog_get_type		(void);
-GtkWidget*	gigolo_bookmark_dialog_new			(GtkWindow *parent, GigoloSettings *settings);
+GtkWidget*	gigolo_bookmark_dialog_new			(GtkWindow *parent);
 
 G_END_DECLS
 
