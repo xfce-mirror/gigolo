@@ -7,6 +7,9 @@
    object to so many other classes.
  * src/window.c:
    Add a View menu to quickly change GUI preferences.
+ * src/main.c, src/preferencesdialog.c:
+   Disable the 'Start Minimized' checkbox when showing the Status Icon
+   is disabled to prevent a window-less process.
 
 
 2009-03-20  Enrico Tröger  <enrico(at)xfce(dot)org>

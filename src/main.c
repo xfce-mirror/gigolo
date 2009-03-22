@@ -160,8 +160,11 @@ gint main(gint argc, gchar** argv)
 	if (gis != NULL)
 		gigolo_single_instance_set_parent(gis, GTK_WINDOW(window));
 
-	if (gigolo_settings_get_boolean(settings, "start-in-systray"))
+	if (gigolo_settings_get_boolean(settings, "start-in-systray") &&
+		gigolo_settings_get_boolean(settings, "show-in-systray"))
+	{
 		gdk_notify_startup_complete();
+	}
 	else
 		gtk_widget_show(window);
 

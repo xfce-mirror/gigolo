@@ -99,6 +99,14 @@ static void check_button_toggle_cb(GtkToggleButton *button, GigoloSettings *sett
 }
 
 
+static void check_button_toggle_sensitive_cb(GtkToggleButton *button, GtkWidget *widget)
+{
+    gboolean toggled = gtk_toggle_button_get_active(button);
+
+	gtk_widget_set_sensitive(widget, toggled);
+}
+
+
 static void check_toolbar_show_toggle_cb(GtkToggleButton *button, G_GNUC_UNUSED gpointer data)
 {
     gboolean toggled = gtk_toggle_button_get_active(button);
@@ -302,7 +310,7 @@ static GtkWidget *add_spinbutton(GigoloSettings *settings, const gchar *property
 static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settings)
 {
 	GtkWidget *frame_vbox, *notebook_vbox, *vbox, *hbox, *notebook;
-	GtkWidget *radio1, *radio2, *checkbox, *combo, *entry, *combo_toolbar_style;
+	GtkWidget *radio1, *radio2, *checkbox, *combo, *entry, *combo_toolbar_style, *tmp_box;
 	GtkWidget *combo_toolbar_orient, *spinbutton;
 	GtkWidget *label1, *label2, *label3, *label4, *label_volman, *image;
 	GSList *rlist;
@@ -398,11 +406,13 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_widget_set_tooltip_text(checkbox, _("Saves the window position and geometry and restores it at the start"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
-	checkbox = add_check_button(settings, "show-in-systray", _("Show status _icon in the Notification Area"));
+	tmp_box = checkbox = add_check_button(settings, "show-in-systray", _("Show status _icon in the Notification Area"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
 	checkbox = add_check_button(settings, "start-in-systray", _("Start _minimized in the Notification Area"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+	g_signal_connect(tmp_box, "toggled", G_CALLBACK(check_button_toggle_sensitive_cb), checkbox);
+	check_button_toggle_sensitive_cb(GTK_TOGGLE_BUTTON(tmp_box), checkbox);
 
 	checkbox = add_check_button(settings, "show-panel", _("Show 'Browse Network' side panel"));
 	gtk_widget_set_tooltip_text(checkbox, _("Whether to show a side panel for browsing the local network for available Samba shares"));
