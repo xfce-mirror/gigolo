@@ -115,7 +115,7 @@ static void update_row_in_model(GigoloBookmarkDialog *dialog, GtkTreeIter *iter,
 static void add_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWindow *dialog)
 {
 	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
-	GtkWidget *edit_dialog = gigolo_bookmark_edit_dialog_new(dialog, GIGOLO_BE_MODE_CREATE);
+	GtkWidget *edit_dialog = gigolo_bookmark_edit_dialog_new(priv->parent, GIGOLO_BE_MODE_CREATE);
 	GigoloBookmark *bm = NULL;
 
 	if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
@@ -155,7 +155,7 @@ static void edit_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWindow *dia
 
 	gtk_tree_model_get(GTK_TREE_MODEL(priv->store), &iter, COL_BMREF, &bm, -1);
 
-	edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(dialog, GIGOLO_BE_MODE_EDIT, bm);
+	edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(priv->parent, GIGOLO_BE_MODE_EDIT, bm);
 	if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 	{
 		/* this fills the values of the dialog into 'bm' */

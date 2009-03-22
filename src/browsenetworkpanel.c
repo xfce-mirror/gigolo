@@ -120,8 +120,7 @@ static void mount_share(GigoloBrowseNetworkPanel *panel, GigoloBookmarkEditDialo
 		{
 			GtkWidget *edit_dialog;
 
-			edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(
-				GTK_WINDOW(priv->parent), mode, bm);
+			edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(priv->parent, mode, bm);
 
 			if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
 			{
