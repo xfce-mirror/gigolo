@@ -98,7 +98,7 @@ static void gigolo_bookmark_finalize(GObject *object)
 
 static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 {
-	gchar *s, *t, *x, *end;
+	gchar *s, *t, *x, *end, *tmp;
 	guint l;
 	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bm);
 
@@ -139,14 +139,25 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 			bookmark_clear(bm);
 			return FALSE;
 		}
-		priv->user = g_strndup(s, l);
+		tmp = g_strndup(s, l);
+		/* look for a domain in the username, e.g. "mydomain;myuser" */
+		if (strchr(tmp, ';') != NULL)
+		{
+			gchar **fields = g_strsplit(tmp, ";", 2);
+			priv->domain = fields[0];
+			priv->user = fields[1];
+
+			g_free(fields); /* we free only the array, not the elements */
+		}
+		else
+			priv->user = tmp;
 	}
 
 	/* find hostname */
 	s = (t) ? t + 1 : s;
 	if (*s == '[') /* obex://[00:12:D1:94:1B:28]/ or http://[1080:0:0:0:8:800:200C:417A]/index.html */
 	{
-		gchar *hostend, *tmp;
+		gchar *hostend;
 
 		s++; /* skip the found '[' */
 		hostend = strchr(s, ']');
@@ -184,8 +195,6 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 	t = strchr(s, ':');
 	if (t != NULL)
 	{
-		gchar *tmp;
-
 		t++; /* skip the found ':' */
 		l = 0;
 		x = t;
@@ -200,8 +209,19 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 		priv->port = (guint) atoi(tmp);
 		g_free(tmp);
 	}
-	if (NZV(end))
-		priv->share = g_strdup(end + 1);
+	if (NZV(end) && *end == '/')
+	{
+		end++; /* skip the slash */
+
+		l = 0;
+		x = end;
+		while (*x != '\0' && *x != '/')
+		{
+			l++; /* count the len of the share name */
+			x++;
+		}
+		priv->share = g_strndup(end, l);
+	}
 
 	return TRUE;
 }

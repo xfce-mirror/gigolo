@@ -5,6 +5,10 @@
    GIO_USE_VOLUME_MONITOR is set and if so, use its value as default.
  * src/backendgvfs.c:
    Don't show error message dialog when auto-connecting bookmarks.
+ * src/bookmark.c:
+   Improve extracting the share name of an URI.
+   Extract also domain names from usernames (e.g.
+   "smb://mydomain;myusername@host/share").
 
 
 2009-03-22  Enrico Tröger  <enrico(at)xfce(dot)org>

@@ -155,7 +155,7 @@ gint main(gint argc, gchar** argv)
 		g_setenv("GIO_USE_VOLUME_MONITOR", vm_impl, 0);
 
 	window = gigolo_window_new(settings);
-    g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
+	g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
 	if (gis != NULL)
 		gigolo_single_instance_set_parent(gis, GTK_WINDOW(window));
