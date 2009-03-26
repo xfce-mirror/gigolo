@@ -26,7 +26,6 @@
 #include "common.h"
 #include "backendgvfs.h"
 #include "mountoperation.h"
-#include "main.h"
 
 typedef struct _GigoloBackendGVFSPrivate			GigoloBackendGVFSPrivate;
 

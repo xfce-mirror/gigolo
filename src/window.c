@@ -38,7 +38,6 @@
 #include "backendgvfs.h"
 #include "mountdialog.h"
 #include "browsenetworkpanel.h"
-#include "main.h"
 
 
 typedef struct _GigoloWindowPrivate			GigoloWindowPrivate;

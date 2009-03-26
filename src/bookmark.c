@@ -25,7 +25,6 @@
 
 #include "bookmark.h"
 #include "common.h"
-#include "main.h"
 
 
 typedef struct _GigoloBookmarkPrivate			GigoloBookmarkPrivate;
@@ -53,9 +52,9 @@ static void gigolo_bookmark_finalize  		(GObject *object);
 G_DEFINE_TYPE(GigoloBookmark, gigolo_bookmark, G_TYPE_OBJECT);
 
 
-static void bookmark_clear(GigoloBookmark *self)
+void gigolo_bookmark_bookmark_clear(GigoloBookmark *bookmark)
 {
-	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(self);
+	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	g_free(priv->name);
 	g_free(priv->scheme);
@@ -90,17 +89,17 @@ static void gigolo_bookmark_class_init(GigoloBookmarkClass *klass)
 
 static void gigolo_bookmark_finalize(GObject *object)
 {
-	bookmark_clear(GIGOLO_BOOKMARK(object));
+	gigolo_bookmark_bookmark_clear(GIGOLO_BOOKMARK(object));
 
 	G_OBJECT_CLASS(gigolo_bookmark_parent_class)->finalize(object);
 }
 
 
-static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
+gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 {
 	gchar *s, *t, *x, *end, *tmp;
 	guint l;
-	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bm);
+	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	priv->scheme = g_uri_parse_scheme(uri);
 
@@ -108,7 +107,7 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 	if (priv->scheme == NULL || s == NULL)
 	{
 		verbose("Error parsing URI '%s' while reading URI scheme", uri);
-		bookmark_clear(bm);
+		gigolo_bookmark_bookmark_clear(bookmark);
 		return FALSE;
 	}
 	s += 3;
@@ -136,7 +135,7 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 		if (l == 0)
 		{
 			verbose("Error parsing URI '%s' while reading username", uri);
-			bookmark_clear(bm);
+			gigolo_bookmark_bookmark_clear(bookmark);
 			return FALSE;
 		}
 		tmp = g_strndup(s, l);
@@ -164,7 +163,7 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 		if (! hostend || hostend > end)
 		{
 			verbose("Error parsing URI '%s', missing ']'", uri);
-			bookmark_clear(bm);
+			gigolo_bookmark_bookmark_clear(bookmark);
 			return FALSE;
 		}
 		l = 0;
@@ -209,7 +208,7 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 		priv->port = (guint) atoi(tmp);
 		g_free(tmp);
 	}
-	if (NZV(end) && *end == '/')
+	if (NZV(end) && *end == '/' && gigolo_str_equal("smb", priv->scheme))
 	{
 		end++; /* skip the slash */
 
@@ -229,7 +228,7 @@ static gboolean parse_uri(GigoloBookmark *bm, const gchar *uri)
 
 static void gigolo_bookmark_init(GigoloBookmark *self)
 {
-	bookmark_clear(self);
+	gigolo_bookmark_bookmark_clear(self);
 }
 
 
@@ -245,7 +244,7 @@ GigoloBookmark *gigolo_bookmark_new_from_uri(const gchar *name, const gchar *uri
 	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bm);
 
 	gigolo_bookmark_set_name(bm, name);
-	if (! parse_uri(bm, uri))
+	if (! gigolo_bookmark_parse_uri(bm, uri))
 		priv->is_valid = FALSE;
 
 	return bm;
@@ -265,7 +264,7 @@ void gigolo_bookmark_clone(GigoloBookmark *dst, const GigoloBookmark *src)
 	priv_src = GIGOLO_BOOKMARK_GET_PRIVATE(src);
 
 	/* free existing strings and data */
-	bookmark_clear(dst);
+	gigolo_bookmark_bookmark_clear(dst);
 
 	/* copy from src to dst */
 	priv_dst->name = g_strdup(priv_src->name);

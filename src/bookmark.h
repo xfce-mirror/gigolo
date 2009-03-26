@@ -84,6 +84,9 @@ void				gigolo_bookmark_set_autoconnect	(GigoloBookmark *bookmark, gboolean auto
 gboolean			gigolo_bookmark_get_should_not_autoconnect	(GigoloBookmark *bookmark);
 void				gigolo_bookmark_set_should_not_autoconnect	(GigoloBookmark *bookmark, gboolean should_not_autoconnect);
 
+gboolean			gigolo_bookmark_parse_uri		(GigoloBookmark *bookmark, const gchar *uri);
+
+void				gigolo_bookmark_bookmark_clear	(GigoloBookmark *bookmark);
 
 G_END_DECLS
 

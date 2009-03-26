@@ -28,7 +28,7 @@
 #include <string.h>
 #include <libintl.h>
 
-#include "main.h"
+#include "common.h"
 #include "settings.h"
 #include "bookmark.h"
 #include "window.h"
@@ -37,9 +37,9 @@
 
 
 static gboolean show_version = FALSE;
-static gboolean verbose_mode = FALSE;
 static gboolean list_schemes = FALSE;
 static gboolean new_instance = FALSE;
+gboolean verbose_mode = FALSE;
 
 static GOptionEntry cli_options[] =
 {
@@ -49,31 +49,6 @@ static GOptionEntry cli_options[] =
 	{ "version", 'V', 0, G_OPTION_ARG_NONE, &show_version, N_("Show version information"), NULL },
 	{ NULL, 0, 0, 0, NULL, NULL, NULL }
 };
-
-
-#ifdef DEBUG
-void debug(gchar const *format, ...)
-{
-	va_list args;
-	va_start(args, format);
-	g_logv(G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG, format, args);
-	va_end(args);
-}
-#endif
-
-
-void verbose(gchar const *format, ...)
-{
-#ifndef DEBUG
-	if (verbose_mode)
-#endif
-	{
-		va_list args;
-		va_start(args, format);
-		g_logv(G_LOG_DOMAIN, G_LOG_LEVEL_MESSAGE, format, args);
-		va_end(args);
-	}
-}
 
 
 static void print_supported_schemes(void)

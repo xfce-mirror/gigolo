@@ -20,13 +20,5 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
-#ifdef DEBUG
-void debug(gchar const *format, ...);
-#else
-# define debug(...)
-#endif
-
-void verbose(gchar const *format, ...);
-
 
 #endif /* __MAIN_H__ */

@@ -25,8 +25,8 @@
 #include <glib/gi18n.h>
 
 #include "common.h"
-#include "main.h"
 
+extern gboolean verbose_mode;
 
 const gchar *gigolo_get_application_icon_name(void)
 {
@@ -173,3 +173,29 @@ void gigolo_show_uri(const gchar *uri)
 	g_free(cmd);
 	g_free(open_cmd);
 }
+
+
+#ifdef DEBUG
+void debug(gchar const *format, ...)
+{
+	va_list args;
+	va_start(args, format);
+	g_logv(G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG, format, args);
+	va_end(args);
+}
+#endif
+
+
+void verbose(gchar const *format, ...)
+{
+#ifndef DEBUG
+	if (verbose_mode)
+#endif
+	{
+		va_list args;
+		va_start(args, format);
+		g_logv(G_LOG_DOMAIN, G_LOG_LEVEL_MESSAGE, format, args);
+		va_end(args);
+	}
+}
+

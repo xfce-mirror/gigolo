@@ -47,6 +47,14 @@ enum
 	GIGOLO_WINDOW_REF_TYPE_MOUNT /* mounted volume */
 };
 
+#ifdef DEBUG
+void debug(gchar const *format, ...);
+#else
+# define debug(...)
+#endif
+
+void verbose(gchar const *format, ...);
+
 
 const gchar *gigolo_describe_scheme(const gchar *scheme);
 

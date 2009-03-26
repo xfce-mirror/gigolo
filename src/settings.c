@@ -30,7 +30,6 @@
 #include "settings.h"
 #include "common.h"
 #include "bookmark.h"
-#include "main.h"
 
 
 typedef struct _GigoloSettingsPrivate			GigoloSettingsPrivate;
