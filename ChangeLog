@@ -3,6 +3,8 @@
  * src/settings.c:
    When starting without an existing configuration, check whether
    GIO_USE_VOLUME_MONITOR is set and if so, use its value as default.
+ * src/backendgvfs.c:
+   Don't show error message dialog when auto-connecting bookmarks.
 
 
 2009-03-22  Enrico Tröger  <enrico(at)xfce(dot)org>
