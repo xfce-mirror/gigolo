@@ -66,6 +66,9 @@ distclean:
 distcheck:
 	@./waf distcheck
 
+check:
+	@./waf check
+
 dist:
 	@./waf dist
 

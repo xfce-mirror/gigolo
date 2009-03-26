@@ -22,7 +22,7 @@
 
 
 
-import Build, Configure, Options, Utils
+import Build, Configure, Options, Utils, UnitTest
 import sys, os, shutil
 
 
@@ -33,7 +33,7 @@ srcdir = '.'
 blddir = '_build_'
 
 
-sources = [ 'src/main.c', 'src/compat.c', 'src/window.c', 'src/bookmark.c', 'src/settings.c',
+sources = [ 'src/compat.c', 'src/window.c', 'src/bookmark.c', 'src/settings.c',
 			'src/menubuttonaction.c', 'src/mountoperation.c', 'src/bookmarkdialog.c',
 			'src/bookmarkeditdialog.c', 'src/preferencesdialog.c', 'src/backendgvfs.c',
 			'src/common.c', 'src/mountdialog.c', 'src/browsenetworkpanel.c',
@@ -82,14 +82,48 @@ def set_options(opt):
 
 
 def build(bld):
+	def add_tests(bld):
+		tests = os.listdir('tests')
+		for test in tests:
+			if test[-2:] != '.c':
+				continue
+			target = test[:-2]
+			source = os.path.join("tests", test)
+
+		bld.new_task_gen(
+			features		= 'cc cprogram',
+			target			= 'test-' + target,
+			source			= source,
+			includes		= '. src',
+			uselib			= 'GTK GIO',
+			uselib_local	= 'gigolo_lib',
+			unit_test		= 1,
+			install_path	= None
+		)
+
+
+	bld.new_task_gen(
+		features		= 'cc cstaticlib',
+		name			= 'gigolo_lib',
+		target			= 'gigolo_lib',
+		source			= sources,
+		includes		= '.',
+		uselib			= 'GTK GIO',
+		install_path	= None
+	)
+
 	bld.new_task_gen(
 		features		= 'cc cprogram',
 		name			= 'gigolo',
 		target			= 'gigolo',
-		source			= sources,
+		source			= 'src/main.c',
 		includes		= '.',
 		uselib			= 'GTK GIO',
+		uselib_local	= 'gigolo_lib',
 	)
+
+	if Options.commands['check']:
+		add_tests(bld)
 
 	# Translations
 	bld.new_task_gen(
@@ -154,7 +188,7 @@ def shutdown():
 			#~ Utils.pprint('YELLOW', "Icon cache not updated. After install, run this:")
 			#~ Utils.pprint('YELLOW', "gtk-update-icon-cache -q -f -t %s" % dir)
 	if Options.options.update_po:
-		os.chdir('%s/po' % srcdir)
+		os.chdir(os.path.join(srcdir, 'po'))
 		try:
 			try:
 				size_old = os.stat('gigolo.pot').st_size
@@ -170,6 +204,15 @@ def shutdown():
 		except:
 			Utils.pprint('RED', 'Failed to generate pot file.')
 		os.chdir('..')
+
+
+def check(ch):
+	test = UnitTest.unit_test()
+	test.change_to_testfile_dir = False
+	test.want_to_see_test_output = True
+	test.want_to_see_test_error = True
+	test.run()
+	test.print_results()
 
 
 # Simple function to execute a command and print its exit status

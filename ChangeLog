@@ -14,6 +14,8 @@
    src/browsenetworkpanel.c, src/common.c, src/common.h, src/main.c,
    src/main.h, src/settings.c, src/window.c:
    Refactor some code.
+ * tests/uri_parsing.c, configure, waf, wscript:
+   Add tests for the URI parsing code.
 
 
 2009-03-22  Enrico Tröger  <enrico(at)xfce(dot)org>
