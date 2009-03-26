@@ -477,6 +477,7 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 	GKeyFile *k;
 	GError *error = NULL;
 	gsize i;
+	const gchar *default_vm_impl;
 
 	k = g_key_file_new();
 	if (! g_key_file_load_from_file(k, priv->config_filename, G_KEY_FILE_NONE, &error))
@@ -486,7 +487,11 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 		error = NULL;
 	}
 
-	priv->vm_impl = get_setting_string(k, SECTION_GENERAL, "vm_impl", DEFAULT_VM_IMPL);
+	default_vm_impl = g_getenv("GIO_USE_VOLUME_MONITOR");
+	if (! NZV(default_vm_impl))
+		default_vm_impl = DEFAULT_VM_IMPL;
+
+	priv->vm_impl = get_setting_string(k, SECTION_GENERAL, "vm_impl", default_vm_impl);
 	priv->file_manager = get_setting_string(k, SECTION_GENERAL, "file_manager", "gvfs-open");
 	priv->autoconnect_interval = get_setting_int(k, SECTION_GENERAL, "autoconnect_interval",
 		DEFAULT_AUTOCONNECT_INTERVAL);

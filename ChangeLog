@@ -1,3 +1,10 @@
+2009-03-26  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/settings.c:
+   When starting without an existing configuration, check whether
+   GIO_USE_VOLUME_MONITOR is set and if so, use its value as default.
+
+
 2009-03-22  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/bookmarkdialog.c, src/bookmarkdialog.h, src/bookmarkeditdialog.c,
