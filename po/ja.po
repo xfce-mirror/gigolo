@@ -1,0 +1,546 @@
+# Japanese translations for gigolo package
+# gigolo パッケージに対する英訳.
+# Copyright (C) 2009 THE gigolo'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gigolo package.
+# Masato Hashimoto <cabezon.hashimoto@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gigolo 0.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-28 23:48+0900\n"
+"PO-Revision-Date: 2009-03-22 17:52+0900\n"
+"Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "動作中のインスタンスを無視し、強制的に新しいインスタンスを開く"
+
+#: ../src/main.c:47
+msgid "Print a list of supported URI schemes"
+msgstr "サポートする URI スキームのリストを表示する"
+
+#: ../src/main.c:48
+msgid "Be verbose"
+msgstr "詳細情報を出力する"
+
+#: ../src/main.c:49
+msgid "Show version information"
+msgstr "バージョン情報を表示する"
+
+#: ../src/main.c:80
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- リモートファイルシステムに簡単に接続するシンプルなフロントエンド"
+
+#: ../src/common.c:73
+msgid "Unix Device"
+msgstr "Unix デバイス"
+
+#: ../src/common.c:75
+msgid "Windows Share"
+msgstr "Windows 共有"
+
+#: ../src/common.c:77
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:79
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:81
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:83
+msgid "Obex"
+msgstr "Obex"
+
+#: ../src/common.c:85
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:87
+msgid "WebDAV (secure)"
+msgstr "WebDAV (セキュア)"
+
+#: ../src/common.c:89
+msgid "Network"
+msgstr "ネットワーク"
+
+#: ../src/common.c:91
+msgid "Custom Location"
+msgstr "個別に指定した場所"
+
+#: ../src/window.c:292
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "接続しています: \"%s\""
+
+#: ../src/window.c:461 ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "リモートファイルシステムに簡単に接続するシンプルなフロントエンド"
+
+#: ../src/window.c:462
+msgid "Copyright 2008-2009 Enrico Tröger"
+msgstr "Copyright 2008-2009 Enrico Tröger"
+
+#: ../src/window.c:465
+msgid "translator-credits"
+msgstr "Masato Hashimoto <cabezon.hashimoto@gmail.com>"
+
+#: ../src/window.c:497
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Gigolo は GVFS により以下のプロトコルを使用することができます:"
+
+#: ../src/window.c:726 ../src/bookmarkeditdialog.c:189
+#: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
+#: ../src/bookmarkeditdialog.c:232 ../src/bookmarkeditdialog.c:243
+msgid "Error"
+msgstr "エラー"
+
+#: ../src/window.c:1170
+msgid "_File"
+msgstr "ファイル(_F)"
+
+#: ../src/window.c:1171
+msgid "_Edit"
+msgstr "編集(_E)"
+
+#: ../src/window.c:1172
+msgid "_Actions"
+msgstr "アクション(_A)"
+
+#: ../src/window.c:1173
+msgid "_View"
+msgstr "表示(_V)"
+
+#: ../src/window.c:1174
+msgid "_Help"
+msgstr "ヘルプ(_H)"
+
+#: ../src/window.c:1178 ../src/browsenetworkpanel.c:475
+#: ../src/browsenetworkpanel.c:515
+msgid "Create _Bookmark"
+msgstr "ブックマークの作成(_B)"
+
+#: ../src/window.c:1180
+msgid "_Edit Bookmarks"
+msgstr "ブックマークの編集(_E)"
+
+#: ../src/window.c:1181
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr ""
+"ブックマークマネージャを開き、ブックマークの追加、編集、または削除を行います"
+
+#: ../src/window.c:1185
+msgid "Disconnect the selected resource"
+msgstr "選択されたリソースとの接続を切ります"
+
+#: ../src/window.c:1187
+msgid "Open the selected resource with a file manager"
+msgstr "選択されたリソースをファイルマネージャで開きます"
+
+#: ../src/window.c:1188
+msgid "Copy _URI"
+msgstr "URI のコピー(_U)"
+
+#: ../src/window.c:1189
+msgid "Quit Gigolo"
+msgstr "Gigolo を終了します"
+
+#: ../src/window.c:1190
+msgid "Online Help"
+msgstr "オンラインヘルプ"
+
+#: ../src/window.c:1191
+msgid "Supported Protocols"
+msgstr "サポートプロトコル"
+
+#: ../src/window.c:1197
+msgid "Side _Panel"
+msgstr "サイドパネル(_P)"
+
+#: ../src/window.c:1199
+msgid "_Toolbar"
+msgstr "ツールバー(_T)"
+
+#: ../src/window.c:1201
+msgid "Status _Icon"
+msgstr "ステータスアイコン(_I)"
+
+#: ../src/window.c:1207
+msgid "View as _Symbols"
+msgstr "シンボルで表示(_S)"
+
+#: ../src/window.c:1208
+msgid "View as _Detailed List"
+msgstr "詳細リストで表示(_D)"
+
+#: ../src/window.c:1214
+msgid "_Bookmarks"
+msgstr "ブックマーク(_B)"
+
+#: ../src/window.c:1214
+msgid "Choose a bookmark to connect to"
+msgstr "接続するブックマークを選択します"
+
+#: ../src/window.c:1288
+msgid "Connected"
+msgstr "接続中"
+
+#: ../src/window.c:1297 ../src/bookmarkdialog.c:300
+msgid "Service Type"
+msgstr "サービスタイプ"
+
+#: ../src/window.c:1305 ../src/bookmarkdialog.c:292
+msgid "Name"
+msgstr "名前"
+
+#: ../src/window.c:1372 ../src/window.c:1453 ../gigolo.desktop.in.h:2
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:596
+msgid "Move it now?"
+msgstr "今移動しますか?"
+
+#: ../src/settings.c:597
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Gigolo は起動前に古い設定ディレクトリの移動を必要とします。"
+
+#: ../src/settings.c:605
+#, c-format
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"古い設定ディレクトリ \"%s\" を \"%s\" へ移動できませんでした (%s)。ディレクト"
+"リを手動で新しい場所へ移動してください。"
+
+#: ../src/settings.c:608
+msgid "Warning"
+msgstr "警告"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "接続"
+
+#: ../src/bookmarkdialog.c:93
+#, c-format
+msgid "Domain: %s"
+msgstr "ドメイン: %s"
+
+#: ../src/bookmarkdialog.c:98
+#, c-format
+msgid "Share: %s"
+msgstr "共有: %s"
+
+#: ../src/bookmarkdialog.c:308
+msgid "Host"
+msgstr "ホスト"
+
+#: ../src/bookmarkdialog.c:316
+msgid "Port"
+msgstr "ポート"
+
+#: ../src/bookmarkdialog.c:324
+msgid "Auto-Connect"
+msgstr "自動接続"
+
+#: ../src/bookmarkdialog.c:332
+msgid "Username"
+msgstr "ユーザ名"
+
+#: ../src/bookmarkdialog.c:340
+msgid "Other information"
+msgstr "その他の情報"
+
+#: ../src/bookmarkdialog.c:397
+msgid "Edit Bookmarks"
+msgstr "ブックマークの編集"
+
+#: ../src/bookmarkeditdialog.c:190
+msgid "You must enter a name for the bookmark."
+msgstr "ブックマーク名を入力してください。"
+
+#: ../src/bookmarkeditdialog.c:209
+msgid "The entered bookmark name is already in use. Please choose another one."
+msgstr ""
+"入力されたブックマーク名はすでに使用されています。他の名前にしてください。"
+
+#: ../src/bookmarkeditdialog.c:222
+msgid "You must enter a server address or name."
+msgstr "サーバのアドレスまたは名前を入力してください。"
+
+#: ../src/bookmarkeditdialog.c:233
+msgid "You must enter a share name."
+msgstr "共有名を入力してください。"
+
+#: ../src/bookmarkeditdialog.c:244
+msgid "You must enter a valid URI for the connection."
+msgstr "接続先の正しい URI を入力してください。"
+
+#: ../src/bookmarkeditdialog.c:494
+msgid "_Device:"
+msgstr "デバイス(_D):"
+
+#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
+msgid "_Server:"
+msgstr "サーバ(_S):"
+
+#: ../src/bookmarkeditdialog.c:751
+msgid "Create Bookmark"
+msgstr "ブックマークの作成"
+
+#: ../src/bookmarkeditdialog.c:758
+msgid "Edit Bookmark"
+msgstr "ブックマークの編集"
+
+#: ../src/bookmarkeditdialog.c:766
+msgid "Connect to Server"
+msgstr "サーバへの接続"
+
+#: ../src/bookmarkeditdialog.c:862
+msgid "_Bookmark name:"
+msgstr "ブックマーク名(_B):"
+
+#: ../src/bookmarkeditdialog.c:870
+msgid "Au_to-Connect"
+msgstr "自動接続(_T)"
+
+#: ../src/bookmarkeditdialog.c:878
+msgid "Service t_ype:"
+msgstr "サービスタイプ(_Y):"
+
+#: ../src/bookmarkeditdialog.c:901
+msgid "Set the port to 0 to use the default port"
+msgstr "0 を設定するとデフォルトポートが使用されます"
+
+#: ../src/bookmarkeditdialog.c:907
+msgid "_Location (URI):"
+msgstr "場所(_L) (URI):"
+
+#: ../src/bookmarkeditdialog.c:909
+msgid "_User Name:"
+msgstr "ユーザ名(_U):"
+
+#: ../src/bookmarkeditdialog.c:910
+msgid "Optional information:"
+msgstr "オプション情報:"
+
+#: ../src/bookmarkeditdialog.c:911
+msgid "_Port:"
+msgstr "ポート(_P):"
+
+#: ../src/bookmarkeditdialog.c:912
+msgid "_Domain:"
+msgstr "ドメイン(_D):"
+
+#: ../src/bookmarkeditdialog.c:913
+msgid "_Share:"
+msgstr "共有(_S):"
+
+#: ../src/preferencesdialog.c:152
+msgid "Icons"
+msgstr "アイコン"
+
+#: ../src/preferencesdialog.c:153
+msgid "Text"
+msgstr "文字"
+
+#: ../src/preferencesdialog.c:154
+msgid "Both"
+msgstr "アイコンと文字"
+
+#: ../src/preferencesdialog.c:155
+msgid "Both horizontal"
+msgstr "アイコンと文字 (横方向)"
+
+#: ../src/preferencesdialog.c:174
+msgid "Horizontal"
+msgstr "横"
+
+#: ../src/preferencesdialog.c:175
+msgid "Vertical"
+msgstr "縦"
+
+#: ../src/preferencesdialog.c:194
+msgid "Symbols"
+msgstr "シンボル"
+
+#: ../src/preferencesdialog.c:195
+msgid "Detailed"
+msgstr "詳細"
+
+#: ../src/preferencesdialog.c:339
+msgid "General"
+msgstr "一般"
+
+#: ../src/preferencesdialog.c:344
+msgid "_File Manager"
+msgstr "ファイルマネージャ(_F)"
+
+#: ../src/preferencesdialog.c:352
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr ""
+"マウントポイントを開くまたは表示するために使用するプログラムの名前を入力して"
+"ください"
+
+#: ../src/preferencesdialog.c:361
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "ブックマークの自動接続間隔(_B)"
+
+#: ../src/preferencesdialog.c:367
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"ブックマークに自動接続を試みる間隔を秒で指定してください。ゼロを指定すると無"
+"効になります。"
+
+#: ../src/preferencesdialog.c:373
+msgid ""
+"The HAL based volume manager implementation requires the tool 'gnome-mount' "
+"to mount local resources like disks. The Unix based volume manager "
+"implementation can mount such resources directly and also lists other local "
+"devices.\n"
+"If you are unsure, use the HAL based monitor."
+msgstr ""
+"HAL ベースのボリュームマネージャの実装はディスクのようなローカルリソースにマ"
+"ウントするために 'gnome-mount' ツールを必要とします。Unix ベースのボリューム"
+"マネージャの実装はそのようなリソースを直接マウントでき、その他のローカルデバ"
+"イスを一覧表示します。\n"
+"どちらにするか迷ったら、HAL ベースのモニタを使用して下さい。"
+
+#: ../src/preferencesdialog.c:379
+msgid "Use _HAL based volume manager"
+msgstr "HAL ベースボリュームマネージャを使用する(_H)"
+
+#: ../src/preferencesdialog.c:380 ../src/preferencesdialog.c:388
+msgid "<i>Changing this option requires a restart of Gigolo.</i>"
+msgstr ""
+"<i>このオプションの変更を有効にするには Gigolo の再起動が必要です。</i>"
+
+#: ../src/preferencesdialog.c:387
+msgid "Use _Unix based volume manager"
+msgstr "Unix ベースボリュームマネージャを使用する(_U)"
+
+#: ../src/preferencesdialog.c:403
+msgid "Interface"
+msgstr "インターフェイス"
+
+#: ../src/preferencesdialog.c:405
+msgid "_Save window position and geometry"
+msgstr "ウィンドウの位置と形を保存する(_S)"
+
+#: ../src/preferencesdialog.c:406
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "ウィンドウの位置と形を保存し、起動時にそれを復元します"
+
+#: ../src/preferencesdialog.c:409
+msgid "Show status _icon in the Notification Area"
+msgstr "通知エリアにステータスアイコンを表示する(_I)"
+
+#: ../src/preferencesdialog.c:412
+msgid "Start _minimized in the Notification Area"
+msgstr "通知エリアに最小化して起動する(_M)"
+
+#: ../src/preferencesdialog.c:417
+msgid "Show 'Browse Network' side panel"
+msgstr "'ネットワークの参照' サイドパネルを表示する"
+
+#: ../src/preferencesdialog.c:418
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba shares"
+msgstr ""
+"このオプションを有効にすると、Samba 共有の利用が可能なローカルネットワークを"
+"参照するサイドパネルを表示します"
+
+#: ../src/preferencesdialog.c:425
+msgid "_View Mode"
+msgstr "表示モード(_V)"
+
+#: ../src/preferencesdialog.c:438
+msgid "Toolbar"
+msgstr "ツールバー"
+
+#: ../src/preferencesdialog.c:440
+msgid "Show _toolbar"
+msgstr "ツールバーを表示する(_T)"
+
+#: ../src/preferencesdialog.c:446
+msgid "St_yle"
+msgstr "スタイル(_Y)"
+
+#: ../src/preferencesdialog.c:457
+msgid "_Orientation"
+msgstr "方向(_O)"
+
+#: ../src/preferencesdialog.c:518
+msgid "Preferences"
+msgstr "設定"
+
+#: ../src/backendgvfs.c:168
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s"
+msgstr ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"接続: Yes\n"
+"サービスタイプ: %s"
+
+#: ../src/backendgvfs.c:182
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Unix デバイス: %s</b>"
+
+#: ../src/backendgvfs.c:366 ../src/backendgvfs.c:397
+msgid "unknown"
+msgstr "不明"
+
+#: ../src/backendgvfs.c:370 ../src/backendgvfs.c:447
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "\"%s\" への接続に失敗しました。"
+
+#: ../src/backendgvfs.c:401
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "\"%s\" からの切断に失敗しました。"
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "接続しています"
+
+#: ../src/browsenetworkpanel.c:256
+msgid "No Workgroups found"
+msgstr "ワークグループが見つかりません"
+
+#: ../src/browsenetworkpanel.c:508
+msgid "Connect to the selected share"
+msgstr "選択された共有に接続します"
+
+#: ../src/browsenetworkpanel.c:516
+msgid "Create a bookmark from the selected share"
+msgstr "選択された共有のブックマークを作成します"
+
+#: ../src/browsenetworkpanel.c:525
+msgid "Refresh the network list"
+msgstr "ネットワークリストを更新します"
+
+#: ../src/browsenetworkpanel.c:536
+msgid "Close panel"
+msgstr "パネルを閉じます"
