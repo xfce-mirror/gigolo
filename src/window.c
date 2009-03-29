@@ -79,7 +79,6 @@ struct _GigoloWindowPrivate
 	GtkWidget		*systray_icon_popup_menu;
 
 	guint			 autoconnect_timeout_id;
-	gboolean		 window_hidden;
 };
 
 enum
@@ -100,41 +99,6 @@ enum
 G_DEFINE_TYPE(GigoloWindow, gigolo_window, GTK_TYPE_WINDOW);
 
 
-static gboolean gigolo_window_state_event(GtkWidget *widget, GdkEventWindowState *event)
-{
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(widget);
-	gboolean show_systray_icon = gigolo_settings_get_boolean(priv->settings, "show-in-systray");
-
-	if (show_systray_icon)
-	{
-		if (event->changed_mask & GDK_WINDOW_STATE_ICONIFIED)
-		{
-			if (event->new_window_state & GDK_WINDOW_STATE_ICONIFIED)
-				priv->window_hidden = TRUE;
-			else
-				priv->window_hidden = FALSE;
-		}
-		if (event->changed_mask & GDK_WINDOW_STATE_WITHDRAWN)
-		{
-			if (event->new_window_state & GDK_WINDOW_STATE_WITHDRAWN)
-				priv->window_hidden = TRUE;
-			else
-				priv->window_hidden = FALSE;
-		}
-
-		if (priv->window_hidden && show_systray_icon)
-		{
-			gtk_window_set_skip_taskbar_hint(GTK_WINDOW(widget), TRUE);
-		}
-		else if (! priv->window_hidden)
-		{
-			gtk_window_set_skip_taskbar_hint(GTK_WINDOW(widget), FALSE);
-		}
-	}
-	return FALSE;
-}
-
-
 static void remove_autoconnect_timeout(GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
@@ -147,19 +111,19 @@ static void remove_autoconnect_timeout(GigoloWindow *window)
 }
 
 
-static gboolean gigolo_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkEventAny *event)
+static void gigolo_window_destroy(GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(widget);
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	gint geo[5];
 
-	remove_autoconnect_timeout(GIGOLO_WINDOW(widget));
+	remove_autoconnect_timeout(window);
 
 	if (gigolo_settings_get_boolean(priv->settings, "save-geometry"))
 	{
-		gtk_window_get_position(GTK_WINDOW(widget), &geo[0], &geo[1]);
-		gtk_window_get_size(GTK_WINDOW(widget), &geo[2], &geo[3]);
-		if (priv->window_hidden && gdk_window_get_state(
-			gigolo_widget_get_window(widget)) & GDK_WINDOW_STATE_MAXIMIZED)
+		gtk_window_get_position(GTK_WINDOW(window), &geo[0], &geo[1]);
+		gtk_window_get_size(GTK_WINDOW(window), &geo[2], &geo[3]);
+		if (gdk_window_get_state(
+				gigolo_widget_get_window(GTK_WIDGET(window))) & GDK_WINDOW_STATE_MAXIMIZED)
 			geo[4] = 1;
 		else
 			geo[4] = 0;
@@ -176,7 +140,26 @@ static gboolean gigolo_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkE
 	g_object_unref(priv->systray_icon_popup_menu);
 	g_object_unref(priv->backend_gvfs);
 
-	return FALSE;
+	gtk_widget_destroy(GTK_WIDGET(window));
+
+	gtk_main_quit();
+}
+
+
+static gboolean gigolo_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkEventAny *event)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(widget);
+
+	if (gigolo_settings_get_boolean(priv->settings, "show-in-systray"))
+	{
+		gtk_widget_hide(widget);
+		return TRUE;
+	}
+	else
+	{
+		gigolo_window_destroy(GIGOLO_WINDOW(widget));
+		return FALSE;
+	}
 }
 
 
@@ -184,7 +167,6 @@ static void gigolo_window_class_init(GigoloWindowClass *klass)
 {
 	GtkWidgetClass *gtkwidget_class = GTK_WIDGET_CLASS(klass);
 	gtkwidget_class->delete_event = gigolo_window_delete_event;
-	gtkwidget_class->window_state_event = gigolo_window_state_event;
 
 	g_type_class_add_private(klass, sizeof(GigoloWindowPrivate));
 }
@@ -423,8 +405,7 @@ static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *win
 
 static void action_quit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-    gigolo_window_delete_event(GTK_WIDGET(window), NULL);
-    gtk_widget_destroy(GTK_WIDGET(window));
+    gigolo_window_destroy(window);
 }
 
 
