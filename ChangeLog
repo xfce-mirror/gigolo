@@ -3,6 +3,10 @@
  * src/main.c, src/window.c:
    Minimise to tray on delete-event (close button) instead of
    when minimising the main window.
+ * src/backendgvfs.c, src/backendgvfs.h, src/browsenetworkpanel.c,
+   src/preferencesdialog.c, src/settings.c, src/window.c, src/window.h:
+   Add a new preference to set whether to show error message dialogs
+   when auto-connecting bookmarks.
 
 
 2009-03-26  Enrico Tröger  <enrico(at)xfce(dot)org>

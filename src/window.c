@@ -255,7 +255,8 @@ GigoloBookmark *gigolo_window_find_bookmark_by_uri(GigoloWindow *window, const g
 }
 
 
-void gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark, gboolean show_dialog)
+void gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *bookmark,
+									   gboolean show_dialog, gboolean show_errors)
 {
 	gchar *uri;
 	GtkWidget *dialog = NULL;
@@ -279,7 +280,7 @@ void gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *boo
 		g_free(label);
 	}
 
-	gigolo_backend_gvfs_mount_uri(priv->backend_gvfs, uri, GTK_WINDOW(window), dialog);
+	gigolo_backend_gvfs_mount_uri(priv->backend_gvfs, uri, GTK_WINDOW(window), dialog, show_errors);
 
 	if (gigolo_bookmark_get_autoconnect(bookmark))
 		gigolo_bookmark_set_should_not_autoconnect(bookmark, FALSE);
@@ -320,7 +321,7 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 			/* this fills the values of the dialog into 'bm' */
 			g_object_set(dialog, "bookmark-update", bm, NULL);
 
-			gigolo_window_mount_from_bookmark(window, bm, TRUE);
+			gigolo_window_mount_from_bookmark(window, bm, TRUE, TRUE);
 
 			g_object_unref(bm);
 		}
@@ -801,7 +802,7 @@ static void action_bookmark_activate_cb(G_GNUC_UNUSED GigoloMenubuttonAction *ac
 {
 	GigoloBookmark *bm = g_object_get_data(G_OBJECT(item), "bookmark");
 
-	gigolo_window_mount_from_bookmark(window, bm, TRUE);
+	gigolo_window_mount_from_bookmark(window, bm, TRUE, TRUE);
 }
 
 
@@ -837,6 +838,7 @@ gboolean gigolo_window_do_autoconnect(gpointer data)
 	static gint old_interval = -1;
 	gint interval;
 	guint i;
+	gboolean show_errors;
 
 	interval = gigolo_settings_get_integer(priv->settings, "autoconnect-interval");
 	if (old_interval != interval)
@@ -855,12 +857,13 @@ gboolean gigolo_window_do_autoconnect(gpointer data)
 		return FALSE;
 	}
 
+	show_errors = gigolo_settings_get_boolean(priv->settings, "show-autoconnect-errors");
 	for (i = 0; i < bookmarks->len; i++)
 	{
 		GigoloBookmark *bm = g_ptr_array_index(bookmarks, i);
 		if (gigolo_bookmark_get_autoconnect(bm) && ! gigolo_bookmark_get_should_not_autoconnect(bm))
 		{
-			gigolo_window_mount_from_bookmark(window, bm, FALSE);
+			gigolo_window_mount_from_bookmark(window, bm, FALSE, show_errors);
 		}
 	}
 	return TRUE;

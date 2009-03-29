@@ -419,6 +419,10 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_widget_set_sensitive(checkbox, gigolo_backend_gvfs_is_scheme_supported("smb"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
+	checkbox = add_check_button(settings, "show-autoconnect-errors", _("Show auto-connect error messages"));
+	gtk_widget_set_tooltip_text(checkbox, _("Whether to show error message dialogs when auto-connecting of bookmarks fails"));
+	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+
 	hbox = gtk_hbox_new(FALSE, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 

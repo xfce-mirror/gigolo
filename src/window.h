@@ -54,7 +54,8 @@ gboolean 		gigolo_window_do_autoconnect		(gpointer data);
 
 void			gigolo_window_mount_from_bookmark	(GigoloWindow *window,
 													 GigoloBookmark *bookmark,
-													 gboolean show_dialog);
+													 gboolean show_dialog,
+													 gboolean show_errors);
 
 GigoloBookmark*	gigolo_window_find_bookmark_by_uri	(GigoloWindow *window, const gchar *uri);
 

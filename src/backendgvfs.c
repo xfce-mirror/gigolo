@@ -51,6 +51,7 @@ typedef struct
 {
 	GigoloBackendGVFS *self;
 	GtkWidget *dialog;
+	gboolean show_errors;
 } MountInfo;
 
 struct _GigoloBackendGVFSPrivate
@@ -445,7 +446,7 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 	if (error != NULL && ! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_ALREADY_MOUNTED))
 	{
 		gchar *msg = g_strdup_printf(_("Connecting to \"%s\" failed."), uri);
-		if (mi->dialog != NULL)
+		if (mi->show_errors)
 			g_signal_emit(mi->self, signals[OPERATION_FAILED], 0, msg, error->message);
 		else
 			verbose("%s (%s)", msg, error->message);
@@ -464,7 +465,7 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 
 
 void gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
-								   GtkWindow *parent, GtkWidget *dialog)
+								   GtkWindow *parent, GtkWidget *dialog, gboolean show_errors)
 {
 	GMountOperation *op;
 	GFile *file;
@@ -478,6 +479,7 @@ void gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
 	mi = g_new0(MountInfo, 1);
 	mi->self = backend;
 	mi->dialog = dialog;
+	mi->show_errors = show_errors;
 
 	g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
 		(GAsyncReadyCallback) mount_ready_cb, mi);

@@ -128,7 +128,7 @@ static void mount_share(GigoloBrowseNetworkPanel *panel, GigoloBookmarkEditDialo
 
 				if (mode == GIGOLO_BE_MODE_CONNECT)
 				{
-					gigolo_window_mount_from_bookmark(GIGOLO_WINDOW(priv->parent), bm, TRUE);
+					gigolo_window_mount_from_bookmark(GIGOLO_WINDOW(priv->parent), bm, TRUE, TRUE);
 				}
 				else
 				{
