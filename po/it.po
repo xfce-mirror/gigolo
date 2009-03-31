@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-22 23:40+0100\n"
+"POT-Creation-Date: 2009-03-31 23:16+0200\n"
 "PO-Revision-Date: 2009-02-15 15:01+0100\n"
 "Last-Translator: Muflone <muflone@vbsimple.net>\n"
 "Language-Team: Italian\n"
@@ -16,19 +16,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/main.c:42
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr ""
+
+#: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
 msgstr "Mostra una lista degli schemi URI compatibili"
 
-#: ../src/main.c:43
+#: ../src/main.c:48
 msgid "Be verbose"
 msgstr "Mostra più informazioni"
 
-#: ../src/main.c:44
+#: ../src/main.c:49
 msgid "Show version information"
 msgstr "Mostra informazioni sulla versione"
 
-#: ../src/main.c:99
+#: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- una semplice interfaccia per connettersi a filesystem remoti"
 
@@ -52,131 +56,170 @@ msgstr "HTTP"
 msgid "SSH"
 msgstr "SSH"
 
-#. TODO find something better
-#: ../src/common.c:84
-msgid "OBEX"
-msgstr "OBEX"
+#: ../src/common.c:83
+msgid "Obex"
+msgstr ""
 
-#: ../src/common.c:86
+#: ../src/common.c:85
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: ../src/common.c:88
+#: ../src/common.c:87
 msgid "WebDAV (secure)"
 msgstr "WebDAV (sicuro)"
 
-#: ../src/common.c:90
+#: ../src/common.c:89
 msgid "Network"
 msgstr "Rete"
 
-#: ../src/common.c:92
+#: ../src/common.c:91
 msgid "Custom Location"
 msgstr "Posizione personalizzata"
 
-#: ../src/window.c:284
+#: ../src/window.c:275
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Connessione a «%s»"
 
-#: ../src/window.c:426 ../gigolo.desktop.in.h:1
+#: ../src/window.c:443 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Una semplice interfaccia per connettersi a filesystem remoti"
 
-#: ../src/window.c:427
+#: ../src/window.c:444
 msgid "Copyright 2008-2009 Enrico Tröger"
 msgstr ""
 
-#: ../src/window.c:430
+#: ../src/window.c:447
 msgid "translator-credits"
 msgstr "Muflone <muflone@vbsimple.net>"
 
-#: ../src/window.c:652 ../src/bookmarkeditdialog.c:181
-#: ../src/bookmarkeditdialog.c:199 ../src/bookmarkeditdialog.c:212
-#: ../src/bookmarkeditdialog.c:223 ../src/bookmarkeditdialog.c:234
+#: ../src/window.c:479
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr ""
+
+#: ../src/window.c:708 ../src/bookmarkeditdialog.c:189
+#: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
+#: ../src/bookmarkeditdialog.c:232 ../src/bookmarkeditdialog.c:243
 msgid "Error"
 msgstr "Errore"
 
-#: ../src/window.c:1029
+#: ../src/window.c:1154
 msgid "_File"
 msgstr "_File"
 
-#: ../src/window.c:1030
+#: ../src/window.c:1155
 msgid "_Edit"
 msgstr "_Modifica"
 
-#: ../src/window.c:1031
+#: ../src/window.c:1156
 msgid "_Actions"
 msgstr "_Azioni"
 
-#: ../src/window.c:1032
+#: ../src/window.c:1157
+#, fuzzy
+msgid "_View"
+msgstr "Modalità di _visualizzazione"
+
+#: ../src/window.c:1158
 msgid "_Help"
 msgstr "A_iuto"
 
-#: ../src/window.c:1036
+#: ../src/window.c:1162 ../src/browsenetworkpanel.c:475
+#: ../src/browsenetworkpanel.c:515
 msgid "Create _Bookmark"
 msgstr "Crea un s_egnalibro"
 
-#: ../src/window.c:1038
+#: ../src/window.c:1164
 msgid "_Edit Bookmarks"
 msgstr "_Modifica segnalibri"
 
-#: ../src/window.c:1039
+#: ../src/window.c:1165
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr ""
 "Apre il gestore di segnalibri per aggiungere, modificare o eliminare i "
 "collegamenti preferiti"
 
-#: ../src/window.c:1043
+#: ../src/window.c:1169
 msgid "Disconnect the selected resource"
 msgstr "Disconnette la risorsa selezionata"
 
-#: ../src/window.c:1045
+#: ../src/window.c:1171
 msgid "Open the selected resource with a file manager"
 msgstr "Apre la risorsa selezionata con un gestore di file"
 
-#: ../src/window.c:1046
+#: ../src/window.c:1172
 msgid "Copy _URI"
 msgstr "Copia _URI"
 
-#: ../src/window.c:1047
+#: ../src/window.c:1173
 msgid "Quit Gigolo"
 msgstr "Esci da Gigolo"
 
-#: ../src/window.c:1054
+#: ../src/window.c:1174
+msgid "Online Help"
+msgstr ""
+
+#: ../src/window.c:1175
+msgid "Supported Protocols"
+msgstr ""
+
+#: ../src/window.c:1181
+msgid "Side _Panel"
+msgstr ""
+
+#: ../src/window.c:1183
+#, fuzzy
+msgid "_Toolbar"
+msgstr "Barra degli strumenti"
+
+#: ../src/window.c:1185
+msgid "Status _Icon"
+msgstr ""
+
+#: ../src/window.c:1191
+#, fuzzy
+msgid "View as _Symbols"
+msgstr "Icone"
+
+#: ../src/window.c:1192
+msgid "View as _Detailed List"
+msgstr ""
+
+#: ../src/window.c:1198
 msgid "_Bookmarks"
 msgstr "S_egnalibri"
 
-#: ../src/window.c:1054
+#: ../src/window.c:1198
 msgid "Choose a bookmark to connect to"
 msgstr "Scegli un segnalibro a cui connettersi"
 
-#: ../src/window.c:1125
+#: ../src/window.c:1272
 msgid "Connected"
 msgstr "Connesso"
 
-#: ../src/window.c:1134 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1281 ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "Tipo di servizio"
 
-#: ../src/window.c:1142 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1289 ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Nome"
 
-#: ../src/window.c:1209 ../src/window.c:1278 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1356 ../src/window.c:1437 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:574
+#: ../src/settings.c:614
 msgid "Move it now?"
 msgstr "Spostare adesso?"
 
-#: ../src/settings.c:575
+#: ../src/settings.c:615
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr ""
 "Gigolo ha bisogno di spostare la vecchia cartella di configurazione prima di "
 "avviarsi."
 
-#: ../src/settings.c:583
+#: ../src/settings.c:623
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
@@ -185,7 +228,7 @@ msgstr ""
 "La precedente cartella di configurazione «%s» non può essere spostata su «%"
 "s» (%s). Per favore sposta manualmente la cartella al nuovo percorso."
 
-#: ../src/settings.c:586
+#: ../src/settings.c:626
 msgid "Warning"
 msgstr "Attenzione"
 
@@ -193,28 +236,12 @@ msgstr "Attenzione"
 msgid "Connect"
 msgstr "Connetti"
 
-#: ../src/passworddialog.c:74
-msgid "Authentication information needed"
-msgstr "Informazioni di autenticazione necessarie"
-
-#: ../src/passworddialog.c:97 ../src/bookmarkeditdialog.c:810
-msgid "_Domain:"
-msgstr "_Dominio:"
-
-#: ../src/passworddialog.c:110
-msgid "_Username:"
-msgstr "Nome _utente:"
-
-#: ../src/passworddialog.c:124
-msgid "_Password:"
-msgstr "_Password:"
-
-#: ../src/bookmarkdialog.c:95
+#: ../src/bookmarkdialog.c:93
 #, c-format
 msgid "Domain: %s"
 msgstr "Dominio: %s"
 
-#: ../src/bookmarkdialog.c:100
+#: ../src/bookmarkdialog.c:98
 #, c-format
 msgid "Share: %s"
 msgstr "Condivisione: %s"
@@ -243,129 +270,138 @@ msgstr "Altre informazioni"
 msgid "Edit Bookmarks"
 msgstr "Modifica i segnalibri"
 
-#: ../src/bookmarkeditdialog.c:182
+#: ../src/bookmarkeditdialog.c:190
 msgid "You must enter a name for the bookmark."
 msgstr "Devi inserire un nome per il segnalibro."
 
-#: ../src/bookmarkeditdialog.c:200
+#: ../src/bookmarkeditdialog.c:209
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr "Il nome del segnalibro inserito esiste già. Prego sceglierne un altro."
 
-#: ../src/bookmarkeditdialog.c:213
+#: ../src/bookmarkeditdialog.c:222
 msgid "You must enter a server address or name."
 msgstr "Devi inserire il nome o l'indirizzo del server."
 
-#: ../src/bookmarkeditdialog.c:224
+#: ../src/bookmarkeditdialog.c:233
 msgid "You must enter a share name."
 msgstr "Devi inserire il nome di una condivisione."
 
-#: ../src/bookmarkeditdialog.c:235
+#: ../src/bookmarkeditdialog.c:244
 msgid "You must enter a valid URI for the connection."
 msgstr "Devi inserire un URI valido per la conenssione."
 
-#: ../src/bookmarkeditdialog.c:689
-msgid "Create Bookmark"
-msgstr "Crea segnalibro"
+#: ../src/bookmarkeditdialog.c:494
+#, fuzzy
+msgid "_Device:"
+msgstr "Dispositivi Unix"
 
-#: ../src/bookmarkeditdialog.c:696
-msgid "Edit Bookmark"
-msgstr "Modifica segnalibro"
-
-#: ../src/bookmarkeditdialog.c:704
-msgid "Connect to Server"
-msgstr "Connetti al Server"
-
-#: ../src/bookmarkeditdialog.c:761
-msgid "_Bookmark name:"
-msgstr "Nome del s_egnalibro:"
-
-#: ../src/bookmarkeditdialog.c:769
-msgid "Au_to-Connect"
-msgstr "Connessione _automatica"
-
-#: ../src/bookmarkeditdialog.c:777
-msgid "Service t_ype:"
-msgstr "_Tipo di servizio:"
-
-#: ../src/bookmarkeditdialog.c:800
-msgid "Set the port to 0 to use the default port"
-msgstr "Inserisci il numero di porta 0 per usare la porta predefinita"
-
-#: ../src/bookmarkeditdialog.c:805
-msgid "_Location (URI):"
-msgstr "_Posizione (URI):"
-
-#: ../src/bookmarkeditdialog.c:806
+#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:807
+#: ../src/bookmarkeditdialog.c:751
+msgid "Create Bookmark"
+msgstr "Crea segnalibro"
+
+#: ../src/bookmarkeditdialog.c:758
+msgid "Edit Bookmark"
+msgstr "Modifica segnalibro"
+
+#: ../src/bookmarkeditdialog.c:766
+msgid "Connect to Server"
+msgstr "Connetti al Server"
+
+#: ../src/bookmarkeditdialog.c:862
+msgid "_Bookmark name:"
+msgstr "Nome del s_egnalibro:"
+
+#: ../src/bookmarkeditdialog.c:870
+msgid "Au_to-Connect"
+msgstr "Connessione _automatica"
+
+#: ../src/bookmarkeditdialog.c:878
+msgid "Service t_ype:"
+msgstr "_Tipo di servizio:"
+
+#: ../src/bookmarkeditdialog.c:901
+msgid "Set the port to 0 to use the default port"
+msgstr "Inserisci il numero di porta 0 per usare la porta predefinita"
+
+#: ../src/bookmarkeditdialog.c:907
+msgid "_Location (URI):"
+msgstr "_Posizione (URI):"
+
+#: ../src/bookmarkeditdialog.c:909
 msgid "_User Name:"
 msgstr "Nome _utente:"
 
-#: ../src/bookmarkeditdialog.c:808
+#: ../src/bookmarkeditdialog.c:910
 msgid "Optional information:"
 msgstr "Informazioni opzionali:"
 
-#: ../src/bookmarkeditdialog.c:809
+#: ../src/bookmarkeditdialog.c:911
 msgid "_Port:"
 msgstr "_Porta:"
 
-#: ../src/bookmarkeditdialog.c:811
+#: ../src/bookmarkeditdialog.c:912
+msgid "_Domain:"
+msgstr "_Dominio:"
+
+#: ../src/bookmarkeditdialog.c:913
 msgid "_Share:"
 msgstr "_Condivisione:"
 
-#: ../src/preferencesdialog.c:143
+#: ../src/preferencesdialog.c:152
 msgid "Icons"
 msgstr "Icone"
 
-#: ../src/preferencesdialog.c:144
+#: ../src/preferencesdialog.c:153
 msgid "Text"
 msgstr "Testo"
 
-#: ../src/preferencesdialog.c:145
+#: ../src/preferencesdialog.c:154
 msgid "Both"
 msgstr "Entrambi"
 
-#: ../src/preferencesdialog.c:146
+#: ../src/preferencesdialog.c:155
 msgid "Both horizontal"
 msgstr "Entrambi orizzontalmente"
 
-#: ../src/preferencesdialog.c:165
+#: ../src/preferencesdialog.c:174
 msgid "Horizontal"
 msgstr "Orizzontalmente"
 
-#: ../src/preferencesdialog.c:166
+#: ../src/preferencesdialog.c:175
 msgid "Vertical"
 msgstr "Verticalmente"
 
-#: ../src/preferencesdialog.c:185
+#: ../src/preferencesdialog.c:194
 msgid "Symbols"
 msgstr "Icone"
 
-#: ../src/preferencesdialog.c:186
+#: ../src/preferencesdialog.c:195
 msgid "Detailed"
 msgstr "Dettaglio"
 
-#: ../src/preferencesdialog.c:330
+#: ../src/preferencesdialog.c:339
 msgid "General"
 msgstr "Generale"
 
-#: ../src/preferencesdialog.c:335
+#: ../src/preferencesdialog.c:344
 msgid "_File Manager"
 msgstr "Gestore di _file"
 
-#: ../src/preferencesdialog.c:343
+#: ../src/preferencesdialog.c:352
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr ""
 "Inserire il nome del programma da utilizzare per aprire o visualizzare i "
 "punti di montaggio"
 
-#: ../src/preferencesdialog.c:352
+#: ../src/preferencesdialog.c:361
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Intervallo di connessione automatica"
 
-#: ../src/preferencesdialog.c:358
+#: ../src/preferencesdialog.c:367
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
@@ -373,7 +409,7 @@ msgstr ""
 "Quanto spesso provare la connessione automatica al segnalinro, in secondi. "
 "Indicando zero disabilita il controllo."
 
-#: ../src/preferencesdialog.c:364
+#: ../src/preferencesdialog.c:373
 msgid ""
 "The HAL based volume manager implementation requires the tool 'gnome-mount' "
 "to mount local resources like disks. The Unix based volume manager "
@@ -387,60 +423,79 @@ msgstr ""
 "dispositivi locali.\n"
 "Se si è nel dubbio, utilizzare il gestore basato su HAL."
 
-#: ../src/preferencesdialog.c:370
+#: ../src/preferencesdialog.c:379
 msgid "Use _HAL based volume manager"
 msgstr "Utilizza il gestore di volumi basato su _HAL"
 
-#: ../src/preferencesdialog.c:371 ../src/preferencesdialog.c:379
+#: ../src/preferencesdialog.c:380 ../src/preferencesdialog.c:388
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>La modifica di questa opzione richiede il riavvio di Gigolo.</i>"
 
-#: ../src/preferencesdialog.c:378
+#: ../src/preferencesdialog.c:387
 msgid "Use _Unix based volume manager"
 msgstr "Utilizza il gestore di volumi basato su _Unix"
 
-#: ../src/preferencesdialog.c:394
+#: ../src/preferencesdialog.c:403
 msgid "Interface"
 msgstr "Interfaccia"
 
-#: ../src/preferencesdialog.c:396
+#: ../src/preferencesdialog.c:405
 msgid "_Save window position and geometry"
 msgstr "_Salva la posizione la dimensione della finestra"
 
-#: ../src/preferencesdialog.c:397
+#: ../src/preferencesdialog.c:406
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr ""
 "Salva la posizione e la dimensione della finestra e le ripristina all'avvio"
 
-#: ../src/preferencesdialog.c:400
+#: ../src/preferencesdialog.c:409
 msgid "Show status _icon in the Notification Area"
 msgstr "Mostra l'_icona di stato sulla barra di notifica"
 
-#: ../src/preferencesdialog.c:403
+#: ../src/preferencesdialog.c:412
 msgid "Start _minimized in the Notification Area"
 msgstr "Avvia _minimizzato nella barra di notifica"
 
-#: ../src/preferencesdialog.c:409
+#: ../src/preferencesdialog.c:417
+msgid "Show 'Browse Network' side panel"
+msgstr ""
+
+#: ../src/preferencesdialog.c:418
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba shares"
+msgstr ""
+
+#: ../src/preferencesdialog.c:422
+msgid "Show auto-connect error messages"
+msgstr ""
+
+#: ../src/preferencesdialog.c:423
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+
+#: ../src/preferencesdialog.c:429
 msgid "_View Mode"
 msgstr "Modalità di _visualizzazione"
 
-#: ../src/preferencesdialog.c:422
+#: ../src/preferencesdialog.c:442
 msgid "Toolbar"
 msgstr "Barra degli strumenti"
 
-#: ../src/preferencesdialog.c:424
+#: ../src/preferencesdialog.c:444
 msgid "Show _toolbar"
 msgstr "Mostra la barra degli _strumenti"
 
-#: ../src/preferencesdialog.c:430
+#: ../src/preferencesdialog.c:450
 msgid "St_yle"
 msgstr "S_tile"
 
-#: ../src/preferencesdialog.c:441
+#: ../src/preferencesdialog.c:461
 msgid "_Orientation"
 msgstr "_Orientamento"
 
-#: ../src/preferencesdialog.c:502
+#: ../src/preferencesdialog.c:522
 msgid "Preferences"
 msgstr "Preferenze"
 
@@ -481,3 +536,36 @@ msgstr "Disconnessione da «%s» fallita."
 #: ../src/mountdialog.c:102
 msgid "Connecting"
 msgstr "In connessione"
+
+#: ../src/browsenetworkpanel.c:256
+msgid "No Workgroups found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:508
+#, fuzzy
+msgid "Connect to the selected share"
+msgstr "Disconnette la risorsa selezionata"
+
+#: ../src/browsenetworkpanel.c:516
+msgid "Create a bookmark from the selected share"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:525
+msgid "Refresh the network list"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:536
+msgid "Close panel"
+msgstr ""
+
+#~ msgid "OBEX"
+#~ msgstr "OBEX"
+
+#~ msgid "Authentication information needed"
+#~ msgstr "Informazioni di autenticazione necessarie"
+
+#~ msgid "_Username:"
+#~ msgstr "Nome _utente:"
+
+#~ msgid "_Password:"
+#~ msgstr "_Password:"

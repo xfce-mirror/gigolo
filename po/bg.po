@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-22 23:40+0100\n"
+"POT-Creation-Date: 2009-03-31 23:16+0200\n"
 "PO-Revision-Date: 2009-02-13 00:56+0200\n"
 "Last-Translator: Adrian Dimitrov <Enzo_01@abv.bg>\n"
 "Language-Team: Bulgarian <xfce-i18n@xfce.org>\n"
@@ -17,19 +17,23 @@ msgstr ""
 "X-Poedit-Language: Bulgarian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/main.c:42
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr ""
+
+#: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
 msgstr "Покажи списък на поддържаните URL схеми"
 
-#: ../src/main.c:43
+#: ../src/main.c:48
 msgid "Be verbose"
 msgstr "Повече информация"
 
-#: ../src/main.c:44
+#: ../src/main.c:49
 msgid "Show version information"
 msgstr "Покажи информация за версията"
 
-#: ../src/main.c:99
+#: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- прост интерфейс за лесна връзка с отдалечени файлови системи"
 
@@ -53,130 +57,169 @@ msgstr "HTTP"
 msgid "SSH"
 msgstr "SSH"
 
-#. TODO find something better
-#: ../src/common.c:84
-msgid "OBEX"
-msgstr "OBEX"
+#: ../src/common.c:83
+msgid "Obex"
+msgstr ""
 
-#: ../src/common.c:86
+#: ../src/common.c:85
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: ../src/common.c:88
+#: ../src/common.c:87
 msgid "WebDAV (secure)"
 msgstr "WebDAV (secure)"
 
-#: ../src/common.c:90
+#: ../src/common.c:89
 msgid "Network"
 msgstr "Мрежа"
 
-#: ../src/common.c:92
+#: ../src/common.c:91
 msgid "Custom Location"
 msgstr "Друго местонахождение"
 
-#: ../src/window.c:284
+#: ../src/window.c:275
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Свързване към \"%s\""
 
-#: ../src/window.c:426 ../gigolo.desktop.in.h:1
+#: ../src/window.c:443 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Прост интерфейс за лесно свързване към отдалечени файлови системи"
 
-#: ../src/window.c:427
+#: ../src/window.c:444
 msgid "Copyright 2008-2009 Enrico Tröger"
 msgstr ""
 
-#: ../src/window.c:430
+#: ../src/window.c:447
 msgid "translator-credits"
 msgstr "Adrian Dimitrov <Enzo_01@abv.bg>"
 
-#: ../src/window.c:652 ../src/bookmarkeditdialog.c:181
-#: ../src/bookmarkeditdialog.c:199 ../src/bookmarkeditdialog.c:212
-#: ../src/bookmarkeditdialog.c:223 ../src/bookmarkeditdialog.c:234
+#: ../src/window.c:479
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr ""
+
+#: ../src/window.c:708 ../src/bookmarkeditdialog.c:189
+#: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
+#: ../src/bookmarkeditdialog.c:232 ../src/bookmarkeditdialog.c:243
 msgid "Error"
 msgstr "Грешка"
 
-#: ../src/window.c:1029
+#: ../src/window.c:1154
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/window.c:1030
+#: ../src/window.c:1155
 msgid "_Edit"
 msgstr "Р_едактиране"
 
-#: ../src/window.c:1031
+#: ../src/window.c:1156
 msgid "_Actions"
 msgstr "_Действия"
 
-#: ../src/window.c:1032
+#: ../src/window.c:1157
+#, fuzzy
+msgid "_View"
+msgstr "Изглед"
+
+#: ../src/window.c:1158
 msgid "_Help"
 msgstr "_Помощ"
 
-#: ../src/window.c:1036
+#: ../src/window.c:1162 ../src/browsenetworkpanel.c:475
+#: ../src/browsenetworkpanel.c:515
 msgid "Create _Bookmark"
 msgstr "Създай Отметка"
 
-#: ../src/window.c:1038
+#: ../src/window.c:1164
 msgid "_Edit Bookmarks"
 msgstr "Р_едактирай отметките"
 
-#: ../src/window.c:1039
+#: ../src/window.c:1165
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr ""
 "Отвори мениджъра на отметки, за да добавиш, редактираш или изтриеш отметка"
 
-#: ../src/window.c:1043
+#: ../src/window.c:1169
 msgid "Disconnect the selected resource"
 msgstr "Разкачане на избрания ресурс"
 
-#: ../src/window.c:1045
+#: ../src/window.c:1171
 msgid "Open the selected resource with a file manager"
 msgstr "Отвори избрания ресурс с файлов мениджър"
 
-#: ../src/window.c:1046
+#: ../src/window.c:1172
 msgid "Copy _URI"
 msgstr "Копирай _URI"
 
-#: ../src/window.c:1047
+#: ../src/window.c:1173
 msgid "Quit Gigolo"
 msgstr "Изход"
 
-#: ../src/window.c:1054
+#: ../src/window.c:1174
+msgid "Online Help"
+msgstr ""
+
+#: ../src/window.c:1175
+msgid "Supported Protocols"
+msgstr ""
+
+#: ../src/window.c:1181
+msgid "Side _Panel"
+msgstr ""
+
+#: ../src/window.c:1183
+#, fuzzy
+msgid "_Toolbar"
+msgstr "Лента с инструменти"
+
+#: ../src/window.c:1185
+msgid "Status _Icon"
+msgstr ""
+
+#: ../src/window.c:1191
+#, fuzzy
+msgid "View as _Symbols"
+msgstr "Символи"
+
+#: ../src/window.c:1192
+msgid "View as _Detailed List"
+msgstr ""
+
+#: ../src/window.c:1198
 msgid "_Bookmarks"
 msgstr "_Отметки"
 
-#: ../src/window.c:1054
+#: ../src/window.c:1198
 msgid "Choose a bookmark to connect to"
 msgstr "Избери отметка за свързване"
 
-#: ../src/window.c:1125
+#: ../src/window.c:1272
 msgid "Connected"
 msgstr "Звързан"
 
-#: ../src/window.c:1134 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1281 ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "Тип на услуга"
 
-#: ../src/window.c:1142 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1289 ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Име"
 
-#: ../src/window.c:1209 ../src/window.c:1278 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1356 ../src/window.c:1437 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:574
+#: ../src/settings.c:614
 msgid "Move it now?"
 msgstr "Преместване сега?"
 
-#: ../src/settings.c:575
+#: ../src/settings.c:615
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr ""
 "Gigolo трябва да премести старата конфигурационна директория преди "
 "стартиране."
 
-#: ../src/settings.c:583
+#: ../src/settings.c:623
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
@@ -185,7 +228,7 @@ msgstr ""
 "Твоята стара конфигурационна директория \"%s\" не може да бъде преместена на "
 "\"%s\" (%s). Моля, премести я ръчно на новото местонахождение."
 
-#: ../src/settings.c:586
+#: ../src/settings.c:626
 msgid "Warning"
 msgstr "Предупреждение"
 
@@ -193,28 +236,12 @@ msgstr "Предупреждение"
 msgid "Connect"
 msgstr "Свързване"
 
-#: ../src/passworddialog.c:74
-msgid "Authentication information needed"
-msgstr "Необходима е удостоверяваща информация"
-
-#: ../src/passworddialog.c:97 ../src/bookmarkeditdialog.c:810
-msgid "_Domain:"
-msgstr "_Домейн:"
-
-#: ../src/passworddialog.c:110
-msgid "_Username:"
-msgstr "Потреб_ителско име:"
-
-#: ../src/passworddialog.c:124
-msgid "_Password:"
-msgstr "_Парола:"
-
-#: ../src/bookmarkdialog.c:95
+#: ../src/bookmarkdialog.c:93
 #, c-format
 msgid "Domain: %s"
 msgstr "Домейн: %s"
 
-#: ../src/bookmarkdialog.c:100
+#: ../src/bookmarkdialog.c:98
 #, c-format
 msgid "Share: %s"
 msgstr "Споделен: %s"
@@ -243,129 +270,138 @@ msgstr "Друга информация"
 msgid "Edit Bookmarks"
 msgstr "Редактирай Отметките"
 
-#: ../src/bookmarkeditdialog.c:182
+#: ../src/bookmarkeditdialog.c:190
 msgid "You must enter a name for the bookmark."
 msgstr "Трябва да въведеш име за отметката."
 
-#: ../src/bookmarkeditdialog.c:200
+#: ../src/bookmarkeditdialog.c:209
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr "Въведеното име е вече заето. Моля избери друго."
 
-#: ../src/bookmarkeditdialog.c:213
+#: ../src/bookmarkeditdialog.c:222
 msgid "You must enter a server address or name."
 msgstr "Трябва да въведеш адрес или име на сървъра."
 
-#: ../src/bookmarkeditdialog.c:224
+#: ../src/bookmarkeditdialog.c:233
 msgid "You must enter a share name."
 msgstr "Трябва да въведеш име на споделения ресурс."
 
-#: ../src/bookmarkeditdialog.c:235
+#: ../src/bookmarkeditdialog.c:244
 msgid "You must enter a valid URI for the connection."
 msgstr "Трябва да въведеш валиден URI за връзката."
 
-#: ../src/bookmarkeditdialog.c:689
-msgid "Create Bookmark"
-msgstr "Създай Отметка"
+#: ../src/bookmarkeditdialog.c:494
+#, fuzzy
+msgid "_Device:"
+msgstr "Unix Device"
 
-#: ../src/bookmarkeditdialog.c:696
-msgid "Edit Bookmark"
-msgstr "Редактирай Отметка"
-
-#: ../src/bookmarkeditdialog.c:704
-msgid "Connect to Server"
-msgstr "Свържи към сървъра"
-
-#: ../src/bookmarkeditdialog.c:761
-msgid "_Bookmark name:"
-msgstr "Име отметка:"
-
-#: ../src/bookmarkeditdialog.c:769
-msgid "Au_to-Connect"
-msgstr "Свързвай автоматично"
-
-#: ../src/bookmarkeditdialog.c:777
-msgid "Service t_ype:"
-msgstr "Тип услуга:"
-
-#: ../src/bookmarkeditdialog.c:800
-msgid "Set the port to 0 to use the default port"
-msgstr "Задай за порт '0', за да се използва порта по подразбиране"
-
-#: ../src/bookmarkeditdialog.c:805
-msgid "_Location (URI):"
-msgstr "Местонахождение (URI):"
-
-#: ../src/bookmarkeditdialog.c:806
+#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
 msgid "_Server:"
 msgstr "_Сървър"
 
-#: ../src/bookmarkeditdialog.c:807
+#: ../src/bookmarkeditdialog.c:751
+msgid "Create Bookmark"
+msgstr "Създай Отметка"
+
+#: ../src/bookmarkeditdialog.c:758
+msgid "Edit Bookmark"
+msgstr "Редактирай Отметка"
+
+#: ../src/bookmarkeditdialog.c:766
+msgid "Connect to Server"
+msgstr "Свържи към сървъра"
+
+#: ../src/bookmarkeditdialog.c:862
+msgid "_Bookmark name:"
+msgstr "Име отметка:"
+
+#: ../src/bookmarkeditdialog.c:870
+msgid "Au_to-Connect"
+msgstr "Свързвай автоматично"
+
+#: ../src/bookmarkeditdialog.c:878
+msgid "Service t_ype:"
+msgstr "Тип услуга:"
+
+#: ../src/bookmarkeditdialog.c:901
+msgid "Set the port to 0 to use the default port"
+msgstr "Задай за порт '0', за да се използва порта по подразбиране"
+
+#: ../src/bookmarkeditdialog.c:907
+msgid "_Location (URI):"
+msgstr "Местонахождение (URI):"
+
+#: ../src/bookmarkeditdialog.c:909
 msgid "_User Name:"
 msgstr "_Потребителско име:"
 
-#: ../src/bookmarkeditdialog.c:808
+#: ../src/bookmarkeditdialog.c:910
 msgid "Optional information:"
 msgstr "Допълнителна информация:"
 
-#: ../src/bookmarkeditdialog.c:809
+#: ../src/bookmarkeditdialog.c:911
 msgid "_Port:"
 msgstr "_Порт:"
 
-#: ../src/bookmarkeditdialog.c:811
+#: ../src/bookmarkeditdialog.c:912
+msgid "_Domain:"
+msgstr "_Домейн:"
+
+#: ../src/bookmarkeditdialog.c:913
 msgid "_Share:"
 msgstr "_Споделен ресурс:"
 
-#: ../src/preferencesdialog.c:143
+#: ../src/preferencesdialog.c:152
 msgid "Icons"
 msgstr "Икони"
 
-#: ../src/preferencesdialog.c:144
+#: ../src/preferencesdialog.c:153
 msgid "Text"
 msgstr "Текст"
 
-#: ../src/preferencesdialog.c:145
+#: ../src/preferencesdialog.c:154
 msgid "Both"
 msgstr "И двете"
 
-#: ../src/preferencesdialog.c:146
+#: ../src/preferencesdialog.c:155
 msgid "Both horizontal"
 msgstr "Всичко хоризонтален"
 
-#: ../src/preferencesdialog.c:165
+#: ../src/preferencesdialog.c:174
 msgid "Horizontal"
 msgstr "Хоризонтален"
 
-#: ../src/preferencesdialog.c:166
+#: ../src/preferencesdialog.c:175
 msgid "Vertical"
 msgstr "Вертикален"
 
-#: ../src/preferencesdialog.c:185
+#: ../src/preferencesdialog.c:194
 msgid "Symbols"
 msgstr "Символи"
 
-#: ../src/preferencesdialog.c:186
+#: ../src/preferencesdialog.c:195
 msgid "Detailed"
 msgstr "Детайлен"
 
-#: ../src/preferencesdialog.c:330
+#: ../src/preferencesdialog.c:339
 msgid "General"
 msgstr "Общи"
 
-#: ../src/preferencesdialog.c:335
+#: ../src/preferencesdialog.c:344
 msgid "_File Manager"
 msgstr "_Файлов мениджър"
 
-#: ../src/preferencesdialog.c:343
+#: ../src/preferencesdialog.c:352
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr ""
 "Въведи име на програмата за да се използва, за отваряне или преглеждане на "
 "монтирани точки"
 
-#: ../src/preferencesdialog.c:352
+#: ../src/preferencesdialog.c:361
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Интервал за автоматичните свързвания на Отметките"
 
-#: ../src/preferencesdialog.c:358
+#: ../src/preferencesdialog.c:367
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
@@ -373,7 +409,7 @@ msgstr ""
 "Колко често да се прави опит за свързване, на отметките маркирани за "
 "автоматично свързване. В секунди, 0 изключва проверката."
 
-#: ../src/preferencesdialog.c:364
+#: ../src/preferencesdialog.c:373
 msgid ""
 "The HAL based volume manager implementation requires the tool 'gnome-mount' "
 "to mount local resources like disks. The Unix based volume manager "
@@ -388,59 +424,78 @@ msgstr ""
 "\n"
 "Ако сте несигурни в избора изберете HAL базиран мениджър."
 
-#: ../src/preferencesdialog.c:370
+#: ../src/preferencesdialog.c:379
 msgid "Use _HAL based volume manager"
 msgstr "Използвай _HAL базиран мениджър"
 
-#: ../src/preferencesdialog.c:371 ../src/preferencesdialog.c:379
+#: ../src/preferencesdialog.c:380 ../src/preferencesdialog.c:388
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>Промяната на тази опция на Gigolo, изисква рестартиране.</i>"
 
-#: ../src/preferencesdialog.c:378
+#: ../src/preferencesdialog.c:387
 msgid "Use _Unix based volume manager"
 msgstr "Използвай _Unix базиран мениджър"
 
-#: ../src/preferencesdialog.c:394
+#: ../src/preferencesdialog.c:403
 msgid "Interface"
 msgstr "Интерфейс"
 
-#: ../src/preferencesdialog.c:396
+#: ../src/preferencesdialog.c:405
 msgid "_Save window position and geometry"
 msgstr "_Запази позицията и размера на прозореца"
 
-#: ../src/preferencesdialog.c:397
+#: ../src/preferencesdialog.c:406
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr "Запази позицията и размера на прозореца, и ги използвай при стартиране"
 
-#: ../src/preferencesdialog.c:400
+#: ../src/preferencesdialog.c:409
 msgid "Show status _icon in the Notification Area"
 msgstr "Покажи иконата статус-иконата в лентата за състояния"
 
-#: ../src/preferencesdialog.c:403
+#: ../src/preferencesdialog.c:412
 msgid "Start _minimized in the Notification Area"
 msgstr "Стартирай скрит в лентата за състояния."
 
-#: ../src/preferencesdialog.c:409
+#: ../src/preferencesdialog.c:417
+msgid "Show 'Browse Network' side panel"
+msgstr ""
+
+#: ../src/preferencesdialog.c:418
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba shares"
+msgstr ""
+
+#: ../src/preferencesdialog.c:422
+msgid "Show auto-connect error messages"
+msgstr ""
+
+#: ../src/preferencesdialog.c:423
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+
+#: ../src/preferencesdialog.c:429
 msgid "_View Mode"
 msgstr "Изглед"
 
-#: ../src/preferencesdialog.c:422
+#: ../src/preferencesdialog.c:442
 msgid "Toolbar"
 msgstr "Лента с инструменти"
 
-#: ../src/preferencesdialog.c:424
+#: ../src/preferencesdialog.c:444
 msgid "Show _toolbar"
 msgstr "Покажи лентата с инструментите"
 
-#: ../src/preferencesdialog.c:430
+#: ../src/preferencesdialog.c:450
 msgid "St_yle"
 msgstr "Стил"
 
-#: ../src/preferencesdialog.c:441
+#: ../src/preferencesdialog.c:461
 msgid "_Orientation"
 msgstr "Ориентация"
 
-#: ../src/preferencesdialog.c:502
+#: ../src/preferencesdialog.c:522
 msgid "Preferences"
 msgstr "Предпочитания"
 
@@ -481,3 +536,36 @@ msgstr "Разкачането от \"%s\" - провалено."
 #: ../src/mountdialog.c:102
 msgid "Connecting"
 msgstr "Свързване"
+
+#: ../src/browsenetworkpanel.c:256
+msgid "No Workgroups found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:508
+#, fuzzy
+msgid "Connect to the selected share"
+msgstr "Разкачане на избрания ресурс"
+
+#: ../src/browsenetworkpanel.c:516
+msgid "Create a bookmark from the selected share"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:525
+msgid "Refresh the network list"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:536
+msgid "Close panel"
+msgstr ""
+
+#~ msgid "OBEX"
+#~ msgstr "OBEX"
+
+#~ msgid "Authentication information needed"
+#~ msgstr "Необходима е удостоверяваща информация"
+
+#~ msgid "_Username:"
+#~ msgstr "Потреб_ителско име:"
+
+#~ msgid "_Password:"
+#~ msgstr "_Парола:"

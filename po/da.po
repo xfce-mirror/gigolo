@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-22 23:40+0100\n"
+"POT-Creation-Date: 2009-03-31 23:16+0200\n"
 "PO-Revision-Date: 2009-03-20 12:51+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -18,19 +18,23 @@ msgstr ""
 "X-Poedit-Country: DENMARK\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/main.c:42
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr ""
+
+#: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
 msgstr "Udskriv en liste med understøttede URI-skemaer"
 
-#: ../src/main.c:43
+#: ../src/main.c:48
 msgid "Be verbose"
 msgstr "Vær uddybende"
 
-#: ../src/main.c:44
+#: ../src/main.c:49
 msgid "Show version information"
 msgstr "Vis versionsinformation"
 
-#: ../src/main.c:99
+#: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- en simpel grænseflade  til nemt at forbinde til eksterne filsystemer"
 
@@ -54,42 +58,40 @@ msgstr "HTTP"
 msgid "SSH"
 msgstr "SSH"
 
-#. TODO find something better
-#: ../src/common.c:84
-msgid "OBEX"
-msgstr "OBEX"
+#: ../src/common.c:83
+msgid "Obex"
+msgstr ""
 
-#: ../src/common.c:86
+#: ../src/common.c:85
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: ../src/common.c:88
+#: ../src/common.c:87
 msgid "WebDAV (secure)"
 msgstr "WebDAV (sikker)"
 
-#: ../src/common.c:90
+#: ../src/common.c:89
 msgid "Network"
 msgstr "Netværk"
 
-#: ../src/common.c:92
+#: ../src/common.c:91
 msgid "Custom Location"
 msgstr "Tilpasset sted"
 
-#: ../src/window.c:284
+#: ../src/window.c:275
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Forbinder til \"%s\""
 
-#: ../src/window.c:426
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:443 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "En simpel grænseflade til nemt at forbinde til eksterne filsystemer"
 
-#: ../src/window.c:427
+#: ../src/window.c:444
 msgid "Copyright 2008-2009 Enrico Tröger"
 msgstr "Ophavsret 2008-2009 Enrico Tröger"
 
-#: ../src/window.c:430
+#: ../src/window.c:447
 msgid "translator-credits"
 msgstr ""
 "Per Kongstad\n"
@@ -97,101 +99,140 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/window.c:652
-#: ../src/bookmarkeditdialog.c:181
-#: ../src/bookmarkeditdialog.c:199
-#: ../src/bookmarkeditdialog.c:212
-#: ../src/bookmarkeditdialog.c:223
-#: ../src/bookmarkeditdialog.c:234
+#: ../src/window.c:479
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr ""
+
+#: ../src/window.c:708 ../src/bookmarkeditdialog.c:189
+#: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
+#: ../src/bookmarkeditdialog.c:232 ../src/bookmarkeditdialog.c:243
 msgid "Error"
 msgstr "Fejl"
 
-#: ../src/window.c:1029
+#: ../src/window.c:1154
 msgid "_File"
 msgstr "_Fil"
 
-#: ../src/window.c:1030
+#: ../src/window.c:1155
 msgid "_Edit"
 msgstr "_Redigér"
 
-#: ../src/window.c:1031
+#: ../src/window.c:1156
 msgid "_Actions"
 msgstr "H_andlinger"
 
-#: ../src/window.c:1032
+#: ../src/window.c:1157
+#, fuzzy
+msgid "_View"
+msgstr "_Vis tilstand"
+
+#: ../src/window.c:1158
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: ../src/window.c:1036
+#: ../src/window.c:1162 ../src/browsenetworkpanel.c:475
+#: ../src/browsenetworkpanel.c:515
 msgid "Create _Bookmark"
 msgstr "Opret _bogmærke"
 
-#: ../src/window.c:1038
+#: ../src/window.c:1164
 msgid "_Edit Bookmarks"
 msgstr "_Redigér bogmærker"
 
-#: ../src/window.c:1039
+#: ../src/window.c:1165
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Åbn bogmærkehåndteringen for at tilføje, redigere eller slette bogmærker"
+msgstr ""
+"Åbn bogmærkehåndteringen for at tilføje, redigere eller slette bogmærker"
 
-#: ../src/window.c:1043
+#: ../src/window.c:1169
 msgid "Disconnect the selected resource"
 msgstr "Afbryd den valgte resurse"
 
-#: ../src/window.c:1045
+#: ../src/window.c:1171
 msgid "Open the selected resource with a file manager"
 msgstr "Åbn den valgte resurse med en filhåndterer"
 
-#: ../src/window.c:1046
+#: ../src/window.c:1172
 msgid "Copy _URI"
 msgstr "Kopiér _URI"
 
-#: ../src/window.c:1047
+#: ../src/window.c:1173
 msgid "Quit Gigolo"
 msgstr "Afslut Gigolo"
 
-#: ../src/window.c:1054
+#: ../src/window.c:1174
+msgid "Online Help"
+msgstr ""
+
+#: ../src/window.c:1175
+msgid "Supported Protocols"
+msgstr ""
+
+#: ../src/window.c:1181
+msgid "Side _Panel"
+msgstr ""
+
+#: ../src/window.c:1183
+#, fuzzy
+msgid "_Toolbar"
+msgstr "Værktøjslinje"
+
+#: ../src/window.c:1185
+msgid "Status _Icon"
+msgstr ""
+
+#: ../src/window.c:1191
+#, fuzzy
+msgid "View as _Symbols"
+msgstr "Symboler"
+
+#: ../src/window.c:1192
+msgid "View as _Detailed List"
+msgstr ""
+
+#: ../src/window.c:1198
 msgid "_Bookmarks"
 msgstr "_Bogmærker"
 
-#: ../src/window.c:1054
+#: ../src/window.c:1198
 msgid "Choose a bookmark to connect to"
 msgstr "Vælg et bogmærke at forbinde til"
 
-#: ../src/window.c:1125
+#: ../src/window.c:1272
 msgid "Connected"
 msgstr "Forbindelse"
 
-#: ../src/window.c:1134
-#: ../src/bookmarkdialog.c:300
+#: ../src/window.c:1281 ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "Type af tjeneste"
 
-#: ../src/window.c:1142
-#: ../src/bookmarkdialog.c:292
+#: ../src/window.c:1289 ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Navn"
 
-#: ../src/window.c:1209
-#: ../src/window.c:1278
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1356 ../src/window.c:1437 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:574
+#: ../src/settings.c:614
 msgid "Move it now?"
 msgstr "Flyt det nu?"
 
-#: ../src/settings.c:575
+#: ../src/settings.c:615
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Gigolo er nødt til at flytte din gamle indstillingsmappe før den starter."
+msgstr ""
+"Gigolo er nødt til at flytte din gamle indstillingsmappe før den starter."
 
-#: ../src/settings.c:583
+#: ../src/settings.c:623
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "Din gamle indstillingsmappe \"%s\" kunne ikke flyttes til \"%s\" (%s). Flyt venligst manuelt mappen til den nye placering."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"Din gamle indstillingsmappe \"%s\" kunne ikke flyttes til \"%s\" (%s). Flyt "
+"venligst manuelt mappen til den nye placering."
 
-#: ../src/settings.c:586
+#: ../src/settings.c:626
 msgid "Warning"
 msgstr "Advarsel"
 
@@ -199,29 +240,12 @@ msgstr "Advarsel"
 msgid "Connect"
 msgstr "Forbind"
 
-#: ../src/passworddialog.c:74
-msgid "Authentication information needed"
-msgstr "Kræver godkendelsesinformation"
-
-#: ../src/passworddialog.c:97
-#: ../src/bookmarkeditdialog.c:810
-msgid "_Domain:"
-msgstr "_Domæne:"
-
-#: ../src/passworddialog.c:110
-msgid "_Username:"
-msgstr "_Brugernavn:"
-
-#: ../src/passworddialog.c:124
-msgid "_Password:"
-msgstr "_Adgangskode:"
-
-#: ../src/bookmarkdialog.c:95
+#: ../src/bookmarkdialog.c:93
 #, c-format
 msgid "Domain: %s"
 msgstr "Domæne: %s"
 
-#: ../src/bookmarkdialog.c:100
+#: ../src/bookmarkdialog.c:98
 #, c-format
 msgid "Share: %s"
 msgstr "Deling: %s"
@@ -250,192 +274,231 @@ msgstr "Anden information"
 msgid "Edit Bookmarks"
 msgstr "Redigér bogmærker"
 
-#: ../src/bookmarkeditdialog.c:182
+#: ../src/bookmarkeditdialog.c:190
 msgid "You must enter a name for the bookmark."
 msgstr "Du skal indtaste et navn til bogmærket."
 
-#: ../src/bookmarkeditdialog.c:200
+#: ../src/bookmarkeditdialog.c:209
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr "Det indtastede bogmærkenavn findes allerede. Vælg venligst et andet."
 
-#: ../src/bookmarkeditdialog.c:213
+#: ../src/bookmarkeditdialog.c:222
 msgid "You must enter a server address or name."
 msgstr "Du skal indtaste en serveradresse eller -navn."
 
-#: ../src/bookmarkeditdialog.c:224
+#: ../src/bookmarkeditdialog.c:233
 msgid "You must enter a share name."
 msgstr "Du skal indtaste et delingsnavn."
 
-#: ../src/bookmarkeditdialog.c:235
+#: ../src/bookmarkeditdialog.c:244
 msgid "You must enter a valid URI for the connection."
 msgstr "Du skal indtaste en gyldig URI til forbindelsen."
 
-#: ../src/bookmarkeditdialog.c:689
-msgid "Create Bookmark"
-msgstr "Opret bogmærke"
+#: ../src/bookmarkeditdialog.c:494
+#, fuzzy
+msgid "_Device:"
+msgstr "Unix-enhed"
 
-#: ../src/bookmarkeditdialog.c:696
-msgid "Edit Bookmark"
-msgstr "Redigér bogmærke"
-
-#: ../src/bookmarkeditdialog.c:704
-msgid "Connect to Server"
-msgstr "Forbind til server"
-
-#: ../src/bookmarkeditdialog.c:761
-msgid "_Bookmark name:"
-msgstr "_Bogmærkenavn:"
-
-#: ../src/bookmarkeditdialog.c:769
-msgid "Au_to-Connect"
-msgstr "Forb_ind automatisk"
-
-#: ../src/bookmarkeditdialog.c:777
-msgid "Service t_ype:"
-msgstr "Type af t_jeneste:"
-
-#: ../src/bookmarkeditdialog.c:800
-msgid "Set the port to 0 to use the default port"
-msgstr "Indstil porten til 0 for at bruge standardporten"
-
-#: ../src/bookmarkeditdialog.c:805
-msgid "_Location (URI):"
-msgstr "_Sted (URI):"
-
-#: ../src/bookmarkeditdialog.c:806
+#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:807
+#: ../src/bookmarkeditdialog.c:751
+msgid "Create Bookmark"
+msgstr "Opret bogmærke"
+
+#: ../src/bookmarkeditdialog.c:758
+msgid "Edit Bookmark"
+msgstr "Redigér bogmærke"
+
+#: ../src/bookmarkeditdialog.c:766
+msgid "Connect to Server"
+msgstr "Forbind til server"
+
+#: ../src/bookmarkeditdialog.c:862
+msgid "_Bookmark name:"
+msgstr "_Bogmærkenavn:"
+
+#: ../src/bookmarkeditdialog.c:870
+msgid "Au_to-Connect"
+msgstr "Forb_ind automatisk"
+
+#: ../src/bookmarkeditdialog.c:878
+msgid "Service t_ype:"
+msgstr "Type af t_jeneste:"
+
+#: ../src/bookmarkeditdialog.c:901
+msgid "Set the port to 0 to use the default port"
+msgstr "Indstil porten til 0 for at bruge standardporten"
+
+#: ../src/bookmarkeditdialog.c:907
+msgid "_Location (URI):"
+msgstr "_Sted (URI):"
+
+#: ../src/bookmarkeditdialog.c:909
 msgid "_User Name:"
 msgstr "_Brugernavn:"
 
-#: ../src/bookmarkeditdialog.c:808
+#: ../src/bookmarkeditdialog.c:910
 msgid "Optional information:"
 msgstr "Valgfri information:"
 
-#: ../src/bookmarkeditdialog.c:809
+#: ../src/bookmarkeditdialog.c:911
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:811
+#: ../src/bookmarkeditdialog.c:912
+msgid "_Domain:"
+msgstr "_Domæne:"
+
+#: ../src/bookmarkeditdialog.c:913
 msgid "_Share:"
 msgstr "_Deling:"
 
-#: ../src/preferencesdialog.c:143
+#: ../src/preferencesdialog.c:152
 msgid "Icons"
 msgstr "Ikoner"
 
-#: ../src/preferencesdialog.c:144
+#: ../src/preferencesdialog.c:153
 msgid "Text"
 msgstr "Tekst"
 
-#: ../src/preferencesdialog.c:145
+#: ../src/preferencesdialog.c:154
 msgid "Both"
 msgstr "Begge"
 
-#: ../src/preferencesdialog.c:146
+#: ../src/preferencesdialog.c:155
 msgid "Both horizontal"
 msgstr "Begge vandret"
 
-#: ../src/preferencesdialog.c:165
+#: ../src/preferencesdialog.c:174
 msgid "Horizontal"
 msgstr "Vandret"
 
-#: ../src/preferencesdialog.c:166
+#: ../src/preferencesdialog.c:175
 msgid "Vertical"
 msgstr "Lodret"
 
-#: ../src/preferencesdialog.c:185
+#: ../src/preferencesdialog.c:194
 msgid "Symbols"
 msgstr "Symboler"
 
-#: ../src/preferencesdialog.c:186
+#: ../src/preferencesdialog.c:195
 msgid "Detailed"
 msgstr "Detaljeret"
 
-#: ../src/preferencesdialog.c:330
+#: ../src/preferencesdialog.c:339
 msgid "General"
 msgstr "Generelt"
 
-#: ../src/preferencesdialog.c:335
+#: ../src/preferencesdialog.c:344
 msgid "_File Manager"
 msgstr "_Filhåndtering"
 
-#: ../src/preferencesdialog.c:343
-msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Indtast navnet til et program til brug for at åbne eller vise monteringspunkter"
-
 #: ../src/preferencesdialog.c:352
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr ""
+"Indtast navnet til et program til brug for at åbne eller vise "
+"monteringspunkter"
+
+#: ../src/preferencesdialog.c:361
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Bogmærk forbind automatisk interval"
 
-#: ../src/preferencesdialog.c:358
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "Hvor ofte skal bogmærker prøves for automatisk forbindelse, i antal sekunder. 0 slår kontrol fra."
-
-#: ../src/preferencesdialog.c:364
+#: ../src/preferencesdialog.c:367
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"Hvor ofte skal bogmærker prøves for automatisk forbindelse, i antal "
+"sekunder. 0 slår kontrol fra."
+
+#: ../src/preferencesdialog.c:373
+msgid ""
+"The HAL based volume manager implementation requires the tool 'gnome-mount' "
+"to mount local resources like disks. The Unix based volume manager "
+"implementation can mount such resources directly and also lists other local "
+"devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Implementering af den HAL-baserede arkivhåndtering kræver værktøjet 'gnome-mount' for at montere lokale resurser som diske. Implementering af den Unix-baserede arkivhåndtering kan montere sådanne resurser direkte og viser også andre lokale enheder.\n"
+"Implementering af den HAL-baserede arkivhåndtering kræver værktøjet 'gnome-"
+"mount' for at montere lokale resurser som diske. Implementering af den Unix-"
+"baserede arkivhåndtering kan montere sådanne resurser direkte og viser også "
+"andre lokale enheder.\n"
 "Hvis du er usikker, brug den HAL-baserede overvåger."
 
-#: ../src/preferencesdialog.c:370
+#: ../src/preferencesdialog.c:379
 msgid "Use _HAL based volume manager"
 msgstr "Brug _HAL-baseret arkivhåndtering"
 
-#: ../src/preferencesdialog.c:371
-#: ../src/preferencesdialog.c:379
+#: ../src/preferencesdialog.c:380 ../src/preferencesdialog.c:388
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>Ændring af denne indstilling kræver en genstart af Gigolo.</i>"
 
-#: ../src/preferencesdialog.c:378
+#: ../src/preferencesdialog.c:387
 msgid "Use _Unix based volume manager"
 msgstr "Brug _Unix-baseret arkivhåndtering"
 
-#: ../src/preferencesdialog.c:394
+#: ../src/preferencesdialog.c:403
 msgid "Interface"
 msgstr "Grænseflade"
 
-#: ../src/preferencesdialog.c:396
+#: ../src/preferencesdialog.c:405
 msgid "_Save window position and geometry"
 msgstr "_Gem vinduesplacering og geometri"
 
-#: ../src/preferencesdialog.c:397
+#: ../src/preferencesdialog.c:406
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr "Gemmer vinduets placering og geometri og genopretter disse ved starten"
 
-#: ../src/preferencesdialog.c:400
+#: ../src/preferencesdialog.c:409
 msgid "Show status _icon in the Notification Area"
 msgstr "Vis status_ikon i statusfeltet"
 
-#: ../src/preferencesdialog.c:403
+#: ../src/preferencesdialog.c:412
 msgid "Start _minimized in the Notification Area"
 msgstr "Start _minimeret i statusfeltet"
 
-#: ../src/preferencesdialog.c:409
+#: ../src/preferencesdialog.c:417
+msgid "Show 'Browse Network' side panel"
+msgstr ""
+
+#: ../src/preferencesdialog.c:418
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba shares"
+msgstr ""
+
+#: ../src/preferencesdialog.c:422
+msgid "Show auto-connect error messages"
+msgstr ""
+
+#: ../src/preferencesdialog.c:423
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+
+#: ../src/preferencesdialog.c:429
 msgid "_View Mode"
 msgstr "_Vis tilstand"
 
-#: ../src/preferencesdialog.c:422
+#: ../src/preferencesdialog.c:442
 msgid "Toolbar"
 msgstr "Værktøjslinje"
 
-#: ../src/preferencesdialog.c:424
+#: ../src/preferencesdialog.c:444
 msgid "Show _toolbar"
 msgstr "Vis _værktøjslinje"
 
-#: ../src/preferencesdialog.c:430
+#: ../src/preferencesdialog.c:450
 msgid "St_yle"
 msgstr "S_til"
 
-#: ../src/preferencesdialog.c:441
+#: ../src/preferencesdialog.c:461
 msgid "_Orientation"
 msgstr "_Orientering"
 
-#: ../src/preferencesdialog.c:502
+#: ../src/preferencesdialog.c:522
 msgid "Preferences"
 msgstr "Indstillinger"
 
@@ -459,13 +522,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix-enhed: %s</b>"
 
-#: ../src/backendgvfs.c:367
-#: ../src/backendgvfs.c:398
+#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
 msgid "unknown"
 msgstr "ukendt"
 
-#: ../src/backendgvfs.c:371
-#: ../src/backendgvfs.c:448
+#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Forbindelse til \"%s\" fejlede."
@@ -478,3 +539,36 @@ msgstr "Afbryd forbindelse til \"%s\" fejlede."
 #: ../src/mountdialog.c:102
 msgid "Connecting"
 msgstr "Forbinder"
+
+#: ../src/browsenetworkpanel.c:256
+msgid "No Workgroups found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:508
+#, fuzzy
+msgid "Connect to the selected share"
+msgstr "Afbryd den valgte resurse"
+
+#: ../src/browsenetworkpanel.c:516
+msgid "Create a bookmark from the selected share"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:525
+msgid "Refresh the network list"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:536
+msgid "Close panel"
+msgstr ""
+
+#~ msgid "OBEX"
+#~ msgstr "OBEX"
+
+#~ msgid "Authentication information needed"
+#~ msgstr "Kræver godkendelsesinformation"
+
+#~ msgid "_Username:"
+#~ msgstr "_Brugernavn:"
+
+#~ msgid "_Password:"
+#~ msgstr "_Adgangskode:"

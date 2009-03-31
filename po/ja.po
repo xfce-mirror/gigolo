@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-28 23:48+0900\n"
+"POT-Creation-Date: 2009-03-31 23:16+0200\n"
 "PO-Revision-Date: 2009-03-22 17:52+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -77,144 +77,144 @@ msgstr "ネットワーク"
 msgid "Custom Location"
 msgstr "個別に指定した場所"
 
-#: ../src/window.c:292
+#: ../src/window.c:275
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "接続しています: \"%s\""
 
-#: ../src/window.c:461 ../gigolo.desktop.in.h:1
+#: ../src/window.c:443 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "リモートファイルシステムに簡単に接続するシンプルなフロントエンド"
 
-#: ../src/window.c:462
+#: ../src/window.c:444
 msgid "Copyright 2008-2009 Enrico Tröger"
 msgstr "Copyright 2008-2009 Enrico Tröger"
 
-#: ../src/window.c:465
+#: ../src/window.c:447
 msgid "translator-credits"
 msgstr "Masato Hashimoto <cabezon.hashimoto@gmail.com>"
 
-#: ../src/window.c:497
+#: ../src/window.c:479
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo は GVFS により以下のプロトコルを使用することができます:"
 
-#: ../src/window.c:726 ../src/bookmarkeditdialog.c:189
+#: ../src/window.c:708 ../src/bookmarkeditdialog.c:189
 #: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
 #: ../src/bookmarkeditdialog.c:232 ../src/bookmarkeditdialog.c:243
 msgid "Error"
 msgstr "エラー"
 
-#: ../src/window.c:1170
+#: ../src/window.c:1154
 msgid "_File"
 msgstr "ファイル(_F)"
 
-#: ../src/window.c:1171
+#: ../src/window.c:1155
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: ../src/window.c:1172
+#: ../src/window.c:1156
 msgid "_Actions"
 msgstr "アクション(_A)"
 
-#: ../src/window.c:1173
+#: ../src/window.c:1157
 msgid "_View"
 msgstr "表示(_V)"
 
-#: ../src/window.c:1174
+#: ../src/window.c:1158
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../src/window.c:1178 ../src/browsenetworkpanel.c:475
+#: ../src/window.c:1162 ../src/browsenetworkpanel.c:475
 #: ../src/browsenetworkpanel.c:515
 msgid "Create _Bookmark"
 msgstr "ブックマークの作成(_B)"
 
-#: ../src/window.c:1180
+#: ../src/window.c:1164
 msgid "_Edit Bookmarks"
 msgstr "ブックマークの編集(_E)"
 
-#: ../src/window.c:1181
+#: ../src/window.c:1165
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr ""
 "ブックマークマネージャを開き、ブックマークの追加、編集、または削除を行います"
 
-#: ../src/window.c:1185
+#: ../src/window.c:1169
 msgid "Disconnect the selected resource"
 msgstr "選択されたリソースとの接続を切ります"
 
-#: ../src/window.c:1187
+#: ../src/window.c:1171
 msgid "Open the selected resource with a file manager"
 msgstr "選択されたリソースをファイルマネージャで開きます"
 
-#: ../src/window.c:1188
+#: ../src/window.c:1172
 msgid "Copy _URI"
 msgstr "URI のコピー(_U)"
 
-#: ../src/window.c:1189
+#: ../src/window.c:1173
 msgid "Quit Gigolo"
 msgstr "Gigolo を終了します"
 
-#: ../src/window.c:1190
+#: ../src/window.c:1174
 msgid "Online Help"
 msgstr "オンラインヘルプ"
 
-#: ../src/window.c:1191
+#: ../src/window.c:1175
 msgid "Supported Protocols"
 msgstr "サポートプロトコル"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1181
 msgid "Side _Panel"
 msgstr "サイドパネル(_P)"
 
-#: ../src/window.c:1199
+#: ../src/window.c:1183
 msgid "_Toolbar"
 msgstr "ツールバー(_T)"
 
-#: ../src/window.c:1201
+#: ../src/window.c:1185
 msgid "Status _Icon"
 msgstr "ステータスアイコン(_I)"
 
-#: ../src/window.c:1207
+#: ../src/window.c:1191
 msgid "View as _Symbols"
 msgstr "シンボルで表示(_S)"
 
-#: ../src/window.c:1208
+#: ../src/window.c:1192
 msgid "View as _Detailed List"
 msgstr "詳細リストで表示(_D)"
 
-#: ../src/window.c:1214
+#: ../src/window.c:1198
 msgid "_Bookmarks"
 msgstr "ブックマーク(_B)"
 
-#: ../src/window.c:1214
+#: ../src/window.c:1198
 msgid "Choose a bookmark to connect to"
 msgstr "接続するブックマークを選択します"
 
-#: ../src/window.c:1288
+#: ../src/window.c:1272
 msgid "Connected"
 msgstr "接続中"
 
-#: ../src/window.c:1297 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1281 ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "サービスタイプ"
 
-#: ../src/window.c:1305 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1289 ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "名前"
 
-#: ../src/window.c:1372 ../src/window.c:1453 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1356 ../src/window.c:1437 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:596
+#: ../src/settings.c:614
 msgid "Move it now?"
 msgstr "今移動しますか?"
 
-#: ../src/settings.c:597
+#: ../src/settings.c:615
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo は起動前に古い設定ディレクトリの移動を必要とします。"
 
-#: ../src/settings.c:605
+#: ../src/settings.c:623
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
@@ -223,7 +223,7 @@ msgstr ""
 "古い設定ディレクトリ \"%s\" を \"%s\" へ移動できませんでした (%s)。ディレクト"
 "リを手動で新しい場所へ移動してください。"
 
-#: ../src/settings.c:608
+#: ../src/settings.c:626
 msgid "Warning"
 msgstr "警告"
 
@@ -463,31 +463,40 @@ msgstr ""
 "このオプションを有効にすると、Samba 共有の利用が可能なローカルネットワークを"
 "参照するサイドパネルを表示します"
 
-#: ../src/preferencesdialog.c:425
+#: ../src/preferencesdialog.c:422
+msgid "Show auto-connect error messages"
+msgstr ""
+
+#: ../src/preferencesdialog.c:423
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+
+#: ../src/preferencesdialog.c:429
 msgid "_View Mode"
 msgstr "表示モード(_V)"
 
-#: ../src/preferencesdialog.c:438
+#: ../src/preferencesdialog.c:442
 msgid "Toolbar"
 msgstr "ツールバー"
 
-#: ../src/preferencesdialog.c:440
+#: ../src/preferencesdialog.c:444
 msgid "Show _toolbar"
 msgstr "ツールバーを表示する(_T)"
 
-#: ../src/preferencesdialog.c:446
+#: ../src/preferencesdialog.c:450
 msgid "St_yle"
 msgstr "スタイル(_Y)"
 
-#: ../src/preferencesdialog.c:457
+#: ../src/preferencesdialog.c:461
 msgid "_Orientation"
 msgstr "方向(_O)"
 
-#: ../src/preferencesdialog.c:518
+#: ../src/preferencesdialog.c:522
 msgid "Preferences"
 msgstr "設定"
 
-#: ../src/backendgvfs.c:168
+#: ../src/backendgvfs.c:169
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -502,21 +511,21 @@ msgstr ""
 "接続: Yes\n"
 "サービスタイプ: %s"
 
-#: ../src/backendgvfs.c:182
+#: ../src/backendgvfs.c:183
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix デバイス: %s</b>"
 
-#: ../src/backendgvfs.c:366 ../src/backendgvfs.c:397
+#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
 msgid "unknown"
 msgstr "不明"
 
-#: ../src/backendgvfs.c:370 ../src/backendgvfs.c:447
+#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "\"%s\" への接続に失敗しました。"
 
-#: ../src/backendgvfs.c:401
+#: ../src/backendgvfs.c:402
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "\"%s\" からの切断に失敗しました。"
