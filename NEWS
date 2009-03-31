@@ -1,3 +1,23 @@
+Gigolo 0.3.0 (March 31, 2009)
+
+	* Add a 'Browse Network' side panel to browse for available
+	  Samba/Windows network shares.
+	* Detect an already running instance and show its window instead of
+	  starting a new instance.
+	* Add command line option "--new-instance" ("-i") to restore the old
+	  behaviour.
+	* Use the GtkMountOperation dialog when additional authentication
+	  information are needed. This implicitly allows choosing the method
+	  to store passwords (never, session, forever).
+	* Minimise to tray when the close button is clicked instead of when
+	  minimising the main window.
+	* Add a new preference to set whether to show error message dialogs
+	  when auto-connecting bookmarks.
+	* Various fixes and improvements to URI handling.
+	* Add a View menu to quickly change GUI preferences.
+	* Add Online Help and Supported Protocols help menu items.
+
+
 Gigolo 0.2.1 (February 22, 2009)
 
 	* Fix wrong saving of Obex URIs

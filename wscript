@@ -27,7 +27,7 @@ import sys, os, shutil
 
 
 APPNAME = 'gigolo'
-VERSION = '0.2.1'
+VERSION = '0.3.0'
 
 srcdir = '.'
 blddir = '_build_'
