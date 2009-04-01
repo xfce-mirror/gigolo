@@ -1404,6 +1404,10 @@ static void gigolo_window_init(GigoloWindow *window)
 	priv->action_open = gtk_action_group_get_action(priv->action_group, "Open");
 	priv->action_copyuri = gtk_action_group_get_action(priv->action_group, "CopyURI");
 
+	g_object_set(priv->action_bookmarks, "is-important", TRUE, NULL);
+	g_object_set(gtk_action_group_get_action(priv->action_group, "EditBookmarks"),
+		"is-important", TRUE, NULL);
+
 	/* Panel */
 	panel_pane = gtk_hpaned_new();
 	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
