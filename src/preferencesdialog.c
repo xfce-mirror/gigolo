@@ -192,7 +192,7 @@ static GtkWidget *add_view_mode_combo(GigoloSettings *settings, const gchar *pro
 
 	widget = gtk_combo_box_new_text();
 	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Symbols"));
-	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Detailed"));
+	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Detailed List"));
 
 	gtk_combo_box_set_active(GTK_COMBO_BOX(widget), value);
 
@@ -426,7 +426,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	hbox = gtk_hbox_new(FALSE, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
-	label4 = gtk_label_new_with_mnemonic(_("_View Mode"));
+	label4 = gtk_label_new_with_mnemonic(_("_Connection List Mode"));
 	gtk_misc_set_alignment(GTK_MISC(label4), 0.0f, 0.5f);
 	gtk_box_pack_start(GTK_BOX(hbox), label4, FALSE, FALSE, 0);
 
