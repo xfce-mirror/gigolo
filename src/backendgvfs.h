@@ -51,18 +51,18 @@ typedef struct
 {
 	gchar *name;
 	gchar *uri;
-	GIcon *icon;
+	gpointer *icon;
 } GigoloHostUri;
 
 
 GType				gigolo_backend_gvfs_get_type					(void);
 GigoloBackendGVFS*	gigolo_backend_gvfs_new							(GtkListStore *store);
 
-gboolean			gigolo_backend_gvfs_is_mount					(gpointer mnt);
-void				gigolo_backend_gvfs_get_name_and_uri_from_mount	(GMount *mount, gchar **name, gchar **uri);
+gboolean			gigolo_backend_gvfs_is_mount					(gpointer mount);
+void				gigolo_backend_gvfs_get_name_and_uri_from_mount	(gpointer mount, gchar **name, gchar **uri);
 
-gboolean			gigolo_backend_gvfs_mount_volume				(GigoloBackendGVFS *backend, GVolume *vol);
-void				gigolo_backend_gvfs_unmount_mount				(GigoloBackendGVFS *backend, GMount *mount);
+gboolean			gigolo_backend_gvfs_mount_volume				(GigoloBackendGVFS *backend, gpointer vol);
+void				gigolo_backend_gvfs_unmount_mount				(GigoloBackendGVFS *backend, gpointer mount);
 
 void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 																	 const gchar *uri,
@@ -70,7 +70,7 @@ void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 																	 GtkWidget *dialog,
 																	 gboolean show_errors);
 
-gchar*				gigolo_backend_gvfs_get_volume_identifier		(GVolume *volume);
+gchar*				gigolo_backend_gvfs_get_volume_identifier		(gpointer volume);
 
 gchar**				gigolo_backend_gvfs_get_smb_shares_from_uri		(const gchar *uri);
 

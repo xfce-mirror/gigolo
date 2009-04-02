@@ -326,23 +326,23 @@ GigoloBackendGVFS *gigolo_backend_gvfs_new(GtkListStore *store)
 }
 
 
-gboolean gigolo_backend_gvfs_is_mount(gpointer mnt)
+gboolean gigolo_backend_gvfs_is_mount(gpointer mount)
 {
-	g_return_val_if_fail(mnt != NULL, FALSE);
+	g_return_val_if_fail(mount != NULL, FALSE);
 
-	return G_IS_MOUNT(mnt);
+	return G_IS_MOUNT(mount);
 }
 
 
-void gigolo_backend_gvfs_get_name_and_uri_from_mount(GMount *mount, gchar **name, gchar **uri)
+void gigolo_backend_gvfs_get_name_and_uri_from_mount(gpointer mount, gchar **name, gchar **uri)
 {
 	GFile *file;
 
 	g_return_if_fail(mount != NULL);
 
-	file = g_mount_get_root(mount);
+	file = g_mount_get_root(G_MOUNT(mount));
 	if (name != NULL)
-		*name = g_mount_get_name(mount);
+		*name = g_mount_get_name(G_MOUNT(mount));
 	if (uri != NULL)
 		*uri = g_file_get_uri(file);
 
@@ -410,14 +410,14 @@ static void unmount_finished_cb(GObject *src, GAsyncResult *res, gpointer backen
 }
 
 
-gboolean gigolo_backend_gvfs_mount_volume(GigoloBackendGVFS *backend, GVolume *vol)
+gboolean gigolo_backend_gvfs_mount_volume(GigoloBackendGVFS *backend, gpointer vol)
 {
 	g_return_val_if_fail(backend != NULL, FALSE);
 	g_return_val_if_fail(vol != NULL, FALSE);
 
-	if (! G_IS_MOUNT(vol) && G_IS_VOLUME(vol) && g_volume_can_mount(vol))
+	if (! G_IS_MOUNT(vol) && G_IS_VOLUME(vol) && g_volume_can_mount(G_VOLUME(vol)))
 	{
-		g_volume_mount(vol, G_MOUNT_MOUNT_NONE, NULL, NULL, volume_mount_finished_cb, backend);
+		g_volume_mount(G_VOLUME(vol), G_MOUNT_MOUNT_NONE, NULL, NULL, volume_mount_finished_cb, backend);
 		return TRUE;
 	}
 
@@ -425,12 +425,12 @@ gboolean gigolo_backend_gvfs_mount_volume(GigoloBackendGVFS *backend, GVolume *v
 }
 
 
-void gigolo_backend_gvfs_unmount_mount(GigoloBackendGVFS *backend, GMount *mount)
+void gigolo_backend_gvfs_unmount_mount(GigoloBackendGVFS *backend, gpointer mount)
 {
 	g_return_if_fail(backend != NULL);
 	g_return_if_fail(mount != NULL);
 
-	g_mount_unmount(mount, G_MOUNT_UNMOUNT_NONE, NULL, unmount_finished_cb, backend);
+	g_mount_unmount(G_MOUNT(mount), G_MOUNT_UNMOUNT_NONE, NULL, unmount_finished_cb, backend);
 }
 
 
@@ -488,11 +488,11 @@ void gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
 }
 
 
-gchar *gigolo_backend_gvfs_get_volume_identifier(GVolume *volume)
+gchar *gigolo_backend_gvfs_get_volume_identifier(gpointer volume)
 {
 	g_return_val_if_fail(volume != NULL, NULL);
 
-	return g_volume_get_identifier(volume, G_VOLUME_IDENTIFIER_KIND_UNIX_DEVICE);
+	return g_volume_get_identifier(G_VOLUME(volume), G_VOLUME_IDENTIFIER_KIND_UNIX_DEVICE);
 }
 
 

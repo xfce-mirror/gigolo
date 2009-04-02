@@ -23,6 +23,7 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
+#include <gio/gio.h>
 
 #include "common.h"
 #include "compat.h"
