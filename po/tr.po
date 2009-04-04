@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gigolo Plugin Turkish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-31 23:16+0200\n"
+"POT-Creation-Date: 2009-04-04 18:57+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samed Beyribey <ras0ir@eventualis.org>\n"
 "Language-Team: Xfce-TR <xfce-tr@googlegroups.com>\n"
@@ -100,107 +100,107 @@ msgstr ""
 msgid "Error"
 msgstr "Hata"
 
-#: ../src/window.c:1154
+#: ../src/window.c:1180
 msgid "_File"
 msgstr "_Dosya"
 
-#: ../src/window.c:1155
+#: ../src/window.c:1181
 msgid "_Edit"
 msgstr "Düz_en"
 
-#: ../src/window.c:1156
+#: ../src/window.c:1182
 msgid "_Actions"
 msgstr "İşle_mler"
 
-#: ../src/window.c:1157
+#: ../src/window.c:1183
 #, fuzzy
 msgid "_View"
 msgstr "_Görünüm Kipi"
 
-#: ../src/window.c:1158
+#: ../src/window.c:1184
 msgid "_Help"
 msgstr "_Yardım"
 
-#: ../src/window.c:1162 ../src/browsenetworkpanel.c:475
-#: ../src/browsenetworkpanel.c:515
+#: ../src/window.c:1188 ../src/browsenetworkpanel.c:476
+#: ../src/browsenetworkpanel.c:516
 msgid "Create _Bookmark"
 msgstr "Sık Kullanılan Oluş_tur"
 
-#: ../src/window.c:1164
+#: ../src/window.c:1190
 msgid "_Edit Bookmarks"
 msgstr "_Sık Kullanılanları Düzenle"
 
-#: ../src/window.c:1165
+#: ../src/window.c:1191
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "Sık kullanılanlar yöneticisini aç "
 
-#: ../src/window.c:1169
+#: ../src/window.c:1195
 msgid "Disconnect the selected resource"
 msgstr "Seçilen kaynak ile olan bağlantıyı kes"
 
-#: ../src/window.c:1171
+#: ../src/window.c:1197
 msgid "Open the selected resource with a file manager"
 msgstr "Seçilen kaynağı dosya yöneticisi ile aç"
 
-#: ../src/window.c:1172
+#: ../src/window.c:1198
 msgid "Copy _URI"
 msgstr "_URI'yi Kopyala"
 
-#: ../src/window.c:1173
+#: ../src/window.c:1199
 msgid "Quit Gigolo"
 msgstr "Gigolo'yu Kapat"
 
-#: ../src/window.c:1174
+#: ../src/window.c:1200
 msgid "Online Help"
 msgstr ""
 
-#: ../src/window.c:1175
+#: ../src/window.c:1201
 msgid "Supported Protocols"
 msgstr ""
 
-#: ../src/window.c:1181
+#: ../src/window.c:1207
 msgid "Side _Panel"
 msgstr ""
 
-#: ../src/window.c:1183
+#: ../src/window.c:1209
 #, fuzzy
 msgid "_Toolbar"
 msgstr "Araç Çubuğu"
 
-#: ../src/window.c:1185
+#: ../src/window.c:1211
 msgid "Status _Icon"
 msgstr ""
 
-#: ../src/window.c:1191
+#: ../src/window.c:1217
 #, fuzzy
 msgid "View as _Symbols"
 msgstr "Semboller"
 
-#: ../src/window.c:1192
+#: ../src/window.c:1218
 msgid "View as _Detailed List"
 msgstr ""
 
-#: ../src/window.c:1198
+#: ../src/window.c:1224
 msgid "_Bookmarks"
 msgstr "Sık _Kullanılanlar"
 
-#: ../src/window.c:1198
+#: ../src/window.c:1224
 msgid "Choose a bookmark to connect to"
 msgstr "Bağlanmak için bir sık kullanılan seçin"
 
-#: ../src/window.c:1272
+#: ../src/window.c:1298
 msgid "Connected"
 msgstr "Bağlandı"
 
-#: ../src/window.c:1281 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1307 ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "Servis Türü"
 
-#: ../src/window.c:1289 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1315 ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "İsim"
 
-#: ../src/window.c:1356 ../src/window.c:1437 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1382 ../src/window.c:1467 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -376,7 +376,8 @@ msgid "Symbols"
 msgstr "Semboller"
 
 #: ../src/preferencesdialog.c:195
-msgid "Detailed"
+#, fuzzy
+msgid "Detailed List"
 msgstr "Detaylı"
 
 #: ../src/preferencesdialog.c:339
@@ -471,8 +472,9 @@ msgid ""
 msgstr ""
 
 #: ../src/preferencesdialog.c:429
-msgid "_View Mode"
-msgstr "_Görünüm Kipi"
+#, fuzzy
+msgid "_Connection List Mode"
+msgstr "\"%s\" dosya sistemine bağlanılıyor"
 
 #: ../src/preferencesdialog.c:442
 msgid "Toolbar"
@@ -532,26 +534,29 @@ msgstr "\"%s\" ile aradaki bağlantıyı sonlandırma işlemi başarısız oldu.
 msgid "Connecting"
 msgstr "Bağlanıyor"
 
-#: ../src/browsenetworkpanel.c:256
+#: ../src/browsenetworkpanel.c:257
 msgid "No Workgroups found"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:508
+#: ../src/browsenetworkpanel.c:509
 #, fuzzy
 msgid "Connect to the selected share"
 msgstr "Seçilen kaynak ile olan bağlantıyı kes"
 
-#: ../src/browsenetworkpanel.c:516
+#: ../src/browsenetworkpanel.c:517
 msgid "Create a bookmark from the selected share"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:525
+#: ../src/browsenetworkpanel.c:526
 msgid "Refresh the network list"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:536
+#: ../src/browsenetworkpanel.c:537
 msgid "Close panel"
 msgstr ""
+
+#~ msgid "_View Mode"
+#~ msgstr "_Görünüm Kipi"
 
 #~ msgid "OBEX"
 #~ msgstr "OBEX"

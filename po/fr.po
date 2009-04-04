@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-31 23:16+0200\n"
+"POT-Creation-Date: 2009-04-04 18:57+0200\n"
 "PO-Revision-Date: 2008-12-13 22:48+0100\n"
 "Last-Translator: Maximilian Schleiss <maximilian@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -106,110 +106,110 @@ msgstr ""
 msgid "Error"
 msgstr "Erreur"
 
-#: ../src/window.c:1154
+#: ../src/window.c:1180
 msgid "_File"
 msgstr "_Fichier"
 
-#: ../src/window.c:1155
+#: ../src/window.c:1181
 msgid "_Edit"
 msgstr "_Editer"
 
-#: ../src/window.c:1156
+#: ../src/window.c:1182
 msgid "_Actions"
 msgstr "_Actions"
 
-#: ../src/window.c:1157
+#: ../src/window.c:1183
 #, fuzzy
 msgid "_View"
 msgstr "_Mode d'affichage"
 
-#: ../src/window.c:1158
+#: ../src/window.c:1184
 msgid "_Help"
 msgstr "_Aide"
 
-#: ../src/window.c:1162 ../src/browsenetworkpanel.c:475
-#: ../src/browsenetworkpanel.c:515
+#: ../src/window.c:1188 ../src/browsenetworkpanel.c:476
+#: ../src/browsenetworkpanel.c:516
 msgid "Create _Bookmark"
 msgstr "Ajouter un _signet"
 
-#: ../src/window.c:1164
+#: ../src/window.c:1190
 msgid "_Edit Bookmarks"
 msgstr "_Editer les signets"
 
-#: ../src/window.c:1165
+#: ../src/window.c:1191
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr ""
 
-#: ../src/window.c:1169
+#: ../src/window.c:1195
 msgid "Disconnect the selected resource"
 msgstr ""
 
-#: ../src/window.c:1171
+#: ../src/window.c:1197
 msgid "Open the selected resource with a file manager"
 msgstr ""
 
-#: ../src/window.c:1172
+#: ../src/window.c:1198
 msgid "Copy _URI"
 msgstr ""
 
-#: ../src/window.c:1173
+#: ../src/window.c:1199
 #, fuzzy
 msgid "Quit Gigolo"
 msgstr "Gigolo"
 
-#: ../src/window.c:1174
+#: ../src/window.c:1200
 msgid "Online Help"
 msgstr ""
 
-#: ../src/window.c:1175
+#: ../src/window.c:1201
 msgid "Supported Protocols"
 msgstr ""
 
-#: ../src/window.c:1181
+#: ../src/window.c:1207
 msgid "Side _Panel"
 msgstr ""
 
-#: ../src/window.c:1183
+#: ../src/window.c:1209
 #, fuzzy
 msgid "_Toolbar"
 msgstr "St_yle de la barre d'outils"
 
-#: ../src/window.c:1185
+#: ../src/window.c:1211
 msgid "Status _Icon"
 msgstr ""
 
-#: ../src/window.c:1191
+#: ../src/window.c:1217
 #, fuzzy
 msgid "View as _Symbols"
 msgstr "Symboles"
 
-#: ../src/window.c:1192
+#: ../src/window.c:1218
 msgid "View as _Detailed List"
 msgstr ""
 
-#: ../src/window.c:1198
+#: ../src/window.c:1224
 msgid "_Bookmarks"
 msgstr "_Signets"
 
-#: ../src/window.c:1198
+#: ../src/window.c:1224
 msgid "Choose a bookmark to connect to"
 msgstr "Choisissez un signet auquel vous connecter"
 
-#: ../src/window.c:1272
+#: ../src/window.c:1298
 #, fuzzy
 msgid "Connected"
 msgstr "Se connecter"
 
-#: ../src/window.c:1281 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1307 ../src/bookmarkdialog.c:300
 #, fuzzy
 msgid "Service Type"
 msgstr "_Type de service :"
 
-#: ../src/window.c:1289 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1315 ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Nom"
 
-#: ../src/window.c:1356 ../src/window.c:1437 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1382 ../src/window.c:1467 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -386,7 +386,8 @@ msgid "Symbols"
 msgstr "Symboles"
 
 #: ../src/preferencesdialog.c:195
-msgid "Detailed"
+#, fuzzy
+msgid "Detailed List"
 msgstr "Détaillée"
 
 #: ../src/preferencesdialog.c:339
@@ -475,8 +476,9 @@ msgid ""
 msgstr ""
 
 #: ../src/preferencesdialog.c:429
-msgid "_View Mode"
-msgstr "_Mode d'affichage"
+#, fuzzy
+msgid "_Connection List Mode"
+msgstr "Montage de \"%s\" échoué."
 
 #: ../src/preferencesdialog.c:442
 #, fuzzy
@@ -540,26 +542,29 @@ msgstr "Montage de \"%s\" échoué."
 msgid "Connecting"
 msgstr "Se connecter"
 
-#: ../src/browsenetworkpanel.c:256
+#: ../src/browsenetworkpanel.c:257
 msgid "No Workgroups found"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:508
+#: ../src/browsenetworkpanel.c:509
 #, fuzzy
 msgid "Connect to the selected share"
 msgstr "Connexion au serveur"
 
-#: ../src/browsenetworkpanel.c:516
+#: ../src/browsenetworkpanel.c:517
 msgid "Create a bookmark from the selected share"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:525
+#: ../src/browsenetworkpanel.c:526
 msgid "Refresh the network list"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:536
+#: ../src/browsenetworkpanel.c:537
 msgid "Close panel"
 msgstr ""
+
+#~ msgid "_View Mode"
+#~ msgstr "_Mode d'affichage"
 
 #~ msgid "Authentication information needed"
 #~ msgstr "Informations d'authentification requises"
