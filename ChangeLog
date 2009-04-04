@@ -1,3 +1,9 @@
+2009-04-04  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/window.c:
+   Move the view mode options back directly into the View menu.
+
+
 2009-04-01  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/window.c:

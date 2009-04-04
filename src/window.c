@@ -1127,10 +1127,8 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 				"<menuitem action='ShowPanel'/>"
 				"<menuitem action='ShowInSystray'/>"
 				"<separator/>"
-				"<menu action='ConnectionList'>"
-					"<menuitem action='ViewDetailed'/>"
-					"<menuitem action='ViewSymbols'/>"
-				"</menu>"
+				"<menuitem action='ViewDetailed'/>"
+				"<menuitem action='ViewSymbols'/>"
 			"</menu>"
 			"<menu action='Actions'>"
 				"<menuitem action='Connect'/>"
@@ -1183,7 +1181,6 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 		{ "Edit", NULL, N_("_Edit"), NULL, NULL, NULL },
 		{ "Actions", NULL, N_("_Actions"), NULL, NULL, NULL },
 		{ "View", NULL, N_("_View"), NULL, NULL, NULL },
-		{ "ConnectionList", NULL, N_("_Connection List Mode"), NULL, NULL, NULL },
 		{ "Help", NULL, N_("_Help"), NULL, NULL, NULL },
 		{ "Preferences", GTK_STOCK_PREFERENCES,
 			NULL, "<Ctrl>p", NULL, G_CALLBACK(action_preferences_cb) },
@@ -1217,8 +1214,8 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 	const guint toggle_entries_n = G_N_ELEMENTS(toggle_entries);
 
 	const GtkRadioActionEntry radio_entries[] = {
-		{ "ViewDetailed", NULL, N_("_Symbols"), NULL, NULL, 0 },
-		{ "ViewSymbols", NULL, N_("_Detailed List"), NULL, NULL, 1 },
+		{ "ViewDetailed", NULL, N_("View as _Symbols"), NULL, NULL, 0 },
+		{ "ViewSymbols", NULL, N_("View as _Detailed List"), NULL, NULL, 1 },
 	};
 	const guint radio_entries_n = G_N_ELEMENTS(radio_entries);
 
