@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr ""
+msgstr "Çalışan diğer uygulamaları göz ardı et, yeni bir uygulama açmaya zorla"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
@@ -55,7 +55,7 @@ msgstr "SSH"
 
 #: ../src/common.c:83
 msgid "Obex"
-msgstr ""
+msgstr "Obex"
 
 #: ../src/common.c:85
 msgid "WebDAV"
@@ -84,7 +84,7 @@ msgstr "Uzaktaki dosya sistemlerine bağlanmak için basit bir arayüz"
 
 #: ../src/window.c:444
 msgid "Copyright 2008-2009 Enrico Tröger"
-msgstr ""
+msgstr "Copyright 2008-2009 Enrico Tröge"
 
 #: ../src/window.c:447
 msgid "translator-credits"
@@ -92,7 +92,7 @@ msgstr "Samed Beyribey <ras0ir@eventualis.org>, 2009 "
 
 #: ../src/window.c:479
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
+msgstr "Gigolo, Gvfs tarafından sağlanan şu protokolleri kullanabilir:"
 
 #: ../src/window.c:708 ../src/bookmarkeditdialog.c:189
 #: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
@@ -113,9 +113,8 @@ msgid "_Actions"
 msgstr "İşle_mler"
 
 #: ../src/window.c:1183
-#, fuzzy
 msgid "_View"
-msgstr "_Görünüm Kipi"
+msgstr "_Görünüm"
 
 #: ../src/window.c:1184
 msgid "_Help"
@@ -152,33 +151,31 @@ msgstr "Gigolo'yu Kapat"
 
 #: ../src/window.c:1200
 msgid "Online Help"
-msgstr ""
+msgstr "Çevrimiçi Yardım"
 
 #: ../src/window.c:1201
 msgid "Supported Protocols"
-msgstr ""
+msgstr "Desteklenene Protokoller"
 
 #: ../src/window.c:1207
 msgid "Side _Panel"
-msgstr ""
+msgstr "Yan _Panel"
 
 #: ../src/window.c:1209
-#, fuzzy
 msgid "_Toolbar"
-msgstr "Araç Çubuğu"
+msgstr "_Araç Çubuğu"
 
 #: ../src/window.c:1211
 msgid "Status _Icon"
-msgstr ""
+msgstr "Durum S_imgesi"
 
 #: ../src/window.c:1217
-#, fuzzy
 msgid "View as _Symbols"
-msgstr "Semboller"
+msgstr "_Sembol Görünümü"
 
 #: ../src/window.c:1218
 msgid "View as _Detailed List"
-msgstr ""
+msgstr "_Detaylı Liste Görünümü"
 
 #: ../src/window.c:1224
 msgid "_Bookmarks"
@@ -287,9 +284,8 @@ msgid "You must enter a valid URI for the connection."
 msgstr "Bağlantı kurmak için geçerli bir URI değeri girmeniz gerekmektedir."
 
 #: ../src/bookmarkeditdialog.c:494
-#, fuzzy
 msgid "_Device:"
-msgstr "Unix Aygıtı"
+msgstr "Ay_gıt:"
 
 #: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
 msgid "_Server:"
@@ -454,22 +450,26 @@ msgstr "Bildiri_m alanında küçültümüş olarak başlat"
 
 #: ../src/preferencesdialog.c:417
 msgid "Show 'Browse Network' side panel"
-msgstr ""
+msgstr " 'Ağı Araştır' panelini göster"
 
 #: ../src/preferencesdialog.c:418
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba shares"
 msgstr ""
+"Kullanılabilir Samba paylaşımlarının yan panelde gösterilip "
+"gösterilmeyeceğini belirlemenizi sağlar"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
-msgstr ""
+msgstr "Otomatik bağlan hata mesajlarını göster"
 
 #: ../src/preferencesdialog.c:423
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr ""
+"Otomatik bağlanılan sık kullanılanlar bağlanamadığında hata mesajı "
+"gösterilip gösterilmeyeceğini belirlemenizi sağlar"
 
 #: ../src/preferencesdialog.c:429
 #, fuzzy
@@ -536,24 +536,23 @@ msgstr "Bağlanıyor"
 
 #: ../src/browsenetworkpanel.c:257
 msgid "No Workgroups found"
-msgstr ""
+msgstr "Herhangi bir çalışma grubu bulunamadı"
 
 #: ../src/browsenetworkpanel.c:509
-#, fuzzy
 msgid "Connect to the selected share"
-msgstr "Seçilen kaynak ile olan bağlantıyı kes"
+msgstr "Seçilen paylaşıma bağlan"
 
 #: ../src/browsenetworkpanel.c:517
 msgid "Create a bookmark from the selected share"
-msgstr ""
+msgstr "Seçilen paylaşımdan sık kullanılan oluştur"
 
 #: ../src/browsenetworkpanel.c:526
 msgid "Refresh the network list"
-msgstr ""
+msgstr "Ağ listesini yenile"
 
 #: ../src/browsenetworkpanel.c:537
 msgid "Close panel"
-msgstr ""
+msgstr "Paneli kapat"
 
 #~ msgid "_View Mode"
 #~ msgstr "_Görünüm Kipi"
