@@ -338,8 +338,11 @@ static gboolean tree_button_press_event(GtkWidget *widget, GdkEventButton *event
 
 		if (gtk_tree_selection_get_selected(selection, &model, &iter))
 		{
+			gboolean can_mount;
+
+			gtk_tree_model_get(model, &iter, COLUMN_CAN_MOUNT, &can_mount, -1);
 			/* double click on parent node expands/collapses it */
-			if (gtk_tree_model_iter_has_child(model, &iter))
+			if (! can_mount)
 			{
 				GtkTreePath *path = gtk_tree_model_get_path(model, &iter);
 
