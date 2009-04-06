@@ -368,13 +368,14 @@ static void volume_mount_finished_cb(GObject *src, GAsyncResult *res, gpointer b
 		}
 
 		g_warning("Mounting of \"%s\" failed: %s", name, error->message);
-		msg = g_strdup_printf(_("Connecting to \"%s\" failed."), name);
-
-		g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
-
+		if (! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_FAILED_HANDLED))
+		{
+			msg = g_strdup_printf(_("Connecting to \"%s\" failed."), name);
+			g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
+			g_free(msg);
+		}
 		g_error_free(error);
 		g_free(name);
-		g_free(msg);
 	}
 	else
 		verbose("Mount finished sucessfully");
@@ -446,7 +447,7 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 	if (error != NULL && ! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_ALREADY_MOUNTED))
 	{
 		gchar *msg = g_strdup_printf(_("Connecting to \"%s\" failed."), uri);
-		if (mi->show_errors)
+		if (mi->show_errors && ! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_FAILED_HANDLED))
 			g_signal_emit(mi->self, signals[OPERATION_FAILED], 0, msg, error->message);
 		else
 			verbose("%s (%s)", msg, error->message);
