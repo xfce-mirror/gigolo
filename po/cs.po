@@ -3,21 +3,22 @@
 # This file is distributed under the same license as Gigolo.
 # Jan Hrdina <jan.hrdka@gmail.com>, 2009.
 #
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo 0.2.1\n"
+"Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-04 18:57+0200\n"
-"PO-Revision-Date: 2009-03-20 16:35+0100\n"
+"PO-Revision-Date: 2009-04-07 17:17+0200\n"
 "Last-Translator: Jan Hrdina <jan.hrdka@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr ""
+msgstr "Ignorovat spuštěné instance, vynutit otevření nové instance"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
@@ -117,9 +118,8 @@ msgid "_Actions"
 msgstr "_Akce"
 
 #: ../src/window.c:1183
-#, fuzzy
 msgid "_View"
-msgstr "_Režim zobrazení"
+msgstr "_Zobrazit"
 
 #: ../src/window.c:1184
 msgid "_Help"
@@ -164,25 +164,23 @@ msgstr "Podporované protokoly"
 
 #: ../src/window.c:1207
 msgid "Side _Panel"
-msgstr ""
+msgstr "Boční _panel"
 
 #: ../src/window.c:1209
-#, fuzzy
 msgid "_Toolbar"
-msgstr "Lišta nástrojů"
+msgstr "_Lišta nástrojů"
 
 #: ../src/window.c:1211
 msgid "Status _Icon"
-msgstr ""
+msgstr "_Stavová ikona"
 
 #: ../src/window.c:1217
-#, fuzzy
 msgid "View as _Symbols"
-msgstr "Ikony"
+msgstr "Zobrazit jako _Ikony"
 
 #: ../src/window.c:1218
 msgid "View as _Detailed List"
-msgstr ""
+msgstr "Zobrazit jako _detailní seznam"
 
 #: ../src/window.c:1224
 msgid "_Bookmarks"
@@ -377,9 +375,8 @@ msgid "Symbols"
 msgstr "Ikony"
 
 #: ../src/preferencesdialog.c:195
-#, fuzzy
 msgid "Detailed List"
-msgstr "Detailní"
+msgstr "Detailní seznam"
 
 #: ../src/preferencesdialog.c:339
 msgid "General"
@@ -453,27 +450,26 @@ msgstr "Spustit jako _minimalizovaný v oznamovací oblasti"
 
 #: ../src/preferencesdialog.c:417
 msgid "Show 'Browse Network' side panel"
-msgstr ""
+msgstr "Zobrazit boční panel 'Procházet síť'"
 
 #: ../src/preferencesdialog.c:418
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba shares"
-msgstr ""
+msgstr "Zobrazování bočního panelu na prohlížení dostupných Samba sdílení v lokální síti"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
-msgstr ""
+msgstr "Zobrazit chybové zprávy automatického připojení"
 
 #: ../src/preferencesdialog.c:423
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
+msgstr "Zobrazování chybových dialogů při selhání automatického připojení záložek"
 
 #: ../src/preferencesdialog.c:429
-#, fuzzy
 msgid "_Connection List Mode"
-msgstr "Připojování k \"%s\""
+msgstr "Seznam připojení"
 
 #: ../src/preferencesdialog.c:442
 msgid "Toolbar"
@@ -535,24 +531,23 @@ msgstr "Připojování"
 
 #: ../src/browsenetworkpanel.c:257
 msgid "No Workgroups found"
-msgstr ""
+msgstr "Nebyly nalezeny žádné pracovní skupiny"
 
 #: ../src/browsenetworkpanel.c:509
-#, fuzzy
 msgid "Connect to the selected share"
-msgstr "Odpojit vybraný zdroj"
+msgstr "Připojit se k vybranému sdílení"
 
 #: ../src/browsenetworkpanel.c:517
 msgid "Create a bookmark from the selected share"
-msgstr ""
+msgstr "Vytvořit záložku z vybraného sdílení"
 
 #: ../src/browsenetworkpanel.c:526
 msgid "Refresh the network list"
-msgstr ""
+msgstr "Obnovit seznam sítí"
 
 #: ../src/browsenetworkpanel.c:537
 msgid "Close panel"
-msgstr ""
+msgstr "Zavřít panel"
 
 #~ msgid "_View Mode"
 #~ msgstr "_Režim zobrazení"
