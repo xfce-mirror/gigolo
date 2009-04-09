@@ -516,6 +516,7 @@ void gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
 		(GAsyncReadyCallback) mount_ready_cb, mi);
 
 	g_object_unref(file);
+	g_object_unref(op);
 }
 
 
