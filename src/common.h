@@ -28,25 +28,6 @@
 	((ptr) && (ptr)[0])
 
 
-enum
-{
-	GIGOLO_WINDOW_COL_IS_MOUNTED,
-	GIGOLO_WINDOW_COL_SCHEME,
-	GIGOLO_WINDOW_COL_NAME,
-	GIGOLO_WINDOW_COL_REF,
-	GIGOLO_WINDOW_COL_REF_TYPE, /* volume or mount, see enum below */
-	GIGOLO_WINDOW_COL_PIXBUF,
-	GIGOLO_WINDOW_COL_ICON_NAME,
-	GIGOLO_WINDOW_COL_TOOLTIP,
-	GIGOLO_WINDOW_N_COLUMNS
-};
-
-enum
-{
-	GIGOLO_WINDOW_REF_TYPE_VOLUME,
-	GIGOLO_WINDOW_REF_TYPE_MOUNT /* mounted volume */
-};
-
 #ifdef DEBUG
 void debug(gchar const *format, ...);
 #else

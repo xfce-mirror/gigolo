@@ -31,8 +31,8 @@
 #include "common.h"
 #include "settings.h"
 #include "bookmark.h"
-#include "window.h"
 #include "backendgvfs.h"
+#include "window.h"
 #include "singleinstance.h"
 
 

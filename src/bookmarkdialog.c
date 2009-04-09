@@ -25,6 +25,7 @@
 
 #include "settings.h"
 #include "bookmark.h"
+#include "backendgvfs.h"
 #include "window.h"
 #include "compat.h"
 #include "common.h"

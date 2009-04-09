@@ -42,10 +42,19 @@ enum
 {
 	MOUNTS_CHANGED,
 	OPERATION_FAILED,
+	BROWSE_NETWORK_FINISHED,
 
 	LAST_SIGNAL
 };
 static guint signals[LAST_SIGNAL];
+
+enum
+{
+    BROWSE_MODE_INVALID,
+    BROWSE_MODE_DOMAINS,
+    BROWSE_MODE_HOSTS,
+    BROWSE_MODE_SHARES,
+};
 
 typedef struct
 {
@@ -53,6 +62,18 @@ typedef struct
 	GtkWidget *dialog;
 	gboolean show_errors;
 } MountInfo;
+
+typedef struct
+{
+	GigoloBackendGVFS *self;
+
+	gint mode;
+	gchar *uri;
+	GtkWindow *parent;
+	GtkTreeStore *store;
+	GtkTreePath *parent_path;
+} BrowseData;
+
 
 struct _GigoloBackendGVFSPrivate
 {
@@ -62,6 +83,7 @@ struct _GigoloBackendGVFSPrivate
 static void gigolo_backend_gvfs_finalize  			(GObject *object);
 static void gigolo_backend_gvfs_set_property		(GObject *object, guint prop_id,
 													 const GValue *value, GParamSpec *pspec);
+static void browse_network_real						(BrowseData *bd);
 
 
 G_DEFINE_TYPE(GigoloBackendGVFS, gigolo_backend_gvfs, G_TYPE_OBJECT);
@@ -141,6 +163,14 @@ static void gigolo_backend_gvfs_class_init(GigoloBackendGVFSClass *klass)
 										NULL,
 										gigolo_backend_gvfs_cclosure_marshal_VOID__STRING_STRING,
 										G_TYPE_NONE, 2, G_TYPE_STRING, G_TYPE_STRING);
+	signals[BROWSE_NETWORK_FINISHED] = g_signal_new("browse-network-finished",
+										G_TYPE_FROM_CLASS(klass),
+										(GSignalFlags) 0,
+										0,
+										0,
+										NULL,
+										g_cclosure_marshal_VOID__VOID,
+										G_TYPE_NONE, 0);
 }
 
 
@@ -497,8 +527,9 @@ gchar *gigolo_backend_gvfs_get_volume_identifier(gpointer volume)
 }
 
 
-gchar **gigolo_backend_gvfs_get_smb_shares_from_uri(const gchar *uri)
+gchar **gigolo_backend_gvfs_get_smb_shares(const gchar *hostname, const gchar *user, const gchar *domain)
 {
+	gchar *uri;
 	gchar **shares = NULL;
 	GList *l, *shares_list = NULL;
 	GFile *file;
@@ -506,7 +537,16 @@ gchar **gigolo_backend_gvfs_get_smb_shares_from_uri(const gchar *uri)
 	GError *error = NULL;
 	GFileEnumerator *e;
 
-	g_return_val_if_fail(uri != NULL, NULL);
+	g_return_val_if_fail(hostname != NULL, NULL);
+
+	uri = g_strdup_printf("smb://%s%s%s%s%s/",
+		(NZV(domain)) ? domain : "",
+		(NZV(domain)) ? ";" : "",
+		(NZV(user)) ? user : "",
+		(NZV(user) || NZV(domain)) ? "@" : "",
+		hostname);
+
+	/** TODO mount if necessary, merge with browse_network_real */
 
 	verbose("Querying \"%s\" for available shares", uri);
 
@@ -550,52 +590,60 @@ gchar **gigolo_backend_gvfs_get_smb_shares_from_uri(const gchar *uri)
 	}
 
 	g_object_unref(file);
-
-	return shares;
-}
-
-
-gchar **gigolo_backend_gvfs_get_smb_shares(const gchar *hostname, const gchar *user, const gchar *domain)
-{
-	gchar **shares = NULL;
-	gchar *uri;
-
-	g_return_val_if_fail(hostname != NULL, NULL);
-
-	uri = g_strdup_printf("smb://%s%s%s%s%s/",
-		(NZV(domain)) ? domain : "",
-		(NZV(domain)) ? ";" : "",
-		(NZV(user)) ? user : "",
-		(NZV(user) || NZV(domain)) ? "@" : "",
-		hostname);
-
-	shares = gigolo_backend_gvfs_get_smb_shares_from_uri(uri);
 	g_free(uri);
 
 	return shares;
 }
 
 
-GigoloHostUri **gigolo_backend_gvfs_browse_network(const gchar *uri)
+static gboolean browse_network_ready_cb(gpointer data)
 {
-	GigoloHostUri *h, **hosts = NULL;
-	GList *l, *hosts_list = NULL;
+	g_signal_emit(data, signals[BROWSE_NETWORK_FINISHED], 0);
+	verbose("Browse Network finished");
+	return FALSE;
+}
+
+
+static void browse_network_mount_ready_cb(GFile *location, GAsyncResult *res, BrowseData *bd)
+{
+	gboolean success;
+	GError *error = NULL;
+
+	success = g_file_mount_enclosing_volume_finish(location, res, &error);
+
+	if (error != NULL)
+	{
+		verbose("%s (%s)", G_STRFUNC, error->message);
+		g_error_free(error);
+	}
+	else
+	{
+		browse_network_real(bd);
+	}
+}
+
+
+static void browse_network_real(BrowseData *bd)
+{
+	GigoloBackendGVFS *backend;
 	GFile *file;
 	GFileInfo *info;
 	GError *error = NULL;
 	GFileEnumerator *e;
+	GtkTreeStore *store;
+	GtkWindow *parent;
+	gint mode;
 
-	/* If a uri is passed, we assume this is an URI pointing to a workgroup like
-	 * "smb://WORKGROUP/", if passed NULL, we use "smb://" to search for workgroups */
-	if (uri == NULL)
-		uri = "smb://";
+	g_return_if_fail(bd != NULL);
 
-	verbose("Querying \"%s\" for available groups/hosts", uri);
+	store = bd->store;
+	mode = bd->mode;
+	parent = bd->parent;
+	backend = bd->self;
 
-	file = g_file_new_for_uri(uri);
+	file = g_file_new_for_uri(bd->uri);
 
 	e = g_file_enumerate_children(file,
-		G_FILE_ATTRIBUTE_MOUNTABLE_CAN_MOUNT ","
 		G_FILE_ATTRIBUTE_STANDARD_TARGET_URI ","
 		G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME ","
 		G_FILE_ATTRIBUTE_STANDARD_ICON,
@@ -603,56 +651,113 @@ GigoloHostUri **gigolo_backend_gvfs_browse_network(const gchar *uri)
 
 	if (error != NULL)
 	{
-		verbose("%s: %s", G_STRFUNC, error->message);
-		g_error_free(error);
+		if (g_error_matches(error, G_IO_ERROR, G_IO_ERROR_NOT_MOUNTED))
+		{
+			GMountOperation *op = gigolo_mount_operation_new(bd->parent);
+			/* if the URI wasn't mounted yet, mount it and try again from the mount ready callback */
+			g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
+				(GAsyncReadyCallback) browse_network_mount_ready_cb, bd);
+			g_error_free(error);
+			g_object_unref(file);
+			g_object_unref(op);
+			return;
+		}
+		else
+		{
+			verbose("%s: %s", G_STRFUNC, error->message);
+			g_error_free(error);
+		}
 	}
 	else
 	{
-		guint i, len;
-		const gchar *h_uri;
+		const gchar *uri;
+		GtkTreeIter iter, parent_iter_tmp;
+		GtkTreeIter *parent_iter;
+		gint child_mode;
+
+		verbose("Querying \"%s\" for available groups/hosts", bd->uri);
 
 		while ((info = g_file_enumerator_next_file(e, NULL, NULL)) != NULL)
 		{
-			h_uri = g_file_info_get_attribute_string(info, G_FILE_ATTRIBUTE_STANDARD_TARGET_URI);
-			if (h_uri != NULL && g_str_has_prefix(h_uri, "smb://"))
+			uri = g_file_info_get_attribute_string(info, G_FILE_ATTRIBUTE_STANDARD_TARGET_URI);
+			if (uri != NULL)
 			{
-				h = g_new(GigoloHostUri, 1);
-				h->name = g_strdup(g_file_info_get_display_name(info));
-				h->uri = g_strdup(h_uri);
-				h->icon = g_object_ref(g_file_info_get_icon(info));
-				hosts_list = g_list_append(hosts_list, h);
+				/* set parent item */
+				if (bd->parent_path != NULL)
+				{
+					gtk_tree_model_get_iter(GTK_TREE_MODEL(store), &parent_iter_tmp, bd->parent_path);
+					parent_iter = &parent_iter_tmp;
+				}
+				else
+					parent_iter = NULL;
+
+				/* insert the item into the tree store */
+				gtk_tree_store_append(store, &iter, parent_iter);
+				gtk_tree_store_set(store, &iter,
+					GIGOLO_BROWSE_NETWORK_COL_URI, uri,
+					GIGOLO_BROWSE_NETWORK_COL_NAME, g_file_info_get_display_name(info),
+					GIGOLO_BROWSE_NETWORK_COL_ICON, g_file_info_get_icon(info),
+					GIGOLO_BROWSE_NETWORK_COL_CAN_MOUNT, (mode == BROWSE_MODE_SHARES),
+					-1);
+
+				/* set mode for the next level or stop recursion */
+				switch (mode)
+				{
+					case BROWSE_MODE_DOMAINS:
+						child_mode = BROWSE_MODE_HOSTS;
+						break;
+					case BROWSE_MODE_HOSTS:
+						child_mode = BROWSE_MODE_SHARES;
+						break;
+					default:
+						child_mode = BROWSE_MODE_INVALID;
+				}
+
+				/* setup child data and fire it */
+				if (child_mode != BROWSE_MODE_INVALID)
+				{
+					BrowseData *bd_child = g_new0(BrowseData, 1);
+					bd_child->mode = child_mode;
+					bd_child->uri = g_strdup(uri);
+					bd_child->store = store;
+					bd_child->parent = parent;
+					bd_child->parent_path = gtk_tree_model_get_path(GTK_TREE_MODEL(store), &iter);
+					/* recurse into the next level */
+					browse_network_real(bd_child);
+				}
 			}
 			g_object_unref(info);
 		}
 		g_object_unref(e);
-
-		len = g_list_length(hosts_list);
-		if (len > 0)
-		{
-			i = 0;
-		hosts = g_new(GigoloHostUri*, len + 1);
-
-		for (l = hosts_list; l != NULL; l = g_list_next(l))
-		{
-			hosts[i] = (GigoloHostUri*) l->data;
-			i++;
-		}
-		hosts[i] = NULL;
-		}
-		g_list_free(hosts_list);
 	}
-	g_object_unref(file);
+	/** TODO this is very suboptimal as a fixed timeout of ~ 2 seconds is by no means good enough
+	 *  as we never know how long the whole operating will take. Find a better way to determine
+	 *  when the operation is finsihed. */
+	/* When the mode of this run was BROWSE_MODE_DOMAINS, this was the top-level call to initially
+	 * start browsing, so in theory when we are here, we are finsihed. This isn't true due to
+	 * possibly necessary mounting above. So, we use a timeout to estimate the finished operation. */
+	if (bd->mode == BROWSE_MODE_DOMAINS)
+		g_timeout_add_seconds(2, browse_network_ready_cb, backend);
 
-	return hosts;
+	g_object_unref(file);
+	g_free(bd->uri);
+	gtk_tree_path_free(bd->parent_path);
+	g_free(bd);
 }
 
 
-gpointer gigolo_backend_gvfs_get_share_icon(void)
+void gigolo_backend_gvfs_browse_network(GigoloBackendGVFS *backend, GtkWindow *parent, GtkTreeStore *store)
 {
-	if (gtk_check_version(2, 14, 0) == NULL)
-	return g_themed_icon_new("folder-remote");
-	else
-		return NULL;
+	BrowseData *bd = g_new0(BrowseData, 1);
+
+	bd->mode = BROWSE_MODE_DOMAINS;
+	bd->parent_path = NULL;
+	bd->parent = parent;
+	bd->store = store;
+	bd->uri = g_strdup("smb://");
+	bd->self = backend;
+
+	browse_network_real(bd);
 }
 
 

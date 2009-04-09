@@ -61,6 +61,8 @@ GigoloBookmark*	gigolo_window_find_bookmark_by_uri	(GigoloWindow *window, const 
 
 GigoloSettings*	gigolo_window_get_settings			(GigoloWindow *window);
 
+GigoloBackendGVFS*	gigolo_window_get_backend		(GigoloWindow *window);
+
 G_END_DECLS
 
 #endif /* __WINDOW_H__ */

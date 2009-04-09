@@ -30,12 +30,12 @@
 #include "common.h"
 #include "bookmark.h"
 #include "settings.h"
+#include "backendgvfs.h"
 #include "window.h"
 #include "bookmarkdialog.h"
 #include "bookmarkeditdialog.h"
 #include "menubuttonaction.h"
 #include "preferencesdialog.h"
-#include "backendgvfs.h"
 #include "mountdialog.h"
 #include "browsenetworkpanel.h"
 
@@ -1539,6 +1539,18 @@ GigoloSettings *gigolo_window_get_settings(GigoloWindow *window)
 	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	return priv->settings;
+}
+
+
+GigoloBackendGVFS *gigolo_window_get_backend(GigoloWindow *window)
+{
+	GigoloWindowPrivate *priv;
+
+	g_return_val_if_fail(window != NULL, NULL);
+
+	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+
+	return priv->backend_gvfs;
 }
 
 

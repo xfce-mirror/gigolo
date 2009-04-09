@@ -58,16 +58,9 @@ struct _GigoloBrowseNetworkPanelPrivate
 
 enum
 {
-	COLUMN_NAME,
-	COLUMN_URI,
-	COLUMN_ICON,
-	COLUMN_CAN_MOUNT,
-	N_COLUMNS,
 	ACTION_BOOKMARK,
 	ACTION_CONNECT
 };
-
-
 
 static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseNetworkPanel *panel);
 
@@ -108,14 +101,15 @@ static void mount_share(GigoloBrowseNetworkPanel *panel, GigoloBookmarkEditDialo
 	if (gtk_tree_selection_get_selected(selection, &model, &iter) &&
 		! gtk_tree_model_iter_has_child(model, &iter))
 	{
-		gchar *uri, *share, *full_uri;
+		gchar *uri, *share;
 		GigoloBookmark *bm;
 
-		gtk_tree_model_get(model, &iter, COLUMN_NAME, &share, COLUMN_URI, &uri, -1);
+		gtk_tree_model_get(model, &iter,
+			GIGOLO_BROWSE_NETWORK_COL_NAME, &share,
+			GIGOLO_BROWSE_NETWORK_COL_URI, &uri,
+			-1);
 
-		full_uri = g_strconcat(uri, share, NULL);
-
-		bm = gigolo_bookmark_new_from_uri(share, full_uri);
+		bm = gigolo_bookmark_new_from_uri(share, uri);
 		if (gigolo_bookmark_is_valid(bm))
 		{
 			GtkWidget *edit_dialog;
@@ -146,7 +140,6 @@ static void mount_share(GigoloBrowseNetworkPanel *panel, GigoloBookmarkEditDialo
 
 		g_object_unref(bm);
 		g_free(uri);
-		g_free(full_uri);
 		g_free(share);
 	}
 }
@@ -164,107 +157,29 @@ static void button_connect_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrow
 }
 
 
+static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GigoloBrowseNetworkPanel *panel)
+{
+	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+
+	gtk_tree_view_expand_all(GTK_TREE_VIEW(priv->tree));
+
+	gtk_widget_set_sensitive(priv->button_refresh, TRUE);
+
+	tree_selection_changed_cb(NULL, panel);
+
+	gdk_window_set_cursor(gigolo_widget_get_window(GTK_WIDGET(panel)), NULL);
+}
+
+
 static void gigolo_browse_network_panel_refresh(GigoloBrowseNetworkPanel *panel)
 {
 	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
-	GigoloHostUri **groups;
-	GigoloHostUri **hosts;
-	guint g, i, j;
-	GtkTreeIter iter_group, iter_host, iter_share;
-	gchar **shares;
-	gpointer icon_share = NULL;
 
 	gtk_widget_set_sensitive(priv->button_refresh, FALSE);
 	gtk_tree_store_clear(priv->store);
 
-	/* TODO make this async? */
-
-	/* Iterate over workgroups */
-	groups = gigolo_backend_gvfs_browse_network(NULL);
-	if (groups != NULL)
-	{
-		icon_share = gigolo_backend_gvfs_get_share_icon();
-		for (g = 0; groups[g] != NULL; g++)
-		{
-			gtk_tree_store_append(priv->store, &iter_group, NULL);
-			gtk_tree_store_set(priv->store, &iter_group,
-				COLUMN_URI, groups[g]->uri,
-				COLUMN_NAME, groups[g]->name,
-				COLUMN_ICON, groups[g]->icon,
-				COLUMN_CAN_MOUNT, FALSE,
-				-1);
-
-			/* Iterate over hosts */
-			hosts = gigolo_backend_gvfs_browse_network(groups[g]->uri);
-			if (hosts != NULL)
-			{
-				for (i = 0; hosts[i] != NULL; i++)
-				{
-					gtk_tree_store_append(priv->store, &iter_host, &iter_group);
-					gtk_tree_store_set(priv->store, &iter_host,
-						COLUMN_URI, hosts[i]->uri,
-						COLUMN_NAME, hosts[i]->name,
-						COLUMN_ICON, hosts[i]->icon,
-						COLUMN_CAN_MOUNT, FALSE,
-						-1);
-
-					/* Iterate over shares */
-					shares = gigolo_backend_gvfs_get_smb_shares_from_uri(hosts[i]->uri);
-					if (shares != NULL)
-					{
-						for (j = 0; shares[j] != NULL; j++)
-						{
-							gtk_tree_store_append(priv->store, &iter_share, &iter_host);
-							gtk_tree_store_set(priv->store, &iter_share,
-								COLUMN_NAME, shares[j],
-								COLUMN_URI, hosts[i]->uri,
-								COLUMN_ICON, icon_share,
-								COLUMN_CAN_MOUNT, TRUE,
-								-1);
-						}
-						g_strfreev(shares);
-					}
-					else
-						verbose("No Shares found for %s", hosts[i]->name);
-
-					g_object_unref(hosts[i]->icon);
-					g_free(hosts[i]->uri);
-					g_free(hosts[i]->name);
-					g_free(hosts[i]);
-				}
-				g_free(hosts);
-			}
-			else
-				verbose("No Hosts found for %s", groups[g]->name);
-
-			g_object_unref(groups[g]->icon);
-			g_free(groups[g]->uri);
-			g_free(groups[g]->name);
-			g_free(groups[g]);
-		}
-		g_free(groups);
-		if (icon_share !=  NULL)
-			g_object_unref(icon_share);
-	}
-	else
-		verbose("No Workgroups found");
-
-	if (gtk_tree_model_iter_n_children(GTK_TREE_MODEL(priv->store), NULL) == 0)
-	{
-		GtkTreeIter iter;
-		gtk_tree_store_append(priv->store, &iter, NULL);
-		gtk_tree_store_set(priv->store, &iter,
-			COLUMN_NAME, _("No Workgroups found"),
-			COLUMN_CAN_MOUNT, FALSE,
-			-1);
-	}
-
-	gtk_tree_view_expand_all(GTK_TREE_VIEW(priv->tree));
-
-	gdk_window_set_cursor(gigolo_widget_get_window(GTK_WIDGET(panel)), NULL);
-	gtk_widget_set_sensitive(priv->button_refresh, TRUE);
-
-	tree_selection_changed_cb(NULL, panel);
+	gigolo_backend_gvfs_browse_network(gigolo_window_get_backend(priv->parent),
+		GTK_WINDOW(priv->parent), priv->store);
 }
 
 
@@ -340,7 +255,7 @@ static gboolean tree_button_press_event(GtkWidget *widget, GdkEventButton *event
 		{
 			gboolean can_mount;
 
-			gtk_tree_model_get(model, &iter, COLUMN_CAN_MOUNT, &can_mount, -1);
+			gtk_tree_model_get(model, &iter, GIGOLO_BROWSE_NETWORK_COL_CAN_MOUNT, &can_mount, -1);
 			/* double click on parent node expands/collapses it */
 			if (! can_mount)
 			{
@@ -399,9 +314,9 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseN
 	{
 		gchar *uri, *share;
 		gtk_tree_model_get(model, &iter,
-			COLUMN_CAN_MOUNT, &set,
-			COLUMN_URI, &uri,
-			COLUMN_NAME, &share,
+			GIGOLO_BROWSE_NETWORK_COL_CAN_MOUNT, &set,
+			GIGOLO_BROWSE_NETWORK_COL_URI, &uri,
+			GIGOLO_BROWSE_NETWORK_COL_NAME, &share,
 			-1);
 
 		if (set)
@@ -434,7 +349,7 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
 
 	tree = gtk_tree_view_new();
-	store = gtk_tree_store_new(N_COLUMNS,
+	store = gtk_tree_store_new(GIGOLO_BROWSE_NETWORK_N_COLUMNS,
 		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_ICON, G_TYPE_BOOLEAN);
 
     column = gtk_tree_view_column_new();
@@ -443,14 +358,16 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	{
 		icon_renderer = gtk_cell_renderer_pixbuf_new();
 		gtk_tree_view_column_pack_start(column, icon_renderer, FALSE);
-		gtk_tree_view_column_set_attributes(column, icon_renderer, "gicon", COLUMN_ICON, NULL);
+		gtk_tree_view_column_set_attributes(column, icon_renderer,
+			"gicon", GIGOLO_BROWSE_NETWORK_COL_ICON, NULL);
 		g_object_set(icon_renderer, "xalign", 0.0, NULL);
 	}
 
 	text_renderer = gtk_cell_renderer_text_new();
 	gtk_tree_view_set_enable_search(GTK_TREE_VIEW(tree), FALSE);
 	gtk_tree_view_column_pack_start(column, text_renderer, TRUE);
-	gtk_tree_view_column_set_attributes(column, text_renderer, "text", COLUMN_NAME, NULL);
+	gtk_tree_view_column_set_attributes(column, text_renderer,
+		"text", GIGOLO_BROWSE_NETWORK_COL_NAME, NULL);
 
 	gtk_tree_view_append_column(GTK_TREE_VIEW(tree), column);
 	gtk_tree_view_set_headers_visible(GTK_TREE_VIEW(tree), FALSE);
@@ -492,7 +409,7 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 }
 
 
-static void realize_cb(GtkWidget *panel, G_GNUC_UNUSED gpointer data)
+static void realize_cb(GigoloBrowseNetworkPanel *panel, G_GNUC_UNUSED gpointer data)
 {
 	g_timeout_add(250, (GSourceFunc) delay_refresh, panel);
 }
@@ -565,11 +482,15 @@ GtkWidget *gigolo_browse_network_panel_new(GigoloWindow *parent)
 {
 	GtkWidget *self;
 	GigoloBrowseNetworkPanelPrivate *priv;
+	GigoloBackendGVFS *backend;
 
 	self = g_object_new(GIGOLO_BROWSE_NETWORK_PANEL_TYPE, NULL);
 
 	priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(self);
 	priv->parent = parent;
+
+	backend = gigolo_window_get_backend(parent);
+	g_signal_connect(backend, "browse-network-finished", G_CALLBACK(browse_network_finished_cb), self);
 
 	return self;
 }

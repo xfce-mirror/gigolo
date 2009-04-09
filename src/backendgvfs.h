@@ -55,6 +55,36 @@ typedef struct
 } GigoloHostUri;
 
 
+enum
+{
+	GIGOLO_BROWSE_NETWORK_COL_NAME,
+	GIGOLO_BROWSE_NETWORK_COL_URI,
+	GIGOLO_BROWSE_NETWORK_COL_ICON,
+	GIGOLO_BROWSE_NETWORK_COL_CAN_MOUNT,
+	GIGOLO_BROWSE_NETWORK_N_COLUMNS
+};
+
+
+enum
+{
+	GIGOLO_WINDOW_COL_IS_MOUNTED,
+	GIGOLO_WINDOW_COL_SCHEME,
+	GIGOLO_WINDOW_COL_NAME,
+	GIGOLO_WINDOW_COL_REF,
+	GIGOLO_WINDOW_COL_REF_TYPE, /* volume or mount, see enum below */
+	GIGOLO_WINDOW_COL_PIXBUF,
+	GIGOLO_WINDOW_COL_ICON_NAME,
+	GIGOLO_WINDOW_COL_TOOLTIP,
+	GIGOLO_WINDOW_N_COLUMNS
+};
+
+enum
+{
+	GIGOLO_WINDOW_REF_TYPE_VOLUME,
+	GIGOLO_WINDOW_REF_TYPE_MOUNT /* mounted volume */
+};
+
+
 GType				gigolo_backend_gvfs_get_type					(void);
 GigoloBackendGVFS*	gigolo_backend_gvfs_new							(GtkListStore *store);
 
@@ -72,19 +102,17 @@ void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 
 gchar*				gigolo_backend_gvfs_get_volume_identifier		(gpointer volume);
 
-gchar**				gigolo_backend_gvfs_get_smb_shares_from_uri		(const gchar *uri);
-
 gchar**				gigolo_backend_gvfs_get_smb_shares				(const gchar *hostname,
 																	 const gchar *user,
 																	 const gchar *domain);
 
-GigoloHostUri**		gigolo_backend_gvfs_browse_network				(const gchar *uri);
+void				gigolo_backend_gvfs_browse_network				(GigoloBackendGVFS *backend,
+																	 GtkWindow *parent,
+																	 GtkTreeStore *store);
 
 const gchar *const* gigolo_backend_gvfs_get_supported_uri_schemes	(void);
 
 gboolean			gigolo_backend_gvfs_is_scheme_supported			(const gchar *scheme);
-
-gpointer			gigolo_backend_gvfs_get_share_icon				(void);
 
 G_END_DECLS
 
