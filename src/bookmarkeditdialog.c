@@ -634,8 +634,7 @@ static void fill_method_combo_box(GigoloBookmarkEditDialog *dialog)
 		}
 		scheme = gigolo_describe_scheme((methods[i].scheme != NULL) ? methods[i].scheme : "custom");
 
-		gtk_list_store_append(store, &iter);
-		gtk_list_store_set(store, &iter,
+		gtk_list_store_insert_with_values(store, &iter, -1,
 			COLUMN_INDEX, i,
 			COLUMN_VISIBLE, visible,
 			COLUMN_DESC, scheme,

@@ -3,6 +3,9 @@
  * src/browsenetworkpanel.c:
    Show 'No Workgroups/Hosts/Shares found' messages in the network
    browser if appropriate.
+ * src/backendgvfs.c, src/bookmarkeditdialog.c:
+   Use gtk_list_store_insert_with_values() instead of
+   gtk_list_store_append() and gtk_list_store_set().
 
 
 2009-04-09  Enrico Tröger  <enrico(at)xfce(dot)org>

@@ -253,8 +253,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 		icon = g_mount_get_icon(mount);
 		tooltip_text = get_tooltip_text(mount, GIGOLO_WINDOW_REF_TYPE_MOUNT, scheme_name);
 
-		gtk_list_store_append(priv->store, &iter);
-		gtk_list_store_set(priv->store, &iter,
+		gtk_list_store_insert_with_values(priv->store, &iter, -1,
 				GIGOLO_WINDOW_COL_IS_MOUNTED, TRUE,
 				GIGOLO_WINDOW_COL_NAME, vol_name,
 				GIGOLO_WINDOW_COL_SCHEME, scheme_name,
@@ -287,8 +286,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 			vol_name = g_volume_get_name(volume);
 			tooltip_text = get_tooltip_text(volume, GIGOLO_WINDOW_REF_TYPE_VOLUME, NULL);
 
-			gtk_list_store_append(priv->store, &iter);
-			gtk_list_store_set(priv->store, &iter,
+			gtk_list_store_insert_with_values(priv->store, &iter, -1,
 					GIGOLO_WINDOW_COL_IS_MOUNTED, FALSE,
 					GIGOLO_WINDOW_COL_NAME, vol_name,
 					GIGOLO_WINDOW_COL_SCHEME, gigolo_describe_scheme("file"),
@@ -693,8 +691,7 @@ static void browse_network_real(BrowseData *bd)
 					parent_iter = NULL;
 
 				/* insert the item into the tree store */
-				gtk_tree_store_append(store, &iter, parent_iter);
-				gtk_tree_store_set(store, &iter,
+				gtk_tree_store_insert_with_values(store, &iter, parent_iter, -1,
 					GIGOLO_BROWSE_NETWORK_COL_URI, uri,
 					GIGOLO_BROWSE_NETWORK_COL_NAME, g_file_info_get_display_name(info),
 					GIGOLO_BROWSE_NETWORK_COL_ICON, g_file_info_get_icon(info),
