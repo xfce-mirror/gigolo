@@ -157,9 +157,48 @@ static void button_connect_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrow
 }
 
 
+static void insert_row(GtkTreeStore *store, GtkTreeIter *parent, const gchar *text)
+{
+	gtk_tree_store_insert_with_values(store, NULL, parent, -1,
+		GIGOLO_BROWSE_NETWORK_COL_NAME, text,
+		GIGOLO_BROWSE_NETWORK_COL_CAN_MOUNT, FALSE,
+		-1);
+}
+
+
+static void find_empty_nodes(GtkTreeModel *model)
+{
+	GtkTreeIter child, iter;
+
+	if (! gtk_tree_model_get_iter_first(model, &iter))
+	{
+		insert_row(GTK_TREE_STORE(model), NULL, _("No Workgroups found"));
+		return;
+	}
+
+	do
+	{
+		if (gtk_tree_model_iter_children(model, &child, &iter))
+		{
+			do
+			{
+				if (! gtk_tree_model_iter_has_child(model, &child))
+					insert_row(GTK_TREE_STORE(model), &child, _("No Shares found"));
+			}
+			while (gtk_tree_model_iter_next(model, &child));
+		}
+		else
+			insert_row(GTK_TREE_STORE(model), &iter, _("No Hosts found"));
+	}
+	while (gtk_tree_model_iter_next(model, &iter));
+}
+
+
 static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GigoloBrowseNetworkPanel *panel)
 {
 	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+
+	find_empty_nodes(GTK_TREE_MODEL(priv->store));
 
 	gtk_tree_view_expand_all(GTK_TREE_VIEW(priv->tree));
 
