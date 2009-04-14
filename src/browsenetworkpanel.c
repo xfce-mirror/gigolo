@@ -200,11 +200,7 @@ static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, Gig
 
 	find_empty_nodes(GTK_TREE_MODEL(priv->store));
 
-	gtk_tree_view_expand_all(GTK_TREE_VIEW(priv->tree));
-
 	gtk_widget_set_sensitive(priv->button_refresh, TRUE);
-
-	tree_selection_changed_cb(NULL, panel);
 
 	gdk_window_set_cursor(gigolo_widget_get_window(GTK_WIDGET(panel)), NULL);
 }
@@ -378,6 +374,13 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseN
 }
 
 
+static void tree_row_inserted(G_GNUC_UNUSED GtkTreeModel *model, GtkTreePath *path,
+							  G_GNUC_UNUSED GtkTreeIter *iter, GtkTreeView *tree)
+{
+	gtk_tree_view_expand_to_path(tree, path);
+}
+
+
 static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 {
 	GtkCellRenderer *text_renderer, *icon_renderer;
@@ -421,6 +424,7 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	g_signal_connect(tree, "button-release-event", G_CALLBACK(tree_button_release_event), panel);
 	g_signal_connect(tree, "key-press-event", G_CALLBACK(tree_key_press_event), panel);
 	g_signal_connect(selection, "changed", G_CALLBACK(tree_selection_changed_cb), panel);
+	g_signal_connect(store, "row-inserted", G_CALLBACK(tree_row_inserted), tree);
 
 	/* popup menu */
 	menu = gtk_menu_new();
@@ -445,6 +449,8 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	priv->tree = tree;
 	priv->store = store;
 	priv->popup_menu = menu;
+
+	tree_selection_changed_cb(NULL, panel);
 }
 
 

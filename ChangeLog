@@ -3,6 +3,8 @@
  * src/browsenetworkpanel.c:
    Show 'No Workgroups/Hosts/Shares found' messages in the network
    browser if appropriate.
+   Expand the nodes in the network browser on the fly while they are
+   added.
  * src/backendgvfs.c, src/bookmarkeditdialog.c:
    Use gtk_list_store_insert_with_values() instead of
    gtk_list_store_append() and gtk_list_store_set().
