@@ -2,14 +2,15 @@
 # Copyright (C) 2008-2009 Enrico Tröger
 # This file is distributed under the same license as Gigolo.
 # Enrico Tröger <enrico@xfce.org>, 2008-2009.
+# Fabian Nowak <timystery@arcor.de>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo 0.2.0\n"
+"Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-04 18:57+0200\n"
-"PO-Revision-Date: 2009-02-22 23:41+0100\n"
-"Last-Translator: Enrico Tröger <enrico@xfce.org>\n"
+"POT-Creation-Date: 2009-04-13 13:07+0200\n"
+"PO-Revision-Date: 2009-04-13 14:30+0200\n"
+"Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n-de@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +19,7 @@ msgstr ""
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr ""
+msgstr "Laufende Instanzen nicht beachten, eine neue Instanz erzwingen"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
@@ -27,7 +28,7 @@ msgstr "Gibt eine Liste unterstützter URI-Formate aus"
 # siehe http://en.de.open-tran.eu/suggest/be verbose
 #: ../src/main.c:48
 msgid "Be verbose"
-msgstr "ausführliche Ausgabe"
+msgstr "Ausführliche Ausgabe"
 
 #: ../src/main.c:49
 msgid "Show version information"
@@ -35,7 +36,7 @@ msgstr "Zeige Versionsinformationen"
 
 #: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- eine einfache Oberfläche um entfernte Dateisysteme einzubinden"
+msgstr "- eine einfache Oberfläche zum Einbinden entfernter Dateisysteme"
 
 #: ../src/common.c:73
 msgid "Unix Device"
@@ -59,7 +60,7 @@ msgstr "SSH"
 
 #: ../src/common.c:83
 msgid "Obex"
-msgstr ""
+msgstr "Obex"
 
 #: ../src/common.c:85
 msgid "WebDAV"
@@ -84,7 +85,7 @@ msgstr "Verbinde zu »%s« ..."
 
 #: ../src/window.c:443 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Eine einfache Oberfläche um entfernte Dateisysteme einzubinden"
+msgstr "Eine einfache Oberfläche zum Einbinden entfernter Dateisysteme"
 
 #: ../src/window.c:444
 msgid "Copyright 2008-2009 Enrico Tröger"
@@ -92,11 +93,14 @@ msgstr "Copyright 2008-2009 Enrico Tröger"
 
 #: ../src/window.c:447
 msgid "translator-credits"
-msgstr "Enrico Tröger <enrico@xfce.org>"
+msgstr ""
+"Enrico Tröger <enrico@xfce.org>\n"
+"Fabian Nowak <timystery@arcor.de>"
 
 #: ../src/window.c:479
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr ""
+"Gigolo kann mit den folgenden, von GVfs bereitgestellen Protokollen umgehen:"
 
 #: ../src/window.c:708 ../src/bookmarkeditdialog.c:189
 #: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
@@ -117,7 +121,6 @@ msgid "_Actions"
 msgstr "_Aktionen"
 
 #: ../src/window.c:1183
-#, fuzzy
 msgid "_View"
 msgstr "_Ansicht"
 
@@ -125,8 +128,8 @@ msgstr "_Ansicht"
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/window.c:1188 ../src/browsenetworkpanel.c:476
-#: ../src/browsenetworkpanel.c:516
+#: ../src/window.c:1188 ../src/browsenetworkpanel.c:396
+#: ../src/browsenetworkpanel.c:436
 msgid "Create _Bookmark"
 msgstr "Lesezeichen _erstellen"
 
@@ -136,7 +139,9 @@ msgstr "Lesezeichen _bearbeiten"
 
 #: ../src/window.c:1191
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Öffnet den Lesezeicheneditor"
+msgstr ""
+"Öffnet den Lesezeicheneditor zum Hinzufügen, Bearbeiten oder Löschen von "
+"Lesezeichen"
 
 #: ../src/window.c:1195
 msgid "Disconnect the selected resource"
@@ -156,33 +161,31 @@ msgstr "Gigolo beenden"
 
 #: ../src/window.c:1200
 msgid "Online Help"
-msgstr ""
+msgstr "Online-Hilfe"
 
 #: ../src/window.c:1201
 msgid "Supported Protocols"
-msgstr ""
+msgstr "Unterstützte Protokolle"
 
 #: ../src/window.c:1207
 msgid "Side _Panel"
-msgstr ""
+msgstr "_Seitenleiste"
 
 #: ../src/window.c:1209
-#, fuzzy
 msgid "_Toolbar"
-msgstr "Werkzeugleiste"
+msgstr "_Werkzeugleiste"
 
 #: ../src/window.c:1211
 msgid "Status _Icon"
-msgstr ""
+msgstr "S_tatusanzeige"
 
 #: ../src/window.c:1217
-#, fuzzy
 msgid "View as _Symbols"
-msgstr "Symbole"
+msgstr "S_ymbole anzeigen"
 
 #: ../src/window.c:1218
 msgid "View as _Detailed List"
-msgstr ""
+msgstr "_Detaillierte Liste anzeigen"
 
 #: ../src/window.c:1224
 msgid "_Bookmarks"
@@ -191,17 +194,17 @@ msgstr "_Lesezeichen"
 #: ../src/window.c:1224
 msgid "Choose a bookmark to connect to"
 msgstr ""
-"Wählen Sie ein Lesezeichen, für das eine Verbindung aufgebaut werden soll"
+"Wählen Sie ein Lesezeichen, zu dem eine Verbindung aufgebaut werden soll"
 
 #: ../src/window.c:1298
 msgid "Connected"
 msgstr "Verbunden"
 
-#: ../src/window.c:1307 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1307 ../src/bookmarkdialog.c:301
 msgid "Service Type"
 msgstr "Verbindungstyp"
 
-#: ../src/window.c:1315 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1315 ../src/bookmarkdialog.c:293
 msgid "Name"
 msgstr "Name"
 
@@ -236,37 +239,37 @@ msgstr "Warnung"
 msgid "Connect"
 msgstr "Verbinden"
 
-#: ../src/bookmarkdialog.c:93
+#: ../src/bookmarkdialog.c:94
 #, c-format
 msgid "Domain: %s"
 msgstr "Domäne: %s"
 
-#: ../src/bookmarkdialog.c:98
+#: ../src/bookmarkdialog.c:99
 #, c-format
 msgid "Share: %s"
 msgstr "Freigabe: %s"
 
-#: ../src/bookmarkdialog.c:308
+#: ../src/bookmarkdialog.c:309
 msgid "Host"
 msgstr "Host"
 
-#: ../src/bookmarkdialog.c:316
+#: ../src/bookmarkdialog.c:317
 msgid "Port"
 msgstr "Port"
 
-#: ../src/bookmarkdialog.c:324
+#: ../src/bookmarkdialog.c:325
 msgid "Auto-Connect"
 msgstr "Autom. Verbinden"
 
-#: ../src/bookmarkdialog.c:332
+#: ../src/bookmarkdialog.c:333
 msgid "Username"
 msgstr "Benutzername"
 
-#: ../src/bookmarkdialog.c:340
+#: ../src/bookmarkdialog.c:341
 msgid "Other information"
 msgstr "Andere Angaben"
 
-#: ../src/bookmarkdialog.c:397
+#: ../src/bookmarkdialog.c:398
 msgid "Edit Bookmarks"
 msgstr "Lesezeichen bearbeiten"
 
@@ -293,9 +296,8 @@ msgid "You must enter a valid URI for the connection."
 msgstr "Sie müssen eine gültige URI für die Verbindung angeben."
 
 #: ../src/bookmarkeditdialog.c:494
-#, fuzzy
 msgid "_Device:"
-msgstr "Unix-Gerät"
+msgstr "_Gerät:"
 
 #: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
 msgid "_Server:"
@@ -382,7 +384,6 @@ msgid "Symbols"
 msgstr "Symbole"
 
 #: ../src/preferencesdialog.c:195
-#, fuzzy
 msgid "Detailed List"
 msgstr "Details"
 
@@ -432,7 +433,7 @@ msgstr "_HAL-basierten Medienmanager benutzen"
 #: ../src/preferencesdialog.c:380 ../src/preferencesdialog.c:388
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr ""
-"<i>Änderungen an dieser Einstellungen werden erst nach einem Neustart von "
+"<i>Änderungen an dieser Einstellung werden erst nach einem Neustart von "
 "Gigolo wirksam .</i>"
 
 #: ../src/preferencesdialog.c:387
@@ -450,12 +451,12 @@ msgstr "_Fensterposition und -größe speichern"
 #: ../src/preferencesdialog.c:406
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr ""
-"Speichert die Fensterposition und die Fenstergröße und stellt sie beim "
-"nächsten Start wieder her."
+"Speichert die Fensterposition und Größe und stellt sie beim nächsten Start "
+"wieder her."
 
 #: ../src/preferencesdialog.c:409
 msgid "Show status _icon in the Notification Area"
-msgstr "Zeige ein Statussymbol im _Benachrichtigungsfeld."
+msgstr "Zeige ein Statussymbol im _Benachrichtigungsfeld"
 
 #: ../src/preferencesdialog.c:412
 msgid "Start _minimized in the Notification Area"
@@ -463,27 +464,30 @@ msgstr "Im Benachrichtigungsfeld _minimiert starten"
 
 #: ../src/preferencesdialog.c:417
 msgid "Show 'Browse Network' side panel"
-msgstr ""
+msgstr "Seitenleiste »Netzwerk durchsuchen« zeigen"
 
 #: ../src/preferencesdialog.c:418
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba shares"
 msgstr ""
+"Seitenleiste zum Druchsuchen des lokalen Netzwerks nach verfügbaren Samba-"
+"Freigaben"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
-msgstr ""
+msgstr "Fehlermeldungen beim autom. Verbinden zeigen"
 
 #: ../src/preferencesdialog.c:423
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr ""
+"Fehlermeldungen zeigen, wenn das automatische Verbinden zu Lesezeichen "
+"fehlschlägt."
 
 #: ../src/preferencesdialog.c:429
-#, fuzzy
 msgid "_Connection List Mode"
-msgstr "Verbinde zu »%s« ..."
+msgstr "Darstellung der _Verbindungsliste:"
 
 #: ../src/preferencesdialog.c:442
 msgid "Toolbar"
@@ -505,7 +509,7 @@ msgstr "_Ausrichtung"
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: ../src/backendgvfs.c:169
+#: ../src/backendgvfs.c:199
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -520,49 +524,44 @@ msgstr ""
 "Verbunden: Ja\n"
 "Verbindungstyp: %s"
 
-#: ../src/backendgvfs.c:183
+#: ../src/backendgvfs.c:213
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix-Gerät: %s</b>"
 
-#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
+#: ../src/backendgvfs.c:397 ../src/backendgvfs.c:429
 msgid "unknown"
 msgstr "unbekannt"
 
-#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
+#: ../src/backendgvfs.c:403 ../src/backendgvfs.c:479
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Verbinden zu »%s« ist fehlgeschlagen."
+msgstr "Verbinden zu »%s« fehlgeschlagen."
 
-#: ../src/backendgvfs.c:402
+#: ../src/backendgvfs.c:433
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Trennen von »%s« ist fehlgeschlagen."
+msgstr "Trennen von »%s« fehlgeschlagen."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
 msgstr "Verbinden"
 
-#: ../src/browsenetworkpanel.c:257
-msgid "No Workgroups found"
-msgstr ""
-
-#: ../src/browsenetworkpanel.c:509
-#, fuzzy
+#: ../src/browsenetworkpanel.c:429
 msgid "Connect to the selected share"
-msgstr "Trennt die ausgewählte Verbindung"
+msgstr "Mit der ausgewählten Freigabe verbinden"
 
-#: ../src/browsenetworkpanel.c:517
+#: ../src/browsenetworkpanel.c:437
 msgid "Create a bookmark from the selected share"
-msgstr ""
+msgstr "Ein Lesezeichen für die ausgewählte Freigabe anlegen"
 
-#: ../src/browsenetworkpanel.c:526
+#: ../src/browsenetworkpanel.c:446
 msgid "Refresh the network list"
-msgstr ""
+msgstr "Netzwerkliste aktualisieren"
 
-#: ../src/browsenetworkpanel.c:537
+#: ../src/browsenetworkpanel.c:457
 msgid "Close panel"
-msgstr ""
+msgstr "Leiste schließen"
 
 #~ msgid "_View Mode"
 #~ msgstr "_Ansicht"

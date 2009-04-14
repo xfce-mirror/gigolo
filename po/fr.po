@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo 0.2.0\n"
+"Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-04 18:57+0200\n"
-"PO-Revision-Date: 2009-04-06 09:12+0100\n"
+"PO-Revision-Date: 2009-04-12 11:17+0100\n"
 "Last-Translator: Jérôme Guelfucci <jeromeg@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -80,7 +80,7 @@ msgstr "Emplacement personnalisé"
 
 #: ../src/window.c:275
 msgid "Connecting to \"%s\""
-msgstr "La connexion à \"%s\" a échoué"
+msgstr "Connexion à \"%s\" en cours"
 
 #: ../src/window.c:443 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
@@ -172,7 +172,7 @@ msgstr "Barre d'ou_tils"
 
 #: ../src/window.c:1211
 msgid "Status _Icon"
-msgstr "_Icône de statut"
+msgstr "_Icône d'état"
 
 #: ../src/window.c:1217
 msgid "View as _Symbols"
@@ -399,7 +399,7 @@ msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
 msgstr ""
-"La période des tentatives de connexions automatiques aux signets, en secondes. Zéro "
+"La fréquence des tentatives de connexions automatiques aux signets, en secondes. Zéro "
 "désactive la vérification."
 
 #: ../src/preferencesdialog.c:373
@@ -443,7 +443,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:409
 msgid "Show status _icon in the Notification Area"
-msgstr "Afficher l'_icône de statut dans la zone de notification"
+msgstr "Afficher l'_icône d'état dans la zone de notification"
 
 #: ../src/preferencesdialog.c:412
 msgid "Start _minimized in the Notification Area"
@@ -451,7 +451,7 @@ msgstr "Démarrer _minimisé dans la zone de notification"
 
 #: ../src/preferencesdialog.c:417
 msgid "Show 'Browse Network' side panel"
-msgstr "Afficher le panneau latérale 'Parcourir le réseau'"
+msgstr "Afficher le panneau latéral 'Parcourir le réseau'"
 
 #: ../src/preferencesdialog.c:418
 msgid ""
