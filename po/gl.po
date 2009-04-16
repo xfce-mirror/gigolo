@@ -1,6 +1,6 @@
 # Galician translation of gigolo
 # Copyright (C) 2009 Leandro Regueiro.
-# This file is distributed under the same license as Gigolo.
+# This file is distributed under the same license as the Xfce package.
 #
 # Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2009.
 #
@@ -9,11 +9,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo 0.2.1\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-04 18:57+0200\n"
-"PO-Revision-Date: 2009-03-07 11:29+0100\n"
-"Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
+"PO-Revision-Date: 2009-04-14 22:12+0100\n"
+"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,11 +26,11 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
-msgstr ""
+msgstr "Mostrar unha lista dos esquemas de URI soportados"
 
 #: ../src/main.c:48
 msgid "Be verbose"
-msgstr ""
+msgstr "Ser detallado"
 
 #: ../src/main.c:49
 msgid "Show version information"
@@ -38,9 +38,7 @@ msgstr "Mostrar a información da versión"
 
 #: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- unha sinxela interface para conectar facilmente a sistemas de ficheiros "
-"remotos"
+msgstr "- unha sinxela interface para conectar facilmente a sistemas de ficheiros remotos"
 
 #: ../src/common.c:73
 msgid "Unix Device"
@@ -87,11 +85,10 @@ msgstr "Localización personalizada"
 msgid "Connecting to \"%s\""
 msgstr "Conectando a \"%s\""
 
-#: ../src/window.c:443 ../gigolo.desktop.in.h:1
+#: ../src/window.c:443
+#: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
-"Unha sinxela interface para conectar facilmente a sistemas de ficheiros "
-"remotos"
+msgstr "Unha sinxela interface para conectar facilmente a sistemas de ficheiros remotos"
 
 #: ../src/window.c:444
 msgid "Copyright 2008-2009 Enrico Tröger"
@@ -107,11 +104,14 @@ msgstr ""
 
 #: ../src/window.c:479
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
+msgstr "Gigolo pode usar os seguintes protocolos proporcionados por GVfs:"
 
-#: ../src/window.c:708 ../src/bookmarkeditdialog.c:189
-#: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
-#: ../src/bookmarkeditdialog.c:232 ../src/bookmarkeditdialog.c:243
+#: ../src/window.c:708
+#: ../src/bookmarkeditdialog.c:189
+#: ../src/bookmarkeditdialog.c:208
+#: ../src/bookmarkeditdialog.c:221
+#: ../src/bookmarkeditdialog.c:232
+#: ../src/bookmarkeditdialog.c:243
 msgid "Error"
 msgstr "Erro"
 
@@ -128,27 +128,26 @@ msgid "_Actions"
 msgstr "_Accións"
 
 #: ../src/window.c:1183
-#, fuzzy
 msgid "_View"
-msgstr "_Ficheiro"
+msgstr "_Ver"
 
 #: ../src/window.c:1184
 msgid "_Help"
 msgstr "A_xuda"
 
-#: ../src/window.c:1188 ../src/browsenetworkpanel.c:476
+#: ../src/window.c:1188
+#: ../src/browsenetworkpanel.c:476
 #: ../src/browsenetworkpanel.c:516
 msgid "Create _Bookmark"
 msgstr "Crear un _marcador"
 
 #: ../src/window.c:1190
 msgid "_Edit Bookmarks"
-msgstr ""
+msgstr "_Editar os marcadores"
 
 #: ../src/window.c:1191
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Abrir o xestor de marcadores para engadir, modificar ou eliminar marcadores"
+msgstr "Abrir o xestor de marcadores para engadir, modificar ou eliminar marcadores"
 
 #: ../src/window.c:1195
 msgid "Disconnect the selected resource"
@@ -176,24 +175,23 @@ msgstr "Protocolos soportados"
 
 #: ../src/window.c:1207
 msgid "Side _Panel"
-msgstr ""
+msgstr "_Panel lateral"
 
 #: ../src/window.c:1209
-#, fuzzy
 msgid "_Toolbar"
-msgstr "Barra de ferramentas"
+msgstr "_Barra de ferramentas"
 
 #: ../src/window.c:1211
 msgid "Status _Icon"
-msgstr ""
+msgstr "_Icona de estado"
 
 #: ../src/window.c:1217
 msgid "View as _Symbols"
-msgstr ""
+msgstr "Ver como _símbolos"
 
 #: ../src/window.c:1218
 msgid "View as _Detailed List"
-msgstr ""
+msgstr "Ver como lista _detallada"
 
 #: ../src/window.c:1224
 msgid "_Bookmarks"
@@ -207,15 +205,19 @@ msgstr "Escolla un marcador ó que conectar"
 msgid "Connected"
 msgstr "Conectado"
 
-#: ../src/window.c:1307 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1307
+#: ../src/bookmarkdialog.c:300
 msgid "Service Type"
 msgstr "Tipo de servizo"
 
-#: ../src/window.c:1315 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1315
+#: ../src/bookmarkdialog.c:292
 msgid "Name"
 msgstr "Nome"
 
-#: ../src/window.c:1382 ../src/window.c:1467 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1382
+#: ../src/window.c:1467
+#: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -225,14 +227,11 @@ msgstr "Desexa movela agora?"
 
 #: ../src/settings.c:615
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo ten que mover o antigo directorio de configuración antes de iniciar."
+msgstr "Gigolo ten que mover o antigo directorio de configuración antes de iniciar."
 
 #: ../src/settings.c:623
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
 msgstr ""
 
 #: ../src/settings.c:626
@@ -255,7 +254,7 @@ msgstr "Recurso: %s"
 
 #: ../src/bookmarkdialog.c:308
 msgid "Host"
-msgstr ""
+msgstr "Máquina"
 
 #: ../src/bookmarkdialog.c:316
 msgid "Port"
@@ -263,7 +262,7 @@ msgstr "Porto"
 
 #: ../src/bookmarkdialog.c:324
 msgid "Auto-Connect"
-msgstr ""
+msgstr "Conectar automaticamente"
 
 #: ../src/bookmarkdialog.c:332
 msgid "Username"
@@ -301,7 +300,8 @@ msgstr "Debe introducir un URI válido para a conexión."
 msgid "_Device:"
 msgstr "_Dispositivo:"
 
-#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
+#: ../src/bookmarkeditdialog.c:496
+#: ../src/bookmarkeditdialog.c:908
 msgid "_Server:"
 msgstr "_Servidor:"
 
@@ -315,15 +315,15 @@ msgstr "Modificar un marcador"
 
 #: ../src/bookmarkeditdialog.c:766
 msgid "Connect to Server"
-msgstr ""
+msgstr "Conectar co servidor"
 
 #: ../src/bookmarkeditdialog.c:862
 msgid "_Bookmark name:"
-msgstr ""
+msgstr "Nome do _marcador_"
 
 #: ../src/bookmarkeditdialog.c:870
 msgid "Au_to-Connect"
-msgstr ""
+msgstr "Conectar au_tomaticamente"
 
 #: ../src/bookmarkeditdialog.c:878
 msgid "Service t_ype:"
@@ -331,7 +331,7 @@ msgstr "T_ipo de servizo:"
 
 #: ../src/bookmarkeditdialog.c:901
 msgid "Set the port to 0 to use the default port"
-msgstr ""
+msgstr "Definir o porto coma 0 para usar o porto predeterminado"
 
 #: ../src/bookmarkeditdialog.c:907
 msgid "_Location (URI):"
@@ -339,7 +339,7 @@ msgstr "_Localización (URI):"
 
 #: ../src/bookmarkeditdialog.c:909
 msgid "_User Name:"
-msgstr ""
+msgstr "Nome de _usuario:"
 
 #: ../src/bookmarkeditdialog.c:910
 msgid "Optional information:"
@@ -371,7 +371,7 @@ msgstr "Ámbolos dous"
 
 #: ../src/preferencesdialog.c:155
 msgid "Both horizontal"
-msgstr ""
+msgstr "Horizontais os dous"
 
 #: ../src/preferencesdialog.c:174
 msgid "Horizontal"
@@ -383,12 +383,11 @@ msgstr "Vertical"
 
 #: ../src/preferencesdialog.c:194
 msgid "Symbols"
-msgstr ""
+msgstr "Símbolos"
 
 #: ../src/preferencesdialog.c:195
-#, fuzzy
 msgid "Detailed List"
-msgstr "Detallado"
+msgstr "Lista detallada"
 
 #: ../src/preferencesdialog.c:339
 msgid "General"
@@ -400,26 +399,19 @@ msgstr "Xestor de _ficheiros"
 
 #: ../src/preferencesdialog.c:352
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Introduza o nome do programa que se vai usar para abrir ou ver puntos de "
-"montaxe"
+msgstr "Introduza o nome do programa que se vai usar para abrir ou ver puntos de montaxe"
 
 #: ../src/preferencesdialog.c:361
 msgid "_Bookmark Auto-Connect Interval"
 msgstr ""
 
 #: ../src/preferencesdialog.c:367
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
 msgstr ""
 
 #: ../src/preferencesdialog.c:373
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' "
-"to mount local resources like disks. The Unix based volume manager "
-"implementation can mount such resources directly and also lists other local "
-"devices.\n"
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
 
@@ -427,9 +419,10 @@ msgstr ""
 msgid "Use _HAL based volume manager"
 msgstr ""
 
-#: ../src/preferencesdialog.c:380 ../src/preferencesdialog.c:388
+#: ../src/preferencesdialog.c:380
+#: ../src/preferencesdialog.c:388
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr ""
+msgstr "<i>Cambiar esta opción require reiniciar Gigolo.</i>"
 
 #: ../src/preferencesdialog.c:387
 msgid "Use _Unix based volume manager"
@@ -445,7 +438,7 @@ msgstr "_Gardar a posición e maila xeometría da ventá"
 
 #: ../src/preferencesdialog.c:406
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
+msgstr "Garda a posición e xeometría da ventá e restáuraa ó volver iniciar"
 
 #: ../src/preferencesdialog.c:409
 msgid "Show status _icon in the Notification Area"
@@ -453,31 +446,27 @@ msgstr "Amosar a _icona de estado na Zona de Notificación"
 
 #: ../src/preferencesdialog.c:412
 msgid "Start _minimized in the Notification Area"
-msgstr ""
+msgstr "Iniciar _minimizado na área de notificación"
 
 #: ../src/preferencesdialog.c:417
 msgid "Show 'Browse Network' side panel"
-msgstr ""
+msgstr "Mostrar o panel lateral de exploración da rede"
 
 #: ../src/preferencesdialog.c:418
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba shares"
-msgstr ""
+msgid "Whether to show a side panel for browsing the local network for available Samba shares"
+msgstr "Mostrar un panel lateral para explorar a rede local en busca de recursos Samba dispoñibles"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
-msgstr ""
+msgstr "Mostrar as mensaxes de erro das conexións automáticas"
 
 #: ../src/preferencesdialog.c:423
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "Mostrar os diálogos de mensaxes de erro cando falla a conexión automática dos marcadores"
 
 #: ../src/preferencesdialog.c:429
-#, fuzzy
 msgid "_Connection List Mode"
-msgstr "Conectando a \"%s\""
+msgstr "Modo lista de _conexión"
 
 #: ../src/preferencesdialog.c:442
 msgid "Toolbar"
@@ -485,7 +474,7 @@ msgstr "Barra de ferramentas"
 
 #: ../src/preferencesdialog.c:444
 msgid "Show _toolbar"
-msgstr ""
+msgstr "Mostrar a barra de _ferramentas"
 
 #: ../src/preferencesdialog.c:450
 msgid "St_yle"
@@ -519,19 +508,21 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Dispositivo de Unix: %s</b>"
 
-#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
+#: ../src/backendgvfs.c:367
+#: ../src/backendgvfs.c:398
 msgid "unknown"
 msgstr "descoñecido"
 
-#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
+#: ../src/backendgvfs.c:371
+#: ../src/backendgvfs.c:448
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr ""
+msgstr "Ocorreu un erro ó conectar a \"%s\"."
 
 #: ../src/backendgvfs.c:402
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr ""
+msgstr "Ocorreu un erro ó desconectar de \"%s\"."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
@@ -539,21 +530,21 @@ msgstr "Conectando"
 
 #: ../src/browsenetworkpanel.c:257
 msgid "No Workgroups found"
-msgstr ""
+msgstr "Non se atoparon grupos de traballo"
 
 #: ../src/browsenetworkpanel.c:509
-#, fuzzy
 msgid "Connect to the selected share"
-msgstr "Desconectar o recurso seleccionado"
+msgstr "Conectar ao recurso seleccionado"
 
 #: ../src/browsenetworkpanel.c:517
 msgid "Create a bookmark from the selected share"
-msgstr ""
+msgstr "Crear un marcador para o recurso seleccionado"
 
 #: ../src/browsenetworkpanel.c:526
 msgid "Refresh the network list"
-msgstr ""
+msgstr "Actualizar a lista da rede"
 
 #: ../src/browsenetworkpanel.c:537
 msgid "Close panel"
-msgstr ""
+msgstr "Pechar o panel"
+
