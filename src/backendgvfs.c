@@ -78,6 +78,8 @@ typedef struct
 struct _GigoloBackendGVFSPrivate
 {
 	GtkListStore *store;
+
+	gint browse_counter;
 };
 
 static void gigolo_backend_gvfs_finalize  			(GObject *object);
@@ -595,11 +597,20 @@ gchar **gigolo_backend_gvfs_get_smb_shares(const gchar *hostname, const gchar *u
 }
 
 
-static gboolean browse_network_ready_cb(gpointer data)
+static gboolean browse_network_ready_cb(gpointer backend)
 {
-	g_signal_emit(data, signals[BROWSE_NETWORK_FINISHED], 0);
-	verbose("Browse Network finished");
-	return FALSE;
+	GigoloBackendGVFSPrivate *priv;
+	priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
+
+	g_return_val_if_fail(backend != NULL, FALSE);
+
+	if (priv->browse_counter <= 0)
+	{
+		g_signal_emit(backend, signals[BROWSE_NETWORK_FINISHED], 0);
+		verbose("Browse Network finished");
+		return FALSE;
+	}
+	return TRUE;
 }
 
 
@@ -607,8 +618,15 @@ static void browse_network_mount_ready_cb(GFile *location, GAsyncResult *res, Br
 {
 	gboolean success;
 	GError *error = NULL;
+	GigoloBackendGVFSPrivate *priv;
+
+	g_return_if_fail(bd != NULL);
+	g_return_if_fail(bd->self != NULL);
 
 	success = g_file_mount_enclosing_volume_finish(location, res, &error);
+
+	priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(bd->self);
+	priv->browse_counter--;
 
 	if (error != NULL)
 	{
@@ -625,6 +643,7 @@ static void browse_network_mount_ready_cb(GFile *location, GAsyncResult *res, Br
 static void browse_network_real(BrowseData *bd)
 {
 	GigoloBackendGVFS *backend;
+	GigoloBackendGVFSPrivate *priv;
 	GFile *file;
 	GFileInfo *info;
 	GError *error = NULL;
@@ -634,11 +653,14 @@ static void browse_network_real(BrowseData *bd)
 	gint mode;
 
 	g_return_if_fail(bd != NULL);
+	g_return_if_fail(bd->self != NULL);
 
 	store = bd->store;
 	mode = bd->mode;
 	parent = bd->parent;
 	backend = bd->self;
+	priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
+	priv->browse_counter++;
 
 	file = g_file_new_for_uri(bd->uri);
 
@@ -656,6 +678,7 @@ static void browse_network_real(BrowseData *bd)
 			/* if the URI wasn't mounted yet, mount it and try again from the mount ready callback */
 			g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
 				(GAsyncReadyCallback) browse_network_mount_ready_cb, bd);
+
 			g_error_free(error);
 			g_object_unref(file);
 			g_object_unref(op);
@@ -718,8 +741,10 @@ static void browse_network_real(BrowseData *bd)
 					bd_child->mode = child_mode;
 					bd_child->uri = g_strdup(uri);
 					bd_child->store = store;
+					bd_child->self = backend;
 					bd_child->parent = parent;
 					bd_child->parent_path = gtk_tree_model_get_path(GTK_TREE_MODEL(store), &iter);
+
 					/* recurse into the next level */
 					browse_network_real(bd_child);
 				}
@@ -728,14 +753,7 @@ static void browse_network_real(BrowseData *bd)
 		}
 		g_object_unref(e);
 	}
-	/** TODO this is very suboptimal as a fixed timeout of ~ 2 seconds is by no means good enough
-	 *  as we never know how long the whole operating will take. Find a better way to determine
-	 *  when the operation is finsihed. */
-	/* When the mode of this run was BROWSE_MODE_DOMAINS, this was the top-level call to initially
-	 * start browsing, so in theory when we are here, we are finsihed. This isn't true due to
-	 * possibly necessary mounting above. So, we use a timeout to estimate the finished operation. */
-	if (bd->mode == BROWSE_MODE_DOMAINS)
-		g_timeout_add_seconds(2, browse_network_ready_cb, backend);
+	priv->browse_counter--;
 
 	g_object_unref(file);
 	g_free(bd->uri);
@@ -747,6 +765,9 @@ static void browse_network_real(BrowseData *bd)
 void gigolo_backend_gvfs_browse_network(GigoloBackendGVFS *backend, GtkWindow *parent, GtkTreeStore *store)
 {
 	BrowseData *bd = g_new0(BrowseData, 1);
+	GigoloBackendGVFSPrivate *priv;
+
+	g_return_if_fail(backend != NULL);
 
 	bd->mode = BROWSE_MODE_DOMAINS;
 	bd->parent_path = NULL;
@@ -755,7 +776,14 @@ void gigolo_backend_gvfs_browse_network(GigoloBackendGVFS *backend, GtkWindow *p
 	bd->uri = g_strdup("smb://");
 	bd->self = backend;
 
+	priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
+	priv->browse_counter = 0;
+
 	browse_network_real(bd);
+
+	/* When we are here, we initiated the network browsing. Then check the 'browse_counter' and
+	 * once it is 0 again, we are probably done with browsing. */
+	g_timeout_add(250, browse_network_ready_cb, backend);
 }
 
 
