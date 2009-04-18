@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-13 13:07+0200\n"
+"POT-Creation-Date: 2009-04-18 16:27+0200\n"
 "PO-Revision-Date: 2009-04-13 14:30+0200\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n-de@xfce.org>\n"
@@ -128,8 +128,8 @@ msgstr "_Ansicht"
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/window.c:1188 ../src/browsenetworkpanel.c:396
-#: ../src/browsenetworkpanel.c:436
+#: ../src/window.c:1188 ../src/browsenetworkpanel.c:439
+#: ../src/browsenetworkpanel.c:481
 msgid "Create _Bookmark"
 msgstr "Lesezeichen _erstellen"
 
@@ -299,59 +299,59 @@ msgstr "Sie müssen eine gültige URI für die Verbindung angeben."
 msgid "_Device:"
 msgstr "_Gerät:"
 
-#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
+#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:907
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:751
+#: ../src/bookmarkeditdialog.c:750
 msgid "Create Bookmark"
 msgstr "Lesezeichen erstellen"
 
-#: ../src/bookmarkeditdialog.c:758
+#: ../src/bookmarkeditdialog.c:757
 msgid "Edit Bookmark"
 msgstr "Lesezeichen bearbeiten"
 
-#: ../src/bookmarkeditdialog.c:766
+#: ../src/bookmarkeditdialog.c:765
 msgid "Connect to Server"
 msgstr "Verbinde zum Server"
 
-#: ../src/bookmarkeditdialog.c:862
+#: ../src/bookmarkeditdialog.c:861
 msgid "_Bookmark name:"
 msgstr "_Lesezeichenname:"
 
-#: ../src/bookmarkeditdialog.c:870
+#: ../src/bookmarkeditdialog.c:869
 msgid "Au_to-Connect"
 msgstr "A_utom. Verbinden"
 
-#: ../src/bookmarkeditdialog.c:878
+#: ../src/bookmarkeditdialog.c:877
 msgid "Service t_ype:"
 msgstr "_Verbindungstyp:"
 
-#: ../src/bookmarkeditdialog.c:901
+#: ../src/bookmarkeditdialog.c:900
 msgid "Set the port to 0 to use the default port"
 msgstr "Setzen Sie den Port auf 0, um den Standardwert zu benutzen"
 
-#: ../src/bookmarkeditdialog.c:907
+#: ../src/bookmarkeditdialog.c:906
 msgid "_Location (URI):"
 msgstr "Adresse (U_RI):"
 
-#: ../src/bookmarkeditdialog.c:909
+#: ../src/bookmarkeditdialog.c:908
 msgid "_User Name:"
 msgstr "_Benutzername:"
 
-#: ../src/bookmarkeditdialog.c:910
+#: ../src/bookmarkeditdialog.c:909
 msgid "Optional information:"
 msgstr "Optionale Angaben:"
 
-#: ../src/bookmarkeditdialog.c:911
+#: ../src/bookmarkeditdialog.c:910
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:911
 msgid "_Domain:"
 msgstr "_Domäne:"
 
-#: ../src/bookmarkeditdialog.c:913
+#: ../src/bookmarkeditdialog.c:912
 msgid "_Share:"
 msgstr "_Freigabe:"
 
@@ -509,7 +509,7 @@ msgstr "_Ausrichtung"
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: ../src/backendgvfs.c:199
+#: ../src/backendgvfs.c:201
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -524,7 +524,7 @@ msgstr ""
 "Verbunden: Ja\n"
 "Verbindungstyp: %s"
 
-#: ../src/backendgvfs.c:213
+#: ../src/backendgvfs.c:215
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix-Gerät: %s</b>"
@@ -547,19 +547,31 @@ msgstr "Trennen von »%s« fehlgeschlagen."
 msgid "Connecting"
 msgstr "Verbinden"
 
-#: ../src/browsenetworkpanel.c:429
+#: ../src/browsenetworkpanel.c:175
+msgid "No Workgroups found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:186
+msgid "No Shares found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:191
+msgid "No Hosts found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:474
 msgid "Connect to the selected share"
 msgstr "Mit der ausgewählten Freigabe verbinden"
 
-#: ../src/browsenetworkpanel.c:437
+#: ../src/browsenetworkpanel.c:482
 msgid "Create a bookmark from the selected share"
 msgstr "Ein Lesezeichen für die ausgewählte Freigabe anlegen"
 
-#: ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:491
 msgid "Refresh the network list"
 msgstr "Netzwerkliste aktualisieren"
 
-#: ../src/browsenetworkpanel.c:457
+#: ../src/browsenetworkpanel.c:502
 msgid "Close panel"
 msgstr "Leiste schließen"
 

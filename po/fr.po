@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-04 18:57+0200\n"
+"POT-Creation-Date: 2009-04-18 16:27+0200\n"
 "PO-Revision-Date: 2009-04-12 11:17+0100\n"
 "Last-Translator: Jérôme Guelfucci <jeromeg@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -18,8 +18,9 @@ msgstr ""
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Ignorer les instances en cours d'éxécution, forcer l'ouverture d'une nouvelle "
-"instance"
+msgstr ""
+"Ignorer les instances en cours d'éxécution, forcer l'ouverture d'une "
+"nouvelle instance"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
@@ -35,8 +36,9 @@ msgstr "Informations sur la version"
 
 #: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- une interface simple pour se connecter facilement à des systèmes de fichiers "
-"à distance"
+msgstr ""
+"- une interface simple pour se connecter facilement à des systèmes de "
+"fichiers à distance"
 
 #: ../src/common.c:73
 msgid "Unix Device"
@@ -79,12 +81,14 @@ msgid "Custom Location"
 msgstr "Emplacement personnalisé"
 
 #: ../src/window.c:275
+#, c-format
 msgid "Connecting to \"%s\""
 msgstr "Connexion à \"%s\" en cours"
 
 #: ../src/window.c:443 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Une interface simple pour se connecter facilement à des systèmes de fichiers "
+msgstr ""
+"Une interface simple pour se connecter facilement à des systèmes de fichiers "
 "à distance"
 
 #: ../src/window.c:444
@@ -125,8 +129,8 @@ msgstr "Affi_chage"
 msgid "_Help"
 msgstr "A_ide"
 
-#: ../src/window.c:1188 ../src/browsenetworkpanel.c:476
-#: ../src/browsenetworkpanel.c:516
+#: ../src/window.c:1188 ../src/browsenetworkpanel.c:439
+#: ../src/browsenetworkpanel.c:481
 msgid "Create _Bookmark"
 msgstr "Créer un _signet"
 
@@ -136,7 +140,9 @@ msgstr "_Modifier les signets"
 
 #: ../src/window.c:1191
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Ouvrir le gestionnaire de signets pour ajouter, modifier ou supprimer des signets"
+msgstr ""
+"Ouvrir le gestionnaire de signets pour ajouter, modifier ou supprimer des "
+"signets"
 
 #: ../src/window.c:1195
 msgid "Disconnect the selected resource"
@@ -194,11 +200,11 @@ msgstr "Choisissez un signet auquel se connecter"
 msgid "Connected"
 msgstr "Connecté"
 
-#: ../src/window.c:1307 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1307 ../src/bookmarkdialog.c:301
 msgid "Service Type"
 msgstr "Type de service"
 
-#: ../src/window.c:1315 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1315 ../src/bookmarkdialog.c:293
 msgid "Name"
 msgstr "Nom"
 
@@ -212,7 +218,8 @@ msgstr "Le déplacer maintenant ?"
 
 #: ../src/settings.c:615
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Gigolo doit déplacer votre ancien dossier de configuration avant de démarrer."
+msgstr ""
+"Gigolo doit déplacer votre ancien dossier de configuration avant de démarrer."
 
 #: ../src/settings.c:623
 #, c-format
@@ -220,8 +227,9 @@ msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr ""
-"Votre ancien dossier de configuration \"%s\" n'a pu être dpélacé vers \"%s\" (%s). "
-"Merci de déplacer le dossier manuellement vers le nouvel emplacement."
+"Votre ancien dossier de configuration \"%s\" n'a pu être dpélacé vers \"%s"
+"\" (%s). Merci de déplacer le dossier manuellement vers le nouvel "
+"emplacement."
 
 #: ../src/settings.c:626
 msgid "Warning"
@@ -231,35 +239,37 @@ msgstr "Avertissement"
 msgid "Connect"
 msgstr "Connecter"
 
-#: ../src/bookmarkdialog.c:93
+#: ../src/bookmarkdialog.c:94
+#, c-format
 msgid "Domain: %s"
 msgstr "Domaine : %s"
 
-#: ../src/bookmarkdialog.c:98
+#: ../src/bookmarkdialog.c:99
+#, c-format
 msgid "Share: %s"
 msgstr "Partage : %s"
 
-#: ../src/bookmarkdialog.c:308
+#: ../src/bookmarkdialog.c:309
 msgid "Host"
 msgstr "Hôte"
 
-#: ../src/bookmarkdialog.c:316
+#: ../src/bookmarkdialog.c:317
 msgid "Port"
 msgstr "Port"
 
-#: ../src/bookmarkdialog.c:324
+#: ../src/bookmarkdialog.c:325
 msgid "Auto-Connect"
 msgstr "Connexion automatique"
 
-#: ../src/bookmarkdialog.c:332
+#: ../src/bookmarkdialog.c:333
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: ../src/bookmarkdialog.c:340
+#: ../src/bookmarkdialog.c:341
 msgid "Other information"
 msgstr "Autres informations"
 
-#: ../src/bookmarkdialog.c:397
+#: ../src/bookmarkdialog.c:398
 msgid "Edit Bookmarks"
 msgstr "Modifier les signets"
 
@@ -284,64 +294,62 @@ msgid "You must enter a valid URI for the connection."
 msgstr "Vous devez entrer une URI valide pour la connexion."
 
 #: ../src/bookmarkeditdialog.c:494
-
 msgid "_Device:"
 msgstr "_Périphérique :"
 
-#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
+#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:907
 msgid "_Server:"
 msgstr "_Serveur :"
 
-#: ../src/bookmarkeditdialog.c:751
+#: ../src/bookmarkeditdialog.c:750
 msgid "Create Bookmark"
 msgstr "Créer un signet"
 
-#: ../src/bookmarkeditdialog.c:758
+#: ../src/bookmarkeditdialog.c:757
 msgid "Edit Bookmark"
 msgstr "Modifier un signet"
 
-#: ../src/bookmarkeditdialog.c:766
+#: ../src/bookmarkeditdialog.c:765
 msgid "Connect to Server"
 msgstr "Connexion au serveur"
 
-#: ../src/bookmarkeditdialog.c:862
+#: ../src/bookmarkeditdialog.c:861
 msgid "_Bookmark name:"
 msgstr "_Nom du signet :"
 
-#: ../src/bookmarkeditdialog.c:870
+#: ../src/bookmarkeditdialog.c:869
 msgid "Au_to-Connect"
 msgstr "Connexion au_tomatique"
 
-#: ../src/bookmarkeditdialog.c:878
+#: ../src/bookmarkeditdialog.c:877
 msgid "Service t_ype:"
 msgstr "T_ype de service :"
 
-#: ../src/bookmarkeditdialog.c:901
+#: ../src/bookmarkeditdialog.c:900
 msgid "Set the port to 0 to use the default port"
 msgstr "Mettre le port à 0 pour utiliser le port par défaut"
 
-#: ../src/bookmarkeditdialog.c:907
+#: ../src/bookmarkeditdialog.c:906
 msgid "_Location (URI):"
 msgstr "_Emplacement (URI) :"
 
-#: ../src/bookmarkeditdialog.c:909
+#: ../src/bookmarkeditdialog.c:908
 msgid "_User Name:"
 msgstr "Nom d'_utilisateur :"
 
-#: ../src/bookmarkeditdialog.c:910
+#: ../src/bookmarkeditdialog.c:909
 msgid "Optional information:"
 msgstr "Informations optionnelles :"
 
-#: ../src/bookmarkeditdialog.c:911
+#: ../src/bookmarkeditdialog.c:910
 msgid "_Port:"
 msgstr "_Port :"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:911
 msgid "_Domain:"
 msgstr "_Domaine :"
 
-#: ../src/bookmarkeditdialog.c:913
-
+#: ../src/bookmarkeditdialog.c:912
 msgid "_Share:"
 msgstr "Pa_rtage :"
 
@@ -388,7 +396,8 @@ msgstr "Gestionnaire de _fichiers"
 #: ../src/preferencesdialog.c:352
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr ""
-"Entrer le nom de l'application à utiliser pour ouvrir ou afficher les points de montage"
+"Entrer le nom de l'application à utiliser pour ouvrir ou afficher les points "
+"de montage"
 
 #: ../src/preferencesdialog.c:361
 msgid "_Bookmark Auto-Connect Interval"
@@ -399,8 +408,8 @@ msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
 msgstr ""
-"La fréquence des tentatives de connexions automatiques aux signets, en secondes. Zéro "
-"désactive la vérification."
+"La fréquence des tentatives de connexions automatiques aux signets, en "
+"secondes. Zéro désactive la vérification."
 
 #: ../src/preferencesdialog.c:373
 msgid ""
@@ -410,10 +419,11 @@ msgid ""
 "devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Le gestionnaire de volumes basé sur HAL requiert l'outil 'gnome-mount' pour monter les "
-"ressources locales comme les disques. Le gestionnaire de volumes basé sur Unix peut monter "
-"de telles ressources directement et liste aussi d'autres périphériques locaux."
-"Si vous n'êtes pas sûr, utilisez celui basé sur HAL."
+"Le gestionnaire de volumes basé sur HAL requiert l'outil 'gnome-mount' pour "
+"monter les ressources locales comme les disques. Le gestionnaire de volumes "
+"basé sur Unix peut monter de telles ressources directement et liste aussi "
+"d'autres périphériques locaux.Si vous n'êtes pas sûr, utilisez celui basé "
+"sur HAL."
 
 #: ../src/preferencesdialog.c:379
 msgid "Use _HAL based volume manager"
@@ -421,7 +431,8 @@ msgstr "Utiliser le gestionnaire de volumes basé sur _HAL"
 
 #: ../src/preferencesdialog.c:380 ../src/preferencesdialog.c:388
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr "<i>Le changement de cette option nécessite un redémarrage de Gigolo.</i>"
+msgstr ""
+"<i>Le changement de cette option nécessite un redémarrage de Gigolo.</i>"
 
 #: ../src/preferencesdialog.c:387
 msgid "Use _Unix based volume manager"
@@ -458,8 +469,8 @@ msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba shares"
 msgstr ""
-"S'il faut afficher, ou non, un panneau latéral pour parcourir le réseau local pour "
-"trouver les partages Samba disponibles"
+"S'il faut afficher, ou non, un panneau latéral pour parcourir le réseau "
+"local pour trouver les partages Samba disponibles"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
@@ -469,8 +480,8 @@ msgstr "Afficher les messages d'erreur de connexion automatique"
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr ""
-"S'il faut afficher, ou non, les erreurs qui surviennent lorsque la connexion automatique "
-"d'un signet échoue."
+"S'il faut afficher, ou non, les erreurs qui surviennent lorsque la connexion "
+"automatique d'un signet échoue."
 
 #: ../src/preferencesdialog.c:429
 msgid "_Connection List Mode"
@@ -496,7 +507,8 @@ msgstr "_Orientation"
 msgid "Preferences"
 msgstr "Préférences"
 
-#: ../src/backendgvfs.c:169
+#: ../src/backendgvfs.c:201
+#, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
@@ -510,20 +522,22 @@ msgstr ""
 "Monté: Oui\n"
 "Type de service : %s"
 
-#: ../src/backendgvfs.c:183
+#: ../src/backendgvfs.c:215
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Périphérique Unix : %s</b>"
 
-#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
+#: ../src/backendgvfs.c:397 ../src/backendgvfs.c:429
 msgid "unknown"
 msgstr "inconnu"
 
-#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
+#: ../src/backendgvfs.c:403 ../src/backendgvfs.c:479
+#, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "La connexion à \"%s\" a échoué."
 
-#: ../src/backendgvfs.c:402
+#: ../src/backendgvfs.c:433
+#, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "La déconnexion de \"%s\" a échoué."
 
@@ -531,23 +545,32 @@ msgstr "La déconnexion de \"%s\" a échoué."
 msgid "Connecting"
 msgstr "Connexion en cours"
 
-#: ../src/browsenetworkpanel.c:257
+#: ../src/browsenetworkpanel.c:175
 msgid "No Workgroups found"
 msgstr "Aucun groupe de travail n'a été trouvé"
 
-#: ../src/browsenetworkpanel.c:509
+#: ../src/browsenetworkpanel.c:186
+#, fuzzy
+msgid "No Shares found"
+msgstr "Aucun groupe de travail n'a été trouvé"
+
+#: ../src/browsenetworkpanel.c:191
+#, fuzzy
+msgid "No Hosts found"
+msgstr "Aucun groupe de travail n'a été trouvé"
+
+#: ../src/browsenetworkpanel.c:474
 msgid "Connect to the selected share"
 msgstr "Se connecter au partage sélectionné"
 
-#: ../src/browsenetworkpanel.c:517
+#: ../src/browsenetworkpanel.c:482
 msgid "Create a bookmark from the selected share"
 msgstr "Créer un signet pour le partage sélectionné"
 
-#: ../src/browsenetworkpanel.c:526
+#: ../src/browsenetworkpanel.c:491
 msgid "Refresh the network list"
 msgstr "Actualiser la liste des réseaux"
 
-#: ../src/browsenetworkpanel.c:537
+#: ../src/browsenetworkpanel.c:502
 msgid "Close panel"
 msgstr "Fermer le panneau"
-

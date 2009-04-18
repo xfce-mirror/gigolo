@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-04 18:57+0200\n"
+"POT-Creation-Date: 2009-04-18 16:27+0200\n"
 "PO-Revision-Date: 2009-03-19 23:08+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -127,8 +127,8 @@ msgstr "_Visningsläge"
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../src/window.c:1188 ../src/browsenetworkpanel.c:476
-#: ../src/browsenetworkpanel.c:516
+#: ../src/window.c:1188 ../src/browsenetworkpanel.c:439
+#: ../src/browsenetworkpanel.c:481
 msgid "Create _Bookmark"
 msgstr "Skapa _bokmärke"
 
@@ -200,11 +200,11 @@ msgstr "Välj ett bokmärke att ansluta till"
 msgid "Connected"
 msgstr "Ansluten"
 
-#: ../src/window.c:1307 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1307 ../src/bookmarkdialog.c:301
 msgid "Service Type"
 msgstr "Tjänstetyp"
 
-#: ../src/window.c:1315 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1315 ../src/bookmarkdialog.c:293
 msgid "Name"
 msgstr "Namn"
 
@@ -237,37 +237,37 @@ msgstr "Varning"
 msgid "Connect"
 msgstr "Anslut"
 
-#: ../src/bookmarkdialog.c:93
+#: ../src/bookmarkdialog.c:94
 #, c-format
 msgid "Domain: %s"
 msgstr "Domän: %s"
 
-#: ../src/bookmarkdialog.c:98
+#: ../src/bookmarkdialog.c:99
 #, c-format
 msgid "Share: %s"
 msgstr "Utdelning: %s"
 
-#: ../src/bookmarkdialog.c:308
+#: ../src/bookmarkdialog.c:309
 msgid "Host"
 msgstr "Värd"
 
-#: ../src/bookmarkdialog.c:316
+#: ../src/bookmarkdialog.c:317
 msgid "Port"
 msgstr "Port"
 
-#: ../src/bookmarkdialog.c:324
+#: ../src/bookmarkdialog.c:325
 msgid "Auto-Connect"
 msgstr "Anslut automatiskt"
 
-#: ../src/bookmarkdialog.c:332
+#: ../src/bookmarkdialog.c:333
 msgid "Username"
 msgstr "Användarnamn"
 
-#: ../src/bookmarkdialog.c:340
+#: ../src/bookmarkdialog.c:341
 msgid "Other information"
 msgstr "Annan information"
 
-#: ../src/bookmarkdialog.c:397
+#: ../src/bookmarkdialog.c:398
 msgid "Edit Bookmarks"
 msgstr "Redigera bokmärken"
 
@@ -295,59 +295,59 @@ msgstr "Du måste ange en giltig URI för anslutningen."
 msgid "_Device:"
 msgstr "_Enhet:"
 
-#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
+#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:907
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:751
+#: ../src/bookmarkeditdialog.c:750
 msgid "Create Bookmark"
 msgstr "Skapa bokmärke"
 
-#: ../src/bookmarkeditdialog.c:758
+#: ../src/bookmarkeditdialog.c:757
 msgid "Edit Bookmark"
 msgstr "Redigera bokmärke"
 
-#: ../src/bookmarkeditdialog.c:766
+#: ../src/bookmarkeditdialog.c:765
 msgid "Connect to Server"
 msgstr "Anslut till server"
 
-#: ../src/bookmarkeditdialog.c:862
+#: ../src/bookmarkeditdialog.c:861
 msgid "_Bookmark name:"
 msgstr "_Bokmärkesnamn:"
 
-#: ../src/bookmarkeditdialog.c:870
+#: ../src/bookmarkeditdialog.c:869
 msgid "Au_to-Connect"
 msgstr "Anslut a_utomatiskt"
 
-#: ../src/bookmarkeditdialog.c:878
+#: ../src/bookmarkeditdialog.c:877
 msgid "Service t_ype:"
 msgstr "Tjänste_typ:"
 
-#: ../src/bookmarkeditdialog.c:901
+#: ../src/bookmarkeditdialog.c:900
 msgid "Set the port to 0 to use the default port"
 msgstr "Ställ in porten till 0 för att använda standardporten"
 
-#: ../src/bookmarkeditdialog.c:907
+#: ../src/bookmarkeditdialog.c:906
 msgid "_Location (URI):"
 msgstr "_Plats (URI):"
 
-#: ../src/bookmarkeditdialog.c:909
+#: ../src/bookmarkeditdialog.c:908
 msgid "_User Name:"
 msgstr "_Användarnamn:"
 
-#: ../src/bookmarkeditdialog.c:910
+#: ../src/bookmarkeditdialog.c:909
 msgid "Optional information:"
 msgstr "Valfri information:"
 
-#: ../src/bookmarkeditdialog.c:911
+#: ../src/bookmarkeditdialog.c:910
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:911
 msgid "_Domain:"
 msgstr "_Domän:"
 
-#: ../src/bookmarkeditdialog.c:913
+#: ../src/bookmarkeditdialog.c:912
 msgid "_Share:"
 msgstr "_Utdelning:"
 
@@ -501,7 +501,7 @@ msgstr "_Orientering"
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: ../src/backendgvfs.c:169
+#: ../src/backendgvfs.c:201
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -516,21 +516,21 @@ msgstr ""
 "Ansluten: Ja\n"
 "Tjänstetyp: %s"
 
-#: ../src/backendgvfs.c:183
+#: ../src/backendgvfs.c:215
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix-enhet: %s</b>"
 
-#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
+#: ../src/backendgvfs.c:397 ../src/backendgvfs.c:429
 msgid "unknown"
 msgstr "okänd"
 
-#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
+#: ../src/backendgvfs.c:403 ../src/backendgvfs.c:479
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Anslutning till \"%s\" misslyckades."
 
-#: ../src/backendgvfs.c:402
+#: ../src/backendgvfs.c:433
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Frånkoppling från \"%s\" misslyckades."
@@ -539,24 +539,32 @@ msgstr "Frånkoppling från \"%s\" misslyckades."
 msgid "Connecting"
 msgstr "Ansluter"
 
-#: ../src/browsenetworkpanel.c:257
+#: ../src/browsenetworkpanel.c:175
 msgid "No Workgroups found"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:509
+#: ../src/browsenetworkpanel.c:186
+msgid "No Shares found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:191
+msgid "No Hosts found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:474
 #, fuzzy
 msgid "Connect to the selected share"
 msgstr "Koppla från markerad resurs"
 
-#: ../src/browsenetworkpanel.c:517
+#: ../src/browsenetworkpanel.c:482
 msgid "Create a bookmark from the selected share"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:526
+#: ../src/browsenetworkpanel.c:491
 msgid "Refresh the network list"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:537
+#: ../src/browsenetworkpanel.c:502
 msgid "Close panel"
 msgstr ""
 

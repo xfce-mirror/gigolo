@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-04 18:57+0200\n"
+"POT-Creation-Date: 2009-04-18 16:27+0200\n"
 "PO-Revision-Date: 2009-04-11 21:45-0400\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
@@ -33,8 +33,9 @@ msgstr "Tampilkan informasi versi"
 
 #: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- ujung depan sederhana untuk memudahkan sambungan ke sistem "
-"berkas jarak jauh"
+msgstr ""
+"- ujung depan sederhana untuk memudahkan sambungan ke sistem berkas jarak "
+"jauh"
 
 #: ../src/common.c:73
 msgid "Unix Device"
@@ -83,8 +84,8 @@ msgstr "Menyambung ke \"%s\""
 
 #: ../src/window.c:443 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Ujung depan sederhana untuk memudahkan sambungan ke sistem "
-"berkas jarak jauh"
+msgstr ""
+"Ujung depan sederhana untuk memudahkan sambungan ke sistem berkas jarak jauh"
 
 #: ../src/window.c:444
 msgid "Copyright 2008-2009 Enrico Tröger"
@@ -96,8 +97,7 @@ msgstr "Andhika Padmawan <andhika.padmawan@gmail.com>, 2009"
 
 #: ../src/window.c:479
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Gigolo dapat menggunakan protokol berikut yang disediakan oleh "
-"GVfs:"
+msgstr "Gigolo dapat menggunakan protokol berikut yang disediakan oleh GVfs:"
 
 #: ../src/window.c:708 ../src/bookmarkeditdialog.c:189
 #: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
@@ -125,8 +125,8 @@ msgstr "_Tampilan"
 msgid "_Help"
 msgstr "Ba_ntuan"
 
-#: ../src/window.c:1188 ../src/browsenetworkpanel.c:476
-#: ../src/browsenetworkpanel.c:516
+#: ../src/window.c:1188 ../src/browsenetworkpanel.c:439
+#: ../src/browsenetworkpanel.c:481
 msgid "Create _Bookmark"
 msgstr "Buat _Penanda"
 
@@ -136,8 +136,7 @@ msgstr "_Sunting Penanda"
 
 #: ../src/window.c:1191
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Buka manager penanda untuk menambah, menyunting atau menghapus "
-"penanda"
+msgstr "Buka manager penanda untuk menambah, menyunting atau menghapus penanda"
 
 #: ../src/window.c:1195
 msgid "Disconnect the selected resource"
@@ -195,11 +194,11 @@ msgstr "Pilih penanda untuk tempat menyambung"
 msgid "Connected"
 msgstr "Tersambung"
 
-#: ../src/window.c:1307 ../src/bookmarkdialog.c:300
+#: ../src/window.c:1307 ../src/bookmarkdialog.c:301
 msgid "Service Type"
 msgstr "Tipe Layanan"
 
-#: ../src/window.c:1315 ../src/bookmarkdialog.c:292
+#: ../src/window.c:1315 ../src/bookmarkdialog.c:293
 msgid "Name"
 msgstr "Nama"
 
@@ -213,8 +212,8 @@ msgstr "Pindahkan sekarang?"
 
 #: ../src/settings.c:615
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Gigolo perlu memindahkan direktori konfigurasi lama anda sebelum "
-"memulai."
+msgstr ""
+"Gigolo perlu memindahkan direktori konfigurasi lama anda sebelum memulai."
 
 #: ../src/settings.c:623
 #, c-format
@@ -222,8 +221,7 @@ msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr ""
-"Direktori konfigurasi lama anda \"%s\" tak dapat dipindahkan ke \"%s\" "
-"(%s). "
+"Direktori konfigurasi lama anda \"%s\" tak dapat dipindahkan ke \"%s\" (%s). "
 "Silakan pindahkan secara manual direktori ke lokasi baru."
 
 #: ../src/settings.c:626
@@ -234,37 +232,37 @@ msgstr "Peringatan"
 msgid "Connect"
 msgstr "Sambung"
 
-#: ../src/bookmarkdialog.c:93
+#: ../src/bookmarkdialog.c:94
 #, c-format
 msgid "Domain: %s"
 msgstr "Ranah: %s"
 
-#: ../src/bookmarkdialog.c:98
+#: ../src/bookmarkdialog.c:99
 #, c-format
 msgid "Share: %s"
 msgstr "Kongsi: %s"
 
-#: ../src/bookmarkdialog.c:308
+#: ../src/bookmarkdialog.c:309
 msgid "Host"
 msgstr "Host"
 
-#: ../src/bookmarkdialog.c:316
+#: ../src/bookmarkdialog.c:317
 msgid "Port"
 msgstr "Pangkalan"
 
-#: ../src/bookmarkdialog.c:324
+#: ../src/bookmarkdialog.c:325
 msgid "Auto-Connect"
 msgstr "Sambung-Otomatis"
 
-#: ../src/bookmarkdialog.c:332
+#: ../src/bookmarkdialog.c:333
 msgid "Username"
 msgstr "Nama Pengguna"
 
-#: ../src/bookmarkdialog.c:340
+#: ../src/bookmarkdialog.c:341
 msgid "Other information"
 msgstr "Informasi lain"
 
-#: ../src/bookmarkdialog.c:397
+#: ../src/bookmarkdialog.c:398
 msgid "Edit Bookmarks"
 msgstr "Sunting Penanda"
 
@@ -274,8 +272,8 @@ msgstr "Anda harus memasukkan nama untuk penanda."
 
 #: ../src/bookmarkeditdialog.c:209
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr "Nama penanda yang dimasukkan telah terpakai. Silakan pilih nama "
-"yang lain."
+msgstr ""
+"Nama penanda yang dimasukkan telah terpakai. Silakan pilih nama yang lain."
 
 #: ../src/bookmarkeditdialog.c:222
 msgid "You must enter a server address or name."
@@ -293,59 +291,59 @@ msgstr "Anda harus memasukkan URI yang sah untuk koneksi."
 msgid "_Device:"
 msgstr "_Divais:"
 
-#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:908
+#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:907
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:751
+#: ../src/bookmarkeditdialog.c:750
 msgid "Create Bookmark"
 msgstr "Buat Penanda"
 
-#: ../src/bookmarkeditdialog.c:758
+#: ../src/bookmarkeditdialog.c:757
 msgid "Edit Bookmark"
 msgstr "Sunting Penanda"
 
-#: ../src/bookmarkeditdialog.c:766
+#: ../src/bookmarkeditdialog.c:765
 msgid "Connect to Server"
 msgstr "Sambung ke Server"
 
-#: ../src/bookmarkeditdialog.c:862
+#: ../src/bookmarkeditdialog.c:861
 msgid "_Bookmark name:"
 msgstr "_Nama penanda:"
 
-#: ../src/bookmarkeditdialog.c:870
+#: ../src/bookmarkeditdialog.c:869
 msgid "Au_to-Connect"
 msgstr "Sambung-O_tomatis"
 
-#: ../src/bookmarkeditdialog.c:878
+#: ../src/bookmarkeditdialog.c:877
 msgid "Service t_ype:"
 msgstr "T_ipe layanan:"
 
-#: ../src/bookmarkeditdialog.c:901
+#: ../src/bookmarkeditdialog.c:900
 msgid "Set the port to 0 to use the default port"
 msgstr "Atur pangkalan ke 0 untuk menggunakan pangkalan standar"
 
-#: ../src/bookmarkeditdialog.c:907
+#: ../src/bookmarkeditdialog.c:906
 msgid "_Location (URI):"
 msgstr "_Lokasi (URI):"
 
-#: ../src/bookmarkeditdialog.c:909
+#: ../src/bookmarkeditdialog.c:908
 msgid "_User Name:"
 msgstr "_Nama Pengguna:"
 
-#: ../src/bookmarkeditdialog.c:910
+#: ../src/bookmarkeditdialog.c:909
 msgid "Optional information:"
 msgstr "Informasi tambahan:"
 
-#: ../src/bookmarkeditdialog.c:911
+#: ../src/bookmarkeditdialog.c:910
 msgid "_Port:"
 msgstr "_Pangkalan:"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:911
 msgid "_Domain:"
 msgstr "_Ranah:"
 
-#: ../src/bookmarkeditdialog.c:913
+#: ../src/bookmarkeditdialog.c:912
 msgid "_Share:"
 msgstr "_Kongsi:"
 
@@ -391,8 +389,9 @@ msgstr "_Manajer Berkas"
 
 #: ../src/preferencesdialog.c:352
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Masukkan nama program untuk digunakan untuk membuka atau "
-"menampilkan titik kait"
+msgstr ""
+"Masukkan nama program untuk digunakan untuk membuka atau menampilkan titik "
+"kait"
 
 #: ../src/preferencesdialog.c:361
 msgid "_Bookmark Auto-Connect Interval"
@@ -414,10 +413,10 @@ msgid ""
 "devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Implementasi manajer volume berbasis HAL memerlukan alat 'gnome-mount' "
-"untuk mengaitkan sumber daya lokal seperti cakram. Implementasi manajer volume "
-"berbasis Unix dapat mengaitkan sumber daya seperti itu secara langsung "
-"dan juga menyenaraikan divais lokal lainnya.\n"
+"Implementasi manajer volume berbasis HAL memerlukan alat 'gnome-mount' untuk "
+"mengaitkan sumber daya lokal seperti cakram. Implementasi manajer volume "
+"berbasis Unix dapat mengaitkan sumber daya seperti itu secara langsung dan "
+"juga menyenaraikan divais lokal lainnya.\n"
 "Jika anda tidak yakin, gunakan monitor berbasis HAL."
 
 #: ../src/preferencesdialog.c:379
@@ -442,8 +441,7 @@ msgstr "_Simpan posisi dan geometri jendela"
 
 #: ../src/preferencesdialog.c:406
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Simpan posisi dan geometri jendela serta mengembalikannya saat "
-"memulai"
+msgstr "Simpan posisi dan geometri jendela serta mengembalikannya saat memulai"
 
 #: ../src/preferencesdialog.c:409
 msgid "Show status _icon in the Notification Area"
@@ -500,7 +498,7 @@ msgstr "_Orientasi"
 msgid "Preferences"
 msgstr "Pengaturan"
 
-#: ../src/backendgvfs.c:169
+#: ../src/backendgvfs.c:201
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -515,21 +513,21 @@ msgstr ""
 "Tersambung: Ya\n"
 "Tipe Layanan: %s"
 
-#: ../src/backendgvfs.c:183
+#: ../src/backendgvfs.c:215
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Divais Unix: %s</b>"
 
-#: ../src/backendgvfs.c:367 ../src/backendgvfs.c:398
+#: ../src/backendgvfs.c:397 ../src/backendgvfs.c:429
 msgid "unknown"
 msgstr "tak diketahui"
 
-#: ../src/backendgvfs.c:371 ../src/backendgvfs.c:448
+#: ../src/backendgvfs.c:403 ../src/backendgvfs.c:479
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Menyambung ke \"%s\" gagal."
 
-#: ../src/backendgvfs.c:402
+#: ../src/backendgvfs.c:433
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Memutus dari \"%s\" gagal."
@@ -538,22 +536,32 @@ msgstr "Memutus dari \"%s\" gagal."
 msgid "Connecting"
 msgstr "Menyambung"
 
-#: ../src/browsenetworkpanel.c:257
+#: ../src/browsenetworkpanel.c:175
 msgid "No Workgroups found"
 msgstr "Tak ada Kelompok Kerja yang ditemukan"
 
-#: ../src/browsenetworkpanel.c:509
+#: ../src/browsenetworkpanel.c:186
+#, fuzzy
+msgid "No Shares found"
+msgstr "Tak ada Kelompok Kerja yang ditemukan"
+
+#: ../src/browsenetworkpanel.c:191
+#, fuzzy
+msgid "No Hosts found"
+msgstr "Tak ada Kelompok Kerja yang ditemukan"
+
+#: ../src/browsenetworkpanel.c:474
 msgid "Connect to the selected share"
 msgstr "Sambung ke kongsi terpilih"
 
-#: ../src/browsenetworkpanel.c:517
+#: ../src/browsenetworkpanel.c:482
 msgid "Create a bookmark from the selected share"
 msgstr "Buat penanda dari kongsi terpilih"
 
-#: ../src/browsenetworkpanel.c:526
+#: ../src/browsenetworkpanel.c:491
 msgid "Refresh the network list"
 msgstr "Muat ulang senarai jaringan"
 
-#: ../src/browsenetworkpanel.c:537
+#: ../src/browsenetworkpanel.c:502
 msgid "Close panel"
 msgstr "Tutup panel"
