@@ -120,7 +120,7 @@ static void gigolo_window_destroy(GigoloWindow *window)
 
 	if (gigolo_settings_get_boolean(priv->settings, "save-geometry"))
 	{
-		GdkWindow *gdk_window = gtk_widget_get_window(GTK_WIDGET(window));
+		GdkWindow *gdk_window = gigolo_widget_get_window(GTK_WIDGET(window));
 		gtk_window_get_position(GTK_WINDOW(window), &geo[0], &geo[1]);
 		gtk_window_get_size(GTK_WINDOW(window), &geo[2], &geo[3]);
 		if (gdk_window != NULL && gdk_window_get_state(gdk_window) & GDK_WINDOW_STATE_MAXIMIZED)
