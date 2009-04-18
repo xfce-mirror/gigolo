@@ -3,6 +3,7 @@
  * src/backendgvfs.c:
    Use a counter with a timeout for a more accurate approximation
    of finished network browsing.
+ * New release: Gigolo 0.3.2.
 
 
 2009-04-14  Enrico Tröger  <enrico(at)xfce(dot)org>

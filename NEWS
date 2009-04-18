@@ -1,3 +1,10 @@
+Gigolo 0.3.2 (April 18, 2009)
+
+	* Improve the network browsing code to poperly auto-mount Samba
+	  resources for browsing if necessary
+	* Updated translations
+
+
 Gigolo 0.3.1 (April 04, 2009)
 
 	* Fix build with GTK 2.12

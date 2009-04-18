@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 dnl $Id$
 
-AC_INIT([gigolo], [0.3.1], [http://bugs.xfce.org/])
+AC_INIT([gigolo], [0.3.2], [http://bugs.xfce.org/])
 AM_INIT_AUTOMAKE([AC_PACKAGE_TARNAME()], [AC_PACKAGE_VERSION()])
 
 AC_CONFIG_SRCDIR([src/main.c])
