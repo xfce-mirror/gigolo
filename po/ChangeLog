@@ -1,3 +1,7 @@
+2009-04-26  Stavros Giannouris <stavrosg@hellug.gr>
+
+	* el.po: Greek translation update ()
+
 2009-04-20  Mike Massonnet <mmassonnet@xfce.org>
 
 	* gl.po: Galician translation update (Leandro Regueiro)
@@ -83,6 +87,7 @@
 	* pt_BR.po: Added Brazilian Portuguese translation by
 	Filipe Rosset.
 
+>>>>>>> .r7285
 2009-03-01  Stavros Giannouris <stavrosg@hellug.gr>
 
 	* el.po: Greek translation update (Evaggelos Balaskas <ebalaskas@ebalaskas.gr>)
