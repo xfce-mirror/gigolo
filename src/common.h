@@ -29,12 +29,12 @@
 
 
 #ifdef DEBUG
-void debug(gchar const *format, ...);
+void debug(gchar const *format, ...) G_GNUC_PRINTF (1, 2);
 #else
 # define debug(...)
 #endif
 
-void verbose(gchar const *format, ...);
+void verbose(gchar const *format, ...) G_GNUC_PRINTF (1, 2);
 
 
 const gchar *gigolo_describe_scheme(const gchar *scheme);

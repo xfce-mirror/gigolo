@@ -554,7 +554,7 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 
 			if (! g_spawn_command_line_async(cmd, &error))
 			{
-				verbose(error->message);
+				verbose("%s", error->message);
 				g_error_free(error);
 			}
 
