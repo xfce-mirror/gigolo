@@ -1,8 +1,16 @@
-2009-04-18  Enrico Tröger  <enrico(at)xfce(dot)org>
+2009-05-28  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * po/POTFILES.in, src/Makefile.am, src/bookmarkpanel.c,
+   src/bookmarkpanel.h, src/preferencesdialog.c, src/settings.c,
+   src/window.c, wscript:
+   Add a Bookmark side panel.
+
+
+2009-05-18  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/window.c, src/common.h:
    Make use of the G_GNUC_PRINTF() macro.
-   
+
 
 2009-05-17  Enrico Tröger  <enrico(at)xfce(dot)org>
 

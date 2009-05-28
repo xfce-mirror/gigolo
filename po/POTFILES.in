@@ -14,5 +14,6 @@ src/preferencesdialog.c
 src/backendgvfs.c
 src/mountdialog.c
 src/browsenetworkpanel.c
+src/bookmarkpanel.c
 src/singleinstance.c
 gigolo.desktop.in

@@ -51,6 +51,7 @@ struct _GigoloSettingsPrivate
 	gint		toolbar_orientation;
 	gint		view_mode;
 	gboolean	show_panel;
+	guint		last_panel_page;
 	gboolean	show_autoconnect_errors;
 
 	gchar		*file_manager;
@@ -87,6 +88,7 @@ enum
 	PROP_TOOLBAR_ORIENTATION,
 	PROP_VIEW_MODE,
 	PROP_SHOW_PANEL,
+	PROP_LAST_PANEL_PAGE,
 	PROP_SHOW_AUTOCONNECT_ERRORS
 };
 
@@ -130,6 +132,9 @@ static void gigolo_settings_set_property(GObject *object, guint prop_id, const G
 		break;
 	case PROP_SHOW_PANEL:
 		priv->show_panel = g_value_get_boolean(value);
+		break;
+	case PROP_LAST_PANEL_PAGE:
+		priv->last_panel_page = g_value_get_uint(value);
 		break;
 	case PROP_SHOW_AUTOCONNECT_ERRORS:
 		priv->show_autoconnect_errors = g_value_get_boolean(value);
@@ -178,6 +183,9 @@ static void gigolo_settings_get_property(GObject *object, guint prop_id, GValue 
 		break;
 	case PROP_SHOW_PANEL:
 		g_value_set_boolean(value, priv->show_panel);
+		break;
+	case PROP_LAST_PANEL_PAGE:
+		g_value_set_uint(value, priv->last_panel_page);
 		break;
 	case PROP_SHOW_AUTOCONNECT_ERRORS:
 		g_value_set_boolean(value, priv->show_autoconnect_errors);
@@ -277,6 +285,14 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"show-panel",
 									"Whether to show the side panel",
 									TRUE,
+									G_PARAM_READWRITE));
+	g_object_class_install_property(gobject_class,
+									PROP_LAST_PANEL_PAGE,
+									g_param_spec_uint(
+									"last-panel-page",
+									"last-panel-page",
+									"Last displayed panel page",
+									0, G_MAXUINT, 0,
 									G_PARAM_READWRITE));
 	g_object_class_install_property(gobject_class,
 									PROP_SHOW_AUTOCONNECT_ERRORS,
@@ -411,6 +427,7 @@ static void write_settings_config(GigoloSettings *settings)
 	g_key_file_set_integer(k, SECTION_UI, "toolbar_orientation", priv->toolbar_orientation);
 	g_key_file_set_integer(k, SECTION_UI, "view_mode", priv->view_mode);
 	g_key_file_set_boolean(k, SECTION_UI, "show_panel", priv->show_panel);
+	g_key_file_set_integer(k, SECTION_UI, "last_panel_page", priv->last_panel_page);
 	g_key_file_set_boolean(k, SECTION_UI, "show_autoconnect_errors", priv->show_autoconnect_errors);
 
 	write_data(k, priv->config_filename);
@@ -516,6 +533,7 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 	priv->show_in_systray = get_setting_boolean(k, SECTION_UI, "show_in_systray", TRUE);
 	priv->start_in_systray = get_setting_boolean(k, SECTION_UI, "start_in_systray", FALSE);
 	priv->show_panel = get_setting_boolean(k, SECTION_UI, "show_panel", FALSE);
+	priv->last_panel_page = get_setting_int(k, SECTION_UI, "last_panel_page", 0);
 	priv->show_autoconnect_errors = get_setting_boolean(k, SECTION_UI, "show_autoconnect_errors", TRUE);
 	priv->show_toolbar = get_setting_boolean(k, SECTION_UI, "show_toolbar", TRUE);
 	priv->toolbar_style = get_setting_int(k, SECTION_UI, "toolbar_style", -1);

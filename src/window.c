@@ -38,6 +38,7 @@
 #include "preferencesdialog.h"
 #include "mountdialog.h"
 #include "browsenetworkpanel.h"
+#include "bookmarkpanel.h"
 
 
 typedef struct _GigoloWindowPrivate			GigoloWindowPrivate;
@@ -59,6 +60,8 @@ struct _GigoloWindowPrivate
 	GtkWidget		*hbox_view;
 
 	GtkWidget		*browse_panel;
+	GtkWidget		*bookmark_panel;
+	GtkWidget		*notebook_panel;
 	GtkWidget		*treeview;
 	GtkWidget		*iconview;
 	GtkWidget		*swin_treeview;
@@ -130,6 +133,9 @@ static void gigolo_window_destroy(GigoloWindow *window)
 
 		gigolo_settings_set_geometry(priv->settings, geo, 5);
 	}
+	g_object_set(priv->settings, "last-panel-page",
+		gtk_notebook_get_current_page(GTK_NOTEBOOK(priv->notebook_panel)), NULL);
+
 	gtk_widget_destroy(priv->tree_popup_menu);
 	gtk_widget_destroy(priv->systray_icon_popup_menu);
 	gtk_widget_destroy(priv->swin_treeview);
@@ -827,6 +833,7 @@ void gigolo_window_update_bookmarks(GigoloWindow *window)
 
 	/* writing to the 'settings' property will update the menus */
 	g_object_set(priv->action_bookmarks, "settings", priv->settings, NULL);
+	g_object_set(priv->bookmark_panel, "settings", priv->settings, NULL);
 }
 
 
@@ -928,7 +935,7 @@ static void gigolo_window_show_side_panel(GigoloWindow *window, gboolean show)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	if (show && gigolo_backend_gvfs_is_scheme_supported("smb"))
+	if (show)
 		gtk_widget_show(priv->hbox_pane);
 	else
 		gtk_widget_hide(priv->hbox_pane);
@@ -1024,15 +1031,6 @@ static void view_mode_action_set_active(GigoloWindow *window, gint val)
 	GtkAction *action = gtk_action_group_get_action(priv->action_group, "ViewSymbols");
 
 	gtk_radio_action_set_current_value(GTK_RADIO_ACTION(action), val);
-}
-
-
-static void action_set_sensitive(GigoloWindow *window, const gchar *name, gboolean set)
-{
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
-	GtkAction *action = gtk_action_group_get_action(priv->action_group, name);
-
-	gtk_action_set_sensitive(action, set);
 }
 
 
@@ -1371,6 +1369,60 @@ static void create_icon_view(GigoloWindow *window)
 }
 
 
+static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
+{
+	GtkWidget *panel_pane, *label;
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+
+	panel_pane = gtk_hpaned_new();
+	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
+
+	priv->notebook_panel = gtk_notebook_new();
+	gtk_notebook_set_tab_pos(GTK_NOTEBOOK(priv->notebook_panel), GTK_POS_LEFT);
+	gtk_widget_show(priv->notebook_panel);
+
+	label = gtk_label_new(_("Bookmarks"));
+	gtk_label_set_angle(GTK_LABEL(label), 90.0);
+	gtk_widget_show(label);
+
+	priv->bookmark_panel = gigolo_bookmark_panel_new(window);
+	gtk_widget_show(priv->bookmark_panel);
+	gtk_notebook_append_page(GTK_NOTEBOOK(priv->notebook_panel), priv->bookmark_panel, label);
+
+	label = gtk_label_new(_("Network"));
+	gtk_label_set_angle(GTK_LABEL(label), 90.0);
+	gtk_widget_show(label);
+
+	priv->browse_panel = gigolo_browse_network_panel_new(window);
+	gtk_widget_show(priv->browse_panel);
+	gtk_notebook_append_page(GTK_NOTEBOOK(priv->notebook_panel), priv->browse_panel, label);
+
+	priv->hbox_view = gtk_hbox_new(FALSE, 0);
+	priv->hbox_pane = gtk_hbox_new(FALSE, 0);
+
+	gtk_paned_add1(GTK_PANED(panel_pane), priv->hbox_pane);
+	gtk_paned_add2(GTK_PANED(panel_pane), priv->hbox_view);
+	gtk_box_pack_start(GTK_BOX(priv->hbox_pane), priv->notebook_panel, TRUE, TRUE, 0);
+
+	return panel_pane;
+}
+
+
+static void update_side_panel(GigoloWindow *window)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+
+	if (! gigolo_backend_gvfs_is_scheme_supported("smb"))
+		gtk_widget_destroy(priv->browse_panel);
+
+	if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(priv->notebook_panel)) < 2)
+		gtk_notebook_set_show_tabs(GTK_NOTEBOOK(priv->notebook_panel), FALSE);
+
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(priv->notebook_panel),
+		gigolo_settings_get_integer(priv->settings, "last-panel-page"));
+}
+
+
 static void gigolo_window_init(GigoloWindow *window)
 {
 	GtkWidget *menubar, *panel_pane;
@@ -1435,20 +1487,10 @@ static void gigolo_window_init(GigoloWindow *window)
 		"is-important", TRUE, NULL);
 
 	/* Panel */
-	panel_pane = gtk_hpaned_new();
-	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
-
-	priv->browse_panel = gigolo_browse_network_panel_new(window);
-	gtk_widget_show(priv->browse_panel);
+	panel_pane = gigolo_window_create_panel(window);
 
 	/* Pack the widgets altogether */
 	priv->vbox = gtk_vbox_new(FALSE, 0);
-	priv->hbox_view = gtk_hbox_new(FALSE, 0);
-	priv->hbox_pane = gtk_hbox_new(FALSE, 0);
-
-	gtk_paned_add1(GTK_PANED(panel_pane), priv->hbox_pane);
-	gtk_paned_add2(GTK_PANED(panel_pane), priv->hbox_view);
-	gtk_box_pack_start(GTK_BOX(priv->hbox_pane), priv->browse_panel, TRUE, TRUE, 0);
 
 	gtk_box_pack_start(GTK_BOX(priv->vbox), menubar, FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(priv->vbox), priv->toolbar, FALSE, FALSE, 0);
@@ -1496,7 +1538,7 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	state = gigolo_settings_get_boolean(settings, "show-panel");
 	gigolo_window_show_side_panel(GIGOLO_WINDOW(window), state);
 	toggle_action_set_active(GIGOLO_WINDOW(window), "ShowPanel", state);
-	action_set_sensitive(GIGOLO_WINDOW(window), "ShowPanel", gigolo_backend_gvfs_is_scheme_supported("smb"));
+	update_side_panel(GIGOLO_WINDOW(window));
 	/* Show Toolbar */
 	state = gigolo_settings_get_boolean(settings, "show-toolbar");
 	gigolo_window_show_toolbar(GIGOLO_WINDOW(window), state);

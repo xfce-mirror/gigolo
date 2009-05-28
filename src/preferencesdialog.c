@@ -416,7 +416,6 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 
 	checkbox = add_check_button(settings, "show-panel", _("Show 'Browse Network' side panel"));
 	gtk_widget_set_tooltip_text(checkbox, _("Whether to show a side panel for browsing the local network for available Samba shares"));
-	gtk_widget_set_sensitive(checkbox, gigolo_backend_gvfs_is_scheme_supported("smb"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
 	checkbox = add_check_button(settings, "show-autoconnect-errors", _("Show auto-connect error messages"));

@@ -12,6 +12,7 @@ gigolo_SOURCES = 								\
 	menubuttonaction.c menubuttonaction.h		\
 	mountdialog.c mountdialog.h					\
 	mountoperation.c mountoperation.h			\
+	bookmarkpanel.c bookmarkpanel.h			\
 	bookmarkdialog.c bookmarkdialog.h			\
 	bookmarkeditdialog.c bookmarkeditdialog.h	\
 	browsenetworkpanel.c browsenetworkpanel.h	\
