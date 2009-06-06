@@ -1,4 +1,10 @@
-2009-05-31  Enrico Tröger  <enrico(dot)troeger(at)uvena(dot)de>
+2009-06-06  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/preferences.c:
+   Adjust tooltip for the 'Show side panel' option.
+
+
+2009-05-31  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/common.c:
    Add descriptions for "archive" and "gphoto2" schemes.

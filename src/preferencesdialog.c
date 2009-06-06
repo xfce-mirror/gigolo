@@ -414,8 +414,8 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	g_signal_connect(tmp_box, "toggled", G_CALLBACK(check_button_toggle_sensitive_cb), checkbox);
 	check_button_toggle_sensitive_cb(GTK_TOGGLE_BUTTON(tmp_box), checkbox);
 
-	checkbox = add_check_button(settings, "show-panel", _("Show 'Browse Network' side panel"));
-	gtk_widget_set_tooltip_text(checkbox, _("Whether to show a side panel for browsing the local network for available Samba shares"));
+	checkbox = add_check_button(settings, "show-panel", _("Show side panel"));
+	gtk_widget_set_tooltip_text(checkbox, _("Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
 	checkbox = add_check_button(settings, "show-autoconnect-errors", _("Show auto-connect error messages"));
