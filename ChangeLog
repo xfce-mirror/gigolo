@@ -1,3 +1,9 @@
+2009-05-31  Enrico Tröger  <enrico(dot)troeger(at)uvena(dot)de>
+
+ * src/common.c:
+   Add descriptions for "archive" and "gphoto2" schemes.
+
+
 2009-05-28  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * po/POTFILES.in, src/Makefile.am, src/bookmarkpanel.c,

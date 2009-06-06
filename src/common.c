@@ -87,6 +87,10 @@ const gchar *gigolo_describe_scheme(const gchar *scheme)
 		return _("WebDAV (secure)");
 	else if (gigolo_str_equal(scheme, "network"))
 		return _("Network");
+	else if (gigolo_str_equal(scheme, "archive"))
+		return _("Archive");
+	else if (gigolo_str_equal(scheme, "gphoto2"))
+		return _("Photos");
 	else if (gigolo_str_equal(scheme, "custom"))
 		return _("Custom Location");
 
