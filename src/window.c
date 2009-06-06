@@ -834,6 +834,9 @@ void gigolo_window_update_bookmarks(GigoloWindow *window)
 	/* writing to the 'settings' property will update the menus */
 	g_object_set(priv->action_bookmarks, "settings", priv->settings, NULL);
 	g_object_set(priv->bookmark_panel, "settings", priv->settings, NULL);
+
+	/* update the popup menu items */
+	tree_selection_changed_cb(NULL, window);
 }
 
 

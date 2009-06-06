@@ -2,6 +2,8 @@
 
  * src/common.c:
    Add descriptions for "archive" and "gphoto2" schemes.
+ * src/window.c:
+   Update the popup menu after editing bookmarks.
 
 
 2009-05-28  Enrico Tröger  <enrico(at)xfce(dot)org>
