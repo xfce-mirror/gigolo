@@ -217,16 +217,15 @@ static void get_selected_iter(GigoloWindow *window, GtkTreeIter *iter)
 	}
 	else
 	{
-		GList *l, *items = gtk_icon_view_get_selected_items(GTK_ICON_VIEW(priv->iconview));
+		GList *items = gtk_icon_view_get_selected_items(GTK_ICON_VIEW(priv->iconview));
 		GtkTreeModel *model = gtk_icon_view_get_model(GTK_ICON_VIEW(priv->iconview));
 
-		for (l = items; l != NULL; l = l->next)
+		if (items != NULL)
 		{
-			gtk_tree_model_get_iter(model, iter, l->data);
-			/* the selection mode is SINGLE, so the list should never have more than one entry */
-			break;
+			/* the selection mode is SINGLE, so the list should never have more than one entry
+			 * and we simply choose the first item */
+			gtk_tree_model_get_iter(model, iter, items->data);
 		}
-
 		g_list_foreach(items, (GFunc) gtk_tree_path_free, NULL);
 		g_list_free(items);
 	}
