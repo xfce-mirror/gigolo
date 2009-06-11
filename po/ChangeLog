@@ -1,3 +1,7 @@
+2009-06-11  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+	* es.po: Spanish translation update (Elega)
+
 2009-06-07  Michal Várady <miko.vaji@gmail.com>
 
 	* cs.po: Czech translation updated + terminology improved
@@ -110,7 +114,6 @@
 	* pt_BR.po: Added Brazilian Portuguese translation by
 	Filipe Rosset.
 
->>>>>>> .r7285
 2009-03-01  Stavros Giannouris <stavrosg@hellug.gr>
 
 	* el.po: Greek translation update (Evaggelos Balaskas <ebalaskas@ebalaskas.gr>)
