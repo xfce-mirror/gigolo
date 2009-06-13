@@ -26,7 +26,7 @@
 
 #include "common.h"
 
-extern gboolean verbose_mode;
+gboolean verbose_mode;
 
 const gchar *gigolo_get_application_icon_name(void)
 {

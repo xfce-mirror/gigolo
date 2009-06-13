@@ -39,7 +39,7 @@
 static gboolean show_version = FALSE;
 static gboolean list_schemes = FALSE;
 static gboolean new_instance = FALSE;
-gboolean verbose_mode = FALSE;
+extern gboolean verbose_mode;
 
 static GOptionEntry cli_options[] =
 {

@@ -313,7 +313,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 
 
 static void gigolo_backend_gvfs_set_property(GObject *object, guint prop_id,
-										   const GValue *value, GParamSpec *pspec)
+											 const GValue *value, GParamSpec *pspec)
 {
 	switch (prop_id)
 	{
