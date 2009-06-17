@@ -136,7 +136,7 @@ def build(bld):
 	bld.new_task_gen(
 		features		= 'intltool_in',
 		source			= 'gigolo.desktop.in',
-		flags			= '-d',
+		flags			= [ '-d', '-q', '-u', '-c' ],
 		install_path	= '${DATADIR}/applications'
 	)
 

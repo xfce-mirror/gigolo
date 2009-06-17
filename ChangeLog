@@ -5,6 +5,8 @@
    mount smb://hostname as necessary.
  * src/browsenetworkpanel.c, src/window.c:
    Properly clean up on destruction.
+ * waf, wscript:
+   Update to Waf 1.5.8.
 
 
 2009-06-13  Enrico Tröger  <enrico(at)xfce(dot)org>
