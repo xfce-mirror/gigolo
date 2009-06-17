@@ -54,6 +54,8 @@ struct _GigoloBrowseNetworkPanelPrivate
 	GtkWidget *popup_menu;
 	GtkWidget *tree;
 	GtkTreeStore *store;
+
+	gulong browse_network_signal_id;
 };
 
 enum
@@ -63,6 +65,7 @@ enum
 };
 
 static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseNetworkPanel *panel);
+static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GigoloBrowseNetworkPanel *panel);
 
 
 G_DEFINE_TYPE(GigoloBrowseNetworkPanel, gigolo_browse_network_panel, GTK_TYPE_VBOX);
@@ -71,9 +74,19 @@ G_DEFINE_TYPE(GigoloBrowseNetworkPanel, gigolo_browse_network_panel, GTK_TYPE_VB
 static void gigolo_browse_network_panel_finalize(GObject *object)
 {
 	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(object);
+	GigoloBackendGVFS *backend;
 
 	gtk_widget_destroy(priv->popup_menu);
 	gdk_cursor_unref(priv->wait_cursor);
+
+	backend = gigolo_window_get_backend(priv->parent);
+	if (backend != NULL && IS_GIGOLO_BACKEND_GVFS(backend) && priv->browse_network_signal_id > 0)
+	{
+		g_signal_handler_disconnect(gigolo_window_get_backend(priv->parent),
+			priv->browse_network_signal_id);
+		priv->browse_network_signal_id = 0;
+	}
+
 
 	G_OBJECT_CLASS(gigolo_browse_network_panel_parent_class)->finalize(object);
 }
@@ -466,6 +479,8 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	GtkToolItem *toolitem;
 	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
 
+	priv->browse_network_signal_id = 0;
+
 	toolbar = gtk_toolbar_new();
 	gtk_toolbar_set_style(GTK_TOOLBAR(toolbar), GTK_TOOLBAR_BOTH_HORIZ);
 	gtk_toolbar_set_icon_size(GTK_TOOLBAR(toolbar), GTK_ICON_SIZE_BUTTON);
@@ -535,7 +550,8 @@ GtkWidget *gigolo_browse_network_panel_new(GigoloWindow *parent)
 	priv->parent = parent;
 
 	backend = gigolo_window_get_backend(parent);
-	g_signal_connect(backend, "browse-network-finished", G_CALLBACK(browse_network_finished_cb), self);
+	priv->browse_network_signal_id = g_signal_connect(backend, "browse-network-finished",
+		G_CALLBACK(browse_network_finished_cb), self);
 
 	return self;
 }

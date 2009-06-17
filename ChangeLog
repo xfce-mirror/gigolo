@@ -3,6 +3,8 @@
  * src/backendgvfs.c, src/backendgvfs.h, src/bookmarkeditdialog.c:
    When querying Samba shares in the Connect/Bookmark Edit dialog,
    mount smb://hostname as necessary.
+ * src/browsenetworkpanel.c, src/window.c:
+   Properly clean up on destruction.
 
 
 2009-06-13  Enrico Tröger  <enrico(at)xfce(dot)org>
