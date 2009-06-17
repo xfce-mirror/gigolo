@@ -77,13 +77,19 @@ struct _GigoloBookmarkEditDialogPrivate
 
 	GigoloBookmark *bookmark_init;
 	GigoloBookmark *bookmark_update;
+
+	gulong browse_host_signal_id;
 };
 
 static void gigolo_bookmark_edit_dialog_set_property		(GObject *object, guint prop_id,
 															 const GValue *value, GParamSpec *pspec);
+static void browse_host_finished_cb							(G_GNUC_UNUSED GigoloBackendGVFS *bnd,
+															 GSList *shares,
+															 GigoloBookmarkEditDialog *dialog);
 
 
-struct MethodInfo {
+struct MethodInfo
+{
 	const gchar *scheme;
 	guint port;
 	guint flags;
@@ -143,6 +149,14 @@ G_DEFINE_TYPE(GigoloBookmarkEditDialog, gigolo_bookmark_edit_dialog, GTK_TYPE_DI
 static void gigolo_bookmark_edit_dialog_destroy(GtkObject *object)
 {
 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(object);
+	GigoloBackendGVFS *backend;
+
+	backend = gigolo_window_get_backend(priv->parent);
+	if (backend != NULL && IS_GIGOLO_BACKEND_GVFS(backend) && priv->browse_host_signal_id > 0)
+	{
+		g_signal_handler_disconnect(gigolo_window_get_backend(priv->parent), priv->browse_host_signal_id);
+		priv->browse_host_signal_id = 0;
+	}
 
 	gtk_widget_destroy(priv->uri_entry);
 	gtk_widget_destroy(priv->uri_label);
@@ -786,11 +800,27 @@ static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop
 }
 
 
+static void browse_host_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GSList *shares,
+									GigoloBookmarkEditDialog *dialog)
+{
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+
+	if (shares != NULL)
+	{
+		GSList *node;
+		for (node = shares; node != NULL; node = node->next)
+		{
+			gtk_combo_box_append_text(GTK_COMBO_BOX(priv->share_combo), node->data);
+		}
+	}
+	gtk_widget_set_sensitive(priv->share_button, TRUE);
+}
+
+
 static void share_button_clicked_cb(GtkWidget *btn, GigoloBookmarkEditDialog *dialog)
 {
 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 	const gchar *hostname;
-	gchar **shares;
 
 	gtk_list_store_clear(GTK_LIST_STORE(gtk_combo_box_get_model(GTK_COMBO_BOX(priv->share_combo))));
 
@@ -800,20 +830,8 @@ static void share_button_clicked_cb(GtkWidget *btn, GigoloBookmarkEditDialog *di
 
 	gtk_widget_set_sensitive(btn, FALSE);
 
-	/* FIXME for now we ignore username and domain when browsing for shares as this is not yet
-	 * supported by GVfs (1.0.x). */
-	shares = gigolo_backend_gvfs_get_smb_shares(hostname, NULL, NULL);
-
-	if (shares != NULL)
-	{
-		guint i, len = g_strv_length(shares);
-		for (i = 0; i < len; i++)
-		{
-			gtk_combo_box_append_text(GTK_COMBO_BOX(priv->share_combo), shares[i]);
-		}
-		g_strfreev(shares);
-	}
-	gtk_widget_set_sensitive(btn, TRUE);
+	gigolo_backend_gvfs_browse_host(gigolo_window_get_backend(priv->parent),
+		GTK_WINDOW(priv->parent), hostname);
 }
 
 
@@ -836,6 +854,8 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	GtkWidget *vbox;
 	GtkCellRenderer *renderer;
 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+
+	priv->browse_host_signal_id = 0;
 
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
 	gtk_box_set_spacing(GTK_BOX(gigolo_dialog_get_content_area(GTK_DIALOG(dialog))), 2);
@@ -948,12 +968,19 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 
 GtkWidget *gigolo_bookmark_edit_dialog_new(GigoloWindow *parent, GigoloBookmarkEditDialogMode mode)
 {
-	GigoloBookmarkEditDialog *dialog = g_object_new(GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE,
+	GigoloBookmarkEditDialog *dialog;
+	GigoloBookmarkEditDialogPrivate *priv;
+
+	dialog = g_object_new(GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE,
 		"transient-for", parent,
 		"mode", mode,
 		NULL);
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+
+	priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 	priv->parent = parent;
+
+	priv->browse_host_signal_id = g_signal_connect(gigolo_window_get_backend(parent),
+		"browse-host-finished", G_CALLBACK(browse_host_finished_cb), dialog);
 
 	return GTK_WIDGET(dialog);
 }
@@ -962,15 +989,12 @@ GtkWidget *gigolo_bookmark_edit_dialog_new(GigoloWindow *parent, GigoloBookmarkE
 GtkWidget *gigolo_bookmark_edit_dialog_new_with_bookmark(GigoloWindow *parent,
 		GigoloBookmarkEditDialogMode mode, GigoloBookmark *bookmark)
 {
-	GigoloBookmarkEditDialog *dialog = g_object_new(GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE,
-		"transient-for", parent,
-		"bookmark-init", bookmark,
-		"mode", mode,
-		NULL);
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
-	priv->parent = parent;
+	GtkWidget *dialog;
 
-	return GTK_WIDGET(dialog);
+	dialog = gigolo_bookmark_edit_dialog_new(parent, mode);
+	g_object_set(dialog, "bookmark-init", bookmark, NULL);
+
+	return dialog;
 }
 
 

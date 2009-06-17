@@ -102,13 +102,13 @@ void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 
 gchar*				gigolo_backend_gvfs_get_volume_identifier		(gpointer volume);
 
-gchar**				gigolo_backend_gvfs_get_smb_shares				(const gchar *hostname,
-																	 const gchar *user,
-																	 const gchar *domain);
-
 void				gigolo_backend_gvfs_browse_network				(GigoloBackendGVFS *backend,
 																	 GtkWindow *parent,
 																	 GtkTreeStore *store);
+
+void				gigolo_backend_gvfs_browse_host					(GigoloBackendGVFS *backend,
+																	 GtkWindow *parent,
+																	 const gchar *hostname);
 
 const gchar *const* gigolo_backend_gvfs_get_supported_uri_schemes	(void);
 

@@ -1,11 +1,18 @@
-2009-06-06  Enrico Tröger  <enrico(at)xfce(dot)org>
+2009-06-17  Enrico Tröger  <enrico(at)xfce(dot)org>
+
+ * src/backendgvfs.c, src/backendgvfs.h, src/bookmarkeditdialog.c:
+   When querying Samba shares in the Connect/Bookmark Edit dialog,
+   mount smb://hostname as necessary.
+
+
+2009-06-13  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/main.c, src/common:
    Move definition of a variable to fix non-debug build of the
    test suite.
 
 
-2009-06-13  Enrico Tröger  <enrico(at)xfce(dot)org>
+2009-06-06  Enrico Tröger  <enrico(at)xfce(dot)org>
 
  * src/preferences.c:
    Adjust tooltip for the 'Show side panel' option.
