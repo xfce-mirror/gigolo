@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-18 16:27+0200\n"
-"PO-Revision-Date: 2009-06-01 01:31+0200\n"
+"POT-Creation-Date: 2009-07-24 03:00+0200\n"
+"PO-Revision-Date: 2009-07-24 03:02+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at gnome dot hu>\n"
 "MIME-Version: 1.0\n"
@@ -69,158 +69,176 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (biztonságos)"
 
-#: ../src/common.c:89
+#: ../src/common.c:89 ../src/window.c:1395
 msgid "Network"
 msgstr "Hálózat"
 
 #: ../src/common.c:91
+msgid "Archive"
+msgstr "Archívum"
+
+#: ../src/common.c:93
+msgid "Photos"
+msgstr "Fényképek"
+
+#: ../src/common.c:95
 msgid "Custom Location"
 msgstr "Egyéni hely"
 
-#: ../src/window.c:275
+#: ../src/window.c:281
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Csatlakozás ehhez: „%s”"
 
-#: ../src/window.c:443 ../gigolo.desktop.in.h:1
+#: ../src/window.c:449 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Egyszerű felület távoli fájlrendszerekhez való egyszerű csatlakozáshoz"
 
-#: ../src/window.c:444
+#: ../src/window.c:450
 msgid "Copyright 2008-2009 Enrico Tröger"
 msgstr "Copyright 2008-2009 Enrico Tröger"
 
-#: ../src/window.c:447
+#: ../src/window.c:453
 msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
-#: ../src/window.c:479
+#: ../src/window.c:485
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "A Gigolo a következő, a GVFS által biztosított protokollokat képes használni:"
 
-#: ../src/window.c:708 ../src/bookmarkeditdialog.c:189
-#: ../src/bookmarkeditdialog.c:208 ../src/bookmarkeditdialog.c:221
-#: ../src/bookmarkeditdialog.c:232 ../src/bookmarkeditdialog.c:243
+#: ../src/window.c:714 ../src/bookmarkeditdialog.c:203
+#: ../src/bookmarkeditdialog.c:222 ../src/bookmarkeditdialog.c:235
+#: ../src/bookmarkeditdialog.c:246 ../src/bookmarkeditdialog.c:257
 msgid "Error"
 msgstr "Hiba"
 
-#: ../src/window.c:1180
+#: ../src/window.c:1181
 msgid "_File"
 msgstr "_Fájl"
 
-#: ../src/window.c:1181
+#: ../src/window.c:1182
 msgid "_Edit"
 msgstr "S_zerkesztés"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1183
 msgid "_Actions"
 msgstr "_Műveletek"
 
-#: ../src/window.c:1183
+#: ../src/window.c:1184
 msgid "_View"
 msgstr "_Nézet"
 
-#: ../src/window.c:1184
+#: ../src/window.c:1185
 msgid "_Help"
 msgstr "_Súgó"
 
-#: ../src/window.c:1188 ../src/browsenetworkpanel.c:439
-#: ../src/browsenetworkpanel.c:481
+#: ../src/window.c:1189 ../src/browsenetworkpanel.c:452
+#: ../src/browsenetworkpanel.c:496
 msgid "Create _Bookmark"
 msgstr "Kö_nyvjelző létrehozása"
 
-#: ../src/window.c:1190
+#: ../src/window.c:1191
 msgid "_Edit Bookmarks"
 msgstr "Könyvjelzők s_zerkesztése"
 
-#: ../src/window.c:1191
+#: ../src/window.c:1192
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "A könyvjelzőkezelő megnyitása könyvjelzők hozzáadásához, szerkesztéséhez vagy törléséhez"
+msgstr ""
+"A könyvjelzőkezelő megnyitása könyvjelzők hozzáadásához, szerkesztéséhez "
+"vagy törléséhez"
 
-#: ../src/window.c:1195
+#: ../src/window.c:1196
 msgid "Disconnect the selected resource"
 msgstr "Kiválasztott erőforrás leválasztása"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1198
 msgid "Open the selected resource with a file manager"
 msgstr "A kiválasztott erőforrás megnyitása fájlkezelőben"
 
-#: ../src/window.c:1198
+#: ../src/window.c:1199
 msgid "Copy _URI"
 msgstr "_URI másolása"
 
-#: ../src/window.c:1199
+#: ../src/window.c:1200
 msgid "Quit Gigolo"
 msgstr "Kilépés a Gigoloból"
 
-#: ../src/window.c:1200
+#: ../src/window.c:1201
 msgid "Online Help"
 msgstr "Online súgó"
 
-#: ../src/window.c:1201
+#: ../src/window.c:1202
 msgid "Supported Protocols"
 msgstr "Támogatott protokollok"
 
-#: ../src/window.c:1207
+#: ../src/window.c:1208
 msgid "Side _Panel"
 msgstr "Oldal_panel"
 
-#: ../src/window.c:1209
+#: ../src/window.c:1210
 msgid "_Toolbar"
 msgstr "_Eszköztár"
 
-#: ../src/window.c:1211
+#: ../src/window.c:1212
 msgid "Status _Icon"
 msgstr "Állapotik_on"
 
-#: ../src/window.c:1217
+#: ../src/window.c:1218
 msgid "View as _Symbols"
 msgstr "Megjelenítés szimból_umokként"
 
-#: ../src/window.c:1218
+#: ../src/window.c:1219
 msgid "View as _Detailed List"
 msgstr "Megjelenítés _részletes listaként"
 
-#: ../src/window.c:1224
+#: ../src/window.c:1225
 msgid "_Bookmarks"
 msgstr "_Könyvjelzők"
 
-#: ../src/window.c:1224
+#: ../src/window.c:1225
 msgid "Choose a bookmark to connect to"
 msgstr "Válasszon könyvjelzőt a kapcsolódáshoz"
 
-#: ../src/window.c:1298
+#: ../src/window.c:1299
 msgid "Connected"
 msgstr "Kapcsolódva"
 
-#: ../src/window.c:1307 ../src/bookmarkdialog.c:301
+#: ../src/window.c:1308 ../src/bookmarkdialog.c:301
 msgid "Service Type"
 msgstr "Szolgáltatástípus"
 
-#: ../src/window.c:1315 ../src/bookmarkdialog.c:293
+#: ../src/window.c:1316 ../src/bookmarkdialog.c:293
 msgid "Name"
 msgstr "Név"
 
-#: ../src/window.c:1382 ../src/window.c:1467 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1387
+msgid "Bookmarks"
+msgstr "Könyvjelzők"
+
+#: ../src/window.c:1437 ../src/window.c:1512 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:614
+#: ../src/settings.c:632
 msgid "Move it now?"
 msgstr "Áthelyezi most?"
 
-#: ../src/settings.c:615
+#: ../src/settings.c:633
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "A Gigolonak az indítás előtt át kell helyeznie a régi konfigurációs könyvtárát."
+msgstr ""
+"A Gigolonak az indítás előtt át kell helyeznie a régi konfigurációs "
+"könyvtárát."
 
-#: ../src/settings.c:623
+#: ../src/settings.c:641
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "A régi konfigurációs könyvtára („%s”) nem helyezhető át ide: „%s” (%s). Helyezze át a könyvtárat saját kezűleg az új helyre."
+msgstr ""
+"A régi konfigurációs könyvtára („%s”) nem helyezhető át ide: „%s” (%s). "
+"Helyezze át a könyvtárat saját kezűleg az új helyre."
 
-#: ../src/settings.c:626
+#: ../src/settings.c:644
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
@@ -262,83 +280,83 @@ msgstr "Egyéb információk"
 msgid "Edit Bookmarks"
 msgstr "Könyvjelzők szerkesztése"
 
-#: ../src/bookmarkeditdialog.c:190
+#: ../src/bookmarkeditdialog.c:204
 msgid "You must enter a name for the bookmark."
 msgstr "Meg kell adnia a könyvjelző nevét."
 
-#: ../src/bookmarkeditdialog.c:209
+#: ../src/bookmarkeditdialog.c:223
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr "A megadott könyvjelzőnév már használatban van. Válasszon másik nevet."
 
-#: ../src/bookmarkeditdialog.c:222
+#: ../src/bookmarkeditdialog.c:236
 msgid "You must enter a server address or name."
 msgstr "Meg kell adnia egy kiszolgálócímet vagy -nevet."
 
-#: ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a share name."
 msgstr "Meg kell adnia egy megosztásnevet."
 
-#: ../src/bookmarkeditdialog.c:244
+#: ../src/bookmarkeditdialog.c:258
 msgid "You must enter a valid URI for the connection."
 msgstr "Meg kell adnia egy érvényes URI címet a kapcsolathoz."
 
-#: ../src/bookmarkeditdialog.c:494
+#: ../src/bookmarkeditdialog.c:508
 msgid "_Device:"
 msgstr "_Eszköz:"
 
-#: ../src/bookmarkeditdialog.c:496 ../src/bookmarkeditdialog.c:907
+#: ../src/bookmarkeditdialog.c:510 ../src/bookmarkeditdialog.c:927
 msgid "_Server:"
 msgstr "_Kiszolgáló:"
 
-#: ../src/bookmarkeditdialog.c:750
+#: ../src/bookmarkeditdialog.c:764
 msgid "Create Bookmark"
 msgstr "Könyvjelző létrehozása"
 
-#: ../src/bookmarkeditdialog.c:757
+#: ../src/bookmarkeditdialog.c:771
 msgid "Edit Bookmark"
 msgstr "Könyvjelző szerkesztése"
 
-#: ../src/bookmarkeditdialog.c:765
+#: ../src/bookmarkeditdialog.c:779
 msgid "Connect to Server"
 msgstr "Kapcsolódás kiszolgálóhoz"
 
-#: ../src/bookmarkeditdialog.c:861
+#: ../src/bookmarkeditdialog.c:881
 msgid "_Bookmark name:"
 msgstr "_Könyvjelző neve:"
 
-#: ../src/bookmarkeditdialog.c:869
+#: ../src/bookmarkeditdialog.c:889
 msgid "Au_to-Connect"
 msgstr "Automatikus kap_csolódás"
 
-#: ../src/bookmarkeditdialog.c:877
+#: ../src/bookmarkeditdialog.c:897
 msgid "Service t_ype:"
 msgstr "Sz_olgáltatástípus:"
 
-#: ../src/bookmarkeditdialog.c:900
+#: ../src/bookmarkeditdialog.c:920
 msgid "Set the port to 0 to use the default port"
 msgstr "Az alapértelmezett port használatához a 0 értéket adja meg"
 
-#: ../src/bookmarkeditdialog.c:906
+#: ../src/bookmarkeditdialog.c:926
 msgid "_Location (URI):"
 msgstr "He_ly (URI):"
 
-#: ../src/bookmarkeditdialog.c:908
+#: ../src/bookmarkeditdialog.c:928
 msgid "_User Name:"
 msgstr "_Felhasználónév:"
 
-#: ../src/bookmarkeditdialog.c:909
+#: ../src/bookmarkeditdialog.c:929
 msgid "Optional information:"
 msgstr "Elhagyható információk:"
 
-#: ../src/bookmarkeditdialog.c:910
+#: ../src/bookmarkeditdialog.c:930
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:911
+#: ../src/bookmarkeditdialog.c:931
 msgid "_Domain:"
 msgstr "_Tartomány:"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:932
 msgid "_Share:"
 msgstr "Meg_osztás:"
 
@@ -384,7 +402,9 @@ msgstr "_Fájlkezelő"
 
 #: ../src/preferencesdialog.c:352
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Adja meg a csatolási pontok megnyitására vagy megjelenítésére használandó program nevét"
+msgstr ""
+"Adja meg a csatolási pontok megnyitására vagy megjelenítésére használandó "
+"program nevét"
 
 #: ../src/preferencesdialog.c:361
 msgid "_Bookmark Auto-Connect Interval"
@@ -394,7 +414,9 @@ msgstr "Könyvjelző automatikus kapcsolódási i_dőköze"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr "Milyen gyakran próbáljon automatikusan kapcsolódni a könyvjelzőkhöz, másodpercben. A nulla letiltja az ellenőrzést."
+msgstr ""
+"Milyen gyakran próbáljon automatikusan kapcsolódni a könyvjelzőkhöz, "
+"másodpercben. A nulla letiltja az ellenőrzést."
 
 #: ../src/preferencesdialog.c:373
 msgid ""
@@ -404,7 +426,10 @@ msgid ""
 "devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"A HAL alapú kötetkezelő a gnome-mount eszközt igényli a helyi erőforrások, például lemezek csatolásához. A Unix alapú kötetkezelő az ilyen erőforrásokat közvetlenül is képes csatolni és felsorolja a további helyi eszközöket.\n"
+"A HAL alapú kötetkezelő a gnome-mount eszközt igényli a helyi erőforrások, "
+"például lemezek csatolásához. A Unix alapú kötetkezelő az ilyen "
+"erőforrásokat közvetlenül is képes csatolni és felsorolja a további helyi "
+"eszközöket.\n"
 "Ha bizonytalan, használja a HAL alapú figyelőt."
 
 #: ../src/preferencesdialog.c:379
@@ -440,48 +465,50 @@ msgid "Start _minimized in the Notification Area"
 msgstr "In_dítás kis méretben az értesítési területen"
 
 #: ../src/preferencesdialog.c:417
-msgid "Show 'Browse Network' side panel"
-msgstr "A „Hálózat tallózása” oldalpanel megjelenítése"
+msgid "Show side panel"
+msgstr "Oldalpanel megjelenítése"
 
 #: ../src/preferencesdialog.c:418
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
-"Samba shares"
-msgstr "Megjelenjen-e egy oldalpanel a helyi hálózaton elérhető Samba megosztások tallózásához"
+"Samba/Windows shares and a bookmark list"
+msgstr "Megjelenjen-e egy oldalpanel a helyi hálózaton elérhető Samba/Windows megosztások és a könyvjelzőlista tallózásához"
 
-#: ../src/preferencesdialog.c:422
+#: ../src/preferencesdialog.c:421
 msgid "Show auto-connect error messages"
 msgstr "Automatikus kapcsolódás hibaüzeneteinek megjelenítése"
 
-#: ../src/preferencesdialog.c:423
+#: ../src/preferencesdialog.c:422
 msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr "Megjelenjenek-e hibaablakok a könyvjelzők automatikus csatolásának meghiúsulásakor"
+msgstr ""
+"Megjelenjenek-e hibaablakok a könyvjelzők automatikus csatolásának "
+"meghiúsulásakor"
 
-#: ../src/preferencesdialog.c:429
+#: ../src/preferencesdialog.c:428
 msgid "_Connection List Mode"
 msgstr "_Kapcsolatlista módja"
 
-#: ../src/preferencesdialog.c:442
+#: ../src/preferencesdialog.c:441
 msgid "Toolbar"
 msgstr "Eszköztár"
 
-#: ../src/preferencesdialog.c:444
+#: ../src/preferencesdialog.c:443
 msgid "Show _toolbar"
 msgstr "_Eszköztár megjelenítése"
 
-#: ../src/preferencesdialog.c:450
+#: ../src/preferencesdialog.c:449
 msgid "St_yle"
 msgstr "_Stílus"
 
-#: ../src/preferencesdialog.c:461
+#: ../src/preferencesdialog.c:460
 msgid "_Orientation"
 msgstr "_Tájolás"
 
-#: ../src/preferencesdialog.c:522
+#: ../src/preferencesdialog.c:521
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: ../src/backendgvfs.c:201
+#: ../src/backendgvfs.c:214
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -496,21 +523,21 @@ msgstr ""
 "Csatolva: Igen\n"
 "Szolgáltatástípus: %s"
 
-#: ../src/backendgvfs.c:215
+#: ../src/backendgvfs.c:228
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix eszköz: %s</b>"
 
-#: ../src/backendgvfs.c:397 ../src/backendgvfs.c:429
+#: ../src/backendgvfs.c:410 ../src/backendgvfs.c:442
 msgid "unknown"
 msgstr "ismeretlen"
 
-#: ../src/backendgvfs.c:403 ../src/backendgvfs.c:479
+#: ../src/backendgvfs.c:416 ../src/backendgvfs.c:492
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "A csatlakozás meghiúsult ehhez: „%s”."
 
-#: ../src/backendgvfs.c:433
+#: ../src/backendgvfs.c:446
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "A leválás meghiúsult erről: „%s”."
@@ -519,31 +546,39 @@ msgstr "A leválás meghiúsult erről: „%s”."
 msgid "Connecting"
 msgstr "Kapcsolódás"
 
-#: ../src/browsenetworkpanel.c:175
+#: ../src/browsenetworkpanel.c:188
 msgid "No Workgroups found"
 msgstr "Nem találhatók munkacsoportok"
 
-#: ../src/browsenetworkpanel.c:186
+#: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
 msgstr "Nem találhatók megosztások"
 
-#: ../src/browsenetworkpanel.c:191
+#: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
 msgstr "Nem találhatók gépek"
 
-#: ../src/browsenetworkpanel.c:474
+#: ../src/browsenetworkpanel.c:489
 msgid "Connect to the selected share"
 msgstr "Csatlakozás a kiválasztott megosztáshoz"
 
-#: ../src/browsenetworkpanel.c:482
+#: ../src/browsenetworkpanel.c:497
 msgid "Create a bookmark from the selected share"
 msgstr "Könyvjelző készítése a kiválasztott megosztásból"
 
-#: ../src/browsenetworkpanel.c:491
+#: ../src/browsenetworkpanel.c:506
 msgid "Refresh the network list"
 msgstr "Hálózatlista frissítése"
 
-#: ../src/browsenetworkpanel.c:502
+#: ../src/browsenetworkpanel.c:517 ../src/bookmarkpanel.c:263
 msgid "Close panel"
 msgstr "Panel bezárása"
+
+#: ../src/bookmarkpanel.c:91
+msgid "No bookmarks"
+msgstr "Nincsenek könyvjelzők"
+
+#: ../src/bookmarkpanel.c:252
+msgid "Connect to the selected bookmark"
+msgstr "Csatlakozás a kiválasztott könyvjelzőhöz"
 
