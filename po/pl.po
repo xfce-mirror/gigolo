@@ -1,0 +1,557 @@
+# Polish translations for PACKAGE package
+# Polskie tłumaczenia dla pakietu PACKAGE.
+# Copyright (C) 2009 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#  <piotr.sokol@10g.pl>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gigolo 0.3.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-04-18 16:27+0200\n"
+"PO-Revision-Date: 2009-07-02 02:37+0100\n"
+"Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
+"Language-Team: Polish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Ignoruje uruchomione wystąpienia programu i uruchamia nowe wystąpienie"
+
+#: ../src/main.c:47
+msgid "Print a list of supported URI schemes"
+msgstr "Wypisuje listę obsługiwanych schematów adresów URI"
+
+#: ../src/main.c:48
+msgid "Be verbose"
+msgstr "Wypisuje szczegółowe komunikaty"
+
+#: ../src/main.c:49
+msgid "Show version information"
+msgstr "Wyświetla informacje o wersji i kończy"
+
+#: ../src/main.c:80
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr ""
+
+#: ../src/common.c:73
+#, fuzzy
+msgid "Unix Device"
+msgstr "Urządzenie Unix"
+
+#: ../src/common.c:75
+#, fuzzy
+msgid "Windows Share"
+msgstr "Udział Windows"
+
+#: ../src/common.c:77
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:79
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:81
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:83
+msgid "Obex"
+msgstr ""
+
+#: ../src/common.c:85
+msgid "WebDAV"
+msgstr ""
+
+#: ../src/common.c:87
+msgid "WebDAV (secure)"
+msgstr ""
+
+#: ../src/common.c:89
+msgid "Network"
+msgstr "Sieć"
+
+#: ../src/common.c:91
+msgid "Custom Location"
+msgstr "Własne położenie"
+
+#: ../src/window.c:275
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "Łączenie z „%s”"
+
+#: ../src/window.c:443
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Łączy ze zdalnymi systemami plików"
+
+#: ../src/window.c:444
+msgid "Copyright 2008-2009 Enrico Tröger"
+msgstr "Copyright 2008-2009 Enrico Tröger"
+
+#: ../src/window.c:447
+msgid "translator-credits"
+msgstr "Piotr Sokół <piotr.sokol@10g.pl>"
+
+#: ../src/window.c:479
+#, fuzzy
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Program używa następujących protokołów za pośrednictwem GVfs:"
+
+#: ../src/window.c:708
+#: ../src/bookmarkeditdialog.c:189
+#: ../src/bookmarkeditdialog.c:208
+#: ../src/bookmarkeditdialog.c:221
+#: ../src/bookmarkeditdialog.c:232
+#: ../src/bookmarkeditdialog.c:243
+msgid "Error"
+msgstr "Błąd"
+
+#: ../src/window.c:1180
+msgid "_File"
+msgstr "_Plik"
+
+#: ../src/window.c:1181
+msgid "_Edit"
+msgstr "_Edycja"
+
+#: ../src/window.c:1182
+msgid "_Actions"
+msgstr "_Czynność"
+
+#: ../src/window.c:1183
+msgid "_View"
+msgstr "_Widok"
+
+#: ../src/window.c:1184
+msgid "_Help"
+msgstr "Pomo_c"
+
+#: ../src/window.c:1188
+#: ../src/browsenetworkpanel.c:439
+#: ../src/browsenetworkpanel.c:481
+msgid "Create _Bookmark"
+msgstr "_Utwórz zakładkę"
+
+#: ../src/window.c:1190
+msgid "_Edit Bookmarks"
+msgstr "_Edytuj zakładki"
+
+#: ../src/window.c:1191
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Otwiera okno menedżera zakładek"
+
+#: ../src/window.c:1195
+msgid "Disconnect the selected resource"
+msgstr "Rozłącza z zaznaczonymi zasobami"
+
+#: ../src/window.c:1197
+msgid "Open the selected resource with a file manager"
+msgstr "Otwiera zaznaczone zasoby za pomocą menedżera plików"
+
+#: ../src/window.c:1198
+msgid "Copy _URI"
+msgstr "Skopiuj adres _URI"
+
+#: ../src/window.c:1199
+msgid "Quit Gigolo"
+msgstr "Kończy program"
+
+#: ../src/window.c:1200
+msgid "Online Help"
+msgstr "Zawartość"
+
+#: ../src/window.c:1201
+msgid "Supported Protocols"
+msgstr "Obsługiwane protokoły"
+
+#: ../src/window.c:1207
+msgid "Side _Panel"
+msgstr "P_anel boczny"
+
+#: ../src/window.c:1209
+msgid "_Toolbar"
+msgstr "_Pasek narzędziowy"
+
+#: ../src/window.c:1211
+msgid "Status _Icon"
+msgstr "_Ikona obszaru powiadamiania"
+
+#: ../src/window.c:1217
+msgid "View as _Symbols"
+msgstr "_Ikony"
+
+#: ../src/window.c:1218
+msgid "View as _Detailed List"
+msgstr "_Lista szczegółowa"
+
+#: ../src/window.c:1224
+msgid "_Bookmarks"
+msgstr "_Zakładki"
+
+#: ../src/window.c:1224
+msgid "Choose a bookmark to connect to"
+msgstr "Łączy z zasobem wskazywanym przez zakładkę"
+
+#: ../src/window.c:1298
+msgid "Connected"
+msgstr "Połączony"
+
+#: ../src/window.c:1307
+#: ../src/bookmarkdialog.c:301
+msgid "Service Type"
+msgstr "Typ usługi"
+
+#: ../src/window.c:1315
+#: ../src/bookmarkdialog.c:293
+msgid "Name"
+msgstr "Nazwa"
+
+#: ../src/window.c:1382
+#: ../src/window.c:1467
+#: ../gigolo.desktop.in.h:2
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:614
+msgid "Move it now?"
+msgstr ""
+
+#: ../src/settings.c:615
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr ""
+
+#: ../src/settings.c:623
+#, c-format
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr ""
+
+#: ../src/settings.c:626
+msgid "Warning"
+msgstr "Ostrzeżenie"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "Połącz"
+
+#: ../src/bookmarkdialog.c:94
+#, c-format
+msgid "Domain: %s"
+msgstr "Domena: %s"
+
+#: ../src/bookmarkdialog.c:99
+#, c-format
+msgid "Share: %s"
+msgstr "Udział: %s"
+
+#: ../src/bookmarkdialog.c:309
+msgid "Host"
+msgstr "Komputer zdalny"
+
+#: ../src/bookmarkdialog.c:317
+msgid "Port"
+msgstr "Port"
+
+#: ../src/bookmarkdialog.c:325
+msgid "Auto-Connect"
+msgstr "Automatyczne łączenie"
+
+#: ../src/bookmarkdialog.c:333
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: ../src/bookmarkdialog.c:341
+msgid "Other information"
+msgstr "Inne informacje"
+
+#: ../src/bookmarkdialog.c:398
+msgid "Edit Bookmarks"
+msgstr "Edycja zakładek"
+
+#: ../src/bookmarkeditdialog.c:190
+msgid "You must enter a name for the bookmark."
+msgstr "Proszę wprowadzić nazwę zakładki."
+
+#: ../src/bookmarkeditdialog.c:209
+msgid "The entered bookmark name is already in use. Please choose another one."
+msgstr "Wprowadzona nazwa zakładki jest już używana. Proszę wybrać inną."
+
+#: ../src/bookmarkeditdialog.c:222
+msgid "You must enter a server address or name."
+msgstr "Proszę wprowadzić adres lub nazwę serwera."
+
+#: ../src/bookmarkeditdialog.c:233
+msgid "You must enter a share name."
+msgstr "Proszę wprowadzić nazwę udziału."
+
+#: ../src/bookmarkeditdialog.c:244
+msgid "You must enter a valid URI for the connection."
+msgstr "Aby uzyskać połączenie, proszę wprowadzić poprawny adres URI."
+
+#: ../src/bookmarkeditdialog.c:494
+msgid "_Device:"
+msgstr "_Urządzenie:"
+
+#: ../src/bookmarkeditdialog.c:496
+#: ../src/bookmarkeditdialog.c:907
+msgid "_Server:"
+msgstr "_Serwer:"
+
+#: ../src/bookmarkeditdialog.c:750
+msgid "Create Bookmark"
+msgstr "Nowa zakładka"
+
+#: ../src/bookmarkeditdialog.c:757
+msgid "Edit Bookmark"
+msgstr "Edycja zakładki"
+
+#: ../src/bookmarkeditdialog.c:765
+#, fuzzy
+msgid "Connect to Server"
+msgstr "Połącz z serwerem"
+
+#: ../src/bookmarkeditdialog.c:861
+msgid "_Bookmark name:"
+msgstr "_Nazwa zakładki:"
+
+#: ../src/bookmarkeditdialog.c:869
+msgid "Au_to-Connect"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:877
+msgid "Service t_ype:"
+msgstr "_Typ usługi:"
+
+#: ../src/bookmarkeditdialog.c:900
+msgid "Set the port to 0 to use the default port"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:906
+msgid "_Location (URI):"
+msgstr "_Położenie (URI):"
+
+#: ../src/bookmarkeditdialog.c:908
+msgid "_User Name:"
+msgstr "_Nazwa użytkownika:"
+
+#: ../src/bookmarkeditdialog.c:909
+msgid "Optional information:"
+msgstr "Dodatkowe informacje:"
+
+#: ../src/bookmarkeditdialog.c:910
+msgid "_Port:"
+msgstr "_Port:"
+
+#: ../src/bookmarkeditdialog.c:911
+msgid "_Domain:"
+msgstr "_Domena:"
+
+#: ../src/bookmarkeditdialog.c:912
+msgid "_Share:"
+msgstr "_Udział:"
+
+#: ../src/preferencesdialog.c:152
+msgid "Icons"
+msgstr "Ikony"
+
+#: ../src/preferencesdialog.c:153
+msgid "Text"
+msgstr "Etykiety"
+
+#: ../src/preferencesdialog.c:154
+msgid "Both"
+msgstr "Etykiety obok ikon"
+
+#: ../src/preferencesdialog.c:155
+msgid "Both horizontal"
+msgstr "Etykiety poniżej ikon"
+
+#: ../src/preferencesdialog.c:174
+msgid "Horizontal"
+msgstr "Pozioma"
+
+#: ../src/preferencesdialog.c:175
+msgid "Vertical"
+msgstr "Pionowa"
+
+#: ../src/preferencesdialog.c:194
+msgid "Symbols"
+msgstr "Ikony"
+
+#: ../src/preferencesdialog.c:195
+msgid "Detailed List"
+msgstr "Lista szczegółowa"
+
+#: ../src/preferencesdialog.c:339
+msgid "General"
+msgstr "Ogólne"
+
+#: ../src/preferencesdialog.c:344
+msgid "_File Manager"
+msgstr "_Menedżer plików:"
+
+#: ../src/preferencesdialog.c:352
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr ""
+
+#: ../src/preferencesdialog.c:361
+msgid "_Bookmark Auto-Connect Interval"
+msgstr ""
+
+#: ../src/preferencesdialog.c:367
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr ""
+
+#: ../src/preferencesdialog.c:373
+msgid ""
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+"If you are unsure, use the HAL based monitor."
+msgstr ""
+
+#: ../src/preferencesdialog.c:379
+msgid "Use _HAL based volume manager"
+msgstr ""
+
+#: ../src/preferencesdialog.c:380
+#: ../src/preferencesdialog.c:388
+msgid "<i>Changing this option requires a restart of Gigolo.</i>"
+msgstr "<i>Po zmianie tej opcji wymagane jest ponowne uruchomienie programu.</i>"
+
+#: ../src/preferencesdialog.c:387
+msgid "Use _Unix based volume manager"
+msgstr ""
+
+#: ../src/preferencesdialog.c:403
+msgid "Interface"
+msgstr "Interfejs"
+
+#: ../src/preferencesdialog.c:405
+msgid "_Save window position and geometry"
+msgstr "_Zachowanie pozycji i rozmiaru okna"
+
+#: ../src/preferencesdialog.c:406
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "Zapisuje pozycję oraz rozmiar okna i przywraca je po uruchomieniu programu"
+
+#: ../src/preferencesdialog.c:409
+msgid "Show status _icon in the Notification Area"
+msgstr "_Ikona obszaru powiadamiania"
+
+#: ../src/preferencesdialog.c:412
+#, fuzzy
+msgid "Start _minimized in the Notification Area"
+msgstr "Uruchamianie w obszarze powiadamiania"
+
+#: ../src/preferencesdialog.c:417
+msgid "Show 'Browse Network' side panel"
+msgstr "Wyświetlanie panelu bocznego"
+
+#: ../src/preferencesdialog.c:418
+msgid "Whether to show a side panel for browsing the local network for available Samba shares"
+msgstr ""
+
+#: ../src/preferencesdialog.c:422
+msgid "Show auto-connect error messages"
+msgstr ""
+
+#: ../src/preferencesdialog.c:423
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+
+#: ../src/preferencesdialog.c:429
+msgid "_Connection List Mode"
+msgstr "_Widok listy połączeń:"
+
+#: ../src/preferencesdialog.c:442
+msgid "Toolbar"
+msgstr "Pasek narzędziowy"
+
+#: ../src/preferencesdialog.c:444
+msgid "Show _toolbar"
+msgstr "_Wyświetlanie"
+
+#: ../src/preferencesdialog.c:450
+msgid "St_yle"
+msgstr "_Wygląd:"
+
+#: ../src/preferencesdialog.c:461
+msgid "_Orientation"
+msgstr "_Orientacja:"
+
+#: ../src/preferencesdialog.c:522
+msgid "Preferences"
+msgstr "Preferencje"
+
+#: ../src/backendgvfs.c:201
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s"
+msgstr ""
+"<b>%s</b>\n"
+"\n"
+"Adres URI: %s\n"
+"Połączony: tak\n"
+"Typ usługi: %s"
+
+#: ../src/backendgvfs.c:215
+#, fuzzy, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Urządzenie Unix: %s</b>"
+
+#: ../src/backendgvfs.c:397
+#: ../src/backendgvfs.c:429
+#, fuzzy
+msgid "unknown"
+msgstr "nieznany"
+
+#: ../src/backendgvfs.c:403
+#: ../src/backendgvfs.c:479
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "Nie udało się połączyć z „%s”."
+
+#: ../src/backendgvfs.c:433
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "Nie udało się rozłączyć z „%s”."
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "Łączenie"
+
+#: ../src/browsenetworkpanel.c:175
+msgid "No Workgroups found"
+msgstr "Nie znaleziono grup roboczych"
+
+#: ../src/browsenetworkpanel.c:186
+msgid "No Shares found"
+msgstr "Nie znaleziono udziałów"
+
+#: ../src/browsenetworkpanel.c:191
+msgid "No Hosts found"
+msgstr "Nie znaleziono komputerów zdalnych"
+
+#: ../src/browsenetworkpanel.c:474
+msgid "Connect to the selected share"
+msgstr "Łączy z zaznaczonym udziałem"
+
+#: ../src/browsenetworkpanel.c:482
+msgid "Create a bookmark from the selected share"
+msgstr "Tworzy zakładkę do zaznaczonego udziału"
+
+#: ../src/browsenetworkpanel.c:491
+msgid "Refresh the network list"
+msgstr "Odświeża listę sieci"
+
+#: ../src/browsenetworkpanel.c:502
+msgid "Close panel"
+msgstr "Zamyka panel"
+
