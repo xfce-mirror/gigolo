@@ -1,0 +1,6 @@
+configure
+Makefile
+_build_
+.lock-wscript
+.waf-*
+RUN
