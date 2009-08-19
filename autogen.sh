@@ -67,7 +67,6 @@ echo "Processing configure.ac"
 
 echo "no" | glib-gettextize --force --copy
 intltoolize --copy --force --automake
-#~ libtoolize --copy --force || glibtoolize --copy --force
 aclocal
 autoheader
 automake --add-missing --copy --gnu

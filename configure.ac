@@ -35,7 +35,7 @@ GETTEXT_PACKAGE=gigolo
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package.])
 
-ALL_LINGUAS="`sed -e '/^#/d' $srcdir/po/LINGUAS`" # take all languages found in file po/LINGUAS
+ALL_LINGUAS="`ls po/*.po | awk 'BEGIN { FS="[./]"; ORS=" " } { print $2 }'`"
 
 AM_GLIB_GNU_GETTEXT
 # workaround for intltool bug (http://bugzilla.gnome.org/show_bug.cgi?id=490845)

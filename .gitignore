@@ -4,3 +4,4 @@ _build_
 .lock-wscript
 .waf-*
 RUN
+po/LINGUAS
