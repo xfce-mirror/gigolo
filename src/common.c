@@ -24,6 +24,10 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
+#ifdef GDK_WINDOWING_X11
+ #include <gdk/gdkx.h>
+#endif
+
 #include "common.h"
 
 gboolean verbose_mode;
@@ -121,20 +125,27 @@ gboolean gigolo_is_desktop_xfce(void)
 
 	if (check)
 	{
-		gint result;
-		gchar *out = NULL;
-		gboolean success;
-
-		success = g_spawn_command_line_sync("xprop -root _DT_SAVE_MODE", &out, NULL, &result, NULL);
-		if (success && result == 0 && out != NULL && strstr(out, "xfce4") != NULL)
+		/* Are we running in Xfce? */
+		GdkDisplay *display = gdk_display_get_default();
+		Display *xdisplay = GDK_DISPLAY_XDISPLAY(display);
+		Window root_window = RootWindow(xdisplay, 0);
+		Atom save_mode_atom = gdk_x11_get_xatom_by_name("_DT_SAVE_MODE");
+		Atom actual_type;
+		gint actual_format;
+		gulong n_items, bytes;
+		gchar *value;
+		gint status = XGetWindowProperty(xdisplay, root_window, save_mode_atom, 0, (~0L),
+			False, AnyPropertyType, &actual_type, &actual_format, &n_items, &bytes,
+			(guchar**) &value);
+		if (status == Success)
 		{
-			is_xfce = TRUE;
+			if (n_items == 6 && !strncmp (value, "xfce4", 6))
+				is_xfce = TRUE;
+			XFree(value);
 		}
-		g_free(out);
-
 		check = FALSE;
 	}
-    return is_xfce;
+	return is_xfce;
 }
 
 
