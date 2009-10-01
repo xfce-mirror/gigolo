@@ -4,7 +4,7 @@ Quick guide for new translations
 If you want to translate Gigolo into another language, please check
 whether a translation for your language already exists (check the
 po/ subdirectory.
-Get the SVN version of Gigolo, change to the po directory and
+Get the GIT version of Gigolo, change to the po directory and
 start the new translation with:
 
 $ msginit -l ll_CC -o ll.po -i gigolo.pot
