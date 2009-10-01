@@ -548,7 +548,6 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 		gtk_tree_model_get(model, &iter, GIGOLO_WINDOW_COL_REF, &mnt, -1);
 		if (gigolo_backend_gvfs_is_mount(mnt))
 		{
-#if 1
 			GError *error = NULL;
 			gchar *uri;
 			gchar *file_manager;
@@ -567,33 +566,6 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 			g_free(cmd);
 			g_free(file_manager);
 			g_free(uri);
-#else
-/*
-			GFile *file = g_mount_get_root(mnt);
-			gchar *path = g_file_get_path(file);
-
-			if (path != NULL)
-			{
-				gchar *cmd = g_strconcat("xdg-open ", path, NULL);
-				g_spawn_command_line_async(cmd, NULL);
-				g_free(cmd);
-				g_free(path);
-			}
-			else
-			{
-				// FIXME make the open command configurable or find a better solution
-				//       maybe gtk_show_uri() ?
-				GtkWidget *dialog = gtk_message_dialog_new(GTK_WINDOW(window),
-							GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE,
-							_("Non-local mountpoints can't be opened."));
-				gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog), _("(not yet implemented)"));
-				gtk_dialog_run(GTK_DIALOG (dialog));
-				gtk_widget_destroy(dialog);
-				verbose("Non-local mountpoints can't be opened.");
-			}
-			g_object_unref(file);
-*/
-#endif
 		}
 	}
 }
