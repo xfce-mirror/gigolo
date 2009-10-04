@@ -27,9 +27,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "bookmark.h"
 #include "settings.h"
 #include "common.h"
-#include "bookmark.h"
 
 
 typedef struct _GigoloSettingsPrivate			GigoloSettingsPrivate;
@@ -786,3 +786,31 @@ gboolean gigolo_settings_has_file_manager(GigoloSettings *settings)
 
 	return NZV(priv->file_manager);
 }
+
+
+GigoloBookmark *gigolo_settings_get_bookmark_by_uri(GigoloSettings *settings, const gchar *uri)
+{
+	GigoloBookmarkList *bml;
+	GigoloBookmark *bm = NULL;
+	gboolean found = FALSE;
+	gchar *tmp_uri;
+	guint i;
+
+	g_return_val_if_fail(settings != NULL, FALSE);
+	g_return_val_if_fail(uri != NULL, FALSE);
+
+	bml = gigolo_settings_get_bookmarks(settings);
+
+	for (i = 0; i < bml->len && ! found; i++)
+	{
+		bm = g_ptr_array_index(bml, i);
+		tmp_uri = gigolo_bookmark_get_uri_escaped(bm);
+		if (gigolo_str_equal(uri, tmp_uri))
+			found = TRUE;
+
+		g_free(tmp_uri);
+	}
+	return (found) ? bm : NULL;
+}
+
+

@@ -28,8 +28,8 @@
 #include "common.h"
 #include "compat.h"
 #include "backendgvfs.h"
-#include "settings.h"
 #include "bookmark.h"
+#include "settings.h"
 #include "window.h"
 #include "bookmarkeditdialog.h"
 #include "browsenetworkpanel.h"
@@ -369,10 +369,11 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseN
 
 		if (set)
 		{
+			GigoloSettings *settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
 			gchar *full_uri = g_strconcat(uri, share, "/", NULL);
 
-			is_bookmark = (gigolo_window_find_bookmark_by_uri(
-								GIGOLO_WINDOW(priv->parent), full_uri) != NULL);
+
+			is_bookmark = (gigolo_settings_get_bookmark_by_uri(settings, full_uri) != NULL);
 
 			g_free(full_uri);
 		}

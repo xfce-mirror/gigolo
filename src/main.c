@@ -29,8 +29,8 @@
 #include <libintl.h>
 
 #include "common.h"
-#include "settings.h"
 #include "bookmark.h"
+#include "settings.h"
 #include "backendgvfs.h"
 #include "window.h"
 #include "singleinstance.h"

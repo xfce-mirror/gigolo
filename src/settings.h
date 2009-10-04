@@ -69,6 +69,7 @@ gboolean			gigolo_settings_get_boolean			(GigoloSettings *settings, const gchar 
 gint				gigolo_settings_get_integer			(GigoloSettings *settings, const gchar *property);
 gchar*				gigolo_settings_get_string			(GigoloSettings *settings, const gchar *property);
 
+GigoloBookmark*		gigolo_settings_get_bookmark_by_uri	(GigoloSettings *settings, const gchar *uri);
 
 G_END_DECLS
 

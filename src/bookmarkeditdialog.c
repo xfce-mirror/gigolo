@@ -28,8 +28,8 @@
 
 #include "common.h"
 #include "compat.h"
-#include "settings.h"
 #include "bookmark.h"
+#include "settings.h"
 #include "backendgvfs.h"
 #include "window.h"
 #include "bookmarkeditdialog.h"

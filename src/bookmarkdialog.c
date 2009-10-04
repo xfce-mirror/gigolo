@@ -23,8 +23,8 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
-#include "settings.h"
 #include "bookmark.h"
+#include "settings.h"
 #include "backendgvfs.h"
 #include "window.h"
 #include "compat.h"
