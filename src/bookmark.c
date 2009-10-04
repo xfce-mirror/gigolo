@@ -428,7 +428,7 @@ void gigolo_bookmark_set_folder(GigoloBookmark *bookmark, const gchar *folder)
 	GigoloBookmarkPrivate *priv;
 
 	g_return_if_fail(bookmark != NULL);
-	g_return_if_fail(NZV(folder));
+	g_return_if_fail(folder != NULL);
 
 	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
