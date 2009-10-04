@@ -404,7 +404,7 @@ static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *win
 			}
 			g_free(uri);
 
-			gigolo_backend_gvfs_unmount_mount(priv->backend_gvfs, mnt);
+			gigolo_backend_gvfs_unmount_mount(priv->backend_gvfs, mnt, GTK_WINDOW(window));
 		}
 	}
 }
