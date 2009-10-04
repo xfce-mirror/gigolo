@@ -37,6 +37,7 @@ struct _GigoloBookmarkPrivate
 	gchar	*name;
 	gchar	*scheme;
 	gchar	*host;
+	gchar	*folder;
 	gchar	*domain;
 	gchar	*share;
 	guint	 port;
@@ -59,6 +60,7 @@ void gigolo_bookmark_bookmark_clear(GigoloBookmark *bookmark)
 	g_free(priv->name);
 	g_free(priv->scheme);
 	g_free(priv->host);
+	g_free(priv->folder);
 	g_free(priv->domain);
 	g_free(priv->share);
 	g_free(priv->user);
@@ -68,6 +70,7 @@ void gigolo_bookmark_bookmark_clear(GigoloBookmark *bookmark)
 	priv->host = NULL;
 	priv->port = 0;
 	priv->domain = NULL;
+	priv->folder = NULL;
 	priv->share = NULL;
 	priv->user = NULL;
 
@@ -271,6 +274,7 @@ void gigolo_bookmark_clone(GigoloBookmark *dst, const GigoloBookmark *src)
 	priv_dst->host = g_strdup(priv_src->host);
 	priv_dst->scheme = g_strdup(priv_src->scheme);
 	priv_dst->domain = g_strdup(priv_src->domain);
+	priv_dst->folder = g_strdup(priv_src->folder);
 	priv_dst->share = g_strdup(priv_src->share);
 	priv_dst->user = g_strdup(priv_src->user);
 	priv_dst->port = priv_src->port;
@@ -408,6 +412,28 @@ void gigolo_bookmark_set_host(GigoloBookmark *bookmark, const gchar *host)
 
 	g_free(priv->host);
 	priv->host = g_strdup(host);
+}
+
+
+const gchar *gigolo_bookmark_get_folder(GigoloBookmark *bookmark)
+{
+	g_return_val_if_fail(bookmark != NULL, NULL);
+
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->folder;
+}
+
+
+void gigolo_bookmark_set_folder(GigoloBookmark *bookmark, const gchar *folder)
+{
+	GigoloBookmarkPrivate *priv;
+
+	g_return_if_fail(bookmark != NULL);
+	g_return_if_fail(NZV(folder));
+
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+
+	g_free(priv->folder);
+	priv->folder = g_strdup(folder);
 }
 
 

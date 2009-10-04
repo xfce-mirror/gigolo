@@ -458,6 +458,7 @@ static void write_settings_bookmarks(GigoloSettings *settings)
 		{
 			name = gigolo_bookmark_get_name(bm);
 			set_setting_string(k, name, "host", gigolo_bookmark_get_host(bm));
+			set_setting_string(k, name, "folder", gigolo_bookmark_get_folder(bm));
 			set_setting_string(k, name, "user", gigolo_bookmark_get_user(bm));
 			set_setting_string(k, name, "scheme", gigolo_bookmark_get_scheme(bm));
 			set_setting_string(k, name, "share", gigolo_bookmark_get_share(bm));
@@ -570,7 +571,7 @@ static void load_settings_read_bookmarks(GigoloSettingsPrivate *priv)
 	GError *error = NULL;
 	gsize len, i;
 	gchar **groups;
-	gchar *scheme, *host, *user, *domain, *share;
+	gchar *scheme, *host, *user, *domain, *share, *folder;
 	gint port;
 	gboolean autoconnect;
 	GigoloBookmark *bm;
@@ -589,6 +590,7 @@ static void load_settings_read_bookmarks(GigoloSettingsPrivate *priv)
 	{
 		scheme = get_setting_string(k, groups[i], "scheme", "");
 		host = get_setting_string(k, groups[i], "host", "");
+		folder = get_setting_string(k, groups[i], "folder", "");
 		user = get_setting_string(k, groups[i], "user", "");
 		domain = get_setting_string(k, groups[i], "domain", "");
 		share = get_setting_string(k, groups[i], "share", "");
@@ -600,6 +602,8 @@ static void load_settings_read_bookmarks(GigoloSettingsPrivate *priv)
 		gigolo_bookmark_set_scheme(bm, scheme);
 		if (NZV(host))
 			gigolo_bookmark_set_host(bm, host);
+		if (NZV(folder))
+			gigolo_bookmark_set_folder(bm, folder);
 		if (NZV(user))
 			gigolo_bookmark_set_user(bm, user);
 		if (NZV(domain))
@@ -613,6 +617,7 @@ static void load_settings_read_bookmarks(GigoloSettingsPrivate *priv)
 
 		g_free(scheme);
 		g_free(host);
+		g_free(folder);
 		g_free(user);
 		g_free(domain);
 		g_free(share);

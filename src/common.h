@@ -27,6 +27,15 @@
 #define NZV(ptr) \
 	((ptr) && (ptr)[0])
 
+/* Free's ptr (if not NULL), then assigns result to it.
+ * result can be an expression using the 'old' value of ptr.
+ * It prevents a memory leak compared with: ptr = func(ptr); */
+#define setptr(ptr, result) \
+	{\
+		gpointer setptr_tmp = ptr;\
+		ptr = result;\
+		g_free(setptr_tmp);\
+	}
 
 #ifdef DEBUG
 void debug(gchar const *format, ...) G_GNUC_PRINTF (1, 2);

@@ -522,8 +522,14 @@ static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *wi
 		if (gigolo_backend_gvfs_is_mount(mnt))
 		{
 			gchar *uri;
+			GigoloBookmark *b;
 
 			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
+
+			b = gigolo_window_find_bookmark_by_uri(window, uri);
+			if (b != NULL)
+				setptr(uri, g_build_filename(uri, gigolo_bookmark_get_folder(b), NULL));
+
 			gtk_clipboard_set_text(gtk_clipboard_get(gdk_atom_intern("CLIPBOARD", FALSE)), uri, -1);
 
 			g_free(uri);
@@ -552,9 +558,14 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 			gchar *uri;
 			gchar *file_manager;
 			gchar *cmd;
+			GigoloBookmark *b;
 
 			file_manager = gigolo_settings_get_string(priv->settings, "file-manager");
 			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
+			b = gigolo_window_find_bookmark_by_uri(window, uri);
+			if (b != NULL)
+				setptr(uri, g_build_filename(uri, gigolo_bookmark_get_folder(b), NULL));
+
 			cmd = g_strconcat(file_manager, " ", uri, NULL);
 
 			if (! g_spawn_command_line_async(cmd, &error))
