@@ -86,7 +86,7 @@ enum
 
 
 GType				gigolo_backend_gvfs_get_type					(void);
-GigoloBackendGVFS*	gigolo_backend_gvfs_new							(GtkListStore *store);
+GigoloBackendGVFS*	gigolo_backend_gvfs_new							(void);
 
 gboolean			gigolo_backend_gvfs_is_mount					(gpointer mount);
 void				gigolo_backend_gvfs_get_name_and_uri_from_mount	(gpointer mount, gchar **name, gchar **uri);

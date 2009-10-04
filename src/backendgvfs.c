@@ -25,6 +25,9 @@
 
 #include "common.h"
 #include "backendgvfs.h"
+#include "bookmark.h"
+#include "settings.h"
+#include "window.h"
 #include "mountoperation.h"
 
 typedef struct _GigoloBackendGVFSPrivate			GigoloBackendGVFSPrivate;
@@ -35,6 +38,7 @@ typedef struct _GigoloBackendGVFSPrivate			GigoloBackendGVFSPrivate;
 enum
 {
     PROP_0,
+    PROP_PARENT,
     PROP_STORE
 };
 
@@ -80,6 +84,7 @@ typedef struct BrowseData
 
 struct _GigoloBackendGVFSPrivate
 {
+	GtkWindow *parent;
 	GtkListStore *store;
 
 	gint browse_counter;
@@ -145,6 +150,15 @@ static void gigolo_backend_gvfs_class_init(GigoloBackendGVFSClass *klass)
 	g_type_class_add_private(klass, sizeof(GigoloBackendGVFSPrivate));
 
 	g_object_class_install_property(g_object_class,
+										PROP_PARENT,
+										g_param_spec_object(
+										"parent",
+										"Parent",
+										"Parent window",
+										GTK_TYPE_WINDOW,
+										G_PARAM_WRITABLE));
+
+	g_object_class_install_property(g_object_class,
 										PROP_STORE,
 										g_param_spec_object(
 										"store",
@@ -199,17 +213,26 @@ static void gigolo_backend_gvfs_finalize(GObject *object)
 }
 
 
-static gchar *get_tooltip_text(gpointer ref, gint ref_type, const gchar *type)
+static gchar *get_tooltip_text(GigoloBackendGVFS *backend, gpointer ref, gint ref_type, const gchar *type)
 {
 	gchar *result = NULL;
+	GigoloBackendGVFSPrivate *priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
 	switch (ref_type)
 	{
 		case GIGOLO_WINDOW_REF_TYPE_MOUNT:
 		{
 			gchar *uri, *name, *clean_uri;
+			GigoloBookmark *b;
+			GigoloSettings *settings;
 
 			gigolo_backend_gvfs_get_name_and_uri_from_mount(ref, &name, &uri);
 			clean_uri = g_uri_unescape_string(uri, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO);
+
+			settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
+			b = gigolo_settings_get_bookmark_by_uri(settings, clean_uri);
+			if (b != NULL)
+				setptr(clean_uri, g_build_filename(clean_uri, gigolo_bookmark_get_folder(b), NULL));
+
 			result = g_strdup_printf(
 				_("<b>%s</b>\n\nURI: %s\nConnected: Yes\nService Type: %s"), name, clean_uri, type);
 
@@ -266,7 +289,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 		scheme_name = gigolo_describe_scheme(scheme);
 		uri = g_file_get_uri(file);
 		icon = g_mount_get_icon(mount);
-		tooltip_text = get_tooltip_text(mount, GIGOLO_WINDOW_REF_TYPE_MOUNT, scheme_name);
+		tooltip_text = get_tooltip_text(backend, mount, GIGOLO_WINDOW_REF_TYPE_MOUNT, scheme_name);
 
 		gtk_list_store_insert_with_values(priv->store, &iter, -1,
 				GIGOLO_WINDOW_COL_IS_MOUNTED, TRUE,
@@ -299,7 +322,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 		{
 			icon = g_volume_get_icon(volume);
 			vol_name = g_volume_get_name(volume);
-			tooltip_text = get_tooltip_text(volume, GIGOLO_WINDOW_REF_TYPE_VOLUME, NULL);
+			tooltip_text = get_tooltip_text(backend, volume, GIGOLO_WINDOW_REF_TYPE_VOLUME, NULL);
 
 			gtk_list_store_insert_with_values(priv->store, &iter, -1,
 					GIGOLO_WINDOW_COL_IS_MOUNTED, FALSE,
@@ -328,12 +351,18 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 static void gigolo_backend_gvfs_set_property(GObject *object, guint prop_id,
 											 const GValue *value, GParamSpec *pspec)
 {
+	GigoloBackendGVFSPrivate *priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(object);
+
 	switch (prop_id)
 	{
+	case PROP_PARENT:
+	{
+		priv->parent = g_value_get_object(value);
+		break;
+	}
 	case PROP_STORE:
 	{
 		GVolumeMonitor *gvm;
-		GigoloBackendGVFSPrivate *priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(object);
 
 		priv->store = g_value_get_object(value);
 
@@ -361,11 +390,9 @@ static void gigolo_backend_gvfs_init(G_GNUC_UNUSED GigoloBackendGVFS *self)
 }
 
 
-GigoloBackendGVFS *gigolo_backend_gvfs_new(GtkListStore *store)
+GigoloBackendGVFS *gigolo_backend_gvfs_new(void)
 {
-	GigoloBackendGVFS *backend = g_object_new(GIGOLO_BACKEND_GVFS_TYPE, "store", store, NULL);
-
-	return backend;
+	return g_object_new(GIGOLO_BACKEND_GVFS_TYPE, NULL);
 }
 
 

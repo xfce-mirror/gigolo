@@ -1415,7 +1415,7 @@ static void gigolo_window_init(GigoloWindow *window)
 	gtk_container_add(GTK_CONTAINER(priv->swin_iconview), priv->iconview);
 
 	/* Init the GVfs backend */
-	priv->backend_gvfs = gigolo_backend_gvfs_new(priv->store);
+	priv->backend_gvfs = gigolo_backend_gvfs_new();
 	g_signal_connect(priv->backend_gvfs, "mounts-changed", G_CALLBACK(mounts_changed_cb), window);
 	g_signal_connect(priv->backend_gvfs, "operation-failed",
 		G_CALLBACK(mount_operation_failed_cb), window);
@@ -1488,6 +1488,8 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	g_signal_connect(settings, "notify", G_CALLBACK(gigolo_window_settings_notify_cb), window);
 
 	g_object_set(priv->action_bookmarks, "settings", settings, NULL);
+
+	g_object_set(priv->backend_gvfs, "parent", window, "store", priv->store, NULL);
 
 	gigolo_window_set_toolbar_style(GIGOLO_WINDOW(window),
 		gigolo_settings_get_integer(settings, "toolbar-style"));
