@@ -537,9 +537,10 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 			b = gigolo_settings_get_bookmark_by_uri(priv->settings, uri);
 			if (b != NULL)
 				setptr(uri, g_build_filename(uri, gigolo_bookmark_get_folder(b), NULL));
+			/* escape spaces and similar */
+			setptr(uri, g_uri_unescape_string(uri, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO));
 
-			cmd = g_strconcat(file_manager, " ", uri, NULL);
-
+			cmd = g_strconcat(file_manager, " \"", uri, "\"", NULL);
 			if (! g_spawn_command_line_async(cmd, &error))
 			{
 				verbose("%s", error->message);
