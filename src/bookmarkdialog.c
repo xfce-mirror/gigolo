@@ -90,8 +90,6 @@ static void update_row_in_model(GigoloBookmarkDialog *dialog, GtkTreeIter *iter,
 	else
 		port[0] = '\0';
 
-	if (NZV(tmp = gigolo_bookmark_get_folder(bm)))
-		g_string_append_printf(other_text, _("Folder: %s"), tmp);
 	if (NZV(tmp = gigolo_bookmark_get_domain(bm)))
 		g_string_append_printf(other_text, _("Domain: %s"), tmp);
 	if (NZV(tmp = gigolo_bookmark_get_share(bm)))
@@ -99,6 +97,12 @@ static void update_row_in_model(GigoloBookmarkDialog *dialog, GtkTreeIter *iter,
 		if (other_text->len > 0)
 			g_string_append(other_text, ", ");
 		g_string_append_printf(other_text, _("Share: %s"), tmp);
+	}
+	if (NZV(tmp = gigolo_bookmark_get_folder(bm)))
+	{
+		if (other_text->len > 0)
+			g_string_append(other_text, ", ");
+		g_string_append_printf(other_text, _("Folder: %s"), tmp);
 	}
 
 	gtk_list_store_set(priv->store, iter,
