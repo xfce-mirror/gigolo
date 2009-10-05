@@ -229,9 +229,13 @@ static gchar *get_tooltip_text(GigoloBackendGVFS *backend, gpointer ref, gint re
 			clean_uri = g_uri_unescape_string(uri, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO);
 
 			settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
-			b = gigolo_settings_get_bookmark_by_uri(settings, clean_uri);
+			b = gigolo_settings_get_bookmark_by_uri(settings, uri);
 			if (b != NULL)
-				setptr(clean_uri, g_build_filename(clean_uri, gigolo_bookmark_get_folder(b), NULL));
+			{
+				const gchar *folder = gigolo_bookmark_get_folder(b);
+				if (NZV(folder))
+					setptr(clean_uri, g_build_filename(clean_uri, folder, NULL));
+			}
 
 			result = g_strdup_printf(
 				_("<b>%s</b>\n\nURI: %s\nConnected: Yes\nService Type: %s"), name, clean_uri, type);
