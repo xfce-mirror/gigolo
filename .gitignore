@@ -5,3 +5,4 @@ _build_
 .waf-*
 RUN
 po/LINGUAS
+INSTALL
