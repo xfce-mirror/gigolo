@@ -1,7 +1,7 @@
 
 bin_PROGRAMS = gigolo
 
-gigolo_SOURCES = 								\
+gigolo_SOURCES =								\
 	main.c main.h								\
 	compat.c compat.h							\
 	common.c common.h							\
@@ -12,7 +12,7 @@ gigolo_SOURCES = 								\
 	menubuttonaction.c menubuttonaction.h		\
 	mountdialog.c mountdialog.h					\
 	mountoperation.c mountoperation.h			\
-	bookmarkpanel.c bookmarkpanel.h			\
+	bookmarkpanel.c bookmarkpanel.h				\
 	bookmarkdialog.c bookmarkdialog.h			\
 	bookmarkeditdialog.c bookmarkeditdialog.h	\
 	browsenetworkpanel.c browsenetworkpanel.h	\
@@ -25,4 +25,4 @@ AM_CFLAGS = -DLOCALEDIR=\""$(localedir)"\"
 
 INCLUDES = @GTK_CFLAGS@
 
-gigolo_LDADD = @GTK_LIBS@ $(INTLLIBS)
+gigolo_LDADD = @GTK_LIBS@ @X11_LIBS@ $(INTLLIBS)

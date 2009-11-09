@@ -24,6 +24,12 @@ PKG_CHECK_MODULES(GTK, [$gtk_modules])
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 
+# X11
+AC_CHECK_HEADERS_ONCE([X11/Xlib.h])
+AC_CHECK_LIB(X11, XGetSelectionOwner, [X11_LIBS="$X11_LIBS -lX11]")
+AC_SUBST([X11_LIBS])
+
+
 # --disable-deprecated switch for GTK2 purification
 AC_ARG_ENABLE(deprecated, [  --disable-deprecated    Disable deprecated GTK functions. ],
 			  [GTK_CFLAGS="$GTK_CFLAGS -DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED"], [])
