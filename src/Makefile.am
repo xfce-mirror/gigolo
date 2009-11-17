@@ -25,4 +25,4 @@ AM_CFLAGS = -DLOCALEDIR=\""$(localedir)"\"
 
 INCLUDES = @GTK_CFLAGS@
 
-gigolo_LDADD = @GTK_LIBS@ @X11_LIBS@ $(INTLLIBS)
+gigolo_LDADD = @GTK_LIBS@ $(INTLLIBS)
