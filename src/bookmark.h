@@ -68,6 +68,9 @@ void				gigolo_bookmark_set_host		(GigoloBookmark *bookmark, const gchar *host);
 const gchar*		gigolo_bookmark_get_folder		(GigoloBookmark *bookmark);
 void				gigolo_bookmark_set_folder		(GigoloBookmark *bookmark, const gchar *folder);
 
+const gchar*		gigolo_bookmark_get_path		(GigoloBookmark *bookmark);
+void				gigolo_bookmark_set_path		(GigoloBookmark *bookmark, const gchar *path);
+
 guint				gigolo_bookmark_get_port		(GigoloBookmark *bookmark);
 void				gigolo_bookmark_set_port		(GigoloBookmark *bookmark, guint port);
 

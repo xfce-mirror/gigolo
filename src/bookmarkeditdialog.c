@@ -65,6 +65,9 @@ struct _GigoloBookmarkEditDialogPrivate
 	GtkWidget *folder_label;
 	GtkWidget *folder_entry;
 
+	GtkWidget *path_label;
+	GtkWidget *path_entry;
+
 	GtkWidget *port_label;
 	GtkWidget *port_spin;
 
@@ -114,7 +117,8 @@ enum {
 	SHOW_USER      = 0x00000040,
 	SHOW_DOMAIN    = 0x00000080,
 	SHOW_DEVICE    = 0x00000100,
-	SHOW_FOLDER    = 0x00000200
+	SHOW_FOLDER    = 0x00000200,
+	SHOW_PATH      = 0x00000400
 };
 
 enum {
@@ -138,8 +142,8 @@ static struct MethodInfo methods[] = {
 	{ "ftp",  21,	SHOW_PORT | SHOW_USER | SHOW_FOLDER },
 	{ "sftp", 22,	SHOW_PORT | SHOW_USER | SHOW_FOLDER },
 	{ "smb",  0,	SHOW_SHARE | SHOW_USER | SHOW_DOMAIN | SHOW_FOLDER },
-	{ "dav",  80,	SHOW_PORT | SHOW_USER | SHOW_FOLDER },
-	{ "davs", 443,	SHOW_PORT | SHOW_USER | SHOW_FOLDER },
+	{ "dav",  80,	SHOW_PATH | SHOW_PORT | SHOW_USER | SHOW_FOLDER },
+	{ "davs", 443,	SHOW_PATH | SHOW_PORT | SHOW_USER | SHOW_FOLDER },
 	{ "obex", 0,	SHOW_DEVICE },
 	{ NULL,   0,	0 }
 };
@@ -426,6 +430,10 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 	tmp = gigolo_bookmark_get_domain(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->domain_entry), tmp);
+	/* Path */
+	tmp = gigolo_bookmark_get_path(priv->bookmark_init);
+	if (tmp != NULL)
+		gtk_entry_set_text(GTK_ENTRY(priv->path_entry), tmp);
 	/* Port */
 	port = gigolo_bookmark_get_port(priv->bookmark_init);
 
@@ -490,6 +498,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->domain_label);
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->domain_entry);
 	}
+	if (gtk_widget_get_parent(priv->path_entry) != NULL)
+	{
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->path_label);
+		gtk_container_remove(GTK_CONTAINER(priv->table), priv->path_entry);
+	}
 	if (gtk_widget_get_parent(priv->share_combo) != NULL)
 	{
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->share_label);
@@ -552,6 +565,20 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 			gtk_widget_show(priv->share_button);
 			gtk_table_attach(GTK_TABLE(table), priv->share_button,
 					  2, 3, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+
+			i++;
+		}
+		if (meth->flags & SHOW_PATH)
+		{
+			gtk_misc_set_alignment(GTK_MISC(priv->path_label), 0.0, 0.5);
+			gtk_widget_show(priv->path_label);
+			gtk_table_attach(GTK_TABLE(table), priv->path_label,
+					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+
+			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->path_label), priv->path_entry);
+			gtk_widget_show(priv->path_entry);
+			gtk_table_attach(GTK_TABLE(table), priv->path_entry,
+					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 			i++;
 		}
@@ -755,6 +782,8 @@ static void update_bookmark(GigoloBookmarkEditDialog *dialog)
 		gigolo_bookmark_set_folder(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->user_entry));
 		gigolo_bookmark_set_user(priv->bookmark_update, tmp);
+		tmp = gtk_entry_get_text(GTK_ENTRY(priv->path_entry));
+		gigolo_bookmark_set_path(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->domain_entry));
 		gigolo_bookmark_set_domain(priv->bookmark_update, tmp);
 		tmp = gtk_entry_get_text(GTK_ENTRY(priv->share_entry));
@@ -952,6 +981,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	priv->uri_entry = gtk_entry_new();
 	priv->host_entry = gtk_entry_new();
 	priv->folder_entry = gtk_entry_new();
+	priv->path_entry = gtk_entry_new();
 	priv->port_spin = gtk_spin_button_new_with_range(0, 65535, 1);
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), 0.0);
 	gtk_widget_set_tooltip_text(priv->port_spin, _("Set the port to 0 to use the default port"));
@@ -963,6 +993,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	priv->uri_label = gtk_label_new_with_mnemonic(_("_Location (URI):"));
 	priv->host_label = gtk_label_new_with_mnemonic(_("_Server:"));
 	priv->folder_label = gtk_label_new_with_mnemonic(_("_Folder:"));
+	priv->path_label = gtk_label_new_with_mnemonic(_("_Path:"));
 	priv->user_label = gtk_label_new_with_mnemonic(_("_User Name:"));
 	priv->information_label = gtk_label_new(_("Optional information:"));
 	priv->port_label = gtk_label_new_with_mnemonic(_("_Port:"));
@@ -972,6 +1003,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->name_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->uri_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->folder_entry), TRUE);
+	gtk_entry_set_activates_default(GTK_ENTRY(priv->path_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->host_entry), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->port_spin), TRUE);
 	gtk_entry_set_activates_default(GTK_ENTRY(priv->user_entry), TRUE);
@@ -992,6 +1024,8 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	g_object_ref(priv->host_label);
 	g_object_ref(priv->folder_entry);
 	g_object_ref(priv->folder_label);
+	g_object_ref(priv->path_entry);
+	g_object_ref(priv->path_label);
 	g_object_ref(priv->port_label);
 	g_object_ref(priv->port_spin);
 	g_object_ref(priv->user_entry);

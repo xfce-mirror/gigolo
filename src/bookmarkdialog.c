@@ -104,6 +104,12 @@ static void update_row_in_model(GigoloBookmarkDialog *dialog, GtkTreeIter *iter,
 			g_string_append(other_text, ", ");
 		g_string_append_printf(other_text, _("Folder: %s"), tmp);
 	}
+	if (NZV(tmp = gigolo_bookmark_get_path(bm)))
+	{
+		if (other_text->len > 0)
+			g_string_append(other_text, ", ");
+		g_string_append_printf(other_text, _("Path: %s"), tmp);
+	}
 
 	gtk_list_store_set(priv->store, iter,
 			COL_NAME, gigolo_bookmark_get_name(bm),
