@@ -1247,7 +1247,7 @@ static void create_tree_view(GigoloWindow *window)
 		column = gtk_tree_view_column_new_with_attributes(NULL, renderer,
 			"gicon", GIGOLO_WINDOW_COL_PIXBUF, NULL);
 		gtk_tree_view_column_set_sort_indicator(column, FALSE);
-		gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
+		gtk_tree_view_column_set_resizable(column, TRUE);
 		gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
 	}
 
@@ -1256,7 +1256,7 @@ static void create_tree_view(GigoloWindow *window)
 		_("Connected"), renderer, "active", GIGOLO_WINDOW_COL_IS_MOUNTED, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, GIGOLO_WINDOW_COL_IS_MOUNTED);
-	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
+	gtk_tree_view_column_set_resizable(column, TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
 	g_signal_connect(renderer, "toggled", G_CALLBACK(tree_mounted_col_toggled_cb), window);
 
@@ -1265,7 +1265,7 @@ static void create_tree_view(GigoloWindow *window)
 		_("Service Type"), renderer, "text", GIGOLO_WINDOW_COL_SCHEME, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, GIGOLO_WINDOW_COL_SCHEME);
-	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
+	gtk_tree_view_column_set_resizable(column, TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
 
 	renderer = gtk_cell_renderer_text_new();
@@ -1273,7 +1273,7 @@ static void create_tree_view(GigoloWindow *window)
 		_("Name"), renderer, "text", GIGOLO_WINDOW_COL_NAME, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, GIGOLO_WINDOW_COL_NAME);
-	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
+	gtk_tree_view_column_set_resizable(column, TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
 
 	gtk_tree_view_set_model(GTK_TREE_VIEW(priv->treeview), GTK_TREE_MODEL(priv->store));
