@@ -489,14 +489,19 @@ static void unmount_finished_cb(GObject *src, GAsyncResult *res, gpointer backen
 }
 
 
-gboolean gigolo_backend_gvfs_mount_volume(GigoloBackendGVFS *backend, gpointer vol)
+gboolean gigolo_backend_gvfs_mount_volume(GigoloBackendGVFS *backend, GtkWindow *window, gpointer vol)
 {
 	g_return_val_if_fail(backend != NULL, FALSE);
+	g_return_val_if_fail(window != NULL, FALSE);
 	g_return_val_if_fail(vol != NULL, FALSE);
 
 	if (! G_IS_MOUNT(vol) && G_IS_VOLUME(vol) && g_volume_can_mount(G_VOLUME(vol)))
 	{
-		g_volume_mount(G_VOLUME(vol), G_MOUNT_MOUNT_NONE, NULL, NULL, volume_mount_finished_cb, backend);
+		GMountOperation *op = gigolo_mount_operation_new(window);
+
+		g_volume_mount(G_VOLUME(vol), G_MOUNT_MOUNT_NONE, op, NULL, volume_mount_finished_cb, backend);
+
+		g_object_unref(op);
 		return TRUE;
 	}
 

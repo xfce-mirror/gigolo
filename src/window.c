@@ -284,7 +284,7 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 			GIGOLO_WINDOW_COL_REF, &vol, -1);
 
 		if (ref_type == GIGOLO_WINDOW_REF_TYPE_VOLUME)
-			handled = gigolo_backend_gvfs_mount_volume(priv->backend_gvfs, vol);
+			handled = gigolo_backend_gvfs_mount_volume(priv->backend_gvfs, GTK_WINDOW(window), vol);
 	}
 
 	if (! handled)
