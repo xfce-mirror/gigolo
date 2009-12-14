@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gigolo 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-14 19:41+0100\n"
-"PO-Revision-Date: 2009-04-26 17:56+0100\n"
+"PO-Revision-Date: 2009-12-14 22:36+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Ignorér kørende instanser, gennemtving åbning af ny instans"
+msgstr "Ignorér kørende instanser, gennemtving åbning af en ny instans"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
@@ -70,18 +70,18 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (sikker)"
 
-#: ../src/common.c:93 ../src/window.c:1352
+#: ../src/common.c:93
+#: ../src/window.c:1352
 msgid "Network"
 msgstr "Netværk"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr ""
+msgstr "Arkiv"
 
 #: ../src/common.c:97
-#, fuzzy
 msgid "Photos"
-msgstr "Port"
+msgstr "Billeder"
 
 #: ../src/common.c:99
 msgid "Custom Location"
@@ -92,7 +92,8 @@ msgstr "Tilpasset sted"
 msgid "Connecting to \"%s\""
 msgstr "Forbinder til \"%s\""
 
-#: ../src/window.c:421 ../gigolo.desktop.in.h:1
+#: ../src/window.c:421
+#: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "En simpel grænseflade til nemt at forbinde til eksterne filsystemer"
 
@@ -112,9 +113,12 @@ msgstr ""
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo kan bruge følgende protokoller gennem GVFs:"
 
-#: ../src/window.c:671 ../src/bookmarkeditdialog.c:214
-#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
-#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
+#: ../src/window.c:671
+#: ../src/bookmarkeditdialog.c:214
+#: ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:246
+#: ../src/bookmarkeditdialog.c:257
+#: ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Fejl"
 
@@ -138,7 +142,8 @@ msgstr "_Vis"
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: ../src/window.c:1146 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1146
+#: ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Opret _bogmærke"
@@ -149,8 +154,7 @@ msgstr "_Redigér bogmærker"
 
 #: ../src/window.c:1149
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Åbn bogmærkehåndteringen for at tilføje, redigere eller slette bogmærker"
+msgstr "Åbn bogmærkehåndteringen for at tilføje, redigere eller slette bogmærker"
 
 #: ../src/window.c:1153
 msgid "Disconnect the selected resource"
@@ -208,20 +212,23 @@ msgstr "Vælg et bogmærke at forbinde til"
 msgid "Connected"
 msgstr "Forbindelse"
 
-#: ../src/window.c:1265 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1265
+#: ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Type af tjeneste"
 
-#: ../src/window.c:1273 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1273
+#: ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Navn"
 
 #: ../src/window.c:1344
-#, fuzzy
 msgid "Bookmarks"
-msgstr "_Bogmærker"
+msgstr "Bogmærker"
 
-#: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1394
+#: ../src/window.c:1469
+#: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -231,17 +238,12 @@ msgstr "Flyt det nu?"
 
 #: ../src/settings.c:643
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo er nødt til at flytte din gamle indstillingsmappe før den starter."
+msgstr "Gigolo er nødt til at flytte din gamle indstillingsmappe før den starter."
 
 #: ../src/settings.c:651
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Din gamle indstillingsmappe \"%s\" kunne ikke flyttes til \"%s\" (%s). Flyt "
-"venligst manuelt mappen til den nye placering."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Din gamle indstillingsmappe \"%s\" kunne ikke flyttes til \"%s\" (%s). Flyt venligst manuelt mappen til den nye placering."
 
 #: ../src/settings.c:654
 msgid "Warning"
@@ -264,12 +266,12 @@ msgstr "Deling: %s"
 #: ../src/bookmarkdialog.c:105
 #, c-format
 msgid "Folder: %s"
-msgstr ""
+msgstr "Mappe: %s"
 
 #: ../src/bookmarkdialog.c:111
 #, c-format
 msgid "Path: %s"
-msgstr ""
+msgstr "Sti: %s"
 
 #: ../src/bookmarkdialog.c:321
 msgid "Host"
@@ -319,7 +321,8 @@ msgstr "Du skal indtaste en gyldig URI til forbindelsen."
 msgid "_Device:"
 msgstr "_Enhed:"
 
-#: ../src/bookmarkeditdialog.c:557 ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:557
+#: ../src/bookmarkeditdialog.c:1012
 msgid "_Server:"
 msgstr "_Server:"
 
@@ -356,14 +359,12 @@ msgid "_Location (URI):"
 msgstr "_Sted (URI):"
 
 #: ../src/bookmarkeditdialog.c:1013
-#, fuzzy
 msgid "_Folder:"
-msgstr "_Fil"
+msgstr "_Mappe:"
 
 #: ../src/bookmarkeditdialog.c:1014
-#, fuzzy
 msgid "_Path:"
-msgstr "_Port:"
+msgstr "_Sti:"
 
 #: ../src/bookmarkeditdialog.c:1015
 msgid "_User Name:"
@@ -427,41 +428,30 @@ msgstr "_Filhåndtering"
 
 #: ../src/preferencesdialog.c:353
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Indtast navnet til et program til brug for at åbne eller vise "
-"monteringspunkter"
+msgstr "Indtast navnet til et program til brug for at åbne eller vise monteringspunkter"
 
 #: ../src/preferencesdialog.c:362
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Bogmærk forbind automatisk interval"
 
 #: ../src/preferencesdialog.c:368
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Hvor ofte skal bogmærker prøves for automatisk forbindelse, i antal "
-"sekunder. 0 slår kontrol fra."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Hvor ofte skal bogmærker prøves for automatisk forbindelse, i antal sekunder. 0 slår kontrol fra."
 
 #: ../src/preferencesdialog.c:374
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' "
-"to mount local resources like disks. The Unix based volume manager "
-"implementation can mount such resources directly and also lists other local "
-"devices.\n"
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Implementering af den HAL-baserede arkivhåndtering kræver værktøjet 'gnome-"
-"mount' for at montere lokale resurser som diske. Implementering af den Unix-"
-"baserede arkivhåndtering kan montere sådanne resurser direkte og viser også "
-"andre lokale enheder.\n"
+"Implementering af den HAL-baserede arkivhåndtering kræver værktøjet 'gnome-mount' for at montere lokale resurser som diske. Implementering af den Unix-baserede arkivhåndtering kan montere sådanne resurser direkte og viser også andre lokale enheder.\n"
 "Hvis du er usikker, brug den HAL-baserede overvåger."
 
 #: ../src/preferencesdialog.c:380
 msgid "Use _HAL based volume manager"
 msgstr "Brug _HAL-baseret arkivhåndtering"
 
-#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
+#: ../src/preferencesdialog.c:381
+#: ../src/preferencesdialog.c:389
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>Ændring af denne indstilling kræver en genstart af Gigolo.</i>"
 
@@ -490,28 +480,20 @@ msgid "Start _minimized in the Notification Area"
 msgstr "Start _minimeret i statusfeltet"
 
 #: ../src/preferencesdialog.c:418
-#, fuzzy
 msgid "Show side panel"
-msgstr "Side_panel"
+msgstr "Vis sidepanel"
 
 #: ../src/preferencesdialog.c:419
-#, fuzzy
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
-msgstr ""
-"Om visning af et sidepanel ved navigering af det lokale netværk for "
-"tilgængelige Samba-delinger"
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "Om visning af et sidepanel ved navigering af det lokale netværk for tilgængelige Samba-/Windowsdelinger og en bogmærkeliste"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
 msgstr "Vis forbind automatisk fejlbeskeder"
 
 #: ../src/preferencesdialog.c:423
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Om visning af fejlbeskeddialoger når forbind automatisk via bogmærker fejler"
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "Om visning af fejlbeskeddialoger når forbind automatisk via bogmærker fejler"
 
 #: ../src/preferencesdialog.c:429
 msgid "_Connection List Mode"
@@ -557,11 +539,13 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix-enhed: %s</b>"
 
-#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:441
+#: ../src/backendgvfs.c:477
 msgid "unknown"
 msgstr "ukendt"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:447
+#: ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Forbindelse til \"%s\" fejlede."
@@ -599,34 +583,29 @@ msgstr "Opret et bogmærke til den valgte deling"
 msgid "Refresh the network list"
 msgstr "Genopfrisk netværkslisten"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
+#: ../src/browsenetworkpanel.c:518
+#: ../src/bookmarkpanel.c:263
 msgid "Close panel"
 msgstr "Luk panel"
 
 #: ../src/bookmarkpanel.c:91
-#, fuzzy
 msgid "No bookmarks"
-msgstr "_Bogmærker"
+msgstr "Ingen bogmærker"
 
 #: ../src/bookmarkpanel.c:252
-#, fuzzy
 msgid "Connect to the selected bookmark"
-msgstr "Forbind til den valgte deling"
+msgstr "Forbind til det valgte bogmærke"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Vis 'Navigér netværk'-sidepanel"
-
 #~ msgid "_View Mode"
 #~ msgstr "_Vis tilstand"
-
 #~ msgid "OBEX"
 #~ msgstr "OBEX"
-
 #~ msgid "Authentication information needed"
 #~ msgstr "Kræver godkendelsesinformation"
-
 #~ msgid "_Username:"
 #~ msgstr "_Brugernavn:"
-
 #~ msgid "_Password:"
 #~ msgstr "_Adgangskode:"
+
