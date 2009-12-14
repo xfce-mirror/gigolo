@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-18 16:27+0200\n"
+"POT-Creation-Date: 2009-12-14 19:41+0100\n"
 "PO-Revision-Date: 2009-05-14 02:34+0500\n"
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -39,61 +39,69 @@ msgstr "ورژن کی معلومات دکھائیں"
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- آسانی سے بعید فائل سسٹمز سے متصل ہونے کے لی سادہ فرنٹ اینڈ"
 
-#: ../src/common.c:73
+#: ../src/common.c:77
 msgid "Unix Device"
 msgstr "یونیکس ڈیوائسیں"
 
-#: ../src/common.c:75
+#: ../src/common.c:79
 msgid "Windows Share"
 msgstr "ونڈوز شیئر"
 
-#: ../src/common.c:77
+#: ../src/common.c:81
 msgid "FTP"
 msgstr "FTP"
 
-#: ../src/common.c:79
+#: ../src/common.c:83
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/common.c:81
+#: ../src/common.c:85
 msgid "SSH"
 msgstr "SSH"
 
-#: ../src/common.c:83
+#: ../src/common.c:87
 msgid "Obex"
 msgstr "Obex"
 
-#: ../src/common.c:85
+#: ../src/common.c:89
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: ../src/common.c:87
+#: ../src/common.c:91
 msgid "WebDAV (secure)"
 msgstr "WebDAV (محفوظ)"
 
-#: ../src/common.c:89
+#: ../src/common.c:93 ../src/window.c:1352
 msgid "Network"
 msgstr "نیٹ ورک"
 
-#: ../src/common.c:91
+#: ../src/common.c:95
+msgid "Archive"
+msgstr ""
+
+#: ../src/common.c:97
+#, fuzzy
+msgid "Photos"
+msgstr "پورٹ"
+
+#: ../src/common.c:99
 msgid "Custom Location"
 msgstr "صوابدیدی مقام"
 
-#: ../src/window.c:275
+#: ../src/window.c:253
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "متصل ہوں تا \"%s\""
 
-#: ../src/window.c:443
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:421 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "آسانی سے بعید فائل سسٹمز سے متصل ہونے کے لی سادہ فرنٹ اینڈ"
 
-#: ../src/window.c:444
+#: ../src/window.c:422
 msgid "Copyright 2008-2009 Enrico Tröger"
 msgstr "کاپی رائٹ 2008-2009 انریکو ٹروگر"
 
-#: ../src/window.c:447
+#: ../src/window.c:425
 msgid "translator-credits"
 msgstr ""
 "محمد علی مکی\n"
@@ -103,139 +111,142 @@ msgstr ""
 "مکی کا بلاگ\n"
 "http://makki.urducoder.com"
 
-#: ../src/window.c:479
+#: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "گیگولو مندرجہ پروٹوکول استعمال کر سکتا ہے جو GVfs کی طرف سے فراہم کردہ ہیں:"
+msgstr ""
+"گیگولو مندرجہ پروٹوکول استعمال کر سکتا ہے جو GVfs کی طرف سے فراہم کردہ ہیں:"
 
-#: ../src/window.c:708
-#: ../src/bookmarkeditdialog.c:189
-#: ../src/bookmarkeditdialog.c:208
-#: ../src/bookmarkeditdialog.c:221
-#: ../src/bookmarkeditdialog.c:232
-#: ../src/bookmarkeditdialog.c:243
+#: ../src/window.c:671 ../src/bookmarkeditdialog.c:214
+#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
+#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "غلطی"
 
-#: ../src/window.c:1180
+#: ../src/window.c:1138
 msgid "_File"
 msgstr "_فائل"
 
-#: ../src/window.c:1181
+#: ../src/window.c:1139
 msgid "_Edit"
 msgstr "_تدوین"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1140
 msgid "_Actions"
 msgstr "_حرکات"
 
-#: ../src/window.c:1183
+#: ../src/window.c:1141
 msgid "_View"
 msgstr "_منظر"
 
-#: ../src/window.c:1184
+#: ../src/window.c:1142
 msgid "_Help"
 msgstr "_ہدایات"
 
-#: ../src/window.c:1188
-#: ../src/browsenetworkpanel.c:439
-#: ../src/browsenetworkpanel.c:481
+#: ../src/window.c:1146 ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "_پسندیدہ بنائیں"
 
-#: ../src/window.c:1190
+#: ../src/window.c:1148
 msgid "_Edit Bookmarks"
 msgstr "پسندیدہ _مدون کریں"
 
-#: ../src/window.c:1191
+#: ../src/window.c:1149
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "پسندیدہ شامل، مدون یا حذف کرنے کے لیے پسندیدہ منیجر کھولیں"
 
-#: ../src/window.c:1195
+#: ../src/window.c:1153
 msgid "Disconnect the selected resource"
 msgstr "منتخب کردہ مصدر سے رابطہ منقع کریں"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1155
 msgid "Open the selected resource with a file manager"
 msgstr "منتخب کردہ مصدر فائل منیجر سے کھولیں"
 
-#: ../src/window.c:1198
+#: ../src/window.c:1156
 msgid "Copy _URI"
 msgstr "URI ک_اپی کریں"
 
-#: ../src/window.c:1199
+#: ../src/window.c:1157
 msgid "Quit Gigolo"
 msgstr "گیگولو کو برخاست کریں"
 
-#: ../src/window.c:1200
+#: ../src/window.c:1158
 msgid "Online Help"
 msgstr "آن لائن مدد"
 
-#: ../src/window.c:1201
+#: ../src/window.c:1159
 msgid "Supported Protocols"
 msgstr "معاونت شدہ پروٹوکولز"
 
-#: ../src/window.c:1207
+#: ../src/window.c:1165
 msgid "Side _Panel"
 msgstr "سائیڈ _پینل"
 
-#: ../src/window.c:1209
+#: ../src/window.c:1167
 msgid "_Toolbar"
 msgstr "_اوزار پٹی"
 
-#: ../src/window.c:1211
+#: ../src/window.c:1169
 msgid "Status _Icon"
 msgstr "حالت _آئکن"
 
-#: ../src/window.c:1217
+#: ../src/window.c:1175
 msgid "View as _Symbols"
 msgstr "دکھائیں بطور _سمبل"
 
-#: ../src/window.c:1218
+#: ../src/window.c:1176
 msgid "View as _Detailed List"
 msgstr "دکھائیں بطور _طے شدہ فہرست"
 
-#: ../src/window.c:1224
+#: ../src/window.c:1182
 msgid "_Bookmarks"
 msgstr "_پسندیدہ"
 
-#: ../src/window.c:1224
+#: ../src/window.c:1182
 msgid "Choose a bookmark to connect to"
 msgstr "متصل ہونے کے لیے پسندیدہ منتخب کریں"
 
-#: ../src/window.c:1298
+#: ../src/window.c:1256
 msgid "Connected"
 msgstr "متصل"
 
-#: ../src/window.c:1307
-#: ../src/bookmarkdialog.c:301
+#: ../src/window.c:1265 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "سروس نوعیت"
 
-#: ../src/window.c:1315
-#: ../src/bookmarkdialog.c:293
+#: ../src/window.c:1273 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "نام"
 
-#: ../src/window.c:1382
-#: ../src/window.c:1467
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1344
+#, fuzzy
+msgid "Bookmarks"
+msgstr "_پسندیدہ"
+
+#: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "گیگولو"
 
-#: ../src/settings.c:614
+#: ../src/settings.c:642
 msgid "Move it now?"
 msgstr "اسے ابھی منتقل کریں؟"
 
-#: ../src/settings.c:615
+#: ../src/settings.c:643
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "چلنے سے پہلے لازم ہے کہ گیگولو آپ کی پرانی ترتیبات ڈائریکٹری کو منتقل کرے."
+msgstr ""
+"چلنے سے پہلے لازم ہے کہ گیگولو آپ کی پرانی ترتیبات ڈائریکٹری کو منتقل کرے."
 
-#: ../src/settings.c:623
+#: ../src/settings.c:651
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "آپ کی پرانی ترتیبات کی ڈائریکٹری \"%s\" نئی جگہ \"%s\" (%s) منتقل نہیں ہوسکتی. ڈائریکٹری کو نئے مقام پر خود منتقل کریں."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"آپ کی پرانی ترتیبات کی ڈائریکٹری \"%s\" نئی جگہ \"%s\" (%s) منتقل نہیں "
+"ہوسکتی. ڈائریکٹری کو نئے مقام پر خود منتقل کریں."
 
-#: ../src/settings.c:626
+#: ../src/settings.c:654
 msgid "Warning"
 msgstr "انتباہ"
 
@@ -253,219 +264,260 @@ msgstr "ڈومین: %s"
 msgid "Share: %s"
 msgstr "شیئر: %s"
 
-#: ../src/bookmarkdialog.c:309
+#: ../src/bookmarkdialog.c:105
+#, c-format
+msgid "Folder: %s"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:111
+#, c-format
+msgid "Path: %s"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:321
 msgid "Host"
 msgstr "ہوسٹ"
 
-#: ../src/bookmarkdialog.c:317
+#: ../src/bookmarkdialog.c:329
 msgid "Port"
 msgstr "پورٹ"
 
-#: ../src/bookmarkdialog.c:325
+#: ../src/bookmarkdialog.c:337
 msgid "Auto-Connect"
 msgstr "خودکار-اتصال"
 
-#: ../src/bookmarkdialog.c:333
+#: ../src/bookmarkdialog.c:345
 msgid "Username"
 msgstr "اسمِ صارف"
 
-#: ../src/bookmarkdialog.c:341
+#: ../src/bookmarkdialog.c:353
 msgid "Other information"
 msgstr "دیگر معلومات"
 
-#: ../src/bookmarkdialog.c:398
+#: ../src/bookmarkdialog.c:410
 msgid "Edit Bookmarks"
 msgstr "پسندیدہ مدون کریں"
 
-#: ../src/bookmarkeditdialog.c:190
+#: ../src/bookmarkeditdialog.c:215
 msgid "You must enter a name for the bookmark."
 msgstr "پسندیدہ کا نام لکھنا لازمی ہے."
 
-#: ../src/bookmarkeditdialog.c:209
+#: ../src/bookmarkeditdialog.c:234
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr "داخل کردہ پسندیدہ کا نام پہلے ہی استعمال میں ہے. براہ مہربانی دوسرا منتخب کریں."
+msgstr ""
+"داخل کردہ پسندیدہ کا نام پہلے ہی استعمال میں ہے. براہ مہربانی دوسرا منتخب "
+"کریں."
 
-#: ../src/bookmarkeditdialog.c:222
+#: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a server address or name."
 msgstr "سرور کا پتہ یا نام لکھنا لازمی ہے."
 
-#: ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:258
 msgid "You must enter a share name."
 msgstr "شیئر نام لکھنا لازمی ہے."
 
-#: ../src/bookmarkeditdialog.c:244
+#: ../src/bookmarkeditdialog.c:269
 msgid "You must enter a valid URI for the connection."
 msgstr "کنکشن کے لیے موزوں URI لکھنا لازمی ہے."
 
-#: ../src/bookmarkeditdialog.c:494
+#: ../src/bookmarkeditdialog.c:555
 msgid "_Device:"
 msgstr "_ڈیوائس:"
 
-#: ../src/bookmarkeditdialog.c:496
-#: ../src/bookmarkeditdialog.c:907
+#: ../src/bookmarkeditdialog.c:557 ../src/bookmarkeditdialog.c:1012
 msgid "_Server:"
 msgstr "_سرور:"
 
-#: ../src/bookmarkeditdialog.c:750
+#: ../src/bookmarkeditdialog.c:845
 msgid "Create Bookmark"
 msgstr "پسندیدہ بنائیں"
 
-#: ../src/bookmarkeditdialog.c:757
+#: ../src/bookmarkeditdialog.c:852
 msgid "Edit Bookmark"
 msgstr "پسندیدہ مدون کریں"
 
-#: ../src/bookmarkeditdialog.c:765
+#: ../src/bookmarkeditdialog.c:860
 msgid "Connect to Server"
 msgstr "سرور سے متصل ہوں"
 
-#: ../src/bookmarkeditdialog.c:861
+#: ../src/bookmarkeditdialog.c:964
 msgid "_Bookmark name:"
 msgstr "_پسندیدہ کا نام:"
 
-#: ../src/bookmarkeditdialog.c:869
+#: ../src/bookmarkeditdialog.c:972
 msgid "Au_to-Connect"
 msgstr "_خودکار-اتصال"
 
-#: ../src/bookmarkeditdialog.c:877
+#: ../src/bookmarkeditdialog.c:980
 msgid "Service t_ype:"
 msgstr "سروس کی _نوعیت:"
 
-#: ../src/bookmarkeditdialog.c:900
+#: ../src/bookmarkeditdialog.c:1005
 msgid "Set the port to 0 to use the default port"
 msgstr "طے شدہ پورٹ کے استعمال کے لیے پورٹ کو 0 پر سیٹ کریں"
 
-#: ../src/bookmarkeditdialog.c:906
+#: ../src/bookmarkeditdialog.c:1011
 msgid "_Location (URI):"
 msgstr "_مقام (URI):"
 
-#: ../src/bookmarkeditdialog.c:908
+#: ../src/bookmarkeditdialog.c:1013
+#, fuzzy
+msgid "_Folder:"
+msgstr "_فائل"
+
+#: ../src/bookmarkeditdialog.c:1014
+#, fuzzy
+msgid "_Path:"
+msgstr "_پورٹ:"
+
+#: ../src/bookmarkeditdialog.c:1015
 msgid "_User Name:"
 msgstr "_اسمِ صارف"
 
-#: ../src/bookmarkeditdialog.c:909
+#: ../src/bookmarkeditdialog.c:1016
 msgid "Optional information:"
 msgstr "اختیاری معلومات:"
 
-#: ../src/bookmarkeditdialog.c:910
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Port:"
 msgstr "_پورٹ:"
 
-#: ../src/bookmarkeditdialog.c:911
+#: ../src/bookmarkeditdialog.c:1018
 msgid "_Domain:"
 msgstr "_ڈومین:"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:1019
 msgid "_Share:"
 msgstr "_شیئر:"
 
-#: ../src/preferencesdialog.c:152
+#: ../src/preferencesdialog.c:153
 msgid "Icons"
 msgstr "آئکن"
 
-#: ../src/preferencesdialog.c:153
+#: ../src/preferencesdialog.c:154
 msgid "Text"
 msgstr "متن"
 
-#: ../src/preferencesdialog.c:154
+#: ../src/preferencesdialog.c:155
 msgid "Both"
 msgstr "دونوں"
 
-#: ../src/preferencesdialog.c:155
+#: ../src/preferencesdialog.c:156
 msgid "Both horizontal"
 msgstr "دونوں افقی"
 
-#: ../src/preferencesdialog.c:174
+#: ../src/preferencesdialog.c:175
 msgid "Horizontal"
 msgstr "افقی"
 
-#: ../src/preferencesdialog.c:175
+#: ../src/preferencesdialog.c:176
 msgid "Vertical"
 msgstr "عمودی"
 
-#: ../src/preferencesdialog.c:194
+#: ../src/preferencesdialog.c:195
 msgid "Symbols"
 msgstr "سمبل"
 
-#: ../src/preferencesdialog.c:195
+#: ../src/preferencesdialog.c:196
 msgid "Detailed List"
 msgstr "تفصیلی فہرست"
 
-#: ../src/preferencesdialog.c:339
+#: ../src/preferencesdialog.c:340
 msgid "General"
 msgstr "عام"
 
-#: ../src/preferencesdialog.c:344
+#: ../src/preferencesdialog.c:345
 msgid "_File Manager"
 msgstr "_فائل منیجر"
 
-#: ../src/preferencesdialog.c:352
+#: ../src/preferencesdialog.c:353
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "ماؤنٹ پؤائنٹس کو دیکھنے یا کھولنے کے لیے استعمال ہونے والے پروگرام کا نام لکھیں"
+msgstr ""
+"ماؤنٹ پؤائنٹس کو دیکھنے یا کھولنے کے لیے استعمال ہونے والے پروگرام کا نام "
+"لکھیں"
 
-#: ../src/preferencesdialog.c:361
+#: ../src/preferencesdialog.c:362
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_پسندیدہ خودکار-اتصال وقفہ"
 
-#: ../src/preferencesdialog.c:367
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "کس طرح عموماً پسندیدہ خودکار اتصال کی کوشش کی جائے، سیکنڈ میں، صفر چیکنگ کو معطل کرتا ہے."
-
-#: ../src/preferencesdialog.c:373
+#: ../src/preferencesdialog.c:368
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"کس طرح عموماً پسندیدہ خودکار اتصال کی کوشش کی جائے، سیکنڈ میں، صفر چیکنگ کو "
+"معطل کرتا ہے."
+
+#: ../src/preferencesdialog.c:374
+msgid ""
+"The HAL based volume manager implementation requires the tool 'gnome-mount' "
+"to mount local resources like disks. The Unix based volume manager "
+"implementation can mount such resources directly and also lists other local "
+"devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"ہال HAL پر مبنی والیم منیجر کے اطلاق کے لیے 'gnome-mount' نامی اوزار کی ضرورت ہے تاکہ لوکل مصادر کو ڈسکوں کی طرح ماؤنٹ کیا جاسکے. یونیکس پر مبنی والیم منیجر اطلاق اس طرح کے مصادر کو براہ راست ماؤنٹ کرسکتا ہے اور دیگر لوکل ڈیوائسوں کو بھی دستیاب کر سکتا ہے.\n"
+"ہال HAL پر مبنی والیم منیجر کے اطلاق کے لیے 'gnome-mount' نامی اوزار کی "
+"ضرورت ہے تاکہ لوکل مصادر کو ڈسکوں کی طرح ماؤنٹ کیا جاسکے. یونیکس پر مبنی "
+"والیم منیجر اطلاق اس طرح کے مصادر کو براہ راست ماؤنٹ کرسکتا ہے اور دیگر لوکل "
+"ڈیوائسوں کو بھی دستیاب کر سکتا ہے.\n"
 "اگر آپ پُریقین نہیں ہیں، تو HAL پر مبنی مانیٹر استعمال کریں."
 
-#: ../src/preferencesdialog.c:379
+#: ../src/preferencesdialog.c:380
 msgid "Use _HAL based volume manager"
 msgstr "_ہال HAL پر مبنی والیم منیجر استعمال کریں"
 
-#: ../src/preferencesdialog.c:380
-#: ../src/preferencesdialog.c:388
+#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>اس اختیار میں تبدیلی کے بعد گیگولو کو دوبارہ چلانا لازمی ہے.</i>"
 
-#: ../src/preferencesdialog.c:387
+#: ../src/preferencesdialog.c:388
 msgid "Use _Unix based volume manager"
 msgstr "_یونیکس پر مبنی والیم منیجر استعمال کریں"
 
-#: ../src/preferencesdialog.c:403
+#: ../src/preferencesdialog.c:404
 msgid "Interface"
 msgstr "مواجہ"
 
-#: ../src/preferencesdialog.c:405
+#: ../src/preferencesdialog.c:406
 msgid "_Save window position and geometry"
 msgstr "ونڈو کا مقام اور جیومیٹری م_حفوظ کریں"
 
-#: ../src/preferencesdialog.c:406
+#: ../src/preferencesdialog.c:407
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr "ونڈو کا مقام اور جیومیٹری محفوظ کرتا ہے اور چلنے پر اسے بحال کرتا ہے"
 
-#: ../src/preferencesdialog.c:409
+#: ../src/preferencesdialog.c:410
 msgid "Show status _icon in the Notification Area"
 msgstr "اطلاعی علاقے میں حالت _آئکن دکھائیں"
 
-#: ../src/preferencesdialog.c:412
+#: ../src/preferencesdialog.c:413
 msgid "Start _minimized in the Notification Area"
 msgstr "اطلاعی علاقے میں _منمائز حالت میں چلائیں"
 
-#: ../src/preferencesdialog.c:417
-msgid "Show 'Browse Network' side panel"
-msgstr "'براؤز نیٹ ورک' سائیڈ پینل دکھائیں"
-
 #: ../src/preferencesdialog.c:418
-msgid "Whether to show a side panel for browsing the local network for available Samba shares"
-msgstr "لوکل نیٹ ورک کو دیکھنے اور دستیاب سامبا شیئرز کو دیکھنے کے لیے سائیڈ پینل کس طرح دکھایا جائے"
+#, fuzzy
+msgid "Show side panel"
+msgstr "سائیڈ _پینل"
+
+#: ../src/preferencesdialog.c:419
+#, fuzzy
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"لوکل نیٹ ورک کو دیکھنے اور دستیاب سامبا شیئرز کو دیکھنے کے لیے سائیڈ پینل کس "
+"طرح دکھایا جائے"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
 msgstr "خودکار-اتصال کے غلطی کے پیغامات دکھائیں"
 
 #: ../src/preferencesdialog.c:423
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr "جب پسندیدہ کا خودکار-اتصال ناکام ہوجائے تو غلطی کے پیغامات کا ڈائیلاگ کس طرح دکھایا جائے"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+"جب پسندیدہ کا خودکار-اتصال ناکام ہوجائے تو غلطی کے پیغامات کا ڈائیلاگ کس طرح "
+"دکھایا جائے"
 
 #: ../src/preferencesdialog.c:429
 msgid "_Connection List Mode"
@@ -491,7 +543,7 @@ msgstr "_جہتیابی"
 msgid "Preferences"
 msgstr "ترجیحات"
 
-#: ../src/backendgvfs.c:201
+#: ../src/backendgvfs.c:241
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -506,23 +558,21 @@ msgstr ""
 "متصل: Yes\n"
 "سروس نوعیت: %s"
 
-#: ../src/backendgvfs.c:215
+#: ../src/backendgvfs.c:255
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>یونیکس ڈیوائس: %s</b>"
 
-#: ../src/backendgvfs.c:397
-#: ../src/backendgvfs.c:429
+#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
 msgid "unknown"
 msgstr "نامعلوم"
 
-#: ../src/backendgvfs.c:403
-#: ../src/backendgvfs.c:479
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "\"%s\" سے متصل ہونے میں ناکامی."
 
-#: ../src/backendgvfs.c:433
+#: ../src/backendgvfs.c:481
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "\"%s\" سے غیر متصل ہونے میں ناکامی."
@@ -531,31 +581,43 @@ msgstr "\"%s\" سے غیر متصل ہونے میں ناکامی."
 msgid "Connecting"
 msgstr "اتصال قائم کیا جارہا ہے"
 
-#: ../src/browsenetworkpanel.c:175
+#: ../src/browsenetworkpanel.c:188
 msgid "No Workgroups found"
 msgstr "کوئی ورک گروپ نہیں پایا گیا"
 
-#: ../src/browsenetworkpanel.c:186
+#: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
 msgstr "کوئی شیئرز نہیں پائے گئے"
 
-#: ../src/browsenetworkpanel.c:191
+#: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
 msgstr "کوئی ہوسٹ نہیں پائے گئے"
 
-#: ../src/browsenetworkpanel.c:474
+#: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
 msgstr "منتخب کردہ شیئر سے متصل ہوں"
 
-#: ../src/browsenetworkpanel.c:482
+#: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
 msgstr "منتخب کردہ شیئر کا پسندیدہ بنائیں"
 
-#: ../src/browsenetworkpanel.c:491
+#: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
 msgstr "نیٹ ورک فہرست تازہ کریں"
 
-#: ../src/browsenetworkpanel.c:502
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
 msgid "Close panel"
 msgstr "پینل بند کریں"
 
+#: ../src/bookmarkpanel.c:91
+#, fuzzy
+msgid "No bookmarks"
+msgstr "_پسندیدہ"
+
+#: ../src/bookmarkpanel.c:252
+#, fuzzy
+msgid "Connect to the selected bookmark"
+msgstr "منتخب کردہ شیئر سے متصل ہوں"
+
+#~ msgid "Show 'Browse Network' side panel"
+#~ msgstr "'براؤز نیٹ ورک' سائیڈ پینل دکھائیں"
