@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-14 19:41+0100\n"
-"PO-Revision-Date: 2009-05-22 10:53+0100\n"
+"PO-Revision-Date: 2009-12-15 19:05+0100\n"
 "Last-Translator: Harald Servat <redcrash@gmail.com>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -76,12 +76,11 @@ msgstr "Xarxa"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr ""
+msgstr "Arxiu"
 
 #: ../src/common.c:97
-#, fuzzy
 msgid "Photos"
-msgstr "Port"
+msgstr "Fotos"
 
 #: ../src/common.c:99
 msgid "Custom Location"
@@ -102,7 +101,9 @@ msgstr "Copyright 2008-2009 Enrico Tröger"
 
 #: ../src/window.c:425
 msgid "translator-credits"
-msgstr "Carles Muñoz Gorriz <carlesmu@internautas.org>"
+msgstr ""
+"Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.\n"
+"Harald Servat <redcrash@gmail.com>, 2009."
 
 #: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -137,17 +138,16 @@ msgstr "A_juda"
 #: ../src/window.c:1146 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
-msgstr "Crea un lloc _preferit"
+msgstr "Crea un _lloc d'interès"
 
 #: ../src/window.c:1148
 msgid "_Edit Bookmarks"
-msgstr "_Edita preferits"
+msgstr "_Edita llocs d'interès"
 
 #: ../src/window.c:1149
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr ""
-"Obre el gestor de llocs preferits per afegir, editar o esborrar llocs "
-"preferits"
+"Obre el gestor de llocs d'interès per afegir, editar o esborrar-ne llocs"
 
 #: ../src/window.c:1153
 msgid "Disconnect the selected resource"
@@ -175,7 +175,7 @@ msgstr "Protocols admesos"
 
 #: ../src/window.c:1165
 msgid "Side _Panel"
-msgstr "_Quadre lateral"
+msgstr "_Panell lateral"
 
 #: ../src/window.c:1167
 msgid "_Toolbar"
@@ -195,11 +195,11 @@ msgstr "Mostra com a llista _detallada"
 
 #: ../src/window.c:1182
 msgid "_Bookmarks"
-msgstr "Llocs _preferits"
+msgstr "_Llocs d'interès"
 
 #: ../src/window.c:1182
 msgid "Choose a bookmark to connect to"
-msgstr "Trieu un lloc preferit per connectar-vos"
+msgstr "Trieu un lloc d'interès per connectar-vos"
 
 #: ../src/window.c:1256
 msgid "Connected"
@@ -214,9 +214,8 @@ msgid "Name"
 msgstr "Nom"
 
 #: ../src/window.c:1344
-#, fuzzy
 msgid "Bookmarks"
-msgstr "Llocs _preferits"
+msgstr "Adreces d'interès"
 
 #: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
@@ -262,12 +261,12 @@ msgstr "Compartit: %s"
 #: ../src/bookmarkdialog.c:105
 #, c-format
 msgid "Folder: %s"
-msgstr ""
+msgstr "Carpeta: %s"
 
 #: ../src/bookmarkdialog.c:111
 #, c-format
 msgid "Path: %s"
-msgstr ""
+msgstr "Camí: %s"
 
 #: ../src/bookmarkdialog.c:321
 msgid "Host"
@@ -291,16 +290,16 @@ msgstr "Altre informació"
 
 #: ../src/bookmarkdialog.c:410
 msgid "Edit Bookmarks"
-msgstr "Edició de llocs proferits"
+msgstr "Edita llocs d'interès"
 
 #: ../src/bookmarkeditdialog.c:215
 msgid "You must enter a name for the bookmark."
-msgstr "Cal que introduïu un nom pel lloc preferit."
+msgstr "Cal que introduïu un nom per al lloc d'interès."
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr ""
-"El nom de lloc preferit introduït ja s'està emprant. Escolliu un altre."
+"El nom de lloc d'interès introduït ja s'està emprant. Escolliu-ne un altre."
 
 #: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a server address or name."
@@ -324,11 +323,11 @@ msgstr "_Servidor:"
 
 #: ../src/bookmarkeditdialog.c:845
 msgid "Create Bookmark"
-msgstr "Crea un lloc preferit"
+msgstr "Crea un lloc d'interès"
 
 #: ../src/bookmarkeditdialog.c:852
 msgid "Edit Bookmark"
-msgstr "Edició del lloc preferit"
+msgstr "Edita lloc d'interès"
 
 #: ../src/bookmarkeditdialog.c:860
 msgid "Connect to Server"
@@ -336,7 +335,7 @@ msgstr "Connecta al servidor"
 
 #: ../src/bookmarkeditdialog.c:964
 msgid "_Bookmark name:"
-msgstr "_Nom del lloc preferit:"
+msgstr "_Nom del lloc d'interès:"
 
 #: ../src/bookmarkeditdialog.c:972
 msgid "Au_to-Connect"
@@ -355,14 +354,12 @@ msgid "_Location (URI):"
 msgstr "_Ubicació (URI):"
 
 #: ../src/bookmarkeditdialog.c:1013
-#, fuzzy
 msgid "_Folder:"
-msgstr "_Fitxer"
+msgstr "_Fitxer:"
 
 #: ../src/bookmarkeditdialog.c:1014
-#, fuzzy
 msgid "_Path:"
-msgstr "_Port:"
+msgstr "_Camí:"
 
 #: ../src/bookmarkeditdialog.c:1015
 msgid "_User Name:"
@@ -439,8 +436,8 @@ msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
 msgstr ""
-"Com de sovint voleu que s'intenti la connexió automàtica dels llocs "
-"preferits, en segons. Zero deshabilita la comprovació."
+"Amb quina freqüència voleu que s'intenti la connexió automàtica dels llocs "
+"d'interès expressat en segons. Zero deshabilita la comprovació."
 
 #: ../src/preferencesdialog.c:374
 msgid ""
@@ -489,18 +486,16 @@ msgid "Start _minimized in the Notification Area"
 msgstr "Inicia _minimitzat a l'espai de notificacions del sistema"
 
 #: ../src/preferencesdialog.c:418
-#, fuzzy
 msgid "Show side panel"
-msgstr "_Quadre lateral"
+msgstr "Mostrar panell lateral"
 
 #: ../src/preferencesdialog.c:419
-#, fuzzy
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
 msgstr ""
-"Si s'ha de mostra o no un quadre lateral per navegar a les xarxes locals "
-"habilitades per «Samba»"
+"Si s'ha de mostrar un panell lateral per a navegar dins els recursos "
+"compartits Samba/Windows de la xarxa local i de la llista d'interès"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
@@ -511,7 +506,7 @@ msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr ""
 "Si s'ha de mostrar o no el diàleg d'errors quan la connexió automàtica als "
-"preferits falla"
+"llocs d'interès falla"
 
 #: ../src/preferencesdialog.c:429
 msgid "_Connection List Mode"
@@ -593,7 +588,7 @@ msgstr "Connecta el recurs compartit seleccionat"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "Crea un preferit pel recurs compartit seleccionat"
+msgstr "Crea un lloc d'interès pel recurs compartit seleccionat"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
@@ -604,14 +599,12 @@ msgid "Close panel"
 msgstr "Tanca el quadre"
 
 #: ../src/bookmarkpanel.c:91
-#, fuzzy
 msgid "No bookmarks"
-msgstr "Llocs _preferits"
+msgstr "No hi ha llocs d'interès"
 
 #: ../src/bookmarkpanel.c:252
-#, fuzzy
 msgid "Connect to the selected bookmark"
-msgstr "Connecta el recurs compartit seleccionat"
+msgstr "Connecta al lloc d'interès seleccionat"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Mostra el quadre lateral «Navegador de xarxes»"
