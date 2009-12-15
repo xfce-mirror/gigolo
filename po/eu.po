@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the gigolo package.
 #
 # Piarres Beobide <pi@beobide.net>, 2009.
+# Piarres Beobide <pi+debian@beobide.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-14 19:41+0100\n"
-"PO-Revision-Date: 2009-06-04 22:59+0200\n"
-"Last-Translator: Piarres Beobide <pi@beobide.net>\n"
-"Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
+"PO-Revision-Date: 2009-12-15 12:11+0100\n"
+"Last-Translator: Piarres Beobide <pi+debian@beobide.net>\n"
+"Language-Team: Basque <debian-l10n-basque@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -77,12 +78,11 @@ msgstr "Sarea"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr ""
+msgstr "Artxiboa"
 
 #: ../src/common.c:97
-#, fuzzy
 msgid "Photos"
-msgstr "Ataka"
+msgstr "Argazkiak"
 
 #: ../src/common.c:99
 msgid "Custom Location"
@@ -215,9 +215,8 @@ msgid "Name"
 msgstr "Izena"
 
 #: ../src/window.c:1344
-#, fuzzy
 msgid "Bookmarks"
-msgstr "_Laster-markak"
+msgstr "Laster-markak"
 
 #: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
@@ -263,12 +262,12 @@ msgstr "Partekatzea: %s"
 #: ../src/bookmarkdialog.c:105
 #, c-format
 msgid "Folder: %s"
-msgstr ""
+msgstr "Karpeta: %s"
 
 #: ../src/bookmarkdialog.c:111
 #, c-format
 msgid "Path: %s"
-msgstr ""
+msgstr "Bidea: %s"
 
 #: ../src/bookmarkdialog.c:321
 msgid "Host"
@@ -357,14 +356,12 @@ msgid "_Location (URI):"
 msgstr "_Kokalekua (URI):"
 
 #: ../src/bookmarkeditdialog.c:1013
-#, fuzzy
 msgid "_Folder:"
-msgstr "_Fitxategia"
+msgstr "_Karpeta:"
 
 #: ../src/bookmarkeditdialog.c:1014
-#, fuzzy
 msgid "_Path:"
-msgstr "_Ataka:"
+msgstr "_Bidea:"
 
 #: ../src/bookmarkeditdialog.c:1015
 msgid "_User Name:"
@@ -492,18 +489,16 @@ msgid "Start _minimized in the Notification Area"
 msgstr "Abiarazi berri-emate eremuan t_xikiturik"
 
 #: ../src/preferencesdialog.c:418
-#, fuzzy
 msgid "Show side panel"
-msgstr "Alboko _Panela"
+msgstr "Ikusi alboko panela"
 
 #: ../src/preferencesdialog.c:419
-#, fuzzy
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
 msgstr ""
-"Eskuragarri dauden samba errekurtsoak nabigatzeko alboko panela bistarazi "
-"behar den ala ez"
+"Eskuragarri dauden samba errekurtsoak bilatzeko sare lokala nabigatzeko "
+"alboko panela bistarazi behar den ala ez"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
@@ -607,14 +602,12 @@ msgid "Close panel"
 msgstr "Itxi panela"
 
 #: ../src/bookmarkpanel.c:91
-#, fuzzy
 msgid "No bookmarks"
-msgstr "_Laster-markak"
+msgstr "Laster-markarik ez"
 
 #: ../src/bookmarkpanel.c:252
-#, fuzzy
 msgid "Connect to the selected bookmark"
-msgstr "Deskonektatu hautaturiko errekurtsoa"
+msgstr "Konektatu hautatutako laster-markara"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Ikusi 'Nabigatu sarea' alboko panela"
