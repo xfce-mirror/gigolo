@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the gigglo package.
 # Hunt Xu <huntxu@live.cn>, 2009.
 # Jiahua Huang <jhuangjiahua@gmail.com>, 2009.
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-14 19:41+0100\n"
-"PO-Revision-Date: 2009-06-16 03:36+0800\n"
+"PO-Revision-Date: 2009-12-16 21:17+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -75,12 +75,11 @@ msgstr "网络"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr ""
+msgstr "归档文件"
 
 #: ../src/common.c:97
-#, fuzzy
 msgid "Photos"
-msgstr "端口"
+msgstr "照片"
 
 #: ../src/common.c:99
 msgid "Custom Location"
@@ -102,8 +101,8 @@ msgstr "版权所有 2008-2009 Enrico Tröger"
 #: ../src/window.c:425
 msgid "translator-credits"
 msgstr ""
-"Hunt Xu <huntxu@live.cn>\n"
-"Jiahua Huang <jhuangjiahua@gmail.com>"
+"Hunt Xu <huntxu@live.cn>, 2009.\n"
+"Jiahua Huang <jhuangjiahua@gmail.com>, 2009."
 
 #: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -213,9 +212,8 @@ msgid "Name"
 msgstr "名称"
 
 #: ../src/window.c:1344
-#, fuzzy
 msgid "Bookmarks"
-msgstr "书签(_B)"
+msgstr "书签"
 
 #: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
@@ -259,12 +257,12 @@ msgstr "共享: %s"
 #: ../src/bookmarkdialog.c:105
 #, c-format
 msgid "Folder: %s"
-msgstr ""
+msgstr "文件夹: %s"
 
 #: ../src/bookmarkdialog.c:111
 #, c-format
 msgid "Path: %s"
-msgstr ""
+msgstr "路径: %s"
 
 #: ../src/bookmarkdialog.c:321
 msgid "Host"
@@ -351,14 +349,12 @@ msgid "_Location (URI):"
 msgstr "位置(URI) (_L):"
 
 #: ../src/bookmarkeditdialog.c:1013
-#, fuzzy
 msgid "_Folder:"
-msgstr "文件(_F)"
+msgstr "文件夹(_F)"
 
 #: ../src/bookmarkeditdialog.c:1014
-#, fuzzy
 msgid "_Path:"
-msgstr "端口(_P):"
+msgstr "路径(_P):"
 
 #: ../src/bookmarkeditdialog.c:1015
 msgid "_User Name:"
@@ -479,16 +475,15 @@ msgid "Start _minimized in the Notification Area"
 msgstr "启动时最小化至通知区域(_M)"
 
 #: ../src/preferencesdialog.c:418
-#, fuzzy
 msgid "Show side panel"
-msgstr "侧边栏(_P)"
+msgstr "显示侧边栏"
 
 #: ../src/preferencesdialog.c:419
-#, fuzzy
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "是否显示侧边栏以便浏览可用的局域网 Samba 共享 (Windows 共享)"
+msgstr ""
+"是否显示侧边栏以便浏览可用的局域网 Samba/Windows 共享和书签列表"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
@@ -590,14 +585,12 @@ msgid "Close panel"
 msgstr "关闭侧边栏"
 
 #: ../src/bookmarkpanel.c:91
-#, fuzzy
 msgid "No bookmarks"
-msgstr "书签(_B)"
+msgstr "没有书签"
 
 #: ../src/bookmarkpanel.c:252
-#, fuzzy
 msgid "Connect to the selected bookmark"
-msgstr "连接至所选共享"
+msgstr "连接至所选书签"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "显示“浏览网络”侧边栏"
