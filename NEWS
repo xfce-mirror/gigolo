@@ -1,3 +1,13 @@
+Gigolo 0.4.0 (December 31, 2009)
+
+	* Support mounting volumes like local partitions
+	* WebDav URIs may have an optional path argument
+	* Add a folder property for bookmarks which is used to open the file
+	  manager with this folder
+	* Add a Bookmark side panel
+	* Many minor fixes and improvements
+
+
 Gigolo 0.3.2 (April 18, 2009)
 
 	* Improve the network browsing code to poperly auto-mount Samba
