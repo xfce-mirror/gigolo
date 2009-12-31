@@ -4,6 +4,8 @@ dnl $Id$
 AC_INIT([gigolo], [0.4.0], [http://bugs.xfce.org/])
 AM_INIT_AUTOMAKE([AC_PACKAGE_TARNAME()], [AC_PACKAGE_VERSION()])
 
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADER(config.h)
 
