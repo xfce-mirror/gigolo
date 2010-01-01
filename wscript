@@ -3,7 +3,7 @@
 #
 # WAF build script
 #
-# Copyright 2008-2009 Enrico Tröger <enrico(at)xfce(dot)org>
+# Copyright 2008-2010 Enrico Tröger <enrico(at)xfce(dot)org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

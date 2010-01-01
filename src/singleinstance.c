@@ -1,7 +1,7 @@
 /*
  *      singleinstance.c
  *
- *      Copyright 2009      Enrico Tröger <enrico(at)xfce(dot)org>
+ *      Copyright 2009-2010 Enrico Tröger <enrico(at)xfce(dot)org>
  *      Copyright 2006      Darren Salt
  *      Copyright 2002-2006 Olivier Fourdan
  *
