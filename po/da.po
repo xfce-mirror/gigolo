@@ -2,12 +2,12 @@
 # Copyright (C) 2008-2009 Enrico Tröger
 # This file is distributed under the same license as the Gigolo package.
 # Per Kongstad <p_kongstad@op.pl>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.2\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-14 19:41+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.xfce.prg\n"
+"POT-Creation-Date: 2010-01-04 19:36+0000\n"
 "PO-Revision-Date: 2009-12-14 22:36+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Danish\n"
-"X-Poedit-Country: DENMARK\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Country: DENMARK\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -70,8 +70,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (sikker)"
 
-#: ../src/common.c:93
-#: ../src/window.c:1352
+#: ../src/common.c:93 ../src/window.c:1352
 msgid "Network"
 msgstr "Netværk"
 
@@ -92,14 +91,9 @@ msgstr "Tilpasset sted"
 msgid "Connecting to \"%s\""
 msgstr "Forbinder til \"%s\""
 
-#: ../src/window.c:421
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:421 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "En simpel grænseflade til nemt at forbinde til eksterne filsystemer"
-
-#: ../src/window.c:422
-msgid "Copyright 2008-2009 Enrico Tröger"
-msgstr "Ophavsret 2008-2009 Enrico Tröger"
 
 #: ../src/window.c:425
 msgid "translator-credits"
@@ -113,12 +107,9 @@ msgstr ""
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo kan bruge følgende protokoller gennem GVFs:"
 
-#: ../src/window.c:671
-#: ../src/bookmarkeditdialog.c:214
-#: ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:246
-#: ../src/bookmarkeditdialog.c:257
-#: ../src/bookmarkeditdialog.c:268
+#: ../src/window.c:671 ../src/bookmarkeditdialog.c:214
+#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
+#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Fejl"
 
@@ -142,8 +133,7 @@ msgstr "_Vis"
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: ../src/window.c:1146
-#: ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1146 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Opret _bogmærke"
@@ -212,13 +202,11 @@ msgstr "Vælg et bogmærke at forbinde til"
 msgid "Connected"
 msgstr "Forbindelse"
 
-#: ../src/window.c:1265
-#: ../src/bookmarkdialog.c:313
+#: ../src/window.c:1265 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Type af tjeneste"
 
-#: ../src/window.c:1273
-#: ../src/bookmarkdialog.c:305
+#: ../src/window.c:1273 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Navn"
 
@@ -226,9 +214,7 @@ msgstr "Navn"
 msgid "Bookmarks"
 msgstr "Bogmærker"
 
-#: ../src/window.c:1394
-#: ../src/window.c:1469
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -321,8 +307,7 @@ msgstr "Du skal indtaste en gyldig URI til forbindelsen."
 msgid "_Device:"
 msgstr "_Enhed:"
 
-#: ../src/bookmarkeditdialog.c:557
-#: ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:557 ../src/bookmarkeditdialog.c:1012
 msgid "_Server:"
 msgstr "_Server:"
 
@@ -450,8 +435,7 @@ msgstr ""
 msgid "Use _HAL based volume manager"
 msgstr "Brug _HAL-baseret arkivhåndtering"
 
-#: ../src/preferencesdialog.c:381
-#: ../src/preferencesdialog.c:389
+#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>Ændring af denne indstilling kræver en genstart af Gigolo.</i>"
 
@@ -539,13 +523,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix-enhed: %s</b>"
 
-#: ../src/backendgvfs.c:441
-#: ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
 msgid "unknown"
 msgstr "ukendt"
 
-#: ../src/backendgvfs.c:447
-#: ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Forbindelse til \"%s\" fejlede."
@@ -583,8 +565,7 @@ msgstr "Opret et bogmærke til den valgte deling"
 msgid "Refresh the network list"
 msgstr "Genopfrisk netværkslisten"
 
-#: ../src/browsenetworkpanel.c:518
-#: ../src/bookmarkpanel.c:263
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
 msgid "Close panel"
 msgstr "Luk panel"
 
@@ -596,16 +577,24 @@ msgstr "Ingen bogmærker"
 msgid "Connect to the selected bookmark"
 msgstr "Forbind til det valgte bogmærke"
 
+#: ../src/window.c:422
+msgid "Copyright 2008-2010 Enrico Tröger"
+msgstr "Ophavsret 2008-2010 Enrico Tröger"
+
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Vis 'Navigér netværk'-sidepanel"
+
 #~ msgid "_View Mode"
 #~ msgstr "_Vis tilstand"
+
 #~ msgid "OBEX"
 #~ msgstr "OBEX"
+
 #~ msgid "Authentication information needed"
 #~ msgstr "Kræver godkendelsesinformation"
+
 #~ msgid "_Username:"
 #~ msgstr "_Brugernavn:"
+
 #~ msgid "_Password:"
 #~ msgstr "_Adgangskode:"
-
