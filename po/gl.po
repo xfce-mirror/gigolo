@@ -1,8 +1,8 @@
 # Galician translation of gigolo
-# Copyright (C) 2009 Leandro Regueiro.
+# Copyright (C) 2009, 2010 Leandro Regueiro.
 # This file is distributed under the same license as the Xfce package.
 #
-# Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2009.
+# Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2009, 2010.
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en <http://trasno.net>
@@ -10,9 +10,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-14 19:41+0100\n"
-"PO-Revision-Date: 2009-12-18 13:42+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.xfce.org\n"
+"POT-Creation-Date: 2010-01-05 17:00+0000\n"
+"PO-Revision-Date: 2010-01-06 12:25+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -100,8 +100,8 @@ msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Unha sinxela interface para conectar facilmente a sistemas de ficheiros remotos"
 
 #: ../src/window.c:422
-msgid "Copyright 2008-2009 Enrico Tröger"
-msgstr "Copyright 2008-2009 Enrico Tröger"
+msgid "Copyright 2008-2010 Enrico Tröger"
+msgstr "Copyright 2008-2010 Enrico Tröger"
 
 #: ../src/window.c:425
 msgid "translator-credits"
@@ -467,11 +467,11 @@ msgstr "Interface"
 
 #: ../src/preferencesdialog.c:406
 msgid "_Save window position and geometry"
-msgstr "_Gardar a posición e maila xeometría da ventá"
+msgstr "_Gardar a posición e maila xeometría da fiestra"
 
 #: ../src/preferencesdialog.c:407
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Garda a posición e xeometría da ventá e restáuraa ó volver iniciar"
+msgstr "Garda a posición e a xeometría da fiestra e restáuraa ao volver iniciar"
 
 #: ../src/preferencesdialog.c:410
 msgid "Show status _icon in the Notification Area"
