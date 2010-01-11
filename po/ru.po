@@ -464,7 +464,7 @@ msgstr "Боковая панель"
 
 #: ../src/preferencesdialog.c:419
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "Отображение боковой панели для списка общих Samba/Windows в локальной сети, и списка закладок."
+msgstr "Отображение боковой панели для списка общих ресурсов Samba/Windows в локальной сети, и списка закладок."
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
