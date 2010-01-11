@@ -1,3 +1,4 @@
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
@@ -64,8 +65,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (поддержка безопасности)"
 
-#: ../src/common.c:93
-#: ../src/window.c:1352
+#: ../src/common.c:93 ../src/window.c:1352
 msgid "Network"
 msgstr "Сеть"
 
@@ -86,8 +86,7 @@ msgstr "Другой тип"
 msgid "Connecting to \"%s\""
 msgstr "Подключение к «%s»"
 
-#: ../src/window.c:421
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:421 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Простой интерфейс для подключения удаленных файловых систем"
 
@@ -103,12 +102,9 @@ msgstr "Alexandr Ponomarenko, 2009"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo может использвать следующие предоставляемые GVfs протоколы:"
 
-#: ../src/window.c:671
-#: ../src/bookmarkeditdialog.c:214
-#: ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:246
-#: ../src/bookmarkeditdialog.c:257
-#: ../src/bookmarkeditdialog.c:268
+#: ../src/window.c:671 ../src/bookmarkeditdialog.c:214
+#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
+#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Ошибка"
 
@@ -132,8 +128,7 @@ msgstr "_Вид"
 msgid "_Help"
 msgstr "_Справка"
 
-#: ../src/window.c:1146
-#: ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1146 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Создать _закладку"
@@ -202,13 +197,11 @@ msgstr "Выберите ресурс для подключения"
 msgid "Connected"
 msgstr "Подключен"
 
-#: ../src/window.c:1265
-#: ../src/bookmarkdialog.c:313
+#: ../src/window.c:1265 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Тип службы"
 
-#: ../src/window.c:1273
-#: ../src/bookmarkdialog.c:305
+#: ../src/window.c:1273 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Имя"
 
@@ -216,9 +209,7 @@ msgstr "Имя"
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: ../src/window.c:1394
-#: ../src/window.c:1469
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -293,7 +284,7 @@ msgstr "Укажите название закладки."
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr "Закладка с этим названием уже существует. Укажите другое название."
+msgstr "Закладка с таким названием уже существует. Укажите другое название."
 
 #: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a server address or name."
@@ -311,8 +302,7 @@ msgstr "Необходимо указать правильный адрес ре
 msgid "_Device:"
 msgstr "_Устройство:"
 
-#: ../src/bookmarkeditdialog.c:557
-#: ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:557 ../src/bookmarkeditdialog.c:1012
 msgid "_Server:"
 msgstr "_Сервер:"
 
@@ -440,8 +430,7 @@ msgstr ""
 msgid "Use _HAL based volume manager"
 msgstr "Использовать диспетчер _томов на базе HAL"
 
-#: ../src/preferencesdialog.c:381
-#: ../src/preferencesdialog.c:389
+#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>Чтобы задействовать изменение параметра, перезапустите Gigolo.</i>"
 
@@ -529,13 +518,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Устройство Unix: %s</b>"
 
-#: ../src/backendgvfs.c:441
-#: ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
 msgid "unknown"
 msgstr "неизвестно"
 
-#: ../src/backendgvfs.c:447
-#: ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Не удалось подключиться к %s."
@@ -573,8 +560,7 @@ msgstr "Создание закладки из выбранного ресурс
 msgid "Refresh the network list"
 msgstr "Обновить список сетей"
 
-#: ../src/browsenetworkpanel.c:518
-#: ../src/bookmarkpanel.c:263
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
 msgid "Close panel"
 msgstr "Закрыть панель"
 
@@ -588,4 +574,3 @@ msgstr "Подключиться к этому ресурсу"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Отбражать панель «Обзор сети»"
-
