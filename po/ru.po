@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-11 12:00-0500\n"
+"POT-Creation-Date: 2010-01-12 18:00+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Urmas <dwqwt3i02@sneakemail.com>\n"
 "Language-Team: None <->\n"
@@ -159,7 +159,7 @@ msgstr "Выход из Gigolo"
 
 #: ../src/window.c:1158
 msgid "Online Help"
-msgstr "Справка в &Интернете"
+msgstr "Справка в _Интернете"
 
 #: ../src/window.c:1159
 msgid "Supported Protocols"
@@ -179,11 +179,11 @@ msgstr "_Значок состояния"
 
 #: ../src/window.c:1175
 msgid "View as _Symbols"
-msgstr "Как _значки"
+msgstr "_Список"
 
 #: ../src/window.c:1176
 msgid "View as _Detailed List"
-msgstr "Как _таблицу"
+msgstr "_Таблица"
 
 #: ../src/window.c:1182
 msgid "_Bookmarks"
@@ -324,7 +324,7 @@ msgstr "Имя _закладки:"
 
 #: ../src/bookmarkeditdialog.c:972
 msgid "Au_to-Connect"
-msgstr "&Автоподключение"
+msgstr "_Автоподключение"
 
 #: ../src/bookmarkeditdialog.c:980
 msgid "Service t_ype:"
