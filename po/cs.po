@@ -2,13 +2,13 @@
 # Copyright (C) 2008-2009 Enrico Tröger
 # This file is distributed under the same license as Gigolo.
 # Jan Hrdina <jan.hrdka@gmail.com>, 2009.
-#
-#
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-14 19:41+0100\n"
+"POT-Creation-Date: 2010-01-15 06:00+0100\n"
 "PO-Revision-Date: 2009-06-07 17:25+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -34,8 +34,7 @@ msgstr "Zobrazit informace o verzi"
 
 #: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- jednoduché rozhraní pro snadné připojení ke vzdáleným systémům souborů"
+msgstr "- jednoduché rozhraní pro snadné připojení ke vzdáleným systémům souborů"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -75,12 +74,11 @@ msgstr "Síť"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr ""
+msgstr "Archiv"
 
 #: ../src/common.c:97
-#, fuzzy
 msgid "Photos"
-msgstr "Port"
+msgstr "Fotografie"
 
 #: ../src/common.c:99
 msgid "Custom Location"
@@ -96,7 +94,8 @@ msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Jednoduché rozhraní pro snadné připojení ke vzdáleným systémům souborů"
 
 #: ../src/window.c:422
-msgid "Copyright 2008-2009 Enrico Tröger"
+#, fuzzy
+msgid "Copyright 2008-2010 Enrico Tröger"
 msgstr "Copyright 2008-2009 Enrico Tröger"
 
 #: ../src/window.c:425
@@ -105,9 +104,7 @@ msgstr "Jan Hrdina <jan.hrdka@gmail.com>Michal Várady <miko.vaji@gmail.com>"
 
 #: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"Aplikace Gigolo může používat následující protokoly poskytované systémem "
-"souborů GVfs:"
+msgstr "Aplikace Gigolo může používat následující protokoly poskytované systémem souborů GVfs:"
 
 #: ../src/window.c:671 ../src/bookmarkeditdialog.c:214
 #: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
@@ -213,9 +210,8 @@ msgid "Name"
 msgstr "Název"
 
 #: ../src/window.c:1344
-#, fuzzy
 msgid "Bookmarks"
-msgstr "_Záložky"
+msgstr "Záložky"
 
 #: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
@@ -227,18 +223,12 @@ msgstr "Přesunout nyní?"
 
 #: ../src/settings.c:643
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Aplikace Gigolo potřebuje před spuštěním přesunout starý adresář s "
-"nastavením."
+msgstr "Aplikace Gigolo potřebuje před spuštěním přesunout starý adresář s nastavením."
 
 #: ../src/settings.c:651
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Starý adresář s nastavením \"%s\" nemohl být přesunut do \"%s\" (%s). "
-"Přesuňte jej do nového umístění ručně."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Starý adresář s nastavením \"%s\" nemohl být přesunut do \"%s\" (%s). Přesuňte jej do nového umístění ručně."
 
 #: ../src/settings.c:654
 msgid "Warning"
@@ -261,12 +251,12 @@ msgstr "Sdílená složka: %s"
 #: ../src/bookmarkdialog.c:105
 #, c-format
 msgid "Folder: %s"
-msgstr ""
+msgstr "Složka: %s"
 
 #: ../src/bookmarkdialog.c:111
 #, c-format
 msgid "Path: %s"
-msgstr ""
+msgstr "Cesta: %s"
 
 #: ../src/bookmarkdialog.c:321
 msgid "Host"
@@ -353,14 +343,12 @@ msgid "_Location (URI):"
 msgstr "_Umístění (URI):"
 
 #: ../src/bookmarkeditdialog.c:1013
-#, fuzzy
 msgid "_Folder:"
-msgstr "_Soubor"
+msgstr "_Složka:"
 
 #: ../src/bookmarkeditdialog.c:1014
-#, fuzzy
 msgid "_Path:"
-msgstr "_Port:"
+msgstr "_Cesta:"
 
 #: ../src/bookmarkeditdialog.c:1015
 msgid "_User Name:"
@@ -431,25 +419,15 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Interval automatického připojení záložky"
 
 #: ../src/preferencesdialog.c:368
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Četnost automaticky opakovaných připojení záložek, v sekundách. Nula "
-"opakované připojování zakáže."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Četnost automaticky opakovaných připojení záložek, v sekundách. Nula opakované připojování zakáže."
 
 #: ../src/preferencesdialog.c:374
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' "
-"to mount local resources like disks. The Unix based volume manager "
-"implementation can mount such resources directly and also lists other local "
-"devices.\n"
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Implementace správce svazků založeného na vrstvě HAL vyžaduje pro "
-"připojování lokálních zdrojů (např. disků) aplikaci 'gnome-mount' . "
-"Implementace správce svazků založeného na Unixu dokáže připojit takové "
-"zdroje okamžitě a to včetně seznamu ostatních místních zařízení.\n"
+"Implementace správce svazků založeného na vrstvě HAL vyžaduje pro připojování lokálních zdrojů (např. disků) aplikaci 'gnome-mount' . Implementace správce svazků založeného na Unixu dokáže připojit takové zdroje okamžitě a to včetně seznamu ostatních místních zařízení.\n"
 "Pokud si nejste jisti, použijte sledování založené na vrstvě HAL."
 
 #: ../src/preferencesdialog.c:380
@@ -485,28 +463,20 @@ msgid "Start _minimized in the Notification Area"
 msgstr "Spustit jako _minimalizovaný v oznamovací oblasti"
 
 #: ../src/preferencesdialog.c:418
-#, fuzzy
 msgid "Show side panel"
-msgstr "Postranní _panel"
+msgstr "Zobrazit postranní panel"
 
 #: ../src/preferencesdialog.c:419
-#, fuzzy
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
-msgstr ""
-"Zobrazování postranního panelu na prohlížení dostupných sdílených složek "
-"Samba v lokální síti"
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "Zobrazování postranního panelu pro prohlížení dostupných sdílených složek Samba a Windows v lokální síti a seznamu záložek"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
 msgstr "Zobrazit chybové zprávy automatického připojení"
 
 #: ../src/preferencesdialog.c:423
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Zobrazování chybových dialogů při selhání automatického připojení záložek"
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "Zobrazování chybových dialogů při selhání automatického připojení záložek"
 
 #: ../src/preferencesdialog.c:429
 msgid "_Connection List Mode"
@@ -599,14 +569,12 @@ msgid "Close panel"
 msgstr "Zavřít panel"
 
 #: ../src/bookmarkpanel.c:91
-#, fuzzy
 msgid "No bookmarks"
-msgstr "_Záložky"
+msgstr "Žádné záložky"
 
 #: ../src/bookmarkpanel.c:252
-#, fuzzy
 msgid "Connect to the selected bookmark"
-msgstr "Připojit se k vybrané sdílené složce"
+msgstr "Připojit se k vybrané záložce"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Zobrazit postranní panel 'Procházet síť'"
