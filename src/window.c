@@ -551,8 +551,11 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 			cmd = g_strconcat(file_manager, " \"", uri, "\"", NULL);
 			if (! g_spawn_command_line_async(cmd, &error))
 			{
-				verbose("%s", error->message);
+				gchar *msg = g_strdup_printf(_("The command '%s' failed"), cmd);
+				gigolo_message_dialog((gpointer) window, GTK_MESSAGE_ERROR, _("Error"), msg, error->message);
+				verbose("%s: %s", msg, error->message);
 				g_error_free(error);
+				g_free(msg);
 			}
 
 			g_free(cmd);
