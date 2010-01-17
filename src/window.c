@@ -500,7 +500,11 @@ static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *wi
 
 			b = gigolo_settings_get_bookmark_by_uri(priv->settings, uri);
 			if (b != NULL)
-				setptr(uri, g_build_filename(uri, gigolo_bookmark_get_folder(b), NULL));
+			{
+				gchar *folder = gigolo_bookmark_get_folder_expanded(b);
+				setptr(uri, g_build_filename(uri, folder, NULL));
+				g_free(folder);
+			}
 
 			gtk_clipboard_set_text(gtk_clipboard_get(gdk_atom_intern("CLIPBOARD", FALSE)), uri, -1);
 
@@ -536,7 +540,11 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
 			b = gigolo_settings_get_bookmark_by_uri(priv->settings, uri);
 			if (b != NULL)
-				setptr(uri, g_build_filename(uri, gigolo_bookmark_get_folder(b), NULL));
+			{
+				gchar *folder = gigolo_bookmark_get_folder_expanded(b);
+				setptr(uri, g_build_filename(uri, folder, NULL));
+				g_free(folder);
+			}
 			/* escape spaces and similar */
 			setptr(uri, g_uri_unescape_string(uri, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO));
 

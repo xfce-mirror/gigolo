@@ -430,6 +430,25 @@ const gchar *gigolo_bookmark_get_folder(GigoloBookmark *bookmark)
 }
 
 
+gchar *gigolo_bookmark_get_folder_expanded(GigoloBookmark *bookmark)
+{
+	const gchar *folder;
+	const gchar *username;
+	gchar *result;
+
+	g_return_val_if_fail(bookmark != NULL, NULL);
+
+	folder = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->folder;
+	username = gigolo_bookmark_get_user(bookmark);
+	if (NZV(folder) && username && folder[0] == '~')
+		result = g_strconcat("/home/", username, folder + 1, NULL);
+	else
+		result = g_strdup(folder);
+
+	return result;
+}
+
+
 void gigolo_bookmark_set_folder(GigoloBookmark *bookmark, const gchar *folder)
 {
 	GigoloBookmarkPrivate *priv;
