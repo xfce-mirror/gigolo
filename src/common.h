@@ -58,7 +58,7 @@ void gigolo_show_uri(const gchar *uri);
 
 guint gigolo_get_default_port(const gchar *scheme);
 
-gboolean gigolo_message_dialog(gpointer *parent, gint type, const gchar *title,
+gboolean gigolo_message_dialog(gpointer parent, gint type, const gchar *title,
 							   const gchar *text, const gchar *secondary);
 
 const gchar *gigolo_get_application_icon_name(void);

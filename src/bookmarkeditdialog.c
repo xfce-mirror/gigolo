@@ -211,7 +211,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 				if (! *tmp)
 				{
 					error = TRUE;
-					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
+					gigolo_message_dialog(dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a name for the bookmark."), NULL);
 					gtk_widget_grab_focus(priv->name_entry);
 				}
@@ -230,7 +230,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 						if (gigolo_str_equal(tmp, gigolo_bookmark_get_name(bm)))
 						{
 							error = TRUE;
-							gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
+							gigolo_message_dialog(dialog, GTK_MESSAGE_ERROR, _("Error"),
 			_("The entered bookmark name is already in use. Please choose another one."), NULL);
 							gtk_widget_grab_focus(priv->name_entry);
 						}
@@ -243,7 +243,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 				if (! *tmp)
 				{
 					error = TRUE;
-					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
+					gigolo_message_dialog(dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a server address or name."), NULL);
 					gtk_widget_grab_focus(priv->host_entry);
 				}
@@ -254,7 +254,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 				if (! *tmp)
 				{
 					error = TRUE;
-					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
+					gigolo_message_dialog(dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a share name."), NULL);
 					gtk_widget_grab_focus(priv->share_combo);
 				}
@@ -265,7 +265,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 				if (! *tmp)
 				{
 					error = TRUE;
-					gigolo_message_dialog((gpointer)dialog, GTK_MESSAGE_ERROR, _("Error"),
+					gigolo_message_dialog(dialog, GTK_MESSAGE_ERROR, _("Error"),
 						_("You must enter a valid URI for the connection."), NULL);
 					gtk_widget_grab_focus(priv->uri_entry);
 				}

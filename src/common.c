@@ -149,7 +149,7 @@ gboolean gigolo_is_desktop_xfce(void)
 }
 
 
-gboolean gigolo_message_dialog(gpointer *parent, gint type, const gchar *title,
+gboolean gigolo_message_dialog(gpointer parent, gint type, const gchar *title,
 							   const gchar *text, const gchar *secondary)
 {
 	gboolean ret = FALSE;

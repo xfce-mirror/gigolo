@@ -552,7 +552,7 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 			if (! g_spawn_command_line_async(cmd, &error))
 			{
 				gchar *msg = g_strdup_printf(_("The command '%s' failed"), cmd);
-				gigolo_message_dialog((gpointer) window, GTK_MESSAGE_ERROR, _("Error"), msg, error->message);
+				gigolo_message_dialog(window, GTK_MESSAGE_ERROR, _("Error"), msg, error->message);
 				verbose("%s: %s", msg, error->message);
 				g_error_free(error);
 				g_free(msg);
@@ -679,7 +679,7 @@ static void mounts_changed_cb(G_GNUC_UNUSED GigoloBackendGVFS *backend, GigoloWi
 static void mount_operation_failed_cb(G_GNUC_UNUSED GigoloBackendGVFS *backend, const gchar *message,
 								   const gchar *error_message, GigoloWindow *window)
 {
-	gigolo_message_dialog((gpointer) window, GTK_MESSAGE_ERROR, _("Error"), message, error_message);
+	gigolo_message_dialog(window, GTK_MESSAGE_ERROR, _("Error"), message, error_message);
 }
 
 
