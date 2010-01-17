@@ -37,10 +37,15 @@ GETTEXT_PACKAGE=gigolo
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package.])
 
-if test -z "$conf_dir" ; then
-	conf_dir="."
+if [ "${LINGUAS}" ]
+then
+	ALL_LINGUAS="${LINGUAS}"
+else
+	if test -z "$conf_dir" ; then
+		conf_dir="."
+	fi
+	ALL_LINGUAS=`cd "$conf_dir/po" 2>/dev/null && ls *.po 2>/dev/null | $AWK 'BEGIN { FS="."; ORS=" " } { print $1 }'`
 fi
-ALL_LINGUAS=`cd "$conf_dir/po" 2>/dev/null && ls *.po 2>/dev/null | $AWK 'BEGIN { FS="."; ORS=" " } { print $1 }'`
 
 AM_GLIB_GNU_GETTEXT
 # workaround for intltool bug (http://bugzilla.gnome.org/show_bug.cgi?id=490845)
