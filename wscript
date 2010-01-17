@@ -92,6 +92,7 @@ def write_linguas_file(self):
 		linguas = Build.bld.env['LINGUAS']
 	else:
 		files = os.listdir('%s/po' % self.path.abspath())
+		files.sort()
 		for f in files:
 			if f.endswith('.po'):
 				linguas += '%s ' % f[:-3]
