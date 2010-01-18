@@ -1,17 +1,17 @@
 # Galician translation of gigolo
 # Copyright (C) 2009, 2010 Leandro Regueiro.
 # This file is distributed under the same license as the Xfce package.
-#
+# 
 # Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2009, 2010.
-#
+# 
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en <http://trasno.net>
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: http://bugzilla.xfce.org\n"
-"POT-Creation-Date: 2010-01-05 17:00+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-18 12:05+0100\n"
 "PO-Revision-Date: 2010-01-06 12:25+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -72,8 +72,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (seguro)"
 
-#: ../src/common.c:93
-#: ../src/window.c:1352
+#: ../src/common.c:93 ../src/window.c:1363
 msgid "Network"
 msgstr "Rede"
 
@@ -94,8 +93,7 @@ msgstr "Localización personalizada"
 msgid "Connecting to \"%s\""
 msgstr "Conectando a \"%s\""
 
-#: ../src/window.c:421
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:421 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Unha sinxela interface para conectar facilmente a sistemas de ficheiros remotos"
 
@@ -115,122 +113,119 @@ msgstr ""
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo pode usar os seguintes protocolos proporcionados por GVfs:"
 
-#: ../src/window.c:671
-#: ../src/bookmarkeditdialog.c:214
-#: ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:246
-#: ../src/bookmarkeditdialog.c:257
-#: ../src/bookmarkeditdialog.c:268
+#: ../src/window.c:554
+#, c-format
+msgid "The command '%s' failed"
+msgstr "Fallou o comando '%s'"
+
+#: ../src/window.c:555 ../src/window.c:682 ../src/bookmarkeditdialog.c:214
+#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
+#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Erro"
 
-#: ../src/window.c:1138
+#: ../src/window.c:1149
 msgid "_File"
 msgstr "_Ficheiro"
 
-#: ../src/window.c:1139
+#: ../src/window.c:1150
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../src/window.c:1140
+#: ../src/window.c:1151
 msgid "_Actions"
 msgstr "_Accións"
 
-#: ../src/window.c:1141
+#: ../src/window.c:1152
 msgid "_View"
 msgstr "_Ver"
 
-#: ../src/window.c:1142
+#: ../src/window.c:1153
 msgid "_Help"
 msgstr "A_xuda"
 
-#: ../src/window.c:1146
-#: ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1157 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Crear un _marcador"
 
-#: ../src/window.c:1148
+#: ../src/window.c:1159
 msgid "_Edit Bookmarks"
 msgstr "_Editar os marcadores"
 
-#: ../src/window.c:1149
+#: ../src/window.c:1160
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "Abrir o xestor de marcadores para engadir, modificar ou eliminar marcadores"
 
-#: ../src/window.c:1153
+#: ../src/window.c:1164
 msgid "Disconnect the selected resource"
 msgstr "Desconectar o recurso seleccionado"
 
-#: ../src/window.c:1155
+#: ../src/window.c:1166
 msgid "Open the selected resource with a file manager"
 msgstr "Abrir o recurso seleccionado cun xestor de ficheiros"
 
-#: ../src/window.c:1156
+#: ../src/window.c:1167
 msgid "Copy _URI"
 msgstr "Copiar o _URI"
 
-#: ../src/window.c:1157
+#: ../src/window.c:1168
 msgid "Quit Gigolo"
 msgstr "Saír de Gigolo"
 
-#: ../src/window.c:1158
+#: ../src/window.c:1169
 msgid "Online Help"
 msgstr "Axuda en liña"
 
-#: ../src/window.c:1159
+#: ../src/window.c:1170
 msgid "Supported Protocols"
 msgstr "Protocolos soportados"
 
-#: ../src/window.c:1165
+#: ../src/window.c:1176
 msgid "Side _Panel"
 msgstr "_Panel lateral"
 
-#: ../src/window.c:1167
+#: ../src/window.c:1178
 msgid "_Toolbar"
 msgstr "_Barra de ferramentas"
 
-#: ../src/window.c:1169
+#: ../src/window.c:1180
 msgid "Status _Icon"
 msgstr "_Icona de estado"
 
-#: ../src/window.c:1175
+#: ../src/window.c:1186
 msgid "View as _Symbols"
 msgstr "Ver como _símbolos"
 
-#: ../src/window.c:1176
+#: ../src/window.c:1187
 msgid "View as _Detailed List"
 msgstr "Ver como lista _detallada"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1193
 msgid "_Bookmarks"
 msgstr "_Marcadores"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1193
 msgid "Choose a bookmark to connect to"
 msgstr "Escolla un marcador ó que conectar"
 
-#: ../src/window.c:1256
+#: ../src/window.c:1267
 msgid "Connected"
 msgstr "Conectado"
 
-#: ../src/window.c:1265
-#: ../src/bookmarkdialog.c:313
+#: ../src/window.c:1276 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Tipo de servizo"
 
-#: ../src/window.c:1273
-#: ../src/bookmarkdialog.c:305
+#: ../src/window.c:1284 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Nome"
 
-#: ../src/window.c:1344
+#: ../src/window.c:1355
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: ../src/window.c:1394
-#: ../src/window.c:1469
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1405 ../src/window.c:1480 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -319,72 +314,71 @@ msgstr "Debe introducir un nome de recurso."
 msgid "You must enter a valid URI for the connection."
 msgstr "Debe introducir un URI válido para a conexión."
 
-#: ../src/bookmarkeditdialog.c:555
+#: ../src/bookmarkeditdialog.c:553
 msgid "_Device:"
 msgstr "_Dispositivo:"
 
-#: ../src/bookmarkeditdialog.c:557
-#: ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1010
 msgid "_Server:"
 msgstr "_Servidor:"
 
-#: ../src/bookmarkeditdialog.c:845
+#: ../src/bookmarkeditdialog.c:843
 msgid "Create Bookmark"
 msgstr "Crear un marcador"
 
-#: ../src/bookmarkeditdialog.c:852
+#: ../src/bookmarkeditdialog.c:850
 msgid "Edit Bookmark"
 msgstr "Modificar un marcador"
 
-#: ../src/bookmarkeditdialog.c:860
+#: ../src/bookmarkeditdialog.c:858
 msgid "Connect to Server"
 msgstr "Conectar co servidor"
 
-#: ../src/bookmarkeditdialog.c:964
+#: ../src/bookmarkeditdialog.c:962
 msgid "_Bookmark name:"
 msgstr "Nome do _marcador_"
 
-#: ../src/bookmarkeditdialog.c:972
+#: ../src/bookmarkeditdialog.c:970
 msgid "Au_to-Connect"
 msgstr "Conectar au_tomaticamente"
 
-#: ../src/bookmarkeditdialog.c:980
+#: ../src/bookmarkeditdialog.c:978
 msgid "Service t_ype:"
 msgstr "T_ipo de servizo:"
 
-#: ../src/bookmarkeditdialog.c:1005
+#: ../src/bookmarkeditdialog.c:1003
 msgid "Set the port to 0 to use the default port"
 msgstr "Definir o porto coma 0 para usar o porto predeterminado"
 
-#: ../src/bookmarkeditdialog.c:1011
+#: ../src/bookmarkeditdialog.c:1009
 msgid "_Location (URI):"
 msgstr "_Localización (URI):"
 
-#: ../src/bookmarkeditdialog.c:1013
+#: ../src/bookmarkeditdialog.c:1011
 msgid "_Folder:"
 msgstr "_Cartafol:"
 
-#: ../src/bookmarkeditdialog.c:1014
+#: ../src/bookmarkeditdialog.c:1012
 msgid "_Path:"
 msgstr "_Ruta:"
 
-#: ../src/bookmarkeditdialog.c:1015
+#: ../src/bookmarkeditdialog.c:1013
 msgid "_User Name:"
 msgstr "Nome de _usuario:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1014
 msgid "Optional information:"
 msgstr "Información opcional:"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1015
 msgid "_Port:"
 msgstr "_Porto:"
 
-#: ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:1016
 msgid "_Domain:"
 msgstr "_Dominio:"
 
-#: ../src/bookmarkeditdialog.c:1019
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Share:"
 msgstr "_Recurso:"
 
@@ -452,8 +446,7 @@ msgstr ""
 msgid "Use _HAL based volume manager"
 msgstr "Usar o xestor de volumes baseado en _HAL"
 
-#: ../src/preferencesdialog.c:381
-#: ../src/preferencesdialog.c:389
+#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>Cambiar esta opción require reiniciar Gigolo.</i>"
 
@@ -541,13 +534,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Dispositivo de Unix: %s</b>"
 
-#: ../src/backendgvfs.c:441
-#: ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
 msgid "unknown"
 msgstr "descoñecido"
 
-#: ../src/backendgvfs.c:447
-#: ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Ocorreu un erro ó conectar a \"%s\"."
@@ -585,8 +576,7 @@ msgstr "Crear un marcador para o recurso seleccionado"
 msgid "Refresh the network list"
 msgstr "Actualizar a lista da rede"
 
-#: ../src/browsenetworkpanel.c:518
-#: ../src/bookmarkpanel.c:263
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
 msgid "Close panel"
 msgstr "Pechar o panel"
 
@@ -600,4 +590,3 @@ msgstr "Conectar ao marcador seleccionado"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Mostrar o panel lateral de exploración da rede"
-
