@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-14 19:41+0100\n"
-"PO-Revision-Date: 2009-09-05 19:57+0200\n"
+"POT-Creation-Date: 2010-01-29 18:03+0100\n"
+"PO-Revision-Date: 2010-01-29 23:19+0200\n"
 "Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
@@ -21,9 +21,7 @@ msgstr ""
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr ""
-"Αγνόησε τις εκτελούμενα στιγμιότυπα, επιβολή ανοίγματος ενός νέου "
-"στιγμιότυπου"
+msgstr "Αγνόησε τις εκτελούμενα στιγμιότυπα, επιβολή ανοίγματος ενός νέου στιγμιότυπου"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
@@ -39,8 +37,7 @@ msgstr "Εμφάνιση πληροφορίες έκδοσης"
 
 #: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- μία απλή εφαρμογή για να συνδέονται εύκολα απομακρυσμένα συστήματα αρχείων"
+msgstr "- μία απλή εφαρμογή για να συνδέονται εύκολα απομακρυσμένα συστήματα αρχείων"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -74,7 +71,8 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (ασφαλές)"
 
-#: ../src/common.c:93 ../src/window.c:1352
+#: ../src/common.c:93
+#: ../src/window.c:1363
 msgid "Network"
 msgstr "Δίκτυο"
 
@@ -95,14 +93,14 @@ msgstr "Προσαρμοσμένη τοποθεσία"
 msgid "Connecting to \"%s\""
 msgstr "Σύνδεση στο \"%s\""
 
-#: ../src/window.c:421 ../gigolo.desktop.in.h:1
+#: ../src/window.c:421
+#: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
-"Ένα απλό εργαλείο για την εύκολο σύνδεση σε απομακρυσμένα συστήματα αρχείων"
+msgstr "Ένα απλό εργαλείο για την εύκολο σύνδεση σε απομακρυσμένα συστήματα αρχείων"
 
 #: ../src/window.c:422
-msgid "Copyright 2008-2009 Enrico Tröger"
-msgstr "Δικαιώματα 2008-2009 Enrico Tröger"
+msgid "Copyright 2008-2010 Enrico Tröger"
+msgstr "Δικαιώματα 2008-2010 Enrico Tröger"
 
 #: ../src/window.c:425
 msgid "translator-credits"
@@ -110,120 +108,130 @@ msgstr "Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2009"
 
 #: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"Το gigolo δεν μπορεί να κάνει χρήση των ακόλουθων πρωτοκόλλων που παρέχει το "
-"GVfs:"
+msgstr "Το gigolo δεν μπορεί να κάνει χρήση των ακόλουθων πρωτοκόλλων που παρέχει το GVfs:"
 
-#: ../src/window.c:671 ../src/bookmarkeditdialog.c:214
-#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
-#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
+#: ../src/window.c:554
+#, c-format
+msgid "The command '%s' failed"
+msgstr "Η εντολή '%s' απέτυχε"
+
+#: ../src/window.c:555
+#: ../src/window.c:682
+#: ../src/bookmarkeditdialog.c:214
+#: ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:246
+#: ../src/bookmarkeditdialog.c:257
+#: ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: ../src/window.c:1138
+#: ../src/window.c:1149
 msgid "_File"
 msgstr "_Αρχείο"
 
-#: ../src/window.c:1139
+#: ../src/window.c:1150
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
-#: ../src/window.c:1140
+#: ../src/window.c:1151
 msgid "_Actions"
 msgstr "Ε_νέργειες"
 
-#: ../src/window.c:1141
+#: ../src/window.c:1152
 msgid "_View"
 msgstr "_Εμφάνιση"
 
-#: ../src/window.c:1142
+#: ../src/window.c:1153
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../src/window.c:1146 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1157
+#: ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Δημιουργία συνδέσμου"
 
-#: ../src/window.c:1148
+#: ../src/window.c:1159
 msgid "_Edit Bookmarks"
 msgstr "_Επεξεργασία συνδέσμων"
 
-#: ../src/window.c:1149
+#: ../src/window.c:1160
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Άνοιγμα του διαχειριστή συνδέσμων για προσθήκη, επεξεργασία ή διαγραφή "
-"συνδέσμων"
+msgstr "Άνοιγμα του διαχειριστή συνδέσμων για προσθήκη, επεξεργασία ή διαγραφή συνδέσμων"
 
-#: ../src/window.c:1153
+#: ../src/window.c:1164
 msgid "Disconnect the selected resource"
 msgstr "Αποσύνδεση του επιλεγμένου πόρου"
 
-#: ../src/window.c:1155
+#: ../src/window.c:1166
 msgid "Open the selected resource with a file manager"
 msgstr "Άνοιγμα της επιλεγμένης πηγής με έναν διαχειριστή αρχείων"
 
-#: ../src/window.c:1156
+#: ../src/window.c:1167
 msgid "Copy _URI"
 msgstr "Αντιγραφή _URI"
 
-#: ../src/window.c:1157
+#: ../src/window.c:1168
 msgid "Quit Gigolo"
 msgstr "Έξοδος"
 
-#: ../src/window.c:1158
+#: ../src/window.c:1169
 msgid "Online Help"
 msgstr "Διαδικτυακή βοήθεια"
 
-#: ../src/window.c:1159
+#: ../src/window.c:1170
 msgid "Supported Protocols"
 msgstr "Υποστηριζόμενα πρωτόκολλα"
 
-#: ../src/window.c:1165
+#: ../src/window.c:1176
 msgid "Side _Panel"
 msgstr "_Πλαϊνό ταμπλό"
 
-#: ../src/window.c:1167
+#: ../src/window.c:1178
 msgid "_Toolbar"
 msgstr "_Εργαλειοθήκη"
 
-#: ../src/window.c:1169
+#: ../src/window.c:1180
 msgid "Status _Icon"
 msgstr "Εικ_ονίδιο κατάστασης"
 
-#: ../src/window.c:1175
+#: ../src/window.c:1186
 msgid "View as _Symbols"
 msgstr "Εμφάνιση ως _σύμβολα"
 
-#: ../src/window.c:1176
+#: ../src/window.c:1187
 msgid "View as _Detailed List"
 msgstr "Εμφάνιση ως λεπτομερής λίστας"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1193
 msgid "_Bookmarks"
 msgstr "_Σύνδεσμοι"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1193
 msgid "Choose a bookmark to connect to"
 msgstr "Επιλογή ενός συνδέσμου για σύνδεση"
 
-#: ../src/window.c:1256
+#: ../src/window.c:1267
 msgid "Connected"
 msgstr "Συνδέθηκε"
 
-#: ../src/window.c:1265 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1276
+#: ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Τύπος υπηρεσίας"
 
-#: ../src/window.c:1273 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1284
+#: ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Όνομα"
 
-#: ../src/window.c:1344
+#: ../src/window.c:1355
 msgid "Bookmarks"
 msgstr "Σύνδεσμοι"
 
-#: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1405
+#: ../src/window.c:1480
+#: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -233,18 +241,12 @@ msgstr "Να μετακινηθεί τώρα;"
 
 #: ../src/settings.c:643
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Πριν εκκινήσετε το gigolo χρειάζεται να μετακινήσετε το παλιό κατάλογο "
-"ρυθμίσεων."
+msgstr "Πριν εκκινήσετε το gigolo χρειάζεται να μετακινήσετε το παλιό κατάλογο ρυθμίσεων."
 
 #: ../src/settings.c:651
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Ο παλιός κατάλογος ρυθμίσεων \"%s\" δεν μπορεί να μετακινηθεί στο  \"%s\" (%"
-"s). Παρακαλώ μετακινήστε χειροκίνητα τον κατάλογο σε μία νέα τοποθεσία."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Ο παλιός κατάλογος ρυθμίσεων \"%s\" δεν μπορεί να μετακινηθεί στο  \"%s\" (%s). Παρακαλώ μετακινήστε χειροκίνητα τον κατάλογο σε μία νέα τοποθεσία."
 
 #: ../src/settings.c:654
 msgid "Warning"
@@ -267,12 +269,12 @@ msgstr "Κοινόχρηστος πόρος: %s"
 #: ../src/bookmarkdialog.c:105
 #, c-format
 msgid "Folder: %s"
-msgstr ""
+msgstr "Φάκελος: %s"
 
 #: ../src/bookmarkdialog.c:111
 #, c-format
 msgid "Path: %s"
-msgstr ""
+msgstr "Διαδρομή: %s"
 
 #: ../src/bookmarkdialog.c:321
 msgid "Host"
@@ -304,9 +306,7 @@ msgstr "Πρέπει να εισάγετε ένα όνομα για την σύ�
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
-"Το όνομα του συνδέσμου που δώσατε είναι ήδη σε χρήση. Παρακαλώ επιλέξτε ένα "
-"άλλο."
+msgstr "Το όνομα του συνδέσμου που δώσατε είναι ήδη σε χρήση. Παρακαλώ επιλέξτε ένα άλλο."
 
 #: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a server address or name."
@@ -320,73 +320,72 @@ msgstr "Πρέπει να εισάγετε ένα όνομα κοινόχρησ�
 msgid "You must enter a valid URI for the connection."
 msgstr "Πρέπει να εισάγετε ένα έγκυρο URI για την σύνδεση."
 
-#: ../src/bookmarkeditdialog.c:555
+#: ../src/bookmarkeditdialog.c:553
 msgid "_Device:"
 msgstr "_Συσκευή:"
 
-#: ../src/bookmarkeditdialog.c:557 ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:555
+#: ../src/bookmarkeditdialog.c:1010
 msgid "_Server:"
 msgstr "_Διακομιστής:"
 
-#: ../src/bookmarkeditdialog.c:845
+#: ../src/bookmarkeditdialog.c:843
 msgid "Create Bookmark"
 msgstr "Δημιουργία συνδέμου"
 
-#: ../src/bookmarkeditdialog.c:852
+#: ../src/bookmarkeditdialog.c:850
 msgid "Edit Bookmark"
 msgstr "Επεξεργασία συνδέσμου"
 
-#: ../src/bookmarkeditdialog.c:860
+#: ../src/bookmarkeditdialog.c:858
 msgid "Connect to Server"
 msgstr "Σύνδεση στο διακομιστή"
 
-#: ../src/bookmarkeditdialog.c:964
+#: ../src/bookmarkeditdialog.c:962
 msgid "_Bookmark name:"
 msgstr "Όν_ομα συνδέσμου:"
 
-#: ../src/bookmarkeditdialog.c:972
+#: ../src/bookmarkeditdialog.c:970
 msgid "Au_to-Connect"
 msgstr "Αυτ_όματη σύνδεση"
 
-#: ../src/bookmarkeditdialog.c:980
+#: ../src/bookmarkeditdialog.c:978
 msgid "Service t_ype:"
 msgstr "Τ_ύπος υπηρεσίας:"
 
-#: ../src/bookmarkeditdialog.c:1005
+#: ../src/bookmarkeditdialog.c:1003
 msgid "Set the port to 0 to use the default port"
 msgstr "Ορίστε την πόρτα σε 0 για χρήση της προεπιλεγμένης πόρτας"
 
-#: ../src/bookmarkeditdialog.c:1011
+#: ../src/bookmarkeditdialog.c:1009
 msgid "_Location (URI):"
 msgstr "_Τοποθεσία (URI):"
 
-#: ../src/bookmarkeditdialog.c:1013
-#, fuzzy
+#: ../src/bookmarkeditdialog.c:1011
 msgid "_Folder:"
-msgstr "_Αρχείο"
+msgstr "_Φάκελος:"
 
-#: ../src/bookmarkeditdialog.c:1014
-#, fuzzy
+#: ../src/bookmarkeditdialog.c:1012
 msgid "_Path:"
-msgstr "_Πόρτα:"
+msgstr "_Διαδρομή:"
 
-#: ../src/bookmarkeditdialog.c:1015
+#: ../src/bookmarkeditdialog.c:1013
 msgid "_User Name:"
 msgstr "_Όνομα χρήστη:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1014
 msgid "Optional information:"
 msgstr "Προεραιτικές πληροφορίες:"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1015
 msgid "_Port:"
 msgstr "_Πόρτα:"
 
-#: ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:1016
 msgid "_Domain:"
 msgstr "_Τομέας:"
 
-#: ../src/bookmarkeditdialog.c:1019
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Share:"
 msgstr "_Κοινόχρηστος Πόρος:"
 
@@ -432,45 +431,32 @@ msgstr "_Διαχειριστής αρχείων"
 
 #: ../src/preferencesdialog.c:353
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Εισάγετε το όνομα ενός προγράμματος για χρήση για άνοιγμα ή εμφάνιση των "
-"σημείων προσάρτησης"
+msgstr "Εισάγετε το όνομα ενός προγράμματος για χρήση για άνοιγμα ή εμφάνιση των σημείων προσάρτησης"
 
 #: ../src/preferencesdialog.c:362
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "Εσωτερική αυτόματη σύνδεση σ_υνδέσμου"
 
 #: ../src/preferencesdialog.c:368
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Πόσο συχνά να προσπαθεί να επανασυνδέσοι τους συνδέσμους, σε δευτερόλεπτα. "
-"Το μηδέν απενεργοποιεί τον έλεγχο."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Πόσο συχνά να προσπαθεί να επανασυνδέσοι τους συνδέσμους, σε δευτερόλεπτα. Το μηδέν απενεργοποιεί τον έλεγχο."
 
 #: ../src/preferencesdialog.c:374
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' "
-"to mount local resources like disks. The Unix based volume manager "
-"implementation can mount such resources directly and also lists other local "
-"devices.\n"
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
-"Η υλοποίηση του διαχειριστή τόμων βασισμένος στο HAL χρειάζεται στο εργαλείο "
-"'gnome-mount' για να προσαρτήση τις τοπικές πηγές όπως τους δίσκους. Η "
-"υλοποίηση του διαχειριστή τομέων βασισμένο στο UNIX μπορεί να προσαρτήσει "
-"τέτοιες πηγές απευθείας και επίσης να εμφανίσει σε λίστα άλλες τοπικές "
-"συσκευές.\n"
+"Η υλοποίηση του διαχειριστή τόμων βασισμένος στο HAL χρειάζεται στο εργαλείο 'gnome-mount' για να προσαρτήση τις τοπικές πηγές όπως τους δίσκους. Η υλοποίηση του διαχειριστή τομέων βασισμένο στο UNIX μπορεί να προσαρτήσει τέτοιες πηγές απευθείας και επίσης να εμφανίσει σε λίστα άλλες τοπικές συσκευές.\n"
 "Αν δεν είστε σίγουροι, χρησιμοποιήστε τον ελεκτή βασισμένο στο HAL."
 
 #: ../src/preferencesdialog.c:380
 msgid "Use _HAL based volume manager"
 msgstr "Χρήση του διαχειριστή τόμων βασισμένο στο HAL"
 
-#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
+#: ../src/preferencesdialog.c:381
+#: ../src/preferencesdialog.c:389
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr ""
-"<i>Τροποποιώντας αυτή την επιλογή το gigolo χρειάζεται επανεκκίνηση.</i>"
+msgstr "<i>Τροποποιώντας αυτή την επιλογή το gigolo χρειάζεται επανεκκίνηση.</i>"
 
 #: ../src/preferencesdialog.c:388
 msgid "Use _Unix based volume manager"
@@ -486,9 +472,7 @@ msgstr "_Αποθήκευση θέσης και γεωμετρίας παραθ�
 
 #: ../src/preferencesdialog.c:407
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
-"Αποθηκεύει την θέση και γεωμετρία των παραθύρων και τα επαναφέρει κατά την "
-"εκκίνηση"
+msgstr "Αποθηκεύει την θέση και γεωμετρία των παραθύρων και τα επαναφέρει κατά την εκκίνηση"
 
 #: ../src/preferencesdialog.c:410
 msgid "Show status _icon in the Notification Area"
@@ -503,23 +487,16 @@ msgid "Show side panel"
 msgstr "Εμφάνιση πλαϊνού ταμπλό"
 
 #: ../src/preferencesdialog.c:419
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
-msgstr ""
-"Εάν θα εμφανίζεται το πλαϊνό ταμπλό για περιήγηση του τοπικού δικτύου για "
-"διαθέσιμους Samba/Windows κοινόχρηστους πόρους και λίστα συνδέσμων"
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "Εάν θα εμφανίζεται το πλαϊνό ταμπλό για περιήγηση του τοπικού δικτύου για διαθέσιμους Samba/Windows κοινόχρηστους πόρους και λίστα συνδέσμων"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
 msgstr "Εμφάνιση σφαλμάτων μηνυμάτων αυτόματης σύνδεσης"
 
 #: ../src/preferencesdialog.c:423
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Εάν και πόσο να φαίνονται οι διάλογοι των μηνυμάτων λάθους κατά την αυτόματη "
-"σύνδεση όταν οι σύνδεσμοι αποτυγχάνουν"
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "Εάν και πόσο να φαίνονται οι διάλογοι των μηνυμάτων λάθους κατά την αυτόματη σύνδεση όταν οι σύνδεσμοι αποτυγχάνουν"
 
 #: ../src/preferencesdialog.c:429
 msgid "_Connection List Mode"
@@ -565,11 +542,13 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Συσκευή Unix: %s</b>"
 
-#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:441
+#: ../src/backendgvfs.c:477
 msgid "unknown"
 msgstr "άγνωστο"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:447
+#: ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Η σύνδεση στο \"%s\" απέτυχε."
@@ -607,7 +586,8 @@ msgstr "Δημιουργία συνδέσμου από τον επιλεγμέν
 msgid "Refresh the network list"
 msgstr "Ανανέωση της λίστας δικτύου"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
+#: ../src/browsenetworkpanel.c:518
+#: ../src/bookmarkpanel.c:263
 msgid "Close panel"
 msgstr "Κλείσιμο ταμπλό"
 
@@ -618,3 +598,4 @@ msgstr "Όχι σύνδεσμοι"
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
 msgstr "Σύνδεση σε επιλεγμένο σύνδεσμο"
+
