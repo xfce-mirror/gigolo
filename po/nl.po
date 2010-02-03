@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-13 18:00+0100\n"
+"POT-Creation-Date: 2010-02-03 18:03+0100\n"
 "PO-Revision-Date: 2009-10-16 13:39+0100\n"
 "Last-Translator: Timo Verbeek <timoverbeek10@hotmail.com>\n"
 "Language-Team: Dutch\n"
@@ -20,12 +20,10 @@ msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Negeer de lopen gevallen af te dwingen opening van een nieuw exemplaar"
 
 #: ../src/main.c:47
-#, fuzzy
 msgid "Print a list of supported URI schemes"
 msgstr "Toon een lijst van ondersteunde URI soorten"
 
 #: ../src/main.c:48
-#, fuzzy
 msgid "Be verbose"
 msgstr "Wees uitgebreid"
 
@@ -34,16 +32,14 @@ msgid "Show version information"
 msgstr "Toon versie informatie"
 
 #: ../src/main.c:80
-#, fuzzy
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- Een eenvoudige programma om gemakkelijk verbinding mee te maken met externe bestandssystemen"
+msgstr "- een eenvoudige grafisch programma om gemakkelijk verbinding mee te maken met externe bestandsystemen"
 
 #: ../src/common.c:77
 msgid "Unix Device"
 msgstr "Unix apparaat"
 
 #: ../src/common.c:79
-#, fuzzy
 msgid "Windows Share"
 msgstr "Windows deling"
 
@@ -71,7 +67,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (beveiligd)"
 
-#: ../src/common.c:93 ../src/window.c:1352
+#: ../src/common.c:93 ../src/window.c:1363
 msgid "Network"
 msgstr "Netwerk"
 
@@ -93,9 +89,8 @@ msgid "Connecting to \"%s\""
 msgstr "Verbinding maken met  \"%s\""
 
 #: ../src/window.c:421 ../gigolo.desktop.in.h:1
-#, fuzzy
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Een eenvoudige programma om gemakkelijk verbinding te maken met externe bestandssystemen"
+msgstr "Een eenvoudige grafisch programma om gemakkelijk verbinding te maken met externe bestandsystemen"
 
 #: ../src/window.c:422
 msgid "Copyright 2008-2010 Enrico Tröger"
@@ -109,123 +104,124 @@ msgstr "Xfce Dutch translation team"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo kan gebruik maken van de volgende protocollen verkregen door gvfs:"
 
-#: ../src/window.c:671 ../src/bookmarkeditdialog.c:214
+#: ../src/window.c:554
+#, c-format
+msgid "The command '%s' failed"
+msgstr "Het commando '%s' is mislukt"
+
+#: ../src/window.c:555 ../src/window.c:682 ../src/bookmarkeditdialog.c:214
 #: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
 #: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
-#, fuzzy
 msgid "Error"
 msgstr "Fout"
 
-#: ../src/window.c:1138
+#: ../src/window.c:1149
 msgid "_File"
 msgstr "_Bestand"
 
-#: ../src/window.c:1139
+#: ../src/window.c:1150
 msgid "_Edit"
 msgstr "_Aanpassen"
 
-#: ../src/window.c:1140
-#, fuzzy
+#: ../src/window.c:1151
 msgid "_Actions"
 msgstr "_Acties"
 
-#: ../src/window.c:1141
-#, fuzzy
+#: ../src/window.c:1152
 msgid "_View"
 msgstr "_Beeld"
 
-#: ../src/window.c:1142
+#: ../src/window.c:1153
 msgid "_Help"
 msgstr "_Help"
 
-#: ../src/window.c:1146 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1157 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Maak een  _Bladwijzer"
 
-#: ../src/window.c:1148
+#: ../src/window.c:1159
 msgid "_Edit Bookmarks"
 msgstr "_Pas de Bladwijzers aan"
 
-#: ../src/window.c:1149
+#: ../src/window.c:1160
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "Open de bookmark manager om toe te voegen, bewerken of verwijderen van bladwijzers"
 
-#: ../src/window.c:1153
+#: ../src/window.c:1164
+#, fuzzy
 msgid "Disconnect the selected resource"
-msgstr ""
+msgstr "Koppel los van de geselecteerde bron"
 
-#: ../src/window.c:1155
+#: ../src/window.c:1166
 msgid "Open the selected resource with a file manager"
 msgstr "Open de geselecteerde bron met een file manager"
 
-#: ../src/window.c:1156
+#: ../src/window.c:1167
 msgid "Copy _URI"
 msgstr "Kopieer _URI"
 
-#: ../src/window.c:1157
+#: ../src/window.c:1168
 msgid "Quit Gigolo"
 msgstr "Sluit Gigolo"
 
-#: ../src/window.c:1158
+#: ../src/window.c:1169
 msgid "Online Help"
 msgstr "Online Help"
 
-#: ../src/window.c:1159
+#: ../src/window.c:1170
 msgid "Supported Protocols"
 msgstr "Ondersteunde Protocols"
 
-#: ../src/window.c:1165
+#: ../src/window.c:1176
 msgid "Side _Panel"
 msgstr "Zij  _Paneel"
 
-#: ../src/window.c:1167
+#: ../src/window.c:1178
 msgid "_Toolbar"
 msgstr "_Toolbar"
 
-#: ../src/window.c:1169
+#: ../src/window.c:1180
 msgid "Status _Icon"
 msgstr "Status _Icoon"
 
-#: ../src/window.c:1175
-#, fuzzy
+#: ../src/window.c:1186
 msgid "View as _Symbols"
 msgstr "Bekijk als _Symbols"
 
-#: ../src/window.c:1176
+#: ../src/window.c:1187
 msgid "View as _Detailed List"
 msgstr "Bekijk als _Gedetalieerde Lijst"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1193
 msgid "_Bookmarks"
 msgstr "_Bladwijzers"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1193
 msgid "Choose a bookmark to connect to"
 msgstr "Kies een bookmark om verbinding te maken met"
 
-#: ../src/window.c:1256
+#: ../src/window.c:1267
 msgid "Connected"
 msgstr "Verbonden"
 
-#: ../src/window.c:1265 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1276 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Service type"
 
-#: ../src/window.c:1273 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1284 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Naam"
 
-#: ../src/window.c:1344
+#: ../src/window.c:1355
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
-#: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1405 ../src/window.c:1480 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
 #: ../src/settings.c:642
-#, fuzzy
 msgid "Move it now?"
 msgstr "Nu het verplaatsen?"
 
@@ -247,7 +243,7 @@ msgid "Connect"
 msgstr "Verbindt"
 
 #: ../src/bookmarkdialog.c:94
-#, c-format, fuzzy
+#, c-format
 msgid "Domain: %s"
 msgstr "Domein: %s"
 
@@ -262,7 +258,7 @@ msgid "Folder: %s"
 msgstr "Map: %s"
 
 #: ../src/bookmarkdialog.c:111
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "Path: %s"
 msgstr "Directory: %s"
 
@@ -310,73 +306,72 @@ msgstr "U moet een share-naam invullen."
 msgid "You must enter a valid URI for the connection."
 msgstr "U moet een geldig URI voor de verbinding invullen."
 
-#: ../src/bookmarkeditdialog.c:555
+#: ../src/bookmarkeditdialog.c:553
 msgid "_Device:"
 msgstr "_Apparaat:"
 
-#: ../src/bookmarkeditdialog.c:557 ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1010
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:845
+#: ../src/bookmarkeditdialog.c:843
 msgid "Create Bookmark"
 msgstr "Maak een Bladwijzer"
 
-#: ../src/bookmarkeditdialog.c:852
+#: ../src/bookmarkeditdialog.c:850
 msgid "Edit Bookmark"
 msgstr "Bewerk een Bladwijzer"
 
-#: ../src/bookmarkeditdialog.c:860
+#: ../src/bookmarkeditdialog.c:858
 msgid "Connect to Server"
 msgstr "Verbind met Server"
 
-#: ../src/bookmarkeditdialog.c:964
+#: ../src/bookmarkeditdialog.c:962
 msgid "_Bookmark name:"
 msgstr "_Bladwijzer Naam:"
 
-#: ../src/bookmarkeditdialog.c:972
+#: ../src/bookmarkeditdialog.c:970
 msgid "Au_to-Connect"
 msgstr "Connexion au_tomatique"
 
-#: ../src/bookmarkeditdialog.c:980
+#: ../src/bookmarkeditdialog.c:978
 msgid "Service t_ype:"
 msgstr "T_ype de service :"
 
-#: ../src/bookmarkeditdialog.c:1005
+#: ../src/bookmarkeditdialog.c:1003
 msgid "Set the port to 0 to use the default port"
 msgstr "Stel poort 0 in om gebruik te maken van de standaard poort"
 
-#: ../src/bookmarkeditdialog.c:1011
-#, fuzzy
+#: ../src/bookmarkeditdialog.c:1009
 msgid "_Location (URI):"
 msgstr "_Locatie (URI):"
 
-#: ../src/bookmarkeditdialog.c:1013
+#: ../src/bookmarkeditdialog.c:1011
 msgid "_Folder:"
 msgstr "_Folder:"
 
-#: ../src/bookmarkeditdialog.c:1014
+#: ../src/bookmarkeditdialog.c:1012
 #, fuzzy
 msgid "_Path:"
 msgstr "_Path:"
 
-#: ../src/bookmarkeditdialog.c:1015
+#: ../src/bookmarkeditdialog.c:1013
 msgid "_User Name:"
 msgstr "_Gebruikers Naam:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1014
 msgid "Optional information:"
 msgstr "Optionele informatie:"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1015
 msgid "_Port:"
 msgstr "_Poort :"
 
-#: ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:1016
 msgid "_Domain:"
 msgstr "_Domein :"
 
-#: ../src/bookmarkeditdialog.c:1019
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Share:"
 msgstr "_Delen:"
 
@@ -433,17 +428,19 @@ msgid "How often to try auto connecting bookmarks, in seconds. Zero disables che
 msgstr "Hoe vaak proberen automatisch verbinding te maken met bladwijzers, in seconden. Zero schakelt controleren uit."
 
 #: ../src/preferencesdialog.c:374
+#, fuzzy
 msgid ""
 "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 "If you are unsure, use the HAL based monitor."
 msgstr ""
+"De HAL gebaseerde volume-manager implementatie vereist het programma 'gnome-mount' om  lokale bronnen mount, zoals schijven. De Unix gebaseerd Volume Manager implementatie kan monteren deze middelen rechtstreeks en ook lijsten andere lokale apparaten. \n"
+"Als u niet zeker bent, maak dan gebruik van de op HAL gebaseerde monitor."
 
 #: ../src/preferencesdialog.c:380
 msgid "Use _HAL based volume manager"
 msgstr "Gebruik _HAL op basis van  de volume-manager"
 
 #: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
-#, fuzzy
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 msgstr "<i>Het wijzigen van deze optie vereist een herstart van Gigolo.</i>"
 
@@ -456,17 +453,15 @@ msgid "Interface"
 msgstr "Interface"
 
 #: ../src/preferencesdialog.c:406
-#, fuzzy
 msgid "_Save window position and geometry"
-msgstr "_Sla venster positie en vorm op"
+msgstr "_Sla venster positie en geometrie op"
 
 #: ../src/preferencesdialog.c:407
 #, fuzzy
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Slaat het venster positie en geometrie en herstelt aan het begin"
+msgstr "Slaat de venster positie en geometrie op en herstelt aan het begin"
 
 #: ../src/preferencesdialog.c:410
-#, fuzzy
 msgid "Show status _icon in the Notification Area"
 msgstr "Toon status _icon in het systeemvak"
 
@@ -479,16 +474,14 @@ msgid "Show side panel"
 msgstr "Toon zijpaneel"
 
 #: ../src/preferencesdialog.c:419
-#, fuzzy
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "Of er een zijpaneel voor het surfen op het lokale netwerk naar beschikbare Samba / Windows aandelen en een lijst met bladwijzers"
+msgstr "Of er een zijpaneel voor het surfen op het lokale netwerk naar beschikbare Samba / Windows delingen en een lijst met bladwijzers"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
 msgstr "Toon auto-connect foutmeldingen"
 
 #: ../src/preferencesdialog.c:423
-#, fuzzy
 msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr "Of de foutmelding dialogen als het automatisch verbinding met bookmarks tonen mislukt"
 
@@ -562,7 +555,6 @@ msgid "No Workgroups found"
 msgstr "Geen Werkgroepen gevonden"
 
 #: ../src/browsenetworkpanel.c:199
-#, fuzzy
 msgid "No Shares found"
 msgstr "Geen Delingen gevonden"
 
@@ -571,12 +563,10 @@ msgid "No Hosts found"
 msgstr "Geen Hosts gevonden"
 
 #: ../src/browsenetworkpanel.c:490
-#, fuzzy
 msgid "Connect to the selected share"
 msgstr "Verbinding maken met de geselecteerde delingen"
 
 #: ../src/browsenetworkpanel.c:498
-#, fuzzy
 msgid "Create a bookmark from the selected share"
 msgstr "Maak een bladwijzer van de geselecteerde delingen"
 
