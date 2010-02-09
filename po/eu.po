@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-29 06:03+0100\n"
+"POT-Creation-Date: 2010-02-09 06:03+0100\n"
 "PO-Revision-Date: 2009-12-15 12:11+0100\n"
 "Last-Translator: Piarres Beobide <pi+debian@beobide.net>\n"
 "Language-Team: Basque <debian-l10n-basque@lists.debian.org>\n"
@@ -105,12 +105,12 @@ msgstr "Piarres Beobide <pi@beobide.net>"
 
 #: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Gogolok GVfs-ek euskarri ematen dien hurrengo protokoloak erabili ditzake:"
+msgstr "Gigolok GVfs-ek euskarri ematen dien hurrengo protokoloak erabili ditzake:"
 
 #: ../src/window.c:554
 #, c-format
 msgid "The command '%s' failed"
-msgstr ""
+msgstr "'%s' komandoak huts egin du"
 
 #: ../src/window.c:555 ../src/window.c:682 ../src/bookmarkeditdialog.c:214
 #: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
