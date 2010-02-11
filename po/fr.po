@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-09 18:03+0100\n"
-"PO-Revision-Date: 2010-02-09 22:42+0100\n"
+"POT-Creation-Date: 2010-02-11 12:03+0100\n"
+"PO-Revision-Date: 2010-02-11 15:08+0100\n"
 "Last-Translator: Douart Patrick <patrick.2@laposte.net>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -483,9 +483,8 @@ msgid "Show side panel"
 msgstr "_Afficher le panneau latéral"
 
 #: ../src/preferencesdialog.c:419
-#, fuzzy
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "S'il faut afficher, ou non, un panneau latéral pour parcourir le réseau local pour trouver les partages Samba disponibles"
+msgstr "Afficher ou non un panneau latéral pour parcourir le réseau local et trouver les partages Samba disponibles et la liste des signets"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
