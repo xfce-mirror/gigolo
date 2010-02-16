@@ -100,7 +100,7 @@ msgstr "Alexandr Ponomarenko, 2009"
 
 #: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Gigolo может использвать следующие предоставляемые GVfs протоколы:"
+msgstr "Gigolo может использовать следующие предоставляемые GVfs протоколы:"
 
 #: ../src/window.c:554
 #, c-format
