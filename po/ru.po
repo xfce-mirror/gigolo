@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-16 06:03+0100\n"
+"POT-Creation-Date: 2010-02-16 12:03+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Urmas <dwqwt3i02@sneakemail.com>\n"
 "Language-Team: None <->\n"
@@ -301,7 +301,7 @@ msgstr "Укажите имя ресурса."
 
 #: ../src/bookmarkeditdialog.c:269
 msgid "You must enter a valid URI for the connection."
-msgstr "Необходимо указать правильный адрес ресурса."
+msgstr "Необходимо указать допустимый адрес ресурса."
 
 #: ../src/bookmarkeditdialog.c:553
 msgid "_Device:"
