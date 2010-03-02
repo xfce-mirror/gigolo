@@ -113,7 +113,7 @@ msgstr "Gigolo kann mit den folgenden, von GVfs bereitgestellen Protokollen umge
 #: ../src/window.c:554
 #, c-format
 msgid "The command '%s' failed"
-msgstr ""
+msgstr "Der Befehl '%s' ist fehlgeschlagen"
 
 #: ../src/window.c:555 ../src/window.c:682 ../src/bookmarkeditdialog.c:214
 #: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
@@ -265,7 +265,7 @@ msgstr "Ordner: %s"
 #: ../src/bookmarkdialog.c:111
 #, c-format
 msgid "Path: %s"
-msgstr ""
+msgstr "Pfad: %s"
 
 #: ../src/bookmarkdialog.c:321
 msgid "Host"
@@ -356,9 +356,8 @@ msgid "_Folder:"
 msgstr "_Ordner:"
 
 #: ../src/bookmarkeditdialog.c:1012
-#, fuzzy
 msgid "_Path:"
-msgstr "_Port:"
+msgstr "_Pfad:"
 
 #: ../src/bookmarkeditdialog.c:1013
 msgid "_User Name:"
