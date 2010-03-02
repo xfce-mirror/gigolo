@@ -131,7 +131,7 @@ msgstr "_Bearbeiten"
 
 #: ../src/window.c:1151
 msgid "_Actions"
-msgstr "_Aktionen"
+msgstr "A_ktionen"
 
 #: ../src/window.c:1152
 msgid "_View"
