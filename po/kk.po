@@ -1,0 +1,591 @@
+# gigolo to kazakh.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: trunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-12 00:03+0100\n"
+"PO-Revision-Date: 2010-03-12 10:45+0600\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr ""
+
+#: ../src/main.c:47
+msgid "Print a list of supported URI schemes"
+msgstr ""
+
+#: ../src/main.c:48
+msgid "Be verbose"
+msgstr "Көбірек ақпаратты шығару"
+
+#: ../src/main.c:49
+msgid "Show version information"
+msgstr ""
+
+#: ../src/main.c:80
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr ""
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr ""
+
+#: ../src/common.c:79
+msgid "Windows Share"
+msgstr ""
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr ""
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr ""
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr ""
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr ""
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr ""
+
+#: ../src/common.c:93
+#: ../src/window.c:1363
+msgid "Network"
+msgstr "Желі"
+
+#: ../src/common.c:95
+msgid "Archive"
+msgstr "Архив"
+
+#: ../src/common.c:97
+msgid "Photos"
+msgstr ""
+
+#: ../src/common.c:99
+msgid "Custom Location"
+msgstr ""
+
+#: ../src/window.c:253
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr ""
+
+#: ../src/window.c:421
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr ""
+
+#: ../src/window.c:422
+msgid "Copyright 2008-2010 Enrico Tröger"
+msgstr ""
+
+#: ../src/window.c:425
+msgid "translator-credits"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com> 2010"
+
+#: ../src/window.c:457
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr ""
+
+#: ../src/window.c:554
+#, c-format
+msgid "The command '%s' failed"
+msgstr "'%s' командасы қатемен аяқталды"
+
+#: ../src/window.c:555
+#: ../src/window.c:682
+#: ../src/bookmarkeditdialog.c:214
+#: ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:246
+#: ../src/bookmarkeditdialog.c:257
+#: ../src/bookmarkeditdialog.c:268
+msgid "Error"
+msgstr "Қате"
+
+#: ../src/window.c:1149
+msgid "_File"
+msgstr "_Файл"
+
+#: ../src/window.c:1150
+msgid "_Edit"
+msgstr "Түз_ету"
+
+#: ../src/window.c:1151
+msgid "_Actions"
+msgstr "Әр_екеттер"
+
+#: ../src/window.c:1152
+msgid "_View"
+msgstr "Тү_рі"
+
+#: ../src/window.c:1153
+msgid "_Help"
+msgstr "Кө_мек"
+
+#: ../src/window.c:1157
+#: ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
+msgid "Create _Bookmark"
+msgstr ""
+
+#: ../src/window.c:1159
+msgid "_Edit Bookmarks"
+msgstr ""
+
+#: ../src/window.c:1160
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr ""
+
+#: ../src/window.c:1164
+msgid "Disconnect the selected resource"
+msgstr ""
+
+#: ../src/window.c:1166
+msgid "Open the selected resource with a file manager"
+msgstr ""
+
+#: ../src/window.c:1167
+msgid "Copy _URI"
+msgstr ""
+
+#: ../src/window.c:1168
+msgid "Quit Gigolo"
+msgstr ""
+
+#: ../src/window.c:1169
+msgid "Online Help"
+msgstr ""
+
+#: ../src/window.c:1170
+msgid "Supported Protocols"
+msgstr ""
+
+#: ../src/window.c:1176
+msgid "Side _Panel"
+msgstr ""
+
+#: ../src/window.c:1178
+msgid "_Toolbar"
+msgstr "_Панель"
+
+#: ../src/window.c:1180
+msgid "Status _Icon"
+msgstr ""
+
+#: ../src/window.c:1186
+msgid "View as _Symbols"
+msgstr ""
+
+#: ../src/window.c:1187
+msgid "View as _Detailed List"
+msgstr "_Толық тізім"
+
+#: ../src/window.c:1193
+msgid "_Bookmarks"
+msgstr "Б_етбелгілер"
+
+#: ../src/window.c:1193
+msgid "Choose a bookmark to connect to"
+msgstr ""
+
+#: ../src/window.c:1267
+msgid "Connected"
+msgstr "Байланысқан"
+
+#: ../src/window.c:1276
+#: ../src/bookmarkdialog.c:313
+msgid "Service Type"
+msgstr ""
+
+#: ../src/window.c:1284
+#: ../src/bookmarkdialog.c:305
+msgid "Name"
+msgstr "Аты"
+
+#: ../src/window.c:1355
+msgid "Bookmarks"
+msgstr "Бетбелгілер"
+
+#: ../src/window.c:1405
+#: ../src/window.c:1480
+#: ../gigolo.desktop.in.h:2
+msgid "Gigolo"
+msgstr ""
+
+#: ../src/settings.c:642
+msgid "Move it now?"
+msgstr ""
+
+#: ../src/settings.c:643
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr ""
+
+#: ../src/settings.c:651
+#, c-format
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr ""
+
+#: ../src/settings.c:654
+msgid "Warning"
+msgstr "Ескерту"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "Байланыс құру"
+
+#: ../src/bookmarkdialog.c:94
+#, c-format
+msgid "Domain: %s"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:99
+#, c-format
+msgid "Share: %s"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:105
+#, c-format
+msgid "Folder: %s"
+msgstr "Бума: %s"
+
+#: ../src/bookmarkdialog.c:111
+#, c-format
+msgid "Path: %s"
+msgstr "Жолы: %s"
+
+#: ../src/bookmarkdialog.c:321
+msgid "Host"
+msgstr "Хосты"
+
+#: ../src/bookmarkdialog.c:329
+msgid "Port"
+msgstr "Порты"
+
+#: ../src/bookmarkdialog.c:337
+msgid "Auto-Connect"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:345
+msgid "Username"
+msgstr "Пайдаланушы аты"
+
+#: ../src/bookmarkdialog.c:353
+msgid "Other information"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:410
+msgid "Edit Bookmarks"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:215
+msgid "You must enter a name for the bookmark."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:234
+msgid "The entered bookmark name is already in use. Please choose another one."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:247
+msgid "You must enter a server address or name."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:258
+msgid "You must enter a share name."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:269
+msgid "You must enter a valid URI for the connection."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:553
+msgid "_Device:"
+msgstr "Құр_ылғы"
+
+#: ../src/bookmarkeditdialog.c:555
+#: ../src/bookmarkeditdialog.c:1010
+msgid "_Server:"
+msgstr "_Сервер:"
+
+#: ../src/bookmarkeditdialog.c:843
+msgid "Create Bookmark"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:850
+msgid "Edit Bookmark"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:858
+msgid "Connect to Server"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:962
+msgid "_Bookmark name:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:970
+msgid "Au_to-Connect"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:978
+msgid "Service t_ype:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1003
+msgid "Set the port to 0 to use the default port"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1009
+msgid "_Location (URI):"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1011
+msgid "_Folder:"
+msgstr "Бу_ма"
+
+#: ../src/bookmarkeditdialog.c:1012
+msgid "_Path:"
+msgstr "_Жолы:"
+
+#: ../src/bookmarkeditdialog.c:1013
+msgid "_User Name:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1014
+msgid "Optional information:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1015
+msgid "_Port:"
+msgstr "_Порт:"
+
+#: ../src/bookmarkeditdialog.c:1016
+msgid "_Domain:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1017
+msgid "_Share:"
+msgstr ""
+
+#: ../src/preferencesdialog.c:153
+msgid "Icons"
+msgstr "Таңбашалар"
+
+#: ../src/preferencesdialog.c:154
+msgid "Text"
+msgstr "Мәтін"
+
+#: ../src/preferencesdialog.c:155
+msgid "Both"
+msgstr ""
+
+#: ../src/preferencesdialog.c:156
+msgid "Both horizontal"
+msgstr ""
+
+#: ../src/preferencesdialog.c:175
+msgid "Horizontal"
+msgstr "Жатық"
+
+#: ../src/preferencesdialog.c:176
+msgid "Vertical"
+msgstr "Тік"
+
+#: ../src/preferencesdialog.c:195
+msgid "Symbols"
+msgstr ""
+
+#: ../src/preferencesdialog.c:196
+msgid "Detailed List"
+msgstr ""
+
+#: ../src/preferencesdialog.c:340
+msgid "General"
+msgstr "Жалпы"
+
+#: ../src/preferencesdialog.c:345
+msgid "_File Manager"
+msgstr "_Файлдар басқарушысы"
+
+#: ../src/preferencesdialog.c:353
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr ""
+
+#: ../src/preferencesdialog.c:362
+msgid "_Bookmark Auto-Connect Interval"
+msgstr ""
+
+#: ../src/preferencesdialog.c:368
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr ""
+
+#: ../src/preferencesdialog.c:374
+msgid ""
+"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+"If you are unsure, use the HAL based monitor."
+msgstr ""
+
+#: ../src/preferencesdialog.c:380
+msgid "Use _HAL based volume manager"
+msgstr ""
+
+#: ../src/preferencesdialog.c:381
+#: ../src/preferencesdialog.c:389
+msgid "<i>Changing this option requires a restart of Gigolo.</i>"
+msgstr ""
+
+#: ../src/preferencesdialog.c:388
+msgid "Use _Unix based volume manager"
+msgstr ""
+
+#: ../src/preferencesdialog.c:404
+msgid "Interface"
+msgstr "Сыртқы түрі"
+
+#: ../src/preferencesdialog.c:406
+msgid "_Save window position and geometry"
+msgstr ""
+
+#: ../src/preferencesdialog.c:407
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr ""
+
+#: ../src/preferencesdialog.c:410
+msgid "Show status _icon in the Notification Area"
+msgstr ""
+
+#: ../src/preferencesdialog.c:413
+msgid "Start _minimized in the Notification Area"
+msgstr ""
+
+#: ../src/preferencesdialog.c:418
+msgid "Show side panel"
+msgstr ""
+
+#: ../src/preferencesdialog.c:419
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr ""
+
+#: ../src/preferencesdialog.c:422
+msgid "Show auto-connect error messages"
+msgstr ""
+
+#: ../src/preferencesdialog.c:423
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+
+#: ../src/preferencesdialog.c:429
+msgid "_Connection List Mode"
+msgstr ""
+
+#: ../src/preferencesdialog.c:442
+msgid "Toolbar"
+msgstr "Панель"
+
+#: ../src/preferencesdialog.c:444
+msgid "Show _toolbar"
+msgstr "_Панелді көрсету"
+
+#: ../src/preferencesdialog.c:450
+msgid "St_yle"
+msgstr "Ст_илі:"
+
+#: ../src/preferencesdialog.c:461
+msgid "_Orientation"
+msgstr "_Бағдары"
+
+#: ../src/preferencesdialog.c:522
+msgid "Preferences"
+msgstr "Баптаулар"
+
+#: ../src/backendgvfs.c:241
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s"
+msgstr ""
+
+#: ../src/backendgvfs.c:255
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr ""
+
+#: ../src/backendgvfs.c:441
+#: ../src/backendgvfs.c:477
+msgid "unknown"
+msgstr "белгісіз"
+
+#: ../src/backendgvfs.c:447
+#: ../src/backendgvfs.c:543
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr ""
+
+#: ../src/backendgvfs.c:481
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr ""
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "Байланыс орнату"
+
+#: ../src/browsenetworkpanel.c:188
+msgid "No Workgroups found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:199
+msgid "No Shares found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:204
+msgid "No Hosts found"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:490
+msgid "Connect to the selected share"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:498
+msgid "Create a bookmark from the selected share"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:507
+msgid "Refresh the network list"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:518
+#: ../src/bookmarkpanel.c:263
+msgid "Close panel"
+msgstr ""
+
+#: ../src/bookmarkpanel.c:91
+msgid "No bookmarks"
+msgstr ""
+
+#: ../src/bookmarkpanel.c:252
+msgid "Connect to the selected bookmark"
+msgstr ""
+
