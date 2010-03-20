@@ -1,0 +1,604 @@
+# Finnish translation for Gigolo.
+# Copyright (C) 2008-2010 Enrico Tröger
+# This file is distributed under the same license as the Gigolo package.
+# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2010
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gigolo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-20 12:03+0100\n"
+"PO-Revision-Date: 2010-03-20 14:44+0100\n"
+"Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
+"Language-Team: Finnish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Käynnistä uusi instanssi, vaikka sovellus olisi jo käynnissä"
+
+#: ../src/main.c:47
+msgid "Print a list of supported URI schemes"
+msgstr "Tulosta lista tuetuista URI-skeemoista"
+
+#: ../src/main.c:48
+msgid "Be verbose"
+msgstr "Yksityiskohtainen tulostus"
+
+#: ../src/main.c:49
+msgid "Show version information"
+msgstr "Näytä versiotiedot"
+
+#: ../src/main.c:80
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- käyttöliittymä, jonka avulla yhdistät helposti verkkojakoihin"
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr "Unix-laite"
+
+#: ../src/common.c:79
+msgid "Windows Share"
+msgstr "Windows-jako"
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr "Obex"
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr "WebDAV (suojattu)"
+
+#: ../src/common.c:93 ../src/window.c:1363
+msgid "Network"
+msgstr "Verkko"
+
+#: ../src/common.c:95
+msgid "Archive"
+msgstr "Arkisto"
+
+#: ../src/common.c:97
+msgid "Photos"
+msgstr "Valokuvat"
+
+#: ../src/common.c:99
+msgid "Custom Location"
+msgstr "Mukautettu sijainti"
+
+#: ../src/window.c:253
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "Yhdistetään kohteeseen \"%s\""
+
+#: ../src/window.c:421 ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Käyttöliittymä, jonka avulla yhdistät helposti verkkojakoihin"
+
+#: ../src/window.c:422
+msgid "Copyright 2008-2010 Enrico Tröger"
+msgstr "Tekijänoikeus 2008-2010 Enrico Tröger"
+
+#: ../src/window.c:425
+msgid "translator-credits"
+msgstr "Jari Rahkonen <jari.rahkonen@pp1.inet.fi>"
+
+#: ../src/window.c:457
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Gigolo tukee seuraavia protokollia GVfs:n kautta:"
+
+#: ../src/window.c:554
+#, c-format
+msgid "The command '%s' failed"
+msgstr "Komento \"%s\" epäonnistui"
+
+#: ../src/window.c:555 ../src/window.c:682 ../src/bookmarkeditdialog.c:214
+#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
+#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
+msgid "Error"
+msgstr "Virhe"
+
+#: ../src/window.c:1149
+msgid "_File"
+msgstr "_Tiedosto"
+
+#: ../src/window.c:1150
+msgid "_Edit"
+msgstr "_Muokkaa"
+
+#: ../src/window.c:1151
+msgid "_Actions"
+msgstr "_Suorita"
+
+#: ../src/window.c:1152
+msgid "_View"
+msgstr "_Näytä"
+
+#: ../src/window.c:1153
+msgid "_Help"
+msgstr "_Ohje"
+
+#: ../src/window.c:1157 ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
+msgid "Create _Bookmark"
+msgstr "Luo _kirjanmerkki"
+
+#: ../src/window.c:1159
+msgid "_Edit Bookmarks"
+msgstr "_Muokkaa kirjanmerkkejä"
+
+#: ../src/window.c:1160
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr ""
+"Avaa kirjanmerkkien hallinta luodaksesi, muokataksesi tai poistaaksesi "
+"kirjanmerkkejä"
+
+#: ../src/window.c:1164
+msgid "Disconnect the selected resource"
+msgstr "Katkaise yhteys valittuun resurssiin"
+
+#: ../src/window.c:1166
+msgid "Open the selected resource with a file manager"
+msgstr "Avaa valittu resurssi tiedostonhallinnassa"
+
+#: ../src/window.c:1167
+msgid "Copy _URI"
+msgstr "Kopioi _URI"
+
+#: ../src/window.c:1168
+msgid "Quit Gigolo"
+msgstr "Sulje Gigolo"
+
+#: ../src/window.c:1169
+msgid "Online Help"
+msgstr "Ohjeet verkossa"
+
+#: ../src/window.c:1170
+msgid "Supported Protocols"
+msgstr "Tuetut protokollat"
+
+#: ../src/window.c:1176
+msgid "Side _Panel"
+msgstr "Si_vupaneeli"
+
+#: ../src/window.c:1178
+msgid "_Toolbar"
+msgstr "_Työkalupalkki"
+
+#: ../src/window.c:1180
+msgid "Status _Icon"
+msgstr "Tilak_uvake"
+
+#: ../src/window.c:1186
+msgid "View as _Symbols"
+msgstr "Näytä sy_mbolit"
+
+#: ../src/window.c:1187
+msgid "View as _Detailed List"
+msgstr "Näytä ti_edot"
+
+#: ../src/window.c:1193
+msgid "_Bookmarks"
+msgstr "_Kirjanmerkit"
+
+#: ../src/window.c:1193
+msgid "Choose a bookmark to connect to"
+msgstr "Valitse yhdistettävä kirjanmerkki"
+
+#: ../src/window.c:1267
+msgid "Connected"
+msgstr "Yhdistetty"
+
+#: ../src/window.c:1276 ../src/bookmarkdialog.c:313
+msgid "Service Type"
+msgstr "Palvelutyyppi"
+
+#: ../src/window.c:1284 ../src/bookmarkdialog.c:305
+msgid "Name"
+msgstr "Nimi"
+
+#: ../src/window.c:1355
+msgid "Bookmarks"
+msgstr "Kirjanmerkit"
+
+#: ../src/window.c:1405 ../src/window.c:1480 ../gigolo.desktop.in.h:2
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:642
+msgid "Move it now?"
+msgstr "Siirretäänkö heti?"
+
+#: ../src/settings.c:643
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Gigolon täytyy siirtää vanha asetuskansio ennen käynnistystä."
+
+#: ../src/settings.c:651
+#, c-format
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"Vanhan asetuskansiosi \"%s\" siirto kohteeseen \"%s\" epäonnistui (%s). "
+"Ole hyvä ja siirrä kansio itse uuteen sijaintiin."
+
+#: ../src/settings.c:654
+msgid "Warning"
+msgstr "Varoitus"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "Yhdistä"
+
+#: ../src/bookmarkdialog.c:94
+#, c-format
+msgid "Domain: %s"
+msgstr "Toimialue: %s"
+
+#: ../src/bookmarkdialog.c:99
+#, c-format
+msgid "Share: %s"
+msgstr "Jako: %s"
+
+#: ../src/bookmarkdialog.c:105
+#, c-format
+msgid "Folder: %s"
+msgstr "Kansio: %s"
+
+#: ../src/bookmarkdialog.c:111
+#, c-format
+msgid "Path: %s"
+msgstr "Polku: %s"
+
+#: ../src/bookmarkdialog.c:321
+msgid "Host"
+msgstr "Isäntä"
+
+#: ../src/bookmarkdialog.c:329
+msgid "Port"
+msgstr "Portti"
+
+#: ../src/bookmarkdialog.c:337
+msgid "Auto-Connect"
+msgstr "Yhdistä automaattisesti"
+
+#: ../src/bookmarkdialog.c:345
+msgid "Username"
+msgstr "Käyttäjänimi"
+
+#: ../src/bookmarkdialog.c:353
+msgid "Other information"
+msgstr "Muut tiedot"
+
+#: ../src/bookmarkdialog.c:410
+msgid "Edit Bookmarks"
+msgstr "Muokkaa kirjanmerkkejä"
+
+#: ../src/bookmarkeditdialog.c:215
+msgid "You must enter a name for the bookmark."
+msgstr "Anna kirjanmerkille nimi."
+
+#: ../src/bookmarkeditdialog.c:234
+msgid "The entered bookmark name is already in use. Please choose another one."
+msgstr "Antamasi kirjanmerkin nimi on jo käytössä. Valitse jokin toinen nimi."
+
+#: ../src/bookmarkeditdialog.c:247
+msgid "You must enter a server address or name."
+msgstr "Anna palvelimen osoite tai nimi."
+
+#: ../src/bookmarkeditdialog.c:258
+msgid "You must enter a share name."
+msgstr "Anna jaon nimi."
+
+#: ../src/bookmarkeditdialog.c:269
+msgid "You must enter a valid URI for the connection."
+msgstr "Anna yhteydelle kelvollinen URI."
+
+#: ../src/bookmarkeditdialog.c:553
+msgid "_Device:"
+msgstr "_Laite:"
+
+#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1010
+msgid "_Server:"
+msgstr "_Palvelin:"
+
+#: ../src/bookmarkeditdialog.c:843
+msgid "Create Bookmark"
+msgstr "Luo kirjanmerkki"
+
+#: ../src/bookmarkeditdialog.c:850
+msgid "Edit Bookmark"
+msgstr "Muokkaa kirjanmerkkiä"
+
+#: ../src/bookmarkeditdialog.c:858
+msgid "Connect to Server"
+msgstr "Yhdistä palvelimeen"
+
+#: ../src/bookmarkeditdialog.c:962
+msgid "_Bookmark name:"
+msgstr "_Kirjanmerkin nimi:"
+
+#: ../src/bookmarkeditdialog.c:970
+msgid "Au_to-Connect"
+msgstr "Yhdistä _automaattisesti"
+
+#: ../src/bookmarkeditdialog.c:978
+msgid "Service t_ype:"
+msgstr "Pal_velutyyppi:"
+
+#: ../src/bookmarkeditdialog.c:1003
+msgid "Set the port to 0 to use the default port"
+msgstr "Aseta portiksi 0 käyttääksesi oletusporttia"
+
+#: ../src/bookmarkeditdialog.c:1009
+msgid "_Location (URI):"
+msgstr "Sijai_nti (URI):"
+
+#: ../src/bookmarkeditdialog.c:1011
+msgid "_Folder:"
+msgstr "Kansi_o:"
+
+#: ../src/bookmarkeditdialog.c:1012
+msgid "_Path:"
+msgstr "_Polku:"
+
+#: ../src/bookmarkeditdialog.c:1013
+msgid "_User Name:"
+msgstr "Käyttäjä_nimi:"
+
+#: ../src/bookmarkeditdialog.c:1014
+msgid "Optional information:"
+msgstr "Lisätiedot:"
+
+#: ../src/bookmarkeditdialog.c:1015
+msgid "_Port:"
+msgstr "Po_rtti:"
+
+#: ../src/bookmarkeditdialog.c:1016
+msgid "_Domain:"
+msgstr "_Toimialue:"
+
+#: ../src/bookmarkeditdialog.c:1017
+msgid "_Share:"
+msgstr "_Jako:"
+
+#: ../src/preferencesdialog.c:153
+msgid "Icons"
+msgstr "Kuvakkeet"
+
+#: ../src/preferencesdialog.c:154
+msgid "Text"
+msgstr "Teksti"
+
+#: ../src/preferencesdialog.c:155
+msgid "Both"
+msgstr "Molemmat"
+
+#: ../src/preferencesdialog.c:156
+msgid "Both horizontal"
+msgstr "Molemmat vaakasuunnassa"
+
+#: ../src/preferencesdialog.c:175
+msgid "Horizontal"
+msgstr "Vaaka"
+
+#: ../src/preferencesdialog.c:176
+msgid "Vertical"
+msgstr "Pysty"
+
+#: ../src/preferencesdialog.c:195
+msgid "Symbols"
+msgstr "Symbolit"
+
+#: ../src/preferencesdialog.c:196
+msgid "Detailed List"
+msgstr "Tiedot"
+
+#: ../src/preferencesdialog.c:340
+msgid "General"
+msgstr "Yleiset"
+
+#: ../src/preferencesdialog.c:345
+msgid "_File Manager"
+msgstr "Tie_dostonhallinta"
+
+#: ../src/preferencesdialog.c:353
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr ""
+"Anna liitospisteiden avaamiseen tai näyttämiseen käytettävän sovelluksen nimi"
+
+#: ../src/preferencesdialog.c:362
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "_Kirjanmerkkien automaattiyhdistämisen väli"
+
+#: ../src/preferencesdialog.c:368
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"Ajanjakso sekunteina, jonka välein yritetään yhdistää automaattisesti "
+"kirjanmerkkeihin. Nolla estää tarkistuksen."
+
+#: ../src/preferencesdialog.c:374
+msgid ""
+"The HAL based volume manager implementation requires the tool 'gnome-mount' "
+"to mount local resources like disks. The Unix based volume manager "
+"implementation can mount such resources directly and also lists other local "
+"devices.\n"
+"If you are unsure, use the HAL based monitor."
+msgstr ""
+"HAL-pohjainen taltioidenhallinta tarvitsee \"gnome-mount\" -työkalun "
+"yhdistääkseen paikallisiin resursseihin kuten levyihin. Unix-pohjainen "
+"hallinta osaa yhdistää näihin resursseihin suoraan ja listaa myös muut "
+"paikalliset laitteet.\n"
+"Jos olet epävarma, käytä HAL-pohjaista ratkaisua."
+
+#: ../src/preferencesdialog.c:380
+msgid "Use _HAL based volume manager"
+msgstr "Käytä _HAL-pohjaista taltioidenhallintaa"
+
+#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
+msgid "<i>Changing this option requires a restart of Gigolo.</i>"
+msgstr "<i>Gigolo täytyy käynnistä uudelleen, jotta asetus tulee voimaan.</i>"
+
+#: ../src/preferencesdialog.c:388
+msgid "Use _Unix based volume manager"
+msgstr "Käytä _Unix-pohjaista taltioidenhallintaa"
+
+#: ../src/preferencesdialog.c:404
+msgid "Interface"
+msgstr "Käyttöliittymä"
+
+#: ../src/preferencesdialog.c:406
+msgid "_Save window position and geometry"
+msgstr "_Muista ikkunan sijainti ja mittasuhteet"
+
+#: ../src/preferencesdialog.c:407
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr ""
+"Tallentaa ikkunan sijainnin sekä mittasuhteet ja lataa ne käynnistettäessä"
+
+#: ../src/preferencesdialog.c:410
+msgid "Show status _icon in the Notification Area"
+msgstr "Näytä tilak_uvake huomautusalueella"
+
+#: ../src/preferencesdialog.c:413
+msgid "Start _minimized in the Notification Area"
+msgstr "Käynnistä pienennettynä _huomautusalueelle"
+
+#: ../src/preferencesdialog.c:418
+msgid "Show side panel"
+msgstr "Näytä sivupaneeli"
+
+#: ../src/preferencesdialog.c:419
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"Näytä kirjanmerkit sekä paikallisverkon Samba/Windows-jaot sivupaneelissa"
+
+#: ../src/preferencesdialog.c:422
+msgid "Show auto-connect error messages"
+msgstr "Näytä automaattiyhdistämisen virheet"
+
+#: ../src/preferencesdialog.c:423
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+"Näytä virheilmoitusdialogi, kun kirjanmerkin automaattiyhdistäminen "
+"epäonnistuu"
+
+#: ../src/preferencesdialog.c:429
+msgid "_Connection List Mode"
+msgstr "_Yhteyslistan tila"
+
+#: ../src/preferencesdialog.c:442
+msgid "Toolbar"
+msgstr "Työkalupalkki"
+
+#: ../src/preferencesdialog.c:444
+msgid "Show _toolbar"
+msgstr "Näytä työk_alupalkki"
+
+#: ../src/preferencesdialog.c:450
+msgid "St_yle"
+msgstr "_Tyyli"
+
+#: ../src/preferencesdialog.c:461
+msgid "_Orientation"
+msgstr "_Asento"
+
+#: ../src/preferencesdialog.c:522
+msgid "Preferences"
+msgstr "Asetukset"
+
+#: ../src/backendgvfs.c:241
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s"
+msgstr ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Yhdistetty: Ja\n"
+"Palvelutyyppi: %s"
+
+#: ../src/backendgvfs.c:255
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Unix-laite: %s</b>"
+
+#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
+msgid "unknown"
+msgstr "tuntematon"
+
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "Yhteys kohteeseen \"%s\" epäonnistui."
+
+#: ../src/backendgvfs.c:481
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "Yhteyden katkaisu kohteeseen \"%s\" epäonnistui."
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "Yhdistetään"
+
+#: ../src/browsenetworkpanel.c:188
+msgid "No Workgroups found"
+msgstr "Työryhmiä ei löytynyt"
+
+#: ../src/browsenetworkpanel.c:199
+msgid "No Shares found"
+msgstr "Jakoja ei löytynyt"
+
+#: ../src/browsenetworkpanel.c:204
+msgid "No Hosts found"
+msgstr "Isäntiä ei löytynyt"
+
+#: ../src/browsenetworkpanel.c:490
+msgid "Connect to the selected share"
+msgstr "Yhdistä valittuun jakoon"
+
+#: ../src/browsenetworkpanel.c:498
+msgid "Create a bookmark from the selected share"
+msgstr "Luo kirjanmerkki valittuun jakoon"
+
+#: ../src/browsenetworkpanel.c:507
+msgid "Refresh the network list"
+msgstr "Päivitä verkkolista"
+
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
+msgid "Close panel"
+msgstr "Sulje paneeli"
+
+#: ../src/bookmarkpanel.c:91
+msgid "No bookmarks"
+msgstr "Ei kirjanmerkkejä"
+
+#: ../src/bookmarkpanel.c:252
+msgid "Connect to the selected bookmark"
+msgstr "Yhdistä merkittyyn kirjanmerkkiin"
