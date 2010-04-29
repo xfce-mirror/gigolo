@@ -85,12 +85,6 @@ static GtkWidget *xfce_header_new(const gchar *icon, const gchar *title)
 }
 
 
-static void vm_imple_toggle_cb(GtkToggleButton *button, GigoloSettings *settings)
-{
-	gigolo_settings_set_vm_impl(settings, g_object_get_data(G_OBJECT(button), "impl"));
-}
-
-
 static void check_button_toggle_cb(GtkToggleButton *button, GigoloSettings *settings)
 {
     gboolean toggled = gtk_toggle_button_get_active(button);
@@ -311,10 +305,9 @@ static GtkWidget *add_spinbutton(GigoloSettings *settings, const gchar *property
 static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settings)
 {
 	GtkWidget *frame_vbox, *notebook_vbox, *vbox, *hbox, *notebook;
-	GtkWidget *radio1, *radio2, *checkbox, *combo, *entry, *combo_toolbar_style, *tmp_box;
+	GtkWidget *checkbox, *combo, *entry, *combo_toolbar_style, *tmp_box;
 	GtkWidget *combo_toolbar_orient, *spinbutton;
-	GtkWidget *label1, *label2, *label3, *label4, *label_volman, *image;
-	GSList *rlist;
+	GtkWidget *label1, *label2, *label3, *label4, *image;
 	GtkSizeGroup *sg;
 
     vbox = gigolo_dialog_get_content_area(GTK_DIALOG(dialog));
@@ -370,31 +363,6 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(hbox), spinbutton, FALSE, FALSE, 10);
 
 	gtk_box_pack_start(GTK_BOX(frame_vbox), gtk_label_new(""), FALSE, FALSE, 0);
-
-	label_volman = gtk_label_new(_("The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\nIf you are unsure, use the HAL based monitor."));
-	gtk_label_set_line_wrap(GTK_LABEL(label_volman), TRUE);
-	gtk_label_set_line_wrap_mode(GTK_LABEL(label_volman), PANGO_WRAP_WORD);
-	gtk_misc_set_alignment(GTK_MISC(label_volman), 0.0f, 0.5f);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), label_volman, FALSE, FALSE, 0);
-
-	radio1 = gtk_radio_button_new_with_mnemonic(NULL, _("Use _HAL based volume manager"));
-	gtk_widget_set_tooltip_markup(radio1, _("<i>Changing this option requires a restart of Gigolo.</i>"));
-	rlist = gtk_radio_button_get_group(GTK_RADIO_BUTTON(radio1));
-	if (strcmp(gigolo_settings_get_vm_impl(settings), "hal") == 0)
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio1), TRUE);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), radio1, FALSE, FALSE, 0);
-	g_object_set_data(G_OBJECT(radio1), "impl", (gpointer) "hal");
-
-	radio2 = gtk_radio_button_new_with_mnemonic(rlist, _("Use _Unix based volume manager"));
-	gtk_widget_set_tooltip_markup(radio2, _("<i>Changing this option requires a restart of Gigolo.</i>"));
-	rlist = gtk_radio_button_get_group(GTK_RADIO_BUTTON(radio2));
-	if (strcmp(gigolo_settings_get_vm_impl(settings), "unix") == 0)
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(radio2), TRUE);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), radio2, FALSE, FALSE, 0);
-	g_object_set_data(G_OBJECT(radio2), "impl", (gpointer) "unix");
-
-	g_signal_connect(radio1, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);
-	g_signal_connect(radio2, "toggled", G_CALLBACK(vm_imple_toggle_cb), settings);
 
 #define PAGE_INTERFACE
 	notebook_vbox = gtk_vbox_new(FALSE, 2);

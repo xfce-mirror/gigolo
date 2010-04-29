@@ -56,7 +56,6 @@ struct _GigoloSettingsPrivate
 
 	gchar		*file_manager;
 	gint		 autoconnect_interval;
-	gchar		*vm_impl; /* GVolumeMonitor implementation to use */
 	gint		*geometry; /* window size and position, field 4 is a flag for maximized state */
 
 	GigoloBookmarkList *bookmarks; /* array of known bookmarks */
@@ -71,7 +70,6 @@ static void gigolo_settings_finalize			(GObject* object);
 
 /* default values */
 #define DEFAULT_AUTOCONNECT_INTERVAL	60
-#define DEFAULT_VM_IMPL					"hal"
 
 enum
 {
@@ -411,8 +409,6 @@ static void write_settings_config(GigoloSettings *settings)
 
 	k = g_key_file_new();
 
-	if (priv->vm_impl != NULL)
-		g_key_file_set_string(k, SECTION_GENERAL, "vm_impl", priv->vm_impl);
 	if (priv->file_manager != NULL)
 		g_key_file_set_string(k, SECTION_GENERAL, "file_manager", priv->file_manager);
 	g_key_file_set_integer(k, SECTION_GENERAL, "autoconnect_interval", priv->autoconnect_interval);
@@ -493,7 +489,6 @@ static void gigolo_settings_finalize(GObject* object)
 	gigolo_settings_write(GIGOLO_SETTINGS(object),
 		GIGOLO_SETTINGS_PREFERENCES | GIGOLO_SETTINGS_BOOKMARKS);
 
-	g_free(priv->vm_impl);
 	g_free(priv->geometry);
 
 	g_ptr_array_foreach(priv->bookmarks, (GFunc) g_object_unref, NULL);
@@ -512,7 +507,6 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 	GKeyFile *k;
 	GError *error = NULL;
 	gsize i;
-	const gchar *default_vm_impl;
 
 	k = g_key_file_new();
 	if (! g_key_file_load_from_file(k, priv->config_filename, G_KEY_FILE_NONE, &error))
@@ -522,11 +516,6 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 		error = NULL;
 	}
 
-	default_vm_impl = g_getenv("GIO_USE_VOLUME_MONITOR");
-	if (! NZV(default_vm_impl))
-		default_vm_impl = DEFAULT_VM_IMPL;
-
-	priv->vm_impl = get_setting_string(k, SECTION_GENERAL, "vm_impl", default_vm_impl);
 	priv->file_manager = get_setting_string(k, SECTION_GENERAL, "file_manager", "gvfs-open");
 	priv->autoconnect_interval = get_setting_int(k, SECTION_GENERAL, "autoconnect_interval",
 		DEFAULT_AUTOCONNECT_INTERVAL);
@@ -678,30 +667,6 @@ static void gigolo_settings_init(GigoloSettings *self)
 GigoloSettings *gigolo_settings_new(void)
 {
 	return (GigoloSettings*) g_object_new(GIGOLO_SETTINGS_TYPE, NULL);
-}
-
-
-const gchar *gigolo_settings_get_vm_impl(GigoloSettings *settings)
-{
-	g_return_val_if_fail(settings != NULL, NULL);
-
-	return GIGOLO_SETTINGS_GET_PRIVATE(settings)->vm_impl;
-}
-
-
-void gigolo_settings_set_vm_impl(GigoloSettings *settings, const gchar *impl)
-{
-	GigoloSettingsPrivate *priv;
-
-	g_return_if_fail(settings != NULL);
-
-	priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
-
-	if (impl == NULL)
-		impl = "hal";
-
-	g_free(priv->vm_impl);
-	priv->vm_impl = g_strdup(impl);
 }
 
 

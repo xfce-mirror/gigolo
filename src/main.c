@@ -68,7 +68,6 @@ gint main(gint argc, gchar** argv)
 {
 	GigoloSettings *settings;
 	GigoloSingleInstance *gis = NULL;
-	const gchar *vm_impl;
 	gchar *accel_filename;
 	GOptionContext *context;
 	GtkWidget *window;
@@ -123,11 +122,6 @@ gint main(gint argc, gchar** argv)
 
 	accel_filename = g_build_filename(g_get_user_config_dir(), PACKAGE, "accels", NULL);
 	gtk_accel_map_load(accel_filename);
-
-	/* GVfs currently depends on gnome-mount for HAL-based GVolumeMonitor implementation,
-	 * when gnome-mount is not installed, we can use "unix" as GVolumeMonitor implementation. */
-	if ((vm_impl = gigolo_settings_get_vm_impl(settings)) != NULL)
-		g_setenv("GIO_USE_VOLUME_MONITOR", vm_impl, 0);
 
 	window = gigolo_window_new(settings);
 
