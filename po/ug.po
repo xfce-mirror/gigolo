@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../src/main.c:49
 msgid "Show version information"
-msgstr ""
+msgstr "نەشر ئۇچۇرىنى كۆرسەت"
 
 #: ../src/main.c:80
 msgid "- a simple frontend to easily connect to remote filesystems"
@@ -38,35 +38,35 @@ msgstr ""
 
 #: ../src/common.c:77
 msgid "Unix Device"
-msgstr ""
+msgstr "Unix ئۈسكۈنىسى"
 
 #: ../src/common.c:79
 msgid "Windows Share"
-msgstr ""
+msgstr "Windows ھەمبەھىر"
 
 #: ../src/common.c:81
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: ../src/common.c:83
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #: ../src/common.c:85
 msgid "SSH"
-msgstr ""
+msgstr "SSH"
 
 #: ../src/common.c:87
 msgid "Obex"
-msgstr ""
+msgstr "Obex"
 
 #: ../src/common.c:89
 msgid "WebDAV"
-msgstr ""
+msgstr "WebDAV"
 
 #: ../src/common.c:91
 msgid "WebDAV (secure)"
-msgstr ""
+msgstr "WebDAV(بىخەتەر)"
 
 #: ../src/common.c:93
 #: ../src/window.c:1363
@@ -75,11 +75,11 @@ msgstr "تور"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr ""
+msgstr "ئارخىپ"
 
 #: ../src/common.c:97
 msgid "Photos"
-msgstr ""
+msgstr "سۈرەتلەر"
 
 #: ../src/common.c:99
 msgid "Custom Location"
@@ -88,16 +88,16 @@ msgstr ""
 #: ../src/window.c:253
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr ""
+msgstr "\"%s\" نىنغا باغلىنىۋاتىدۇ"
 
 #: ../src/window.c:421
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
+msgstr "يىراقتىكى ھۆججەت سىستېمىسىغا ئوڭاي باغلىنىدىغان frontend پروگراممىسى"
 
 #: ../src/window.c:422
 msgid "Copyright 2008-2010 Enrico Troger"
-msgstr ""
+msgstr "Copyright 2008-2010 Enrico Troger"
 
 #: ../src/window.c:425
 msgid "translator-credits"
@@ -105,12 +105,12 @@ msgstr "Gheyret T.Kenji <gheyret@gmail.com> 2010"
 
 #: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
+msgstr "Gigolo دا GVfs تەمىنلىگەن تۆۋەندىكى protocol لارنى ئىشلەتكىلى بولىدۇ"
 
 #: ../src/window.c:554
 #, c-format
 msgid "The command '%s' failed"
-msgstr ""
+msgstr "بۇيرۇق %s' مەغلۇپ بولدى"
 
 #: ../src/window.c:555
 #: ../src/window.c:682
@@ -146,51 +146,51 @@ msgstr "ياردەم(_H)"
 #: ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
-msgstr ""
+msgstr "خەتكۈش قۇر(_B)"
 
 #: ../src/window.c:1159
 msgid "_Edit Bookmarks"
-msgstr ""
+msgstr "خەتكۈش تەھرىرلە(_E)"
 
 #: ../src/window.c:1160
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
+msgstr "خەتكۈش باشقۇرغۇنى ئېچىپ، خەتكۈشلەرنى تەھرىرلەيدۇ، قوشىدۇ ياكى ئۆچۈرىدۇ"
 
 #: ../src/window.c:1164
 msgid "Disconnect the selected resource"
-msgstr ""
+msgstr "تاللانغان resource تىن ئۈزۈلىدۇ"
 
 #: ../src/window.c:1166
 msgid "Open the selected resource with a file manager"
-msgstr ""
+msgstr "ھۆججەت باشقۇرغۇدا تاللانغان resource نى ئاچىدۇ"
 
 #: ../src/window.c:1167
 msgid "Copy _URI"
-msgstr ""
+msgstr "_URI كۆچۈر(_U)"
 
 #: ../src/window.c:1168
 msgid "Quit Gigolo"
-msgstr ""
+msgstr "Gigolo نى ئاخىرلاشتۇرىدۇ"
 
 #: ../src/window.c:1169
 msgid "Online Help"
-msgstr ""
+msgstr "توردىكى ياردەم"
 
 #: ../src/window.c:1170
 msgid "Supported Protocols"
-msgstr ""
+msgstr "قوللايدىغان Protocol لار"
 
 #: ../src/window.c:1176
 msgid "Side _Panel"
-msgstr ""
+msgstr "يان Panel(_P)"
 
 #: ../src/window.c:1178
 msgid "_Toolbar"
-msgstr ""
+msgstr "قورال تاياقچىسى(_T)"
 
 #: ../src/window.c:1180
 msgid "Status _Icon"
-msgstr ""
+msgstr "ھالەت سىنبەلگىسى(_I)"
 
 #: ../src/window.c:1186
 msgid "View as _Symbols"
@@ -202,20 +202,20 @@ msgstr "Detailed List دا كۆرسەت(_D)"
 
 #: ../src/window.c:1193
 msgid "_Bookmarks"
-msgstr ""
+msgstr "خەتكۈش(_B)"
 
 #: ../src/window.c:1193
 msgid "Choose a bookmark to connect to"
-msgstr ""
+msgstr "باغلىنىدىغان خەتكۈش تاللايدۇ"
 
 #: ../src/window.c:1267
 msgid "Connected"
-msgstr ""
+msgstr "باغلاندى"
 
 #: ../src/window.c:1276
 #: ../src/bookmarkdialog.c:313
 msgid "Service Type"
-msgstr ""
+msgstr "مۇلازىمەت تىپى"
 
 #: ../src/window.c:1284
 #: ../src/bookmarkdialog.c:305
@@ -224,26 +224,26 @@ msgstr "ئاتى"
 
 #: ../src/window.c:1355
 msgid "Bookmarks"
-msgstr ""
+msgstr "خەتكۈش"
 
 #: ../src/window.c:1405
 #: ../src/window.c:1480
 #: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
-msgstr ""
+msgstr "Gigolo"
 
 #: ../src/settings.c:642
 msgid "Move it now?"
-msgstr ""
+msgstr "ھازىر يۆتكىسۇنمۇ؟"
 
 #: ../src/settings.c:643
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
+msgstr "قوزغىلىشتىن بۇرۇن Gigolo كونا تەڭشەك مۇندەرىجىسىنى يۆتكىۋېتىشى كېرەك."
 
 #: ../src/settings.c:651
 #, c-format
 msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr ""
+msgstr "كونا تەڭشەك مۇندەرىجىسى \"%s\" نى \"%s\" (%s) گە يۆتكىگىلى بولمىدى. ئۇنى قولدا يۆتكەڭ."
 
 #: ../src/settings.c:654
 msgid "Warning"
@@ -251,7 +251,7 @@ msgstr "دىققەت"
 
 #: ../src/menubuttonaction.c:157
 msgid "Connect"
-msgstr ""
+msgstr "باغلا"
 
 #: ../src/bookmarkdialog.c:94
 #, c-format
@@ -261,94 +261,94 @@ msgstr ""
 #: ../src/bookmarkdialog.c:99
 #, c-format
 msgid "Share: %s"
-msgstr ""
+msgstr "ھەمبەھىر: %s"
 
 #: ../src/bookmarkdialog.c:105
 #, c-format
 msgid "Folder: %s"
-msgstr ""
+msgstr "مۇندەرىجە: %s"
 
 #: ../src/bookmarkdialog.c:111
 #, c-format
 msgid "Path: %s"
-msgstr ""
+msgstr "يول: %s"
 
 #: ../src/bookmarkdialog.c:321
 msgid "Host"
-msgstr ""
+msgstr "Host"
 
 #: ../src/bookmarkdialog.c:329
 msgid "Port"
-msgstr ""
+msgstr "ئېغىز"
 
 #: ../src/bookmarkdialog.c:337
 msgid "Auto-Connect"
-msgstr ""
+msgstr "ئاپتوماتىك باغلىنىش"
 
 #: ../src/bookmarkdialog.c:345
 msgid "Username"
-msgstr ""
+msgstr "ئىشلەتكۈچى ئاتى"
 
 #: ../src/bookmarkdialog.c:353
 msgid "Other information"
-msgstr ""
+msgstr "باشقا ئۇچۇرلار"
 
 #: ../src/bookmarkdialog.c:410
 msgid "Edit Bookmarks"
-msgstr ""
+msgstr "خەتكۈش تەھرىرلە"
 
 #: ../src/bookmarkeditdialog.c:215
 msgid "You must enter a name for the bookmark."
-msgstr ""
+msgstr "خەتكۈش ئاتىنى كىرگۈزۈشىڭىز كېرەك."
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
+msgstr "كىرگۈزگەن ئات مەۋجۇت. باشقا ئات كىرگۈزۈڭ."
 
 #: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a server address or name."
-msgstr ""
+msgstr "مۇلازىمېتىر ئادرېسى ياكى ئاتىنى كىرگۈزۈشىڭىز كېرەك."
 
 #: ../src/bookmarkeditdialog.c:258
 msgid "You must enter a share name."
-msgstr ""
+msgstr "ھەمبەھىر ئاتىنى كىرگۈزۈشىڭىز كېرەك."
 
 #: ../src/bookmarkeditdialog.c:269
 msgid "You must enter a valid URI for the connection."
-msgstr ""
+msgstr "باغلىنىدىغان ئىناۋەتلىك URI نى كىرگۈزۈشىڭىز كېرەك."
 
 #: ../src/bookmarkeditdialog.c:553
 msgid "_Device:"
-msgstr ""
+msgstr "ئۈسكىنە(_D):"
 
 #: ../src/bookmarkeditdialog.c:555
 #: ../src/bookmarkeditdialog.c:1010
 msgid "_Server:"
-msgstr ""
+msgstr "مۇلازىمېتىر(_S):"
 
 #: ../src/bookmarkeditdialog.c:843
 msgid "Create Bookmark"
-msgstr ""
+msgstr "خەتكۈش قۇرىدۇ"
 
 #: ../src/bookmarkeditdialog.c:850
 msgid "Edit Bookmark"
-msgstr ""
+msgstr "خەتكۈش تەھرىرلەيدۇ"
 
 #: ../src/bookmarkeditdialog.c:858
 msgid "Connect to Server"
-msgstr ""
+msgstr "مۇلازىمېتىرغا باغلىنىدۇ"
 
 #: ../src/bookmarkeditdialog.c:962
 msgid "_Bookmark name:"
-msgstr ""
+msgstr "خەتكۈش ئاتى(_B):"
 
 #: ../src/bookmarkeditdialog.c:970
 msgid "Au_to-Connect"
-msgstr ""
+msgstr "ئاپتوماتىك باغلان(_T)"
 
 #: ../src/bookmarkeditdialog.c:978
 msgid "Service t_ype:"
-msgstr ""
+msgstr "مۇلازىمەت تىپى(_Y):"
 
 #: ../src/bookmarkeditdialog.c:1003
 msgid "Set the port to 0 to use the default port"
@@ -356,27 +356,27 @@ msgstr ""
 
 #: ../src/bookmarkeditdialog.c:1009
 msgid "_Location (URI):"
-msgstr ""
+msgstr "ئورۇن(URI)(_L)"
 
 #: ../src/bookmarkeditdialog.c:1011
 msgid "_Folder:"
-msgstr ""
+msgstr "مۇندەرىجە(_F)"
 
 #: ../src/bookmarkeditdialog.c:1012
 msgid "_Path:"
-msgstr ""
+msgstr "يول(_P)"
 
 #: ../src/bookmarkeditdialog.c:1013
 msgid "_User Name:"
-msgstr ""
+msgstr "ئىشلەتكۈچى ئاتى(_U):"
 
 #: ../src/bookmarkeditdialog.c:1014
 msgid "Optional information:"
-msgstr ""
+msgstr "تاللانما ئۇچۇرلار:"
 
 #: ../src/bookmarkeditdialog.c:1015
 msgid "_Port:"
-msgstr ""
+msgstr "ئېغىز(_P):"
 
 #: ../src/bookmarkeditdialog.c:1016
 msgid "_Domain:"
@@ -384,7 +384,7 @@ msgstr ""
 
 #: ../src/bookmarkeditdialog.c:1017
 msgid "_Share:"
-msgstr ""
+msgstr "ھەمبەھىر(_S):"
 
 #: ../src/preferencesdialog.c:153
 msgid "Icons"
@@ -400,7 +400,7 @@ msgstr "ئىككىلىسى"
 
 #: ../src/preferencesdialog.c:156
 msgid "Both horizontal"
-msgstr ""
+msgstr "ئىككىلىسى گورىزونتال"
 
 #: ../src/preferencesdialog.c:175
 msgid "Horizontal"
@@ -412,7 +412,7 @@ msgstr "ۋېرتىكال"
 
 #: ../src/preferencesdialog.c:195
 msgid "Symbols"
-msgstr ""
+msgstr "بەلگىلەر"
 
 #: ../src/preferencesdialog.c:196
 msgid "Detailed List"
@@ -424,7 +424,7 @@ msgstr "ئادەتتىكى"
 
 #: ../src/preferencesdialog.c:345
 msgid "_File Manager"
-msgstr ""
+msgstr "ھۆججەت باشقۇرغۇ(_F)"
 
 #: ../src/preferencesdialog.c:353
 msgid "Enter the name of a program to use to open or view mount points"
@@ -432,7 +432,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:362
 msgid "_Bookmark Auto-Connect Interval"
-msgstr ""
+msgstr "ئاپتوماتىك ئۇلىنىش ئارىلىقىنى خەتكۈشلە(_B)"
 
 #: ../src/preferencesdialog.c:368
 msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
@@ -446,16 +446,16 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:380
 msgid "Use _HAL based volume manager"
-msgstr ""
+msgstr "HAL ئاساسىدىكى volume باشقۇرغۇنى ئىشلەت(_H)"
 
 #: ../src/preferencesdialog.c:381
 #: ../src/preferencesdialog.c:389
 msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr ""
+msgstr "<i>بۇ تاللانما ئۆزگەرتىلسە Gigolo نى قايتا قوزغىتىشقا توغرا كېلىدۇ.</i>"
 
 #: ../src/preferencesdialog.c:388
 msgid "Use _Unix based volume manager"
-msgstr ""
+msgstr "_Unix ئاساسىدىكى volume باشقۇرغۇنى ئىشلەت(_U)"
 
 #: ../src/preferencesdialog.c:404
 msgid "Interface"
@@ -463,15 +463,15 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:406
 msgid "_Save window position and geometry"
-msgstr ""
+msgstr "كۆزنەكنىڭ ئورنى ۋە شەكلىنى ساقلا(_S)"
 
 #: ../src/preferencesdialog.c:407
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
+msgstr "كۆزنەكنىڭ ئورنى ۋە شەكلىنى ساقلاپ قوزغالغاندا ئەسلىگە كەلتۈرىدۇ"
 
 #: ../src/preferencesdialog.c:410
 msgid "Show status _icon in the Notification Area"
-msgstr ""
+msgstr "ئۇقتۇرۇش رايونىدا ھالەت سىنبەلگىسىنى كۆرسەت(_I)"
 
 #: ../src/preferencesdialog.c:413
 msgid "Start _minimized in the Notification Area"
@@ -479,7 +479,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:418
 msgid "Show side panel"
-msgstr ""
+msgstr "يان panel نى كۆرسىتىدۇ"
 
 #: ../src/preferencesdialog.c:419
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
@@ -487,7 +487,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
-msgstr ""
+msgstr "ئاپتوماتىك باغلىنىشتا كۆرۈلگەن خاتالىقلارنى كۆرسىتىدۇ"
 
 #: ../src/preferencesdialog.c:423
 msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
@@ -499,11 +499,11 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:442
 msgid "Toolbar"
-msgstr ""
+msgstr "قورال تاياقچىسى"
 
 #: ../src/preferencesdialog.c:444
 msgid "Show _toolbar"
-msgstr ""
+msgstr "قورال تاياقچىسىنى كۆرسەت(_T)"
 
 #: ../src/preferencesdialog.c:450
 msgid "St_yle"
@@ -511,7 +511,7 @@ msgstr "ئۇسلۇب(_Y)"
 
 #: ../src/preferencesdialog.c:461
 msgid "_Orientation"
-msgstr ""
+msgstr "يۆنىلىشى(_O)"
 
 #: ../src/preferencesdialog.c:522
 msgid "Preferences"
@@ -526,69 +526,71 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s"
 msgstr ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"باغلاندى: ھەئە\n"
+"مۇلازىمەت تىپى: %s"
 
 #: ../src/backendgvfs.c:255
 #, c-format
 msgid "<b>Unix device: %s</b>"
-msgstr ""
+msgstr "<b>Unix ئۈسكۈنىسى: %s</b>"
 
 #: ../src/backendgvfs.c:441
 #: ../src/backendgvfs.c:477
 msgid "unknown"
-msgstr ""
+msgstr "نامەلۇم"
 
 #: ../src/backendgvfs.c:447
 #: ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr ""
+msgstr "\"%s\" غا باغلىنىش مەغلۇپ بولدى."
 
 #: ../src/backendgvfs.c:481
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr ""
+msgstr "\"%s\" دىن ئۈزۈلۈش مەغلۇپ بولدى."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
-msgstr ""
+msgstr "ئۇلىنىۋاتىدۇ"
 
 #: ../src/browsenetworkpanel.c:188
 msgid "No Workgroups found"
-msgstr ""
+msgstr "Workgroups يوق ئىكەن"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
-msgstr ""
+msgstr "ھەمبەھىرلەر يوق ئىكەن"
 
 #: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
-msgstr ""
+msgstr "Host لار يوق ئىكەن"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
-msgstr ""
+msgstr "تاللانغان ھەمبەھىرگە باغلىنىدۇ"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr ""
+msgstr "تاللانغان ھەمبەھىردىن خەتكۈش قۇرىدۇ"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
-msgstr ""
+msgstr "تور تىزىملىكىنى يېڭىلايدۇ"
 
 #: ../src/browsenetworkpanel.c:518
 #: ../src/bookmarkpanel.c:263
 msgid "Close panel"
-msgstr ""
+msgstr "panel نى تاقا"
 
 #: ../src/bookmarkpanel.c:91
 msgid "No bookmarks"
-msgstr ""
+msgstr "خەتكۈش يوق"
 
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
-msgstr ""
-
-#~ msgid "Show 'Browse Network' side panel"
-#~ msgstr "'ネットワークの参照' サイドパネルを表示する"
+msgstr "تاللانغان خەتكۈشكە باغلىنىدۇ"
 
