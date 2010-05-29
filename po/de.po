@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-02 18:03+0100\n"
+"POT-Creation-Date: 2010-05-29 16:04+0000\n"
 "PO-Revision-Date: 2009-04-13 14:30+0200\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n-de@xfce.org>\n"
@@ -34,7 +34,7 @@ msgstr "Ausführliche Ausgabe"
 msgid "Show version information"
 msgstr "Zeige Versionsinformationen"
 
-#: ../src/main.c:80
+#: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- eine einfache Oberfläche zum Einbinden entfernter Dateisysteme"
 
@@ -81,7 +81,7 @@ msgstr "Archiv"
 #: ../src/common.c:97
 #, fuzzy
 msgid "Photos"
-msgstr "Port"
+msgstr "Fotos"
 
 #: ../src/common.c:99
 msgid "Custom Location"
@@ -226,20 +226,20 @@ msgstr "_Lesezeichen"
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:642
+#: ../src/settings.c:631
 msgid "Move it now?"
 msgstr "Soll es jetzt verschoben werden?"
 
-#: ../src/settings.c:643
+#: ../src/settings.c:632
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo muss Ihr aktuelles Konfigurationsverzeichnis an einen neuen Ort verschieben, bevor es gestartet wird."
 
-#: ../src/settings.c:651
+#: ../src/settings.c:640
 #, c-format
 msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
 msgstr "Ihr altes Konfigurationsverzeichnis »%s« konnte nicht nach »%s« verschoben werden. Fehlermeldung: %s. Bitte führen Sie die Aktion manuell aus."
 
-#: ../src/settings.c:654
+#: ../src/settings.c:643
 msgid "Warning"
 msgstr "Warnung"
 
@@ -379,136 +379,116 @@ msgstr "_Domäne:"
 msgid "_Share:"
 msgstr "_Freigabe:"
 
-#: ../src/preferencesdialog.c:153
+#: ../src/preferencesdialog.c:147
 msgid "Icons"
 msgstr "Symbole"
 
-#: ../src/preferencesdialog.c:154
+#: ../src/preferencesdialog.c:148
 msgid "Text"
 msgstr "Text"
 
-#: ../src/preferencesdialog.c:155
+#: ../src/preferencesdialog.c:149
 msgid "Both"
 msgstr "Beides"
 
-#: ../src/preferencesdialog.c:156
+#: ../src/preferencesdialog.c:150
 msgid "Both horizontal"
 msgstr "Beides horizontal"
 
-#: ../src/preferencesdialog.c:175
+#: ../src/preferencesdialog.c:169
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: ../src/preferencesdialog.c:176
+#: ../src/preferencesdialog.c:170
 msgid "Vertical"
 msgstr "Vertikal"
 
-#: ../src/preferencesdialog.c:195
+#: ../src/preferencesdialog.c:189
 msgid "Symbols"
 msgstr "Symbole"
 
-#: ../src/preferencesdialog.c:196
+#: ../src/preferencesdialog.c:190
 msgid "Detailed List"
 msgstr "Details"
 
-#: ../src/preferencesdialog.c:340
+#: ../src/preferencesdialog.c:333
 msgid "General"
 msgstr "Allgemein"
 
-#: ../src/preferencesdialog.c:345
+#: ../src/preferencesdialog.c:338
 msgid "_File Manager"
 msgstr "_Dateimanager"
 
-#: ../src/preferencesdialog.c:353
+#: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr "Geben Sie den Namen eines Programms ein zum Anzeigen oder Öffnen von Einhängepunkten"
 
-#: ../src/preferencesdialog.c:362
+#: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Zeitintervall für autom. Verbinden"
 
-#: ../src/preferencesdialog.c:368
+#: ../src/preferencesdialog.c:361
 msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
 msgstr "Zeitspanne, nach der versucht werden soll, als automatisch gekennzeichnete Lesezeichen zu verbinden"
 
-#: ../src/preferencesdialog.c:374
-msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
-"If you are unsure, use the HAL based monitor."
-msgstr ""
-"Der HAL-basierte Medienmanager benötigt das Programm 'gnome-mount' um lokale Resourcen wie Laufwerke, einzuhängen. Die Unix-basierte Variante kann solche Resourcen direkt einbinden und zeigt auch andere lokale Geräte an.\n"
-"Wenn Sie unsicher sind, benutzen Sie die HAL-basierte Variante."
-
-#: ../src/preferencesdialog.c:380
-msgid "Use _HAL based volume manager"
-msgstr "_HAL-basierten Medienmanager benutzen"
-
-#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
-msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr "<i>Änderungen an dieser Einstellung werden erst nach einem Neustart von Gigolo wirksam .</i>"
-
-#: ../src/preferencesdialog.c:388
-msgid "Use _Unix based volume manager"
-msgstr "_Unix-basierten Medienmanager benutzen"
-
-#: ../src/preferencesdialog.c:404
+#: ../src/preferencesdialog.c:372
 msgid "Interface"
 msgstr "Oberfläche"
 
-#: ../src/preferencesdialog.c:406
+#: ../src/preferencesdialog.c:374
 msgid "_Save window position and geometry"
 msgstr "_Fensterposition und -größe speichern"
 
-#: ../src/preferencesdialog.c:407
+#: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr "Speichert die Fensterposition und Größe und stellt sie beim nächsten Start wieder her."
 
-#: ../src/preferencesdialog.c:410
+#: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
 msgstr "Zeige ein Statussymbol im _Benachrichtigungsfeld"
 
-#: ../src/preferencesdialog.c:413
+#: ../src/preferencesdialog.c:381
 msgid "Start _minimized in the Notification Area"
 msgstr "Im Benachrichtigungsfeld _minimiert starten"
 
-#: ../src/preferencesdialog.c:418
+#: ../src/preferencesdialog.c:386
 #, fuzzy
 msgid "Show side panel"
-msgstr "_Seitenleiste"
+msgstr "_Seitenleiste anzeigen"
 
-#: ../src/preferencesdialog.c:419
+#: ../src/preferencesdialog.c:387
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
 msgstr "Seitenleiste zum Durchsuchen des lokalen Netzwerks nach verfügbaren Samba-Freigaben"
 
-#: ../src/preferencesdialog.c:422
+#: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr "Fehlermeldungen beim autom. Verbinden zeigen"
 
-#: ../src/preferencesdialog.c:423
+#: ../src/preferencesdialog.c:391
 msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr "Fehlermeldungen zeigen, wenn das automatische Verbinden zu Lesezeichen fehlschlägt."
 
-#: ../src/preferencesdialog.c:429
+#: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
 msgstr "Darstellung der _Verbindungsliste:"
 
-#: ../src/preferencesdialog.c:442
+#: ../src/preferencesdialog.c:410
 msgid "Toolbar"
 msgstr "Werkzeugleiste"
 
-#: ../src/preferencesdialog.c:444
+#: ../src/preferencesdialog.c:412
 msgid "Show _toolbar"
 msgstr "_Werkzeugleiste anzeigen"
 
-#: ../src/preferencesdialog.c:450
+#: ../src/preferencesdialog.c:418
 msgid "St_yle"
 msgstr "_Stil"
 
-#: ../src/preferencesdialog.c:461
+#: ../src/preferencesdialog.c:429
 msgid "_Orientation"
 msgstr "_Ausrichtung"
 
-#: ../src/preferencesdialog.c:522
+#: ../src/preferencesdialog.c:490
 msgid "Preferences"
 msgstr "Einstellungen"
 
@@ -585,6 +565,22 @@ msgstr "Keine Lesezeichen"
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
 msgstr "Mit der ausgewählten Freigabe verbinden"
+
+#~ msgid ""
+#~ "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+#~ "If you are unsure, use the HAL based monitor."
+#~ msgstr ""
+#~ "Der HAL-basierte Medienmanager benötigt das Programm 'gnome-mount' um lokale Resourcen wie Laufwerke, einzuhängen. Die Unix-basierte Variante kann solche Resourcen direkt einbinden und zeigt auch andere lokale Geräte an.\n"
+#~ "Wenn Sie unsicher sind, benutzen Sie die HAL-basierte Variante."
+
+#~ msgid "Use _HAL based volume manager"
+#~ msgstr "_HAL-basierten Medienmanager benutzen"
+
+#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
+#~ msgstr "<i>Änderungen an dieser Einstellung werden erst nach einem Neustart von Gigolo wirksam .</i>"
+
+#~ msgid "Use _Unix based volume manager"
+#~ msgstr "_Unix-basierten Medienmanager benutzen"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Seitenleiste »Netzwerk durchsuchen« zeigen"
