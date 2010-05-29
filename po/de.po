@@ -452,7 +452,6 @@ msgid "Start _minimized in the Notification Area"
 msgstr "Im Benachrichtigungsfeld _minimiert starten"
 
 #: ../src/preferencesdialog.c:386
-#, fuzzy
 msgid "Show side panel"
 msgstr "_Seitenleiste anzeigen"
 
