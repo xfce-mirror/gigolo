@@ -453,7 +453,7 @@ msgstr "Im Benachrichtigungsfeld _minimiert starten"
 
 #: ../src/preferencesdialog.c:386
 msgid "Show side panel"
-msgstr "_Seitenleiste anzeigen"
+msgstr "Seitenleiste anzeigen"
 
 #: ../src/preferencesdialog.c:387
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
