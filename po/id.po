@@ -1,14 +1,14 @@
 # Indonesian translations for gigolo package.
-# Copyright (C) 2009 THE gigolo'S COPYRIGHT HOLDER
+# Copyright (C) 2010 THE gigolo'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gigolo package.
-# Andhika Padmawan <andhika.padmawan@gmail.com>, 2009.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-14 19:41+0100\n"
-"PO-Revision-Date: 2009-06-10 22:25+0700\n"
+"PO-Revision-Date: 2010-05-31 22:53+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -75,12 +75,11 @@ msgstr "Jaringan"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr ""
+msgstr "Arsip"
 
 #: ../src/common.c:97
-#, fuzzy
 msgid "Photos"
-msgstr "Pangkalan"
+msgstr "Foto"
 
 #: ../src/common.c:99
 msgid "Custom Location"
@@ -102,7 +101,7 @@ msgstr "Hak Cipta 2008-2009 Enrico Tröger"
 
 #: ../src/window.c:425
 msgid "translator-credits"
-msgstr "Andhika Padmawan <andhika.padmawan@gmail.com>, 2009"
+msgstr "Andhika Padmawan <andhika.padmawan@gmail.com>, 2010."
 
 #: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -212,9 +211,8 @@ msgid "Name"
 msgstr "Nama"
 
 #: ../src/window.c:1344
-#, fuzzy
 msgid "Bookmarks"
-msgstr "_Penanda"
+msgstr "Penanda"
 
 #: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
@@ -259,12 +257,12 @@ msgstr "Kongsi: %s"
 #: ../src/bookmarkdialog.c:105
 #, c-format
 msgid "Folder: %s"
-msgstr ""
+msgstr "Folder: %s"
 
 #: ../src/bookmarkdialog.c:111
 #, c-format
 msgid "Path: %s"
-msgstr ""
+msgstr "Alamat: %s"
 
 #: ../src/bookmarkdialog.c:321
 msgid "Host"
@@ -352,14 +350,12 @@ msgid "_Location (URI):"
 msgstr "_Lokasi (URI):"
 
 #: ../src/bookmarkeditdialog.c:1013
-#, fuzzy
 msgid "_Folder:"
-msgstr "_Berkas"
+msgstr "_Berkas:"
 
 #: ../src/bookmarkeditdialog.c:1014
-#, fuzzy
 msgid "_Path:"
-msgstr "_Pangkalan:"
+msgstr "_Alamat:"
 
 #: ../src/bookmarkeditdialog.c:1015
 msgid "_User Name:"
@@ -486,18 +482,16 @@ msgid "Start _minimized in the Notification Area"
 msgstr "Jalankan _minimalkan di Area Notifikasi"
 
 #: ../src/preferencesdialog.c:418
-#, fuzzy
 msgid "Show side panel"
-msgstr "_Panel Sisi"
+msgstr "Tampilkan panel sisi"
 
 #: ../src/preferencesdialog.c:419
-#, fuzzy
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
 msgstr ""
 "Apakah ingin menampilkan panel sisi untuk meramban jaringan lokal untuk "
-"kongsi Samba yang tersedia"
+"kongsi Samba/Windows yang tersedia dan senarai penanda"
 
 #: ../src/preferencesdialog.c:422
 msgid "Show auto-connect error messages"
@@ -601,14 +595,12 @@ msgid "Close panel"
 msgstr "Tutup panel"
 
 #: ../src/bookmarkpanel.c:91
-#, fuzzy
 msgid "No bookmarks"
-msgstr "_Penanda"
+msgstr "Tanpa penanda"
 
 #: ../src/bookmarkpanel.c:252
-#, fuzzy
 msgid "Connect to the selected bookmark"
-msgstr "Sambung ke kongsi terpilih"
+msgstr "Sambung ke penanda terpilih"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Tampilkan panel sisi 'Ramban Jaringan'"
