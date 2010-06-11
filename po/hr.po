@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-09 22:04+0000\n"
-"PO-Revision-Date: 2010-06-10 00:17+0200\n"
+"POT-Creation-Date: 2010-06-11 16:04+0000\n"
+"PO-Revision-Date: 2010-06-11 19:35+0200\n"
 "Last-Translator:  Ivica Kolić<ikoli@yahoo.com> <>\n"
 "Language-Team: Croatian <>\n"
 "MIME-Version: 1.0\n"
@@ -100,7 +100,7 @@ msgstr "Copyright 2008-2010 Enrico Tröger"
 
 #: ../src/window.c:425
 msgid "translator-credits"
-msgstr "zvacet <ikoli@yahoo.com"
+msgstr "Ivica Kolić (zvacet) <ikoli@yahoo.com"
 
 #: ../src/window.c:457
 msgid "Gigolo can use the following protocols provided by GVfs:"
