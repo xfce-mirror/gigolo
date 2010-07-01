@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 22:04+0000\n"
+"POT-Creation-Date: 2010-07-01 10:04+0000\n"
 "PO-Revision-Date: 2010-03-26 19:24+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -192,7 +192,7 @@ msgstr "Переглянути як _символи"
 
 #: ../src/window.c:1187
 msgid "View as _Detailed List"
-msgstr ""
+msgstr "Вигляд _Детальним списком"
 
 #: ../src/window.c:1193
 msgid "_Bookmarks"
@@ -200,7 +200,7 @@ msgstr "_Закладки"
 
 #: ../src/window.c:1193
 msgid "Choose a bookmark to connect to"
-msgstr ""
+msgstr "Виберіть закладку для з’єднання"
 
 #: ../src/window.c:1267
 msgid "Connected"
@@ -208,7 +208,7 @@ msgstr "З'єднаний"
 
 #: ../src/window.c:1276 ../src/bookmarkdialog.c:313
 msgid "Service Type"
-msgstr ""
+msgstr "Тип сервісу"
 
 #: ../src/window.c:1284 ../src/bookmarkdialog.c:305
 msgid "Name"
@@ -228,7 +228,7 @@ msgstr "Перемістити зараз?"
 
 #: ../src/settings.c:632
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
+msgstr "Gigolo повинне перемістити теку з Вашою старою конфігурацією перед запуском."
 
 #: ../src/settings.c:640
 #, c-format
@@ -377,7 +377,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:147
 msgid "Icons"
-msgstr ""
+msgstr "Іконки"
 
 #: ../src/preferencesdialog.c:148
 msgid "Text"
@@ -405,7 +405,7 @@ msgstr "Символи"
 
 #: ../src/preferencesdialog.c:190
 msgid "Detailed List"
-msgstr ""
+msgstr "Детальний список"
 
 #: ../src/preferencesdialog.c:333
 msgid "General"
@@ -433,7 +433,7 @@ msgstr "Інтерфейс"
 
 #: ../src/preferencesdialog.c:374
 msgid "_Save window position and geometry"
-msgstr ""
+msgstr "_Зберегти положення вікна і геометрію"
 
 #: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
@@ -441,11 +441,11 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
-msgstr ""
+msgstr "Показати _іконку статусу в області сповіщення"
 
 #: ../src/preferencesdialog.c:381
 msgid "Start _minimized in the Notification Area"
-msgstr ""
+msgstr "Стартувати _мінімізованим в області сповіщення"
 
 #: ../src/preferencesdialog.c:386
 msgid "Show side panel"
@@ -457,7 +457,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
-msgstr ""
+msgstr "Показати повідомлення про помилки авто-з’єднання"
 
 #: ../src/preferencesdialog.c:391
 msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
@@ -469,15 +469,15 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:410
 msgid "Toolbar"
-msgstr ""
+msgstr "Панель інструментів"
 
 #: ../src/preferencesdialog.c:412
 msgid "Show _toolbar"
-msgstr ""
+msgstr "Показати панель _інструментів"
 
 #: ../src/preferencesdialog.c:418
 msgid "St_yle"
-msgstr ""
+msgstr "С_тиль"
 
 #: ../src/preferencesdialog.c:429
 msgid "_Orientation"
@@ -496,11 +496,16 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s"
 msgstr ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"З’єднано: Так\n"
+"Тип сервісу: %s"
 
 #: ../src/backendgvfs.c:255
 #, c-format
 msgid "<b>Unix device: %s</b>"
-msgstr ""
+msgstr "<b>Пристрій Unix: %s</b>"
 
 #: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
 msgid "unknown"
@@ -509,20 +514,20 @@ msgstr "невідомо"
 #: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr ""
+msgstr "З’єднання з \"%s\" не вдалося."
 
 #: ../src/backendgvfs.c:481
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr ""
+msgstr "Завершення з’єднання з \"%s\" не вдалося."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
-msgstr ""
+msgstr "З’єднуюся"
 
 #: ../src/browsenetworkpanel.c:188
 msgid "No Workgroups found"
-msgstr ""
+msgstr "Не знайдено робочих груп"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
@@ -546,12 +551,12 @@ msgstr ""
 
 #: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
 msgid "Close panel"
-msgstr ""
+msgstr "Закрити панель"
 
 #: ../src/bookmarkpanel.c:91
 msgid "No bookmarks"
-msgstr ""
+msgstr "Немає закладок"
 
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
-msgstr ""
+msgstr "З’єднатися з вибраною закладкою"
