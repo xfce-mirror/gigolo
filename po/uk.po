@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-01 10:04+0000\n"
+"POT-Creation-Date: 2010-07-02 10:04+0000\n"
 "PO-Revision-Date: 2010-03-26 19:24+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -233,7 +233,7 @@ msgstr "Gigolo повинне перемістити теку з Вашою ст
 #: ../src/settings.c:640
 #, c-format
 msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr ""
+msgstr "Вашу стара тека з конфігурацією \"%s\" неможливо перемістити до \"%s\" (%s). Перемістіть її вручну на нове місце."
 
 #: ../src/settings.c:643
 msgid "Warning"
@@ -293,7 +293,7 @@ msgstr "Ви маєте ввести назву для закладки."
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
+msgstr "Введена назва закладки вже використовується. Виберіть іншу назву."
 
 #: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a server address or name."
@@ -369,7 +369,7 @@ msgstr "_Порт:"
 
 #: ../src/bookmarkeditdialog.c:1016
 msgid "_Domain:"
-msgstr ""
+msgstr "_Домен"
 
 #: ../src/bookmarkeditdialog.c:1017
 msgid "_Share:"
@@ -417,15 +417,15 @@ msgstr "_Менеджер файлів"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
+msgstr "Введіть назву програми для відкривання і перегляду пунктів монтування"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
-msgstr ""
+msgstr "Інтервал авто_з’єднання з закладками"
 
 #: ../src/preferencesdialog.c:361
 msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr ""
+msgstr "Як часто намагатися з’єднатися з закладками, в секундах. Нуль відключає перевірку."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -437,7 +437,7 @@ msgstr "_Зберегти положення вікна і геометрію"
 
 #: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
+msgstr "Зберігає положення вікна і його розміри, і відновлює їх на старті"
 
 #: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
@@ -453,7 +453,7 @@ msgstr "Показати бічну панель"
 
 #: ../src/preferencesdialog.c:387
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr ""
+msgstr "Чи показувати бічну панель для показу локальної мережі для можливих відкритих Samba/Windows тек і списку закладок"
 
 #: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
@@ -461,7 +461,7 @@ msgstr "Показати повідомлення про помилки авто
 
 #: ../src/preferencesdialog.c:391
 msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
+msgstr "Чи показувати діалог повідомлень про помилки, якщо не вдається авто-з’єднання з закладками"
 
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
@@ -547,7 +547,7 @@ msgstr ""
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
-msgstr ""
+msgstr "Оновити список мереж"
 
 #: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
 msgid "Close panel"
