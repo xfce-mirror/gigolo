@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-02 10:04+0000\n"
+"POT-Creation-Date: 2010-07-03 16:04+0000\n"
 "PO-Revision-Date: 2010-03-26 19:24+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr ""
+msgstr "Ігнорувати вже запущені програми, форсувати відкриття нової"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
@@ -465,7 +465,7 @@ msgstr "Чи показувати діалог повідомлень про п�
 
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
-msgstr ""
+msgstr "_Список режимів з’єднання"
 
 #: ../src/preferencesdialog.c:410
 msgid "Toolbar"
@@ -535,7 +535,7 @@ msgstr ""
 
 #: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
-msgstr ""
+msgstr "Не знайдено серверів"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
