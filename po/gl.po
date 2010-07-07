@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-18 12:05+0100\n"
+"POT-Creation-Date: 2010-07-07 10:04+0000\n"
 "PO-Revision-Date: 2010-01-06 12:25+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -36,7 +36,7 @@ msgstr "Ser detallado"
 msgid "Show version information"
 msgstr "Mostrar a información da versión"
 
-#: ../src/main.c:80
+#: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- unha sinxela interface para conectar facilmente a sistemas de ficheiros remotos"
 
@@ -229,20 +229,20 @@ msgstr "Marcadores"
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:642
+#: ../src/settings.c:631
 msgid "Move it now?"
 msgstr "Desexa movela agora?"
 
-#: ../src/settings.c:643
+#: ../src/settings.c:632
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo ten que mover o antigo directorio de configuración antes de iniciar."
 
-#: ../src/settings.c:651
+#: ../src/settings.c:640
 #, c-format
 msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
 msgstr "O seu antigo directorio de configuración \"%s\" non se pode mover a \"%s\" (%s). Mova o directorio a man á nova localización."
 
-#: ../src/settings.c:654
+#: ../src/settings.c:643
 msgid "Warning"
 msgstr "Advertencia"
 
@@ -382,135 +382,115 @@ msgstr "_Dominio:"
 msgid "_Share:"
 msgstr "_Recurso:"
 
-#: ../src/preferencesdialog.c:153
+#: ../src/preferencesdialog.c:147
 msgid "Icons"
 msgstr "Iconas"
 
-#: ../src/preferencesdialog.c:154
+#: ../src/preferencesdialog.c:148
 msgid "Text"
 msgstr "Texto"
 
-#: ../src/preferencesdialog.c:155
+#: ../src/preferencesdialog.c:149
 msgid "Both"
 msgstr "Ámbolos dous"
 
-#: ../src/preferencesdialog.c:156
+#: ../src/preferencesdialog.c:150
 msgid "Both horizontal"
 msgstr "Horizontais os dous"
 
-#: ../src/preferencesdialog.c:175
+#: ../src/preferencesdialog.c:169
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: ../src/preferencesdialog.c:176
+#: ../src/preferencesdialog.c:170
 msgid "Vertical"
 msgstr "Vertical"
 
-#: ../src/preferencesdialog.c:195
+#: ../src/preferencesdialog.c:189
 msgid "Symbols"
 msgstr "Símbolos"
 
-#: ../src/preferencesdialog.c:196
+#: ../src/preferencesdialog.c:190
 msgid "Detailed List"
 msgstr "Lista detallada"
 
-#: ../src/preferencesdialog.c:340
+#: ../src/preferencesdialog.c:333
 msgid "General"
 msgstr "Xeral"
 
-#: ../src/preferencesdialog.c:345
+#: ../src/preferencesdialog.c:338
 msgid "_File Manager"
 msgstr "Xestor de _ficheiros"
 
-#: ../src/preferencesdialog.c:353
+#: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr "Introduza o nome do programa que se vai usar para abrir ou ver puntos de montaxe"
 
-#: ../src/preferencesdialog.c:362
+#: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "Inter_valo de conexión automática dos marcadores"
 
-#: ../src/preferencesdialog.c:368
+#: ../src/preferencesdialog.c:361
 msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
 msgstr "A frecuencia de intento de conexión automática dos marcadores, en segundos. Cero desactiva a comprobación."
 
-#: ../src/preferencesdialog.c:374
-msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
-"If you are unsure, use the HAL based monitor."
-msgstr ""
-"A implementación do xestor de volumes baseado en HAL require a ferramenta \"gnome-mount\" para montar recursos locais coma discos. A implementación do xestor de volumes baseado en Unix pode montar ditos recursos directamente e tamén lista outros dispositivos locais.\n"
-"Se non está seguro, use o monitor baseado en HAL."
-
-#: ../src/preferencesdialog.c:380
-msgid "Use _HAL based volume manager"
-msgstr "Usar o xestor de volumes baseado en _HAL"
-
-#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
-msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr "<i>Cambiar esta opción require reiniciar Gigolo.</i>"
-
-#: ../src/preferencesdialog.c:388
-msgid "Use _Unix based volume manager"
-msgstr "Usar o xestor de volumes baseado en _Unix"
-
-#: ../src/preferencesdialog.c:404
+#: ../src/preferencesdialog.c:372
 msgid "Interface"
 msgstr "Interface"
 
-#: ../src/preferencesdialog.c:406
+#: ../src/preferencesdialog.c:374
 msgid "_Save window position and geometry"
 msgstr "_Gardar a posición e maila xeometría da fiestra"
 
-#: ../src/preferencesdialog.c:407
+#: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr "Garda a posición e a xeometría da fiestra e restáuraa ao volver iniciar"
 
-#: ../src/preferencesdialog.c:410
+#: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
-msgstr "Amosar a _icona de estado na Zona de Notificación"
+msgstr "Mostrar a _icona de estado na Zona de Notificación"
 
-#: ../src/preferencesdialog.c:413
+#: ../src/preferencesdialog.c:381
 msgid "Start _minimized in the Notification Area"
 msgstr "Iniciar _minimizado na área de notificación"
 
-#: ../src/preferencesdialog.c:418
+#: ../src/preferencesdialog.c:386
 msgid "Show side panel"
 msgstr "Mostrar o panel lateral"
 
-#: ../src/preferencesdialog.c:419
+#: ../src/preferencesdialog.c:387
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
 msgstr "Mostrar ou non un panel lateral para explorar a rede local en busca de recursos Samba/Windows dispoñibles e dunha lista de marcadores"
 
-#: ../src/preferencesdialog.c:422
+#: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr "Mostrar as mensaxes de erro das conexións automáticas"
 
-#: ../src/preferencesdialog.c:423
+#: ../src/preferencesdialog.c:391
 msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr "Mostrar os diálogos de mensaxes de erro cando falla a conexión automática dos marcadores"
 
-#: ../src/preferencesdialog.c:429
+#: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
 msgstr "Modo lista de _conexión"
 
-#: ../src/preferencesdialog.c:442
+#: ../src/preferencesdialog.c:410
 msgid "Toolbar"
 msgstr "Barra de ferramentas"
 
-#: ../src/preferencesdialog.c:444
+#: ../src/preferencesdialog.c:412
 msgid "Show _toolbar"
 msgstr "Mostrar a barra de _ferramentas"
 
-#: ../src/preferencesdialog.c:450
+#: ../src/preferencesdialog.c:418
 msgid "St_yle"
 msgstr "Es_tilo"
 
-#: ../src/preferencesdialog.c:461
+#: ../src/preferencesdialog.c:429
 msgid "_Orientation"
 msgstr "_Orientación"
 
-#: ../src/preferencesdialog.c:522
+#: ../src/preferencesdialog.c:490
 msgid "Preferences"
 msgstr "Preferencias"
 
@@ -587,6 +567,22 @@ msgstr "Sen marcadores"
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
 msgstr "Conectar ao marcador seleccionado"
+
+#~ msgid ""
+#~ "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+#~ "If you are unsure, use the HAL based monitor."
+#~ msgstr ""
+#~ "A implementación do xestor de volumes baseado en HAL require a ferramenta \"gnome-mount\" para montar recursos locais coma discos. A implementación do xestor de volumes baseado en Unix pode montar ditos recursos directamente e tamén lista outros dispositivos locais.\n"
+#~ "Se non está seguro, use o monitor baseado en HAL."
+
+#~ msgid "Use _HAL based volume manager"
+#~ msgstr "Usar o xestor de volumes baseado en _HAL"
+
+#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
+#~ msgstr "<i>Cambiar esta opción require reiniciar Gigolo.</i>"
+
+#~ msgid "Use _Unix based volume manager"
+#~ msgstr "Usar o xestor de volumes baseado en _Unix"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Mostrar o panel lateral de exploración da rede"
