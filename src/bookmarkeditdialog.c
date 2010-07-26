@@ -764,6 +764,8 @@ static void update_bookmark(GigoloBookmarkEditDialog *dialog)
 	tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
 	if (*tmp)	/* the name might be empty if the dialog is used as a Connect dialog */
 		gigolo_bookmark_set_name(priv->bookmark_update, tmp);
+	else
+		gigolo_bookmark_set_name(priv->bookmark_update, "none");
 
 	if (idx == -1)
 		idx = 0;
