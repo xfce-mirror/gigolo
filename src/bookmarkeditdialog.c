@@ -923,6 +923,12 @@ static void host_entry_changed_cb(GtkEditable *editable, GtkWidget *btn)
 }
 
 
+static void entry_activate_cb(G_GNUC_UNUSED GtkEditable *editable, GigoloBookmarkEditDialog *dialog)
+{
+	gtk_dialog_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
+}
+
+
 static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 {
 	GtkWidget *label;
@@ -1032,6 +1038,13 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 
 	g_signal_connect(priv->host_entry, "changed",
 		G_CALLBACK(host_entry_changed_cb), priv->share_button);
+
+	g_signal_connect(priv->name_entry, "activate", G_CALLBACK(entry_activate_cb), dialog);
+	g_signal_connect(priv->uri_entry, "activate", G_CALLBACK(entry_activate_cb), dialog);
+	g_signal_connect(priv->host_entry, "activate", G_CALLBACK(entry_activate_cb), dialog);
+	g_signal_connect(priv->folder_entry, "activate", G_CALLBACK(entry_activate_cb), dialog);
+	g_signal_connect(priv->path_entry, "activate", G_CALLBACK(entry_activate_cb), dialog);
+	g_signal_connect(priv->user_entry, "activate", G_CALLBACK(entry_activate_cb), dialog);
 
 	/* We need an extra ref so we can remove them from the table */
 	g_object_ref(priv->uri_entry);
