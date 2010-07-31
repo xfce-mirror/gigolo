@@ -77,7 +77,7 @@ static void gigolo_mount_dialog_destroy(GtkObject *widget)
 		priv->timer_id = -1;
 	}
 
-    GTK_OBJECT_CLASS(gigolo_mount_dialog_parent_class)->destroy(widget);
+	GTK_OBJECT_CLASS(gigolo_mount_dialog_parent_class)->destroy(widget);
 }
 
 
