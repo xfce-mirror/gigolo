@@ -4,15 +4,16 @@
 # This file is distributed under the same license as the Gigolo package.
 # Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.
 # Harald Servat <redcrash@gmail.com>, 2009-2010.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-18 12:05+0100\n"
+"POT-Creation-Date: 2010-07-31 15:40+0200\n"
 "PO-Revision-Date: 2010-01-05 12:05+0100\n"
 "Last-Translator: Harald Servat <redcrash@gmail.com>\n"
 "Language-Team: Catalan\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,7 +35,7 @@ msgstr "Mostra més informació"
 msgid "Show version information"
 msgstr "Mostra informació de la versió"
 
-#: ../src/main.c:80
+#: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- una interfície simple per connectar-se a sistemes de fitxers remots"
 
@@ -70,7 +71,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (segur)"
 
-#: ../src/common.c:93 ../src/window.c:1363
+#: ../src/common.c:93 ../src/window.c:1367
 msgid "Network"
 msgstr "Xarxa"
 
@@ -86,159 +87,166 @@ msgstr "Fotos"
 msgid "Custom Location"
 msgstr "Ubicació personalitzada"
 
-#: ../src/window.c:253
+#: ../src/window.c:257
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "S'està connectant a «%s»"
 
-#: ../src/window.c:421 ../gigolo.desktop.in.h:1
+#: ../src/window.c:425 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Una interfície simple per connectar-se a sistemes de fitxers remots"
 
-#: ../src/window.c:422
+#: ../src/window.c:426
 msgid "Copyright 2008-2010 Enrico Tröger"
 msgstr "Copyright 2008-2010 Enrico Tröger"
 
-#: ../src/window.c:425
+#: ../src/window.c:429
 msgid "translator-credits"
 msgstr ""
 "Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.\n"
 "Harald Servat <redcrash@gmail.com>, 2009-2010."
 
-#: ../src/window.c:457
+#: ../src/window.c:461
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo pot emprar els següents protocols mitjançant GVfs:"
 
-#: ../src/window.c:554
+#: ../src/window.c:558
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Ha fallat la comanda '%s' ."
 
-#: ../src/window.c:555 ../src/window.c:682 ../src/bookmarkeditdialog.c:214
+#: ../src/window.c:559 ../src/window.c:686 ../src/bookmarkeditdialog.c:214
 #: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
 #: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Error"
 
-#: ../src/window.c:1149
+#: ../src/window.c:1153
 msgid "_File"
 msgstr "_Fitxer"
 
-#: ../src/window.c:1150
+#: ../src/window.c:1154
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../src/window.c:1151
+#: ../src/window.c:1155
 msgid "_Actions"
 msgstr "_Accions"
 
-#: ../src/window.c:1152
+#: ../src/window.c:1156
 msgid "_View"
 msgstr "_Mostra"
 
-#: ../src/window.c:1153
+#: ../src/window.c:1157
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../src/window.c:1157 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1161 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Crea un _lloc d'interès"
 
-#: ../src/window.c:1159
+#: ../src/window.c:1163
 msgid "_Edit Bookmarks"
 msgstr "_Edita llocs d'interès"
 
-#: ../src/window.c:1160
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Obre el gestor de llocs d'interès per afegir, editar o esborrar-ne llocs"
-
 #: ../src/window.c:1164
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr ""
+"Obre el gestor de llocs d'interès per afegir, editar o esborrar-ne llocs"
+
+#: ../src/window.c:1168
 msgid "Disconnect the selected resource"
 msgstr "Desconnecta el recurs seleccionat"
 
-#: ../src/window.c:1166
+#: ../src/window.c:1170
 msgid "Open the selected resource with a file manager"
 msgstr "Obre el recurs seleccionat amb un gestor de fitxers"
 
-#: ../src/window.c:1167
+#: ../src/window.c:1171
 msgid "Copy _URI"
 msgstr "Copia _URI"
 
-#: ../src/window.c:1168
+#: ../src/window.c:1172
 msgid "Quit Gigolo"
 msgstr "Surt de Gigolo"
 
-#: ../src/window.c:1169
+#: ../src/window.c:1173
 msgid "Online Help"
 msgstr "Ajuda en línia"
 
-#: ../src/window.c:1170
+#: ../src/window.c:1174
 msgid "Supported Protocols"
 msgstr "Protocols admesos"
 
-#: ../src/window.c:1176
+#: ../src/window.c:1180
 msgid "Side _Panel"
 msgstr "_Panell lateral"
 
-#: ../src/window.c:1178
+#: ../src/window.c:1182
 msgid "_Toolbar"
 msgstr "_Barra d'eines"
 
-#: ../src/window.c:1180
+#: ../src/window.c:1184
 msgid "Status _Icon"
 msgstr "_Icona d'estat"
 
-#: ../src/window.c:1186
+#: ../src/window.c:1190
 msgid "View as _Symbols"
 msgstr "Mostra com _símbols"
 
-#: ../src/window.c:1187
+#: ../src/window.c:1191
 msgid "View as _Detailed List"
 msgstr "Mostra com a llista _detallada"
 
-#: ../src/window.c:1193
+#: ../src/window.c:1197
 msgid "_Bookmarks"
 msgstr "_Llocs d'interès"
 
-#: ../src/window.c:1193
+#: ../src/window.c:1197
 msgid "Choose a bookmark to connect to"
 msgstr "Trieu un lloc d'interès per connectar-vos"
 
-#: ../src/window.c:1267
+#: ../src/window.c:1271
 msgid "Connected"
 msgstr "Connectat"
 
-#: ../src/window.c:1276 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1280 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Tipus de servei"
 
-#: ../src/window.c:1284 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1288 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Nom"
 
-#: ../src/window.c:1355
+#: ../src/window.c:1359
 msgid "Bookmarks"
 msgstr "Adreces d'interès"
 
-#: ../src/window.c:1405 ../src/window.c:1480 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1409 ../src/window.c:1484 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:642
+#: ../src/settings.c:631
 msgid "Move it now?"
 msgstr "Moure'l ara?"
 
-#: ../src/settings.c:643
+#: ../src/settings.c:632
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Gigolo ha de moure el vostre directori de configuració antic abans d'inicialitzar-se."
+msgstr ""
+"Gigolo ha de moure el vostre directori de configuració antic abans "
+"d'inicialitzar-se."
 
-#: ../src/settings.c:651
+#: ../src/settings.c:640
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "El vostre directori de configuració antic «%s» no es por moure a «%s» (%s). Moveu manualment el directori al nou lloc."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"El vostre directori de configuració antic «%s» no es por moure a «%s» (%s). "
+"Moveu manualment el directori al nou lloc."
 
-#: ../src/settings.c:654
+#: ../src/settings.c:643
 msgid "Warning"
 msgstr "Advertència"
 
@@ -296,7 +304,8 @@ msgstr "Cal que introduïu un nom per al lloc d'interès."
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr "El nom de lloc d'interès introduït ja s'està emprant. Escolliu-ne un altre."
+msgstr ""
+"El nom de lloc d'interès introduït ja s'està emprant. Escolliu-ne un altre."
 
 #: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a server address or name."
@@ -314,199 +323,192 @@ msgstr "Cal que introduïu una URI vàlida per la connexió."
 msgid "_Device:"
 msgstr "_Dispositiu:"
 
-#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1010
+#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1018
 msgid "_Server:"
 msgstr "_Servidor:"
 
-#: ../src/bookmarkeditdialog.c:843
+#: ../src/bookmarkeditdialog.c:845
 msgid "Create Bookmark"
 msgstr "Crea un lloc d'interès"
 
-#: ../src/bookmarkeditdialog.c:850
+#: ../src/bookmarkeditdialog.c:852
 msgid "Edit Bookmark"
 msgstr "Edita lloc d'interès"
 
-#: ../src/bookmarkeditdialog.c:858
+#: ../src/bookmarkeditdialog.c:860
 msgid "Connect to Server"
 msgstr "Connecta al servidor"
 
-#: ../src/bookmarkeditdialog.c:962
+#: ../src/bookmarkeditdialog.c:970
 msgid "_Bookmark name:"
 msgstr "_Nom del lloc d'interès:"
 
-#: ../src/bookmarkeditdialog.c:970
+#: ../src/bookmarkeditdialog.c:978
 msgid "Au_to-Connect"
 msgstr "Co_nnexió automàtica"
 
-#: ../src/bookmarkeditdialog.c:978
+#: ../src/bookmarkeditdialog.c:986
 msgid "Service t_ype:"
 msgstr "_Tipus de servei:"
 
-#: ../src/bookmarkeditdialog.c:1003
+#: ../src/bookmarkeditdialog.c:1011
 msgid "Set the port to 0 to use the default port"
 msgstr "Posa 0 al port per emprar el port per defecte"
 
-#: ../src/bookmarkeditdialog.c:1009
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "_Ubicació (URI):"
 
-#: ../src/bookmarkeditdialog.c:1011
+#: ../src/bookmarkeditdialog.c:1019
 msgid "_Folder:"
 msgstr "_Fitxer:"
 
-#: ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:1020
 msgid "_Path:"
 msgstr "_Camí:"
 
-#: ../src/bookmarkeditdialog.c:1013
+#: ../src/bookmarkeditdialog.c:1021
 msgid "_User Name:"
 msgstr "Nom d'_usuari:"
 
-#: ../src/bookmarkeditdialog.c:1014
+#: ../src/bookmarkeditdialog.c:1022
 msgid "Optional information:"
 msgstr "Informació opcional:"
 
-#: ../src/bookmarkeditdialog.c:1015
+#: ../src/bookmarkeditdialog.c:1023
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1024
 msgid "_Domain:"
 msgstr "_Domini:"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1025
 msgid "_Share:"
 msgstr "_Compartició:"
 
-#: ../src/preferencesdialog.c:153
+#: ../src/preferencesdialog.c:147
 msgid "Icons"
 msgstr "Icones"
 
-#: ../src/preferencesdialog.c:154
+#: ../src/preferencesdialog.c:148
 msgid "Text"
 msgstr "Text"
 
-#: ../src/preferencesdialog.c:155
+#: ../src/preferencesdialog.c:149
 msgid "Both"
 msgstr "Ambdós"
 
-#: ../src/preferencesdialog.c:156
+#: ../src/preferencesdialog.c:150
 msgid "Both horizontal"
 msgstr "Ambdós horitzontals"
 
-#: ../src/preferencesdialog.c:175
+#: ../src/preferencesdialog.c:169
 msgid "Horizontal"
 msgstr "Horitzontal"
 
-#: ../src/preferencesdialog.c:176
+#: ../src/preferencesdialog.c:170
 msgid "Vertical"
 msgstr "Vertical"
 
-#: ../src/preferencesdialog.c:195
+#: ../src/preferencesdialog.c:189
 msgid "Symbols"
 msgstr "Símbols"
 
-#: ../src/preferencesdialog.c:196
+#: ../src/preferencesdialog.c:190
 msgid "Detailed List"
 msgstr "Llistat detallada"
 
-#: ../src/preferencesdialog.c:340
+#: ../src/preferencesdialog.c:333
 msgid "General"
 msgstr "General"
 
-#: ../src/preferencesdialog.c:345
+#: ../src/preferencesdialog.c:338
 msgid "_File Manager"
 msgstr "Gestor de _fitxers"
 
-#: ../src/preferencesdialog.c:353
+#: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Introduïu el nom del programa que s'emprarà per obrir o veure els punts de muntatge"
+msgstr ""
+"Introduïu el nom del programa que s'emprarà per obrir o veure els punts de "
+"muntatge"
 
-#: ../src/preferencesdialog.c:362
+#: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Interval de connexió automàtica"
 
-#: ../src/preferencesdialog.c:368
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "Amb quina freqüència voleu que s'intenti la connexió automàtica dels llocs d'interès expressat en segons. Zero deshabilita la comprovació."
-
-#: ../src/preferencesdialog.c:374
+#: ../src/preferencesdialog.c:361
 msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
-"If you are unsure, use the HAL based monitor."
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
 msgstr ""
-"A la implementació del gestor de volums basat en HAL li cal l'opció «gnome-mount» per muntar els recursos local com els discs. El gestor de volums basat en Unix pot muntar aquests recursos directament així com mostrat la llista d'altres dispositius locals.\n"
-"Si no esteu segur, empreu el gestor basat en HAL."
+"Amb quina freqüència voleu que s'intenti la connexió automàtica dels llocs "
+"d'interès expressat en segons. Zero deshabilita la comprovació."
 
-#: ../src/preferencesdialog.c:380
-msgid "Use _HAL based volume manager"
-msgstr "Empra un gestor de volums basat en _HAL"
-
-#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
-msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr "<i>El canvi d'aquesta opció fa que calgui reiniciar Gigolo.</i>"
-
-#: ../src/preferencesdialog.c:388
-msgid "Use _Unix based volume manager"
-msgstr "Empra un gestor de volums basat en _Unix"
-
-#: ../src/preferencesdialog.c:404
+#: ../src/preferencesdialog.c:372
 msgid "Interface"
 msgstr "Interfície"
 
-#: ../src/preferencesdialog.c:406
+#: ../src/preferencesdialog.c:374
 msgid "_Save window position and geometry"
 msgstr "_Desa la mida i posició de la finestra"
 
-#: ../src/preferencesdialog.c:407
+#: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr "Desa la mida i posició de la finestra i la restaura a l'inici"
 
-#: ../src/preferencesdialog.c:410
+#: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
 msgstr "Mostra la _icona d'estat a l'espai de notificacions del sistema"
 
-#: ../src/preferencesdialog.c:413
+#: ../src/preferencesdialog.c:381
 msgid "Start _minimized in the Notification Area"
 msgstr "Inicia _minimitzat a l'espai de notificacions del sistema"
 
-#: ../src/preferencesdialog.c:418
+#: ../src/preferencesdialog.c:386
 msgid "Show side panel"
 msgstr "Mostrar panell lateral"
 
-#: ../src/preferencesdialog.c:419
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "Si s'ha de mostrar un panell lateral per a navegar dins els recursos compartits Samba/Windows de la xarxa local i de la llista d'interès"
+#: ../src/preferencesdialog.c:387
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"Si s'ha de mostrar un panell lateral per a navegar dins els recursos "
+"compartits Samba/Windows de la xarxa local i de la llista d'interès"
 
-#: ../src/preferencesdialog.c:422
+#: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr "Mostra els errors de connexió automàtica"
 
-#: ../src/preferencesdialog.c:423
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr "Si s'ha de mostrar o no el diàleg d'errors quan la connexió automàtica als llocs d'interès falla"
+#: ../src/preferencesdialog.c:391
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+"Si s'ha de mostrar o no el diàleg d'errors quan la connexió automàtica als "
+"llocs d'interès falla"
 
-#: ../src/preferencesdialog.c:429
+#: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
 msgstr "Mode de llista de _connexions"
 
-#: ../src/preferencesdialog.c:442
+#: ../src/preferencesdialog.c:410
 msgid "Toolbar"
 msgstr "Barra d'eines"
 
-#: ../src/preferencesdialog.c:444
+#: ../src/preferencesdialog.c:412
 msgid "Show _toolbar"
 msgstr "Mostra la _barra d'eines"
 
-#: ../src/preferencesdialog.c:450
+#: ../src/preferencesdialog.c:418
 msgid "St_yle"
 msgstr "_Estil"
 
-#: ../src/preferencesdialog.c:461
+#: ../src/preferencesdialog.c:429
 msgid "_Orientation"
 msgstr "_Orientació"
 
-#: ../src/preferencesdialog.c:522
+#: ../src/preferencesdialog.c:490
 msgid "Preferences"
 msgstr "Preferències"
 
@@ -583,6 +585,28 @@ msgstr "No hi ha llocs d'interès"
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
 msgstr "Connecta al lloc d'interès seleccionat"
+
+#~ msgid ""
+#~ "The HAL based volume manager implementation requires the tool 'gnome-"
+#~ "mount' to mount local resources like disks. The Unix based volume manager "
+#~ "implementation can mount such resources directly and also lists other "
+#~ "local devices.\n"
+#~ "If you are unsure, use the HAL based monitor."
+#~ msgstr ""
+#~ "A la implementació del gestor de volums basat en HAL li cal l'opció "
+#~ "«gnome-mount» per muntar els recursos local com els discs. El gestor de "
+#~ "volums basat en Unix pot muntar aquests recursos directament així com "
+#~ "mostrat la llista d'altres dispositius locals.\n"
+#~ "Si no esteu segur, empreu el gestor basat en HAL."
+
+#~ msgid "Use _HAL based volume manager"
+#~ msgstr "Empra un gestor de volums basat en _HAL"
+
+#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
+#~ msgstr "<i>El canvi d'aquesta opció fa que calgui reiniciar Gigolo.</i>"
+
+#~ msgid "Use _Unix based volume manager"
+#~ msgstr "Empra un gestor de volums basat en _Unix"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Mostra el quadre lateral «Navegador de xarxes»"

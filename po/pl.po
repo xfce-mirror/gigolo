@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-14 19:41+0100\n"
+"POT-Creation-Date: 2010-07-31 15:40+0200\n"
 "PO-Revision-Date: 2009-07-02 02:37+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,7 +35,7 @@ msgstr "Wypisuje szczegółowe komunikaty"
 msgid "Show version information"
 msgstr "Wyświetla informacje o wersji i kończy"
 
-#: ../src/main.c:80
+#: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr ""
 
@@ -72,7 +73,7 @@ msgstr ""
 msgid "WebDAV (secure)"
 msgstr ""
 
-#: ../src/common.c:93 ../src/window.c:1352
+#: ../src/common.c:93 ../src/window.c:1367
 msgid "Network"
 msgstr "Sieć"
 
@@ -89,156 +90,162 @@ msgstr "Port"
 msgid "Custom Location"
 msgstr "Własne położenie"
 
-#: ../src/window.c:253
+#: ../src/window.c:257
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Łączenie z „%s”"
 
-#: ../src/window.c:421 ../gigolo.desktop.in.h:1
+#: ../src/window.c:425 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Łączy ze zdalnymi systemami plików"
 
-#: ../src/window.c:422
-msgid "Copyright 2008-2009 Enrico Tröger"
+#: ../src/window.c:426
+#, fuzzy
+msgid "Copyright 2008-2010 Enrico Tröger"
 msgstr "Copyright 2008-2009 Enrico Tröger"
 
-#: ../src/window.c:425
+#: ../src/window.c:429
 msgid "translator-credits"
 msgstr "Piotr Sokół <piotr.sokol@10g.pl>"
 
-#: ../src/window.c:457
+#: ../src/window.c:461
 #, fuzzy
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Program używa następujących protokołów za pośrednictwem GVfs:"
 
-#: ../src/window.c:671 ../src/bookmarkeditdialog.c:214
+#: ../src/window.c:558
+#, c-format
+msgid "The command '%s' failed"
+msgstr ""
+
+#: ../src/window.c:559 ../src/window.c:686 ../src/bookmarkeditdialog.c:214
 #: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
 #: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Błąd"
 
-#: ../src/window.c:1138
+#: ../src/window.c:1153
 msgid "_File"
 msgstr "_Plik"
 
-#: ../src/window.c:1139
+#: ../src/window.c:1154
 msgid "_Edit"
 msgstr "_Edycja"
 
-#: ../src/window.c:1140
+#: ../src/window.c:1155
 msgid "_Actions"
 msgstr "_Czynność"
 
-#: ../src/window.c:1141
+#: ../src/window.c:1156
 msgid "_View"
 msgstr "_Widok"
 
-#: ../src/window.c:1142
+#: ../src/window.c:1157
 msgid "_Help"
 msgstr "Pomo_c"
 
-#: ../src/window.c:1146 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1161 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "_Utwórz zakładkę"
 
-#: ../src/window.c:1148
+#: ../src/window.c:1163
 msgid "_Edit Bookmarks"
 msgstr "_Edytuj zakładki"
 
-#: ../src/window.c:1149
+#: ../src/window.c:1164
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "Otwiera okno menedżera zakładek"
 
-#: ../src/window.c:1153
+#: ../src/window.c:1168
 msgid "Disconnect the selected resource"
 msgstr "Rozłącza z zaznaczonymi zasobami"
 
-#: ../src/window.c:1155
+#: ../src/window.c:1170
 msgid "Open the selected resource with a file manager"
 msgstr "Otwiera zaznaczone zasoby za pomocą menedżera plików"
 
-#: ../src/window.c:1156
+#: ../src/window.c:1171
 msgid "Copy _URI"
 msgstr "Skopiuj adres _URI"
 
-#: ../src/window.c:1157
+#: ../src/window.c:1172
 msgid "Quit Gigolo"
 msgstr "Kończy program"
 
-#: ../src/window.c:1158
+#: ../src/window.c:1173
 msgid "Online Help"
 msgstr "Zawartość"
 
-#: ../src/window.c:1159
+#: ../src/window.c:1174
 msgid "Supported Protocols"
 msgstr "Obsługiwane protokoły"
 
-#: ../src/window.c:1165
+#: ../src/window.c:1180
 msgid "Side _Panel"
 msgstr "P_anel boczny"
 
-#: ../src/window.c:1167
+#: ../src/window.c:1182
 msgid "_Toolbar"
 msgstr "_Pasek narzędziowy"
 
-#: ../src/window.c:1169
+#: ../src/window.c:1184
 msgid "Status _Icon"
 msgstr "_Ikona obszaru powiadamiania"
 
-#: ../src/window.c:1175
+#: ../src/window.c:1190
 msgid "View as _Symbols"
 msgstr "_Ikony"
 
-#: ../src/window.c:1176
+#: ../src/window.c:1191
 msgid "View as _Detailed List"
 msgstr "_Lista szczegółowa"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1197
 msgid "_Bookmarks"
 msgstr "_Zakładki"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1197
 msgid "Choose a bookmark to connect to"
 msgstr "Łączy z zasobem wskazywanym przez zakładkę"
 
-#: ../src/window.c:1256
+#: ../src/window.c:1271
 msgid "Connected"
 msgstr "Połączony"
 
-#: ../src/window.c:1265 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1280 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Typ usługi"
 
-#: ../src/window.c:1273 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1288 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Nazwa"
 
-#: ../src/window.c:1344
+#: ../src/window.c:1359
 #, fuzzy
 msgid "Bookmarks"
 msgstr "_Zakładki"
 
-#: ../src/window.c:1394 ../src/window.c:1469 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1409 ../src/window.c:1484 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:642
+#: ../src/settings.c:631
 msgid "Move it now?"
 msgstr ""
 
-#: ../src/settings.c:643
+#: ../src/settings.c:632
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr ""
 
-#: ../src/settings.c:651
+#: ../src/settings.c:640
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr ""
 
-#: ../src/settings.c:654
+#: ../src/settings.c:643
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
@@ -310,11 +317,11 @@ msgstr "Proszę wprowadzić nazwę udziału."
 msgid "You must enter a valid URI for the connection."
 msgstr "Aby uzyskać połączenie, proszę wprowadzić poprawny adres URI."
 
-#: ../src/bookmarkeditdialog.c:555
+#: ../src/bookmarkeditdialog.c:553
 msgid "_Device:"
 msgstr "_Urządzenie:"
 
-#: ../src/bookmarkeditdialog.c:557 ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1018
 msgid "_Server:"
 msgstr "_Serwer:"
 
@@ -331,195 +338,173 @@ msgstr "Edycja zakładki"
 msgid "Connect to Server"
 msgstr "Połącz z serwerem"
 
-#: ../src/bookmarkeditdialog.c:964
+#: ../src/bookmarkeditdialog.c:970
 msgid "_Bookmark name:"
 msgstr "_Nazwa zakładki:"
 
-#: ../src/bookmarkeditdialog.c:972
+#: ../src/bookmarkeditdialog.c:978
 msgid "Au_to-Connect"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:980
+#: ../src/bookmarkeditdialog.c:986
 msgid "Service t_ype:"
 msgstr "_Typ usługi:"
 
-#: ../src/bookmarkeditdialog.c:1005
+#: ../src/bookmarkeditdialog.c:1011
 msgid "Set the port to 0 to use the default port"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1011
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "_Położenie (URI):"
 
-#: ../src/bookmarkeditdialog.c:1013
+#: ../src/bookmarkeditdialog.c:1019
 #, fuzzy
 msgid "_Folder:"
 msgstr "_Plik"
 
-#: ../src/bookmarkeditdialog.c:1014
+#: ../src/bookmarkeditdialog.c:1020
 #, fuzzy
 msgid "_Path:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:1015
+#: ../src/bookmarkeditdialog.c:1021
 msgid "_User Name:"
 msgstr "_Nazwa użytkownika:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1022
 msgid "Optional information:"
 msgstr "Dodatkowe informacje:"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1023
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:1024
 msgid "_Domain:"
 msgstr "_Domena:"
 
-#: ../src/bookmarkeditdialog.c:1019
+#: ../src/bookmarkeditdialog.c:1025
 msgid "_Share:"
 msgstr "_Udział:"
 
-#: ../src/preferencesdialog.c:153
+#: ../src/preferencesdialog.c:147
 msgid "Icons"
 msgstr "Ikony"
 
-#: ../src/preferencesdialog.c:154
+#: ../src/preferencesdialog.c:148
 msgid "Text"
 msgstr "Etykiety"
 
-#: ../src/preferencesdialog.c:155
+#: ../src/preferencesdialog.c:149
 msgid "Both"
 msgstr "Etykiety obok ikon"
 
-#: ../src/preferencesdialog.c:156
+#: ../src/preferencesdialog.c:150
 msgid "Both horizontal"
 msgstr "Etykiety poniżej ikon"
 
-#: ../src/preferencesdialog.c:175
+#: ../src/preferencesdialog.c:169
 msgid "Horizontal"
 msgstr "Pozioma"
 
-#: ../src/preferencesdialog.c:176
+#: ../src/preferencesdialog.c:170
 msgid "Vertical"
 msgstr "Pionowa"
 
-#: ../src/preferencesdialog.c:195
+#: ../src/preferencesdialog.c:189
 msgid "Symbols"
 msgstr "Ikony"
 
-#: ../src/preferencesdialog.c:196
+#: ../src/preferencesdialog.c:190
 msgid "Detailed List"
 msgstr "Lista szczegółowa"
 
-#: ../src/preferencesdialog.c:340
+#: ../src/preferencesdialog.c:333
 msgid "General"
 msgstr "Ogólne"
 
-#: ../src/preferencesdialog.c:345
+#: ../src/preferencesdialog.c:338
 msgid "_File Manager"
 msgstr "_Menedżer plików:"
 
-#: ../src/preferencesdialog.c:353
+#: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr ""
 
-#: ../src/preferencesdialog.c:362
+#: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
 msgstr ""
 
-#: ../src/preferencesdialog.c:368
+#: ../src/preferencesdialog.c:361
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
 msgstr ""
 
-#: ../src/preferencesdialog.c:374
-msgid ""
-"The HAL based volume manager implementation requires the tool 'gnome-mount' "
-"to mount local resources like disks. The Unix based volume manager "
-"implementation can mount such resources directly and also lists other local "
-"devices.\n"
-"If you are unsure, use the HAL based monitor."
-msgstr ""
-
-#: ../src/preferencesdialog.c:380
-msgid "Use _HAL based volume manager"
-msgstr ""
-
-#: ../src/preferencesdialog.c:381 ../src/preferencesdialog.c:389
-msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-msgstr ""
-"<i>Po zmianie tej opcji wymagane jest ponowne uruchomienie programu.</i>"
-
-#: ../src/preferencesdialog.c:388
-msgid "Use _Unix based volume manager"
-msgstr ""
-
-#: ../src/preferencesdialog.c:404
+#: ../src/preferencesdialog.c:372
 msgid "Interface"
 msgstr "Interfejs"
 
-#: ../src/preferencesdialog.c:406
+#: ../src/preferencesdialog.c:374
 msgid "_Save window position and geometry"
 msgstr "_Zachowanie pozycji i rozmiaru okna"
 
-#: ../src/preferencesdialog.c:407
+#: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr ""
 "Zapisuje pozycję oraz rozmiar okna i przywraca je po uruchomieniu programu"
 
-#: ../src/preferencesdialog.c:410
+#: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
 msgstr "_Ikona obszaru powiadamiania"
 
-#: ../src/preferencesdialog.c:413
+#: ../src/preferencesdialog.c:381
 #, fuzzy
 msgid "Start _minimized in the Notification Area"
 msgstr "Uruchamianie w obszarze powiadamiania"
 
-#: ../src/preferencesdialog.c:418
+#: ../src/preferencesdialog.c:386
 #, fuzzy
 msgid "Show side panel"
 msgstr "P_anel boczny"
 
-#: ../src/preferencesdialog.c:419
+#: ../src/preferencesdialog.c:387
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
 msgstr ""
 
-#: ../src/preferencesdialog.c:422
+#: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr ""
 
-#: ../src/preferencesdialog.c:423
+#: ../src/preferencesdialog.c:391
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr ""
 
-#: ../src/preferencesdialog.c:429
+#: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
 msgstr "_Widok listy połączeń:"
 
-#: ../src/preferencesdialog.c:442
+#: ../src/preferencesdialog.c:410
 msgid "Toolbar"
 msgstr "Pasek narzędziowy"
 
-#: ../src/preferencesdialog.c:444
+#: ../src/preferencesdialog.c:412
 msgid "Show _toolbar"
 msgstr "_Wyświetlanie"
 
-#: ../src/preferencesdialog.c:450
+#: ../src/preferencesdialog.c:418
 msgid "St_yle"
 msgstr "_Wygląd:"
 
-#: ../src/preferencesdialog.c:461
+#: ../src/preferencesdialog.c:429
 msgid "_Orientation"
 msgstr "_Orientacja:"
 
-#: ../src/preferencesdialog.c:522
+#: ../src/preferencesdialog.c:490
 msgid "Preferences"
 msgstr "Preferencje"
 
@@ -599,6 +584,10 @@ msgstr "_Zakładki"
 #, fuzzy
 msgid "Connect to the selected bookmark"
 msgstr "Łączy z zaznaczonym udziałem"
+
+#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
+#~ msgstr ""
+#~ "<i>Po zmianie tej opcji wymagane jest ponowne uruchomienie programu.</i>"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Wyświetlanie panelu bocznego"
