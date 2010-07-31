@@ -551,7 +551,7 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 	if (error != NULL)
 		g_error_free(error);
 
-	if (mi->dialog != NULL)
+	if (mi->dialog != NULL && GTK_IS_WIDGET(mi->dialog))
 		gtk_widget_destroy(mi->dialog);
 
 	g_free(uri);
