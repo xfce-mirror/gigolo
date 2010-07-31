@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT([gigolo], [0.4.0], [http://bugs.xfce.org/])
+AC_INIT([gigolo], [0.4.1], [http://bugs.xfce.org/])
 AM_INIT_AUTOMAKE([AC_PACKAGE_TARNAME()], [AC_PACKAGE_VERSION()])
 
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
