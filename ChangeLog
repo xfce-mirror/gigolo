@@ -1,507 +1,2640 @@
-2009-12-31  Enrico Tröger  <enrico(at)xfce(dot)org>
+commit 0c05c4fbddc53713dfe360bc02251d2d0c00b1fa
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sat Jul 31 15:44:12 2010 +0200
 
- * ChangeLog discontinued. Please use 'git log'.
- 
- 
-2009-06-17  Enrico Tröger  <enrico(at)xfce(dot)org>
+    Update po files
 
- * src/backendgvfs.c, src/backendgvfs.h, src/bookmarkeditdialog.c:
-   When querying Samba shares in the Connect/Bookmark Edit dialog,
-   mount smb://hostname as necessary.
- * src/browsenetworkpanel.c, src/window.c:
-   Properly clean up on destruction.
- * waf, wscript:
-   Update to Waf 1.5.8.
+commit 8826cc74055688ab70f863746161beeda2cb08cb
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sat Jul 31 15:42:27 2010 +0200
 
+    Version bump
 
-2009-06-13  Enrico Tröger  <enrico(at)xfce(dot)org>
+commit c7a414eb7923ee8e91a3fd923b86ce2bbdaf1468
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sat Jul 31 15:41:39 2010 +0200
 
- * src/main.c, src/common:
-   Move definition of a variable to fix non-debug build of the
-   test suite.
+    Update po files
 
+commit 26d953368d5acac2571b1029c611b102bc062a36
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sat Jul 31 15:28:57 2010 +0200
 
-2009-06-06  Enrico Tröger  <enrico(at)xfce(dot)org>
+    Use SSH/SFTP as default connection type for new bookmarks/connections
 
- * src/preferences.c:
-   Adjust tooltip for the 'Show side panel' option.
+commit 8715d4422bb8e24474cf036b9cd89ae403901764
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sat Jul 31 15:13:18 2010 +0200
 
+    Don't try to destroy the mount progress dialog if it was closed before the mount finished
 
-2009-05-31  Enrico Tröger  <enrico(at)xfce(dot)org>
+commit c6420777a9f4e9b7a1d8d4c4e7c2a36eb331aa1d
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sat Jul 31 15:12:03 2010 +0200
+
+    Fix indentation
 
- * src/common.c:
-   Add descriptions for "archive" and "gphoto2" schemes.
- * src/window.c:
-   Update the popup menu after editing bookmarks.
+commit f464a768880db0976b0f411d76cd60239055993c
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sat Jul 31 15:07:57 2010 +0200
 
-
-2009-05-28  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * po/POTFILES.in, src/Makefile.am, src/bookmarkpanel.c,
-   src/bookmarkpanel.h, src/preferencesdialog.c, src/settings.c,
-   src/window.c, wscript:
-   Add a Bookmark side panel.
-
-
-2009-05-18  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/window.c, src/common.h:
-   Make use of the G_GNUC_PRINTF() macro.
-
-
-2009-05-17  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/backendgvfs.c:
-   Use a counter with a timeout for a more accurate approximation
-   of finished network browsing.
- * New release: Gigolo 0.3.2.
-
-
-2009-04-14  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/browsenetworkpanel.c:
-   Show 'No Workgroups/Hosts/Shares found' messages in the network
-   browser if appropriate.
-   Expand the nodes in the network browser on the fly while they are
-   added.
- * src/backendgvfs.c, src/bookmarkeditdialog.c:
-   Use gtk_list_store_insert_with_values() instead of
-   gtk_list_store_append() and gtk_list_store_set().
-
-
-2009-04-09  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/bookmarkdialog.c, src/window.c, src/window.h, src/backendgvfs.c,
-   src/backendgvfs.h, src/main.c, src/bookmarkeditdialog.c,
-   src/browsenetworkpanel.c, src/common.h:
-   Rework the whole network browsing code:
-   Since GVfs doesn't auto-mount smb:// anymore by default, we need
-   to mount it manually if necessary in order to be able to use it.
-
-
-2009-04-06  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/browsenetworkpanel.c:
-   Fix wrongly opening the Connect dialog when clicking on domains
-   without hosts in the Browse Network panel.
-
-
-2009-04-04  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/window.c:
-   Move the view mode options back directly into the View menu.
- * New release: Gigolo 0.3.1.
-
-
-2009-04-01  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/window.c:
-   Present the main window when the status icon is removed.
- * src/backendgvfs.c, src/backendgvfs.h, src/browsenetworkpanel.c:
-   Fix build for GTK 2.12.
- * src/preferencesdialog.c, src/window.c:
-   Make the connection list view mode options in the preferences dialog
-   and in the main window's View menu more unique.
-
-
-2009-04-02  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/window.c:
-   Set the 'is-important' flag for actions 'Bookmark' and
-   'EditBookmarks'.
-
-
-2009-03-31  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * New release: Gigolo 0.3.0.
-
-
-2009-03-29  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/main.c, src/window.c:
-   Minimise to tray on delete-event (close button) instead of
-   when minimising the main window.
- * src/backendgvfs.c, src/backendgvfs.h, src/browsenetworkpanel.c,
-   src/preferencesdialog.c, src/settings.c, src/window.c, src/window.h:
-   Add a new preference to set whether to show error message dialogs
-   when auto-connecting bookmarks.
-
-
-2009-03-26  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/settings.c:
-   When starting without an existing configuration, check whether
-   GIO_USE_VOLUME_MONITOR is set and if so, use its value as default.
- * src/backendgvfs.c:
-   Don't show error message dialog when auto-connecting bookmarks.
- * src/bookmark.c:
-   Improve extracting the share name of an URI.
-   Extract also domain names from usernames (e.g.
-   "smb://mydomain;myusername@host/share").
-   Extract share names only for smb:// URIs.
- * src/backendgvfs.c, src/bookmark.c, src/bookmark.h,
-   src/browsenetworkpanel.c, src/common.c, src/common.h, src/main.c,
-   src/main.h, src/settings.c, src/window.c:
-   Refactor some code.
- * tests/uri_parsing.c, configure, waf, wscript:
-   Add tests for the URI parsing code.
-
-
-2009-03-22  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/bookmarkdialog.c, src/bookmarkdialog.h, src/bookmarkeditdialog.c,
-   src/bookmarkeditdialog.h, src/browsenetworkpanel.c,
-   src/browsenetworkpanel.h, src/window.c:
-   Pass a GigoloWindow instance as parent argument instead of a
-   GtkWindow instance because we actually require a GigoloWindow.
-
-
-2009-03-21  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/bookmarkdialog.c, src/bookmarkdialog.h, src/bookmarkeditdialog.c,
-   src/bookmarkeditdialog.h, src/browsenetworkpanel.c,
-   src/preferencesdialog.c, src/window.c, src/window.h:
-   Add gigolo_window_get_settings() to not have to pass the settings
-   object to so many other classes.
- * src/window.c:
-   Add a View menu to quickly change GUI preferences.
- * src/main.c, src/preferencesdialog.c:
-   Disable the 'Start Minimized' checkbox when showing the Status Icon
-   is disabled to prevent a window-less process.
-
-
-2009-03-20  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * po/POTFILES.in, src/browsenetworkpanel.c,
-   src/browsenetworkpanel.h, src/Makefile.am, src/window.c, wscript:
-   Remove the 'Browse Network' dialog and add a side panel instead to
-   show a list of Samba shares/workgroups.
- * src/browsenetworkpanel.c, src/preferencesdialog.c, src/settings.c,
-   src/window.c:
-   Add a preference to show/hide the 'Browse Network' side panel.
-
-
-2009-03-19  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/browsenetworkdialog.c, src/backendgvfs.c, src/backendgvfs.h:
-   When browsing the network for Samba shares, first query "smb://"
-   for workgroups, then query each workgroup for hosts and then
-   the found hosts for shares.
-
-
-2009-03-17  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * gigolo.1.in, src/Makefile.am, src/main.c, src/singleinstance.c,
-   src/singleinstance.h, wscript:
-   Detect an already running instance and show its window instead of
-   starting a new instance.
-   Add command line option "--new-instance" ("-i") to restore the
-   old behaviour.
- * src/browsenetworkdialog.c:
-   Disable the Connect and Create Bookmark actions in the 'Browse
-   Network' dialog on parent items.
- * src/bookmarkdialog.c:
-   Use a Close button to close the dialog instead of a OK button.
- * src/browsenetworkdialog.c, src/window.c, src/window.h:
-   Disable the 'Create Bookmark' action in the 'Browse Network' dialog
-   when the selected share is already bookmarked.
-
-
-2009-03-05  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/backendgvfs.c, src/backendgvfs.h, src/bookmarkeditdialog.c,
-   src/browsenetworkdialog.c, src/browsenetworkdialog.h, src/main.c,
-   src/Makefile.am, src/window.c, src/window.h, wscript:
-   Implement 'Browse Network' dialog to browse a Samba/Windows network
-   for available hosts and shares.
-
-
-2009-03-02  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/common.c, src/bookmarkeditdialog.c:
-   Add a separate service type for Obex connections in the
-   Connect/Bookmark Edit dialogs.
- * src/window.c:
-   Add Online Help and Supported Protocols help menu items.
-
-
-2009-03-01  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * po/POTFILES.in, src/Makefile.am, src/backendgvfs.c,
-   src/backendgvfs.h, src/compat.c, src/compat.h, src/mountoperation.c,
-   src/mountoperation.h, src/window.c, wscript:
-   Use the native GtkMountOperation dialog when additional
-   authentication information are needed.
-   This implicitly allows choosing the method to store passwords
-   (never, session, forever).
- * src/backendgvfs.c, src/backendgvfs.h, src/bookmarkeditdialog.c:
-   Implement browsing for smb shares in the Connect/Bookmark Edit
-   dialogs to easily select them.
- * src/bookmark.c:
-   Fix creation of smb:// URIs from bookmarks when a domain is set but
-   no username.
- * src/backendgvfs.c, src/backendgvfs.h, src/main.c,
-   src/bookmarkeditdialog.c:
-   Add gigolo_backend_gvfs_get_supported_uri_schemes() and use it to
-   avoid calling GIO/GVfs functions outside of the backend class.
-
-
-2009-02-28  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/backendgvfs.c:
-   Cache the domain string when it is passed to the password dialog.
- * src/backendgvfs.c, src/backendgvfs.h, src/bookmark.c,
-   src/passworddialog.c, src/passworddialog.h, src/window.c:
-   Instead of passing a stored domain value to the password dialog,
-   pass it already in the URI while connecting.
-
-
-2009-02-22  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * New release: Gigolo 0.2.1.
-
-
-2009-02-16  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/bookmarks.c:
-   Don't strip the square brackets when parsing Obex URIs to prevent
-   storing invalid URIs.
- * src/window.c:
-   Fix a wrong check when checking for existing bookmarks, fixes always
-   disabled 'Create Bookmark' menu item.
- * src/backendgvfs.c, src/bookmark.c, src/bookmark.h,
-   src/bookmarkeditdialog.c, src/window.c:
-   Escape the userinfo part of URIs to allow at-signs.
-
-
-2009-02-13  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/preferencesdialog.c:
-   Don't modify the colours of the Xfce header widget.
- * New release: Gigolo 0.2.0.
-
-
-2009-02-09  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/main.c:
-   Fix missing startup completion notification when
-   "start-in-systray" is used.
- * src/backendgvfs.c, src/bookmark.c, src/bookmarkdialog.c,
-   src/bookmarkeditdialog.c, src/menubuttonaction.c, src/mountdialog.c,
-   src/passworddialog.c, src/preferencesdialog.c, src/settings.c,
-   src/window.c:
-   Use the G_DEFINE_TYPE() macro to generate the *_get_type() code.
- * src/window.c, src/backendgvfs.c, src/mountdialog.c,
-   src/bookmarkdialog.c, src/preferencesdialog.c:
-   Prefer 'Connect' to 'Mount' in user-visible strings for consistency.
- * src/window.c:
-   Remember the main window's show state and don't query the window's
-   maximised state on exit when it is not shown at all.
-
-
-2009-02-04  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/bookmarkeditdialog.c:
-   Prevent setting an invisible/unsupported item in the scheme combo
-   box, fallback to Custom Location.
-
-
-2009-01-31  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * *.*:
-   Change application name to 'Gigolo'.
-   Rename everything to 'Gigolo'.
- * waf, wscript:
-   Update to Waf 1.5.3 and use new syntax in the wscript.
-
-
-2009-01-26  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/window.c:
-   Make 'Connect' insensitive for connected resources.
-   Allow also mounting resources by toggling the 'Mounted' checkbox.
- * src/backendgvfs.c:
-   Ignore empty CDs which are listed as mounted by GVfs.
-
-
-2009-01-25  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/main.c, src/preferencesdialog.c, src/window.c:
-   Add an option to start minimized.
- * src/bookmarkeditdialog.c, src/common.c:
-   Add a hack to make the 'davs://' scheme also available even if GVfs
-   tells to not support it (GVfs bug #538461).
- * README, sion.1.in, src/main.c, src/window.c:
-   Fix spelling of GVfs.
- * po/POTFILES.in, src/Makefile.am, src/backendgvfs.c,
-   src/backendgvfs.h, src/common.c, src/common.h,
-   src/mountdialog.c, src/mountdialog.h, src/preferencesdialog.c,
-   src/window.c, src/window.h:
-   Show a progressbar dialog when mounting bookmarks.
-   Move sion_get_application_icon_name() to common.c.
-   Some minor cleanups.
- * src/window.c:
-   Allow unmounting resources by toggling the 'Mounted' checkbox.
-
-
-2009-01-19  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/main.c:
-   Print version information when running in verbose mode.
- * src/window.c:
-   Add a 'Copy URI' menu item to the actions menu.
- * src/settings.c, src/settings.h, src/window.c:
-   Save settings when the preferences dialog is closed.
-   Save bookmarks when the bookmark dialog is closed and when a new
-   bookmark was created using the connection menu.
-
-
-2009-01-12  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/main.c:
-   Make user-defined keyboard shortcuts for menu items persistent.
- * src/preferencesdialog.c:
-   Add a separator between the heading and the content in the prefs
-   dialog to make it look more like the original.
- * src/window.c:
-   Add tooltips for toolbar items.
-
-
-2009-01-11  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/backendgvfs.c:
-   Fix crashes with older GVFS versions
-   (#4794, patch by Colin Leroy, thanks).
- * src/bookmarkdialog.c, src/preferencesdialog.c, src/settings.c,
-   src/window.c:
-   Make bookmark auto connect interval configurable.
- * src/bookmarkeditdialog.c:
-   Hide auto connect label also for the Connect dialog.
-   Fix mnemonics.
- * src/window.c:
-   Fix 'Minimize to tray'.
- * src/backendgvfs.c, src/bookmark.c, src/bookmarkdialog.c, src/main.c,
-   src/bookmarkeditdialog.c, src/common.c, src/menubuttonaction.c,
-   src/passworddialog.c, src/settings.c, src/window.c, wscript:
-   Change used comments to multi-line variants.
-   Add -ansi to debug compile flags.
-
-
-2009-01-10  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/bookmarkeditdialog.c:
-   Fix "This bookmark already exists" warning when editing an existing
-   bookmark (patch by Colin Leroy, thanks).
- * THANKS, src/bookmark.c, src/bookmark.h, src/settings.c:
-   Try to connect to auto-connect bookmarks at startup and every
-   minute. Clicking Disconnect cancels autoconnection for the
-   running instance (patch by Colin Leroy, thanks).
-
-
-2009-01-06  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/bookmarkdialog.c, src/bookmarkeditdialog.c,
-   src/bookmarkeditdialog.h, src/window.c:
-   Don't allow entering duplicate bookmark names.
-   When any input was missing or wrong in the Bookmark Edit dialog, put
-   the input focus back to the text entry which failed.
- * src/bookmark.c:
-   Allow '@' in usernames when parsing URIs.
-
-
-2009-01-02  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/compath.c, src/compat.h:
-   Add sion_toolbar_set_orientation().
- * src/bookmarkeditdialog.c, src/window.c:
-   Fix a few strings.
- * First public release: Sion 0.1.0
-
-
-2008-12-30  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/backendgvfs.c, src/bookmarkdialog.c, src/bookmarkeditdialog.c,
-   src/compat.c, src/compat.h, src/main.c, src/menubuttonaction.c,
-   src/passworddialog.c, src/preferencesdialog.c, src/window.c, wscript:
-   Enable more compiler warning options and fix some warnings.
- * src/preferencesdialog.c:
-   Add a label for the HAL/Unix volume manager setting to make clearer
-   what the setting is about.
-   Redesign the dialog using a notebook tabs instead of frames for the
-   various settings.
-
-
-2008-12-29  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/common.c, src/common.h, src/bookmark.c, src/window.c:
-   Don't add the port number to URIs when it is the default port number.
-   Fix 'Create Bookmark' sensitiveness.
-   When using 'Create Bookmark' show a dialog to edit the new bookmark
-   before saving it.
- * src/bookmarkdialog.c, src/bookmarkeditdialog.c, src/window.c,
-   src/bookmarkeditdialog.h, src/common.c, src/common.h, src/window.h:
-   Move sion_error_dialog() into common.c.
-   Implement basic input validation for the Bookmark Edit dialog.
-
-
-2008-12-28  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * wscript, Makefile.am:
-   Install additional documentation files by default (README, ...).
-
-
-2008-12-21  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/bookmark.c:
-   Fix crash when parsing an URI without a proper scheme (bug #4730).
- * src/window.c:
-   Minimise to tray if enabled.
- * src/menubuttonaction.c:
-   Emit the "button-clicked" only if a toolbar button was clicked.
-
-
-2008-12-19  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/Makefile.am, README, configure.ac, Makefile.am, autogen.sh:
-   Add support for building Sion with autotools.
- * configure:
-   Remove coloured output.
-   Remove unnecessary checks and code and avoid using 'which'.
- * src/window.c:
-   Sort bookmarks always automatically.
-
-
-2008-12-18  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * waf, wscript:
-   Update waf, make use of its 'gnu_dirs' tool and fix some minor
-   issues.
-
-
-2008-12-14  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * src/window.c:
-   Fix missing clicked callback for the Connect toolbar button.
-   Various small fixes and cleanup.
- * src/bookmarkeditdialog.c, src/bookmark.c:
-   Allow empty values for usernames.
- * src/backendgvfs.c, src/backendgvfs.h, src/bookmark.c,
-   src/bookmarkeditdialog.c, src/bookmark.h, src/passworddialog.c,
-   src/passworddialog.h, src/settings.c:
-   Use default username and domain name provided by GVFS in the password
-   dialog.
-   Add domain and share fields for bookmarks to improve Samba support.
- * src/bookmarkeditdialog.c:
-   Display share and domain fields in the bookmark dialog.
- * src/backendgvfs.c, src/bookmarkdialog.c, src/bookmarkeditdialog.c,
-   src/common.c, src/common.h, src/window.c:
-   Use more descriptive strings when displaying URI schemes.
-
-
-2008-12-13  Enrico Tröger  <enrico(at)xfce(dot)org>
-
- * configure, Makefile, src/Makefile:
-   Fix creation of the Makefile and usage of --prefix=...
- * src/settings.c:
-   Use "gvfs-open" as default file manager command.
-
+    Fix displayed URI/bookmark name in the mount progress dialog
+
+commit 20420e53a50e643ff88c382bd6209d26c73f532f
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Jul 26 20:11:19 2010 +0200
+
+    Ensure bookmark name is not empty
+
+commit 6a01eb372a7235fc933d0a3bce0aa9b520920ccb
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Jul 26 20:02:56 2010 +0200
+
+    Allow finishing the Connect / Bookmark Edit dialog by pressing Enter
+
+commit c1dfb5c2c3bdaad9e165233b696d4a03640704d1
+Author: Leandro Regueiro <leandro.regueiro@gmail.com>
+Date:   Wed Jul 7 13:00:59 2010 +0200
+
+    l10n: Updated Galician (gl) translation to 100%
+    
+    New status: 130 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 2aeee3ce42f6cc17da316677d94c2c492e82927e
+Author: Yarema aka Knedlyk <yupadmin@gmail.com>
+Date:   Sat Jul 3 18:16:48 2010 +0200
+
+    l10n: Updated Ukrainian (uk) translation to 96%
+    
+    New status: 126 messages complete with 0 fuzzies and 4 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 14b7755a7b86f45b66789a998b60d469b86f98c1
+Author: Yarema aka Knedlyk <yupadmin@gmail.com>
+Date:   Fri Jul 2 17:06:41 2010 +0200
+
+    l10n: Updated Ukrainian (uk) translation to 94%
+    
+    New status: 123 messages complete with 0 fuzzies and 7 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit ad0e7fd7aa27154f8e79728610db90fe09622ac2
+Author: Yarema aka Knedlyk <yupadmin@gmail.com>
+Date:   Thu Jul 1 15:16:58 2010 +0200
+
+    l10n: Updated Ukrainian (uk) translation to 86%
+    
+    New status: 113 messages complete with 0 fuzzies and 17 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit f8fc5878c7615556baa66d741164265cf0b913e0
+Author: Yarema aka Knedlyk <yupadmin@gmail.com>
+Date:   Tue Jun 29 01:15:43 2010 +0200
+
+    l10n: Updated Ukrainian (uk) translation to 70%
+    
+    New status: 91 messages complete with 0 fuzzies and 39 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 356218c97963ea413240bb15a8cc7251719c2b96
+Author: Ivica  Kolić <ikoli@yahoo.com>
+Date:   Fri Jun 11 19:37:01 2010 +0200
+
+    l10n: Updates to Croatian (hr) translation
+    
+    New status: 115 messages complete with 0 fuzzies and 15 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit c633a755a0b9144ae780f5821a2cba17ef8ec2f5
+Author: Ivica  Kolić <ikoli@yahoo.com>
+Date:   Thu Jun 10 00:18:21 2010 +0200
+
+    l10n: Updates to Croatian (hr) translation
+    
+    New status: 115 messages complete with 0 fuzzies and 15 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit f0e8e11161d7dfad267ed8d6b99f6e432041b0fb
+Author: Ivica  Kolić <ikoli@yahoo.com>
+Date:   Thu Jun 3 19:35:43 2010 +0200
+
+    l10n: Initial Croatian (hr) translation
+    
+    New status: 115 messages complete with 0 fuzzies and 15 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 5f698929c1b791f29024f78468eb9a8454d59e76
+Author: Ayhan YALÇINSOY <ayhanyalcinsoy@gmail.com>
+Date:   Mon May 31 19:47:03 2010 +0200
+
+    l10n: Updated Turkish (tr) translation to 100%
+    
+    New status: 130 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 51e56a767db8219e4b2395b908a6afe2a13e56ac
+Author: Andhika Padmawan <andhika.padmawan@gmail.com>
+Date:   Mon May 31 18:08:59 2010 +0200
+
+    l10n: Updated Indonesian (id) translation to 100%
+    
+    New status: 130 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 46126656c50ade2517ed7e411a6c423abce98be0
+Author: Andhika Padmawan <andhika.padmawan@gmail.com>
+Date:   Mon May 31 17:57:57 2010 +0200
+
+    l10n: Updated Indonesian (id) translation to 100%
+    
+    New status: 133 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 9e9907915cbc0346975c57dd8e8d642cfaea12dd
+Author: Johannes Lips <johannes.lips@googlemail.com>
+Date:   Sat May 29 22:30:27 2010 +0200
+
+    l10n: Updated German (de) translation to 99%
+    
+    New status: 129 messages complete with 1 fuzzy and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit aeba2e4f5097ff091501814ea943d5b0c23b0a38
+Author: Johannes Lips <johannes.lips@googlemail.com>
+Date:   Sat May 29 22:28:28 2010 +0200
+
+    l10n: Updated German (de) translation to 99%
+    
+    New status: 129 messages complete with 1 fuzzy and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 8a398a64fceba51a66c51475e8cee0017c3f5f1f
+Author: Johannes Lips <johannes.lips@googlemail.com>
+Date:   Sat May 29 22:27:16 2010 +0200
+
+    l10n: Updated German (de) translation to 98%
+    
+    New status: 128 messages complete with 2 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 1c51196f0c9db0a1cb3fb846b2182f994b2f19a2
+Author: Gheyret Kenji <gheyret@yahoo.com>
+Date:   Wed May 26 10:18:18 2010 +0200
+
+    l10n: Updated Uyghur (ug) translation to 85%
+    
+    New status: 115 messages complete with 0 fuzzies and 19 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 6827ccc11257160fb8a54b7ddcccabba5c0bf044
+Author: Gheyret Kenji <gheyret@yahoo.com>
+Date:   Fri May 21 09:46:30 2010 +0200
+
+    l10n: Uyghur Translation
+    
+    New status: 18 messages complete with 0 fuzzies and 116 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 515b3f7279bde3c0ad25e06680c115ef2df07ab3
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Thu Apr 29 18:01:29 2010 +0200
+
+    Improve generation of po/LINGUAS file
+
+commit 8a1d9f5f0259f15391c912e029bc8df446045a0d
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Thu Apr 29 17:56:37 2010 +0200
+
+    Completely remove the preference to select the Volume Manager implementation
+    
+    Since GVfs doesn't provide HAL anymore but uses GDU now, we remove the preference to not provide hard-coded defaults.
+
+commit 40d41f20328d44c73a91d670d3e173d4e22572f6
+Author: Dmitry Nikitin <luckas_fb@mail.ru>
+Date:   Fri Mar 26 19:12:28 2010 +0100
+
+    l10n: Add Ukrainian translation fo Gigolo.
+    
+    New status: 76 messages complete with 0 fuzzies and 58 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit fd69272bb976740daced82ef48d32244fa76dde7
+Author: Rihards Prieditis <rprieditis@gmail.com>
+Date:   Thu Mar 25 23:02:27 2010 +0100
+
+    l10n: Updated Latvian (lv) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 6a0cd5702a24d14b87285ca6e5aab3c8d65e926c
+Author: Abel Martín <abel.martin.ruiz@gmail.com>
+Date:   Sat Mar 20 18:47:45 2010 +0100
+
+    l10n: Updated Spanish (Castilian) (es) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 4cfd2320d9db3fc6e5c4f635774c619fcbe01c93
+Author: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>
+Date:   Sat Mar 20 13:48:36 2010 +0100
+
+    l10n: Add Finnish translation
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 308b18322a47b9df601818b30478143162ebad99
+Author: Michal Várady <miko.vaji@gmail.com>
+Date:   Mon Mar 15 20:35:34 2010 +0100
+
+    l10n: Updated Czech (cs) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 29d3881370fcc63dc1aa0ece3194d7d848a2f6db
+Author: Bauzhan Muftakhidinov <baurthefirst@gmail.com>
+Date:   Fri Mar 12 05:47:28 2010 +0100
+
+    l10n: New translation to Kazakh
+    
+    New status: 44 messages complete with 0 fuzzies and 90 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit a1f652b4d23211c373ac23d4cdeb706ec4acb8ec
+Author: gianluca foddis <gianluca.foddis@gmail.com>
+Date:   Wed Mar 3 15:56:08 2010 +0100
+
+    l10n: Updated Italian (it) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 56cf1f9d1aaf665ad82d2b24b91ffafac293a3dd
+Author: Christoph Wickert <christoph.wickert@googlemail.com>
+Date:   Tue Mar 2 20:59:16 2010 +0100
+
+    l10n: Updated German (de) translation to 98%
+    
+    New status: 132 messages complete with 2 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 96a075bcb73a2dc3222058f72b55b43b17c0601b
+Author: Christoph Wickert <christoph.wickert@googlemail.com>
+Date:   Tue Mar 2 20:57:10 2010 +0100
+
+    l10n: Updated German (de) translation to 98%
+    
+    New status: 132 messages complete with 2 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 4f7b5c39a763ec8b814adce091b229125a222420
+Author: Christoph Wickert <christoph.wickert@googlemail.com>
+Date:   Tue Mar 2 20:53:10 2010 +0100
+
+    l10n: Updated German (de) translation to 96%
+    
+    New status: 129 messages complete with 3 fuzzies and 2 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 77c89eb28d275aff8526fa1ddfdaf03ba17609b9
+Author: Aleksandr Ponomarenko <dwqwt3i02@sneakemail.com>
+Date:   Tue Feb 16 17:57:43 2010 +0100
+
+    l10n: Updated Russian (ru) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 7d0a97996da6da27521f1b1e33981c6425d9aea3
+Author: Alexey Batiuk <alexey.batiuk@gmail.com>
+Date:   Tue Feb 16 10:09:30 2010 +0100
+
+    l10n: Updated Russian (ru) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 44a6acd26a7013393da6e7be69a0b613e1fd14be
+Author: Alexey Batiuk <alexey.batiuk@gmail.com>
+Date:   Tue Feb 16 10:08:34 2010 +0100
+
+    l10n: Updated Russian (ru) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 0a0c25ba5b01c8118ecf976b3b9d8f6d11d2af5e
+Author: douart patrick <patrick.2@laposte.net>
+Date:   Thu Feb 11 15:10:15 2010 +0100
+
+    l10n: Updated French (fr) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 692b9551db9c8aaec5425c82c2d4fd50b784914a
+Author: douart patrick <patrick.2@laposte.net>
+Date:   Tue Feb 9 22:43:30 2010 +0100
+
+    l10n: Updated French (fr) translation to 99%
+    
+    New status: 133 messages complete with 1 fuzzy and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit fb3a2ce5c82dfbe609b5cd3e87af753c6e2ca8c9
+Author: Piarres Beobide <pi@beobide.net>
+Date:   Tue Feb 9 11:34:15 2010 +0100
+
+    l10n: Updated Basque (eu) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 4fa7e26a56acd874c71b2ad7e231fa66881067b2
+Author: Gabor Kelemen <kelemeng@gnome.hu>
+Date:   Fri Feb 5 00:54:18 2010 +0100
+
+    l10n: Updated Hungarian (hu) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 04c35782b1ce9e7e70fc18212fe1323913cc7286
+Author: Timo Verbeek <timoverbeek10@hotmail.com>
+Date:   Wed Feb 3 19:28:50 2010 +0100
+
+    l10n: Updated Dutch (Flemish) (nl) translation to 94%
+    
+    New status: 126 messages complete with 8 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 3bfba3bc5ab1f83c3f03e233e266344710937035
+Author: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>
+Date:   Fri Jan 29 22:19:39 2010 +0100
+
+    l10n: Updated Greek (el) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit f14d3b9e98b274dd6328b2b2fd3d221cc1c50a94
+Author: Piarres Beobide <pi@beobide.net>
+Date:   Fri Jan 29 08:58:44 2010 +0100
+
+    l10n: Updated Basque (eu) translation to 99%
+    
+    New status: 133 messages complete with 0 fuzzies and 1 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 7e4fa6285ab7c70fba0aedabb27066583f11e19d
+Author: Xu Meihong <mhuntxu@gmail.com>
+Date:   Fri Jan 22 07:25:44 2010 +0100
+
+    l10n: Updated Chinese (China) (zh_CN) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit a080b01b9ae7648ab1ac95f3f80fc98e6b4b74da
+Author: Per Kongstad <p_kongstad@op.pl>
+Date:   Tue Jan 19 10:22:29 2010 +0100
+
+    l10n: Updated Danish (da) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 6826648c4dbd6ab2ab18d1886bf8d3fab9dd62ad
+Author: Harald Servat <redcrash@gmail.com>
+Date:   Mon Jan 18 16:18:36 2010 +0100
+
+    l10n: Updated Catalan (Valencian) (ca) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 868d0d7386f15fd2227268706ccde61a63e27938
+Author: Leandro Regueiro <leandro.regueiro@gmail.com>
+Date:   Mon Jan 18 12:28:06 2010 +0100
+
+    l10n: Updated Galician (gl) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit c2ecc48b3edc10078f65dfd18c4c6cd9c16cf14a
+Author: Sergio Marques <smarquespt@gmail.com>
+Date:   Mon Jan 18 12:24:30 2010 +0100
+
+    l10n: Updated Portuguese (pt) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit d78bdcff2e905bd0dca9a09be949246270e29ad1
+Author: Masato Hashimoto <cabezon.hashimoto@gmail.com>
+Date:   Mon Jan 18 09:02:41 2010 +0100
+
+    l10n: Updated Japanese (ja) translation to 100%
+    
+    New status: 134 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit a4bc10567790f71920d7286f6f791db585d55677
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Jan 18 00:02:27 2010 +0100
+
+    Fix a stupid typo which causes lots of unnecessary casts
+
+commit a95036f97824c682ca2c10ed3deb99195ed3c4eb
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Jan 17 23:59:00 2010 +0100
+
+    Show an error message dialog if the file-manager command failed to execute
+
+commit 7904194c58633270be180e54f660dc62aea778a1
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Jan 17 23:58:16 2010 +0100
+
+    Expand tilde in folder names if a username is set for the bookmark
+
+commit 0ec84f42a1dc3184cab04348b9b0147d95bc4203
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Jan 17 19:03:59 2010 +0100
+
+    Respect the LINGUAS environment variable when configuring the build system
+    
+    This time for the autotools based build
+
+commit fe79d1bf25ac86d5472a1870196f6f72c750dd04
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Jan 17 18:53:45 2010 +0100
+
+    And sort the list of available languages before writing them into the LINGUAS file
+    
+    This is not necessary at all but just nice
+
+commit e8e5b30a18d3bfac3f3b3a7e1d74f80add23f618
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Jan 17 18:49:19 2010 +0100
+
+    Respect the LINGUAS environment variable when configuring the build system
+
+commit c297ecf31ead7ce3b12c17767a2463af88744396
+Author: Michal Várady <miko.vaji@gmail.com>
+Date:   Sun Jan 17 15:50:37 2010 +0100
+
+    l10n: Updated Czech (cs) translation to 100%
+    
+    New status: 133 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit fdd8852c8f15fb52914e5fb791a0b00cc8e4a364
+Author: Michal Várady <miko.vaji@gmail.com>
+Date:   Fri Jan 15 10:11:48 2010 +0100
+
+    l10n: Updated Czech (cs) translation to 99%
+    
+    New status: 132 messages complete with 1 fuzzy and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 055d6bef5ce3dc42f1bf8dfb6a9012004303915a
+Author: Nick Schermer <nick@xfce.org>
+Date:   Thu Jan 14 19:39:57 2010 +0100
+
+    l10n: Overwrite wrong commit.
+    
+    New status: 122 messages complete with 8 fuzzies and 3 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 6e58a33843be42a7513b37040aa2d28f5ae2c03e
+Author: Xu Meihong <mhuntxu@gmail.com>
+Date:   Thu Jan 14 15:30:33 2010 +0100
+
+    l10n: Updated Chinese (China) (zh_CN) translation to 100%
+    
+    New status: 133 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit c763f88bf776ed9a59394475fe6fe740f3a54cf5
+Author: Timo Verbeek <timoverbeek10@hotmail.com>
+Date:   Wed Jan 13 20:43:10 2010 +0100
+
+    l10n: Updated Dutch (Flemish) (nl) translation to 78%
+    
+    New status: 105 messages complete with 26 fuzzies and 2 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 5afe22c3bf580bc7b31a8e3b8a199ce8d796b7c4
+Author: Timo Verbeek <timoverbeek10@hotmail.com>
+Date:   Wed Jan 13 19:21:37 2010 +0100
+
+    l10n: Dutch one
+    
+    New status: 121 messages complete with 9 fuzzies and 3 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit a97d87e5218ff6e143deb2daeae3ce601f26711e
+Author: Aleksandr Ponomarenko <dwqwt3i02@sneakemail.com>
+Date:   Tue Jan 12 23:11:19 2010 +0100
+
+    l10n: Updated Russian (ru) translation to 100%
+    
+    New status: 133 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 96e1b9e97030681396c0bb3e25f2340cbec1695b
+Author: Aleksandr Ponomarenko <dwqwt3i02@sneakemail.com>
+Date:   Mon Jan 11 23:36:35 2010 +0100
+
+    l10n: Updated Russian (ru) translation to 100%
+    
+    New status: 133 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit cc3fd4763e3e32c18c07c3131d5457d7c1e49244
+Author: Aleksandr Ponomarenko <dwqwt3i02@sneakemail.com>
+Date:   Mon Jan 11 23:35:29 2010 +0100
+
+    l10n: Updated Russian (ru) translation to 100%
+    
+    New status: 133 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 39e83cc35ad78030714af14e1ec7bc6d964ca2cc
+Author: Aleksandr Ponomarenko <dwqwt3i02@sneakemail.com>
+Date:   Mon Jan 11 23:31:45 2010 +0100
+
+    l10n: Made a complete translation, since upstream seems missing.
+    
+    New status: 133 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
+
+commit 54d6562ec38013b99b617162ca0907a30bdabddc
+Author: Leandro Regueiro <leandro.regueiro@gmail.com>
+Date:   Thu Jan 7 17:48:40 2010 +0100
+
+    l10n: Updates to Galician (gl) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 06bb7de30c40f45df9d2ff39f198d803120e15dc
+Author: Sergio Marques <smarquespt@gmail.com>
+Date:   Wed Jan 6 13:31:18 2010 +0100
+
+    l10n: Updates to Portuguese (pt) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit deef56e58e12b469159c324bced806e502f60931
+Author: Masato Hashimoto <cabezon.hashimoto@gmail.com>
+Date:   Wed Jan 6 08:52:58 2010 +0100
+
+    l10n: Updates to Japanese (ja) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit d8dfb18feedb69ace72c2272c7399abbf7e77c7a
+Author: Harald Servat <redcrash@gmail.com>
+Date:   Tue Jan 5 12:48:14 2010 +0100
+
+    l10n: Updates to Catalan (Valencian) (ca) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 7d976619e90264bb9c402d4dfabf2986dc1c422d
+Author: Harald Servat <redcrash@gmail.com>
+Date:   Tue Jan 5 12:42:25 2010 +0100
+
+    l10n: Updates to Catalan (Valencian) (ca) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 01d2bf87a59a081e70993442cc9a6b3e52727e44
+Author: Per Kongstad <p_kongstad@op.pl>
+Date:   Mon Jan 4 14:37:43 2010 -0500
+
+    l10n: Updates to Danish (da) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit a0693101b2b8da314cd75e51d616f80aa7036b58
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Jan 4 20:31:27 2010 +0100
+
+    Delete pot file
+
+commit 27e937deb35cebc44be25c4c9a01aff4487e1348
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Fri Jan 1 16:49:33 2010 +0100
+
+    Remove old SVN Id keywords
+
+commit f2d0680203cadc9b219e7f5d10c02af4c04318c1
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Fri Jan 1 16:48:14 2010 +0100
+
+    Update copyright information
+
+commit aa007dfb73c1e49b40f61426f0410e5b3c9acec3
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Thu Dec 31 14:31:40 2009 +0100
+
+    Turn on automake silent rules if supported
+
+commit f2ce31e3436ae5a6541b4b253be526057f7d6d0f
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Thu Dec 31 01:45:58 2009 +0100
+
+    New release: 0.4.0
+
+commit 364e5cefb7b38515960dda80bd1643d5a4f697ee
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Dec 20 12:03:38 2009 +0100
+
+    Re-add gigolo.pot file due to some Transiflex problems
+
+commit 070861cb45aed9ee680f3e22a6180d00a74eff59
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sat Dec 19 19:43:55 2009 +0100
+
+    Drop pot file.
+
+commit e049a969b9c951b87b984e9a0da8966177dfc22f
+Author: Leandro Regueiro <leandro.regueiro@gmail.com>
+Date:   Fri Dec 18 12:42:41 2009 +0000
+
+    l10n: Updates to Galician (gl) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 48484f239536bad70d7fd3e0b2be18fa514239a5
+Author: Daniel Nylander <po@danielnylander.se>
+Date:   Wed Dec 16 13:21:15 2009 +0000
+
+    l10n: Updates to Swedish (sv) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 99e3a22fdef64348f9587859599b0b7e0a28a31d
+Author: Xu Meihong <mhuntxu@gmail.com>
+Date:   Wed Dec 16 13:15:50 2009 +0000
+
+    l10n: Updates to Chinese (China) (zh_CN) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 4093355c6fca96a1bd060d8fe455af0f69b31e28
+Author: Harald Servat <redcrash@gmail.com>
+Date:   Tue Dec 15 18:05:46 2009 +0000
+
+    l10n: Updates to Catalan (Valencian) (ca) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit aa903d0af570d1dd994396a9dce706700697fb56
+Author: Nuno Miguel <nunis@netcabo.pt>
+Date:   Tue Dec 15 15:29:13 2009 +0000
+
+    l10n: Updates to Portuguese (pt) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 0b5dcffc32dbc9825998c2e51123828872440f86
+Author: gianluca foddis <gianluca.foddis@gmail.com>
+Date:   Tue Dec 15 14:28:51 2009 +0000
+
+    l10n: Updates to Italian (it) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 51781613b07f73263d49a51bad2c107c41e64471
+Author: Piarres Beobide <pi@beobide.net>
+Date:   Tue Dec 15 11:11:23 2009 +0000
+
+    l10n: Updates to Basque (eu) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 8df26a7d945b2cd4f4c2d634207b9f55920b3289
+Author: Og Maciel <ogmaciel@gnome.org>
+Date:   Mon Dec 14 22:03:04 2009 +0000
+
+    l10n: Updates to Portuguese (Brazilian) (pt_BR) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 73d2650337383c3579d22f5dc7a480fdfa3493ec
+Author: Per Kongstad <p_kongstad@op.pl>
+Date:   Mon Dec 14 21:36:18 2009 +0000
+
+    l10n: Updates to Danish (da) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit dc2ddeec52b8784d9a8aa0c2d5c3021f0215b67f
+Author: Ignacio Velasco <elega@elega.com.ar>
+Date:   Mon Dec 14 21:30:17 2009 +0000
+
+    l10n: Updates to Spanish (Castilian) (es) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit efdc6238fbef64748612cebdaa7a44012d6a32bb
+Author: Per Kongstad <p_kongstad@op.pl>
+Date:   Mon Dec 14 21:21:12 2009 +0000
+
+    l10n: Updates to Czech (cs) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit dfef7eee344434942145c22fa6e8e9c93b8252c2
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Dec 14 19:42:36 2009 +0100
+
+    Update all message catalogues
+
+commit 8c7b5342e7d9142b65d2838492ba8172e332aca7
+Author: Masato Hashimoto <cabezon.hashimoto@gmail.com>
+Date:   Mon Dec 7 14:49:17 2009 +0000
+
+    l10n: Updates to Japanese (ja) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 6dea64dad7bd5067c25197db1d7305a5a934fa13
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Dec 6 11:50:33 2009 +0100
+
+    Use a GMountOperation when mounting volumes (#6047)
+    
+    This should make it possible to mount volumes which require user credentials like a root password.
+    Patch by "herd".
+
+commit daeacd0d20fdaa82da931fb84e956d4067bb4902
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Nov 30 22:25:07 2009 +0100
+
+    Remove useless casts
+
+commit 66ce54855a13f8dafc2881a01312d5a21c66e4de
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Wed Nov 18 22:02:45 2009 +0100
+
+    Strip leading slashes for Share and Path values
+
+commit e90eb6ce2734df9217cd266b1b4578dea6b98d6d
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Wed Nov 18 00:33:22 2009 +0100
+
+    Implement basic version of path component for WebDav URIs. Not really tested yet.
+
+commit 40c55694b2fb0c17f6457075a8a4a50c97da9bf8
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Tue Nov 17 20:36:37 2009 +0100
+
+    Use pkgconfig for the X11 checks
+
+commit 63640a683e95a02dc9e5ec9da2e365c3e754f2a7
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Nov 9 20:19:55 2009 +0100
+
+    Fix wrong check (oops)
+
+commit 4efef6c2109e0e078c0ebc42dc191c8921c5b679
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Nov 9 20:19:27 2009 +0100
+
+    Explicitly check for and link against libX11
+
+commit b0383e25daa8f7ff770f96854abc09aa1f9459e6
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Nov 9 20:16:46 2009 +0100
+
+    Ignore the INSTALL file
+
+commit 6c47c484cec797e9fa154994bd438643699af760
+Author: douart patrick <patrick.2@laposte.net>
+Date:   Fri Oct 16 11:40:55 2009 +0000
+
+    l10n: Updates to French (fr) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 74f0b02503c2b52b40b5c2dc51f9d70dd1fcc9c7
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Wed Oct 14 20:22:58 2009 +0200
+
+    Fix command to determine the available languages to fix the build with autotools
+
+commit 323453c2e311806687055a60032ca5bb531ebf0f
+Merge: f05d445 ff3f303
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Oct 5 19:47:04 2009 +0200
+
+    Merge branch 'master' of ssh://git.xfce.org/git/apps/gigolo
+
+commit f05d445ecbfc8e5ddfb08c2073ec72b6782df520
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Oct 5 19:46:43 2009 +0200
+
+    Minor fixes
+
+commit 4cc13a5a6ca3e29e035896c7225da726b2f58b7d
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Oct 5 19:45:32 2009 +0200
+
+    Properly handle spaces in URIs
+
+commit 1d01283125a224e96a3008dd4e28d92f6c26a7e1
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Mon Oct 5 19:24:07 2009 +0200
+
+    Fix displaying of additional bookmark information in the bookmark dialog
+
+commit ff3f3031e5cf8a3ef302a70aa3af5c4f7b901811
+Author: Masato Hashimoto <cabezon.hashimoto@gmail.com>
+Date:   Mon Oct 5 14:26:26 2009 +0000
+
+    l10n: Updates to Japanese (ja) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit f2957c1f66b82c111f2df571a75a37f17eb6f3ce
+Merge: f8709d9 9391c2f
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Oct 4 21:41:28 2009 +0200
+
+    Merge branch 'master' of ssh://git.xfce.org/git/apps/gigolo
+
+commit f8709d9b463b62abcbeb415b470b32763d1c6a00
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Oct 4 21:39:42 2009 +0200
+
+    Folders may be empty
+
+commit b830b73b2ad0c543177060537f123ae5109bd94c
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Oct 4 21:37:03 2009 +0200
+
+    Display the folder as part of the URI for bookmarks in tooltips
+
+commit dfed14533d77228b05210a80c0a668652abb6202
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Oct 4 21:05:10 2009 +0200
+
+    gigolo_window_find_bookmark_by_uri() => gigolo_settings_get_bookmark_by_uri()
+
+commit eb0479f4910488867007c79b6d7bd56da7c7d1b2
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Oct 4 20:55:39 2009 +0200
+
+    Don't use deprecated GIO API
+
+commit 29b14fe406065f1037effd849d0d7e2c5cc8c7df
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Oct 4 20:50:48 2009 +0200
+
+    Implement folder property for bookmarks
+
+commit 7d95e8a6eebbf5dfa8133441e690a21b8e69a653
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sat Oct 3 18:14:54 2009 +0200
+
+    Change mailing address
+
+commit 9391c2fdf42099e17d341336700f92579d39b76b
+Author: Rihards Prieditis <rprieditis@gmail.com>
+Date:   Fri Oct 2 10:22:44 2009 +0000
+
+    l10n: Added Latvian translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit ef486bbfb7fec71d48dfd99be83c913dfc3098ac
+Merge: f6160b5 cc21695
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Thu Oct 1 21:01:21 2009 +0200
+
+    Merge branch 'master' of ssh://git.xfce.org/git/apps/gigolo
+
+commit f6160b52a5cbaa9f4f043052c50380d8fbe186e6
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Thu Oct 1 20:47:27 2009 +0200
+
+    Drop old code
+
+commit 1d2ef461f33bb2241cd141878285a0f7696466eb
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Thu Oct 1 20:23:23 2009 +0200
+
+    s/SVN/GIT/
+
+commit cc216955a0558b8fbf693dfc0b17d136e7d26012
+Author: Leandro Regueiro <leandro.regueiro@gmail.com>
+Date:   Thu Oct 1 15:09:15 2009 +0000
+
+    l10n: Updates to Galician (gl) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 0b9ad6767fe3a40f2ed17630966b61a499600aef
+Author: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>
+Date:   Sat Sep 5 16:58:34 2009 +0000
+
+    l10n: Updates to Greek (el) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 6de7b9805815378f647fe0335109c8babf90a989
+Author: Robert Hartl <hartl.robert@gmail.com>
+Date:   Mon Aug 31 17:17:29 2009 +0000
+
+    l10n: Slovak translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 1b4936696bb2879842596b5e36edf255dc002b55
+Merge: 148be9b 7c52f45
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Aug 30 12:01:45 2009 +0200
+
+    Merge branch 'master' of ssh://git.xfce.org/git/apps/gigolo
+
+commit 148be9b1f3eb9b44d34af30e7d91cdd35deab6be
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Aug 30 12:01:10 2009 +0200
+
+    Remove autogenerated files from the repository
+
+commit 779d5848c1a68a21588e348c209ccc7a7d8a9ce1
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Aug 30 11:59:11 2009 +0200
+
+    Detect Xfce environment without using 'xprop' tool
+
+commit 7c52f45dac0754e9a723b97e977f976db08cbd23
+Author: Nuno Miguel <nunis@netcabo.pt>
+Date:   Fri Aug 28 18:29:46 2009 +0000
+
+    l10n: Added Portuguese translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 2e6adb27cb88cfde52656706d3ce47949dd57001
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Wed Aug 19 20:41:52 2009 +0200
+
+    Generate LINGUAS file on the fly as it is not maintained anymore
+
+commit 037b10d1fa24b6013ee710516faac2c88ad4789e
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Sun Aug 16 11:29:35 2009 +0200
+
+    Add ignore file
+
+commit a68b2480a3a9f9c111eccfc76111d61f26ee8dbf
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Fri Aug 14 20:27:56 2009 +0200
+
+    Rename module.xml (oops).
+
+commit 5dfcbf6ae7646425a085dc0a66dd539f834e62db
+Author: Enrico Tröger <enrico@xfce.org>
+Date:   Thu Aug 13 19:55:19 2009 +0200
+
+    Add module description file.
+
+commit 039da886cd6fbcf69493d4a1c49835948d5753c5
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Sat Aug 8 13:41:32 2009 +0000
+
+    update goodies translation
+    
+    (Old svn revision: 7896)
+
+commit 4804901d82074f09e93978ce8c8e7899b443ec51
+Author: Piotr Sokól <piotr.sokol@10g.pl>
+Date:   Sat Aug 1 08:36:05 2009 +0000
+
+    Polish translation update
+    
+    
+    (Old svn revision: 7883)
+
+commit 2bcb44eb6b0d193ae96502bacdddf7adce612152
+Author: Gabor Kelemen <kelemeng@gnome.hu>
+Date:   Fri Jul 24 01:03:37 2009 +0000
+
+    2009-07-24  Gabor Kelemen  <kelemeng@gnome.hu>
+    
+    	* hu.po: Translation updated.
+    
+    
+    (Old svn revision: 7788)
+
+commit 51c02c1b8441aeb44388801faaacc37afd5de089
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Thu Jun 18 21:33:43 2009 +0000
+
+    update goodies translations
+    
+    (Old svn revision: 7612)
+
+commit 7ec3d21b98c638067bb0d073049b944713a13e9d
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Wed Jun 17 22:06:33 2009 +0000
+
+    Update to Waf 1.5.8.
+    
+    (Old svn revision: 7606)
+
+commit 494f124cb67d8ef81ddbb2c73071d381c2702b5d
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Wed Jun 17 21:55:08 2009 +0000
+
+    Sync with GTK upstream (see http://git.gnome.org/cgit/gtk+/commit/?id=84a9e65ca3bf407807dbe60c549169810c631601).
+    
+    (Old svn revision: 7605)
+
+commit dc50c372804cb836c5aa0294b170570e1210668b
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Wed Jun 17 21:44:27 2009 +0000
+
+    Properly clean up on destruction.
+    
+    (Old svn revision: 7604)
+
+commit 2ba2864d96f91881d72b16f330620ff48dd7b259
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Wed Jun 17 21:34:07 2009 +0000
+
+    When querying Samba shares in the Connect/Bookmark Edit dialog, mount smb://hostname as necessary.
+    
+    (Old svn revision: 7603)
+
+commit afb04d3143e440d4daa6f74b5949312aac9ada90
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Mon Jun 15 12:37:13 2009 +0000
+
+    update translations
+    
+    (Old svn revision: 7578)
+
+commit 92ba66c7cd327865968eb3be1b7ff262b4998360
+Author: Masato Hashimoto <cabezon.hashimoto@gmail.com>
+Date:   Sat Jun 13 15:57:06 2009 +0000
+
+    Update ja translation
+    
+    
+    
+    (Old svn revision: 7555)
+
+commit eb96d5eed6288e6e8080ee3032342039d2cf9646
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jun 13 09:39:52 2009 +0000
+
+    Move definition of a variable to fix non-debug build of the test suite.
+    
+    (Old svn revision: 7551)
+
+commit dbcdea71c3d917a022abc87e06934b4b3de09a2b
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Jun 11 08:37:41 2009 +0000
+
+    Spanish translation update (Elega)
+    
+    (Old svn revision: 7527)
+
+commit 2b66516aa4b9f28b4a3f49bf4cbb130fd32f676b
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Tue Jun 9 20:43:09 2009 +0000
+
+    Drop svn:executable bit from po files
+    
+    (Old svn revision: 7518)
+
+commit 5f9cf4b21da1db9ebfa5fc870b9ebc555279a8ba
+Author: Michal Varady <miko.vaji@gmail.com>
+Date:   Sun Jun 7 15:26:30 2009 +0000
+
+    Czech translation updated, terminology improved, mistakes fixed
+    
+    (Old svn revision: 7500)
+
+commit c6c7c749814f8175e9a9e34eecd486fd05c3bf27
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jun 6 16:24:29 2009 +0000
+
+    Simplify the code a bit.
+    
+    (Old svn revision: 7480)
+
+commit 264a0cb2e577568ab36d83688c595a3ac2e64187
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jun 6 16:12:04 2009 +0000
+
+    Adjust tooltip for the 'Show side panel' option.
+    
+    (Old svn revision: 7479)
+
+commit 501fd9dd8ddc7e0a24802c4e529be2850a4b2351
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jun 6 16:09:26 2009 +0000
+
+    Update the popup menu after editing bookmarks.
+    
+    (Old svn revision: 7478)
+
+commit 923031b72cfb351b35b3b4201d1f767c1e089ce1
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jun 6 16:09:21 2009 +0000
+
+    Add descriptions for "archive" and "gphoto2" schemes.
+    
+    (Old svn revision: 7477)
+
+commit 22a965331e763825857df86e7559394349e22f1b
+Author: Piarres Beobide <pi@beobide.net>
+Date:   Thu Jun 4 21:04:58 2009 +0000
+
+    Gigolo basque translation added
+    
+    
+    (Old svn revision: 7460)
+
+commit 96ca9f0381b4cf0379025890a863a37a4393ab6a
+Author: SZERVÁC Attila <sas@321.hu>
+Date:   Thu Jun 4 14:13:28 2009 +0000
+
+    [intl:hu] add some new goodies/trunk hu.po
+    
+    (Old svn revision: 7457)
+
+commit 3fe6d30afff3b91e6606911968a80a64e0079c48
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Fri May 29 10:44:34 2009 +0000
+
+    update goodies translations
+    
+    (Old svn revision: 7436)
+
+commit 60996b71744d66efef8c81111f54c7a9ed0bb99f
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu May 28 22:05:14 2009 +0000
+
+    Add a Bookmark side panel.
+    
+    (Old svn revision: 7435)
+
+commit 20f59b487aeeafb009c877956fb7120863fac2b2
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun May 17 17:52:31 2009 +0000
+
+    Make use of the G_GNUC_PRINTF() macro.
+    
+    (Old svn revision: 7359)
+
+commit f004eeb01e61f318d9100162d9acec296f5b96fc
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Mon May 11 16:30:40 2009 +0000
+
+    update translations
+    
+    (Old svn revision: 7327)
+
+commit 0e33ac757a44024b65972ba00a63ce7fd65585fb
+Author: Per Kongstad <p_kongstad@op.pl>
+Date:   Mon Apr 27 11:30:31 2009 +0000
+
+    	* da.po: Danish translation update (Per Kongstad)
+    	* da.po: Danish translation update (Per Kongstad)
+    
+    (Old svn revision: 7288)
+
+commit 87be02278073f73ceada2b613519477f48ade042
+Author: Stavros Giannouris <stavrosg2002@freemail.gr>
+Date:   Sun Apr 26 11:12:44 2009 +0000
+
+    greek translations update by Evaggelos Balaskas <ebalaskas@ebalaskas.gr>
+    
+    (Old svn revision: 7286)
+
+commit 44474ddd4b1ddc724414ee89fea2ed68bcb723f7
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Mon Apr 20 13:47:42 2009 +0000
+
+    goodies translation update (galician only)
+    
+    (Old svn revision: 7249)
+
+commit e22cd1ad6e8c3c2841bed020041599616519f758
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Apr 18 14:44:06 2009 +0000
+
+    Fix build for GTK 2.12 (oops).
+    
+    (Old svn revision: 7233)
+
+commit 39587c35888c625cd4cc0b2790811ec12bf51015
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Apr 18 14:31:35 2009 +0000
+
+    New release: Gigolo 0.3.2.
+    
+    (Old svn revision: 7230)
+
+commit 0d28b8963304bdce3ff3aa937c96f9f2542ff00b
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Apr 18 14:31:29 2009 +0000
+
+    Message catalog updated
+    
+    (Old svn revision: 7229)
+
+commit 25cabad1a57ea63f13a4d3f75c86f65f4e8b9233
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Apr 18 14:31:20 2009 +0000
+
+    Use a counter with a timeout for a more accurate approximation of finished network browsing.
+    
+    (Old svn revision: 7228)
+
+commit f1709ba2eedc2089d94e3813889127ca48230ede
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Apr 17 12:20:33 2009 +0000
+
+    Only query the window state at exit if the main window was realised at all.
+    
+    (Old svn revision: 7221)
+
+commit 472c22049284e9093c281b0ceb7056fc2c73db21
+Author: Masato Hashimoto <cabezon.hashimoto@gmail.com>
+Date:   Thu Apr 16 14:55:18 2009 +0000
+
+    Japanese translation update
+    
+    
+    
+    (Old svn revision: 7217)
+
+commit 3f269ee648fe200d2b2df34512a6c947b026a5fe
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Thu Apr 16 08:20:27 2009 +0000
+
+    goodies translation update
+    
+    (Old svn revision: 7213)
+
+commit 0a0a32c2c835884c181a946b10e4996d5f48349b
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Thu Apr 16 07:30:13 2009 +0000
+
+    Catalan translation update
+    
+    (Old svn revision: 7212)
+
+commit 61a59b58d77ce070a1170ad52137fd1b1a7252cd
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Tue Apr 14 18:33:22 2009 +0000
+
+    German translation update (Fabian Nowak).
+    Fix a few typos and mistakes in the French translation (Jérôme Guelfucci).
+    
+    (Old svn revision: 7204)
+
+commit 247805fe2b0c2c6032edfe07996169f1c416ddaf
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Tue Apr 14 18:20:58 2009 +0000
+
+    Expand the nodes in the network browser on the fly while they are added.
+    
+    (Old svn revision: 7203)
+
+commit f99b2f35cbb0011064d873dbd112f4d41c3e2e18
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Tue Apr 14 18:03:28 2009 +0000
+
+    Use gtk_list_store_insert_with_values() instead of gtk_list_store_append() and gtk_list_store_set().
+    
+    (Old svn revision: 7202)
+
+commit 30d1ddb449faafcb708eecc0923467e39539ad7f
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Tue Apr 14 17:57:33 2009 +0000
+
+    Show 'No Workgroups/Hosts/Shares found' messages in the network browser if appropriate.
+    
+    (Old svn revision: 7201)
+
+commit 32bb615128a27552e36ffed76ac87a87e3e1e6d9
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Mon Apr 13 17:27:37 2009 +0000
+
+    goodies translation update
+    
+    (Old svn revision: 7182)
+
+commit e8ad75132ee6bee59a9281db8dcdb824c7adc2e5
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Apr 9 12:36:47 2009 +0000
+
+    Plug a little memleak.
+    
+    (Old svn revision: 7146)
+
+commit 3998abf3a2bdf8e75ef22d47f9c96001bfc181e5
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Apr 9 12:30:18 2009 +0000
+
+    Rework the whole network browsing code:
+    Since GVfs doesn't auto-mount smb:// anymore by default, we need to mount it manually if necessary in order to be able to use it.
+    
+    (Old svn revision: 7145)
+
+commit 8da42f498192e998d02cbce1e441d85ead183e38
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Tue Apr 7 22:15:20 2009 +0000
+
+    Czech translation update (Jan Hrdina)
+    
+    
+    (Old svn revision: 7134)
+
+commit 8a02faf1fa9b0f4fecabf691ade66cf0e9780877
+Author: Per Kongstad <p_kongstad@op.pl>
+Date:   Mon Apr 6 19:12:05 2009 +0000
+
+    	* da.po: Danish translation update (Per Kongstad)
+    	* da.po: Danish translation update (Per Kongstad)
+    
+    (Old svn revision: 7128)
+
+commit bd05c14ee927f49edbafdb88349a7d15da5118a6
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Apr 6 14:16:22 2009 +0000
+
+    Don't show error dialogs when the error was already handled.
+    
+    (Old svn revision: 7126)
+
+commit 4dbe918514c10b40659a418e9ebcecc67b04cd4c
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Apr 6 14:06:46 2009 +0000
+
+    French translation update (Jérôme Guelfucci)
+    
+    (Old svn revision: 7125)
+
+commit 531f97e82868d5595cb6569a557a11d387f23330
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Apr 6 14:05:45 2009 +0000
+
+    Fix wrongly opening the Connect dialog when clicking on domains without hosts in the Browse Network panel.
+    
+    (Old svn revision: 7123)
+
+commit ae925942fe3569cbacac7b104d1c3456d18b308e
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sun Apr 5 21:25:58 2009 +0000
+
+    Translations updates - de it tr
+    
+    (Old svn revision: 7118)
+
+commit 48c748a80d3c2e9383ea23e5523819c01bee2519
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Apr 4 17:01:20 2009 +0000
+
+    New release: Gigolo 0.3.1.
+    
+    (Old svn revision: 7112)
+
+commit f187776705591e0cf445d3f6f4037aac056de3c8
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Apr 4 16:58:18 2009 +0000
+
+    Message catalog updated
+    
+    (Old svn revision: 7111)
+
+commit 70d35e8a35b0b8cb973bbaa92631177d71489f13
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Apr 4 16:54:54 2009 +0000
+
+    Move the view mode options back directly into the View menu.
+    
+    (Old svn revision: 7110)
+
+commit 52c3964b993af2183b117d2da2d080cd50c1933e
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Apr 2 22:09:12 2009 +0000
+
+    Make the connection list view mode options in the preferences dialog and in the main window's View menu more unique.
+    
+    (Old svn revision: 7103)
+
+commit 7dfd8ffbb27417f4e524d42517803f58a6b25786
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Apr 2 21:54:24 2009 +0000
+
+    Fix build for GTK 2.12.
+    
+    (Old svn revision: 7102)
+
+commit 6d7caf64242074f97c6867f9bcf82cc0908ff9fd
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Apr 2 21:45:11 2009 +0000
+
+    Present the main window when the status icon is removed.
+    
+    (Old svn revision: 7101)
+
+commit 136f282fa631cf664efc3d32645a3eeea8cc7b40
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Wed Apr 1 16:49:25 2009 +0000
+
+    Set the 'is-important' flag for actions 'Bookmark' and 'EditBookmarks'.
+    
+    (Old svn revision: 7086)
+
+commit c6b99c516bd6231653d5c696d544fd892740d159
+Author: Per Kongstad <p_kongstad@op.pl>
+Date:   Wed Apr 1 12:38:27 2009 +0000
+
+    	* da.po: Danish translation update (Per Kongstad)
+    	* da.po: Danish translation update (Per Kongstad)
+    
+    (Old svn revision: 7082)
+
+commit 911eda6340a572778915a41d34c6a53db003458a
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Tue Mar 31 21:36:27 2009 +0000
+
+    New release: Gigolo 0.3.0.
+    
+    (Old svn revision: 7073)
+
+commit 3464905b0bbae7eecbb5036d38af1f30491057d3
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Tue Mar 31 21:34:22 2009 +0000
+
+    Update message catalogue
+    
+    (Old svn revision: 7072)
+
+commit ad3aa900068ae3b8a8d6ac7a633bdfcc7c5c42ce
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sun Mar 29 22:01:27 2009 +0000
+
+    Translations updates - it pt
+    
+    (Old svn revision: 7036)
+
+commit a61556a31ca69b39a73027529e8c140b72a5e1a2
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 29 17:35:03 2009 +0000
+
+    Galician translation added (Leandro Regueiro)
+    
+    (Old svn revision: 7031)
+
+commit c94281fa0b57d7eaf7575ef98f921dccb799f7d8
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 29 10:45:56 2009 +0000
+
+    Add a new preference to set whether to show error message dialogs when auto-connecting bookmarks.
+    
+    (Old svn revision: 7023)
+
+commit 622c0eb13911f97e56a4030b2df20e6a7251396a
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 29 10:31:43 2009 +0000
+
+    Minimise to tray on delete-event (close button) instead of when minimising the main window.
+    
+    (Old svn revision: 7022)
+
+commit 6b16ad3791881ec7c0a8cbe4766d11eff4ac71a0
+Author: Masato Hashimoto <cabezon.hashimoto@gmail.com>
+Date:   Sat Mar 28 15:32:27 2009 +0000
+
+    	* ja.po, LINGUAS: Japanese translation added (Masato Hashimoto)
+    
+    (Old svn revision: 7015)
+
+commit 828f950860381bc5b9e8044b87dd073bd7751adc
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Sat Mar 28 15:05:58 2009 +0000
+
+    german and catalan translations
+    
+    (Old svn revision: 7012)
+
+commit 41101ba96f0098aea28a40f6f97387bfd05280cb
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Fri Mar 27 22:29:16 2009 +0000
+
+    Translations updates - gl
+    
+    (Old svn revision: 7009)
+
+commit fc783edac69784f84e283181d2d4f274b8e4c7d2
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Mar 26 18:25:42 2009 +0000
+
+    Add tests for the URI parsing code.
+    
+    (Old svn revision: 7005)
+
+commit ea831af259b26a4f04f1e691398d897a56657eec
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Mar 26 18:25:34 2009 +0000
+
+    Refactor some code.
+    
+    (Old svn revision: 7004)
+
+commit 3b107185ad578b020eda46ce44735a0c7bce91dc
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Mar 26 18:25:27 2009 +0000
+
+    Improve extracting the share name of an URI.
+    Extract also domain names from usernames (e.g. "smb://mydomain;myusername@host/share").
+    
+    (Old svn revision: 7003)
+
+commit e3216be2ca24015c407dea10ffa1570bae1dccab
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Mar 26 18:25:21 2009 +0000
+
+    Sync with GTK upstream (see http://svn.gnome.org/viewvc/gtk+?view=revision&revision=22496).
+    
+    (Old svn revision: 7002)
+
+commit ff0c6bd4a8ca917aadfd306bbfa6871a7991e3eb
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Mar 26 18:25:16 2009 +0000
+
+    Don't show error message dialog when auto-connecting bookmarks.
+    
+    (Old svn revision: 7001)
+
+commit be4831356f76790d13fb360fbf239fa10d8cdcce
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Mar 26 18:25:09 2009 +0000
+
+    When starting without an existing configuration, check whether GIO_USE_VOLUME_MONITOR is set and if so, use its value as default.
+    
+    (Old svn revision: 7000)
+
+commit 7c30be2deaf878f91d814273fd19f2a4d31d7f53
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 22 16:37:59 2009 +0000
+
+    Pass a GigoloWindow instance as parent argument instead of a GtkWindow instance because we actually require a GigoloWindow.
+    
+    (Old svn revision: 6975)
+
+commit 3500caf4e67190fbb0497e7ae48e56c6c01e2e9d
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 22 00:06:46 2009 +0000
+
+    Disable the 'Start Minimized' checkbox when showing the Status Icon is disabled to prevent a window-less process.
+    
+    (Old svn revision: 6971)
+
+commit 6a952f15b6c920a088253ccd1545e624d2dd7c41
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 22 00:06:40 2009 +0000
+
+    Add a View menu to quickly change GUI preferences.
+    
+    (Old svn revision: 6970)
+
+commit 889bff13a816cce54479b27a519072cba1dab1c4
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 22 00:06:35 2009 +0000
+
+    Fix crashes when using the Bookmark Edit dialog (introduced in the last commit).
+    
+    (Old svn revision: 6969)
+
+commit 490faec27f77ac8b23d69026b25fca3c8d00599d
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 22 00:06:28 2009 +0000
+
+    Add gigolo_window_get_settings() to not have to pass the settings object to so many other classes.
+    
+    (Old svn revision: 6968)
+
+commit 9d4da3178e9773326348f6cc0dabbd681e251c9f
+Author: Per Kongstad <p_kongstad@op.pl>
+Date:   Fri Mar 20 17:53:03 2009 +0000
+
+    	* da.po: Danish translation update (Per Kongstad)
+    	* da.po: Danish translation update (Per Kongstad)
+    
+    (Old svn revision: 6963)
+
+commit 150400d915ba71dbc693e7d9d429b0e12b07dff0
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Mar 20 15:54:41 2009 +0000
+
+    Czech translation added (Jan Hrdina)
+    
+    (Old svn revision: 6958)
+
+commit 59128f82bdccac52df3ec2e5702a46e5f57c7e86
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Mar 20 15:24:29 2009 +0000
+
+    Add a preference to show/hide the 'Browse Network' side panel.
+    
+    (Old svn revision: 6957)
+
+commit a3a7b391775f8738942dd18d36be8ef25305d44c
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Mar 20 15:24:22 2009 +0000
+
+    Remove the 'Browse Network' dialog and add a side panel instead to show a list of Samba shares/workgroups.
+    
+    (Old svn revision: 6956)
+
+commit d7b158d01ee9b7a40352fbb2c6fd3ec326700684
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Mar 20 15:24:14 2009 +0000
+
+    When browsing the network for Samba shares, first query "smb://" for workgroups, then query each workgroup for hosts and then the found hosts for shares.
+    
+    (Old svn revision: 6955)
+
+commit 87a379de65da070312726e6d9f016a98832d9e1d
+Author: Alexander Toresson <alexander.toresson@gmail.com>
+Date:   Thu Mar 19 22:43:50 2009 +0000
+
+    .:
+    	* sv.po: Swedish translation update (Daniel Nylander)
+    
+    (Old svn revision: 6954)
+
+commit 9ae14ce5fccae46e369e04ada077a9abf15de369
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Mar 16 21:27:02 2009 +0000
+
+    Disable the 'Create Bookmark' action in the 'Browse Network' dialog when the selected share is already bookmarked.
+    
+    (Old svn revision: 6927)
+
+commit 278dc3a72925cb804a46b203cb4310a2649602a5
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Mar 16 21:26:40 2009 +0000
+
+    Use a Close button to close the dialog instead of a OK button.
+    
+    (Old svn revision: 6926)
+
+commit 1537a59df95ab9eb3861779acf972b0d398486d1
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Mar 16 21:26:20 2009 +0000
+
+    Disable the Connect and Create Bookmark actions in the 'Browse Network' dialog on parent items.
+    
+    (Old svn revision: 6925)
+
+commit cbb3e814e45e7ff5381b8de7c6307a16934997f7
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Mar 16 21:25:59 2009 +0000
+
+    Detect an already running instance and show its window instead of starting a new instance.
+    Add command line option "--new-instance" ("-i") to restore the old behaviour.
+    
+    (Old svn revision: 6924)
+
+commit 09f4589e91cb1c4519c9586dee535f5ab158d31a
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Mar 16 21:25:27 2009 +0000
+
+    Remove dead code.
+    
+    (Old svn revision: 6923)
+
+commit 617cbb263a991e8ac26451eb9d46459e6de67662
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Mar 5 12:09:34 2009 +0000
+
+    Implement 'Browse Network' dialog to browse a Samba/Windows network for available hosts and shares.
+    
+    (Old svn revision: 6847)
+
+commit e0879ec10c5f6352dcf4a176b4be2a8f4660462a
+Author: Og Maciel <ogmaciel@gnome.org>
+Date:   Tue Mar 3 16:51:03 2009 +0000
+
+    Fixed ChangeLog
+    
+    (Old svn revision: 6836)
+
+commit 1982ebc0d71870956ae2fa9f3d02cf5987c43036
+Author: Og Maciel <ogmaciel@gnome.org>
+Date:   Tue Mar 3 16:49:51 2009 +0000
+
+    Updated Brazilian Portuguese translation.
+    
+    (Old svn revision: 6835)
+
+commit c87bfef09abbb72c10c13ef1b17b794e502bc848
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Mar 2 11:22:10 2009 +0000
+
+    Add Online Help and Supported Protocols help menu items.
+    
+    (Old svn revision: 6832)
+
+commit 419756a0faaa6a89a27e8c8bcd8993a8cbdd3377
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Mar 2 10:55:37 2009 +0000
+
+    s/server/host/ for consistency.
+    
+    (Old svn revision: 6831)
+
+commit bc625c7d3faa12b7f8e59d34972ec62dc4b03e51
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Mar 2 10:48:00 2009 +0000
+
+    Add a separate service type for Obex connections in the Connect/Bookmark Edit dialogs.
+    
+    (Old svn revision: 6830)
+
+commit d4b6943eaaaf2c88a0e03b26a0f16d2f0bf3c471
+Author: Stavros Giannouris <stavrosg2002@freemail.gr>
+Date:   Sun Mar 1 19:06:38 2009 +0000
+
+    Greek translations update by Evaggelos Balaskas <ebalaskas@ebalaskas.gr>
+    
+    (Old svn revision: 6825)
+
+commit d8289278448a3f30e98dbc6faf0ba0e0083ab513
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 1 15:54:50 2009 +0000
+
+    Add gigolo_backend_gvfs_get_supported_uri_schemes() and use it to avoid calling GIO/GVfs functions outside of the backend class.
+    
+    (Old svn revision: 6818)
+
+commit 7d46955cc2c676ae80f76d76f52205f40f22a87f
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 1 15:34:48 2009 +0000
+
+    Fix creation of smb:// URIs from bookmarks when a domain is set but no username.
+    
+    (Old svn revision: 6817)
+
+commit d382c931d6ad8c7cf9b2f1d2b1fdd5eb8bff43be
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 1 14:35:58 2009 +0000
+
+    Implement browsing for smb shares in the Connect/Bookmark Edit dialogs to easily select them.
+    
+    (Old svn revision: 6816)
+
+commit fa81e6c81128ce07ab85fc11d4391cb0bbf76e22
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 1 10:21:26 2009 +0000
+
+    Spanish translation added (Abel Martín)
+    
+    (Old svn revision: 6814)
+
+commit e1eb02ae79645a78136e6f0ffe93f7f37467e25d
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Mar 1 09:55:09 2009 +0000
+
+    Use the native GtkMountOperation dialog when additional authentication information are needed.
+    This implicitly allows choosing the method to store passwords (never, session, forever).
+    
+    (Old svn revision: 6813)
+
+commit 1e883e1a18a12e69e4c430a6fd05959c5d688d49
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Feb 28 11:11:52 2009 +0000
+
+    Instead of passing a stored domain value to the password dialog, pass it already in the URI while connecting.
+    
+    (Old svn revision: 6804)
+
+commit 47f8f030e616789eb8c84b9997f9912f85af8a58
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Feb 28 10:45:08 2009 +0000
+
+    Cache the domain string when it is passed to the password dialog.
+    
+    (Old svn revision: 6803)
+
+commit 4b70820f63f0cb57b4b9b023a8ee0aed83cf3819
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Feb 22 22:59:09 2009 +0000
+
+    Fix broken LINGUAS file.
+    
+    (Old svn revision: 6760)
+
+commit 9c7d678d1ae183da4eb94ef29f187178a13f320a
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Feb 22 22:45:11 2009 +0000
+
+    New release: Gigolo 0.2.1.
+    
+    (Old svn revision: 6756)
+
+commit 3a2ad87667da82b1b8c6fc81d3b7b547fe888870
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Feb 22 22:43:04 2009 +0000
+
+    Message catalog updated
+    
+    (Old svn revision: 6755)
+
+commit aed254163b8d739c465fe2b35755817d271eed30
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Fri Feb 20 23:55:23 2009 +0000
+
+    Translations udpates - ca gl id
+    
+    (Old svn revision: 6730)
+
+commit 75a814da17427a604db3518332ee554d8e158b67
+Author: Stavros Giannouris <stavrosg2002@freemail.gr>
+Date:   Fri Feb 20 19:36:13 2009 +0000
+
+    Greek translation for gigolo by Evaggelos Balaskas
+    
+    (Old svn revision: 6728)
+
+commit 3960732420530495d270c7ac0ff3c56e51c7d478
+Author: Per Kongstad <p_kongstad@op.pl>
+Date:   Thu Feb 19 11:31:05 2009 +0000
+
+    A    po/da.po
+    M    po/LINGUAS
+    M    po/ChangeLog
+    
+    
+    (Old svn revision: 6715)
+
+commit a7064f9f4a46f74fafd4ee9e222677e4d0eb5cf1
+Author: Eren Turkay <turkay.eren@gmail.com>
+Date:   Thu Feb 19 06:33:33 2009 +0000
+
+    * Add Turkish translation by Samed Beyribey
+    
+    (Old svn revision: 6713)
+
+commit 88118cf657973204a7d7757f87b571715c19ac35
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Feb 16 14:48:45 2009 +0000
+
+    Escape the userinfo part of URIs to allow at-signs.
+    
+    (Old svn revision: 6702)
+
+commit adfa0b71f213fb84bb65523d867420eddd9b0386
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Feb 16 13:29:29 2009 +0000
+
+    Fix a wrong check when checking for existing bookmarks, fixes always disabled 'Create Bookmark' menu item.
+    
+    (Old svn revision: 6699)
+
+commit 54df5ee0812d2d4f82330e29529470e3a0a3d3f3
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Feb 16 13:00:55 2009 +0000
+
+    Don't strip the square brackets when parsing Obex URIs to prevent storing invalid URIs.
+    
+    (Old svn revision: 6697)
+
+commit 2a23c51a273c731bcdd790c8d5745c43ac6809a1
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Feb 15 18:52:13 2009 +0000
+
+    Fix typo
+    
+    (Old svn revision: 6693)
+
+commit 05e5a3bfce17c4d0cb30ef7c86b974bc38d965b7
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Feb 15 15:38:30 2009 +0000
+
+    Mark two strings in the About dialog as translatable.
+    
+    (Old svn revision: 6692)
+
+commit 810fc88831f057517bac6f2efbb373c04d1ff495
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Feb 15 15:36:52 2009 +0000
+
+    Italian translation added (Muflone)
+    
+    (Old svn revision: 6691)
+
+commit cbf8b20c6cf13a6929a6f71ef3101422cadfc816
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Feb 14 18:00:12 2009 +0000
+
+    Bulgarian translation added (Adrian Dimitrov)
+    
+    (Old svn revision: 6684)
+
+commit aa923fb55bfde2e9963003e82daee72fab89f267
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Feb 13 16:16:12 2009 +0000
+
+    New release: Gigolo 0.2.0.
+    
+    (Old svn revision: 6681)
+
+commit 719151c51b364f92d9049de80ef51a6034d7b6af
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Feb 13 14:34:29 2009 +0000
+
+    Actually display also the version in the version string.
+    
+    (Old svn revision: 6680)
+
+commit 2657d4a1685f1af64b1ccf7f5c6eec180a1a5396
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Feb 13 14:27:47 2009 +0000
+
+    Don't modify the colours of the Xfce header widget.
+    
+    (Old svn revision: 6679)
+
+commit 460c3d7c44c07848de21ab0b25ec75d6394092a9
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Wed Feb 11 19:26:37 2009 +0000
+
+    No need to update the icon cache as long as we don't install any icons.
+    
+    (Old svn revision: 6675)
+
+commit f5809d3f8641775857011f428eccb6779e0bc9c4
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Feb 9 19:07:45 2009 +0000
+
+    Remember the main window's show state and don't query the window's maximised state on exit when it is not shown at all.
+    
+    (Old svn revision: 6672)
+
+commit 3cc428d51514a7bcc2c008eb16c62e3a588e48e8
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Feb 9 18:57:38 2009 +0000
+
+    Prefer 'Connect' to 'Mount' in user-visible strings for consistency.
+    Message catalog updated.
+    German translation update.
+    Catalan translation update (Carles Muñoz Gorriz).
+    
+    (Old svn revision: 6671)
+
+commit 5571b7f3337dbf3c86dcd77d93a6bc280d523553
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Feb 9 17:29:01 2009 +0000
+
+    Use the G_DEFINE_TYPE() macro to generate the *_get_type() code.
+    
+    (Old svn revision: 6669)
+
+commit aaca99dab5af62c5dfc0a5e4e22dfea530558d93
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Feb 9 16:58:06 2009 +0000
+
+    Fix missing startup completion notification when "start-in-systray" is used.
+    
+    (Old svn revision: 6668)
+
+commit f8fef9e0d5444770bafbf832183957eda9a36e99
+Author: Alexander Toresson <alexander.toresson@gmail.com>
+Date:   Mon Feb 9 00:45:18 2009 +0000
+
+    .:
+    	* sv.po: Swedish translation update (Daniel Nylander)
+    
+    (Old svn revision: 6665)
+
+commit 75325b7db1d08683fb16b9568554cc7a56e19b8a
+Author: Alexander Toresson <alexander.toresson@gmail.com>
+Date:   Sat Feb 7 20:06:22 2009 +0000
+
+    .:
+    	* sv.po: Swedish translation update (Daniel Nylander)
+    
+    (Old svn revision: 6657)
+
+commit 00a60067f92afb6991e5a6a41fc6db907dbbc22c
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Wed Feb 4 20:13:03 2009 +0000
+
+    Add missing includes.
+    
+    (Old svn revision: 6645)
+
+commit e6ddc2390a2e69ce7ecbde382978736a7b1ed8c1
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Wed Feb 4 20:12:18 2009 +0000
+
+    Prevent setting an invisible/unsupported item in the scheme combo box, fallback to Custom Location
+    
+    (Old svn revision: 6644)
+
+commit 4f56513002954f57ec3f93e810557b825344526c
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Feb 1 23:59:16 2009 +0000
+
+    Fix a typo.
+    
+    (Old svn revision: 6630)
+
+commit 3a51c72c7bd2b80507a34f5f2d2a4a786b03a585
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jan 31 18:08:42 2009 +0000
+
+    Update to Waf 1.5.3 and use new syntax in the wscript.
+    
+    (Old svn revision: 6614)
+
+commit f30f21ced5f8f36916feb073ae61fda1835ca090
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jan 31 15:59:21 2009 +0000
+
+    Rename 'Sion' to 'Gigolo'.
+    
+    (Old svn revision: 6613)
+
+commit adc3cae3dfb80d9d4e8a2e3a140d4c35141be1d6
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jan 31 15:57:40 2009 +0000
+
+    Change application name to 'Gigolo'.
+    Rename everything to 'Gigolo'.
+    
+    (Old svn revision: 6612)
+
+commit f6f3c74cdf97ea03c7f8f5673004fe81210dce6b
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Jan 26 21:30:19 2009 +0000
+
+    Allow also mounting resources by toggling the 'Mounted' checkbox.
+    
+    (Old svn revision: 6574)
+
+commit 132252208c2369b3f396fca632835c27d16abd2b
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Jan 26 21:30:00 2009 +0000
+
+    Make 'Connect' insensitive for connected resources.
+    Fix default value of sion_describe_scheme().
+    Ignore empty CDs which are listed as mounted by GVfs.
+    
+    (Old svn revision: 6573)
+
+commit dacec1aa3a00f999a63718b5ee240698c4a677e4
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 25 22:13:10 2009 +0000
+
+    Allow unmounting resources by toggling the 'Mounted' checkbox.
+    
+    (Old svn revision: 6558)
+
+commit 08d28abd264f8dc3ca278e037538d59062360b15
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 25 22:12:45 2009 +0000
+
+    Fix some more compiler warnings.
+    
+    (Old svn revision: 6557)
+
+commit aad575dba007e4ac1d726da1201b028fdd948c00
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 25 22:12:17 2009 +0000
+
+    Show a progressbar dialog when mounting bookmarks.
+    Move sion_get_application_icon_name() to common.c.
+    Some minor cleanups.
+    
+    (Old svn revision: 6556)
+
+commit 9849b6184b39116afcb55c91aa7e81e17b44a538
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 25 12:26:20 2009 +0000
+
+    Fix spelling of GVfs.
+    
+    (Old svn revision: 6543)
+
+commit c8d69cf6cdf17b7935a0c23dcf21ec607ef7c227
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 25 12:26:08 2009 +0000
+
+    Add a hack to make the 'davs://' scheme also available even if GVfs tells to not support it (GVFs bug #538461).
+    
+    (Old svn revision: 6542)
+
+commit 85931baabd4c4eec8435a74e0d00fcf759777191
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 25 12:25:55 2009 +0000
+
+    Add an option to start minimized.
+    
+    (Old svn revision: 6541)
+
+commit 5a695b4b606d0e46bb4b5538ce769eb8ac837eda
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 25 12:25:43 2009 +0000
+
+    Rename 'tray' into 'systray'.
+    
+    (Old svn revision: 6540)
+
+commit 9b46d59dd77b1225c35a9ada10f85c0bfd6e8b43
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Jan 19 23:00:07 2009 +0000
+
+    Make parent arguments GtkWindow's.
+    
+    (Old svn revision: 6517)
+
+commit 0083142cbd3bcadd1aec5f4764438392bc7fd308
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Jan 19 23:00:00 2009 +0000
+
+    Save settings when the preferences dialog is closed.
+    Save bookmarks when the bookmark dialog is closed and when a new bookmark was created using the connection menu.
+    
+    (Old svn revision: 6516)
+
+commit 14fdfb38873b35b7c9087e0eb7555c9751f6fe39
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Jan 19 22:59:54 2009 +0000
+
+    Print version information when running in verbose mode.
+    Add a 'Copy URI' menu item to the actions menu.
+    
+    (Old svn revision: 6515)
+
+commit 638e244114dfab15ed295f723deaaa341f1e957a
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sun Jan 18 17:54:19 2009 +0000
+
+    Translations updates - de ca it ja nb pt_PT tr
+    
+    (Old svn revision: 6493)
+
+commit d47eae528c6af890877a35c84da870b16ed1a5c5
+Author: Alexander Toresson <alexander.toresson@gmail.com>
+Date:   Mon Jan 12 23:31:12 2009 +0000
+
+    .:
+    	* sv.po, LINGUAS: Swedish translation added (Daniel Nylander)
+    
+    (Old svn revision: 6446)
+
+commit 3f2ffe90c09f6d25d8fc3c9c38cca05e7b34cee1
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Jan 12 19:19:26 2009 +0000
+
+    Add tooltips for toolbar items.
+    
+    (Old svn revision: 6443)
+
+commit cd542d3ae18c5d9a8b6c27149c240606d4b2f5c4
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Jan 12 19:19:21 2009 +0000
+
+    Add a separator between the heading and the content in the prefs dialog to make it look more like the original.
+    
+    (Old svn revision: 6442)
+
+commit 9f0a91f9ac11cac98c529101e4fb2aeeb7466629
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Jan 12 19:19:15 2009 +0000
+
+    Make user-defined keyboard shortcuts for menu items persistent.
+    
+    (Old svn revision: 6441)
+
+commit e9889dcedced29c5928b0667fd3112ae5cf9a64a
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 11 23:45:40 2009 +0000
+
+    Change used comments to multi-line variants.
+    Add -ansi to debug compile flags.
+    
+    (Old svn revision: 6437)
+
+commit 2c05d87186c0147de23f1fe78df933b3668a0af5
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 11 23:08:47 2009 +0000
+
+    Fix 'Minimize to tray'.
+    
+    (Old svn revision: 6436)
+
+commit ec5e6ba11375c2b3c0211ca14f12cb83f065f368
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 11 23:08:41 2009 +0000
+
+    Hide auto connect label also for the Connect dialog.
+    Fix mnemonics.
+    
+    (Old svn revision: 6435)
+
+commit 8f3f3328c06d7d9924174d778ae7a299b68a2f47
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 11 23:08:36 2009 +0000
+
+    Make bookmark auto connect interval configurable.
+    
+    (Old svn revision: 6434)
+
+commit 0925c8fff6288a902f6a53385f89ad70907e68e5
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 11 17:21:00 2009 +0000
+
+    Fix crashes with older GVFS versions (#4794, patch by Colin Leroy, thanks).
+    
+    (Old svn revision: 6433)
+
+commit 18b39033a6c9ec6268244c93aa974f40da5efae6
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jan 10 16:41:39 2009 +0000
+
+    Try to connect to auto-connect bookmarks at startup and every minute. Clicking Disconnect cancels autoconnection for the running instance (patch by Colin Leroy, thanks).
+    
+    (Old svn revision: 6429)
+
+commit 5c5a33f5b38428830973920ccd52c7bb7e50ad60
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Jan 10 16:41:32 2009 +0000
+
+    Fix "This bookmark already exists" warning when editing an existing bookmark (patch by Colin Leroy, thanks).
+    
+    (Old svn revision: 6428)
+
+commit aa83f459849ea1872cecbc61168c1aabcb74750d
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Tue Jan 6 20:21:19 2009 +0000
+
+    Allow '@' in usernames when parsing URIs.
+    
+    (Old svn revision: 6410)
+
+commit 15ec233cacd06e8eea9d9a121731994ea60ae64e
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Tue Jan 6 20:21:11 2009 +0000
+
+    Don't allow entering duplicate bookmark names.
+    When any input was missing or wrong in the Bookmark Edit dialog, put the input focus back to the text entry which failed.
+    
+    (Old svn revision: 6409)
+
+commit 5630d61a798acdd95d3f50d16c083057767eb70e
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Jan 4 23:35:18 2009 +0000
+
+    Minor simplification in package checking.
+    
+    (Old svn revision: 6403)
+
+commit 47b6c23423a2aaae6d495268fb90f2bb3ed3768e
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sun Jan 4 21:33:31 2009 +0000
+
+    Translations updates - ca pl
+    
+    (Old svn revision: 6402)
+
+commit f71c993122f8cb80138ddcf67b39c28244205757
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Jan 2 19:18:00 2009 +0000
+
+    First public release: Sion 0.1.0
+    
+    (Old svn revision: 6398)
+
+commit f9eb38150f7556da81a6e04710f73af4002828ec
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Jan 2 16:45:58 2009 +0000
+
+    Message catalog updated
+    German translation update
+    
+    (Old svn revision: 6397)
+
+commit dafa374d6939d02b7f616fe1502f4235f735c83c
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Jan 2 16:45:53 2009 +0000
+
+    Fix a few strings.
+    
+    (Old svn revision: 6396)
+
+commit 4ff58d9859dddc1b2d5bbb1da07cb853e7796d11
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Jan 2 16:45:47 2009 +0000
+
+    Add sion_toolbar_set_orientation().
+    
+    (Old svn revision: 6395)
+
+commit e39ed80b1a8b095a030b35121f55c3473180e7d3
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Jan 1 16:21:29 2009 +0000
+
+    Happy new year!
+    
+    (Old svn revision: 6389)
+
+commit 4947e1d3e80d6f1edd6845cd92a56094bc4be82e
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Jan 1 16:21:19 2009 +0000
+
+    Redesign the dialog using a notebook tabs instead of frames for the various settings.
+    
+    (Old svn revision: 6388)
+
+commit 6a31454d4508ecdad1f710cf80104592b625861c
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Jan 1 16:21:14 2009 +0000
+
+    Add a label for the HAL/Unix volume manager setting to make clearer what the setting is about.
+    
+    (Old svn revision: 6387)
+
+commit 1f43bc1c699a69d99358b5628caf7adf6670cf88
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Jan 1 16:21:08 2009 +0000
+
+    Enable more compiler warning options and fix some warnings.
+    
+    (Old svn revision: 6386)
+
+commit 879e16f91680c8952fc4d042469f93b4ba42888e
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Dec 29 18:16:45 2008 +0000
+
+    Move sion_error_dialog() into common.c.
+    Implement basic input validation for the Bookmark Edit dialog.
+    
+    (Old svn revision: 6383)
+
+commit 5334b491da66bfa375b85469cb41320fa0d7dee5
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Dec 29 18:16:17 2008 +0000
+
+    Quote URI string in error messages.
+    
+    (Old svn revision: 6382)
+
+commit 78a22b9cfa37a080435c64c2ba0e3ebe2aeeb374
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Dec 29 18:15:54 2008 +0000
+
+    Don't add the port number to URIs when it is the default port number.
+    Fix 'Create Bookmark' sensitiveness.
+    When using 'Create Bookmark' show a dialog to edit the new bookmark before saving it.
+    
+    (Old svn revision: 6381)
+
+commit 289ed6d24d575f190acc01aa9a301fa6030a6926
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Dec 29 18:15:28 2008 +0000
+
+    Install additional documentation files by default (README, ...).
+    
+    (Old svn revision: 6380)
+
+commit aa781bedbe17503dbb52c7d09e58315fa6c9f102
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Mon Dec 29 18:15:08 2008 +0000
+
+    Add note about the BSD license used in Waf.
+    
+    (Old svn revision: 6379)
+
+commit fc8bb040f3d67fa6c2c83d7f50f441c96781f720
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Dec 21 01:27:26 2008 +0000
+
+    Emit the "button-clicked" only if a toolbar button was clicked.
+    
+    (Old svn revision: 6347)
+
+commit cee1249e4c740bd559302b4fef8e40d3a259d020
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Dec 21 01:19:20 2008 +0000
+
+    Make the dialogs destroyed with their parent.
+    
+    (Old svn revision: 6346)
+
+commit d3c2af47a2e5107d1a5122fbb4137ce1a838f9f9
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Dec 21 01:12:04 2008 +0000
+
+    Minimise to tray if enabled.
+    
+    (Old svn revision: 6345)
+
+commit d0e415956e76cf2099325e613a552d0967f6d742
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Dec 21 00:47:34 2008 +0000
+
+    Fix crash when parsing an URI without a proper scheme (bug #4730).
+    
+    (Old svn revision: 6344)
+
+commit faf339fae6a375587942f05e37124c01beb9bf5f
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Dec 19 19:05:58 2008 +0000
+
+    Use g_strcmp0() instead of strcmp().
+    
+    (Old svn revision: 6335)
+
+commit 7b025b4be383a54c653f685c22a801ab28e2648f
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Dec 19 19:00:56 2008 +0000
+
+    Sort bookmarks always automatically.
+    
+    (Old svn revision: 6334)
+
+commit fde28e189ded6dad0e63254a8c9904d325c5a4f4
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Dec 19 18:42:08 2008 +0000
+
+    Remove coloured output.
+    Remove unnecessary checks and code and avoid using 'which'.
+    
+    
+    (Old svn revision: 6333)
+
+commit 0725d2c04cf656fcac0d837404b59dbc336e53a9
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Dec 19 18:17:42 2008 +0000
+
+    Fix homepage address in the manual page.
+    Use g_setenv() instead of setenv().
+    
+    (Old svn revision: 6332)
+
+commit 0152b5ac0b0d6b076bb47e28e335c6deeba8ebd7
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Fri Dec 19 18:13:38 2008 +0000
+
+    Add support for building Sion with autotools.
+    
+    (Old svn revision: 6331)
+
+commit b45c44ca72fed3b0ec53d92501d698f5e7dbfac9
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Thu Dec 18 15:39:04 2008 +0000
+
+    Update waf, make use of its 'gnu_dirs' tool and fix some minor issues.
+    
+    (Old svn revision: 6330)
+
+commit fbeedceb7ae6a321d802b05fb4995d408e786b6c
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Dec 14 20:37:52 2008 +0000
+
+    Use more descriptive strings when displaying URI schemes.
+    
+    (Old svn revision: 6322)
+
+commit 3d3258dc404c07de18e42d423944e5f09020e5c5
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Dec 14 20:07:34 2008 +0000
+
+    Display share and domain fields in the bookmark dialog.
+    
+    (Old svn revision: 6321)
+
+commit c12b7fa1b81ef5eafc3a739e148bebddc08c1bab
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Dec 14 19:55:02 2008 +0000
+
+    Fix missing clicked callback for the Connect toolbar button.
+    Various small fixes and cleanup.
+    Allow empty values for usernames.
+    Use default username and domain name provided by GVFS in the password dialog.
+    Add domain and share fields for bookmarks to improve Samba support.
+    
+    (Old svn revision: 6320)
+
+commit 72abc77e283874ed58deb3e3105f922538aaa706
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sun Dec 14 19:51:12 2008 +0000
+
+    Fix colours in configure script.
+    
+    (Old svn revision: 6319)
+
+commit 965c1f79559f1024eda31262add0efd783aa1081
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sat Dec 13 22:08:06 2008 +0000
+
+    Translations updates - fr ja
+    
+    (Old svn revision: 6306)
+
+commit a253989f44215504c929a452f2277216146ea9af
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Dec 13 17:27:39 2008 +0000
+
+    Remove generated files.
+    
+    (Old svn revision: 6303)
+
+commit 8293775fc5a414d4755808f8b3a363949ac347f1
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Dec 13 17:22:33 2008 +0000
+
+    Use "gvfs-open" as default file manager command.
+    
+    (Old svn revision: 6302)
+
+commit eaff8826bf752aaf4bd08181f92f09f82a490329
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Dec 13 17:07:18 2008 +0000
+
+    Fix creation of the Makefile and usage of --prefix=...
+    
+    (Old svn revision: 6301)
+
+commit f276149b89b6d06758d2d5aba3d49017235db4e1
+Author: Enrico TrÃ¶ger <enrico@xfce.org>
+Date:   Sat Dec 13 16:33:35 2008 +0000
+
+    Add layout and code for Sion.
+    
+    (Old svn revision: 6300)

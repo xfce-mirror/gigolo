@@ -1,3 +1,13 @@
+Gigolo 0.4.1 (July 31, 2010)
+
+	* Use SSH/SFTP as default connection type for new bookmarks/connections
+	* Allow finishing the Connect / Bookmark Edit dialog by pressing Enter
+	* Improve build system to respect LINGUAS environment variable
+	* Show an error message dialog if the file-manager command failed to execute
+	* Remove the preference to select the Volume Manager implementation
+	* Many minor fixes and improvements
+
+
 Gigolo 0.4.0 (December 31, 2009)
 
 	* Support mounting volumes like local partitions
