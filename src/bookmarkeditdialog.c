@@ -139,8 +139,8 @@ enum {
 };
 
 static struct MethodInfo methods[] = {
-	{ "ftp",  21,	SHOW_PORT | SHOW_USER | SHOW_FOLDER },
 	{ "sftp", 22,	SHOW_PORT | SHOW_USER | SHOW_FOLDER },
+	{ "ftp",  21,	SHOW_PORT | SHOW_USER | SHOW_FOLDER },
 	{ "smb",  0,	SHOW_SHARE | SHOW_USER | SHOW_DOMAIN | SHOW_FOLDER },
 	{ "dav",  80,	SHOW_PATH | SHOW_PORT | SHOW_USER | SHOW_FOLDER },
 	{ "davs", 443,	SHOW_PATH | SHOW_PORT | SHOW_USER | SHOW_FOLDER },
