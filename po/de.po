@@ -3,28 +3,28 @@
 # This file is distributed under the same license as Gigolo.
 # Enrico Tröger <enrico@xfce.org>, 2008-2009.
 # Fabian Nowak <timystery@arcor.de>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-31 15:43+0200\n"
+"POT-Creation-Date: 2010-07-31 22:04+0000\n"
 "PO-Revision-Date: 2009-04-13 14:30+0200\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n-de@xfce.org>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Laufende Instanzen nicht beachten, eine neue Instanz erzwingen"
+msgstr "Laufende Instanzen nicht beachten, Öffnen einer neuer Instanz erzwingen"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
-msgstr "Gibt eine Liste unterstützter URI-Formate aus"
+msgstr "Gibt eine Liste unterstützter URI-Schemata aus"
 
 # siehe http://en.de.open-tran.eu/suggest/be verbose
 #: ../src/main.c:48
@@ -33,11 +33,11 @@ msgstr "Ausführliche Ausgabe"
 
 #: ../src/main.c:49
 msgid "Show version information"
-msgstr "Zeige Versionsinformationen"
+msgstr "Versionsinformationen anzeigen"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- eine einfache Oberfläche zum Einbinden entfernter Dateisysteme"
+msgstr "– eine einfache Oberfläche zum Einbinden entfernter Dateisysteme"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -90,7 +90,7 @@ msgstr "Eigene Adresse"
 #: ../src/window.c:257
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Verbinde zu »%s« ..."
+msgstr "Verbinde zu »%s«…"
 
 #: ../src/window.c:425 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
@@ -104,12 +104,13 @@ msgstr "Copyright 2008-2009 Enrico Tröger"
 msgid "translator-credits"
 msgstr ""
 "Enrico Tröger <enrico@xfce.org>\n"
-"Fabian Nowak <timystery@arcor.de>"
+"Fabian Nowak <timystery@arcor.de>\n"
+"\"Johannes Lips\" <johannes.lips@googlemail.com>\n"
+"Christoph Wickert <cwickert@fedoraproject.org>"
 
 #: ../src/window.c:461
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"Gigolo kann mit den folgenden, von GVfs bereitgestellen Protokollen umgehen:"
+msgstr "Gigolo kann mit folgenden von GVfs bereitgestellten Protokollen umgehen:"
 
 #: ../src/window.c:558
 #, c-format
@@ -153,9 +154,7 @@ msgstr "Lesezeichen _bearbeiten"
 
 #: ../src/window.c:1164
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Öffnet den Lesezeicheneditor zum Hinzufügen, Bearbeiten oder Löschen von "
-"Lesezeichen"
+msgstr "Öffnet den Lesezeicheneditor zum Hinzufügen, Bearbeiten oder Löschen von Lesezeichen"
 
 #: ../src/window.c:1168
 msgid "Disconnect the selected resource"
@@ -183,7 +182,7 @@ msgstr "Unterstützte Protokolle"
 
 #: ../src/window.c:1180
 msgid "Side _Panel"
-msgstr "_Seitenleiste"
+msgstr "S_eitenleiste"
 
 #: ../src/window.c:1182
 msgid "_Toolbar"
@@ -191,15 +190,15 @@ msgstr "_Werkzeugleiste"
 
 #: ../src/window.c:1184
 msgid "Status _Icon"
-msgstr "S_tatusanzeige"
+msgstr "Sta_tusanzeige"
 
 #: ../src/window.c:1190
 msgid "View as _Symbols"
-msgstr "S_ymbole anzeigen"
+msgstr "_Symbolansicht"
 
 #: ../src/window.c:1191
 msgid "View as _Detailed List"
-msgstr "_Detaillierte Liste anzeigen"
+msgstr "_Detailansicht"
 
 #: ../src/window.c:1197
 msgid "_Bookmarks"
@@ -207,8 +206,7 @@ msgstr "_Lesezeichen"
 
 #: ../src/window.c:1197
 msgid "Choose a bookmark to connect to"
-msgstr ""
-"Wählen Sie ein Lesezeichen, zu dem eine Verbindung aufgebaut werden soll"
+msgstr "Wählen Sie ein Lesezeichen, zu dem eine Verbindung aufgebaut werden soll"
 
 #: ../src/window.c:1271
 msgid "Connected"
@@ -224,7 +222,7 @@ msgstr "Name"
 
 #: ../src/window.c:1359
 msgid "Bookmarks"
-msgstr "_Lesezeichen"
+msgstr "Lesezeichen"
 
 #: ../src/window.c:1409 ../src/window.c:1484 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
@@ -236,18 +234,12 @@ msgstr "Soll es jetzt verschoben werden?"
 
 #: ../src/settings.c:632
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo muss Ihr aktuelles Konfigurationsverzeichnis an einen neuen Ort "
-"verschieben, bevor es gestartet wird."
+msgstr "Gigolo muss Ihr aktuelles Konfigurationsverzeichnis an einen neuen Ort verschieben, bevor es gestartet wird."
 
 #: ../src/settings.c:640
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Ihr altes Konfigurationsverzeichnis »%s« konnte nicht nach »%s« verschoben "
-"werden. Fehlermeldung: %s. Bitte führen Sie die Aktion manuell aus."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Ihr altes Konfigurationsverzeichnis »%s« konnte nicht nach »%s« verschoben werden. Fehler: %s. Bitte führen Sie die Aktion manuell aus."
 
 #: ../src/settings.c:643
 msgid "Warning"
@@ -287,7 +279,7 @@ msgstr "Port"
 
 #: ../src/bookmarkdialog.c:337
 msgid "Auto-Connect"
-msgstr "Autom. Verbinden"
+msgstr "Autom. verbinden"
 
 #: ../src/bookmarkdialog.c:345
 msgid "Username"
@@ -295,7 +287,7 @@ msgstr "Benutzername"
 
 #: ../src/bookmarkdialog.c:353
 msgid "Other information"
-msgstr "Andere Angaben"
+msgstr "Weitere Angaben"
 
 #: ../src/bookmarkdialog.c:410
 msgid "Edit Bookmarks"
@@ -307,9 +299,7 @@ msgstr "Sie müssen einen Namen für das Lesezeichen angeben."
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
-"Der angegebene Name für das Lesezeichen ist bereits vergeben. Bitte wählen "
-"Sie einen anderen Namen."
+msgstr "Der angegebene Name für das Lesezeichen ist bereits vergeben. Bitte wählen Sie einen anderen Namen."
 
 #: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a server address or name."
@@ -349,11 +339,11 @@ msgstr "_Lesezeichenname:"
 
 #: ../src/bookmarkeditdialog.c:978
 msgid "Au_to-Connect"
-msgstr "A_utom. Verbinden"
+msgstr "Au_tom. verbinden"
 
 #: ../src/bookmarkeditdialog.c:986
 msgid "Service t_ype:"
-msgstr "_Verbindungstyp:"
+msgstr "Verbindungst_yp:"
 
 #: ../src/bookmarkeditdialog.c:1011
 msgid "Set the port to 0 to use the default port"
@@ -433,21 +423,15 @@ msgstr "_Dateimanager"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Geben Sie den Namen eines Programms ein zum Anzeigen oder Öffnen von "
-"Einhängepunkten"
+msgstr "Geben Sie den Namen eines Programms ein zum Anzeigen oder Öffnen von Einhängepunkten"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Zeitintervall für autom. Verbinden"
 
 #: ../src/preferencesdialog.c:361
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Zeitspanne, nach der versucht werden soll, als automatisch gekennzeichnete "
-"Lesezeichen zu verbinden"
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Zeitspanne, nach der versucht werden soll, als automatisch gekennzeichnete Lesezeichen zu verbinden. 0 deaktiviert die Überprüfung."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -459,9 +443,7 @@ msgstr "_Fensterposition und -größe speichern"
 
 #: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
-"Speichert die Fensterposition und Größe und stellt sie beim nächsten Start "
-"wieder her."
+msgstr "Speichert die Fensterposition und Größe und stellt sie beim nächsten Start wieder her."
 
 #: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
@@ -476,23 +458,16 @@ msgid "Show side panel"
 msgstr "Seitenleiste anzeigen"
 
 #: ../src/preferencesdialog.c:387
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
-msgstr ""
-"Seitenleiste zum Durchsuchen des lokalen Netzwerks nach verfügbaren Samba-"
-"Freigaben"
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "Seitenleiste zum Durchsuchen des lokalen Netzwerks nach verfügbaren Samba-Freigaben anzeigen"
 
 #: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr "Fehlermeldungen beim autom. Verbinden zeigen"
 
 #: ../src/preferencesdialog.c:391
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Fehlermeldungen zeigen, wenn das automatische Verbinden zu Lesezeichen "
-"fehlschlägt."
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "Fehlermeldungen zeigen, wenn das automatische Verbinden zu Lesezeichen fehlschlägt."
 
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
@@ -593,25 +568,17 @@ msgid "Connect to the selected bookmark"
 msgstr "Mit der ausgewählten Freigabe verbinden"
 
 #~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
+#~ "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 #~ "If you are unsure, use the HAL based monitor."
 #~ msgstr ""
-#~ "Der HAL-basierte Medienmanager benötigt das Programm 'gnome-mount' um "
-#~ "lokale Resourcen wie Laufwerke, einzuhängen. Die Unix-basierte Variante "
-#~ "kann solche Resourcen direkt einbinden und zeigt auch andere lokale "
-#~ "Geräte an.\n"
+#~ "Der HAL-basierte Medienmanager benötigt das Programm 'gnome-mount' um lokale Resourcen wie Laufwerke, einzuhängen. Die Unix-basierte Variante kann solche Resourcen direkt einbinden und zeigt auch andere lokale Geräte an.\n"
 #~ "Wenn Sie unsicher sind, benutzen Sie die HAL-basierte Variante."
 
 #~ msgid "Use _HAL based volume manager"
 #~ msgstr "_HAL-basierten Medienmanager benutzen"
 
 #~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-#~ msgstr ""
-#~ "<i>Änderungen an dieser Einstellung werden erst nach einem Neustart von "
-#~ "Gigolo wirksam .</i>"
+#~ msgstr "<i>Änderungen an dieser Einstellung werden erst nach einem Neustart von Gigolo wirksam .</i>"
 
 #~ msgid "Use _Unix based volume manager"
 #~ msgstr "_Unix-basierten Medienmanager benutzen"
