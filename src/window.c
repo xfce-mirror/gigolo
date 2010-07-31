@@ -250,7 +250,11 @@ void gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *boo
 	if (show_dialog)
 	{
 		const gchar *name = gigolo_bookmark_get_name(bookmark);
-		gchar *label = g_strdup_printf(_("Connecting to \"%s\""), (name != NULL) ? name : uri);
+		gchar *label;
+
+		if (name == NULL || gigolo_str_equal(name, GIGOLO_BOOKMARK_NAME_NONE))
+			name = uri;
+		label = g_strdup_printf(_("Connecting to \"%s\""), name);
 
 		dialog = gigolo_mount_dialog_new(GTK_WINDOW(window), label);
 		gtk_widget_show_all(dialog);

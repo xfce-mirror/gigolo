@@ -43,6 +43,9 @@ void debug(gchar const *format, ...) G_GNUC_PRINTF (1, 2);
 # define debug(...)
 #endif
 
+#define GIGOLO_BOOKMARK_NAME_NONE "none"
+
+
 void verbose(gchar const *format, ...) G_GNUC_PRINTF (1, 2);
 
 
