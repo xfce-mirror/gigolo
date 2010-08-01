@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-31 15:43+0200\n"
+"POT-Creation-Date: 2010-08-01 12:06+0200\n"
 "PO-Revision-Date: 2009-02-13 00:56+0200\n"
 "Last-Translator: Adrian Dimitrov <Enzo_01@abv.bg>\n"
 "Language-Team: Bulgarian <xfce-i18n@xfce.org>\n"
@@ -368,7 +368,7 @@ msgstr "_Файл"
 
 #: ../src/bookmarkeditdialog.c:1020
 #, fuzzy
-msgid "_Path:"
+msgid "P_ath:"
 msgstr "_Порт:"
 
 #: ../src/bookmarkeditdialog.c:1021

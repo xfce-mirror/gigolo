@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-31 15:43+0200\n"
+"POT-Creation-Date: 2010-08-01 12:06+0200\n"
 "PO-Revision-Date: 2010-03-12 10:45+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -354,7 +354,7 @@ msgid "_Folder:"
 msgstr "Бу_ма"
 
 #: ../src/bookmarkeditdialog.c:1020
-msgid "_Path:"
+msgid "P_ath:"
 msgstr "_Жолы:"
 
 #: ../src/bookmarkeditdialog.c:1021

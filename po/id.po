@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-31 15:43+0200\n"
+"POT-Creation-Date: 2010-08-01 12:06+0200\n"
 "PO-Revision-Date: 2010-05-31 22:53+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
@@ -360,7 +360,7 @@ msgid "_Folder:"
 msgstr "_Berkas:"
 
 #: ../src/bookmarkeditdialog.c:1020
-msgid "_Path:"
+msgid "P_ath:"
 msgstr "_Alamat:"
 
 #: ../src/bookmarkeditdialog.c:1021

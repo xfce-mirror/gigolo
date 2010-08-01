@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-31 15:43+0200\n"
+"POT-Creation-Date: 2010-08-01 12:06+0200\n"
 "PO-Revision-Date: 2009-12-15 12:11+0100\n"
 "Last-Translator: Piarres Beobide <pi+debian@beobide.net>\n"
 "Language-Team: Basque <debian-l10n-basque@lists.debian.org>\n"
@@ -366,7 +366,7 @@ msgid "_Folder:"
 msgstr "_Karpeta:"
 
 #: ../src/bookmarkeditdialog.c:1020
-msgid "_Path:"
+msgid "P_ath:"
 msgstr "_Bidea:"
 
 #: ../src/bookmarkeditdialog.c:1021

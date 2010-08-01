@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-31 15:43+0200\n"
+"POT-Creation-Date: 2010-08-01 12:06+0200\n"
 "PO-Revision-Date: 2010-01-29 23:19+0200\n"
 "Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -371,7 +371,7 @@ msgid "_Folder:"
 msgstr "_Φάκελος:"
 
 #: ../src/bookmarkeditdialog.c:1020
-msgid "_Path:"
+msgid "P_ath:"
 msgstr "_Διαδρομή:"
 
 #: ../src/bookmarkeditdialog.c:1021

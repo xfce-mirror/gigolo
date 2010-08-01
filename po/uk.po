@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-31 15:43+0200\n"
+"POT-Creation-Date: 2010-08-01 12:06+0200\n"
 "PO-Revision-Date: 2010-03-26 19:24+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -362,7 +362,8 @@ msgid "_Folder:"
 msgstr "Тек_а:"
 
 #: ../src/bookmarkeditdialog.c:1020
-msgid "_Path:"
+#, fuzzy
+msgid "P_ath:"
 msgstr "_Шлях:"
 
 #: ../src/bookmarkeditdialog.c:1021

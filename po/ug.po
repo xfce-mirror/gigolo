@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-31 15:43+0200\n"
+"POT-Creation-Date: 2010-08-01 12:06+0200\n"
 "PO-Revision-Date: 2010-01-18 17:01+0900\n"
 "Last-Translator: Gheyret T.Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -357,7 +357,8 @@ msgid "_Folder:"
 msgstr "مۇندەرىجە(_F)"
 
 #: ../src/bookmarkeditdialog.c:1020
-msgid "_Path:"
+#, fuzzy
+msgid "P_ath:"
 msgstr "يول(_P)"
 
 #: ../src/bookmarkeditdialog.c:1021
