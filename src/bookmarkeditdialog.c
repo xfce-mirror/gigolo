@@ -1017,7 +1017,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	priv->uri_label = gtk_label_new_with_mnemonic(_("_Location (URI):"));
 	priv->host_label = gtk_label_new_with_mnemonic(_("_Server:"));
 	priv->folder_label = gtk_label_new_with_mnemonic(_("_Folder:"));
-	priv->path_label = gtk_label_new_with_mnemonic(_("_Path:"));
+	priv->path_label = gtk_label_new_with_mnemonic(_("P_ath:"));
 	priv->user_label = gtk_label_new_with_mnemonic(_("_User Name:"));
 	priv->information_label = gtk_label_new(_("Optional information:"));
 	priv->port_label = gtk_label_new_with_mnemonic(_("_Port:"));
