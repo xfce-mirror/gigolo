@@ -1,22 +1,21 @@
 # Ukrainian translation of gigolo.
 # Copyright (C) 2010 Dmitry Nikitin
 # This file is distributed under the same license as the gigolo package.
-#
+# 
 # Dmitry Nikitin <luckas_fb@mail.ru>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
+"POT-Creation-Date: 2010-08-13 10:04+0000\n"
 "PO-Revision-Date: 2010-03-26 19:24+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
-"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../src/main.c:46
@@ -37,8 +36,7 @@ msgstr "Показати інформацію про версію"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- простий інтерфейс для легкого підключення до віддалених файлових систем"
+msgstr "- простий інтерфейс для легкого підключення до віддалених файлових систем"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -95,8 +93,7 @@ msgstr "З'єднання з \"%s\""
 
 #: ../src/window.c:425 ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
-"Простий інтерфейс для легкого підключення до віддалених файлових систем"
+msgstr "Простий інтерфейс для легкого підключення до віддалених файлових систем"
 
 #: ../src/window.c:426
 msgid "Copyright 2008-2010 Enrico Tröger"
@@ -152,8 +149,7 @@ msgstr "Редаг_увати закладки"
 
 #: ../src/window.c:1164
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Відкрити менеджер закладок для додавання, редагування чи видалення закладок"
+msgstr "Відкрити менеджер закладок для додавання, редагування чи видалення закладок"
 
 #: ../src/window.c:1168
 msgid "Disconnect the selected resource"
@@ -233,17 +229,12 @@ msgstr "Перемістити зараз?"
 
 #: ../src/settings.c:632
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo повинне перемістити теку з Вашою старою конфігурацією перед запуском."
+msgstr "Gigolo повинне перемістити теку з Вашою старою конфігурацією перед запуском."
 
 #: ../src/settings.c:640
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Вашу стара тека з конфігурацією \"%s\" неможливо перемістити до \"%s\" (%s). "
-"Перемістіть її вручну на нове місце."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Вашу стара тека з конфігурацією \"%s\" неможливо перемістити до \"%s\" (%s). Перемістіть її вручну на нове місце."
 
 #: ../src/settings.c:643
 msgid "Warning"
@@ -362,7 +353,6 @@ msgid "_Folder:"
 msgstr "Тек_а:"
 
 #: ../src/bookmarkeditdialog.c:1020
-#, fuzzy
 msgid "P_ath:"
 msgstr "_Шлях:"
 
@@ -384,7 +374,7 @@ msgstr "_Домен"
 
 #: ../src/bookmarkeditdialog.c:1025
 msgid "_Share:"
-msgstr ""
+msgstr "_Доступні ресурси:"
 
 #: ../src/preferencesdialog.c:147
 msgid "Icons"
@@ -435,12 +425,8 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "Інтервал авто_з’єднання з закладками"
 
 #: ../src/preferencesdialog.c:361
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Як часто намагатися з’єднатися з закладками, в секундах. Нуль відключає "
-"перевірку."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Як часто намагатися з’єднатися з закладками, в секундах. Нуль відключає перевірку."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -467,23 +453,16 @@ msgid "Show side panel"
 msgstr "Показати бічну панель"
 
 #: ../src/preferencesdialog.c:387
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
-msgstr ""
-"Чи показувати бічну панель для показу локальної мережі для можливих "
-"відкритих Samba/Windows тек і списку закладок"
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "Чи показувати бічну панель для показу локальної мережі для можливих відкритих Samba/Windows тек і списку закладок"
 
 #: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr "Показати повідомлення про помилки авто-з’єднання"
 
 #: ../src/preferencesdialog.c:391
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Чи показувати діалог повідомлень про помилки, якщо не вдається авто-"
-"з’єднання з закладками"
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "Чи показувати діалог повідомлень про помилки, якщо не вдається авто-з’єднання з закладками"
 
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
@@ -553,7 +532,7 @@ msgstr "Не знайдено робочих груп"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
-msgstr ""
+msgstr "Не знайдено доступних ресурсів"
 
 #: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
@@ -561,11 +540,11 @@ msgstr "Не знайдено серверів"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
-msgstr ""
+msgstr "З’єднатися з вибраним доступним ресурсом"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr ""
+msgstr "Створити закладку для вибраного доступного ресурсу"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
