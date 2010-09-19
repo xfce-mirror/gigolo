@@ -6,7 +6,7 @@
   xmlns="http://usefulinc.com/ns/doap#">
 
   <name xml:lang="en">gigolo</name>
-  <shortdesc xml:lang="en">Gigolo eases managing connections to remote filesystems</shortdesc>
+  <shortdesc xml:lang="en">Gigolo eases managing connections to local and remote filesystems</shortdesc>
   <homepage rdf:resource="http://www.uvena.de/gigolo"/>
   <mailing-list rdf:resource="http://foo-projects.org/mailman/listinfo/xfce"/>
 
