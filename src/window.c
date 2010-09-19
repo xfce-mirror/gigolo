@@ -422,7 +422,7 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 	gtk_show_about_dialog(GTK_WINDOW(window),
 		"authors", authors,
 		"logo-icon-name", gigolo_get_application_icon_name(),
-		"comments", _("A simple frontend to easily connect to remote filesystems"),
+		"comments", _("A simple frontend to easily connect/mount to local and remote filesystems"),
 		"copyright", _("Copyright 2008-2010 Enrico Tröger"),
 		"website", "http://www.uvena.de/gigolo/",
 		"version", VERSION,

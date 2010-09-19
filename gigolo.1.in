@@ -6,7 +6,7 @@ Gigolo \(em a simple frontend to easily connect to remote filesystems with GIO/G
 \fBgigolo\fR [\fBoption\fP]
 .SH "DESCRIPTION"
 .PP
-Gigolo is a frontend to easily manage connections to remote filesystems using
+Gigolo is a frontend to easily manage connections to local and remote filesystems using
 GIO/GVfs. It allows you to quickly mount a remote filesystem and manage
 bookmarks to such.
 .PP

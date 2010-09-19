@@ -4,8 +4,8 @@ Gigolo
 
 About
 =====
-Gigolo is a frontend to easily manage connections to remote filesystems using
-GIO/GVfs. It allows you to quickly connect/mount a remote filesystem and manage
+Gigolo is a frontend to easily manage connections to local and remote filesystems
+using GIO/GVfs. It allows you to quickly connect/mount a remote filesystem and manage
 bookmarks of such.
 
 GVfs is an userspace virtual filesystem and the successor of GnomeVfs but doesn't
