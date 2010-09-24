@@ -2,19 +2,19 @@
 # Copyright (C) 2008-2010 Enrico Tröger
 # This file is distributed under the same license as the Gigolo package.
 # Per Kongstad <p_kongstad@op.pl>, 2009, 10
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
+"POT-Creation-Date: 2010-09-24 16:06+0000\n"
 "PO-Revision-Date: 2010-01-19 10:21+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
-"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
 "X-Poedit-Language: Danish\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: DENMARK\n"
@@ -92,9 +92,9 @@ msgstr "Tilpasset sted"
 msgid "Connecting to \"%s\""
 msgstr "Forbinder til \"%s\""
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "En simpel grænseflade til nemt at forbinde til eksterne filsystemer"
+#: ../src/window.c:425
+msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "En simpel grænseflade til nemt at forbinde til lokale og eksterne filsystemer"
 
 #: ../src/window.c:426
 msgid "Copyright 2008-2010 Enrico Tröger"
@@ -154,8 +154,7 @@ msgstr "_Redigér bogmærker"
 
 #: ../src/window.c:1164
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Åbn bogmærkehåndteringen for at tilføje, redigere eller slette bogmærker"
+msgstr "Åbn bogmærkehåndteringen for at tilføje, redigere eller slette bogmærker"
 
 #: ../src/window.c:1168
 msgid "Disconnect the selected resource"
@@ -235,17 +234,12 @@ msgstr "Flyt det nu?"
 
 #: ../src/settings.c:632
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo er nødt til at flytte din gamle indstillingsmappe før den starter."
+msgstr "Gigolo er nødt til at flytte din gamle indstillingsmappe før den starter."
 
 #: ../src/settings.c:640
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Din gamle indstillingsmappe \"%s\" kunne ikke flyttes til \"%s\" (%s). Flyt "
-"venligst manuelt mappen til den nye placering."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Din gamle indstillingsmappe \"%s\" kunne ikke flyttes til \"%s\" (%s). Flyt venligst manuelt mappen til den nye placering."
 
 #: ../src/settings.c:643
 msgid "Warning"
@@ -429,21 +423,15 @@ msgstr "_Filhåndtering"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Indtast navnet til et program til brug for at åbne eller vise "
-"monteringspunkter"
+msgstr "Indtast navnet til et program til brug for at åbne eller vise monteringspunkter"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Bogmærk forbind automatisk interval"
 
 #: ../src/preferencesdialog.c:361
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Hvor ofte skal bogmærker prøves for automatisk forbindelse, i antal "
-"sekunder. 0 slår kontrol fra."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Hvor ofte skal bogmærker prøves for automatisk forbindelse, i antal sekunder. 0 slår kontrol fra."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -470,22 +458,16 @@ msgid "Show side panel"
 msgstr "Vis sidepanel"
 
 #: ../src/preferencesdialog.c:387
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
-msgstr ""
-"Om visning af et sidepanel ved navigering af det lokale netværk for "
-"tilgængelige Samba-/Windowsdelinger og en bogmærkeliste"
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "Om visning af et sidepanel ved navigering af det lokale netværk for tilgængelige Samba-/Windowsdelinger og en bogmærkeliste"
 
 #: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr "Vis forbind automatisk fejlbeskeder"
 
 #: ../src/preferencesdialog.c:391
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Om visning af fejlbeskeddialoger når forbind automatisk via bogmærker fejler"
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "Om visning af fejlbeskeddialoger når forbind automatisk via bogmærker fejler"
 
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
@@ -585,17 +567,15 @@ msgstr "Ingen bogmærker"
 msgid "Connect to the selected bookmark"
 msgstr "Forbind til det valgte bogmærke"
 
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "En simpel grænseflade til nemt at forbinde til eksterne filsystemer"
+
 #~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
+#~ "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 #~ "If you are unsure, use the HAL based monitor."
 #~ msgstr ""
-#~ "Implementering af den HAL-baserede arkivhåndtering kræver værktøjet "
-#~ "'gnome-mount' for at montere lokale resurser som diske. Implementering af "
-#~ "den Unix-baserede arkivhåndtering kan montere sådanne resurser direkte og "
-#~ "viser også andre lokale enheder.\n"
+#~ "Implementering af den HAL-baserede arkivhåndtering kræver værktøjet 'gnome-mount' for at montere lokale resurser som diske. Implementering af den Unix-baserede arkivhåndtering kan montere sådanne resurser direkte og viser også andre lokale enheder.\n"
 #~ "Hvis du er usikker, brug den HAL-baserede overvåger."
 
 #~ msgid "Use _HAL based volume manager"
