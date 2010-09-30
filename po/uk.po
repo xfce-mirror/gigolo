@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-13 10:04+0000\n"
+"POT-Creation-Date: 2010-09-30 04:06+0000\n"
 "PO-Revision-Date: 2010-03-26 19:24+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -91,9 +91,9 @@ msgstr "Інше місце"
 msgid "Connecting to \"%s\""
 msgstr "З'єднання з \"%s\""
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Простий інтерфейс для легкого підключення до віддалених файлових систем"
+#: ../src/window.c:425
+msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "Простий інтерфейс для легкого підключення/монтування до локальних та віддалених файлових систем"
 
 #: ../src/window.c:426
 msgid "Copyright 2008-2010 Enrico Tröger"
@@ -561,3 +561,7 @@ msgstr "Немає закладок"
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
 msgstr "З’єднатися з вибраною закладкою"
+
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Простий інтерфейс для легкого підключення до віддалених файлових систем"
