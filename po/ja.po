@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
-"PO-Revision-Date: 2010-01-18 17:01+0900\n"
+"POT-Creation-Date: 2010-10-03 15:44+0900\n"
+"PO-Revision-Date: 2010-10-03 15:43+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: \n"
@@ -91,9 +91,12 @@ msgstr "個別に指定した場所"
 msgid "Connecting to \"%s\""
 msgstr "接続しています: \"%s\""
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "リモートファイルシステムに簡単に接続するシンプルなフロントエンド"
+#: ../src/window.c:425
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"ローカルおよびリモートファイルシステムに簡単に接続できるシンプルなフロントエ"
+"ンド"
 
 #: ../src/window.c:426
 msgid "Copyright 2008-2010 Enrico Tröger"
@@ -580,6 +583,10 @@ msgstr "ブックマークはありません"
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
 msgstr "選択されたブックマークに接続します"
+
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "リモートファイルシステムに簡単に接続するシンプルなフロントエンド"
 
 #~ msgid ""
 #~ "The HAL based volume manager implementation requires the tool 'gnome-"
