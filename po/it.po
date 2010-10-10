@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the gigolo package.
 # Muflone <muflone@vbsimple.net>, 2009.
 # Gianluca Foddis <gianluca.foddis@gmail.com>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
+"POT-Creation-Date: 2010-10-10 16:06+0000\n"
 "PO-Revision-Date: 2010-03-03 15:54+0100\n"
 "Last-Translator: Gianluca Foddis <gianluca.foddis@gmail.com>\n"
 "Language-Team: Italian\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:46
@@ -91,9 +91,9 @@ msgstr "Posizione personalizzata"
 msgid "Connecting to \"%s\""
 msgstr "Connessione a «%s» in corso"
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Una semplice interfaccia per connettersi a file system remoti"
+#: ../src/window.c:425
+msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "Una semplice interfaccia per montare e connettersi a file system remoti e locali"
 
 #: ../src/window.c:426
 msgid "Copyright 2008-2010 Enrico Tröger"
@@ -151,9 +151,7 @@ msgstr "_Modifica segnalibri"
 
 #: ../src/window.c:1164
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Apre il gestore di segnalibri per aggiungere, modificare o eliminare i "
-"collegamenti preferiti"
+msgstr "Apre il gestore di segnalibri per aggiungere, modificare o eliminare i collegamenti preferiti"
 
 #: ../src/window.c:1168
 msgid "Disconnect the selected resource"
@@ -233,18 +231,12 @@ msgstr "Spostare adesso?"
 
 #: ../src/settings.c:632
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo ha bisogno di spostare la vecchia cartella di configurazione prima di "
-"avviarsi."
+msgstr "Gigolo ha bisogno di spostare la vecchia cartella di configurazione prima di avviarsi."
 
 #: ../src/settings.c:640
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"La precedente cartella di configurazione «%s» non può essere spostata su "
-"«%s» (%s). Per favore spostare manualmente la cartella al nuovo percorso."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "La precedente cartella di configurazione «%s» non può essere spostata su «%s» (%s). Per favore spostare manualmente la cartella al nuovo percorso."
 
 #: ../src/settings.c:643
 msgid "Warning"
@@ -429,21 +421,15 @@ msgstr "Gestore di _file"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Inserire il nome del programma da utilizzare per aprire o visualizzare i "
-"punti di montaggio"
+msgstr "Inserire il nome del programma da utilizzare per aprire o visualizzare i punti di montaggio"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "I_ntervallo di connessione automatica"
 
 #: ../src/preferencesdialog.c:361
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Frequenza, in secondi, di tentativo di connessione automatica al segnalibro. "
-"Lo zero disabilita il controllo."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Frequenza, in secondi, di tentativo di connessione automatica al segnalibro. Lo zero disabilita il controllo."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -455,8 +441,7 @@ msgstr "_Salva la posizione e la dimensione della finestra"
 
 #: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
-"Salva la posizione e la dimensione della finestra e le ripristina all'avvio"
+msgstr "Salva la posizione e la dimensione della finestra e le ripristina all'avvio"
 
 #: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
@@ -472,25 +457,19 @@ msgstr "Mostra pannello laterale"
 
 # trattasi di tooltip relativo a un checkbox.
 #: ../src/preferencesdialog.c:387
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
-msgstr ""
-"Mostra il pannello laterale per cercare nella rete locale le condivisioni "
-"Samba/Windows disponibili e una lista di segnalibri"
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "Mostra il pannello laterale per cercare nella rete locale le condivisioni Samba/Windows disponibili e una lista di segnalibri"
 
 #: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr "Mostra i messaggi di errori nell'autoconnessione"
 
 #: ../src/preferencesdialog.c:391
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Mostra i dialoghi di messaggio di errore quando fallisce l'autoconnessione "
-"dei segnalibri"
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "Mostra i dialoghi di messaggio di errore quando fallisce l'autoconnessione dei segnalibri"
 
-# trattasi di testo prima di combobox che fa scegliere tra "icone" e "lista dettagliata". c'è poco spazio e bisogna essere concisi.
+# trattasi di testo prima di combobox che fa scegliere tra "icone" e "lista
+# dettagliata". c'è poco spazio e bisogna essere concisi.
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
 msgstr "Modalità elenco _connessioni"
@@ -591,17 +570,15 @@ msgstr "Nessun segnalibro"
 msgid "Connect to the selected bookmark"
 msgstr "Connetti al segnalibro selezionato"
 
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Una semplice interfaccia per connettersi a file system remoti"
+
 #~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
+#~ "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 #~ "If you are unsure, use the HAL based monitor."
 #~ msgstr ""
-#~ "L'implementazione del gestore di volumi basato su HAL richiede il "
-#~ "programma «gnome-mount» per montare risorse locali come i dischi. Il "
-#~ "gestore di volumi basato su Unix può montare tali risorse direttamente e "
-#~ "anche elencare altri dispositivi locali.\n"
+#~ "L'implementazione del gestore di volumi basato su HAL richiede il programma «gnome-mount» per montare risorse locali come i dischi. Il gestore di volumi basato su Unix può montare tali risorse direttamente e anche elencare altri dispositivi locali.\n"
 #~ "Nel dubbio, utilizzare il gestore basato su HAL."
 
 #~ msgid "Use _HAL based volume manager"
