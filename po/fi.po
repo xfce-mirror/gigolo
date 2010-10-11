@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
-"PO-Revision-Date: 2010-03-20 14:44+0100\n"
+"POT-Creation-Date: 2010-10-11 04:06+0000\n"
+"PO-Revision-Date: 2010-10-11 12:32+0300\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -89,9 +89,11 @@ msgstr "Mukautettu sijainti"
 msgid "Connecting to \"%s\""
 msgstr "Yhdistetään kohteeseen \"%s\""
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Käyttöliittymä, jonka avulla yhdistät helposti verkkojakoihin"
+#: ../src/window.c:425
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"Työkalu, jolla liität paikalliset ja verkon tiedostojärjestelmät helposti"
 
 #: ../src/window.c:426
 msgid "Copyright 2008-2010 Enrico Tröger"
@@ -577,6 +579,10 @@ msgstr "Ei kirjanmerkkejä"
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
 msgstr "Yhdistä merkittyyn kirjanmerkkiin"
+
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Käyttöliittymä, jonka avulla yhdistät helposti verkkojakoihin"
 
 #~ msgid ""
 #~ "The HAL based volume manager implementation requires the tool 'gnome-"
