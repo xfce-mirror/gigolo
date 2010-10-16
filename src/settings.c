@@ -380,6 +380,7 @@ static void write_data(GKeyFile *k, const gchar *filename)
 	gsize len;
 	GError *error = NULL;
 	gchar *data;
+	gchar *real_filename;
 
 	data = g_key_file_to_data(k, &len, &error);
 	if (data == NULL || error != NULL)
@@ -389,13 +390,31 @@ static void write_data(GKeyFile *k, const gchar *filename)
 		g_free(data);
 		return;
 	}
+	/* resolve symbolic links */
+	if (g_file_test(filename, G_FILE_TEST_IS_SYMLINK))
+	{
+		real_filename = g_file_read_link(filename, &error);
+		if (error)
+		{
+			g_warning("Writing configuration file to disk failed (%s).", error->message);
+			g_error_free(error);
+			g_free(data);
+			return;
+		}
+	}
+	else
+	{
+		real_filename = g_strdup(filename);
+	}
 
-	if (! g_file_set_contents(filename, data, len, &error))
+	/* write data to file */
+	if (! g_file_set_contents(real_filename, data, len, &error))
 	{
 		g_warning("Writing configuration file to disk failed (%s).", error->message);
 		g_error_free(error);
 	}
 	g_free(data);
+	g_free(real_filename);
 }
 
 
