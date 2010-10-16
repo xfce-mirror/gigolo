@@ -52,6 +52,7 @@ struct _GigoloSettingsPrivate
 	gint		view_mode;
 	gboolean	show_panel;
 	guint		last_panel_page;
+	gint		panel_position;
 	gboolean	show_autoconnect_errors;
 
 	gchar		*file_manager;
@@ -87,6 +88,7 @@ enum
 	PROP_VIEW_MODE,
 	PROP_SHOW_PANEL,
 	PROP_LAST_PANEL_PAGE,
+	PROP_PANEL_POSITION,
 	PROP_SHOW_AUTOCONNECT_ERRORS
 };
 
@@ -133,6 +135,9 @@ static void gigolo_settings_set_property(GObject *object, guint prop_id, const G
 		break;
 	case PROP_LAST_PANEL_PAGE:
 		priv->last_panel_page = g_value_get_uint(value);
+		break;
+	case PROP_PANEL_POSITION:
+		priv->panel_position = g_value_get_uint(value);
 		break;
 	case PROP_SHOW_AUTOCONNECT_ERRORS:
 		priv->show_autoconnect_errors = g_value_get_boolean(value);
@@ -184,6 +189,9 @@ static void gigolo_settings_get_property(GObject *object, guint prop_id, GValue 
 		break;
 	case PROP_LAST_PANEL_PAGE:
 		g_value_set_uint(value, priv->last_panel_page);
+		break;
+	case PROP_PANEL_POSITION:
+		g_value_set_uint(value, priv->panel_position);
 		break;
 	case PROP_SHOW_AUTOCONNECT_ERRORS:
 		g_value_set_boolean(value, priv->show_autoconnect_errors);
@@ -290,6 +298,14 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"last-panel-page",
 									"last-panel-page",
 									"Last displayed panel page",
+									0, G_MAXUINT, 0,
+									G_PARAM_READWRITE));
+	g_object_class_install_property(gobject_class,
+									PROP_PANEL_POSITION,
+									g_param_spec_uint(
+									"panel-position",
+									"panel-position",
+									"Last panel position",
 									0, G_MAXUINT, 0,
 									G_PARAM_READWRITE));
 	g_object_class_install_property(gobject_class,
@@ -443,6 +459,7 @@ static void write_settings_config(GigoloSettings *settings)
 	g_key_file_set_integer(k, SECTION_UI, "view_mode", priv->view_mode);
 	g_key_file_set_boolean(k, SECTION_UI, "show_panel", priv->show_panel);
 	g_key_file_set_integer(k, SECTION_UI, "last_panel_page", priv->last_panel_page);
+	g_key_file_set_integer(k, SECTION_UI, "panel_position", priv->panel_position);
 	g_key_file_set_boolean(k, SECTION_UI, "show_autoconnect_errors", priv->show_autoconnect_errors);
 
 	write_data(k, priv->config_filename);
@@ -549,6 +566,7 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 	priv->toolbar_style = get_setting_int(k, SECTION_UI, "toolbar_style", -1);
 	priv->toolbar_orientation = get_setting_int(k, SECTION_UI, "toolbar_orientation", 0);
 	priv->view_mode = get_setting_int(k, SECTION_UI, "view_mode", 0);
+	priv->panel_position = get_setting_int(k, SECTION_UI, "panel_position", 0);
 	priv->geometry = g_key_file_get_integer_list(k, SECTION_UI, "geometry", NULL, &error);
 	if (error)
 	{

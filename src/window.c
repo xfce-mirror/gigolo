@@ -59,6 +59,7 @@ struct _GigoloWindowPrivate
 	GtkWidget		*hbox_pane;
 	GtkWidget		*hbox_view;
 
+	GtkWidget		*panel_pane;
 	GtkWidget		*browse_panel;
 	GtkWidget		*bookmark_panel;
 	GtkWidget		*notebook_panel;
@@ -132,6 +133,9 @@ static void gigolo_window_destroy(GigoloWindow *window)
 			geo[4] = 0;
 
 		gigolo_settings_set_geometry(priv->settings, geo, 5);
+
+		g_object_set(priv->settings, "panel-position",
+			gtk_paned_get_position(GTK_PANED(priv->panel_pane)), NULL);
 	}
 	g_object_set(priv->settings, "last-panel-page",
 		gtk_notebook_get_current_page(GTK_NOTEBOOK(priv->notebook_panel)), NULL);
@@ -1386,6 +1390,7 @@ static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
 static void update_side_panel(GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	guint panel_position;
 
 	if (! gigolo_backend_gvfs_is_scheme_supported("smb"))
 		gtk_widget_destroy(priv->browse_panel);
@@ -1395,6 +1400,11 @@ static void update_side_panel(GigoloWindow *window)
 
 	gtk_notebook_set_current_page(GTK_NOTEBOOK(priv->notebook_panel),
 		gigolo_settings_get_integer(priv->settings, "last-panel-page"));
+
+	panel_position = gigolo_settings_get_integer(priv->settings, "panel-position");
+	if (panel_position <= 0)
+		panel_position = 200;
+	gtk_paned_set_position(GTK_PANED(priv->panel_pane), panel_position);
 }
 
 
@@ -1462,7 +1472,7 @@ static void gigolo_window_init(GigoloWindow *window)
 		"is-important", TRUE, NULL);
 
 	/* Panel */
-	panel_pane = gigolo_window_create_panel(window);
+	priv->panel_pane = panel_pane = gigolo_window_create_panel(window);
 
 	/* Pack the widgets altogether */
 	priv->vbox = gtk_vbox_new(FALSE, 0);
