@@ -1,18 +1,18 @@
 # Galician translation of gigolo
 # Copyright (C) 2009, 2010 Leandro Regueiro.
 # This file is distributed under the same license as the Xfce package.
-# 
+#
 # Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2009, 2010.
-# 
+#
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en <http://trasno.net>
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-09-22 10:06+0000\n"
-"PO-Revision-Date: 2010-01-06 12:25+0100\n"
+"PO-Revision-Date: 2010-10-19 19:18+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +73,8 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (seguro)"
 
-#: ../src/common.c:93 ../src/window.c:1367
+#: ../src/common.c:93
+#: ../src/window.c:1367
 msgid "Network"
 msgstr "Rede"
 
@@ -117,11 +118,15 @@ msgstr "Gigolo pode usar os seguintes protocolos proporcionados por GVfs:"
 #: ../src/window.c:558
 #, c-format
 msgid "The command '%s' failed"
-msgstr "Fallou o comando '%s'"
+msgstr "Fallou a orde '%s'"
 
-#: ../src/window.c:559 ../src/window.c:686 ../src/bookmarkeditdialog.c:214
-#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
-#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
+#: ../src/window.c:559
+#: ../src/window.c:686
+#: ../src/bookmarkeditdialog.c:214
+#: ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:246
+#: ../src/bookmarkeditdialog.c:257
+#: ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Erro"
 
@@ -145,7 +150,8 @@ msgstr "_Ver"
 msgid "_Help"
 msgstr "A_xuda"
 
-#: ../src/window.c:1161 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1161
+#: ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Crear un _marcador"
@@ -214,11 +220,13 @@ msgstr "Escolla un marcador ó que conectar"
 msgid "Connected"
 msgstr "Conectado"
 
-#: ../src/window.c:1280 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1280
+#: ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Tipo de servizo"
 
-#: ../src/window.c:1288 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1288
+#: ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Nome"
 
@@ -226,7 +234,9 @@ msgstr "Nome"
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: ../src/window.c:1409 ../src/window.c:1484 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1409
+#: ../src/window.c:1484
+#: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -319,7 +329,8 @@ msgstr "Debe introducir un URI válido para a conexión."
 msgid "_Device:"
 msgstr "_Dispositivo:"
 
-#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:555
+#: ../src/bookmarkeditdialog.c:1018
 msgid "_Server:"
 msgstr "_Servidor:"
 
@@ -441,11 +452,11 @@ msgstr "Interface"
 
 #: ../src/preferencesdialog.c:374
 msgid "_Save window position and geometry"
-msgstr "_Gardar a posición e maila xeometría da fiestra"
+msgstr "_Gardar a posición e maila xeometría da xanela"
 
 #: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Garda a posición e a xeometría da fiestra e restáuraa ao volver iniciar"
+msgstr "Garda a posición e a xeometría da xanela e restáuraa ao volver iniciar"
 
 #: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
@@ -515,11 +526,13 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Dispositivo de Unix: %s</b>"
 
-#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:441
+#: ../src/backendgvfs.c:477
 msgid "unknown"
 msgstr "descoñecido"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:447
+#: ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Ocorreu un erro ó conectar a \"%s\"."
@@ -557,7 +570,8 @@ msgstr "Crear un marcador para o recurso seleccionado"
 msgid "Refresh the network list"
 msgstr "Actualizar a lista da rede"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
+#: ../src/browsenetworkpanel.c:518
+#: ../src/bookmarkpanel.c:263
 msgid "Close panel"
 msgstr "Pechar o panel"
 
@@ -579,15 +593,12 @@ msgstr "Unha sinxela interface para conectar facilmente a sistemas de ficheiros 
 #~ msgstr ""
 #~ "A implementación do xestor de volumes baseado en HAL require a ferramenta \"gnome-mount\" para montar recursos locais coma discos. A implementación do xestor de volumes baseado en Unix pode montar ditos recursos directamente e tamén lista outros dispositivos locais.\n"
 #~ "Se non está seguro, use o monitor baseado en HAL."
-
 #~ msgid "Use _HAL based volume manager"
 #~ msgstr "Usar o xestor de volumes baseado en _HAL"
-
 #~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 #~ msgstr "<i>Cambiar esta opción require reiniciar Gigolo.</i>"
-
 #~ msgid "Use _Unix based volume manager"
 #~ msgstr "Usar o xestor de volumes baseado en _Unix"
-
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Mostrar o panel lateral de exploración da rede"
+
