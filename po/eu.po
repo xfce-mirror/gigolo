@@ -1,29 +1,27 @@
 # translation of es.po to Euskara
 # Copyright (C) 2009 THE gigolo'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gigolo package.
-#
+# 
 # Piarres Beobide <pi@beobide.net>, 2009.
 # Piarres Beobide <pi+debian@beobide.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
+"POT-Creation-Date: 2010-11-03 05:04+0000\n"
 "PO-Revision-Date: 2009-12-15 12:11+0100\n"
 "Last-Translator: Piarres Beobide <pi+debian@beobide.net>\n"
 "Language-Team: Basque <debian-l10n-basque@lists.debian.org>\n"
-"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.0\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr ""
-"Alde batetara utzi irekirik  dauden instantzia, behartu instantzia berri bat "
-"irekitzea"
+msgstr "Alde batetara utzi irekirik  dauden instantzia, behartu instantzia berri bat irekitzea"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
@@ -73,7 +71,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (segurua)"
 
-#: ../src/common.c:93 ../src/window.c:1367
+#: ../src/common.c:93 ../src/window.c:1371
 msgid "Network"
 msgstr "Sarea"
 
@@ -89,165 +87,157 @@ msgstr "Argazkiak"
 msgid "Custom Location"
 msgstr "Pertsonalizatutako kokalekua"
 
-#: ../src/window.c:257
+#: ../src/window.c:261
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "\"%s\"-ra konektatzen"
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Urruneko fitxategi-sistemetara konektatzeko interfaze sinple bat"
+#: ../src/window.c:429
+msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "Urruneko fitxategi-sistemetara eta lokaletara erraz konektatzeko interfaze sinple bat"
 
-#: ../src/window.c:426
+#: ../src/window.c:430
 msgid "Copyright 2008-2010 Enrico Tröger"
 msgstr "Copyright 2008-20010 Enrico Tröger"
 
-#: ../src/window.c:429
+#: ../src/window.c:433
 msgid "translator-credits"
 msgstr "Piarres Beobide <pi@beobide.net>"
 
-#: ../src/window.c:461
+#: ../src/window.c:465
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"Gigolok GVfs-ek euskarri ematen dien hurrengo protokoloak erabili ditzake:"
+msgstr "Gigolok GVfs-ek euskarri ematen dien hurrengo protokoloak erabili ditzake:"
 
-#: ../src/window.c:558
+#: ../src/window.c:562
 #, c-format
 msgid "The command '%s' failed"
 msgstr "'%s' komandoak huts egin du"
 
-#: ../src/window.c:559 ../src/window.c:686 ../src/bookmarkeditdialog.c:214
+#: ../src/window.c:563 ../src/window.c:690 ../src/bookmarkeditdialog.c:214
 #: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
 #: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Errorea"
 
-#: ../src/window.c:1153
+#: ../src/window.c:1157
 msgid "_File"
 msgstr "_Fitxategia"
 
-#: ../src/window.c:1154
+#: ../src/window.c:1158
 msgid "_Edit"
 msgstr "_Editatu"
 
-#: ../src/window.c:1155
+#: ../src/window.c:1159
 msgid "_Actions"
 msgstr "Ekintz_ak"
 
-#: ../src/window.c:1156
+#: ../src/window.c:1160
 msgid "_View"
 msgstr "_Ikusi"
 
-#: ../src/window.c:1157
+#: ../src/window.c:1161
 msgid "_Help"
 msgstr "_Laguntza"
 
-#: ../src/window.c:1161 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1165 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Sortu _laster-markak"
 
-#: ../src/window.c:1163
+#: ../src/window.c:1167
 msgid "_Edit Bookmarks"
 msgstr "_Editatu laster-markak"
 
-#: ../src/window.c:1164
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Ireki laster-marka kudeatzailea laster-markak gehitu. editatu edo ezabatzeko"
-
 #: ../src/window.c:1168
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Ireki laster-marka kudeatzailea laster-markak gehitu. editatu edo ezabatzeko"
+
+#: ../src/window.c:1172
 msgid "Disconnect the selected resource"
 msgstr "Deskonektatu hautatutako errekurtsoa"
 
-#: ../src/window.c:1170
+#: ../src/window.c:1174
 msgid "Open the selected resource with a file manager"
 msgstr "Ireki hautatutako errekurtsoa fitxategi kudeatzaile batekin"
 
-#: ../src/window.c:1171
+#: ../src/window.c:1175
 msgid "Copy _URI"
 msgstr "Kopia _URIa"
 
-#: ../src/window.c:1172
+#: ../src/window.c:1176
 msgid "Quit Gigolo"
 msgstr "Itxi Gigolo"
 
-#: ../src/window.c:1173
+#: ../src/window.c:1177
 msgid "Online Help"
 msgstr "Sare-bidezko laguntza"
 
-#: ../src/window.c:1174
+#: ../src/window.c:1178
 msgid "Supported Protocols"
 msgstr "Onartutako protokoloak"
 
-#: ../src/window.c:1180
+#: ../src/window.c:1184
 msgid "Side _Panel"
 msgstr "Alboko _Panela"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1186
 msgid "_Toolbar"
 msgstr "_Tresna-barra"
 
-#: ../src/window.c:1184
+#: ../src/window.c:1188
 msgid "Status _Icon"
 msgstr "Egoera _ikonoa"
 
-#: ../src/window.c:1190
+#: ../src/window.c:1194
 msgid "View as _Symbols"
 msgstr "Ikusi _sinbolo gisa"
 
-#: ../src/window.c:1191
+#: ../src/window.c:1195
 msgid "View as _Detailed List"
 msgstr "Ikusi _zehaztutako zerrenda gisa"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1201
 msgid "_Bookmarks"
 msgstr "_Laster-markak"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1201
 msgid "Choose a bookmark to connect to"
 msgstr "Hautatu konektatzeko laster-marka bat"
 
-#: ../src/window.c:1271
+#: ../src/window.c:1275
 msgid "Connected"
 msgstr "Konektaturik"
 
-#: ../src/window.c:1280 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1284 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Zerbitzu mota"
 
-#: ../src/window.c:1288 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1292 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Izena"
 
-#: ../src/window.c:1359
+#: ../src/window.c:1363
 msgid "Bookmarks"
 msgstr "Laster-markak"
 
-#: ../src/window.c:1409 ../src/window.c:1484 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1419 ../src/window.c:1494 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:631
+#: ../src/settings.c:668
 msgid "Move it now?"
 msgstr "Orain mugitu?"
 
-#: ../src/settings.c:632
+#: ../src/settings.c:669
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolok zure konfigurazio zaharraren direktorioa mugitu egin behar du "
-"abiarazi aurretik"
+msgstr "Gigolok zure konfigurazio zaharraren direktorioa mugitu egin behar du abiarazi aurretik"
 
-#: ../src/settings.c:640
+#: ../src/settings.c:677
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Zure konfigurazio direktorio zaharra (\"%s\") ezin da \"%s\" (%s)-ra mugitu. "
-"Mesedez eskuz mugitu direktorioa kokapen berrira."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Zure konfigurazio direktorio zaharra (\"%s\") ezin da \"%s\" (%s)-ra mugitu. Mesedez eskuz mugitu direktorioa kokapen berrira."
 
-#: ../src/settings.c:643
+#: ../src/settings.c:680
 msgid "Warning"
 msgstr "Abisua"
 
@@ -305,9 +295,7 @@ msgstr "Izen bat idatzi behar duzu laster-markarentzat."
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
-"Idatzitako laster-marka izena dagoeneko erabilia dago. Mesedez hautatu beste "
-"bat."
+msgstr "Idatzitako laster-marka izena dagoeneko erabilia dago. Mesedez hautatu beste bat."
 
 #: ../src/bookmarkeditdialog.c:247
 msgid "You must enter a server address or name."
@@ -431,21 +419,15 @@ msgstr "_Fitxategi kudeatzailea"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Idatzi muntatze puntuak ikusi edo irekitzeko erabili behar den programaren "
-"izena"
+msgstr "Idatzi muntatze puntuak ikusi edo irekitzeko erabili behar den programaren izena"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Laster-marka auto-konektatze bitartea"
 
 #: ../src/preferencesdialog.c:361
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Zenbat denboraz saiatu laster-markak auto-konektatzen, segundutan. Zero "
-"ezarriaz egiaztatzea ezgaitzen da."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Zenbat denboraz saiatu laster-markak auto-konektatzen, segundutan. Zero ezarriaz egiaztatzea ezgaitzen da."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -457,8 +439,7 @@ msgstr "_Gorde leihoaren kokaleku eta tamaina"
 
 #: ../src/preferencesdialog.c:375
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
-"Leihoaren kokalekua eta tamaina gorde eta abiaraztean ezarri egiten ditu"
+msgstr "Leihoaren kokalekua eta tamaina gorde eta abiaraztean ezarri egiten ditu"
 
 #: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
@@ -473,23 +454,16 @@ msgid "Show side panel"
 msgstr "Ikusi alboko panela"
 
 #: ../src/preferencesdialog.c:387
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
-msgstr ""
-"Eskuragarri dauden samba errekurtsoak bilatzeko sare lokala nabigatzeko "
-"alboko panela bistarazi behar den ala ez"
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "Eskuragarri dauden samba errekurtsoak bilatzeko sare lokala nabigatzeko alboko panela bistarazi behar den ala ez"
 
 #: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr "Ikusi auto-konektatze errore mezuak"
 
 #: ../src/preferencesdialog.c:391
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Laster-marka bat auto-konektatzean huts egitean errorea ikusi behar den ala "
-"ez"
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "Laster-marka bat auto-konektatzean huts egitean errorea ikusi behar den ala ez"
 
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
@@ -589,17 +563,15 @@ msgstr "Laster-markarik ez"
 msgid "Connect to the selected bookmark"
 msgstr "Konektatu hautatutako laster-markara"
 
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Urruneko fitxategi-sistemetara konektatzeko interfaze sinple bat"
+
 #~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
+#~ "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 #~ "If you are unsure, use the HAL based monitor."
 #~ msgstr ""
-#~ "HALen oinarritutako bolumen kudeatzaileak 'gnome-mount' tresna behar du "
-#~ "diskoen antzerako errekurtso lokalak muntatzeko. Unix-en oinarritutako "
-#~ "bolumen kudeatzaileak ezin ditu errekurtso horiek muntatu ez beste gailu "
-#~ "lokal batzuek zerrendatu.\n"
+#~ "HALen oinarritutako bolumen kudeatzaileak 'gnome-mount' tresna behar du diskoen antzerako errekurtso lokalak muntatzeko. Unix-en oinarritutako bolumen kudeatzaileak ezin ditu errekurtso horiek muntatu ez beste gailu lokal batzuek zerrendatu.\n"
 #~ "Ziur ez bazaude HALen oinarritakoa hautatu."
 
 #~ msgid "Use _HAL based volume manager"
