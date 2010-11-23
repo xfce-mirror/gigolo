@@ -4,18 +4,19 @@
 # This file is distributed under the same license as the gigglo package.
 # Hunt Xu <huntxu@live.cn>, 2009, 2010.
 # Jiahua Huang <jhuangjiahua@gmail.com>, 2009.
+
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
-"PO-Revision-Date: 2010-01-22 14:26+0800\n"
+"POT-Creation-Date: 2010-11-23 11:04+0000\n"
+"PO-Revision-Date: 2010-11-23 23:33+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -69,7 +70,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (安全连接)"
 
-#: ../src/common.c:93 ../src/window.c:1367
+#: ../src/common.c:93 ../src/window.c:1371
 msgid "Network"
 msgstr "网络"
 
@@ -85,154 +86,156 @@ msgstr "照片"
 msgid "Custom Location"
 msgstr "自定义位置"
 
-#: ../src/window.c:257
+#: ../src/window.c:261
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "正在连接至 \"%s\""
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "一个易用的远程文件系统连接工具"
+#: ../src/window.c:429
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"一个简单的用以连接/挂载本地或者远程文件系统的前端"
 
-#: ../src/window.c:426
+#: ../src/window.c:430
 msgid "Copyright 2008-2010 Enrico Tröger"
 msgstr "版权所有 2008-2010 Enrico Tröger"
 
-#: ../src/window.c:429
+#: ../src/window.c:433
 msgid "translator-credits"
 msgstr ""
 "Hunt Xu <huntxu@live.cn>, 2009, 2010.\n"
 "Jiahua Huang <jhuangjiahua@gmail.com>, 2009."
 
-#: ../src/window.c:461
+#: ../src/window.c:465
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo 通过 GVfs 能够支持下列协议:"
 
-#: ../src/window.c:558
+#: ../src/window.c:562
 #, c-format
 msgid "The command '%s' failed"
 msgstr "执行命令 '%s' 失败"
 
-#: ../src/window.c:559 ../src/window.c:686 ../src/bookmarkeditdialog.c:214
+#: ../src/window.c:563 ../src/window.c:690 ../src/bookmarkeditdialog.c:214
 #: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
 #: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "错误"
 
-#: ../src/window.c:1153
+#: ../src/window.c:1157
 msgid "_File"
 msgstr "文件(_F)"
 
-#: ../src/window.c:1154
+#: ../src/window.c:1158
 msgid "_Edit"
 msgstr "编辑(_E)"
 
-#: ../src/window.c:1155
+#: ../src/window.c:1159
 msgid "_Actions"
 msgstr "动作(_A)"
 
-#: ../src/window.c:1156
+#: ../src/window.c:1160
 msgid "_View"
 msgstr "查看(_V)"
 
-#: ../src/window.c:1157
+#: ../src/window.c:1161
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../src/window.c:1161 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1165 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "创建书签(_B)"
 
-#: ../src/window.c:1163
+#: ../src/window.c:1167
 msgid "_Edit Bookmarks"
 msgstr "编辑书签(_E)"
 
-#: ../src/window.c:1164
+#: ../src/window.c:1168
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "打开书签管理器以添加、编辑或删除书签"
 
-#: ../src/window.c:1168
+#: ../src/window.c:1172
 msgid "Disconnect the selected resource"
 msgstr "断开与所选资源的连接"
 
-#: ../src/window.c:1170
+#: ../src/window.c:1174
 msgid "Open the selected resource with a file manager"
 msgstr "使用文件管理器打开所选资源"
 
-#: ../src/window.c:1171
+#: ../src/window.c:1175
 msgid "Copy _URI"
 msgstr "复制 URI(_U)"
 
-#: ../src/window.c:1172
+#: ../src/window.c:1176
 msgid "Quit Gigolo"
 msgstr "退出 Gigolo"
 
-#: ../src/window.c:1173
+#: ../src/window.c:1177
 msgid "Online Help"
 msgstr "在线帮助"
 
-#: ../src/window.c:1174
+#: ../src/window.c:1178
 msgid "Supported Protocols"
 msgstr "已支持的协议"
 
-#: ../src/window.c:1180
+#: ../src/window.c:1184
 msgid "Side _Panel"
 msgstr "侧边栏(_P)"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1186
 msgid "_Toolbar"
 msgstr "工具栏(_T)"
 
-#: ../src/window.c:1184
+#: ../src/window.c:1188
 msgid "Status _Icon"
 msgstr "状态图标(_I)"
 
-#: ../src/window.c:1190
+#: ../src/window.c:1194
 msgid "View as _Symbols"
 msgstr "图标查看方式(_S)"
 
-#: ../src/window.c:1191
+#: ../src/window.c:1195
 msgid "View as _Detailed List"
 msgstr "详细列表查看方式(_D)"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1201
 msgid "_Bookmarks"
 msgstr "书签(_B)"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1201
 msgid "Choose a bookmark to connect to"
 msgstr "选择一个书签以连接"
 
-#: ../src/window.c:1271
+#: ../src/window.c:1275
 msgid "Connected"
 msgstr "已连接"
 
-#: ../src/window.c:1280 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1284 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "服务类型"
 
-#: ../src/window.c:1288 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1292 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "名称"
 
-#: ../src/window.c:1359
+#: ../src/window.c:1363
 msgid "Bookmarks"
 msgstr "书签"
 
-#: ../src/window.c:1409 ../src/window.c:1484 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1419 ../src/window.c:1494 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:631
+#: ../src/settings.c:668
 msgid "Move it now?"
 msgstr "现在迁移？"
 
-#: ../src/settings.c:632
+#: ../src/settings.c:669
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo 在启动前需要迁移您旧有的配置目录。"
 
-#: ../src/settings.c:640
+#: ../src/settings.c:677
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
@@ -241,7 +244,7 @@ msgstr ""
 "无法将您旧有的配置目录 \"%s\" 移动到新位置 \"%s\" (%s)。请手动移动该目录至新"
 "位置。"
 
-#: ../src/settings.c:643
+#: ../src/settings.c:680
 msgid "Warning"
 msgstr "警告"
 
@@ -571,6 +574,10 @@ msgstr "没有书签"
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
 msgstr "连接至所选书签"
+
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "一个易用的远程文件系统连接工具"
 
 #~ msgid ""
 #~ "The HAL based volume manager implementation requires the tool 'gnome-"
