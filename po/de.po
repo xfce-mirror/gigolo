@@ -98,7 +98,7 @@ msgstr "Eine einfache Oberfläche zum Einbinden lokaler und entfernter Dateisyst
 
 #: ../src/window.c:430
 msgid "Copyright 2008-2010 Enrico Tröger"
-msgstr "Copyright 2008-2009 Enrico Tröger"
+msgstr "Copyright 2008-2010 Enrico Tröger"
 
 #: ../src/window.c:433
 msgid "translator-credits"
@@ -158,11 +158,11 @@ msgstr "Öffnet den Lesezeicheneditor zum Hinzufügen, Bearbeiten oder Löschen 
 
 #: ../src/window.c:1172
 msgid "Disconnect the selected resource"
-msgstr "Trennt die ausgewählte Verbindung"
+msgstr "Die ausgewählte Verbindung trennen"
 
 #: ../src/window.c:1174
 msgid "Open the selected resource with a file manager"
-msgstr "Öffnet die ausgewählte Verbindung in einem Dateimanager"
+msgstr "Die ausgewählte Verbindung in einem Dateimanager öffnen"
 
 #: ../src/window.c:1175
 msgid "Copy _URI"
