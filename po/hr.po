@@ -7,16 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
+"POT-Creation-Date: 2010-12-22 17:05+0000\n"
 "PO-Revision-Date: 2010-06-11 19:35+0200\n"
-"Last-Translator:  Ivica Kolić<ikoli@yahoo.com> <>\n"
+"Last-Translator: Ivica Kolić<ikoli@yahoo.com> <>\n"
 "Language-Team: Croatian <>\n"
-"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -36,7 +35,7 @@ msgstr "Pokaži informaciju o verziji"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
+msgstr "- jednostavno sučelje za lako povezivanje na udaljene datotečne sustave"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -70,7 +69,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (siguran)"
 
-#: ../src/common.c:93 ../src/window.c:1367
+#: ../src/common.c:93 ../src/window.c:1371
 msgid "Network"
 msgstr "Mreža"
 
@@ -86,163 +85,157 @@ msgstr "Fotografije"
 msgid "Custom Location"
 msgstr "Prilagođena lokacija"
 
-#: ../src/window.c:257
+#: ../src/window.c:261
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Spajanje na \"%s\""
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
+#: ../src/window.c:429
+msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "Jednostavno sučelje jednostavno za povezivanje / montiranje na lokalne i udaljene datotečne sustave"
 
-#: ../src/window.c:426
+#: ../src/window.c:430
 msgid "Copyright 2008-2010 Enrico Tröger"
 msgstr "Copyright 2008-2010 Enrico Tröger"
 
-#: ../src/window.c:429
+#: ../src/window.c:433
 msgid "translator-credits"
 msgstr "Ivica Kolić (zvacet) <ikoli@yahoo.com"
 
-#: ../src/window.c:461
+#: ../src/window.c:465
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo može koristiti slijedeće protokole koje pruža GVfs:"
 
-#: ../src/window.c:558
+#: ../src/window.c:562
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Naredba  '%s' nije uspjela"
 
-#: ../src/window.c:559 ../src/window.c:686 ../src/bookmarkeditdialog.c:214
+#: ../src/window.c:563 ../src/window.c:690 ../src/bookmarkeditdialog.c:214
 #: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
 #: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
 msgid "Error"
 msgstr "Greška"
 
-#: ../src/window.c:1153
+#: ../src/window.c:1157
 msgid "_File"
 msgstr "_Datoteka"
 
-#: ../src/window.c:1154
+#: ../src/window.c:1158
 msgid "_Edit"
 msgstr "_Uredi"
 
-#: ../src/window.c:1155
+#: ../src/window.c:1159
 msgid "_Actions"
 msgstr "_Radnje"
 
-#: ../src/window.c:1156
+#: ../src/window.c:1160
 msgid "_View"
 msgstr "_Pogled"
 
-#: ../src/window.c:1157
+#: ../src/window.c:1161
 msgid "_Help"
 msgstr "_Pomoć"
 
-#: ../src/window.c:1161 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:1165 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Napravi _zabilješku"
 
-#: ../src/window.c:1163
+#: ../src/window.c:1167
 msgid "_Edit Bookmarks"
 msgstr "_Uredi zabilješke"
 
-#: ../src/window.c:1164
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Otvori upravitelja zabilješkama za dodavanje,uređivanje ili brisanje "
-"zabilješki"
-
 #: ../src/window.c:1168
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Otvori upravitelja zabilješkama za dodavanje,uređivanje ili brisanje zabilješki"
+
+#: ../src/window.c:1172
 msgid "Disconnect the selected resource"
 msgstr "Odspoji odabrani izvor"
 
-#: ../src/window.c:1170
+#: ../src/window.c:1174
 msgid "Open the selected resource with a file manager"
 msgstr "Otvori odabrani izvor pomoću upravitelja datotekama"
 
-#: ../src/window.c:1171
+#: ../src/window.c:1175
 msgid "Copy _URI"
 msgstr "Kopiraj _URI"
 
-#: ../src/window.c:1172
+#: ../src/window.c:1176
 msgid "Quit Gigolo"
 msgstr "Isključi Gigolo"
 
-#: ../src/window.c:1173
+#: ../src/window.c:1177
 msgid "Online Help"
 msgstr "Online pomoć"
 
-#: ../src/window.c:1174
+#: ../src/window.c:1178
 msgid "Supported Protocols"
 msgstr "Podržani protokoli"
 
-#: ../src/window.c:1180
+#: ../src/window.c:1184
 msgid "Side _Panel"
 msgstr "Bočni _stupac"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1186
 msgid "_Toolbar"
 msgstr "_Alatna traka"
 
-#: ../src/window.c:1184
+#: ../src/window.c:1188
 msgid "Status _Icon"
 msgstr "Statusna _ikona"
 
-#: ../src/window.c:1190
+#: ../src/window.c:1194
 msgid "View as _Symbols"
 msgstr "Pogledaj kao _simbole"
 
-#: ../src/window.c:1191
+#: ../src/window.c:1195
 msgid "View as _Detailed List"
 msgstr "Pogledaj kao _detaljnu listu"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1201
 msgid "_Bookmarks"
 msgstr "_Zabilješke"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1201
 msgid "Choose a bookmark to connect to"
 msgstr "Izaberi zabilješku za spajanje na"
 
-#: ../src/window.c:1271
+#: ../src/window.c:1275
 msgid "Connected"
 msgstr "Spojen"
 
-#: ../src/window.c:1280 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1284 ../src/bookmarkdialog.c:313
 msgid "Service Type"
 msgstr "Tip servisa"
 
-#: ../src/window.c:1288 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1292 ../src/bookmarkdialog.c:305
 msgid "Name"
 msgstr "Ime"
 
-#: ../src/window.c:1359
+#: ../src/window.c:1363
 msgid "Bookmarks"
 msgstr "Zabilješke"
 
-#: ../src/window.c:1409 ../src/window.c:1484 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1419 ../src/window.c:1494 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:631
+#: ../src/settings.c:668
 msgid "Move it now?"
 msgstr "Pomakni sada?"
 
-#: ../src/settings.c:632
+#: ../src/settings.c:669
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo mora maknuti stari konfiguracijski direktorij prije početka."
 
-#: ../src/settings.c:640
+#: ../src/settings.c:677
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Vaš stari konfiguracijski direktorij \"%s ne može biti maknut u \"%s\" (%s)."
-"Maknite direktorij ručno na novu lokaciju."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Vaš stari konfiguracijski direktorij \"%s ne može biti maknut u \"%s\" (%s).Maknite direktorij ručno na novu lokaciju."
 
-#: ../src/settings.c:643
+#: ../src/settings.c:680
 msgid "Warning"
 msgstr "Upozorenje"
 
@@ -431,12 +424,8 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Interval samospajanja zabilješke"
 
 #: ../src/preferencesdialog.c:361
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"koliko često pokušati samospajanje zabilješki,u sekundama.Nula onemogućuje "
-"provjeru."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "koliko često pokušati samospajanje zabilješki,u sekundama.Nula onemogućuje provjeru."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -463,9 +452,7 @@ msgid "Show side panel"
 msgstr "Pokaži bočni stupac"
 
 #: ../src/preferencesdialog.c:387
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
 msgstr ""
 
 #: ../src/preferencesdialog.c:390
@@ -473,8 +460,7 @@ msgid "Show auto-connect error messages"
 msgstr "Pokaži poruke grešaka samospajanja"
 
 #: ../src/preferencesdialog.c:391
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr ""
 
 #: ../src/preferencesdialog.c:397
@@ -574,3 +560,7 @@ msgstr "Nema zabilješki"
 #: ../src/bookmarkpanel.c:252
 msgid "Connect to the selected bookmark"
 msgstr "Spoji na odabranu zabilješku"
+
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Jednostavno sučelje za lako povezivanje na udaljene datotečne sustave"
