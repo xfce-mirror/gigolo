@@ -43,6 +43,7 @@ struct _GigoloBookmarkPrivate
 	gchar	*share;
 	guint	 port;
 	gchar	*user;
+	gchar	*color;
 	gboolean autoconnect;
 	gboolean should_not_autoconnect;
 
@@ -626,6 +627,28 @@ void gigolo_bookmark_set_domain(GigoloBookmark *bookmark, const gchar *domain)
 
 	g_free(priv->domain);
 	priv->domain = g_strdup(domain);
+}
+
+
+const gchar *gigolo_bookmark_get_color(GigoloBookmark *bookmark)
+{
+	g_return_val_if_fail(bookmark != NULL, NULL);
+
+	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->color;
+}
+
+
+void gigolo_bookmark_set_color(GigoloBookmark *bookmark, const gchar *color)
+{
+	GigoloBookmarkPrivate *priv;
+
+	g_return_if_fail(bookmark != NULL);
+	g_return_if_fail(color != NULL);
+
+	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+
+	g_free(priv->color);
+	priv->color = g_strdup(color);
 }
 
 

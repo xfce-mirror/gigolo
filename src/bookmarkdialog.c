@@ -61,6 +61,7 @@ enum
 	COL_AUTOMOUNT,
 	COL_USERNAME,
 	COL_OTHER,
+	COL_COLOR,
 	COL_BMREF,
 	N_COLUMNS,
 	ACTION_ADD,
@@ -119,6 +120,7 @@ static void update_row_in_model(GigoloBookmarkDialog *dialog, GtkTreeIter *iter,
 			COL_AUTOMOUNT, gigolo_bookmark_get_autoconnect(bm),
 			COL_USERNAME, gigolo_bookmark_get_user(bm),
 			COL_OTHER, other_text->str,
+			COL_COLOR, gigolo_bookmark_get_color(bm),
 			COL_BMREF, bm,
 			-1);
 	g_string_free(other_text, TRUE);
@@ -298,11 +300,11 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 	priv->tree = gtk_tree_view_new();
 	priv->store = gtk_list_store_new(N_COLUMNS,
 		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING,
-		G_TYPE_BOOLEAN, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER);
+		G_TYPE_BOOLEAN, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER);
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Name"), renderer, "text", COL_NAME, NULL);
+		_("Name"), renderer, "text", COL_NAME, "cell-background", COL_COLOR, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_NAME);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
@@ -310,7 +312,7 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Service Type"), renderer, "text", COL_SCHEME, NULL);
+		_("Service Type"), renderer, "text", COL_SCHEME, "cell-background", COL_COLOR, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_SCHEME);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
@@ -318,7 +320,7 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Host"), renderer, "text", COL_HOST, NULL);
+		_("Host"), renderer, "text", COL_HOST, "cell-background", COL_COLOR, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_HOST);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
@@ -326,7 +328,7 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Port"), renderer, "text", COL_PORT, NULL);
+		_("Port"), renderer, "text", COL_PORT, "cell-background", COL_COLOR, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_PORT);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
@@ -334,7 +336,7 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 
 	renderer = gtk_cell_renderer_toggle_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Auto-Connect"), renderer, "active", COL_AUTOMOUNT, NULL);
+		_("Auto-Connect"), renderer, "active", COL_AUTOMOUNT, "cell-background", COL_COLOR, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_AUTOMOUNT);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
@@ -342,7 +344,7 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Username"), renderer, "text", COL_USERNAME, NULL);
+		_("Username"), renderer, "text", COL_USERNAME, "cell-background", COL_COLOR, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_USERNAME);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
@@ -350,7 +352,7 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 
 	renderer = gtk_cell_renderer_text_new();
 	column = gtk_tree_view_column_new_with_attributes(
-		_("Other information"), renderer, "text", COL_OTHER, NULL);
+		_("Other information"), renderer, "text", COL_OTHER, "cell-background", COL_COLOR, NULL);
 	gtk_tree_view_column_set_sort_indicator(column, TRUE);
 	gtk_tree_view_column_set_sort_column_id(column, COL_OTHER);
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);

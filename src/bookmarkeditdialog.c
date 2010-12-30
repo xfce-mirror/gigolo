@@ -82,6 +82,9 @@ struct _GigoloBookmarkEditDialogPrivate
 	GtkWidget *share_button;
 	GtkWidget *share_entry;
 
+	GtkWidget *color_label;
+	GtkWidget *color_chooser;
+
 	GigoloBookmark *bookmark_init;
 	GigoloBookmark *bookmark_update;
 
@@ -402,6 +405,14 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 	tmp = gigolo_bookmark_get_name(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->name_entry), tmp);
+	/* Color */
+	tmp = gigolo_bookmark_get_color(priv->bookmark_init);
+	if (tmp != NULL)
+	{
+		GdkColor color;
+		if (gdk_color_parse(tmp, &color))
+			gtk_color_button_set_color(GTK_COLOR_BUTTON(priv->color_chooser), &color);
+	}
 	/* URI */
 	uri = gigolo_bookmark_get_uri(priv->bookmark_init);
 	if (uri != NULL)
@@ -530,7 +541,7 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->information_label);
 	}
 
-	i = 4;
+	i = 5;
 	table = priv->table;
 
 	if (meth->scheme == NULL)
@@ -740,6 +751,21 @@ static void fill_method_combo_box(GigoloBookmarkEditDialog *dialog)
 }
 
 
+static void update_bookmark_color(GigoloBookmarkEditDialog *dialog)
+{
+	GigoloBookmarkEditDialogPrivate *priv;
+	GdkColor color;
+	gchar *color_string;
+
+	priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+
+	gtk_color_button_get_color(GTK_COLOR_BUTTON(priv->color_chooser), &color);
+	color_string = gdk_color_to_string(&color);
+	gigolo_bookmark_set_color(priv->bookmark_update, color_string);
+	g_free(color_string);
+}
+
+
 /* Update the contents of the bookmark with the values from the dialog. */
 static void update_bookmark(GigoloBookmarkEditDialog *dialog)
 {
@@ -766,6 +792,8 @@ static void update_bookmark(GigoloBookmarkEditDialog *dialog)
 		gigolo_bookmark_set_name(priv->bookmark_update, tmp);
 	else
 		gigolo_bookmark_set_name(priv->bookmark_update, GIGOLO_BOOKMARK_NAME_NONE);
+
+	update_bookmark_color(dialog);
 
 	if (idx == -1)
 		idx = 0;
@@ -862,6 +890,8 @@ static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop
 				combo_set_active(priv->type_combo, 0);
 				gtk_widget_hide(priv->name_label);
 				gtk_widget_hide(priv->name_entry);
+				gtk_widget_hide(priv->color_label);
+				gtk_widget_hide(priv->color_chooser);
 				gtk_widget_hide(priv->autoconnect_label);
 				gtk_widget_hide(priv->autoconnect_checkbtn);
 				break;
@@ -975,23 +1005,32 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->name_label), entry);
 	gtk_table_attach(GTK_TABLE(table), entry, 1, 2, 0, 1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
+	priv->color_label = gtk_label_new_with_mnemonic(_("_Color:"));
+	gtk_misc_set_alignment(GTK_MISC(priv->color_label), 0.0, 0.5);
+	gtk_table_attach(GTK_TABLE(table), priv->color_label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
+
+	priv->color_chooser = gtk_color_button_new();
+	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->color_label), priv->color_chooser);
+	gtk_table_attach(GTK_TABLE(table), priv->color_chooser,
+		1, 2, 1, 2, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+
 	priv->autoconnect_label = gtk_label_new_with_mnemonic(_("Au_to-Connect"));
 	gtk_misc_set_alignment(GTK_MISC(priv->autoconnect_label), 0.0, 0.5);
-	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_label, 0, 1, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
 
 	priv->autoconnect_checkbtn = gtk_check_button_new();
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->autoconnect_label), priv->autoconnect_checkbtn);
-	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_checkbtn, 1, 2, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_checkbtn, 1, 2, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
 
 	label = gtk_label_new_with_mnemonic(_("Service t_ype:"));
 	gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.5);
-	gtk_table_attach(GTK_TABLE(table), label, 0, 1, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), label, 0, 1, 3, 4, GTK_FILL, GTK_FILL, 0, 0);
 
 	priv->type_combo = combo = gtk_combo_box_new();
-	gtk_table_attach(GTK_TABLE(table), combo, 1, 2, 2, 3, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), combo, 1, 2, 3, 4, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 	label_tmp = gtk_label_new(" ");
-	gtk_table_attach(GTK_TABLE(table), label_tmp, 0, 2, 3, 4, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), label_tmp, 0, 2, 4, 5, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 	renderer = gtk_cell_renderer_text_new();
 	gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(combo), renderer, TRUE);
