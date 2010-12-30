@@ -441,8 +441,12 @@ gchar *gigolo_bookmark_get_folder_expanded(GigoloBookmark *bookmark)
 
 	folder = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->folder;
 	username = gigolo_bookmark_get_user(bookmark);
-	if (NZV(folder) && username && folder[0] == '~')
+	if (NZV(folder) && folder[0] == '~')
+	{
+		if (! username)
+			username = g_get_user_name();
 		result = g_strconcat("/home/", username, folder + 1, NULL);
+	}
 	else
 		result = g_strdup(folder);
 
