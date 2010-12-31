@@ -41,6 +41,7 @@ typedef struct _GigoloBookmarkPanelPrivate			GigoloBookmarkPanelPrivate;
 enum
 {
 	GIGOLO_BOOKMARK_PANEL_COL_NAME,
+	GIGOLO_BOOKMARK_PANEL_COL_COLOR,
 	GIGOLO_BOOKMARK_PANEL_COL_REF,
 	GIGOLO_BOOKMARK_PANEL_N_COLUMNS
 };
@@ -98,6 +99,7 @@ static void update_store(GigoloBookmarkPanel *panel, GigoloSettings *settings)
 
 		gtk_list_store_insert_with_values(priv->store, NULL, -1,
 			GIGOLO_BOOKMARK_PANEL_COL_NAME, gigolo_bookmark_get_name(bm),
+			GIGOLO_BOOKMARK_PANEL_COL_COLOR, gigolo_bookmark_get_color(bm),
 			GIGOLO_BOOKMARK_PANEL_COL_REF, bm,
 			 -1);
 	}
@@ -209,7 +211,8 @@ static void tree_prepare(GigoloBookmarkPanel *panel)
 	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(panel);
 
 	tree = gtk_tree_view_new();
-	store = gtk_list_store_new(GIGOLO_BOOKMARK_PANEL_N_COLUMNS, G_TYPE_STRING, G_TYPE_POINTER);
+	store = gtk_list_store_new(GIGOLO_BOOKMARK_PANEL_N_COLUMNS,
+		G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER);
 
     column = gtk_tree_view_column_new();
 
@@ -217,7 +220,8 @@ static void tree_prepare(GigoloBookmarkPanel *panel)
 	gtk_tree_view_set_enable_search(GTK_TREE_VIEW(tree), FALSE);
 	gtk_tree_view_column_pack_start(column, text_renderer, TRUE);
 	gtk_tree_view_column_set_attributes(column, text_renderer,
-		"text", GIGOLO_BOOKMARK_PANEL_COL_NAME, NULL);
+		"text", GIGOLO_BOOKMARK_PANEL_COL_NAME,
+		"cell-background", GIGOLO_BOOKMARK_PANEL_COL_COLOR, NULL);
 
 	gtk_tree_view_append_column(GTK_TREE_VIEW(tree), column);
 	gtk_tree_view_set_headers_visible(GTK_TREE_VIEW(tree), FALSE);
