@@ -606,6 +606,16 @@ static gboolean iter_is_bookmark(GigoloWindow *window, GtkTreeModel *model, GtkT
 }
 
 
+static void update_create_edit_bookmark_action_label(GtkAction *action, gboolean is_bookmark)
+{
+	gtk_action_set_sensitive(action, TRUE);
+	if (is_bookmark)
+		gtk_action_set_label(action, _("Edit _Bookmark"));
+	else
+		gtk_action_set_label(action, _("Create _Bookmark"));
+}
+
+
 static void update_sensitive_buttons(GigoloWindow *window, GtkTreeModel *model, GtkTreeIter *iter)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
@@ -619,7 +629,7 @@ static void update_sensitive_buttons(GigoloWindow *window, GtkTreeModel *model, 
 
 		gtk_action_set_sensitive(priv->action_connect, (ref_type != GIGOLO_WINDOW_REF_TYPE_MOUNT));
 		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
-		gtk_action_set_sensitive(priv->action_bookmark_create, ! is_bookmark);
+		update_create_edit_bookmark_action_label(priv->action_bookmark_create, is_bookmark);
 		gtk_action_set_sensitive(priv->action_open, gigolo_settings_has_file_manager(priv->settings));
 		gtk_action_set_sensitive(priv->action_copyuri, (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
 	}
@@ -871,16 +881,17 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWin
 		if (gigolo_backend_gvfs_is_mount(mnt))
 		{
 			gchar *uri, *name;
+			GigoloBookmark *bm;
+			GtkWidget *edit_dialog;
 
 			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, &name, &uri);
 
-			if (gigolo_settings_get_bookmark_by_uri(priv->settings, uri) == NULL)
+			bm = gigolo_settings_get_bookmark_by_uri(priv->settings, uri);
+			if (bm == NULL)
 			{
-				GigoloBookmark *bm = gigolo_bookmark_new_from_uri(name, uri);
+				bm = gigolo_bookmark_new_from_uri(name, uri);
 				if (gigolo_bookmark_is_valid(bm))
 				{
-					GtkWidget *edit_dialog;
-
 					/* show the bookmark edit dialog and add the bookmark only if it was
 					 * not cancelled */
 					edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(
@@ -901,8 +912,21 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWin
 				g_object_unref(bm);
 			}
 			else
-				verbose("Bookmark for %s already exists", uri);
+			{
+				/* bookmark exists */
+				edit_dialog = gigolo_bookmark_edit_dialog_new_with_bookmark(
+					window, GIGOLO_BE_MODE_EDIT, bm);
+				if (gigolo_bookmark_edit_dialog_run(
+						GIGOLO_BOOKMARK_EDIT_DIALOG(edit_dialog)) == GTK_RESPONSE_OK)
+				{
+					/* this fills the values of the dialog into 'bm' */
+					g_object_set(edit_dialog, "bookmark-update", bm, NULL);
 
+					gigolo_window_update_bookmarks(window);
+					gigolo_settings_write(priv->settings, GIGOLO_SETTINGS_BOOKMARKS);
+				}
+				gtk_widget_destroy(edit_dialog);
+			}
 			g_free(uri);
 			g_free(name);
 		}
