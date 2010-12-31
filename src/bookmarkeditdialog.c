@@ -84,6 +84,7 @@ struct _GigoloBookmarkEditDialogPrivate
 
 	GtkWidget *color_label;
 	GtkWidget *color_chooser;
+	gboolean   color_set;
 
 	GigoloBookmark *bookmark_init;
 	GigoloBookmark *bookmark_update;
@@ -759,6 +760,10 @@ static void update_bookmark_color(GigoloBookmarkEditDialog *dialog)
 
 	priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
 
+	if (! priv->color_set)
+		/* if no colour has been chosen by the user, don't set the default colour (black) */
+		return;
+
 	gtk_color_button_get_color(GTK_COLOR_BUTTON(priv->color_chooser), &color);
 	color_string = gdk_color_to_string(&color);
 	gigolo_bookmark_set_color(priv->bookmark_update, color_string);
@@ -961,6 +966,15 @@ static void entry_activate_cb(G_GNUC_UNUSED GtkEditable *editable, GigoloBookmar
 }
 
 
+static void color_chooser_set_cb(G_GNUC_UNUSED GtkColorButton *widget,
+								 GigoloBookmarkEditDialog *dialog)
+{
+	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+
+	priv->color_set = TRUE;
+}
+
+
 static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 {
 	GtkWidget *label;
@@ -1009,7 +1023,9 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	gtk_misc_set_alignment(GTK_MISC(priv->color_label), 0.0, 0.5);
 	gtk_table_attach(GTK_TABLE(table), priv->color_label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
 
+	priv->color_set = FALSE;
 	priv->color_chooser = gtk_color_button_new();
+	g_signal_connect(priv->color_chooser, "color-set", G_CALLBACK(color_chooser_set_cb), dialog);
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->color_label), priv->color_chooser);
 	gtk_table_attach(GTK_TABLE(table), priv->color_chooser,
 		1, 2, 1, 2, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
