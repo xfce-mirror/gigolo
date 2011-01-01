@@ -1,7 +1,7 @@
 /*
  *      window.c
  *
- *      Copyright 2008-2010 Enrico Tröger <enrico(at)xfce(dot)org>
+ *      Copyright 2008-2011 Enrico Tröger <enrico(at)xfce(dot)org>
  *
  *      This program is free software; you can redistribute it and/or modify
  *      it under the terms of the GNU General Public License as published by
@@ -427,11 +427,11 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 		"authors", authors,
 		"logo-icon-name", gigolo_get_application_icon_name(),
 		"comments", _("A simple frontend to easily connect/mount to local and remote filesystems"),
-		"copyright", _("Copyright 2008-2010 Enrico Tröger"),
+		"copyright", _("Copyright 2008-2011 Enrico Tröger"),
 		"website", "http://www.uvena.de/gigolo/",
 		"version", VERSION,
 		"translator-credits", _("translator-credits"),
-		"license",  "Copyright 2008-2010 Enrico Tröger <enrico@xfce.org>\n\n"
+		"license",  "Copyright 2008-2011 Enrico Tröger <enrico@xfce.org>\n\n"
 					"This program is free software; you can redistribute it and/or modify\n"
 					"it under the terms of the GNU General Public License as published by\n"
 					"the Free Software Foundation; version 2 of the License.\n"

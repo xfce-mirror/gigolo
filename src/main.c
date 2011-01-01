@@ -1,7 +1,7 @@
 /*
  *      main.c
  *
- *      Copyright 2008-2010 Enrico Tröger <enrico(at)xfce(dot)org>
+ *      Copyright 2008-2011 Enrico Tröger <enrico(at)xfce(dot)org>
  *
  *      This program is free software; you can redistribute it and/or modify
  *      it under the terms of the GNU General Public License as published by
@@ -88,7 +88,7 @@ gint main(gint argc, gchar** argv)
 	if (show_version)
 	{
 		g_print("%s %s\n\n", PACKAGE, VERSION);
-		g_print("%s\n", "Copyright (c) 2008-2010");
+		g_print("%s\n", "Copyright (c) 2008-2011");
 		g_print("\tEnrico Tröger <enrico@xfce.org>\n\n");
 		g_print("\n");
 
