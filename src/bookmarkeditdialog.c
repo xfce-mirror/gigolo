@@ -50,6 +50,8 @@ struct _GigoloBookmarkEditDialogPrivate
 	GtkWidget *type_combo;
 	GtkWidget *information_label;
 
+	GtkWidget *separator;
+
 	GtkWidget *name_label;
 	GtkWidget *name_entry;
 
@@ -542,7 +544,7 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		gtk_container_remove(GTK_CONTAINER(priv->table), priv->information_label);
 	}
 
-	i = 5;
+	i = 6;
 	table = priv->table;
 
 	if (meth->scheme == NULL)
@@ -899,6 +901,7 @@ static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop
 				gtk_widget_hide(priv->color_chooser);
 				gtk_widget_hide(priv->autoconnect_label);
 				gtk_widget_hide(priv->autoconnect_checkbtn);
+				gtk_widget_hide(priv->separator);
 				break;
 			}
 		}
@@ -1038,15 +1041,18 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->autoconnect_label), priv->autoconnect_checkbtn);
 	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_checkbtn, 1, 2, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
 
+	priv->separator = gtk_hseparator_new();
+	gtk_table_attach(GTK_TABLE(table), priv->separator, 0, 2, 3, 4, GTK_FILL, GTK_FILL, 0, 0);
+
 	label = gtk_label_new_with_mnemonic(_("Service t_ype:"));
 	gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.5);
-	gtk_table_attach(GTK_TABLE(table), label, 0, 1, 3, 4, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), label, 0, 1, 4, 5, GTK_FILL, GTK_FILL, 0, 0);
 
 	priv->type_combo = combo = gtk_combo_box_new();
-	gtk_table_attach(GTK_TABLE(table), combo, 1, 2, 3, 4, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), combo, 1, 2, 4, 5, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 	label_tmp = gtk_label_new(" ");
-	gtk_table_attach(GTK_TABLE(table), label_tmp, 0, 2, 4, 5, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_table_attach(GTK_TABLE(table), label_tmp, 0, 2, 5, 6, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
 
 	renderer = gtk_cell_renderer_text_new();
 	gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(combo), renderer, TRUE);
