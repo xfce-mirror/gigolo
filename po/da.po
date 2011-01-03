@@ -125,7 +125,7 @@ msgstr "Fejl"
 
 #: ../src/window.c:613
 msgid "Edit _Bookmark"
-msgstr "Redigér bogmærke"
+msgstr "Redigér _bogmærke"
 
 #: ../src/window.c:615 ../src/window.c:1189 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
