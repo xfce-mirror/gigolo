@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-07 05:05+0000\n"
-"PO-Revision-Date: 2010-01-29 23:19+0200\n"
-"Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>\n"
+"PO-Revision-Date: 2011-01-07 18:54+0200\n"
+"Last-Translator: Spiros Georgaras <sng@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,7 +72,8 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (ασφαλές)"
 
-#: ../src/common.c:93 ../src/window.c:1395
+#: ../src/common.c:93
+#: ../src/window.c:1395
 msgid "Network"
 msgstr "Δίκτυο"
 
@@ -114,9 +115,13 @@ msgstr "Το gigolo δεν μπορεί να κάνει χρήση των ακό
 msgid "The command '%s' failed"
 msgstr "Η εντολή '%s' απέτυχε"
 
-#: ../src/window.c:563 ../src/window.c:700 ../src/bookmarkeditdialog.c:220
-#: ../src/bookmarkeditdialog.c:239 ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:263 ../src/bookmarkeditdialog.c:274
+#: ../src/window.c:563
+#: ../src/window.c:700
+#: ../src/bookmarkeditdialog.c:220
+#: ../src/bookmarkeditdialog.c:239
+#: ../src/bookmarkeditdialog.c:252
+#: ../src/bookmarkeditdialog.c:263
+#: ../src/bookmarkeditdialog.c:274
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -124,10 +129,12 @@ msgstr "Σφάλμα"
 msgid "Edit _Bookmark"
 msgstr "Επεξεργασία _σελοδοδείκτη"
 
-#: ../src/window.c:615 ../src/window.c:1189 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:615
+#: ../src/window.c:1189
+#: ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
-msgstr "Δημιουργία συνδέσμου"
+msgstr "Δημιουργία συν_δέσμου"
 
 #: ../src/window.c:1181
 msgid "_File"
@@ -199,7 +206,7 @@ msgstr "Εμφάνιση ως _σύμβολα"
 
 #: ../src/window.c:1219
 msgid "View as _Detailed List"
-msgstr "Εμφάνιση ως λεπτομερής λίστας"
+msgstr "Εμφάνιση ως _λεπτομερή λίστα"
 
 #: ../src/window.c:1225
 msgid "_Bookmarks"
@@ -213,11 +220,13 @@ msgstr "Επιλογή ενός συνδέσμου για σύνδεση"
 msgid "Connected"
 msgstr "Συνδέθηκε"
 
-#: ../src/window.c:1308 ../src/bookmarkdialog.c:315
+#: ../src/window.c:1308
+#: ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "Τύπος υπηρεσίας"
 
-#: ../src/window.c:1316 ../src/bookmarkdialog.c:307
+#: ../src/window.c:1316
+#: ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "Όνομα"
 
@@ -225,7 +234,9 @@ msgstr "Όνομα"
 msgid "Bookmarks"
 msgstr "Σύνδεσμοι"
 
-#: ../src/window.c:1443 ../src/window.c:1518 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1443
+#: ../src/window.c:1518
+#: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -318,7 +329,8 @@ msgstr "Πρέπει να εισάγετε ένα έγκυρο URI για την
 msgid "_Device:"
 msgstr "_Συσκευή:"
 
-#: ../src/bookmarkeditdialog.c:569 ../src/bookmarkeditdialog.c:1079
+#: ../src/bookmarkeditdialog.c:569
+#: ../src/bookmarkeditdialog.c:1079
 msgid "_Server:"
 msgstr "_Διακομιστής:"
 
@@ -452,7 +464,7 @@ msgstr "Αποθηκεύει την θέση και γεωμετρία των π
 
 #: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
-msgstr "Εμφάνιση εικονιδίου κατάστασης στην περιοχή ειδοποιήσεων"
+msgstr "Εμφάνιση ε_ικονιδίου κατάστασης στην περιοχή ειδοποιήσεων"
 
 #: ../src/preferencesdialog.c:381
 msgid "Start _minimized in the Notification Area"
@@ -518,11 +530,13 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Συσκευή Unix: %s</b>"
 
-#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:441
+#: ../src/backendgvfs.c:477
 msgid "unknown"
 msgstr "άγνωστο"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:447
+#: ../src/backendgvfs.c:543
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Η σύνδεση στο \"%s\" απέτυχε."
@@ -560,7 +574,8 @@ msgstr "Δημιουργία συνδέσμου από τον επιλεγμέν
 msgid "Refresh the network list"
 msgstr "Ανανέωση της λίστας δικτύου"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:518
+#: ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr "Κλείσιμο ταμπλό"
 
@@ -582,12 +597,10 @@ msgstr "Ένα απλό εργαλείο για την εύκολο σύνδεσ
 #~ msgstr ""
 #~ "Η υλοποίηση του διαχειριστή τόμων βασισμένος στο HAL χρειάζεται στο εργαλείο 'gnome-mount' για να προσαρτήση τις τοπικές πηγές όπως τους δίσκους. Η υλοποίηση του διαχειριστή τομέων βασισμένο στο UNIX μπορεί να προσαρτήσει τέτοιες πηγές απευθείας και επίσης να εμφανίσει σε λίστα άλλες τοπικές συσκευές.\n"
 #~ "Αν δεν είστε σίγουροι, χρησιμοποιήστε τον ελεκτή βασισμένο στο HAL."
-
 #~ msgid "Use _HAL based volume manager"
 #~ msgstr "Χρήση του διαχειριστή τόμων βασισμένο στο HAL"
-
 #~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 #~ msgstr "<i>Τροποποιώντας αυτή την επιλογή το gigolo χρειάζεται επανεκκίνηση.</i>"
-
 #~ msgid "Use _Unix based volume manager"
 #~ msgstr "Χρήση του διαχειριστή τόμων βασισμένο στο Unix"
+
