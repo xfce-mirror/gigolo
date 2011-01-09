@@ -430,26 +430,29 @@ static void volume_mount_finished_cb(GObject *src, GAsyncResult *res, gpointer b
 
 	if (! g_volume_mount_finish(G_VOLUME(src), res, &error))
 	{
-		gchar *name, *msg;
-
-		if (G_IS_VOLUME(src))
-			name = g_volume_get_name(G_VOLUME(src));
-		else
-		{
-			gigolo_backend_gvfs_get_name_and_uri_from_mount(G_MOUNT(src), &name, NULL);
-			if (name == NULL)
-				name = g_strdup(_("unknown"));
-		}
-
-		g_warning("Mounting of \"%s\" failed: %s", name, error->message);
 		if (! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_FAILED_HANDLED))
 		{
-			msg = g_strdup_printf(_("Connecting to \"%s\" failed."), name);
-			g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
-			g_free(msg);
+			gchar *name, *msg;
+
+			if (G_IS_VOLUME(src))
+				name = g_volume_get_name(G_VOLUME(src));
+			else
+			{
+				gigolo_backend_gvfs_get_name_and_uri_from_mount(G_MOUNT(src), &name, NULL);
+				if (name == NULL)
+					name = g_strdup(_("unknown"));
+			}
+
+			g_warning("Mounting of \"%s\" failed: %s", name, error->message);
+			if (! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_FAILED_HANDLED))
+			{
+				msg = g_strdup_printf(_("Connecting to \"%s\" failed."), name);
+				g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
+				g_free(msg);
+			}
+			g_error_free(error);
+			g_free(name);
 		}
-		g_error_free(error);
-		g_free(name);
 	}
 	else
 		verbose("Mount finished sucessfully");
@@ -466,25 +469,28 @@ static void unmount_finished_cb(GObject *src, GAsyncResult *res, gpointer backen
 	if (! g_mount_unmount_finish(G_MOUNT(src), res, &error))
 #endif
 	{
-		gchar *name, *msg;
-
-		if (G_IS_VOLUME(src))
-			name = g_volume_get_name(G_VOLUME(src));
-		else
+		if (! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_FAILED_HANDLED))
 		{
-			gigolo_backend_gvfs_get_name_and_uri_from_mount(G_MOUNT(src), &name, NULL);
-			if (name == NULL)
-				name = g_strdup(_("unknown"));
+			gchar *name, *msg;
+
+			if (G_IS_VOLUME(src))
+				name = g_volume_get_name(G_VOLUME(src));
+			else
+			{
+				gigolo_backend_gvfs_get_name_and_uri_from_mount(G_MOUNT(src), &name, NULL);
+				if (name == NULL)
+					name = g_strdup(_("unknown"));
+			}
+
+			g_warning("Unmounting of \"%s\" failed: %s", name, error->message);
+			msg = g_strdup_printf(_("Disconnecting from \"%s\" failed."), name);
+
+			g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
+
+			g_error_free(error);
+			g_free(name);
+			g_free(msg);
 		}
-
-		g_warning("Unmounting of \"%s\" failed: %s", name, error->message);
-		msg = g_strdup_printf(_("Disconnecting from \"%s\" failed."), name);
-
-		g_signal_emit(backend, signals[OPERATION_FAILED], 0, msg, error->message);
-
-		g_error_free(error);
-		g_free(name);
-		g_free(msg);
 	}
 }
 
