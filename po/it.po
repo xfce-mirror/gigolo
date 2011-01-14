@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-14 05:05+0000\n"
+"POT-Creation-Date: 2011-01-14 17:05+0000\n"
 "PO-Revision-Date: 2010-03-03 15:54+0100\n"
 "Last-Translator: Gianluca Foddis <gianluca.foddis@gmail.com>\n"
 "Language-Team: Italian\n"
@@ -122,7 +122,7 @@ msgstr "Errore"
 
 #: ../src/window.c:613
 msgid "Edit _Bookmark"
-msgstr "Modifica segnali_bro"
+msgstr "_Modifica segnalibro"
 
 #: ../src/window.c:615 ../src/window.c:1189 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
@@ -207,7 +207,7 @@ msgstr "S_egnalibri"
 
 #: ../src/window.c:1225
 msgid "Choose a bookmark to connect to"
-msgstr "Scegli un segnalibro a cui connettersi"
+msgstr "Permette di scegliere un segnalibro a cui connettersi"
 
 #: ../src/window.c:1299
 msgid "Connected"
@@ -348,7 +348,7 @@ msgstr "Connessione au_tomatica"
 
 #: ../src/bookmarkeditdialog.c:1047
 msgid "Service t_ype:"
-msgstr "_Tipo di servizio:"
+msgstr "Tipo di servi_zio:"
 
 #: ../src/bookmarkeditdialog.c:1072
 msgid "Set the port to 0 to use the default port"
@@ -360,7 +360,7 @@ msgstr "_Posizione (URI):"
 
 #: ../src/bookmarkeditdialog.c:1080
 msgid "_Folder:"
-msgstr "_Cartella:"
+msgstr "Carte_lla:"
 
 #: ../src/bookmarkeditdialog.c:1081
 msgid "P_ath:"
@@ -437,7 +437,7 @@ msgstr "I_ntervallo di connessione automatica"
 
 #: ../src/preferencesdialog.c:361
 msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "Frequenza, in secondi, di tentativo di connessione automatica al segnalibro. Lo zero disabilita il controllo."
+msgstr "Frequenza, in secondi, di tentativo di connessione automatica al segnalibro; lo zero disabilita il controllo"
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -457,7 +457,7 @@ msgstr "Mostra l'_icona di stato nell'area di notifica"
 
 #: ../src/preferencesdialog.c:381
 msgid "Start _minimized in the Notification Area"
-msgstr "Avvia _minimizzato nella nell'area di notifica"
+msgstr "Avvia _minimizzato nell'area di notifica"
 
 #: ../src/preferencesdialog.c:386
 msgid "Show side panel"
