@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-11 05:05+0000\n"
+"POT-Creation-Date: 2011-01-14 05:05+0000\n"
 "PO-Revision-Date: 2010-03-03 15:54+0100\n"
 "Last-Translator: Gianluca Foddis <gianluca.foddis@gmail.com>\n"
 "Language-Team: Italian\n"
@@ -96,9 +96,8 @@ msgid "A simple frontend to easily connect/mount to local and remote filesystems
 msgstr "Una semplice interfaccia per connettere e montare i file system remoti"
 
 #: ../src/window.c:430
-#, fuzzy
 msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Copyright 2008-2010 Enrico Tröger"
+msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:433
 msgid "translator-credits"
@@ -122,9 +121,8 @@ msgid "Error"
 msgstr "Errore"
 
 #: ../src/window.c:613
-#, fuzzy
 msgid "Edit _Bookmark"
-msgstr "Modifica segnalibro"
+msgstr "Modifica segnali_bro"
 
 #: ../src/window.c:615 ../src/window.c:1189 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
@@ -341,9 +339,8 @@ msgid "_Bookmark name:"
 msgstr "Nome del segnali_bro:"
 
 #: ../src/bookmarkeditdialog.c:1025
-#, fuzzy
 msgid "_Color:"
-msgstr "_Cartella:"
+msgstr "_Colore:"
 
 #: ../src/bookmarkeditdialog.c:1036
 msgid "Au_to-Connect"
