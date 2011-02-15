@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-17 23:05+0000\n"
+"POT-Creation-Date: 2011-02-15 11:05+0000\n"
 "PO-Revision-Date: 2010-11-23 23:33+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -338,9 +338,8 @@ msgid "_Bookmark name:"
 msgstr "书签名称(_B):"
 
 #: ../src/bookmarkeditdialog.c:1025
-#, fuzzy
 msgid "_Color:"
-msgstr "颜色(_C)"
+msgstr "颜色(_C):"
 
 #: ../src/bookmarkeditdialog.c:1036
 msgid "Au_to-Connect"
