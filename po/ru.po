@@ -1,16 +1,16 @@
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
+"POT-Creation-Date: 2011-02-15 05:05+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Urmas <dwqwt3i02@sneakemail.com>\n"
 "Language-Team: None <->\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 
@@ -66,7 +66,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (поддержка безопасности)"
 
-#: ../src/common.c:93 ../src/window.c:1367
+#: ../src/common.c:93 ../src/window.c:1395
 msgid "Network"
 msgstr "Сеть"
 
@@ -82,161 +82,161 @@ msgstr "Фотографии"
 msgid "Custom Location"
 msgstr "Другой тип"
 
-#: ../src/window.c:257
+#: ../src/window.c:261
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Подключение к «%s»"
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Простой интерфейс для подключения удаленных файловых систем"
-
-#: ../src/window.c:426
-msgid "Copyright 2008-2010 Enrico Tröger"
-msgstr "Copyright 2008-2010 Энрико Трёгер"
-
 #: ../src/window.c:429
+msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "Простой интерфейс для подключения локальных и удаленных файловых систем"
+
+#: ../src/window.c:430
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Copyright 2008-2011 Энрико Трёгер"
+
+#: ../src/window.c:433
 msgid "translator-credits"
 msgstr "Alexandr Ponomarenko, 2009"
 
-#: ../src/window.c:461
+#: ../src/window.c:465
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo может использовать следующие предоставляемые GVfs протоколы:"
 
-#: ../src/window.c:558
+#: ../src/window.c:562
 #, c-format
 msgid "The command '%s' failed"
 msgstr "При выполнении команды '%s' произошел сбой"
 
-#: ../src/window.c:559 ../src/window.c:686 ../src/bookmarkeditdialog.c:214
-#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
-#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
+#: ../src/window.c:563 ../src/window.c:700 ../src/bookmarkeditdialog.c:220
+#: ../src/bookmarkeditdialog.c:239 ../src/bookmarkeditdialog.c:252
+#: ../src/bookmarkeditdialog.c:263 ../src/bookmarkeditdialog.c:274
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../src/window.c:1153
-msgid "_File"
-msgstr "_Файл"
+#: ../src/window.c:613
+msgid "Edit _Bookmark"
+msgstr "Редактировать закладку"
 
-#: ../src/window.c:1154
-msgid "_Edit"
-msgstr "_Правка"
-
-#: ../src/window.c:1155
-msgid "_Actions"
-msgstr "_Действия"
-
-#: ../src/window.c:1156
-msgid "_View"
-msgstr "_Вид"
-
-#: ../src/window.c:1157
-msgid "_Help"
-msgstr "_Справка"
-
-#: ../src/window.c:1161 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:615 ../src/window.c:1189 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Создать _закладку"
 
-#: ../src/window.c:1163
+#: ../src/window.c:1181
+msgid "_File"
+msgstr "_Файл"
+
+#: ../src/window.c:1182
+msgid "_Edit"
+msgstr "_Правка"
+
+#: ../src/window.c:1183
+msgid "_Actions"
+msgstr "_Действия"
+
+#: ../src/window.c:1184
+msgid "_View"
+msgstr "_Вид"
+
+#: ../src/window.c:1185
+msgid "_Help"
+msgstr "_Справка"
+
+#: ../src/window.c:1191
 msgid "_Edit Bookmarks"
 msgstr "П_равка закладок"
 
-#: ../src/window.c:1164
+#: ../src/window.c:1192
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "Открывает Менеджер закладок для их добавления, изменения или удаления"
 
-#: ../src/window.c:1168
+#: ../src/window.c:1196
 msgid "Disconnect the selected resource"
 msgstr "Отключить выбранный ресурс"
 
-#: ../src/window.c:1170
+#: ../src/window.c:1198
 msgid "Open the selected resource with a file manager"
 msgstr "Открыть выбранный ресурс в менеджере файлов"
 
-#: ../src/window.c:1171
+#: ../src/window.c:1199
 msgid "Copy _URI"
 msgstr "Копировать _адрес"
 
-#: ../src/window.c:1172
+#: ../src/window.c:1200
 msgid "Quit Gigolo"
 msgstr "Выход из Gigolo"
 
-#: ../src/window.c:1173
+#: ../src/window.c:1201
 msgid "Online Help"
 msgstr "Справка в _Интернете"
 
-#: ../src/window.c:1174
+#: ../src/window.c:1202
 msgid "Supported Protocols"
 msgstr "Поддерживаемые протоколы"
 
-#: ../src/window.c:1180
+#: ../src/window.c:1208
 msgid "Side _Panel"
 msgstr "_Боковая панель"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1210
 msgid "_Toolbar"
 msgstr "Панель _инструментов"
 
-#: ../src/window.c:1184
+#: ../src/window.c:1212
 msgid "Status _Icon"
 msgstr "_Значок состояния"
 
-#: ../src/window.c:1190
+#: ../src/window.c:1218
 msgid "View as _Symbols"
 msgstr "_Список"
 
-#: ../src/window.c:1191
+#: ../src/window.c:1219
 msgid "View as _Detailed List"
 msgstr "_Таблица"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1225
 msgid "_Bookmarks"
 msgstr "_Закладки"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1225
 msgid "Choose a bookmark to connect to"
 msgstr "Выберите ресурс для подключения"
 
-#: ../src/window.c:1271
+#: ../src/window.c:1299
 msgid "Connected"
 msgstr "Подключен"
 
-#: ../src/window.c:1280 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1308 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "Тип службы"
 
-#: ../src/window.c:1288 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1316 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "Имя"
 
-#: ../src/window.c:1359
+#: ../src/window.c:1387
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: ../src/window.c:1409 ../src/window.c:1484 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1443 ../src/window.c:1518 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:631
+#: ../src/settings.c:673
 msgid "Move it now?"
 msgstr "Переместить его сейчас?"
 
-#: ../src/settings.c:632
+#: ../src/settings.c:674
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Перед началом работы необходимо переместить каталог настроек."
 
-#: ../src/settings.c:640
+#: ../src/settings.c:682
 #, c-format
-msgid ""
-"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
-"Please move manually the directory to the new location."
-msgstr ""
-"Не удалось переместить прежний каталог настроек \"%s\" в \"%s\" (%s). "
-"Пожалуйста, переместите его в новое местоположение вручную."
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "Не удалось переместить прежний каталог настроек \"%s\" в \"%s\" (%s). Пожалуйста, переместите его в новое местоположение вручную."
 
-#: ../src/settings.c:643
+#: ../src/settings.c:685
 msgid "Warning"
 msgstr "Внимание"
 
@@ -244,135 +244,139 @@ msgstr "Внимание"
 msgid "Connect"
 msgstr "Подключиться"
 
-#: ../src/bookmarkdialog.c:94
+#: ../src/bookmarkdialog.c:95
 #, c-format
 msgid "Domain: %s"
 msgstr "Домен: %s"
 
-#: ../src/bookmarkdialog.c:99
+#: ../src/bookmarkdialog.c:100
 #, c-format
 msgid "Share: %s"
 msgstr "Папка: %s"
 
-#: ../src/bookmarkdialog.c:105
+#: ../src/bookmarkdialog.c:106
 #, c-format
 msgid "Folder: %s"
 msgstr "Каталог: %s"
 
-#: ../src/bookmarkdialog.c:111
+#: ../src/bookmarkdialog.c:112
 #, c-format
 msgid "Path: %s"
 msgstr "Путь: %s"
 
-#: ../src/bookmarkdialog.c:321
+#: ../src/bookmarkdialog.c:323
 msgid "Host"
 msgstr "Сервер"
 
-#: ../src/bookmarkdialog.c:329
+#: ../src/bookmarkdialog.c:331
 msgid "Port"
 msgstr "Порт"
 
-#: ../src/bookmarkdialog.c:337
+#: ../src/bookmarkdialog.c:339
 msgid "Auto-Connect"
 msgstr "Подключаться автоматически"
 
-#: ../src/bookmarkdialog.c:345
+#: ../src/bookmarkdialog.c:347
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: ../src/bookmarkdialog.c:353
+#: ../src/bookmarkdialog.c:355
 msgid "Other information"
 msgstr "Прочие сведения"
 
-#: ../src/bookmarkdialog.c:410
+#: ../src/bookmarkdialog.c:412
 msgid "Edit Bookmarks"
 msgstr "Закладки"
 
-#: ../src/bookmarkeditdialog.c:215
+#: ../src/bookmarkeditdialog.c:221
 msgid "You must enter a name for the bookmark."
 msgstr "Укажите название закладки."
 
-#: ../src/bookmarkeditdialog.c:234
+#: ../src/bookmarkeditdialog.c:240
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr "Закладка с таким названием уже существует. Укажите другое название."
 
-#: ../src/bookmarkeditdialog.c:247
+#: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a server address or name."
 msgstr "Укажите имя или адрес сервера."
 
-#: ../src/bookmarkeditdialog.c:258
+#: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a share name."
 msgstr "Укажите имя ресурса."
 
-#: ../src/bookmarkeditdialog.c:269
+#: ../src/bookmarkeditdialog.c:275
 msgid "You must enter a valid URI for the connection."
 msgstr "Необходимо указать допустимый адрес ресурса."
 
-#: ../src/bookmarkeditdialog.c:553
+#: ../src/bookmarkeditdialog.c:567
 msgid "_Device:"
 msgstr "_Устройство:"
 
-#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:569 ../src/bookmarkeditdialog.c:1079
 msgid "_Server:"
 msgstr "_Сервер:"
 
-#: ../src/bookmarkeditdialog.c:845
+#: ../src/bookmarkeditdialog.c:880
 msgid "Create Bookmark"
 msgstr "Создать закладку"
 
-#: ../src/bookmarkeditdialog.c:852
+#: ../src/bookmarkeditdialog.c:887
 msgid "Edit Bookmark"
 msgstr "Свойства закладки"
 
-#: ../src/bookmarkeditdialog.c:860
+#: ../src/bookmarkeditdialog.c:895
 msgid "Connect to Server"
 msgstr "Подключение"
 
-#: ../src/bookmarkeditdialog.c:970
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Bookmark name:"
 msgstr "Имя _закладки:"
 
-#: ../src/bookmarkeditdialog.c:978
+#: ../src/bookmarkeditdialog.c:1025
+msgid "_Color:"
+msgstr "Цвет:"
+
+#: ../src/bookmarkeditdialog.c:1036
 msgid "Au_to-Connect"
 msgstr "_Автоподключение"
 
-#: ../src/bookmarkeditdialog.c:986
+#: ../src/bookmarkeditdialog.c:1047
 msgid "Service t_ype:"
 msgstr "_Тип службы:"
 
-#: ../src/bookmarkeditdialog.c:1011
+#: ../src/bookmarkeditdialog.c:1072
 msgid "Set the port to 0 to use the default port"
 msgstr "Для использования порта по умолчанию укажите 0"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1078
 msgid "_Location (URI):"
 msgstr "Раз_мещение (URI):"
 
-#: ../src/bookmarkeditdialog.c:1019
+#: ../src/bookmarkeditdialog.c:1080
 msgid "_Folder:"
 msgstr "_Каталог:"
 
-#: ../src/bookmarkeditdialog.c:1020
+#: ../src/bookmarkeditdialog.c:1081
 msgid "P_ath:"
 msgstr "_Путь:"
 
-#: ../src/bookmarkeditdialog.c:1021
+#: ../src/bookmarkeditdialog.c:1082
 msgid "_User Name:"
 msgstr "_Имя пользователя:"
 
-#: ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:1083
 msgid "Optional information:"
 msgstr "Дополнительные сведения:"
 
-#: ../src/bookmarkeditdialog.c:1023
+#: ../src/bookmarkeditdialog.c:1084
 msgid "_Port:"
 msgstr "_Порт:"
 
-#: ../src/bookmarkeditdialog.c:1024
+#: ../src/bookmarkeditdialog.c:1085
 msgid "_Domain:"
 msgstr "_Домен:"
 
-#: ../src/bookmarkeditdialog.c:1025
+#: ../src/bookmarkeditdialog.c:1086
 msgid "_Share:"
 msgstr "_Ресурс:"
 
@@ -425,12 +429,8 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "Автоподклю_чение к закладкам"
 
 #: ../src/preferencesdialog.c:361
-msgid ""
-"How often to try auto connecting bookmarks, in seconds. Zero disables "
-"checking."
-msgstr ""
-"Как часто пытаться подключиться к ресурсам в закладках (в секундах). Чтобы "
-"не подключаться к ним, укажите 0."
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "Как часто пытаться подключиться к ресурсам в закладках (в секундах). Чтобы не подключаться к ним, укажите 0."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -457,20 +457,15 @@ msgid "Show side panel"
 msgstr "Боковая панель"
 
 #: ../src/preferencesdialog.c:387
-msgid ""
-"Whether to show a side panel for browsing the local network for available "
-"Samba/Windows shares and a bookmark list"
-msgstr ""
-"Отображение боковой панели для списка общих ресурсов Samba/Windows в "
-"локальной сети, и списка закладок."
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "Отображение боковой панели для списка общих ресурсов Samba/Windows в локальной сети, и списка закладок."
 
 #: ../src/preferencesdialog.c:390
 msgid "Show auto-connect error messages"
 msgstr "Сообщения об о_шибках автоподключения"
 
 #: ../src/preferencesdialog.c:391
-msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr "Выводить сообщения об ошибке, если не удалось подключиться к закладкам"
 
 #: ../src/preferencesdialog.c:397
@@ -517,16 +512,16 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Устройство Unix: %s</b>"
 
-#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:443 ../src/backendgvfs.c:482
 msgid "unknown"
 msgstr "неизвестно"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:449 ../src/backendgvfs.c:549
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Не удалось подключиться к %s."
 
-#: ../src/backendgvfs.c:481
+#: ../src/backendgvfs.c:486
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Не удалось отключиться от %s."
@@ -559,37 +554,34 @@ msgstr "Создание закладки из выбранного ресурс
 msgid "Refresh the network list"
 msgstr "Обновить список сетей"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr "Закрыть панель"
 
-#: ../src/bookmarkpanel.c:91
+#: ../src/bookmarkpanel.c:92
 msgid "No bookmarks"
 msgstr "Отсутствуют"
 
-#: ../src/bookmarkpanel.c:252
+#: ../src/bookmarkpanel.c:256
 msgid "Connect to the selected bookmark"
 msgstr "Подключиться к этому ресурсу"
 
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Простой интерфейс для подключения удаленных файловых систем"
+
 #~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
+#~ "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
 #~ "If you are unsure, use the HAL based monitor."
 #~ msgstr ""
-#~ "Диспетчеру томов на базе HAL требуется средство gnome-mount для "
-#~ "подключения к локальным ресурсам (например, дискам). Диспетчер томов на "
-#~ "базе Unix может подключаться к ним напрямую и отображать прочие локальные "
-#~ "устройства.\n"
+#~ "Диспетчеру томов на базе HAL требуется средство gnome-mount для подключения к локальным ресурсам (например, дискам). Диспетчер томов на базе Unix может подключаться к ним напрямую и отображать прочие локальные устройства.\n"
 #~ "В случае сомнений, выберите На основе HAL."
 
 #~ msgid "Use _HAL based volume manager"
 #~ msgstr "Использовать диспетчер _томов на базе HAL"
 
 #~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-#~ msgstr ""
-#~ "<i>Чтобы задействовать изменение параметра, перезапустите Gigolo.</i>"
+#~ msgstr "<i>Чтобы задействовать изменение параметра, перезапустите Gigolo.</i>"
 
 #~ msgid "Use _Unix based volume manager"
 #~ msgstr "Менеджер томов на базе Unix (_Ю)"
