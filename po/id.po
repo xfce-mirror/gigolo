@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-19 11:04+0000\n"
+"POT-Creation-Date: 2011-02-26 05:08+0000\n"
 "PO-Revision-Date: 2010-05-31 22:53+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
@@ -68,7 +68,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (aman)"
 
-#: ../src/common.c:93 ../src/window.c:1371
+#: ../src/common.c:93 ../src/window.c:1395
 msgid "Network"
 msgstr "Jaringan"
 
@@ -94,8 +94,8 @@ msgid "A simple frontend to easily connect/mount to local and remote filesystems
 msgstr "Ujung depan sederhana untuk memudahkan sambungan/kaitan ke sistem berkas lokal dan jarak jauh"
 
 #: ../src/window.c:430
-msgid "Copyright 2008-2010 Enrico Tröger"
-msgstr "Hak Cipta 2008-2010 Enrico Tröger"
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Hak Cipta 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:433
 msgid "translator-credits"
@@ -110,131 +110,135 @@ msgstr "Gigolo dapat menggunakan protokol berikut yang disediakan oleh GVfs:"
 msgid "The command '%s' failed"
 msgstr "Perintah '%s' gagal"
 
-#: ../src/window.c:563 ../src/window.c:690 ../src/bookmarkeditdialog.c:214
-#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
-#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
+#: ../src/window.c:563 ../src/window.c:700 ../src/bookmarkeditdialog.c:220
+#: ../src/bookmarkeditdialog.c:239 ../src/bookmarkeditdialog.c:252
+#: ../src/bookmarkeditdialog.c:263 ../src/bookmarkeditdialog.c:274
 msgid "Error"
 msgstr "Galat"
 
-#: ../src/window.c:1157
-msgid "_File"
-msgstr "_Berkas"
+#: ../src/window.c:613
+msgid "Edit _Bookmark"
+msgstr "Sunting _Penanda"
 
-#: ../src/window.c:1158
-msgid "_Edit"
-msgstr "_Sunting"
-
-#: ../src/window.c:1159
-msgid "_Actions"
-msgstr "_Aksi"
-
-#: ../src/window.c:1160
-msgid "_View"
-msgstr "_Tampilan"
-
-#: ../src/window.c:1161
-msgid "_Help"
-msgstr "Ba_ntuan"
-
-#: ../src/window.c:1165 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:615 ../src/window.c:1189 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Buat _Penanda"
 
-#: ../src/window.c:1167
+#: ../src/window.c:1181
+msgid "_File"
+msgstr "_Berkas"
+
+#: ../src/window.c:1182
+msgid "_Edit"
+msgstr "_Sunting"
+
+#: ../src/window.c:1183
+msgid "_Actions"
+msgstr "_Aksi"
+
+#: ../src/window.c:1184
+msgid "_View"
+msgstr "_Tampilan"
+
+#: ../src/window.c:1185
+msgid "_Help"
+msgstr "Ba_ntuan"
+
+#: ../src/window.c:1191
 msgid "_Edit Bookmarks"
 msgstr "_Sunting Penanda"
 
-#: ../src/window.c:1168
+#: ../src/window.c:1192
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "Buka manager penanda untuk menambah, menyunting atau menghapus penanda"
 
-#: ../src/window.c:1172
+#: ../src/window.c:1196
 msgid "Disconnect the selected resource"
 msgstr "Putuskan sumber daya terpilih"
 
-#: ../src/window.c:1174
+#: ../src/window.c:1198
 msgid "Open the selected resource with a file manager"
 msgstr "Buka sumber daya terpilih dengan manajer berkas"
 
-#: ../src/window.c:1175
+#: ../src/window.c:1199
 msgid "Copy _URI"
 msgstr "Salin _URI"
 
-#: ../src/window.c:1176
+#: ../src/window.c:1200
 msgid "Quit Gigolo"
 msgstr "Keluar Gigolo"
 
-#: ../src/window.c:1177
+#: ../src/window.c:1201
 msgid "Online Help"
 msgstr "Bantuan Online"
 
-#: ../src/window.c:1178
+#: ../src/window.c:1202
 msgid "Supported Protocols"
 msgstr "Protokol Disokong"
 
-#: ../src/window.c:1184
+#: ../src/window.c:1208
 msgid "Side _Panel"
 msgstr "_Panel Sisi"
 
-#: ../src/window.c:1186
+#: ../src/window.c:1210
 msgid "_Toolbar"
 msgstr "_Batang Alat"
 
-#: ../src/window.c:1188
+#: ../src/window.c:1212
 msgid "Status _Icon"
 msgstr "_Ikon Status"
 
-#: ../src/window.c:1194
+#: ../src/window.c:1218
 msgid "View as _Symbols"
 msgstr "Tampilkan Sebagai _Simbol"
 
-#: ../src/window.c:1195
+#: ../src/window.c:1219
 msgid "View as _Detailed List"
 msgstr "Tampilkan Sebagai Senarai _Detail"
 
-#: ../src/window.c:1201
+#: ../src/window.c:1225
 msgid "_Bookmarks"
 msgstr "_Penanda"
 
-#: ../src/window.c:1201
+#: ../src/window.c:1225
 msgid "Choose a bookmark to connect to"
 msgstr "Pilih penanda untuk tempat menyambung"
 
-#: ../src/window.c:1275
+#: ../src/window.c:1299
 msgid "Connected"
 msgstr "Tersambung"
 
-#: ../src/window.c:1284 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1308 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "Tipe Layanan"
 
-#: ../src/window.c:1292 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1316 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "Nama"
 
-#: ../src/window.c:1363
+#: ../src/window.c:1387
 msgid "Bookmarks"
 msgstr "Penanda"
 
-#: ../src/window.c:1419 ../src/window.c:1494 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1443 ../src/window.c:1518 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:668
+#: ../src/settings.c:673
 msgid "Move it now?"
 msgstr "Pindahkan sekarang?"
 
-#: ../src/settings.c:669
+#: ../src/settings.c:674
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo perlu memindahkan direktori konfigurasi lama anda sebelum memulai."
 
-#: ../src/settings.c:677
+#: ../src/settings.c:682
 #, c-format
 msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
 msgstr "Direktori konfigurasi lama anda \"%s\" tak dapat dipindahkan ke \"%s\" (%s). Silakan pindahkan secara manual direktori ke lokasi baru."
 
-#: ../src/settings.c:680
+#: ../src/settings.c:685
 msgid "Warning"
 msgstr "Peringatan"
 
@@ -242,135 +246,139 @@ msgstr "Peringatan"
 msgid "Connect"
 msgstr "Sambung"
 
-#: ../src/bookmarkdialog.c:94
+#: ../src/bookmarkdialog.c:95
 #, c-format
 msgid "Domain: %s"
 msgstr "Ranah: %s"
 
-#: ../src/bookmarkdialog.c:99
+#: ../src/bookmarkdialog.c:100
 #, c-format
 msgid "Share: %s"
 msgstr "Kongsi: %s"
 
-#: ../src/bookmarkdialog.c:105
+#: ../src/bookmarkdialog.c:106
 #, c-format
 msgid "Folder: %s"
 msgstr "Folder: %s"
 
-#: ../src/bookmarkdialog.c:111
+#: ../src/bookmarkdialog.c:112
 #, c-format
 msgid "Path: %s"
 msgstr "Alamat: %s"
 
-#: ../src/bookmarkdialog.c:321
+#: ../src/bookmarkdialog.c:323
 msgid "Host"
 msgstr "Host"
 
-#: ../src/bookmarkdialog.c:329
+#: ../src/bookmarkdialog.c:331
 msgid "Port"
 msgstr "Pangkalan"
 
-#: ../src/bookmarkdialog.c:337
+#: ../src/bookmarkdialog.c:339
 msgid "Auto-Connect"
 msgstr "Sambung-Otomatis"
 
-#: ../src/bookmarkdialog.c:345
+#: ../src/bookmarkdialog.c:347
 msgid "Username"
 msgstr "Nama Pengguna"
 
-#: ../src/bookmarkdialog.c:353
+#: ../src/bookmarkdialog.c:355
 msgid "Other information"
 msgstr "Informasi lain"
 
-#: ../src/bookmarkdialog.c:410
+#: ../src/bookmarkdialog.c:412
 msgid "Edit Bookmarks"
 msgstr "Sunting Penanda"
 
-#: ../src/bookmarkeditdialog.c:215
+#: ../src/bookmarkeditdialog.c:221
 msgid "You must enter a name for the bookmark."
 msgstr "Anda harus memasukkan nama untuk penanda."
 
-#: ../src/bookmarkeditdialog.c:234
+#: ../src/bookmarkeditdialog.c:240
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr "Nama penanda yang dimasukkan telah terpakai. Silakan pilih nama yang lain."
 
-#: ../src/bookmarkeditdialog.c:247
+#: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a server address or name."
 msgstr "Anda harus memasukkan alamat server atau nama."
 
-#: ../src/bookmarkeditdialog.c:258
+#: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a share name."
 msgstr "Anda harus memasukkan nama kongsi."
 
-#: ../src/bookmarkeditdialog.c:269
+#: ../src/bookmarkeditdialog.c:275
 msgid "You must enter a valid URI for the connection."
 msgstr "Anda harus memasukkan URI yang sah untuk koneksi."
 
-#: ../src/bookmarkeditdialog.c:553
+#: ../src/bookmarkeditdialog.c:567
 msgid "_Device:"
 msgstr "_Divais:"
 
-#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:569 ../src/bookmarkeditdialog.c:1079
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:845
+#: ../src/bookmarkeditdialog.c:880
 msgid "Create Bookmark"
 msgstr "Buat Penanda"
 
-#: ../src/bookmarkeditdialog.c:852
+#: ../src/bookmarkeditdialog.c:887
 msgid "Edit Bookmark"
 msgstr "Sunting Penanda"
 
-#: ../src/bookmarkeditdialog.c:860
+#: ../src/bookmarkeditdialog.c:895
 msgid "Connect to Server"
 msgstr "Sambung ke Server"
 
-#: ../src/bookmarkeditdialog.c:970
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Bookmark name:"
 msgstr "_Nama penanda:"
 
-#: ../src/bookmarkeditdialog.c:978
+#: ../src/bookmarkeditdialog.c:1025
+msgid "_Color:"
+msgstr "_Warna:"
+
+#: ../src/bookmarkeditdialog.c:1036
 msgid "Au_to-Connect"
 msgstr "Sambung-O_tomatis"
 
-#: ../src/bookmarkeditdialog.c:986
+#: ../src/bookmarkeditdialog.c:1047
 msgid "Service t_ype:"
 msgstr "T_ipe layanan:"
 
-#: ../src/bookmarkeditdialog.c:1011
+#: ../src/bookmarkeditdialog.c:1072
 msgid "Set the port to 0 to use the default port"
 msgstr "Atur pangkalan ke 0 untuk menggunakan pangkalan standar"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1078
 msgid "_Location (URI):"
 msgstr "_Lokasi (URI):"
 
-#: ../src/bookmarkeditdialog.c:1019
+#: ../src/bookmarkeditdialog.c:1080
 msgid "_Folder:"
 msgstr "_Berkas:"
 
-#: ../src/bookmarkeditdialog.c:1020
+#: ../src/bookmarkeditdialog.c:1081
 msgid "P_ath:"
 msgstr "_Alamat:"
 
-#: ../src/bookmarkeditdialog.c:1021
+#: ../src/bookmarkeditdialog.c:1082
 msgid "_User Name:"
 msgstr "_Nama Pengguna:"
 
-#: ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:1083
 msgid "Optional information:"
 msgstr "Informasi tambahan:"
 
-#: ../src/bookmarkeditdialog.c:1023
+#: ../src/bookmarkeditdialog.c:1084
 msgid "_Port:"
 msgstr "_Pangkalan:"
 
-#: ../src/bookmarkeditdialog.c:1024
+#: ../src/bookmarkeditdialog.c:1085
 msgid "_Domain:"
 msgstr "_Ranah:"
 
-#: ../src/bookmarkeditdialog.c:1025
+#: ../src/bookmarkeditdialog.c:1086
 msgid "_Share:"
 msgstr "_Kongsi:"
 
@@ -506,16 +514,16 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Divais Unix: %s</b>"
 
-#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:443 ../src/backendgvfs.c:482
 msgid "unknown"
 msgstr "tak diketahui"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:449 ../src/backendgvfs.c:549
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Menyambung ke \"%s\" gagal."
 
-#: ../src/backendgvfs.c:481
+#: ../src/backendgvfs.c:486
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Memutus dari \"%s\" gagal."
@@ -548,15 +556,15 @@ msgstr "Buat penanda dari kongsi terpilih"
 msgid "Refresh the network list"
 msgstr "Muat ulang senarai jaringan"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr "Tutup panel"
 
-#: ../src/bookmarkpanel.c:91
+#: ../src/bookmarkpanel.c:92
 msgid "No bookmarks"
 msgstr "Tanpa penanda"
 
-#: ../src/bookmarkpanel.c:252
+#: ../src/bookmarkpanel.c:256
 msgid "Connect to the selected bookmark"
 msgstr "Sambung ke penanda terpilih"
 
