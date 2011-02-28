@@ -94,7 +94,6 @@ msgid "A simple frontend to easily connect/mount to local and remote filesystems
 msgstr "Ett enkelt gränssnitt för att enkelt ansluta/montera till lokala och fjärrfilsystem"
 
 #: ../src/window.c:430
-#, fuzzy
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "Copyright 2008-2011 Enrico Tröger"
 
