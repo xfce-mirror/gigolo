@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-03 05:04+0000\n"
+"POT-Creation-Date: 2011-06-14 22:09+0000\n"
 "PO-Revision-Date: 2010-06-11 19:35+0200\n"
 "Last-Translator: Ivica Kolić<ikoli@yahoo.com> <>\n"
 "Language-Team: Croatian <>\n"
@@ -449,11 +449,11 @@ msgstr "Sprema poziciju i geometriju prozora i obnavlja ih pri pokretanju."
 
 #: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
-msgstr ""
+msgstr "Prikaži statusnu _ikonu u području obavijesti"
 
 #: ../src/preferencesdialog.c:381
 msgid "Start _minimized in the Notification Area"
-msgstr ""
+msgstr "Započnite _minimizirano u području obavijesti"
 
 #: ../src/preferencesdialog.c:386
 msgid "Show side panel"
@@ -515,16 +515,16 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix uređaj: %s</b>"
 
-#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:443 ../src/backendgvfs.c:482
 msgid "unknown"
 msgstr "nepoznato"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:449 ../src/backendgvfs.c:549
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Spajanje na \"%s\" neuspjelo"
 
-#: ../src/backendgvfs.c:481
+#: ../src/backendgvfs.c:486
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Odspajanje sa \"%s neuspjelo"
