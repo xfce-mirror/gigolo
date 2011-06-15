@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-30 16:09+0000\n"
+"POT-Creation-Date: 2011-06-15 16:09+0000\n"
 "PO-Revision-Date: 2009-10-16 13:39+0100\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch\n"
@@ -37,8 +37,8 @@ msgstr "Toon versie-informatie"
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr ""
-"- een eenvoudige grafische schil om gemakkelijk verbinding te maken "
-"met externe bestandssystemen"
+"- een eenvoudige grafische schil om gemakkelijk verbinding te maken met "
+"externe bestandssystemen"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -106,12 +106,12 @@ msgstr "Auteursrecht 2008-2010 Enrico Tröger"
 
 #: ../src/window.c:433
 msgid "translator-credits"
-msgstr "Xfce Dutch translation team"
+msgstr "Timo Verbeek\n"
+"Pjotr"
 
 #: ../src/window.c:465
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"Gigolo kan de volgende protocollen gebruiken verstrekt door GVfs:"
+msgstr "Gigolo kan de volgende protocollen gebruiken verstrekt door GVfs:"
 
 #: ../src/window.c:562
 #, c-format
@@ -160,8 +160,8 @@ msgstr "Be_werk Bladwijzers"
 #: ../src/window.c:1192
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr ""
-"Open de bladwijzerbeheerder om bladwijzers toe te voegen, te "
-"bewerken of te verwijderen"
+"Open de bladwijzerbeheerder om bladwijzers toe te voegen, te bewerken of te "
+"verwijderen"
 
 #: ../src/window.c:1196
 msgid "Disconnect the selected resource"
@@ -241,8 +241,7 @@ msgstr "Nu verplaatsen?"
 
 #: ../src/settings.c:674
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo moet uw oude configuratiemap verplaatsen voordat hij begint."
+msgstr "Gigolo moet uw oude configuratiemap verplaatsen voordat hij begint."
 
 #: ../src/settings.c:682
 #, c-format
@@ -452,8 +451,8 @@ msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
 msgstr ""
-"Hoe vaak te proberen om automatisch verbinding te maken met bladwijzers, "
-"in seconden. Zero schakelt controleren uit."
+"Hoe vaak te proberen om automatisch verbinding te maken met bladwijzers, in "
+"seconden. Nul schakelt controleren uit."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
@@ -500,7 +499,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
-msgstr "_Verbindingslijst-modus"
+msgstr "_Verbindinglijst-modus"
 
 #: ../src/preferencesdialog.c:410
 msgid "Toolbar"
@@ -610,9 +609,9 @@ msgstr ""
 #~ "If you are unsure, use the HAL based monitor."
 #~ msgstr ""
 #~ "De HAL gebaseerde mediabeheerder-implementatie vereist het gereedschap "
-#~ "'gnome-mount' om  lokale bronnen te koppelen, zoals schijven. De Unix-gebaseerde "
-#~ "Mediabeheerder-implementatie kan deze bronnen direct koppelen rechtstreeks en "
-#~ "toont ook lijsten van lokale apparaten.\n"
+#~ "'gnome-mount' om  lokale bronnen te koppelen, zoals schijven. De Unix-"
+#~ "gebaseerde Mediabeheerder-implementatie kan deze bronnen direct koppelen "
+#~ "rechtstreeks en toont ook lijsten van lokale apparaten.\n"
 #~ "Als u er niet zeker van bent, gebruik dan de op HAL gebaseerde monitor."
 
 #~ msgid "Use _HAL based volume manager"
