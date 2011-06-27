@@ -26,8 +26,9 @@ msgid "Print a list of supported URI schemes"
 msgstr "طباعة قائمة بـ URI schemes المدعومة"
 
 #: ../src/main.c:48
+#, fuzzy
 msgid "Be verbose"
-msgstr ""
+msgstr "Be verbose"
 
 #: ../src/main.c:49
 msgid "Show version information"
@@ -432,9 +433,8 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "_علامة مدة إتصال-تلقائي"
 
 #: ../src/preferencesdialog.c:361
-#, fuzzy
 msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "كثير من الأحيان عند ضبط الاتصال التلقائي للعلامة المرجعية بالثواني إلى صفر يتعطيل التحقق."
+msgstr "كثير من الأحيان عند ضبط الإتصال التلقائي للعلامات بالثواني إلى صفر يقوم يتعطيل التحقق."
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
