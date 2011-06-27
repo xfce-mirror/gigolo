@@ -203,17 +203,14 @@ msgid "_Bookmarks"
 msgstr "_علامات"
 
 #: ../src/window.c:1225
-#, fuzzy
 msgid "Choose a bookmark to connect to"
-msgstr "اختر علامة للاتصال"
+msgstr "حدد العلامة لإتصال بـ"
 
 #: ../src/window.c:1299
-#, fuzzy
 msgid "Connected"
 msgstr "متصل"
 
 #: ../src/window.c:1308 ../src/bookmarkdialog.c:315
-#, fuzzy
 msgid "Service Type"
 msgstr "نوع الخدمة"
 
@@ -230,109 +227,93 @@ msgid "Gigolo"
 msgstr "جيغولو"
 
 #: ../src/settings.c:673
-#, fuzzy
 msgid "Move it now?"
-msgstr "التحرك الآن؟"
+msgstr "نقله الأن؟"
 
 #: ../src/settings.c:674
-#, fuzzy
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "gigolo بحاجة تحريك الدليل التكوين القديم قبل البدء."
+msgstr "جيغولو بحاجة لنقل دليل التكوين القديم قبل البدء."
 
 #: ../src/settings.c:682
-#, c-format, fuzzy
+#, c-format
 msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "الدليل التكوين القدي \"%s\" لا يمكن تحريكه إلى \"%s\" (%s). الرجاء انقله يدويا إلى الموقع الجديد."
+msgstr "دليل التكوين القديم خاصتك \"%s\" لا يمكنك نقله إلى \"%s\" (%s). المرجوا نقل الدليلي يدويا إلى المكان الجديد."
 
 #: ../src/settings.c:685
-#, fuzzy
 msgid "Warning"
 msgstr "تحذير"
 
 #: ../src/menubuttonaction.c:157
-#, fuzzy
 msgid "Connect"
-msgstr "ربط"
+msgstr "إتصال"
 
 #: ../src/bookmarkdialog.c:95
-#, c-format, fuzzy
+#, c-format
 msgid "Domain: %s"
-msgstr "المجال: %s"
+msgstr "نطاق: %s"
 
 #: ../src/bookmarkdialog.c:100
-#, c-format, fuzzy
+#, c-format
 msgid "Share: %s"
-msgstr "مشاركة: %s"
+msgstr "شارك: %s"
 
 #: ../src/bookmarkdialog.c:106
-#, c-format, fuzzy
+#, c-format
 msgid "Folder: %s"
 msgstr "مجلد: %s"
 
 #: ../src/bookmarkdialog.c:112
-#, c-format, fuzzy
+#, c-format
 msgid "Path: %s"
 msgstr "مسار: %s"
 
 #: ../src/bookmarkdialog.c:323
-#, fuzzy
 msgid "Host"
 msgstr "مضيف"
 
 #: ../src/bookmarkdialog.c:331
-#, fuzzy
 msgid "Port"
 msgstr "المنفذ"
 
 #: ../src/bookmarkdialog.c:339
-#, fuzzy
 msgid "Auto-Connect"
 msgstr "إتصال-تلقائي"
 
 #: ../src/bookmarkdialog.c:347
-#, fuzzy
 msgid "Username"
-msgstr "اسم المستخدم"
+msgstr "إسم المستخدم"
 
 #: ../src/bookmarkdialog.c:355
-#, fuzzy
 msgid "Other information"
 msgstr "معلومات أخرى"
 
 #: ../src/bookmarkdialog.c:412
-#, fuzzy
 msgid "Edit Bookmarks"
-msgstr "عدل العلامات"
+msgstr "حرر العلامات"
 
 #: ../src/bookmarkeditdialog.c:221
-#, fuzzy
 msgid "You must enter a name for the bookmark."
-msgstr "يجب إدخال اسم للعلامات."
+msgstr "يجب إدخال إسم العلامات."
 
 #: ../src/bookmarkeditdialog.c:240
-#, fuzzy
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr "اسم العلامات الذي دخلت بالفعل قيد الاستخدام. الرجاء اختيار واحد آخر."
+msgstr "إسم العلامة الذي أدخلت يوجد قيد الإستخدام. الرجاء إختيار إسم آخر."
 
 #: ../src/bookmarkeditdialog.c:253
-#, fuzzy
 msgid "You must enter a server address or name."
-msgstr "يجب إدخال عنوان خادم أو الاسم."
+msgstr "يجب إدخال عنوان خادم أو الإسم."
 
 #: ../src/bookmarkeditdialog.c:264
-#, fuzzy
 msgid "You must enter a share name."
-msgstr "يجب إدخال اسم المشاركة."
+msgstr "يجب إدخال إسم المشاركة."
 
 #: ../src/bookmarkeditdialog.c:275
-#, fuzzy
 msgid "You must enter a valid URI for the connection."
-msgstr "يجب إدخال URI صالحة للاتصال."
+msgstr "يجب إدخال URI صحيح للإتصال."
 
 #: ../src/bookmarkeditdialog.c:567
-#, fuzzy
 msgid "_Device:"
-msgstr "جهاز:"
+msgstr "ج_هاز:"
 
 #: ../src/bookmarkeditdialog.c:569 ../src/bookmarkeditdialog.c:1079
 #, fuzzy
