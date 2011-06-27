@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Gogolo\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../src/main.c:49
 msgid "Show version information"
-msgstr ""
+msgstr "عرض معلومات إصدار"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
@@ -39,38 +39,37 @@ msgstr ""
 
 #: ../src/common.c:77
 msgid "Unix Device"
-msgstr ""
+msgstr "UNIX الأجهزة"
 
 #: ../src/common.c:79
 msgid "Windows Share"
-msgstr ""
+msgstr "شارك Windows"
 
 #: ../src/common.c:81
 msgid "FTP"
-msgstr ""
+msgstr "بروتوكول نقل الملفات(FTP)"
 
 #: ../src/common.c:83
 msgid "HTTP"
-msgstr ""
+msgstr "بروتوكول نقل النص الفائق(HTTP)"
 
 #: ../src/common.c:85
 msgid "SSH"
-msgstr ""
+msgstr "بروتوكول القشره الآمنة(SSH)"
 
 #: ../src/common.c:87
 msgid "Obex"
-msgstr ""
+msgstr "Obex"
 
 #: ../src/common.c:89
 msgid "WebDAV"
-msgstr ""
+msgstr "WebDAV"
 
 #: ../src/common.c:91
 msgid "WebDAV (secure)"
-msgstr ""
+msgstr "WebDAV (أمن)"
 
-#: ../src/common.c:93
-#: ../src/window.c:1395
+#: ../src/common.c:93 ../src/window.c:1395
 msgid "Network"
 msgstr "شبكة"
 
@@ -84,12 +83,12 @@ msgstr "صور"
 
 #: ../src/common.c:99
 msgid "Custom Location"
-msgstr ""
+msgstr "مكان مخصص"
 
 #: ../src/window.c:261
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr ""
+msgstr "إتصال بـ \"%s\""
 
 #: ../src/window.c:429
 msgid "A simple frontend to easily connect/mount to local and remote filesystems"
@@ -97,7 +96,7 @@ msgstr ""
 
 #: ../src/window.c:430
 msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr ""
+msgstr "حقوق التأليف والنشر 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:433
 msgid "translator-credits"
@@ -105,20 +104,16 @@ msgstr "Arabic Xfce Translation Team (فريق تعريب إكسفس)Karim Olad 
 
 #: ../src/window.c:465
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
+msgstr "جيغولو يمكنه إستعمال البروتوكولات التالية التي تم تقديمها من طرف GVfs:"
 
 #: ../src/window.c:562
 #, c-format
 msgid "The command '%s' failed"
-msgstr ""
+msgstr "فشل الأمر '%s' "
 
-#: ../src/window.c:563
-#: ../src/window.c:700
-#: ../src/bookmarkeditdialog.c:220
-#: ../src/bookmarkeditdialog.c:239
-#: ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:263
-#: ../src/bookmarkeditdialog.c:274
+#: ../src/window.c:563 ../src/window.c:700 ../src/bookmarkeditdialog.c:220
+#: ../src/bookmarkeditdialog.c:239 ../src/bookmarkeditdialog.c:252
+#: ../src/bookmarkeditdialog.c:263 ../src/bookmarkeditdialog.c:274
 msgid "Error"
 msgstr "خطأ"
 
@@ -126,9 +121,7 @@ msgstr "خطأ"
 msgid "Edit _Bookmark"
 msgstr "تحر_ير العلامات"
 
-#: ../src/window.c:615
-#: ../src/window.c:1189
-#: ../src/browsenetworkpanel.c:453
+#: ../src/window.c:615 ../src/window.c:1189 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "إن_شاء علامات"
@@ -217,13 +210,11 @@ msgstr ""
 msgid "Connected"
 msgstr ""
 
-#: ../src/window.c:1308
-#: ../src/bookmarkdialog.c:315
+#: ../src/window.c:1308 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr ""
 
-#: ../src/window.c:1316
-#: ../src/bookmarkdialog.c:307
+#: ../src/window.c:1316 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "إسم"
 
@@ -231,9 +222,7 @@ msgstr "إسم"
 msgid "Bookmarks"
 msgstr "علامات"
 
-#: ../src/window.c:1443
-#: ../src/window.c:1518
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1443 ../src/window.c:1518 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "جيغولو"
 
@@ -326,8 +315,7 @@ msgstr ""
 msgid "_Device:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:569
-#: ../src/bookmarkeditdialog.c:1079
+#: ../src/bookmarkeditdialog.c:569 ../src/bookmarkeditdialog.c:1079
 msgid "_Server:"
 msgstr ""
 
@@ -522,13 +510,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr ""
 
-#: ../src/backendgvfs.c:443
-#: ../src/backendgvfs.c:482
+#: ../src/backendgvfs.c:443 ../src/backendgvfs.c:482
 msgid "unknown"
 msgstr ""
 
-#: ../src/backendgvfs.c:449
-#: ../src/backendgvfs.c:549
+#: ../src/backendgvfs.c:449 ../src/backendgvfs.c:549
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr ""
@@ -566,8 +552,7 @@ msgstr ""
 msgid "Refresh the network list"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:518
-#: ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr ""
 
@@ -582,4 +567,3 @@ msgstr ""
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr ""
-
