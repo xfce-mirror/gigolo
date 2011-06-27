@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Arabic\n"
 "X-Poedit-Country: Morocco\n"
+"X-Poedit-Language: Arabic\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -316,59 +316,48 @@ msgid "_Device:"
 msgstr "ج_هاز:"
 
 #: ../src/bookmarkeditdialog.c:569 ../src/bookmarkeditdialog.c:1079
-#, fuzzy
 msgid "_Server:"
-msgstr "خادم"
+msgstr "_خادم:"
 
 #: ../src/bookmarkeditdialog.c:880
-#, fuzzy
 msgid "Create Bookmark"
-msgstr "إنشاء العلامات"
+msgstr "إنشاء العلامة"
 
 #: ../src/bookmarkeditdialog.c:887
-#, fuzzy
 msgid "Edit Bookmark"
-msgstr "تحرير العلامات"
+msgstr "تحرير العلامة"
 
 #: ../src/bookmarkeditdialog.c:895
-#, fuzzy
 msgid "Connect to Server"
-msgstr "الاتصال بخادم"
+msgstr "الإتصال بالخادم"
 
 #: ../src/bookmarkeditdialog.c:1017
-#, fuzzy
 msgid "_Bookmark name:"
-msgstr "اسم العلامات:"
+msgstr "إسم العلامة:"
 
 #: ../src/bookmarkeditdialog.c:1025
-#, fuzzy
 msgid "_Color:"
-msgstr "اللون"
+msgstr "ل_ون:"
 
 #: ../src/bookmarkeditdialog.c:1036
-#, fuzzy
 msgid "Au_to-Connect"
-msgstr "إتصال-تلقائي"
+msgstr "إتصال-تلقا_ئي"
 
 #: ../src/bookmarkeditdialog.c:1047
-#, fuzzy
 msgid "Service t_ype:"
-msgstr "نوع الخدمة"
+msgstr "نوع ال_خدمة:"
 
 #: ../src/bookmarkeditdialog.c:1072
-#, fuzzy
 msgid "Set the port to 0 to use the default port"
-msgstr "تعيين المنفذ إلى 0 لاستخدام المنفذ الافتراضي"
+msgstr "تعيين المنفذ إلى 0 لإستخدام المنفذ الافتراضي"
 
 #: ../src/bookmarkeditdialog.c:1078
-#, fuzzy
 msgid "_Location (URI):"
-msgstr "الموقع (URI) :"
+msgstr "المو_قع (URI) :"
 
 #: ../src/bookmarkeditdialog.c:1080
-#, fuzzy
 msgid "_Folder:"
-msgstr "المجلد"
+msgstr "م_جلد:"
 
 #: ../src/bookmarkeditdialog.c:1081
 msgid "P_ath:"
@@ -399,59 +388,48 @@ msgid "Icons"
 msgstr "أيقونة"
 
 #: ../src/preferencesdialog.c:148
-#, fuzzy
 msgid "Text"
 msgstr "نص"
 
 #: ../src/preferencesdialog.c:149
-#, fuzzy
 msgid "Both"
-msgstr "كل"
+msgstr "معا"
 
 #: ../src/preferencesdialog.c:150
-#, fuzzy
 msgid "Both horizontal"
-msgstr "كلاها أفقيا"
+msgstr "معا افقيا"
 
 #: ../src/preferencesdialog.c:169
-#, fuzzy
 msgid "Horizontal"
 msgstr "أفقي"
 
 #: ../src/preferencesdialog.c:170
-#, fuzzy
 msgid "Vertical"
 msgstr "عمودي"
 
 #: ../src/preferencesdialog.c:189
-#, fuzzy
 msgid "Symbols"
 msgstr "الرموز"
 
 #: ../src/preferencesdialog.c:190
-#, fuzzy
 msgid "Detailed List"
 msgstr "قائمة مفصلة"
 
 #: ../src/preferencesdialog.c:333
-#, fuzzy
 msgid "General"
 msgstr "عام"
 
 #: ../src/preferencesdialog.c:338
-#, fuzzy
 msgid "_File Manager"
-msgstr "مدير الملفات"
+msgstr "مدير الم_لفات"
 
 #: ../src/preferencesdialog.c:346
-#, fuzzy
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "أدخل اسم البرنامج لاستخدامه لفتح أو عرض نقاط الضم"
+msgstr "أدخل إسم البرنامج لإستخدامه لفتح أو عرض نقاط الضم"
 
 #: ../src/preferencesdialog.c:355
-#, fuzzy
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "فترة الاتصال التلقائي للمرجعية"
+msgstr "_علامة مدة إتصال-تلقائي"
 
 #: ../src/preferencesdialog.c:361
 #, fuzzy
@@ -459,44 +437,36 @@ msgid "How often to try auto connecting bookmarks, in seconds. Zero disables che
 msgstr "كثير من الأحيان عند ضبط الاتصال التلقائي للعلامة المرجعية بالثواني إلى صفر يتعطيل التحقق."
 
 #: ../src/preferencesdialog.c:372
-#, fuzzy
 msgid "Interface"
 msgstr "الواجهة"
 
 #: ../src/preferencesdialog.c:374
-#, fuzzy
 msgid "_Save window position and geometry"
-msgstr "حفظ موقع النافذة وهندستها "
+msgstr "حفظ موقع النافذة و_هندستها "
 
 #: ../src/preferencesdialog.c:375
-#, fuzzy
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "يحفظ موقع النافذة والهندسة ويعيد ذلك للبداية"
+msgstr "يحفظ موقع النافذة والهندسة ويعيد ذلك عنذ البداية"
 
 #: ../src/preferencesdialog.c:378
-#, fuzzy
 msgid "Show status _icon in the Notification Area"
-msgstr "عرض أيقونة الوضع في منطقة الإعلام"
+msgstr "عرض أيقونة الوضع في منطقة الإشعارات"
 
 #: ../src/preferencesdialog.c:381
-#, fuzzy
 msgid "Start _minimized in the Notification Area"
-msgstr "البدء صغيراً  في منطقة الإعلام"
+msgstr "البدء تصغيراً  إلى منطقة الإشعارات"
 
 #: ../src/preferencesdialog.c:386
-#, fuzzy
 msgid "Show side panel"
 msgstr "عرض اللوحة الجانبية"
 
 #: ../src/preferencesdialog.c:387
-#, fuzzy
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "سواء لأظهار لوحة جانبية لتصفح الشبكة المحلية سامبا/ ويندوز مشاركة وقائمة مرجعية"
+msgstr "لأظهار لوحة جانبية لتصفح الشبكة المحلية المتوفرة سامبا/ ويندوز مشاركة وقائمة العلامات"
 
 #: ../src/preferencesdialog.c:390
-#, fuzzy
 msgid "Show auto-connect error messages"
-msgstr "تظهر رسائل خطأ الاتصال التلقائي"
+msgstr "تظهر رسائل خطأ الإتصال التلقائي"
 
 #: ../src/preferencesdialog.c:391
 #, fuzzy
@@ -504,37 +474,31 @@ msgid "Whether to show error message dialogs when auto-connecting of bookmarks f
 msgstr "إذا كان إظهار رسالة الحوار الاخطأ عند الاتصال التلقائي للمرجعية فشل"
 
 #: ../src/preferencesdialog.c:397
-#, fuzzy
 msgid "_Connection List Mode"
-msgstr "وضع قائمة الاتصال"
+msgstr "نمط قائمة الإت_صالات"
 
 #: ../src/preferencesdialog.c:410
-#, fuzzy
 msgid "Toolbar"
 msgstr "شريط الأدوات"
 
 #: ../src/preferencesdialog.c:412
-#, fuzzy
 msgid "Show _toolbar"
-msgstr "عرض شريط الأدوات"
+msgstr "عرض _شريط الأدوات"
 
 #: ../src/preferencesdialog.c:418
-#, fuzzy
 msgid "St_yle"
-msgstr "نمط"
+msgstr "سلو_ك"
 
 #: ../src/preferencesdialog.c:429
-#, fuzzy
 msgid "_Orientation"
-msgstr "توجهات"
+msgstr "توج_هات"
 
 #: ../src/preferencesdialog.c:490
-#, fuzzy
 msgid "Preferences"
 msgstr "تفضيلات"
 
 #: ../src/backendgvfs.c:241
-#, c-format, fuzzy
+#, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
@@ -549,54 +513,47 @@ msgstr ""
 "نوع الخدمة: %s"
 
 #: ../src/backendgvfs.c:255
-#, c-format, fuzzy
+#, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>جهاز يونكس: %s</b>"
 
 #: ../src/backendgvfs.c:443 ../src/backendgvfs.c:482
-#, fuzzy
 msgid "unknown"
-msgstr "غير معروف"
+msgstr "مجهول"
 
 #: ../src/backendgvfs.c:449 ../src/backendgvfs.c:549
-#, c-format, fuzzy
+#, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "الاتصالب ب \"%s\" فشل."
+msgstr "فشل الإتصال بـ \"%s\"."
 
 #: ../src/backendgvfs.c:486
-#, c-format, fuzzy
+#, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "قطع الاتصال ب \"%s\" فشل."
+msgstr "فشل قطع إتصال بـ \"%s\"."
 
 #: ../src/mountdialog.c:102
-#, fuzzy
 msgid "Connecting"
-msgstr "الاتصال"
+msgstr "الإتصال"
 
 #: ../src/browsenetworkpanel.c:188
-#, fuzzy
 msgid "No Workgroups found"
 msgstr "لم يعثر على مجموعات عمل"
 
 #: ../src/browsenetworkpanel.c:199
-#, fuzzy
 msgid "No Shares found"
 msgstr "لم يعثر على أي مشاركة"
 
 #: ../src/browsenetworkpanel.c:204
-#, fuzzy
 msgid "No Hosts found"
-msgstr "لم يعثر على استضافات"
+msgstr "لم يعثر على إستضافات"
 
 #: ../src/browsenetworkpanel.c:490
-#, fuzzy
 msgid "Connect to the selected share"
-msgstr "الاتصال بالمشاركة المختارة"
+msgstr "الإتصال بالمشاركة المختارة"
 
 #: ../src/browsenetworkpanel.c:498
-#, fuzzy
 msgid "Create a bookmark from the selected share"
-msgstr "إنشاء علامة مرجعية من المشاركة المختارة"
+msgstr "إنشاء علامة من المشاركة المختارة"
 
 #: ../src/browsenetworkpanel.c:507
 #, fuzzy
