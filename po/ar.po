@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gogolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-27 16:09+0000\n"
+"POT-Creation-Date: 2011-07-02 10:09+0000\n"
 "PO-Revision-Date: 2011-06-27 21:48-0000\n"
 "Last-Translator: كريم اولاد الشلحة <herr.linux88@gmail.com>\n"
 "Language-Team: Arabic <herr.linux88@gmail.com>\n"
@@ -26,9 +26,8 @@ msgid "Print a list of supported URI schemes"
 msgstr "طباعة قائمة بـ URI schemes المدعومة"
 
 #: ../src/main.c:48
-#, fuzzy
 msgid "Be verbose"
-msgstr "Be verbose"
+msgstr "يكون مطول"
 
 #: ../src/main.c:49
 msgid "Show version information"
@@ -469,9 +468,8 @@ msgid "Show auto-connect error messages"
 msgstr "تظهر رسائل خطأ الإتصال التلقائي"
 
 #: ../src/preferencesdialog.c:391
-#, fuzzy
 msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr "إذا كان إظهار رسالة الحوار الاخطأ عند الاتصال التلقائي للمرجعية فشل"
+msgstr "لتظهر رسالة خطأ عند فشل الاتصال التلقائي بالعلامات"
 
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
