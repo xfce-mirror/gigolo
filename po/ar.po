@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Gogolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-02 10:09+0000\n"
-"PO-Revision-Date: 2011-06-27 21:48-0000\n"
+"POT-Creation-Date: 2011-08-01 16:10+0000\n"
+"PO-Revision-Date: 2011-08-01 16:26-0000\n"
 "Last-Translator: كريم اولاد الشلحة <herr.linux88@gmail.com>\n"
-"Language-Team: Arabic <herr.linux88@gmail.com>\n"
+"Language-Team: Arabic Xfce Translation Team <herr.linux88@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -69,7 +69,8 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (آمن)"
 
-#: ../src/common.c:93 ../src/window.c:1395
+#: ../src/common.c:93
+#: ../src/window.c:1395
 msgid "Network"
 msgstr "شبكة"
 
@@ -100,7 +101,10 @@ msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:433
 msgid "translator-credits"
-msgstr "Arabic Xfce Translation Team (فريق تعريب إكسفس)Karim Olad Chalha (كريم اولاد الشلحة)  <herr.linux88@gmail.com>"
+msgstr ""
+"Arabic Xfce Translation Team (فريق تعريب إكسفس)\n"
+"   Karim Oulad Chalha (كريم اولاد الشلحة)   <herr.linux88@gmail.com>\n"
+"   Mohamed Al Hargan(محمد الحرقان)  <malham1@gmail.com>"
 
 #: ../src/window.c:465
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -111,9 +115,13 @@ msgstr "يستطيع جيغولو إستخدام تتبع البروتوكولا
 msgid "The command '%s' failed"
 msgstr "فشل الامر '%s'"
 
-#: ../src/window.c:563 ../src/window.c:700 ../src/bookmarkeditdialog.c:220
-#: ../src/bookmarkeditdialog.c:239 ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:263 ../src/bookmarkeditdialog.c:274
+#: ../src/window.c:563
+#: ../src/window.c:700
+#: ../src/bookmarkeditdialog.c:220
+#: ../src/bookmarkeditdialog.c:239
+#: ../src/bookmarkeditdialog.c:252
+#: ../src/bookmarkeditdialog.c:263
+#: ../src/bookmarkeditdialog.c:274
 msgid "Error"
 msgstr "خطأ"
 
@@ -121,7 +129,9 @@ msgstr "خطأ"
 msgid "Edit _Bookmark"
 msgstr "تحر_ير العلامات"
 
-#: ../src/window.c:615 ../src/window.c:1189 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:615
+#: ../src/window.c:1189
+#: ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "إن_شاء علامات"
@@ -210,11 +220,13 @@ msgstr "حدد العلامة لإتصال بـ"
 msgid "Connected"
 msgstr "متصل"
 
-#: ../src/window.c:1308 ../src/bookmarkdialog.c:315
+#: ../src/window.c:1308
+#: ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "نوع الخدمة"
 
-#: ../src/window.c:1316 ../src/bookmarkdialog.c:307
+#: ../src/window.c:1316
+#: ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "إسم"
 
@@ -222,7 +234,9 @@ msgstr "إسم"
 msgid "Bookmarks"
 msgstr "علامات"
 
-#: ../src/window.c:1443 ../src/window.c:1518 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1443
+#: ../src/window.c:1518
+#: ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "جيغولو"
 
@@ -315,7 +329,8 @@ msgstr "يجب إدخال URI صحيح للإتصال."
 msgid "_Device:"
 msgstr "ج_هاز:"
 
-#: ../src/bookmarkeditdialog.c:569 ../src/bookmarkeditdialog.c:1079
+#: ../src/bookmarkeditdialog.c:569
+#: ../src/bookmarkeditdialog.c:1079
 msgid "_Server:"
 msgstr "_خادم:"
 
@@ -515,11 +530,13 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>جهاز يونكس: %s</b>"
 
-#: ../src/backendgvfs.c:443 ../src/backendgvfs.c:482
+#: ../src/backendgvfs.c:443
+#: ../src/backendgvfs.c:482
 msgid "unknown"
 msgstr "مجهول"
 
-#: ../src/backendgvfs.c:449 ../src/backendgvfs.c:549
+#: ../src/backendgvfs.c:449
+#: ../src/backendgvfs.c:549
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "فشل الإتصال بـ \"%s\"."
@@ -557,7 +574,8 @@ msgstr "إنشاء علامة من المشاركة المختارة"
 msgid "Refresh the network list"
 msgstr "تحديث قائمة الشبكة"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:518
+#: ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr "إغلاق لوحة"
 
@@ -572,3 +590,4 @@ msgstr "إتصال العلامة المحددة"
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "واجهة بسيطة للإتصال بسهولة بنظام الملفات البعيدة"
+
