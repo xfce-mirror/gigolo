@@ -1,4 +1,4 @@
-# Dutch translation for the gigolo package.
+# Dutch translation of the gigolo package.
 # Copyright (C) The Xfce development team.
 # This file is distributed under the same license as the gigolo package.
 # Timo Verbeek, 2009.
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 22:09+0000\n"
-"PO-Revision-Date: 2011-06-15 13:39+0200\n"
+"POT-Creation-Date: 2011-09-08 10:10+0000\n"
+"PO-Revision-Date: 2011-09-08 13:39+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
@@ -127,12 +127,12 @@ msgstr "Fout"
 
 #: ../src/window.c:613
 msgid "Edit _Bookmark"
-msgstr "Bewerk _Bladwijzer"
+msgstr "Bewerk _bladwijzer"
 
 #: ../src/window.c:615 ../src/window.c:1189 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
-msgstr "Maak een _Bladwijzer"
+msgstr "Maak een _bladwijzer"
 
 #: ../src/window.c:1181
 msgid "_File"
@@ -156,7 +156,7 @@ msgstr "_Hulp"
 
 #: ../src/window.c:1191
 msgid "_Edit Bookmarks"
-msgstr "Be_werk Bladwijzers"
+msgstr "Be_werk bladwijzers"
 
 #: ../src/window.c:1192
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
@@ -186,7 +186,7 @@ msgstr "Hulp op het internet"
 
 #: ../src/window.c:1202
 msgid "Supported Protocols"
-msgstr "Ondersteunde Protocollen"
+msgstr "Ondersteunde protocollen"
 
 #: ../src/window.c:1208
 msgid "Side _Panel"
@@ -202,11 +202,11 @@ msgstr "Status_pictogram"
 
 #: ../src/window.c:1218
 msgid "View as _Symbols"
-msgstr "Bekijk als _Symbolen"
+msgstr "Bekijk als _symbolen"
 
 #: ../src/window.c:1219
 msgid "View as _Detailed List"
-msgstr "Bekijk als _Gedetailleerde Lijst"
+msgstr "Bekijk als _gedetailleerde lijst"
 
 #: ../src/window.c:1225
 msgid "_Bookmarks"
@@ -291,7 +291,7 @@ msgstr "Poort"
 
 #: ../src/bookmarkdialog.c:339
 msgid "Auto-Connect"
-msgstr "Automatisch Verbinden"
+msgstr "Automatisch verbinden"
 
 #: ../src/bookmarkdialog.c:347
 msgid "Username"
@@ -335,15 +335,15 @@ msgstr "_Server:"
 
 #: ../src/bookmarkeditdialog.c:880
 msgid "Create Bookmark"
-msgstr "Maak Bladwijzer"
+msgstr "Maak bladwijzer"
 
 #: ../src/bookmarkeditdialog.c:887
 msgid "Edit Bookmark"
-msgstr "Bewerk Bladwijzer"
+msgstr "Bewerk bladwijzer"
 
 #: ../src/bookmarkeditdialog.c:895
 msgid "Connect to Server"
-msgstr "Verbind met Server"
+msgstr "Verbind met server"
 
 #: ../src/bookmarkeditdialog.c:1017
 msgid "_Bookmark name:"
@@ -379,7 +379,7 @@ msgstr "P_ad:"
 
 #: ../src/bookmarkeditdialog.c:1082
 msgid "_User Name:"
-msgstr "_Gebruikernaam:"
+msgstr "_Gebruikersnaam:"
 
 #: ../src/bookmarkeditdialog.c:1083
 msgid "Optional information:"
@@ -427,7 +427,7 @@ msgstr "Symbolen"
 
 #: ../src/preferencesdialog.c:190
 msgid "Detailed List"
-msgstr "Gedetailleerde Lijst"
+msgstr "Gedetailleerde lijst"
 
 #: ../src/preferencesdialog.c:333
 msgid "General"
@@ -445,7 +445,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:355
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "_Bladwijzer Auto-Verbind Interval"
+msgstr "_Bladwijzer auto-verbind-interval"
 
 #: ../src/preferencesdialog.c:361
 msgid ""
@@ -469,11 +469,11 @@ msgstr "Slaat de vensterpositie en -geometrie op en herstelt die bij het begin"
 
 #: ../src/preferencesdialog.c:378
 msgid "Show status _icon in the Notification Area"
-msgstr "Toon status_pictogram in het Meldvak"
+msgstr "Toon status_pictogram in het meldvak"
 
 #: ../src/preferencesdialog.c:381
 msgid "Start _minimized in the Notification Area"
-msgstr "Start ge_minimaliseerd in het Meldvak"
+msgstr "Start ge_minimaliseerd in het meldvak"
 
 #: ../src/preferencesdialog.c:386
 msgid "Show side panel"
@@ -500,7 +500,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:397
 msgid "_Connection List Mode"
-msgstr "_Verbindinglijst-modus"
+msgstr "_Verbindingslijst-modus"
 
 #: ../src/preferencesdialog.c:410
 msgid "Toolbar"
@@ -562,7 +562,7 @@ msgstr "Verbinding aan het maken"
 
 #: ../src/browsenetworkpanel.c:188
 msgid "No Workgroups found"
-msgstr "Geen Werkgroepen gevonden"
+msgstr "Geen werkgroepen gevonden"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
@@ -570,7 +570,7 @@ msgstr "Geen Delen gevonden"
 
 #: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
-msgstr "Geen Hosts gevonden"
+msgstr "Geen hosts gevonden"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
