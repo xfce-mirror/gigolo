@@ -932,6 +932,8 @@ static void browse_host_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GSList
 		{
 			gtk_combo_box_append_text(GTK_COMBO_BOX(priv->share_combo), node->data);
 		}
+		gtk_combo_box_set_active(GTK_COMBO_BOX(priv->share_combo), 0);
+
 	}
 	gtk_widget_set_sensitive(priv->share_button, TRUE);
 }
