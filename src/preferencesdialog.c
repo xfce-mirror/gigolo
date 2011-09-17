@@ -352,6 +352,23 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	hbox = gtk_hbox_new(FALSE, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
+	label1 = gtk_label_new_with_mnemonic(_("_Terminal"));
+	gtk_misc_set_alignment(GTK_MISC(label1), 0.0f, 0.5f);
+	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
+
+	image = gtk_image_new();
+	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 3);
+
+	entry = add_program_entry(settings, "terminal");
+	gtk_widget_set_tooltip_text(entry, _("Enter the name of a program to open mount points in a terminal"));
+	g_object_set_data(G_OBJECT(entry), "image", image);
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label1), entry);
+	gtk_box_pack_start(GTK_BOX(hbox), entry, FALSE, FALSE, 0);
+	entry_check_input(GTK_ENTRY(entry));
+
+	hbox = gtk_hbox_new(FALSE, 6);
+	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
+
 	label1 = gtk_label_new_with_mnemonic(_("_Bookmark Auto-Connect Interval"));
 	gtk_misc_set_alignment(GTK_MISC(label1), 0.0f, 0.5f);
 	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);

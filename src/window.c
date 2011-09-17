@@ -74,6 +74,7 @@ struct _GigoloWindowPrivate
 	GtkAction		*action_bookmarks;
 	GtkAction		*action_bookmark_create;
 	GtkAction		*action_open;
+	GtkAction		*action_open_terminal;
 	GtkAction		*action_copyuri;
 
 	GtkActionGroup	*action_group;
@@ -522,14 +523,11 @@ static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *wi
 }
 
 
-static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static gpointer get_selected_mount(GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
-
-	if (! gigolo_settings_has_file_manager(priv->settings))
-		return;
 
 	get_selected_iter(window, &iter);
 	if (gtk_list_store_iter_is_valid(priv->store, &iter))
@@ -538,38 +536,115 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 		gtk_tree_model_get(model, &iter, GIGOLO_WINDOW_COL_REF, &mnt, -1);
 		if (gigolo_backend_gvfs_is_mount(mnt))
 		{
-			GError *error = NULL;
-			gchar *uri;
-			gchar *file_manager;
-			gchar *cmd;
-			GigoloBookmark *b;
-
-			file_manager = gigolo_settings_get_string(priv->settings, "file-manager");
-			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
-			b = gigolo_settings_get_bookmark_by_uri(priv->settings, uri);
-			if (b != NULL)
-			{
-				gchar *folder = gigolo_bookmark_get_folder_expanded(b);
-				setptr(uri, g_build_filename(uri, folder, NULL));
-				g_free(folder);
-			}
-			/* escape spaces and similar */
-			setptr(uri, g_uri_unescape_string(uri, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO));
-
-			cmd = g_strconcat(file_manager, " \"", uri, "\"", NULL);
-			if (! g_spawn_command_line_async(cmd, &error))
-			{
-				gchar *msg = g_strdup_printf(_("The command '%s' failed"), cmd);
-				gigolo_message_dialog(window, GTK_MESSAGE_ERROR, _("Error"), msg, error->message);
-				verbose("%s: %s", msg, error->message);
-				g_error_free(error);
-				g_free(msg);
-			}
-
-			g_free(cmd);
-			g_free(file_manager);
-			g_free(uri);
+			return mnt;
 		}
+	}
+	return NULL;
+}
+
+
+static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	gpointer mnt;
+
+	if (! gigolo_settings_has_file_manager(priv->settings))
+		return;
+
+	mnt = get_selected_mount(window);
+	if (mnt != NULL)
+	{
+		GError *error = NULL;
+		gchar *uri;
+		gchar *file_manager;
+		gchar *cmd;
+		GigoloBookmark *b;
+
+		file_manager = gigolo_settings_get_string(priv->settings, "file-manager");
+		gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, NULL, &uri);
+		b = gigolo_settings_get_bookmark_by_uri(priv->settings, uri);
+		if (b != NULL)
+		{
+			gchar *folder = gigolo_bookmark_get_folder_expanded(b);
+			setptr(uri, g_build_filename(uri, folder, NULL));
+			g_free(folder);
+		}
+		/* escape spaces and similar */
+		setptr(uri, g_uri_unescape_string(uri, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO));
+
+		cmd = g_strconcat(file_manager, " \"", uri, "\"", NULL);
+		verbose("Executing open command \"%s\"", cmd);
+		if (! g_spawn_command_line_async(cmd, &error))
+		{
+			gchar *msg = g_strdup_printf(_("The command '%s' failed"), cmd);
+			gigolo_message_dialog(window, GTK_MESSAGE_ERROR, _("Error"), msg, error->message);
+			verbose("%s: %s", msg, error->message);
+			g_error_free(error);
+			g_free(msg);
+		}
+
+		g_free(cmd);
+		g_free(file_manager);
+		g_free(uri);
+	}
+}
+
+
+static void action_open_terminal_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+{
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	gpointer mnt;
+
+	if (! gigolo_settings_has_terminal(priv->settings))
+		return;
+
+	mnt = get_selected_mount(window);
+	if (mnt != NULL)
+	{
+		GError *error = NULL;
+		gchar **argv;
+		gchar *path;
+		gchar *terminal;
+
+		terminal = gigolo_settings_get_string(priv->settings, "terminal");
+		if (! g_shell_parse_argv(terminal, NULL, &argv, &error))
+		{
+			gigolo_message_dialog(window, GTK_MESSAGE_ERROR,
+				_("Error"), _("Invalid terminal command"), error->message);
+			verbose("Invalid erminal command: %s", error->message);
+			g_error_free(error);
+			return;
+		}
+
+		path = gigolo_backend_gvfs_get_mount_path(mnt);
+		if (path == NULL)
+		{
+			gchar *mount_name;
+			gchar *msg;
+			gigolo_backend_gvfs_get_name_and_uri_from_mount(mnt, &mount_name, NULL);
+			msg = g_strdup_printf(_("No default location available for \"%s\""), mount_name);
+			gigolo_message_dialog(window, GTK_MESSAGE_ERROR, _("Error"), msg, NULL);
+			verbose("Mount has no default path: %s", mount_name);
+			g_free(msg);
+			g_free(mount_name);
+			g_free(terminal);
+			g_strfreev(argv);
+			return;
+		}
+
+		verbose("Executing terminal command \"%s\" in \"%s\"", terminal, path);
+		if (! g_spawn_async(path, argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, &error))
+		{
+			gchar *msg = g_strdup_printf(_("The command '%s' failed"), terminal);
+			gigolo_message_dialog(window, GTK_MESSAGE_ERROR, _("Error"), msg, error->message);
+			verbose("%s: %s", msg, error->message);
+			g_error_free(error);
+			g_free(msg);
+		}
+
+		g_free(path);
+		g_free(terminal);
+		g_strfreev(argv);
 	}
 }
 
@@ -588,7 +663,7 @@ static gboolean iter_is_bookmark(GigoloWindow *window, GtkTreeModel *model, GtkT
 	gtk_tree_model_get(model, iter, GIGOLO_WINDOW_COL_REF_TYPE, &ref_type,
 									GIGOLO_WINDOW_COL_REF, &ref, -1);
 
-	if (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT)
+	if (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT && gigolo_backend_gvfs_is_mount(ref))
 	{
 		gchar *uri;
 		gboolean found = FALSE;
@@ -606,6 +681,23 @@ static gboolean iter_is_bookmark(GigoloWindow *window, GtkTreeModel *model, GtkT
 }
 
 
+static gboolean iter_is_mount(GtkTreeModel *model, GtkTreeIter *iter)
+{
+	gint ref_type;
+	gpointer ref;
+
+	gtk_tree_model_get(model, iter, GIGOLO_WINDOW_COL_REF_TYPE, &ref_type,
+									GIGOLO_WINDOW_COL_REF, &ref, -1);
+
+	if (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT)
+	{
+		return gigolo_backend_gvfs_is_mount(ref);
+	}
+
+	return FALSE;
+}
+
+
 static void update_create_edit_bookmark_action_label(GtkAction *action, gboolean is_bookmark)
 {
 	gtk_action_set_sensitive(action, TRUE);
@@ -620,17 +712,21 @@ static void update_sensitive_buttons(GigoloWindow *window, GtkTreeModel *model, 
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	gint ref_type;
-	gboolean is_bookmark = FALSE;
+	gboolean is_bookmark,is_mount, open_possible, open_terminal_possible;
 
 	if (iter != NULL && gtk_list_store_iter_is_valid(priv->store, iter))
 	{
 		gtk_tree_model_get(model, iter, GIGOLO_WINDOW_COL_REF_TYPE, &ref_type, -1);
 		is_bookmark = iter_is_bookmark(window, model, iter);
+		is_mount = iter_is_mount(model, iter);
+		open_possible = is_mount && gigolo_settings_has_file_manager(priv->settings);
+		open_terminal_possible = is_mount && gigolo_settings_has_terminal(priv->settings);
 
 		gtk_action_set_sensitive(priv->action_connect, (ref_type != GIGOLO_WINDOW_REF_TYPE_MOUNT));
 		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
 		update_create_edit_bookmark_action_label(priv->action_bookmark_create, is_bookmark);
-		gtk_action_set_sensitive(priv->action_open, gigolo_settings_has_file_manager(priv->settings));
+		gtk_action_set_sensitive(priv->action_open, open_possible);
+		gtk_action_set_sensitive(priv->action_open_terminal, open_terminal_possible);
 		gtk_action_set_sensitive(priv->action_copyuri, (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
 	}
 	else
@@ -639,6 +735,7 @@ static void update_sensitive_buttons(GigoloWindow *window, GtkTreeModel *model, 
 		gtk_action_set_sensitive(priv->action_disconnect, FALSE);
 		gtk_action_set_sensitive(priv->action_bookmark_create, FALSE);
 		gtk_action_set_sensitive(priv->action_open, FALSE);
+		gtk_action_set_sensitive(priv->action_open_terminal, FALSE);
 		gtk_action_set_sensitive(priv->action_copyuri, FALSE);
 	}
 }
@@ -1110,8 +1207,6 @@ static void gigolo_window_settings_notify_cb(GigoloSettings *settings, GParamSpe
 
 static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 {
-	GError *error = NULL;
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 	const gchar *ui_markup =
 	"<ui>"
 		"<menubar>"
@@ -1137,6 +1232,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 				"<menuitem action='Bookmarks'/>"
 				"<separator/>"
 				"<menuitem action='Open'/>"
+				"<menuitem action='OpenTerminal'/>"
 				"<menuitem action='CopyURI'/>"
 			"</menu>"
 			"<menu action='Help'>"
@@ -1159,6 +1255,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 
 		"<popup name='treemenu'>"
 			"<menuitem action='Open'/>"
+			"<menuitem action='OpenTerminal'/>"
 			"<menuitem action='CopyURI'/>"
 			"<menuitem action='CreateBookmark'/>"
 			"<separator/>"
@@ -1173,6 +1270,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 			"<toolitem action='EditBookmarks'/>"
 			"<separator/>"
 			"<toolitem action='Open'/>"
+			"<toolitem action='OpenTerminal'/>"
 			"<separator/>"
 			"<toolitem action='Quit'/>"
 		"</toolbar>"
@@ -1196,6 +1294,8 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 			N_("Disconnect the selected resource"), G_CALLBACK(action_unmount_cb) },
 		{ "Open", GTK_STOCK_OPEN, NULL, "<Ctrl>o",
 			N_("Open the selected resource with a file manager"), G_CALLBACK(action_open_cb) },
+		{ "OpenTerminal", NULL, _("Open in _Terminal"), "<Ctrl>t",
+			N_("Start a terminal from here"), G_CALLBACK(action_open_terminal_cb) },
 		{ "CopyURI", GTK_STOCK_COPY, N_("Copy _URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
 		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb) },
 		{ "OnlineHelp", GTK_STOCK_HELP, _("Online Help"), NULL, NULL, G_CALLBACK(action_help_cb) },
@@ -1219,7 +1319,10 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 		{ "ViewSymbols", NULL, N_("View as _Detailed List"), NULL, NULL, 1 },
 	};
 	const guint radio_entries_n = G_N_ELEMENTS(radio_entries);
-
+	GError *error = NULL;
+	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GtkAction *open_terminal;
+	GtkIconTheme *icon_theme;
 
 	priv->action_bookmarks = gigolo_menu_button_action_new(
 		"Bookmarks", _("_Bookmarks"), _("Choose a bookmark to connect to"),
@@ -1237,6 +1340,14 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 	gtk_action_group_add_action(priv->action_group, priv->action_bookmarks);
 	gtk_ui_manager_insert_action_group(ui_manager, priv->action_group, 0);
 	gtk_window_add_accel_group(GTK_WINDOW(window), gtk_ui_manager_get_accel_group(ui_manager));
+
+	/* set terminal icon for the "OpenTerminal" action */
+	open_terminal = gtk_action_group_get_action(priv->action_group, "OpenTerminal");
+	icon_theme = gtk_icon_theme_get_for_screen(gtk_widget_get_screen(GTK_WIDGET(window)));
+	if (gtk_icon_theme_has_icon(icon_theme, "utilities-terminal"))
+		gtk_action_set_icon_name(open_terminal, "utilities-terminal");
+	else
+		gtk_action_set_stock_id(open_terminal, GTK_STOCK_OPEN);
 
 	if (! gtk_ui_manager_add_ui_from_string(ui_manager, ui_markup, -1, &error))
 	{
@@ -1489,6 +1600,7 @@ static void gigolo_window_init(GigoloWindow *window)
 	priv->action_disconnect = gtk_action_group_get_action(priv->action_group, "Disconnect");
 	priv->action_bookmark_create = gtk_action_group_get_action(priv->action_group, "CreateBookmark");
 	priv->action_open = gtk_action_group_get_action(priv->action_group, "Open");
+	priv->action_open_terminal = gtk_action_group_get_action(priv->action_group, "OpenTerminal");
 	priv->action_copyuri = gtk_action_group_get_action(priv->action_group, "CopyURI");
 
 	g_object_set(priv->action_bookmarks, "is-important", TRUE, NULL);

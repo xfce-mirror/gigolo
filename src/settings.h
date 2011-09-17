@@ -64,6 +64,7 @@ void				gigolo_settings_set_geometry		(GigoloSettings *settings, const gint *geo
 
 GigoloBookmarkList*	gigolo_settings_get_bookmarks		(GigoloSettings *settings);
 gboolean			gigolo_settings_has_file_manager	(GigoloSettings *settings);
+gboolean			gigolo_settings_has_terminal		(GigoloSettings *settings);
 
 gboolean			gigolo_settings_get_boolean			(GigoloSettings *settings, const gchar *property);
 gint				gigolo_settings_get_integer			(GigoloSettings *settings, const gchar *property);

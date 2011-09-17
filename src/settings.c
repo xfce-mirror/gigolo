@@ -56,6 +56,7 @@ struct _GigoloSettingsPrivate
 	gboolean	show_autoconnect_errors;
 
 	gchar		*file_manager;
+	gchar		*terminal;
 	gint		 autoconnect_interval;
 	gint		*geometry; /* window size and position, field 4 is a flag for maximized state */
 
@@ -77,6 +78,7 @@ enum
 	PROP_0,
 
 	PROP_FILE_MANAGER,
+	PROP_TERMINAL,
 	PROP_AUTOCONNECT_INTERVAL,
 
 	PROP_SAVE_GEOMETRY,
@@ -126,6 +128,10 @@ static void gigolo_settings_set_property(GObject *object, guint prop_id, const G
 	case PROP_FILE_MANAGER:
 		g_free(priv->file_manager);
 		priv->file_manager = g_value_dup_string(value);
+		break;
+	case PROP_TERMINAL:
+		g_free(priv->terminal);
+		priv->terminal = g_value_dup_string(value);
 		break;
 	case PROP_AUTOCONNECT_INTERVAL:
 		priv->autoconnect_interval = g_value_get_int(value);
@@ -178,6 +184,9 @@ static void gigolo_settings_get_property(GObject *object, guint prop_id, GValue 
 		break;
 	case PROP_FILE_MANAGER:
 		g_value_set_string(value, priv->file_manager);
+		break;
+	case PROP_TERMINAL:
+		g_value_set_string(value, priv->terminal);
 		break;
 	case PROP_AUTOCONNECT_INTERVAL:
 		if (priv->autoconnect_interval < 0)
@@ -273,7 +282,15 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									g_param_spec_string(
 									"file-manager",
 									"file-manager",
-									"A program for use to open mount points",
+									"A program to use to open mount points",
+									NULL,
+									G_PARAM_READWRITE));
+	g_object_class_install_property(gobject_class,
+									PROP_TERMINAL,
+									g_param_spec_string(
+									"terminal",
+									"terminal",
+									"A program to use to open mount points in a terminal",
 									NULL,
 									G_PARAM_READWRITE));
 	g_object_class_install_property(gobject_class,
@@ -446,6 +463,8 @@ static void write_settings_config(GigoloSettings *settings)
 
 	if (priv->file_manager != NULL)
 		g_key_file_set_string(k, SECTION_GENERAL, "file_manager", priv->file_manager);
+	if (priv->terminal != NULL)
+		g_key_file_set_string(k, SECTION_GENERAL, "terminal", priv->terminal);
 	g_key_file_set_integer(k, SECTION_GENERAL, "autoconnect_interval", priv->autoconnect_interval);
 
 	if (priv->geometry != NULL)
@@ -554,6 +573,8 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 	}
 
 	priv->file_manager = get_setting_string(k, SECTION_GENERAL, "file_manager", "gvfs-open");
+	/* is there a generic way to open a default terminal? */
+	priv->terminal = get_setting_string(k, SECTION_GENERAL, "terminal", "xterm");
 	priv->autoconnect_interval = get_setting_int(k, SECTION_GENERAL, "autoconnect_interval",
 		DEFAULT_AUTOCONNECT_INTERVAL);
 
@@ -797,6 +818,18 @@ gboolean gigolo_settings_has_file_manager(GigoloSettings *settings)
 	priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
 
 	return NZV(priv->file_manager);
+}
+
+
+gboolean gigolo_settings_has_terminal(GigoloSettings *settings)
+{
+	GigoloSettingsPrivate *priv;
+
+	g_return_val_if_fail(settings != NULL, FALSE);
+
+	priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
+
+	return NZV(priv->terminal);
 }
 
 

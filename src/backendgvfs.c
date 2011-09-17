@@ -598,6 +598,23 @@ gchar *gigolo_backend_gvfs_get_volume_identifier(gpointer volume)
 }
 
 
+gchar *gigolo_backend_gvfs_get_mount_path(gpointer mount)
+{
+	GFile *file;
+	gchar *path = NULL;
+
+	g_return_val_if_fail(mount != NULL, NULL);
+
+	file = g_mount_get_default_location(G_MOUNT(mount));
+	if (file != NULL)
+	{
+		path = g_file_get_path(file);
+		g_object_unref(file);
+	}
+	return path;
+}
+
+
 static gboolean browse_network_ready_cb(gpointer backend)
 {
 	GigoloBackendGVFSPrivate *priv;

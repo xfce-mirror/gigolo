@@ -114,6 +114,8 @@ const gchar *const* gigolo_backend_gvfs_get_supported_uri_schemes	(void);
 
 gboolean			gigolo_backend_gvfs_is_scheme_supported			(const gchar *scheme);
 
+gchar*				gigolo_backend_gvfs_get_mount_path				(gpointer mount);
+
 G_END_DECLS
 
 #endif /* __BACKENDGVFS_H__ */
