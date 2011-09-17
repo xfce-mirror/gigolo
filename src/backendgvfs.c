@@ -205,10 +205,6 @@ static void gigolo_backend_gvfs_class_init(GigoloBackendGVFSClass *klass)
 
 static void gigolo_backend_gvfs_finalize(GObject *object)
 {
-	GigoloBackendGVFS *self;
-
-	self = GIGOLO_BACKEND_GVFS(object);
-
 	G_OBJECT_CLASS(gigolo_backend_gvfs_parent_class)->finalize(object);
 }
 
@@ -538,11 +534,10 @@ void gigolo_backend_gvfs_unmount_mount(GigoloBackendGVFS *backend, gpointer moun
 static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 {
 	gchar *uri;
-	gboolean success;
 	GError *error = NULL;
 
 	uri = g_file_get_uri(location);
-	success = g_file_mount_enclosing_volume_finish(location, res, &error);
+	g_file_mount_enclosing_volume_finish(location, res, &error);
 
 	if (error != NULL && ! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_ALREADY_MOUNTED))
 	{
@@ -634,14 +629,13 @@ static gboolean browse_network_ready_cb(gpointer backend)
 
 static void browse_network_mount_ready_cb(GFile *location, GAsyncResult *res, BrowseData *bd)
 {
-	gboolean success;
 	GError *error = NULL;
 	GigoloBackendGVFSPrivate *priv;
 
 	g_return_if_fail(bd != NULL);
 	g_return_if_fail(bd->self != NULL);
 
-	success = g_file_mount_enclosing_volume_finish(location, res, &error);
+	g_file_mount_enclosing_volume_finish(location, res, &error);
 
 	priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(bd->self);
 	priv->browse_counter--;
