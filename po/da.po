@@ -452,7 +452,6 @@ msgid "Enter the name of a program to use to open or view mount points"
 msgstr "Indtast navnet til et program til brug for at åbne eller vise monteringspunkter"
 
 #: ../src/preferencesdialog.c:355
-#, fuzzy
 msgid "_Terminal"
 msgstr "_Terminal"
 
