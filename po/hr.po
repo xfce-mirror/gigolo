@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 22:10+0000\n"
+"POT-Creation-Date: 2011-09-25 22:10+0000\n"
 "PO-Revision-Date: 2010-06-11 19:35+0200\n"
 "Last-Translator: Ivica Kolić<ikoli@yahoo.com> <>\n"
 "Language-Team: Croatian <>\n"
@@ -120,12 +120,12 @@ msgstr "Greška"
 
 #: ../src/window.c:613
 msgid "Invalid terminal command"
-msgstr ""
+msgstr "Neispravna naredba terminala"
 
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr ""
+msgstr "Nema dostupne zadane lokacije za \"%s\""
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -174,11 +174,11 @@ msgstr "Otvori odabrani izvor pomoću upravitelja datotekama"
 
 #: ../src/window.c:1297
 msgid "Open in _Terminal"
-msgstr ""
+msgstr "Otvori u _terminalu"
 
 #: ../src/window.c:1298
 msgid "Start a terminal from here"
-msgstr ""
+msgstr "Pokreni terminal odavde"
 
 #: ../src/window.c:1299
 msgid "Copy _URI"
@@ -291,7 +291,7 @@ msgstr "Glavno računalo"
 
 #: ../src/bookmarkdialog.c:331
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: ../src/bookmarkdialog.c:339
 msgid "Auto-Connect"
@@ -447,7 +447,7 @@ msgstr "Unesi ime programa za otvaranje ili gledanje točaka motiranja"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
-msgstr ""
+msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
