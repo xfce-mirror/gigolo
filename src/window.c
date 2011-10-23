@@ -145,7 +145,7 @@ static void gigolo_window_destroy(GigoloWindow *window)
 	gtk_widget_destroy(priv->systray_icon_popup_menu);
 	gtk_widget_destroy(priv->swin_treeview);
 	gtk_widget_destroy(priv->swin_iconview);
-	gtk_widget_destroy(priv->toolbar);
+	g_object_unref(priv->toolbar);
 	g_object_unref(priv->action_group);
 	g_object_unref(priv->systray_icon);
 	g_object_unref(priv->systray_icon_popup_menu);
