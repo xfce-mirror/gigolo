@@ -218,6 +218,7 @@ static gchar *get_tooltip_text(GigoloBackendGVFS *backend, gpointer ref, gint re
 		case GIGOLO_WINDOW_REF_TYPE_MOUNT:
 		{
 			gchar *uri, *name, *clean_uri;
+			const gchar *bookmark_name = _("No bookmark");
 			GigoloBookmark *b;
 			GigoloSettings *settings;
 
@@ -231,10 +232,12 @@ static gchar *get_tooltip_text(GigoloBackendGVFS *backend, gpointer ref, gint re
 				const gchar *folder = gigolo_bookmark_get_folder(b);
 				if (NZV(folder))
 					setptr(clean_uri, g_build_filename(clean_uri, folder, NULL));
+				bookmark_name = gigolo_bookmark_get_name(b);
 			}
 
 			result = g_strdup_printf(
-				_("<b>%s</b>\n\nURI: %s\nConnected: Yes\nService Type: %s"), name, clean_uri, type);
+				_("<b>%s</b>\n\nURI: %s\nConnected: Yes\nService Type: %s\nBookmark: %s"),
+					name, clean_uri, type, bookmark_name);
 
 			g_free(clean_uri);
 			g_free(uri);
@@ -265,9 +268,11 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 	GVolume *volume;
 	GIcon *icon;
 	GtkTreeIter iter;
-	gchar *vol_name, *scheme, *uri, *tooltip_text;
+	gchar *vol_name, *mount_name, *display_name, *scheme, *uri, *tooltip_text;
 	const gchar *scheme_name;
 	GigoloBackendGVFSPrivate *priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
+	GigoloBookmark *bookmark;
+	GigoloSettings *settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
 
 	gtk_list_store_clear(priv->store);
 
@@ -275,13 +280,14 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 	mounts = g_volume_monitor_get_mounts(vm);
 	for (item = mounts; item != NULL; item = g_list_next(item))
 	{
+		display_name = NULL;
 		mount = G_MOUNT(item->data);
-		vol_name = g_mount_get_name(mount);
+		mount_name = g_mount_get_name(mount);
 		file = g_mount_get_root(mount);
 		scheme = g_file_get_uri_scheme(file);
 		if (gigolo_str_equal(scheme, "burn"))
 		{	/* ignore empty CDs which are listed as mounted to burn:// */
-			g_free(vol_name);
+			g_free(mount_name);
 			g_free(scheme);
 			g_object_unref(file);
 			continue;
@@ -291,9 +297,16 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 		icon = g_mount_get_icon(mount);
 		tooltip_text = get_tooltip_text(backend, mount, GIGOLO_WINDOW_REF_TYPE_MOUNT, scheme_name);
 
+		bookmark = gigolo_settings_get_bookmark_by_uri(settings, uri);
+		if (bookmark != NULL)
+		{
+			display_name = g_strdup_printf("%s (%s)",
+				gigolo_bookmark_get_name(bookmark), mount_name);
+		}
+
 		gtk_list_store_insert_with_values(priv->store, &iter, -1,
 				GIGOLO_WINDOW_COL_IS_MOUNTED, TRUE,
-				GIGOLO_WINDOW_COL_NAME, vol_name,
+				GIGOLO_WINDOW_COL_NAME, display_name ? display_name : mount_name,
 				GIGOLO_WINDOW_COL_SCHEME, scheme_name,
 				GIGOLO_WINDOW_COL_REF, mount,
 				GIGOLO_WINDOW_COL_REF_TYPE, GIGOLO_WINDOW_REF_TYPE_MOUNT,
@@ -301,7 +314,8 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 				GIGOLO_WINDOW_COL_ICON_NAME, "folder-remote",
 				GIGOLO_WINDOW_COL_TOOLTIP, tooltip_text,
 				-1);
-		g_free(vol_name);
+		g_free(mount_name);
+		g_free(display_name);
 		g_free(scheme);
 		g_free(uri);
 		g_free(tooltip_text);
