@@ -722,7 +722,7 @@ static void update_sensitive_buttons(GigoloWindow *window, GtkTreeModel *model, 
 		open_possible = is_mount && gigolo_settings_has_file_manager(priv->settings);
 		open_terminal_possible = is_mount && gigolo_settings_has_terminal(priv->settings);
 
-		gtk_action_set_sensitive(priv->action_connect, (ref_type != GIGOLO_WINDOW_REF_TYPE_MOUNT));
+		/* gtk_action_set_sensitive(priv->action_connect, (ref_type != GIGOLO_WINDOW_REF_TYPE_MOUNT));*/
 		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
 		update_create_edit_bookmark_action_label(priv->action_bookmark_create, is_bookmark);
 		gtk_action_set_sensitive(priv->action_open, open_possible);
