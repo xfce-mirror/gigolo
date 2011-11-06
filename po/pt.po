@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 10:10+0000\n"
+"POT-Creation-Date: 2011-11-06 17:06+0000\n"
 "PO-Revision-Date: 2010-01-06 12:28-0000\n"
 "Last-Translator: Sergio Marques <smarquespt@gmail.com>\n"
 "Language-Team: \n"
@@ -37,7 +37,8 @@ msgstr "Mostrar informação de versão"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- uma interface simples para ligar facilmente a sistemas de ficheiros remotos"
+msgstr ""
+"- uma interface simples para ligar facilmente a sistemas de ficheiros remotos"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -93,8 +94,11 @@ msgid "Connecting to \"%s\""
 msgstr "A ligar a \"%s\""
 
 #: ../src/window.c:430
-msgid "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "Uma interface simples para ligar/montar facilmente os sistemas de ficheiros remotos/locais"
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"Uma interface simples para ligar/montar facilmente os sistemas de ficheiros "
+"remotos/locais"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -164,7 +168,8 @@ msgstr "_Editar marcadores"
 
 #: ../src/window.c:1290
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Abrir o gestor de marcadores para adicionar, editar ou apagar marcadores"
+msgstr ""
+"Abrir o gestor de marcadores para adicionar, editar ou apagar marcadores"
 
 #: ../src/window.c:1294
 msgid "Disconnect the selected resource"
@@ -252,12 +257,18 @@ msgstr "Movê-lo agora?"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "O Gigolo tem de mover o seu antigo directório de definições antes de iniciar."
+msgstr ""
+"O Gigolo tem de mover o seu antigo directório de definições antes de iniciar."
 
 #: ../src/settings.c:703
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "O seu antigo directório de definições \"%s\" não pode ser movido para \"%s\" (%s). Por favor, mova o directório para a sua nova localização manualmente."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"O seu antigo directório de definições \"%s\" não pode ser movido para \"%s"
+"\" (%s). Por favor, mova o directório para a sua nova localização "
+"manualmente."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -445,7 +456,8 @@ msgstr "_Gestor de ficheiros"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Indique o nome do programa para abrir ou visualizar os pontos de montagem"
+msgstr ""
+"Indique o nome do programa para abrir ou visualizar os pontos de montagem"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -453,15 +465,20 @@ msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr "Indique o nome do programa para abrir os pontos de montagem num terminal"
+msgstr ""
+"Indique o nome do programa para abrir os pontos de montagem num terminal"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "Intervalo para ligação automática ao _marcador"
 
 #: ../src/preferencesdialog.c:378
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "Quantas vezes se tenta a ligação automática aos marcadores, em segundos. Zero desliga a verificação."
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"Quantas vezes se tenta a ligação automática aos marcadores, em segundos. "
+"Zero desliga a verificação."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -488,16 +505,23 @@ msgid "Show side panel"
 msgstr "Mostrar painel lateral"
 
 #: ../src/preferencesdialog.c:404
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "Mostar ou não um painel lateral para navegar na rede local para partilhas Samba/Windows e uma lista de marcadores"
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"Mostar ou não um painel lateral para navegar na rede local para partilhas "
+"Samba/Windows e uma lista de marcadores"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
 msgstr "Mostrar mensagens de erro para ligação automática"
 
 #: ../src/preferencesdialog.c:408
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr "Mostrar ou não a mensagem de erro ao falhar a ligação automática aos marcadores"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+"Mostrar ou não a mensagem de erro ao falhar a ligação automática aos "
+"marcadores"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -523,14 +547,19 @@ msgstr "_Orientação"
 msgid "Preferences"
 msgstr "Preferências"
 
-#: ../src/backendgvfs.c:237
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "Sem marcador"
+
+#: ../src/backendgvfs.c:239
 #, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "Connected: Yes\n"
-"Service Type: %s"
+"Service Type: %s\n"
+"Bookmark: %s"
 msgstr ""
 "<b>%s</b>\n"
 "\n"
@@ -538,21 +567,21 @@ msgstr ""
 "Ligado: Sim\n"
 "Tipo do serviço: %s"
 
-#: ../src/backendgvfs.c:251
+#: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Dispositivo Unix: %s</b>"
 
-#: ../src/backendgvfs.c:439 ../src/backendgvfs.c:478
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "desconhecido"
 
-#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:544
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:558
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Falha ao ligar a \"%s\"."
 
-#: ../src/backendgvfs.c:482
+#: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Falhou ao desligar de \"%s\"."
@@ -599,13 +628,20 @@ msgstr "Ligar ao marcador seleccionado"
 
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Uma interface simples para ligar facilmente a sistemas de ficheiros remotos"
+msgstr ""
+"Uma interface simples para ligar facilmente a sistemas de ficheiros remotos"
 
 #~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+#~ "The HAL based volume manager implementation requires the tool 'gnome-"
+#~ "mount' to mount local resources like disks. The Unix based volume manager "
+#~ "implementation can mount such resources directly and also lists other "
+#~ "local devices.\n"
 #~ "If you are unsure, use the HAL based monitor."
 #~ msgstr ""
-#~ "A implementação do gestor de volumes baseada em HAL requer a ferramenta \"gnome-mount\" para montar recursos locais como discos. A implementação baseada em Unix do gestor de volumes pode montar estes recursos directamente e também listar outros dispositivos locais.\n"
+#~ "A implementação do gestor de volumes baseada em HAL requer a ferramenta "
+#~ "\"gnome-mount\" para montar recursos locais como discos. A implementação "
+#~ "baseada em Unix do gestor de volumes pode montar estes recursos "
+#~ "directamente e também listar outros dispositivos locais.\n"
 #~ "Se não estiver seguro, use o monitor baseado em HAL."
 
 #~ msgid "Use _HAL based volume manager"
