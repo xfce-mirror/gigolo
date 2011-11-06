@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-09 04:03+0000\n"
+"POT-Creation-Date: 2011-11-05 23:06+0000\n"
 "PO-Revision-Date: 2010-11-23 23:33+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -263,8 +263,7 @@ msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr ""
-"无法将您旧有的配置目录 “%s” 移动到新位置 “%s”(%s)。"
-"请手动移动该目录至新位置。"
+"无法将您旧有的配置目录 “%s” 移动到新位置 “%s”(%s)。请手动移动该目录至新位置。"
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -535,36 +534,42 @@ msgstr "方向(_O)"
 msgid "Preferences"
 msgstr "首选项"
 
-#: ../src/backendgvfs.c:237
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "无书签"
+
+#: ../src/backendgvfs.c:239
 #, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "Connected: Yes\n"
-"Service Type: %s"
+"Service Type: %s\n"
+"Bookmark: %s"
 msgstr ""
 "<b>%s</b>\n"
 "\n"
 "URI：%s\n"
 "已连接：是\n"
 "服务类型：%s"
+"书签：%s"
 
-#: ../src/backendgvfs.c:251
+#: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix 设备：%s</b>"
 
-#: ../src/backendgvfs.c:439 ../src/backendgvfs.c:478
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "未知"
 
-#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:544
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:558
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "无法与 “%s” 连接。"
 
-#: ../src/backendgvfs.c:482
+#: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "无法从 “%s” 断开。"
