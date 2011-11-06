@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-17 16:10+0000\n"
+"POT-Creation-Date: 2011-11-06 11:06+0000\n"
 "PO-Revision-Date: 2011-09-08 13:39+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
@@ -36,7 +36,9 @@ msgstr "Toon versie-informatie"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- een eenvoudige grafische schil om gemakkelijk verbinding te maken met externe bestandssystemen"
+msgstr ""
+"- een eenvoudige grafische schil om gemakkelijk verbinding te maken met "
+"externe bestandssystemen"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -92,8 +94,11 @@ msgid "Connecting to \"%s\""
 msgstr "Verbinding aan het maken met  \"%s\""
 
 #: ../src/window.c:430
-msgid "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "Een eenvoudige grafische schil om gemakkelijk verbinding te maken met externe bestandsystemen"
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"Een eenvoudige grafische schil om gemakkelijk verbinding te maken met "
+"externe bestandsystemen"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -165,7 +170,9 @@ msgstr "Be_werk bladwijzers"
 
 #: ../src/window.c:1290
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Open de bladwijzerbeheerder om bladwijzers toe te voegen, te bewerken of te verwijderen"
+msgstr ""
+"Open de bladwijzerbeheerder om bladwijzers toe te voegen, te bewerken of te "
+"verwijderen"
 
 #: ../src/window.c:1294
 msgid "Disconnect the selected resource"
@@ -257,8 +264,12 @@ msgstr "Gigolo moet uw oude configuratiemap verplaatsen voordat hij begint."
 
 #: ../src/settings.c:703
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "Uw oude configuratiemap \"%s\" kon niet worden verplaatst naar \"%s\" (%s). Verplaats de map a.u.b. handmatig naar de nieuwe locatie."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"Uw oude configuratiemap \"%s\" kon niet worden verplaatst naar \"%s\" (%s). "
+"Verplaats de map a.u.b. handmatig naar de nieuwe locatie."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -446,7 +457,9 @@ msgstr "_Bestandbeheerder"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Voer de naam in van een programma om te gebruiken voor het openen of bekijken van koppelpunten"
+msgstr ""
+"Voer de naam in van een programma om te gebruiken voor het openen of "
+"bekijken van koppelpunten"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -454,15 +467,21 @@ msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr "Voer de naam in van een programma om te gebruiken voor het openen van koppelpunten in een terminal"
+msgstr ""
+"Voer de naam in van een programma om te gebruiken voor het openen van "
+"koppelpunten in een terminal"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Bladwijzer auto-verbind-interval"
 
 #: ../src/preferencesdialog.c:378
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "Hoe vaak te proberen om automatisch verbinding te maken met bladwijzers, in seconden. Nul schakelt controleren uit."
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"Hoe vaak te proberen om automatisch verbinding te maken met bladwijzers, in "
+"seconden. Nul schakelt controleren uit."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -489,16 +508,23 @@ msgid "Show side panel"
 msgstr "Toon zijbalk"
 
 #: ../src/preferencesdialog.c:404
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "Al dan niet een zijbalk tonen voor het doorzoeken van het lokale netwerk op beschikbare Samba/Windows-Delen en een bladwijzerlijst"
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"Al dan niet een zijbalk tonen voor het doorzoeken van het lokale netwerk op "
+"beschikbare Samba/Windows-Delen en een bladwijzerlijst"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
 msgstr "Toon foutmeldingen voor auto-verbinden"
 
 #: ../src/preferencesdialog.c:408
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr "Al dan niet foutmeldingdialogen tonen als het automatisch verbinden met bladwijzers mislukt"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+"Al dan niet foutmeldingdialogen tonen als het automatisch verbinden met "
+"bladwijzers mislukt"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -524,14 +550,19 @@ msgstr "_Oriëntatie"
 msgid "Preferences"
 msgstr "Voorkeuren"
 
-#: ../src/backendgvfs.c:237
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "Geen bladwijzer"
+
+#: ../src/backendgvfs.c:239
 #, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "Connected: Yes\n"
-"Service Type: %s"
+"Service Type: %s\n"
+"Bookmark: %s"
 msgstr ""
 "<b>%s</b> \n"
 "\n"
@@ -539,21 +570,21 @@ msgstr ""
 "Verbonden: Ja \n"
 "Diensttype:%s"
 
-#: ../src/backendgvfs.c:251
+#: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix-apparaat:%s</b>"
 
-#: ../src/backendgvfs.c:439 ../src/backendgvfs.c:478
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "onbekend"
 
-#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:544
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:558
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Verbinding maken met \"%s\" is mislukt."
 
-#: ../src/backendgvfs.c:482
+#: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Verbinding verbreken van \"%s\" is mislukt."
@@ -600,13 +631,21 @@ msgstr "Verbinden met de gekozen bladwijzer"
 
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Een eenvoudige grafische schil om gemakkelijk verbinding te maken met externe bestandsystemen"
+msgstr ""
+"Een eenvoudige grafische schil om gemakkelijk verbinding te maken met "
+"externe bestandsystemen"
 
 #~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-mount' to mount local resources like disks. The Unix based volume manager implementation can mount such resources directly and also lists other local devices.\n"
+#~ "The HAL based volume manager implementation requires the tool 'gnome-"
+#~ "mount' to mount local resources like disks. The Unix based volume manager "
+#~ "implementation can mount such resources directly and also lists other "
+#~ "local devices.\n"
 #~ "If you are unsure, use the HAL based monitor."
 #~ msgstr ""
-#~ "De HAL gebaseerde mediabeheerder-implementatie vereist het gereedschap 'gnome-mount' om  lokale bronnen te koppelen, zoals schijven. De Unix-gebaseerde Mediabeheerder-implementatie kan deze bronnen direct koppelen rechtstreeks en toont ook lijsten van lokale apparaten.\n"
+#~ "De HAL gebaseerde mediabeheerder-implementatie vereist het gereedschap "
+#~ "'gnome-mount' om  lokale bronnen te koppelen, zoals schijven. De Unix-"
+#~ "gebaseerde Mediabeheerder-implementatie kan deze bronnen direct koppelen "
+#~ "rechtstreeks en toont ook lijsten van lokale apparaten.\n"
 #~ "Als u er niet zeker van bent, gebruik dan de op HAL gebaseerde monitor."
 
 #~ msgid "Use _HAL based volume manager"
