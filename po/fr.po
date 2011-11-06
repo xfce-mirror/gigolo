@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-19 10:03+0000\n"
+"POT-Creation-Date: 2011-11-06 17:06+0000\n"
 "PO-Revision-Date: 2010-02-11 15:08+0100\n"
 "Last-Translator: Douart Patrick <patrick.2@laposte.net>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -128,12 +128,12 @@ msgstr "Erreur"
 
 #: ../src/window.c:613
 msgid "Invalid terminal command"
-msgstr ""
+msgstr "Commande terminal invalide"
 
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr ""
+msgstr "Pas d'emplacement par défaut pour \"%s\""
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -468,7 +468,6 @@ msgid "_Terminal"
 msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
-#, fuzzy
 msgid "Enter the name of a program to open mount points in a terminal"
 msgstr ""
 "Entrer le nom de l'application à utiliser pour ouvrir ou afficher les points "
@@ -555,14 +554,19 @@ msgstr "_Orientation"
 msgid "Preferences"
 msgstr "Préférences"
 
-#: ../src/backendgvfs.c:237
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "Pas de signet"
+
+#: ../src/backendgvfs.c:239
 #, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "Connected: Yes\n"
-"Service Type: %s"
+"Service Type: %s\n"
+"Bookmark: %s"
 msgstr ""
 "<b>%s</b>\n"
 "\n"
@@ -570,21 +574,21 @@ msgstr ""
 "Monté: Oui\n"
 "Type de service : %s"
 
-#: ../src/backendgvfs.c:251
+#: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Périphérique Unix : %s</b>"
 
-#: ../src/backendgvfs.c:439 ../src/backendgvfs.c:478
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "inconnu"
 
-#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:544
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:558
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "La connexion à \"%s\" a échoué."
 
-#: ../src/backendgvfs.c:482
+#: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "La déconnexion de \"%s\" a échoué."
