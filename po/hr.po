@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-25 22:10+0000\n"
+"POT-Creation-Date: 2011-11-07 05:06+0000\n"
 "PO-Revision-Date: 2010-06-11 19:35+0200\n"
 "Last-Translator: Ivica Kolić<ikoli@yahoo.com> <>\n"
 "Language-Team: Croatian <>\n"
@@ -35,7 +35,8 @@ msgstr "Pokaži informaciju o verziji"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- jednostavno sučelje za lako povezivanje na udaljene datotečne sustave"
+msgstr ""
+"- jednostavno sučelje za lako povezivanje na udaljene datotečne sustave"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -91,8 +92,11 @@ msgid "Connecting to \"%s\""
 msgstr "Spajanje na \"%s\""
 
 #: ../src/window.c:430
-msgid "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "Jednostavno sučelje jednostavno za povezivanje / montiranje na lokalne i udaljene datotečne sustave"
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"Jednostavno sučelje jednostavno za povezivanje / montiranje na lokalne i "
+"udaljene datotečne sustave"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -162,7 +166,9 @@ msgstr "_Uredi zabilješke"
 
 #: ../src/window.c:1290
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Otvori upravitelja zabilješkama za dodavanje,uređivanje ili brisanje zabilješki"
+msgstr ""
+"Otvori upravitelja zabilješkama za dodavanje,uređivanje ili brisanje "
+"zabilješki"
 
 #: ../src/window.c:1294
 msgid "Disconnect the selected resource"
@@ -254,8 +260,12 @@ msgstr "Gigolo mora maknuti stari konfiguracijski direktorij prije početka."
 
 #: ../src/settings.c:703
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "Vaš stari konfiguracijski direktorij \"%s ne može biti maknut u \"%s\" (%s).Maknite direktorij ručno na novu lokaciju."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"Vaš stari konfiguracijski direktorij \"%s ne može biti maknut u \"%s\" (%s)."
+"Maknite direktorij ručno na novu lokaciju."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -458,8 +468,12 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Interval samospajanja zabilješke"
 
 #: ../src/preferencesdialog.c:378
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "koliko često pokušati samospajanje zabilješki,u sekundama.Nula onemogućuje provjeru."
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"koliko često pokušati samospajanje zabilješki,u sekundama.Nula onemogućuje "
+"provjeru."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -486,7 +500,9 @@ msgid "Show side panel"
 msgstr "Pokaži bočni stupac"
 
 #: ../src/preferencesdialog.c:404
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
 msgstr ""
 
 #: ../src/preferencesdialog.c:407
@@ -494,7 +510,8 @@ msgid "Show auto-connect error messages"
 msgstr "Pokaži poruke grešaka samospajanja"
 
 #: ../src/preferencesdialog.c:408
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr ""
 
 #: ../src/preferencesdialog.c:414
@@ -521,14 +538,19 @@ msgstr "_Orijentacija"
 msgid "Preferences"
 msgstr "Osobitosti"
 
-#: ../src/backendgvfs.c:237
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "Nema zabilješki"
+
+#: ../src/backendgvfs.c:239
 #, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "Connected: Yes\n"
-"Service Type: %s"
+"Service Type: %s\n"
+"Bookmark: %s"
 msgstr ""
 "<b>%s</b>\n"
 "\n"
@@ -536,21 +558,21 @@ msgstr ""
 "Spojen: Da\n"
 "Tip servisa: %s"
 
-#: ../src/backendgvfs.c:251
+#: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix uređaj: %s</b>"
 
-#: ../src/backendgvfs.c:439 ../src/backendgvfs.c:478
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "nepoznato"
 
-#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:544
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:558
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Spajanje na \"%s\" neuspjelo"
 
-#: ../src/backendgvfs.c:482
+#: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Odspajanje sa \"%s neuspjelo"
