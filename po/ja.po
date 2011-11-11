@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-28 15:27+0900\n"
-"PO-Revision-Date: 2011-09-28 15:33+0900\n"
+"POT-Creation-Date: 2011-11-11 22:33+0900\n"
+"PO-Revision-Date: 2011-11-11 22:37+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: \n"
@@ -537,38 +537,44 @@ msgstr "方向(_O)"
 msgid "Preferences"
 msgstr "設定"
 
-#: ../src/backendgvfs.c:237
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "ブックマークなし"
+
+#: ../src/backendgvfs.c:239
 #, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "Connected: Yes\n"
-"Service Type: %s"
+"Service Type: %s\n"
+"Bookmark: %s"
 msgstr ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "接続: Yes\n"
-"サービスタイプ: %s"
+"サービスタイプ: %s\n"
+"ブックマーク: %s"
 
-#: ../src/backendgvfs.c:251
+#: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix デバイス: %s</b>"
 
-#: ../src/backendgvfs.c:439
-#: ../src/backendgvfs.c:478
+#: ../src/backendgvfs.c:453
+#: ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "不明"
 
-#: ../src/backendgvfs.c:445
-#: ../src/backendgvfs.c:544
+#: ../src/backendgvfs.c:459
+#: ../src/backendgvfs.c:558
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "\"%s\" への接続に失敗しました。"
 
-#: ../src/backendgvfs.c:482
+#: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "\"%s\" からの切断に失敗しました。"
