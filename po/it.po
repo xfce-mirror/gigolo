@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-06 11:06+0000\n"
+"POT-Creation-Date: 2011-11-12 17:06+0000\n"
 "PO-Revision-Date: 2010-03-03 15:54+0100\n"
 "Last-Translator: Gianluca Foddis <gianluca.foddis@gmail.com>\n"
 "Language-Team: Italian\n"
@@ -554,7 +554,6 @@ msgid "Preferences"
 msgstr "Preferenze"
 
 #: ../src/backendgvfs.c:221
-#, fuzzy
 msgid "No bookmark"
 msgstr "Nessun segnalibro"
 
