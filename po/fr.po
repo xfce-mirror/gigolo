@@ -93,7 +93,7 @@ msgstr "Emplacement personnalisé"
 #: ../src/window.c:262
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Connexion à \"%s\" en cours"
+msgstr "Connexion à « %s » en cours"
 
 #: ../src/window.c:430
 msgid ""
@@ -133,7 +133,7 @@ msgstr "Commande terminal invalide"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "Pas d'emplacement par défaut pour \"%s\""
+msgstr "Pas d'emplacement par défaut pour « %s »"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -269,9 +269,8 @@ msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr ""
-"Votre ancien dossier de configuration \"%s\" n'a pu être dpélacé vers \"%s"
-"\" (%s). Merci de déplacer le dossier manuellement vers le nouvel "
-"emplacement."
+"Votre ancien dossier de configuration « %s » n'a pu être dpélacé vers « %s » "
+"(%s). Merci de déplacer le dossier manuellement vers le nouvel emplacement."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -371,7 +370,7 @@ msgstr "_Nom du signet :"
 
 #: ../src/bookmarkeditdialog.c:1027
 msgid "_Color:"
-msgstr "_Couleur:"
+msgstr "_Couleur :"
 
 #: ../src/bookmarkeditdialog.c:1038
 msgid "Au_to-Connect"
@@ -470,8 +469,8 @@ msgstr "_Terminal"
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
 msgstr ""
-"Entrer le nom de l'application à utiliser pour ouvrir ou afficher les points "
-"de montage"
+"Entrer le nom d'un programme à utiliser pour ouvrir les points de montage "
+"dans un terminal"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
@@ -570,9 +569,10 @@ msgid ""
 msgstr ""
 "<b>%s</b>\n"
 "\n"
-"URI: %s\n"
-"Monté: Oui\n"
-"Type de service : %s"
+"URI : %s\n"
+"Monté : Oui\n"
+"Type de service : %s\n"
+"Signet : %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -586,12 +586,12 @@ msgstr "inconnu"
 #: ../src/backendgvfs.c:459 ../src/backendgvfs.c:558
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "La connexion à \"%s\" a échoué."
+msgstr "La connexion à « %s » a échoué."
 
 #: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "La déconnexion de \"%s\" a échoué."
+msgstr "La déconnexion de « %s » a échoué."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
@@ -638,29 +638,3 @@ msgid "A simple frontend to easily connect to remote filesystems"
 msgstr ""
 "Une interface simple pour se connecter facilement à des systèmes de fichiers "
 "à distance"
-
-#~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
-#~ "If you are unsure, use the HAL based monitor."
-#~ msgstr ""
-#~ "Le gestionnaire de volumes basé sur HAL requiert l'outil 'gnome-mount' "
-#~ "pour monter les ressources locales comme les disques. Le gestionnaire de "
-#~ "volumes basé sur Unix peut monter de telles ressources directement et "
-#~ "liste aussi d'autres périphériques locaux.Si vous n'êtes pas sûr, "
-#~ "utilisez celui basé sur HAL."
-
-#~ msgid "Use _HAL based volume manager"
-#~ msgstr "Utiliser le gestionnaire de volumes basé sur _HAL"
-
-#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-#~ msgstr ""
-#~ "<i>Le changement de cette option nécessite un redémarrage de Gigolo.</i>"
-
-#~ msgid "Use _Unix based volume manager"
-#~ msgstr "Utiliser le gestionnaire de volumes basé sur _Unix"
-
-#~ msgid "Show 'Browse Network' side panel"
-#~ msgstr "Afficher le panneau latéral 'Parcourir le réseau'"
