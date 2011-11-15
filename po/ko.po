@@ -1,0 +1,626 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gigolo.master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-15 13:40+0000\n"
+"PO-Revision-Date: 2011-11-16 02:17+0900\n"
+"Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
+"Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Korean\n"
+"X-Poedit-Country: KOREA, REPUBLIC OF\n"
+
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "실행 인스턴스를 무시하고 새 인스턴스를 강제로 엽니다"
+
+#: ../src/main.c:47
+msgid "Print a list of supported URI schemes"
+msgstr "지원하는 URI 스킴의 목록을 출력"
+
+#: ../src/main.c:48
+msgid "Be verbose"
+msgstr "자세히"
+
+#: ../src/main.c:49
+msgid "Show version information"
+msgstr "버전 정보 보이기"
+
+#: ../src/main.c:79
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- 원격 파일시스템에 쉽게 연결하기 위한 간단한 프론트엔드"
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr "유닉스 장치"
+
+#: ../src/common.c:79
+msgid "Windows Share"
+msgstr "윈도우즈 공유"
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr "Obex"
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr "WebDAV (보안)"
+
+#: ../src/common.c:93
+#: ../src/window.c:1506
+msgid "Network"
+msgstr "네트워크"
+
+#: ../src/common.c:95
+msgid "Archive"
+msgstr "아카이브"
+
+#: ../src/common.c:97
+msgid "Photos"
+msgstr "사진"
+
+#: ../src/common.c:99
+msgid "Custom Location"
+msgstr "사용자정의 위치"
+
+#: ../src/window.c:262
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "\"%s\"(으)로 연결하는중"
+
+#: ../src/window.c:430
+msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "로컬과 원격 파일 시스템에 쉽게 연결하고 마운트하기 위한 간단한 프론트엔드"
+
+#: ../src/window.c:431
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Copyright 2008-2011 Enrico Tröger"
+
+#: ../src/window.c:434
+msgid "translator-credits"
+msgstr "Seong-ho, Cho <darkcircle.0426@gmail.com>"
+
+#: ../src/window.c:466
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "기골로는 GVfs에서 지원하는 다음 프로토콜을 사용할 수 있습니다:"
+
+#: ../src/window.c:579
+#: ../src/window.c:638
+#, c-format
+msgid "The command '%s' failed"
+msgstr "명령 '%s' 실패"
+
+#: ../src/window.c:580
+#: ../src/window.c:613
+#: ../src/window.c:626
+#: ../src/window.c:639
+#: ../src/window.c:797
+#: ../src/bookmarkeditdialog.c:220
+#: ../src/bookmarkeditdialog.c:239
+#: ../src/bookmarkeditdialog.c:252
+#: ../src/bookmarkeditdialog.c:263
+#: ../src/bookmarkeditdialog.c:274
+msgid "Error"
+msgstr "오류"
+
+#: ../src/window.c:613
+msgid "Invalid terminal command"
+msgstr "잘못된 터미널 명령"
+
+#: ../src/window.c:625
+#, c-format
+msgid "No default location available for \"%s\""
+msgstr "\"%s\"에 대해 사용할 수 있는 기본 위치가 없습니다"
+
+#: ../src/window.c:705
+msgid "Edit _Bookmark"
+msgstr "북마크 편집 (_B)"
+
+#: ../src/window.c:707
+#: ../src/window.c:1287
+#: ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
+msgid "Create _Bookmark"
+msgstr "북마크 생성 (_B)"
+
+#: ../src/window.c:1279
+msgid "_File"
+msgstr "파일 (_F)"
+
+#: ../src/window.c:1280
+msgid "_Edit"
+msgstr "편집 (_E)"
+
+#: ../src/window.c:1281
+msgid "_Actions"
+msgstr "동작 (_A)"
+
+#: ../src/window.c:1282
+msgid "_View"
+msgstr "보기 (_V)"
+
+#: ../src/window.c:1283
+msgid "_Help"
+msgstr "도움말 (_H)"
+
+#: ../src/window.c:1289
+msgid "_Edit Bookmarks"
+msgstr "북마크 편집 (_E)"
+
+#: ../src/window.c:1290
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "북마크를 추가, 편집 혹은 삭제하기 위한 북마크 관리자를 엽니다"
+
+#: ../src/window.c:1294
+msgid "Disconnect the selected resource"
+msgstr "선택된 자원 연결 해제"
+
+#: ../src/window.c:1296
+msgid "Open the selected resource with a file manager"
+msgstr "파일 관리자로 선택된 자원을 엽니다"
+
+#: ../src/window.c:1297
+msgid "Open in _Terminal"
+msgstr "터미널에서 열기 (_T)"
+
+#: ../src/window.c:1298
+msgid "Start a terminal from here"
+msgstr "여기서 터미널을 시작합니다"
+
+#: ../src/window.c:1299
+msgid "Copy _URI"
+msgstr "URI 복사 (_U)"
+
+#: ../src/window.c:1300
+msgid "Quit Gigolo"
+msgstr "Gigolo 끝내기"
+
+#: ../src/window.c:1301
+msgid "Online Help"
+msgstr "온라인 도움말"
+
+#: ../src/window.c:1302
+msgid "Supported Protocols"
+msgstr "지원되는 프로토콜"
+
+#: ../src/window.c:1308
+msgid "Side _Panel"
+msgstr "변두리 패널 (_P)"
+
+#: ../src/window.c:1310
+msgid "_Toolbar"
+msgstr "도구막대 (_T)"
+
+#: ../src/window.c:1312
+msgid "Status _Icon"
+msgstr "상태 아이콘 (_I)"
+
+#: ../src/window.c:1318
+msgid "View as _Symbols"
+msgstr "심볼로 보기 (_S)"
+
+#: ../src/window.c:1319
+msgid "View as _Detailed List"
+msgstr "자세한 목록으로 보기 (_D)"
+
+#: ../src/window.c:1328
+msgid "_Bookmarks"
+msgstr "북마크 (_B)"
+
+#: ../src/window.c:1328
+msgid "Choose a bookmark to connect to"
+msgstr "연결할 북마크를 선택합니다"
+
+#: ../src/window.c:1410
+msgid "Connected"
+msgstr "연결됨"
+
+#: ../src/window.c:1419
+#: ../src/bookmarkdialog.c:315
+msgid "Service Type"
+msgstr "서비스 유형"
+
+#: ../src/window.c:1427
+#: ../src/bookmarkdialog.c:307
+msgid "Name"
+msgstr "이름"
+
+#: ../src/window.c:1498
+msgid "Bookmarks"
+msgstr "북마크"
+
+#: ../src/window.c:1554
+#: ../src/window.c:1630
+#: ../gigolo.desktop.in.h:2
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:694
+msgid "Move it now?"
+msgstr "지금 옮기시렵니까?"
+
+#: ../src/settings.c:695
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Gigolo는 시작전에 이전 설정 디렉터리를 옮길 필요가 있습니다."
+
+#: ../src/settings.c:703
+#, c-format
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr "이전 설정 디렉터리 \"%s\"을(를) \"%s\"(으)로 옮길 수 없습니다 (%s). 새 위치로 직접 이동하여 주시기 바랍니다."
+
+#: ../src/settings.c:706
+msgid "Warning"
+msgstr "경고"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "연결"
+
+#: ../src/bookmarkdialog.c:95
+#, c-format
+msgid "Domain: %s"
+msgstr "도메인: %s"
+
+#: ../src/bookmarkdialog.c:100
+#, c-format
+msgid "Share: %s"
+msgstr "공유: %s"
+
+#: ../src/bookmarkdialog.c:106
+#, c-format
+msgid "Folder: %s"
+msgstr "폴더: %s"
+
+#: ../src/bookmarkdialog.c:112
+#, c-format
+msgid "Path: %s"
+msgstr "경로: %s"
+
+#: ../src/bookmarkdialog.c:323
+msgid "Host"
+msgstr "호스트"
+
+#: ../src/bookmarkdialog.c:331
+msgid "Port"
+msgstr "포트"
+
+#: ../src/bookmarkdialog.c:339
+msgid "Auto-Connect"
+msgstr "자동 연결"
+
+#: ../src/bookmarkdialog.c:347
+msgid "Username"
+msgstr "사용자이름"
+
+#: ../src/bookmarkdialog.c:355
+msgid "Other information"
+msgstr "기타 정보"
+
+#: ../src/bookmarkdialog.c:412
+msgid "Edit Bookmarks"
+msgstr "북마크 편집"
+
+#: ../src/bookmarkeditdialog.c:221
+msgid "You must enter a name for the bookmark."
+msgstr "불마크를 위해 이름을 입력하여야 합니다."
+
+#: ../src/bookmarkeditdialog.c:240
+msgid "The entered bookmark name is already in use. Please choose another one."
+msgstr "입력한 북마크 이름이 이미 사용되고 있습니다. 다른 이름을 선택하여 주시기 바랍니다."
+
+#: ../src/bookmarkeditdialog.c:253
+msgid "You must enter a server address or name."
+msgstr "서버 주소나 이름을 입력해야 합니다."
+
+#: ../src/bookmarkeditdialog.c:264
+msgid "You must enter a share name."
+msgstr "공유 이름을 입력하여야 합니다."
+
+#: ../src/bookmarkeditdialog.c:275
+msgid "You must enter a valid URI for the connection."
+msgstr "연결에 대한 유효한 URI를 입력하여야 합니다."
+
+#: ../src/bookmarkeditdialog.c:567
+msgid "_Device:"
+msgstr "장치 (_D):"
+
+#: ../src/bookmarkeditdialog.c:569
+#: ../src/bookmarkeditdialog.c:1081
+msgid "_Server:"
+msgstr "서버 (_S):"
+
+#: ../src/bookmarkeditdialog.c:880
+msgid "Create Bookmark"
+msgstr "북마크 생성"
+
+#: ../src/bookmarkeditdialog.c:887
+msgid "Edit Bookmark"
+msgstr "북마크 편집"
+
+#: ../src/bookmarkeditdialog.c:895
+msgid "Connect to Server"
+msgstr "서버로 연결"
+
+#: ../src/bookmarkeditdialog.c:1019
+msgid "_Bookmark name:"
+msgstr "북마크 이름 (_B):"
+
+#: ../src/bookmarkeditdialog.c:1027
+msgid "_Color:"
+msgstr "색 (_C):"
+
+#: ../src/bookmarkeditdialog.c:1038
+msgid "Au_to-Connect"
+msgstr "자동 연결 (_U)"
+
+#: ../src/bookmarkeditdialog.c:1049
+msgid "Service t_ype:"
+msgstr "서비스 유형 (_Y):"
+
+#: ../src/bookmarkeditdialog.c:1074
+msgid "Set the port to 0 to use the default port"
+msgstr "기본 포트를 사용하기 위해 0으로 포트를 설정"
+
+#: ../src/bookmarkeditdialog.c:1080
+msgid "_Location (URI):"
+msgstr "위치 (URI) (_L):"
+
+#: ../src/bookmarkeditdialog.c:1082
+msgid "_Folder:"
+msgstr "폴더 (_F):"
+
+#: ../src/bookmarkeditdialog.c:1083
+msgid "P_ath:"
+msgstr "경로 (_A):"
+
+#: ../src/bookmarkeditdialog.c:1084
+msgid "_User Name:"
+msgstr "사용자 이름(_U)"
+
+#: ../src/bookmarkeditdialog.c:1085
+msgid "Optional information:"
+msgstr "추가 정보:"
+
+#: ../src/bookmarkeditdialog.c:1086
+msgid "_Port:"
+msgstr "포트 (_P):"
+
+#: ../src/bookmarkeditdialog.c:1087
+msgid "_Domain:"
+msgstr "도메인 (_D):"
+
+#: ../src/bookmarkeditdialog.c:1088
+msgid "_Share:"
+msgstr "공유 (_S):"
+
+#: ../src/preferencesdialog.c:147
+msgid "Icons"
+msgstr "아이콘"
+
+#: ../src/preferencesdialog.c:148
+msgid "Text"
+msgstr "텍스트"
+
+#: ../src/preferencesdialog.c:149
+msgid "Both"
+msgstr "둘 다"
+
+#: ../src/preferencesdialog.c:150
+msgid "Both horizontal"
+msgstr "둘다 수평으로"
+
+#: ../src/preferencesdialog.c:169
+msgid "Horizontal"
+msgstr "수평"
+
+#: ../src/preferencesdialog.c:170
+msgid "Vertical"
+msgstr "수직"
+
+#: ../src/preferencesdialog.c:189
+msgid "Symbols"
+msgstr "심볼"
+
+#: ../src/preferencesdialog.c:190
+msgid "Detailed List"
+msgstr "자세한 목록"
+
+#: ../src/preferencesdialog.c:333
+msgid "General"
+msgstr "일반"
+
+#: ../src/preferencesdialog.c:338
+msgid "_File Manager"
+msgstr "파일 관리자 (_F)"
+
+#: ../src/preferencesdialog.c:346
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr "마운트 지점을 열거나 보기 위해 사용할 프로그램의 이름을 입력합니다"
+
+#: ../src/preferencesdialog.c:355
+msgid "_Terminal"
+msgstr "터미널 (_T)"
+
+#: ../src/preferencesdialog.c:363
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr "터미널에서 마운트 지점을 열 프로그램의 이름을 입력합니다"
+
+#: ../src/preferencesdialog.c:372
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "북마크 자동 연결 주기 (_B)"
+
+#: ../src/preferencesdialog.c:378
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr "얼마나 자주 북마크로 자동 연결을 시도할지 초단위로 입력합니다. 0 값은 확인을 끕니다."
+
+#: ../src/preferencesdialog.c:389
+msgid "Interface"
+msgstr "인터페이스"
+
+#: ../src/preferencesdialog.c:391
+msgid "_Save window position and geometry"
+msgstr "창의 위치와 크기를 저장 (_S)"
+
+#: ../src/preferencesdialog.c:392
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "창의 위치와 크기를 저장하고 시작시 이를 복원합니다"
+
+#: ../src/preferencesdialog.c:395
+msgid "Show status _icon in the Notification Area"
+msgstr "알림 영역에 상태 아이콘 보이기 (_I)"
+
+#: ../src/preferencesdialog.c:398
+msgid "Start _minimized in the Notification Area"
+msgstr "알림 영역에 최소화된 상태로 시작 (_M)"
+
+#: ../src/preferencesdialog.c:403
+msgid "Show side panel"
+msgstr "변두리 패널 보이기"
+
+#: ../src/preferencesdialog.c:404
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr "사용가능한 삼바/윈도우 공유와 북마크 목록에 대한 로컬 네트워크를 탐색기 위한 변두리 패널을 보일지에 대한 여부"
+
+#: ../src/preferencesdialog.c:407
+msgid "Show auto-connect error messages"
+msgstr "자동 연결 오류 메시지 보이기"
+
+#: ../src/preferencesdialog.c:408
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr "북마크 자동 연결에 실패했을 때 오류 메시지 대화상자를 보일지에 대한 여부"
+
+#: ../src/preferencesdialog.c:414
+msgid "_Connection List Mode"
+msgstr "연결 목록 모드 (_C)"
+
+#: ../src/preferencesdialog.c:427
+msgid "Toolbar"
+msgstr "도구막대"
+
+#: ../src/preferencesdialog.c:429
+msgid "Show _toolbar"
+msgstr "도구막대 보이기 (_T)"
+
+#: ../src/preferencesdialog.c:435
+msgid "St_yle"
+msgstr "방식 (_Y)"
+
+#: ../src/preferencesdialog.c:446
+msgid "_Orientation"
+msgstr "방향 (_O)"
+
+#: ../src/preferencesdialog.c:507
+msgid "Preferences"
+msgstr "기본 설정"
+
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "북마크 없음"
+
+#: ../src/backendgvfs.c:239
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s\n"
+"Bookmark: %s"
+msgstr ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"연결됨: 예\n"
+"서비스 유형: %s\n"
+"북마크: %s"
+
+#: ../src/backendgvfs.c:254
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>유닉스 장치: %s</b>"
+
+#: ../src/backendgvfs.c:453
+#: ../src/backendgvfs.c:492
+msgid "unknown"
+msgstr "알 수 없음"
+
+#: ../src/backendgvfs.c:459
+#: ../src/backendgvfs.c:558
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "\"%s\"(으)로의 연결에 실패했습니다."
+
+#: ../src/backendgvfs.c:496
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "\"%s\"(으)로부터의 연결 해제에 실패했습니다."
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "연결중"
+
+#: ../src/browsenetworkpanel.c:188
+msgid "No Workgroups found"
+msgstr "작업그룹을 찾을 수 없습니다"
+
+#: ../src/browsenetworkpanel.c:199
+msgid "No Shares found"
+msgstr "공유물을 찾을 수 없습니다"
+
+#: ../src/browsenetworkpanel.c:204
+msgid "No Hosts found"
+msgstr "호스트를 찾을 수 없습니다"
+
+#: ../src/browsenetworkpanel.c:490
+msgid "Connect to the selected share"
+msgstr "선택된 공유물로 연결"
+
+#: ../src/browsenetworkpanel.c:498
+msgid "Create a bookmark from the selected share"
+msgstr "선택된 공유물로부터 북마크 생성"
+
+#: ../src/browsenetworkpanel.c:507
+msgid "Refresh the network list"
+msgstr "네트워크 목록을 새로 고침"
+
+#: ../src/browsenetworkpanel.c:518
+#: ../src/bookmarkpanel.c:267
+msgid "Close panel"
+msgstr "패널 닫기"
+
+#: ../src/bookmarkpanel.c:92
+msgid "No bookmarks"
+msgstr "북마크 없음"
+
+#: ../src/bookmarkpanel.c:256
+msgid "Connect to the selected bookmark"
+msgstr "선택한 북마크로 연결"
+
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "원격 파일 시스템을 쉽게 연결하기 위한 간단한 프론트엔드"
+
