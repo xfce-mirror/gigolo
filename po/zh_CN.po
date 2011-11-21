@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-05 23:06+0000\n"
+"POT-Creation-Date: 2011-11-16 13:20+0000\n"
 "PO-Revision-Date: 2010-11-23 23:33+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -24,7 +24,7 @@ msgstr "忽略正在运行的实例，强制打开一个新实例"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
-msgstr "列出所有已被支持的 URI 类型"
+msgstr "列印所有已被支持的统一资源标志符类型"
 
 #: ../src/main.c:48
 msgid "Be verbose"
@@ -36,7 +36,7 @@ msgstr "显示版本信息"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- 易于与远程文件系统连接的简单前端"
+msgstr "-易于与远程文件系统连接的简单前端"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -48,27 +48,27 @@ msgstr "Windows 共享"
 
 #: ../src/common.c:81
 msgid "FTP"
-msgstr "FTP"
+msgstr "文件传输协议"
 
 #: ../src/common.c:83
 msgid "HTTP"
-msgstr "HTTP"
+msgstr "超文本传输协议"
 
 #: ../src/common.c:85
 msgid "SSH"
-msgstr "SSH"
+msgstr "安全外壳协议"
 
 #: ../src/common.c:87
 msgid "Obex"
-msgstr "Obex"
+msgstr "对象交换协议"
 
 #: ../src/common.c:89
 msgid "WebDAV"
-msgstr "WebDAV"
+msgstr "网页分布式发布和版本控制协议"
 
 #: ../src/common.c:91
 msgid "WebDAV (secure)"
-msgstr "WebDAV(安全的)"
+msgstr "网页分布式发布和版本控制协议(安全的)"
 
 #: ../src/common.c:93 ../src/window.c:1506
 msgid "Network"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Gigolo 能使用 GVfs 提供的下列协议："
+msgstr "Gigolo 能使用通用视频文件服务器提供的下列协议："
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -187,7 +187,7 @@ msgstr "在此启动终端"
 
 #: ../src/window.c:1299
 msgid "Copy _URI"
-msgstr "复制 URI(_U)"
+msgstr "复制统一资源标志符(_U)"
 
 #: ../src/window.c:1300
 msgid "Quit Gigolo"
@@ -215,11 +215,11 @@ msgstr "状态图标(_I)"
 
 #: ../src/window.c:1318
 msgid "View as _Symbols"
-msgstr "符号查看方式(_S)"
+msgstr "以符号方式查看(_S)"
 
 #: ../src/window.c:1319
 msgid "View as _Detailed List"
-msgstr "详细列表查看方式(_D)"
+msgstr "以详细列表方式查看(_D)"
 
 #: ../src/window.c:1328
 msgid "_Bookmarks"
@@ -227,7 +227,7 @@ msgstr "书签(_B)"
 
 #: ../src/window.c:1328
 msgid "Choose a bookmark to connect to"
-msgstr "选择一个书签以连接"
+msgstr "选择要连接的书签"
 
 #: ../src/window.c:1410
 msgid "Connected"
@@ -247,7 +247,7 @@ msgstr "书签"
 
 #: ../src/window.c:1554 ../src/window.c:1630 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
-msgstr "Gigolo"
+msgstr "Gigolo 远程连接"
 
 #: ../src/settings.c:694
 msgid "Move it now?"
@@ -255,7 +255,7 @@ msgstr "现在迁移？"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Gigolo 在启动前需要迁移您旧有的配置目录。"
+msgstr "Gigolo 在启动前需要移动您旧有的配置目录。"
 
 #: ../src/settings.c:703
 #, c-format
@@ -263,7 +263,7 @@ msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr ""
-"无法将您旧有的配置目录 “%s” 移动到新位置 “%s”(%s)。请手动移动该目录至新位置。"
+"无法将您旧有的配置目录 “%s” 移动至新位置 “%s”(%s)。请手动移动该目录至新位置。"
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -335,7 +335,7 @@ msgstr "您必须输入一个共享名称。"
 
 #: ../src/bookmarkeditdialog.c:275
 msgid "You must enter a valid URI for the connection."
-msgstr "您必须为连接输入一个有效的 URI。"
+msgstr "您必须为连接输入一个有效的统一资源标志符。"
 
 #: ../src/bookmarkeditdialog.c:567
 msgid "_Device:"
@@ -355,7 +355,7 @@ msgstr "编辑书签"
 
 #: ../src/bookmarkeditdialog.c:895
 msgid "Connect to Server"
-msgstr "连接至服务器"
+msgstr "与服务器连接"
 
 #: ../src/bookmarkeditdialog.c:1019
 msgid "_Bookmark name:"
@@ -379,7 +379,7 @@ msgstr "将端口设置为 0 以便使用默认端口"
 
 #: ../src/bookmarkeditdialog.c:1080
 msgid "_Location (URI):"
-msgstr "位置(URI)(_L)："
+msgstr "位置(统一资源标志符)(_L)："
 
 #: ../src/bookmarkeditdialog.c:1082
 msgid "_Folder:"
@@ -550,10 +550,9 @@ msgid ""
 msgstr ""
 "<b>%s</b>\n"
 "\n"
-"URI：%s\n"
+"统一资源标志符：%s\n"
 "已连接：是\n"
-"服务类型：%s"
-"书签：%s"
+"服务类型：%s书签：%s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
