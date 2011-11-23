@@ -3,21 +3,22 @@
 # This file is distributed under the same license as Gigolo.
 # Robert Hartl <hartl.robert@gmail.com>, 2009.
 # Tomáš Vadina <kyberdev@gmail.com>, 2011.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-27 04:11+0000\n"
-"PO-Revision-Date: 2011-05-20 17:04+0100\n"
+"POT-Creation-Date: 2011-11-23 06:16+0000\n"
+"PO-Revision-Date: 2011-11-23 08:53+0100\n"
 "Last-Translator: Tomáš Vadina <kyberdev@gmail.com>\n"
-"Language-Team: slovak <sk-i18n@lists.linux.sk>\n"
+"Language-Team: slovenčina <sk-i18n@lists.linux.sk>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
+"Content-Transfer-Encoding: 8bits\n"
 "X-Poedit-Language: Slovak\n"
 "X-Poedit-Country: SLOVAKIA\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -37,7 +38,8 @@ msgstr "Zobraziť informácie o verzii"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov."
+msgstr ""
+"- jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov."
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -93,8 +95,10 @@ msgid "Connecting to \"%s\""
 msgstr "Pripojovanie k \"%s\""
 
 #: ../src/window.c:430
-msgid "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "Jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov"
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"Jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -108,7 +112,9 @@ msgstr ""
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Aplikácia Gigolo môže používať nasledujúce protokoly poskytované systémom súborov GVfs:"
+msgstr ""
+"Aplikácia Gigolo môže používať nasledujúce protokoly poskytované systémom "
+"súborov GVfs:"
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -254,12 +260,18 @@ msgstr "Presunúť teraz?"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Aplikácia Gigolo potrebuje pred spustením presunúť starý priečinok s nastaveniami."
+msgstr ""
+"Aplikácia Gigolo potrebuje pred spustením presunúť starý priečinok s "
+"nastaveniami."
 
 #: ../src/settings.c:703
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "Váš starý adresár s nastaveniami \"%s\" nemohol byť presunutý do \"%s\" (%s). Prosím presuňte ho do nového umiestnenia ručne."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"Váš starý adresár s nastaveniami \"%s\" nemohol byť presunutý do \"%s"
+"\" (%s). Prosím presuňte ho do nového umiestnenia ručne."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -462,8 +474,12 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Interval automatického pripojenia záložky"
 
 #: ../src/preferencesdialog.c:378
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "Ako často sa majú automaticky pripájať záložky, v sekundách. Nula opakované pripájanie zakáže."
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"Ako často sa majú automaticky pripájať záložky, v sekundách. Nula opakované "
+"pripájanie zakáže."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -490,16 +506,22 @@ msgid "Show side panel"
 msgstr "Zobraziť bočný panel"
 
 #: ../src/preferencesdialog.c:404
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "Zobrazovanie postranného panelu pre prehliadanie dostupných zdieľaných priečinkov Samba/Windows v lokálnej sieti a zoznamu záložiek"
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"Zobrazovanie postranného panelu pre prehliadanie dostupných zdieľaných "
+"priečinkov Samba/Windows v lokálnej sieti a zoznamu záložiek"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
 msgstr "Zobraziť chybové správy automatického pripojenia"
 
 #: ../src/preferencesdialog.c:408
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr "Zobrazovanie chybových dialógov pri zlyhaní automatického pripojenia záložiek"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+"Zobrazovanie chybových dialógov pri zlyhaní automatického pripojenia záložiek"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -525,36 +547,42 @@ msgstr "_Orientácia"
 msgid "Preferences"
 msgstr "Nastavenia"
 
-#: ../src/backendgvfs.c:237
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "Žiadne záložky"
+
+#: ../src/backendgvfs.c:239
 #, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "Connected: Yes\n"
-"Service Type: %s"
+"Service Type: %s\n"
+"Bookmark: %s"
 msgstr ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "Pripojený: áno\n"
-"Typ služby: %s"
+"Typ služby: %s\n"
+"Záložka: %s"
 
-#: ../src/backendgvfs.c:251
+#: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Zariadenie Unixu: %s</b>"
 
-#: ../src/backendgvfs.c:439 ../src/backendgvfs.c:478
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "neznámy"
 
-#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:544
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:558
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Pripojenie na \"%s\" zlyhalo."
 
-#: ../src/backendgvfs.c:482
+#: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Odpojenie na \"%s\" zlyhalo."
@@ -601,7 +629,8 @@ msgstr "Pripojiť sa k vybranej záložke"
 
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov."
+msgstr ""
+"Jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov."
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "Zobraziť bočný panel 'Prehľadávať sieť'"
