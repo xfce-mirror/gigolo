@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-16 13:20+0000\n"
+"POT-Creation-Date: 2011-11-25 15:04+0000\n"
 "PO-Revision-Date: 2010-11-23 23:33+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -24,7 +24,7 @@ msgstr "忽略正在运行的实例，强制打开一个新实例"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
-msgstr "列印所有已被支持的统一资源标志符类型"
+msgstr "列印所有已被支持的 URI 类型"
 
 #: ../src/main.c:48
 msgid "Be verbose"
@@ -48,27 +48,27 @@ msgstr "Windows 共享"
 
 #: ../src/common.c:81
 msgid "FTP"
-msgstr "文件传输协议"
+msgstr "FTP"
 
 #: ../src/common.c:83
 msgid "HTTP"
-msgstr "超文本传输协议"
+msgstr "HTTP"
 
 #: ../src/common.c:85
 msgid "SSH"
-msgstr "安全外壳协议"
+msgstr "SSH"
 
 #: ../src/common.c:87
 msgid "Obex"
-msgstr "对象交换协议"
+msgstr "Obex"
 
 #: ../src/common.c:89
 msgid "WebDAV"
-msgstr "网页分布式发布和版本控制协议"
+msgstr "WebDAV"
 
 #: ../src/common.c:91
 msgid "WebDAV (secure)"
-msgstr "网页分布式发布和版本控制协议(安全的)"
+msgstr "WebDAV(安全的)"
 
 #: ../src/common.c:93 ../src/window.c:1506
 msgid "Network"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Gigolo 能使用通用视频文件服务器提供的下列协议："
+msgstr "Gigolo 能使用 GVfs 提供的下列协议："
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -187,7 +187,7 @@ msgstr "在此启动终端"
 
 #: ../src/window.c:1299
 msgid "Copy _URI"
-msgstr "复制统一资源标志符(_U)"
+msgstr "复制 URI(_U)"
 
 #: ../src/window.c:1300
 msgid "Quit Gigolo"
@@ -335,7 +335,7 @@ msgstr "您必须输入一个共享名称。"
 
 #: ../src/bookmarkeditdialog.c:275
 msgid "You must enter a valid URI for the connection."
-msgstr "您必须为连接输入一个有效的统一资源标志符。"
+msgstr "您必须为连接输入一个有效的 URI。"
 
 #: ../src/bookmarkeditdialog.c:567
 msgid "_Device:"
@@ -379,7 +379,7 @@ msgstr "将端口设置为 0 以便使用默认端口"
 
 #: ../src/bookmarkeditdialog.c:1080
 msgid "_Location (URI):"
-msgstr "位置(统一资源标志符)(_L)："
+msgstr "位置(URI)(_L)："
 
 #: ../src/bookmarkeditdialog.c:1082
 msgid "_Folder:"
@@ -550,7 +550,7 @@ msgid ""
 msgstr ""
 "<b>%s</b>\n"
 "\n"
-"统一资源标志符：%s\n"
+"URI：%s\n"
 "已连接：是\n"
 "服务类型：%s书签：%s"
 
