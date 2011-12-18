@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo.master.gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-05 08:09+0000\n"
+"POT-Creation-Date: 2011-12-18 07:27+0000\n"
 "PO-Revision-Date: 2011-12-02 09:09+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -180,9 +180,8 @@ msgid "Open in _Terminal"
 msgstr "O_pna í skjáhermi"
 
 #: ../src/window.c:1298
-#, fuzzy
 msgid "Start a terminal from here"
-msgstr "Keyra terminal héðan frá"
+msgstr "Ræsa skjáhermisetu héðan"
 
 #: ../src/window.c:1299
 msgid "Copy _URI"
@@ -214,11 +213,11 @@ msgstr "Stöðu_tákn"
 
 #: ../src/window.c:1318
 msgid "View as _Symbols"
-msgstr ""
+msgstr "_Skoða sem tákn"
 
 #: ../src/window.c:1319
 msgid "View as _Detailed List"
-msgstr ""
+msgstr "Skoða sem ítarlegan _lista"
 
 #: ../src/window.c:1328
 msgid "_Bookmarks"
@@ -301,7 +300,7 @@ msgstr "Gátt"
 
 #: ../src/bookmarkdialog.c:339
 msgid "Auto-Connect"
-msgstr ""
+msgstr "Tengjast sjálfvirkt"
 
 #: ../src/bookmarkdialog.c:347
 msgid "Username"
@@ -365,7 +364,7 @@ msgstr "_Litur:"
 
 #: ../src/bookmarkeditdialog.c:1038
 msgid "Au_to-Connect"
-msgstr ""
+msgstr "_Tengjast sjálfvirkt"
 
 #: ../src/bookmarkeditdialog.c:1049
 msgid "Service t_ype:"
@@ -437,7 +436,7 @@ msgstr "Táknmerki"
 
 #: ../src/preferencesdialog.c:190
 msgid "Detailed List"
-msgstr ""
+msgstr "Ítarlegur listi"
 
 #: ../src/preferencesdialog.c:333
 msgid "General"
@@ -491,7 +490,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
-msgstr ""
+msgstr "Birta hliðarspjald"
 
 #: ../src/preferencesdialog.c:404
 msgid ""
@@ -518,7 +517,7 @@ msgstr "Tækjaslá"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr ""
+msgstr "Birta áhaldaslá"
 
 #: ../src/preferencesdialog.c:435
 msgid "St_yle"
@@ -526,7 +525,7 @@ msgstr "St_íll"
 
 #: ../src/preferencesdialog.c:446
 msgid "_Orientation"
-msgstr ""
+msgstr "Ste_fna"
 
 #: ../src/preferencesdialog.c:507
 msgid "Preferences"
@@ -584,7 +583,7 @@ msgstr "Engir þjónar fundust"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
-msgstr ""
+msgstr "Tengjast valdri sameign"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
@@ -592,7 +591,7 @@ msgstr ""
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
-msgstr ""
+msgstr "Endurnýja lista yfir netkerfi"
 
 #: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
