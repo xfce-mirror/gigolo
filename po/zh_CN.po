@@ -4,7 +4,7 @@
 # the gigolo package.
 # Hunt Xu <huntxu@live.cn>, 2009, 2010.
 # Jiahua Huang <jhuangjiahua@gmail.com>, 2009.
-# Chipong Luo <chipong_l@yahoo.com>, 2011.
+# Chipong Luo <chipong_l@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
@@ -110,7 +110,7 @@ msgid "translator-credits"
 msgstr ""
 "Hunt Xu <huntxu@live.cn>, 2009, 2010.\n"
 "Jiahua Huang <jhuangjiahua@gmail.com>, 2009.\n"
-"Chipong Luo <chipong_l@yahoo.com>, 2011."
+"Chipong Luo <chipong_l@yahoo.com>, 2011, 2012."
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -484,8 +484,8 @@ msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
 msgstr ""
-"尝试自动连接书签的频率，以秒计。0 "
-"禁用检查。"
+"尝试自动连接书签的频率，以秒计。"
+"0 禁用检查。"
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
