@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 13:03+0000\n"
+"POT-Creation-Date: 2012-01-27 18:51+0000\n"
 "PO-Revision-Date: 2011-01-23 18:26+0100\n"
 "Last-Translator: Thomas Schütz <xfce@thschuetz.de>\n"
 "Language-Team: German <xfce-i18n-de@xfce.org>\n"
@@ -134,7 +134,7 @@ msgid "Invalid terminal command"
 msgstr "Ungültiges Terminalkommando"
 
 #: ../src/window.c:625
-#, c-format, fuzzy
+#, c-format
 msgid "No default location available for \"%s\""
 msgstr "Kein Vorgabeort für »%s« verfügbar"
 
@@ -190,7 +190,6 @@ msgid "Open in _Terminal"
 msgstr "In _Terminal öffnen"
 
 #: ../src/window.c:1298
-#, fuzzy
 msgid "Start a terminal from here"
 msgstr "Terminal hier öffnen"
 
@@ -475,7 +474,6 @@ msgid "_Terminal"
 msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
-#, fuzzy
 msgid "Enter the name of a program to open mount points in a terminal"
 msgstr ""
 "Geben Sie den Namen eines Programms ein zum Anzeigen oder Öffnen von "
@@ -563,12 +561,11 @@ msgid "Preferences"
 msgstr "Einstellungen"
 
 #: ../src/backendgvfs.c:221
-#, fuzzy
 msgid "No bookmark"
 msgstr "Keine Lesezeichen"
 
 #: ../src/backendgvfs.c:239
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
