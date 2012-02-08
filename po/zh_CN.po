@@ -4,13 +4,13 @@
 # the gigolo package.
 # Hunt Xu <huntxu@live.cn>, 2009, 2010.
 # Jiahua Huang <jhuangjiahua@gmail.com>, 2009.
-# Chipong Luo <chipong_l@yahoo.com>, 2011, 2012.
+# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-25 15:04+0000\n"
+"POT-Creation-Date: 2012-02-08 03:27+0000\n"
 "PO-Revision-Date: 2010-11-23 23:33+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -37,8 +37,7 @@ msgstr "显示版本信息"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"-易于与远程文件系统连接的简单前端"
+msgstr "-易于与远程文件系统连接的简单前端"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -96,14 +95,11 @@ msgstr "正在与 “%s” 连接"
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"易于与本地或远程文件系统连接/挂载的"
-"简单前端"
+msgstr "易于与本地或远程文件系统连接/挂载的简单前端"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr ""
-"Enrico Tröger 2008-2011 版权所有"
+msgstr "Enrico Tröger 2008-2011 版权所有"
 
 #: ../src/window.c:434
 msgid "translator-credits"
@@ -114,8 +110,7 @@ msgstr ""
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"Gigolo 可以使用 GVfs 提供的下列协议："
+msgstr "Gigolo 可以使用 GVfs 提供的下列协议："
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -173,8 +168,7 @@ msgstr "编辑书签(_E)"
 
 #: ../src/window.c:1290
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"打开书签管理器以添加、编辑或删除书签"
+msgstr "打开书签管理器以添加、编辑或删除书签"
 
 #: ../src/window.c:1294
 msgid "Disconnect the selected resource"
@@ -262,9 +256,7 @@ msgstr "现在移动？"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo 在启动前需要移动您旧有的配置"
-"目录。"
+msgstr "Gigolo 在启动前需要移动您旧有的配置目录。"
 
 #: ../src/settings.c:703
 #, c-format
@@ -272,8 +264,7 @@ msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr ""
-"无法将您的原配置目录 “%s” 移动至 "
-"“%s”(%s)。请手动将此目录移动至新位置。"
+"无法将您的原配置目录 “%s” 移动至 “%s”(%s)。请手动将此目录移动至新位置。"
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -333,8 +324,7 @@ msgstr "您必须为书签输入一个名称。"
 
 #: ../src/bookmarkeditdialog.c:240
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
-"输入的书签名称已在使用。请选择另一个。"
+msgstr "输入的书签名称已在使用。请选择另一个。"
 
 #: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a server address or name."
@@ -386,8 +376,7 @@ msgstr "服务类型(_Y)："
 
 #: ../src/bookmarkeditdialog.c:1074
 msgid "Set the port to 0 to use the default port"
-msgstr ""
-"将端口设置为 0 以便使用默认端口"
+msgstr "将端口设置为 0 以便使用默认端口"
 
 #: ../src/bookmarkeditdialog.c:1080
 msgid "_Location (URI):"
@@ -463,8 +452,7 @@ msgstr "文件管理器(_F)"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"输入用来打开或查看挂载点的程序名称"
+msgstr "输入用来打开或查看挂载点的程序名称"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -472,8 +460,7 @@ msgstr "终端(_T)"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr ""
-"在终端中输入打开挂载点的程序名称"
+msgstr "在终端中输入打开挂载点的程序名称"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
@@ -483,9 +470,7 @@ msgstr "书签自动连接间隔(_B)"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"尝试自动连接书签的频率，以秒计。"
-"0 禁用检查。"
+msgstr "尝试自动连接书签的频率，以秒计。0 禁用检查。"
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -497,9 +482,7 @@ msgstr "保存窗口位置及几何形状(_S)"
 
 #: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
-"保存窗口位置及几何形状并在下次启动时"
-"恢复"
+msgstr "保存窗口位置及几何形状并在下次启动时恢复"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
@@ -517,11 +500,7 @@ msgstr "显示侧边栏"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-""
-"是否显示侧边栏以便浏览本地网络获取"
-"可用的 Samba/Windows 共享和书签"
-"列表"
+msgstr "是否显示侧边栏以便浏览本地网络获取可用的 Samba/Windows 共享和书签列表"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -530,9 +509,7 @@ msgstr "显示自动连接错误信息"
 #: ../src/preferencesdialog.c:408
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"无法自动连接书签时是否显示错误信息"
-"对话框"
+msgstr "无法自动连接书签时是否显示错误信息对话框"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -640,5 +617,4 @@ msgstr "与选中的书签连接"
 
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
-"易于与远程文件系统连接的简单前端"
+msgstr "易于与远程文件系统连接的简单前端"
