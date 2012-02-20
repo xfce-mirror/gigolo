@@ -1,0 +1,680 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gigolo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-20 12:12+0000\n"
+"PO-Revision-Date: 2012-02-20 23:01+0600\n"
+"Last-Translator: Urmas D. <davian818@gmail.com>\n"
+"Language-Team: none <none>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Esperanto\n"
+
+#: ../src/main.c:46
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr ""
+
+#: ../src/main.c:47
+msgid "Print a list of supported URI schemes"
+msgstr ""
+
+#: ../src/main.c:48
+#, fuzzy
+msgid "Be verbose"
+msgstr "alternativo %s ne povas esti sklavo de %s: %s"
+
+#: ../src/main.c:49
+#, fuzzy
+msgid "Show version information"
+msgstr "Presu informaĵon pri versio kaj eliru"
+
+#: ../src/main.c:79
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr ""
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr "Unikso-aparato"
+
+#: ../src/common.c:79
+#, fuzzy
+msgid "Windows Share"
+msgstr "Malfermu _Ĉiujn Fenestrojn"
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr "Obex"
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr "WebDAV (sekura)"
+
+#: ../src/common.c:93
+#: ../src/window.c:1506
+msgid "Network"
+msgstr "Reto"
+
+#: ../src/common.c:95
+#, fuzzy
+msgid "Archive"
+msgstr "ne povas atingi arkivon"
+
+#: ../src/common.c:97
+#, fuzzy
+msgid "Photos"
+msgstr "Fotaĵoj"
+
+#: ../src/common.c:99
+#, fuzzy
+msgid "Custom Location"
+msgstr "Malfermu Lokon"
+
+#: ../src/window.c:262
+#, fuzzy, c-format
+msgid "Connecting to \"%s\""
+msgstr "%(INSTALL)d instalotaj"
+
+#: ../src/window.c:430
+msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+
+#: ../src/window.c:431
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Kopirajto 2008-2011 Enriko TRJOGER"
+
+#: ../src/window.c:434
+msgid "translator-credits"
+msgstr "(c) 2012 dummy text"
+
+#: ../src/window.c:466
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr ""
+
+#: ../src/window.c:579
+#: ../src/window.c:638
+#, fuzzy, c-format
+msgid "The command '%s' failed"
+msgstr "Fiaskis komando: %s"
+
+#: ../src/window.c:580
+#: ../src/window.c:613
+#: ../src/window.c:626
+#: ../src/window.c:639
+#: ../src/window.c:797
+#: ../src/bookmarkeditdialog.c:220
+#: ../src/bookmarkeditdialog.c:239
+#: ../src/bookmarkeditdialog.c:252
+#: ../src/bookmarkeditdialog.c:263
+#: ../src/bookmarkeditdialog.c:274
+msgid "Error"
+msgstr "Eraro"
+
+#: ../src/window.c:613
+#, fuzzy
+msgid "Invalid terminal command"
+msgstr ""
+"Uzado: %s [<elekteblo> ...] <komando>\n"
+"\n"
+
+#: ../src/window.c:625
+#, fuzzy, c-format
+msgid "No default location available for \"%s\""
+msgstr "Ne sukcesis difini oportunan aplikaĵon por \"%s\""
+
+#: ../src/window.c:705
+#, fuzzy
+msgid "Edit _Bookmark"
+msgstr "Enmeti Legosignon"
+
+#: ../src/window.c:707
+#: ../src/window.c:1287
+#: ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
+#, fuzzy
+msgid "Create _Bookmark"
+msgstr "Enmeti Legosignon"
+
+#: ../src/window.c:1279
+msgid "_File"
+msgstr "_Dosiero"
+
+#: ../src/window.c:1280
+msgid "_Edit"
+msgstr "R_edaktu"
+
+#: ../src/window.c:1281
+msgid "_Actions"
+msgstr "_Agoj"
+
+#: ../src/window.c:1282
+msgid "_View"
+msgstr "_Montru"
+
+#: ../src/window.c:1283
+msgid "_Help"
+msgstr "_Helpo"
+
+#: ../src/window.c:1289
+#, fuzzy
+msgid "_Edit Bookmarks"
+msgstr "Redakti &komenton"
+
+#: ../src/window.c:1290
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr ""
+
+#: ../src/window.c:1294
+#, fuzzy
+msgid "Disconnect the selected resource"
+msgstr "Neniu bildo elektita"
+
+#: ../src/window.c:1296
+#, fuzzy
+msgid "Open the selected resource with a file manager"
+msgstr "Malfermu la markitan dosieron per la defaŭltan aplikaĵon"
+
+#: ../src/window.c:1297
+#, fuzzy
+msgid "Open in _Terminal"
+msgstr "Lanĉu en _terminalo"
+
+#: ../src/window.c:1298
+#, fuzzy
+msgid "Start a terminal from here"
+msgstr "Komenci je la unua ero"
+
+#: ../src/window.c:1299
+msgid "Copy _URI"
+msgstr "Kopiu _URI"
+
+#: ../src/window.c:1300
+msgid "Quit Gigolo"
+msgstr "Eliri na Ĵigolo"
+
+#: ../src/window.c:1301
+#, fuzzy
+msgid "Online Help"
+msgstr "Helpa &enhavo"
+
+#: ../src/window.c:1302
+msgid "Supported Protocols"
+msgstr ""
+
+#: ../src/window.c:1308
+msgid "Side _Panel"
+msgstr "Flank_panelo"
+
+#: ../src/window.c:1310
+msgid "_Toolbar"
+msgstr "_Ilobreto"
+
+#: ../src/window.c:1312
+#, fuzzy
+msgid "Status _Icon"
+msgstr "Piktograma vido"
+
+#: ../src/window.c:1318
+#, fuzzy
+msgid "View as _Symbols"
+msgstr "Montru kiel _Piktogramojn"
+
+#: ../src/window.c:1319
+#, fuzzy
+msgid "View as _Detailed List"
+msgstr "Vidu kiel _Detalan Liston"
+
+#: ../src/window.c:1328
+#, fuzzy
+msgid "_Bookmarks"
+msgstr "&Legosignoj"
+
+#: ../src/window.c:1328
+#, fuzzy
+msgid "Choose a bookmark to connect to"
+msgstr "Ne sukcesis konektiĝi kun la Rubujo"
+
+#: ../src/window.c:1410
+msgid "Connected"
+msgstr ""
+
+#: ../src/window.c:1419
+#: ../src/bookmarkdialog.c:315
+#, fuzzy
+msgid "Service Type"
+msgstr "&Stilo de numerado:"
+
+#: ../src/window.c:1427
+#: ../src/bookmarkdialog.c:307
+#, fuzzy
+msgid "Name"
+msgstr "Nomo"
+
+#: ../src/window.c:1498
+#, fuzzy
+msgid "Bookmarks"
+msgstr "&Legosignoj"
+
+#: ../src/window.c:1554
+#: ../src/window.c:1630
+#: ../gigolo.desktop.in.h:2
+msgid "Gigolo"
+msgstr "Ĵigolo"
+
+#: ../src/settings.c:694
+#, fuzzy
+msgid "Move it now?"
+msgstr "ĝi estas sklavo de %s"
+
+#: ../src/settings.c:695
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr ""
+
+#: ../src/settings.c:703
+#, c-format
+msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgstr ""
+
+#: ../src/settings.c:706
+msgid "Warning"
+msgstr "Averto"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:95
+#, c-format
+msgid "Domain: %s"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:100
+#, fuzzy, c-format
+msgid "Share: %s"
+msgstr "Komune"
+
+#: ../src/bookmarkdialog.c:106
+#, fuzzy, c-format
+msgid "Folder: %s"
+msgstr "Nova Dosierujo"
+
+#: ../src/bookmarkdialog.c:112
+#, fuzzy, c-format
+msgid "Path: %s"
+msgstr "Vojo"
+
+#: ../src/bookmarkdialog.c:323
+msgid "Host"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:331
+msgid "Port"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:339
+#, fuzzy
+msgid "Auto-Connect"
+msgstr "aŭtomata reĝimo"
+
+#: ../src/bookmarkdialog.c:347
+msgid "Username"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:355
+#, fuzzy
+msgid "Other information"
+msgstr "Aliaj programoj"
+
+#: ../src/bookmarkdialog.c:412
+#, fuzzy
+msgid "Edit Bookmarks"
+msgstr "Redakti &komenton"
+
+#: ../src/bookmarkeditdialog.c:221
+msgid "You must enter a name for the bookmark."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:240
+msgid "The entered bookmark name is already in use. Please choose another one."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:253
+msgid "You must enter a server address or name."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:264
+#, fuzzy
+msgid "You must enter a share name."
+msgstr "alternativa nomo (%s) ne devas enhavi '/' kaj spacojn."
+
+#: ../src/bookmarkeditdialog.c:275
+msgid "You must enter a valid URI for the connection."
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:567
+msgid "_Device:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:569
+#: ../src/bookmarkeditdialog.c:1081
+msgid "_Server:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:880
+#, fuzzy
+msgid "Create Bookmark"
+msgstr "Enmeti Legosignon"
+
+#: ../src/bookmarkeditdialog.c:887
+#, fuzzy
+msgid "Edit Bookmark"
+msgstr "Enmeti Legosignon"
+
+#: ../src/bookmarkeditdialog.c:895
+#, fuzzy
+msgid "Connect to Server"
+msgstr "Ne sukcesis konektiĝi kun la Rubujo"
+
+#: ../src/bookmarkeditdialog.c:1019
+#, fuzzy
+msgid "_Bookmark name:"
+msgstr "--%s bezonas <nomo>"
+
+#: ../src/bookmarkeditdialog.c:1027
+msgid "_Color:"
+msgstr "_Koloro:"
+
+#: ../src/bookmarkeditdialog.c:1038
+#, fuzzy
+msgid "Au_to-Connect"
+msgstr "Ne sukcesis konektiĝi kun la Rubujo"
+
+#: ../src/bookmarkeditdialog.c:1049
+msgid "Service t_ype:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1074
+#, fuzzy
+msgid "Set the port to 0 to use the default port"
+msgstr "%s estas nun elektita kiel defaŭlta sistemlingvo."
+
+#: ../src/bookmarkeditdialog.c:1080
+msgid "_Location (URI):"
+msgstr "_Adreso (URI):"
+
+#: ../src/bookmarkeditdialog.c:1082
+msgid "_Folder:"
+msgstr "_Dosierujo:"
+
+#: ../src/bookmarkeditdialog.c:1083
+msgid "P_ath:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1084
+#, fuzzy
+msgid "_User Name:"
+msgstr "Nomo de la renomilo videbla de uzanto"
+
+#: ../src/bookmarkeditdialog.c:1085
+#, fuzzy
+msgid "Optional information:"
+msgstr "Neniuj disponeblaj lingvaj informoj"
+
+#: ../src/bookmarkeditdialog.c:1086
+msgid "_Port:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1087
+msgid "_Domain:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1088
+msgid "_Share:"
+msgstr "_Komundosierujo:"
+
+#: ../src/preferencesdialog.c:147
+#, fuzzy
+msgid "Icons"
+msgstr "Piktogramoj"
+
+#: ../src/preferencesdialog.c:148
+#, fuzzy
+msgid "Text"
+msgstr "Teksto"
+
+#: ../src/preferencesdialog.c:149
+msgid "Both"
+msgstr ""
+
+#: ../src/preferencesdialog.c:150
+msgid "Both horizontal"
+msgstr ""
+
+#: ../src/preferencesdialog.c:169
+msgid "Horizontal"
+msgstr ""
+
+#: ../src/preferencesdialog.c:170
+msgid "Vertical"
+msgstr ""
+
+#: ../src/preferencesdialog.c:189
+#, fuzzy
+msgid "Symbols"
+msgstr "Simboloj"
+
+#: ../src/preferencesdialog.c:190
+#, fuzzy
+msgid "Detailed List"
+msgstr "Detala Lista Vido"
+
+#: ../src/preferencesdialog.c:333
+#, fuzzy
+msgid "General"
+msgstr "Ĝenerala"
+
+#: ../src/preferencesdialog.c:338
+msgid "_File Manager"
+msgstr "_Dosieradministrilo"
+
+#: ../src/preferencesdialog.c:346
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr ""
+
+#: ../src/preferencesdialog.c:355
+msgid "_Terminal"
+msgstr "_Terminalo"
+
+#: ../src/preferencesdialog.c:363
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr ""
+
+#: ../src/preferencesdialog.c:372
+#, fuzzy
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "Ne sukcesis konektiĝi kun la Rubujo"
+
+#: ../src/preferencesdialog.c:378
+msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgstr ""
+
+#: ../src/preferencesdialog.c:389
+#, fuzzy
+msgid "Interface"
+msgstr "Fasado"
+
+#: ../src/preferencesdialog.c:391
+#, fuzzy
+msgid "_Save window position and geometry"
+msgstr "Forigi la bildon kaj konservi kopion en la poŝo"
+
+#: ../src/preferencesdialog.c:392
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr ""
+
+#: ../src/preferencesdialog.c:395
+msgid "Show status _icon in the Notification Area"
+msgstr ""
+
+#: ../src/preferencesdialog.c:398
+msgid "Start _minimized in the Notification Area"
+msgstr ""
+
+#: ../src/preferencesdialog.c:403
+#, fuzzy
+msgid "Show side panel"
+msgstr "&Vidigi komentan fenestron"
+
+#: ../src/preferencesdialog.c:404
+msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgstr ""
+
+#: ../src/preferencesdialog.c:407
+msgid "Show auto-connect error messages"
+msgstr ""
+
+#: ../src/preferencesdialog.c:408
+msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+
+#: ../src/preferencesdialog.c:414
+#, fuzzy
+msgid "_Connection List Mode"
+msgstr "&Kolorita traduklisto"
+
+#: ../src/preferencesdialog.c:427
+msgid "Toolbar"
+msgstr "Ilobreto"
+
+#: ../src/preferencesdialog.c:429
+#, fuzzy
+msgid "Show _toolbar"
+msgstr "Montri aŭ kaŝi la ilobreton"
+
+#: ../src/preferencesdialog.c:435
+msgid "St_yle"
+msgstr "St_ilo"
+
+#: ../src/preferencesdialog.c:446
+#, fuzzy
+msgid "_Orientation"
+msgstr "Orientiĝo..."
+
+#: ../src/preferencesdialog.c:507
+#, fuzzy
+msgid "Preferences"
+msgstr "Preferoj"
+
+#: ../src/backendgvfs.c:221
+#, fuzzy
+msgid "No bookmark"
+msgstr "Enmeti Legosignon"
+
+#: ../src/backendgvfs.c:239
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s\n"
+"Bookmark: %s"
+msgstr ""
+
+#: ../src/backendgvfs.c:254
+#, fuzzy, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "eraro dum kreo de aparato '%.255s'"
+
+#: ../src/backendgvfs.c:453
+#: ../src/backendgvfs.c:492
+#, fuzzy
+msgid "unknown"
+msgstr "Nekonata"
+
+#: ../src/backendgvfs.c:459
+#: ../src/backendgvfs.c:558
+#, fuzzy, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "malsukcesis lanĉi %s: %s"
+
+#: ../src/backendgvfs.c:496
+#, fuzzy, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "malsukcesis lanĉi %s: %s"
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:188
+#, fuzzy
+msgid "No Workgroups found"
+msgstr "Neniuj programetoj trovitaj"
+
+#: ../src/browsenetworkpanel.c:199
+#, fuzzy
+msgid "No Shares found"
+msgstr "Neniuj programetoj trovitaj"
+
+#: ../src/browsenetworkpanel.c:204
+#, fuzzy
+msgid "No Hosts found"
+msgstr "Neniuj programetoj trovitaj"
+
+#: ../src/browsenetworkpanel.c:490
+#, fuzzy
+msgid "Connect to the selected share"
+msgstr "Sendu la elektitan dosieron al \"%s\""
+
+#: ../src/browsenetworkpanel.c:498
+#, fuzzy
+msgid "Create a bookmark from the selected share"
+msgstr "Elekti celan legosignon el la listo."
+
+#: ../src/browsenetworkpanel.c:507
+#, fuzzy
+msgid "Refresh the network list"
+msgstr "&Kolorita traduklisto"
+
+#: ../src/browsenetworkpanel.c:518
+#: ../src/bookmarkpanel.c:267
+msgid "Close panel"
+msgstr "Fermi la panelon"
+
+#: ../src/bookmarkpanel.c:92
+#, fuzzy
+msgid "No bookmarks"
+msgstr "[neniu implicitaĵo]"
+
+#: ../src/bookmarkpanel.c:256
+#, fuzzy
+msgid "Connect to the selected bookmark"
+msgstr "Iri al legosigno %i\tCtrl-%i"
+
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Fasadprogramo por konekti facile je la foraj dosiersistemoj"
+
