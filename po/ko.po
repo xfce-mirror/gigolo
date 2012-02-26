@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Korean translation for gigolo package.
+# Copyright (C) 2008-2012 Enrico TrÃ¶ger et al.
+# This file is distributed under the same license as the gigolo package.
+# Seong-ho, Cho <darkcircle.0426@gmail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo.master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-15 13:40+0000\n"
-"PO-Revision-Date: 2011-11-16 02:17+0900\n"
+"Report-Msgid-Bugs-To: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2012-02-26 02:45+0000\n"
+"PO-Revision-Date: 2012-02-26 15:17+0900\n"
 "Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
 "Language: \n"
@@ -36,7 +36,7 @@ msgstr "버전 정보 보이기"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- 원격 파일시스템에 쉽게 연결하기 위한 간단한 프론트엔드"
+msgstr "- 원격 파일 시스템에 쉽게 연결하기 위한 간단한 프론트엔드"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -138,38 +138,38 @@ msgstr "\"%s\"에 대해 사용할 수 있는 기본 위치가 없습니다"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
-msgstr "북마크 편집 (_B)"
+msgstr "북마크 편집(_B)"
 
 #: ../src/window.c:707
 #: ../src/window.c:1287
 #: ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
-msgstr "북마크 생성 (_B)"
+msgstr "북마크 만들기(_B)"
 
 #: ../src/window.c:1279
 msgid "_File"
-msgstr "파일 (_F)"
+msgstr "파일(_F)"
 
 #: ../src/window.c:1280
 msgid "_Edit"
-msgstr "편집 (_E)"
+msgstr "편집(_E)"
 
 #: ../src/window.c:1281
 msgid "_Actions"
-msgstr "동작 (_A)"
+msgstr "동작(_A)"
 
 #: ../src/window.c:1282
 msgid "_View"
-msgstr "보기 (_V)"
+msgstr "보기(_V)"
 
 #: ../src/window.c:1283
 msgid "_Help"
-msgstr "도움말 (_H)"
+msgstr "도움말(_H)"
 
 #: ../src/window.c:1289
 msgid "_Edit Bookmarks"
-msgstr "북마크 편집 (_E)"
+msgstr "북마크 편집(_E)"
 
 #: ../src/window.c:1290
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
@@ -185,7 +185,7 @@ msgstr "파일 관리자로 선택된 자원을 엽니다"
 
 #: ../src/window.c:1297
 msgid "Open in _Terminal"
-msgstr "터미널에서 열기 (_T)"
+msgstr "터미널에서 열기(_T)"
 
 #: ../src/window.c:1298
 msgid "Start a terminal from here"
@@ -193,7 +193,7 @@ msgstr "여기서 터미널을 시작합니다"
 
 #: ../src/window.c:1299
 msgid "Copy _URI"
-msgstr "URI 복사 (_U)"
+msgstr "URI 복사(_U)"
 
 #: ../src/window.c:1300
 msgid "Quit Gigolo"
@@ -209,27 +209,27 @@ msgstr "지원되는 프로토콜"
 
 #: ../src/window.c:1308
 msgid "Side _Panel"
-msgstr "변두리 패널 (_P)"
+msgstr "변두리 패널(_P)"
 
 #: ../src/window.c:1310
 msgid "_Toolbar"
-msgstr "도구막대 (_T)"
+msgstr "도구막대(_T)"
 
 #: ../src/window.c:1312
 msgid "Status _Icon"
-msgstr "상태 아이콘 (_I)"
+msgstr "상태 아이콘(_I)"
 
 #: ../src/window.c:1318
 msgid "View as _Symbols"
-msgstr "심볼로 보기 (_S)"
+msgstr "심볼로 보기(_S)"
 
 #: ../src/window.c:1319
 msgid "View as _Detailed List"
-msgstr "자세한 목록으로 보기 (_D)"
+msgstr "자세한 목록으로 보기(_D)"
 
 #: ../src/window.c:1328
 msgid "_Bookmarks"
-msgstr "북마크 (_B)"
+msgstr "북마크(_B)"
 
 #: ../src/window.c:1328
 msgid "Choose a bookmark to connect to"
@@ -346,16 +346,16 @@ msgstr "연결에 대한 유효한 URI를 입력하여야 합니다."
 
 #: ../src/bookmarkeditdialog.c:567
 msgid "_Device:"
-msgstr "장치 (_D):"
+msgstr "장치(_D):"
 
 #: ../src/bookmarkeditdialog.c:569
 #: ../src/bookmarkeditdialog.c:1081
 msgid "_Server:"
-msgstr "서버 (_S):"
+msgstr "서버(_S):"
 
 #: ../src/bookmarkeditdialog.c:880
 msgid "Create Bookmark"
-msgstr "북마크 생성"
+msgstr "북마크 만들기"
 
 #: ../src/bookmarkeditdialog.c:887
 msgid "Edit Bookmark"
@@ -367,19 +367,19 @@ msgstr "서버로 연결"
 
 #: ../src/bookmarkeditdialog.c:1019
 msgid "_Bookmark name:"
-msgstr "북마크 이름 (_B):"
+msgstr "북마크 이름(_B):"
 
 #: ../src/bookmarkeditdialog.c:1027
 msgid "_Color:"
-msgstr "색 (_C):"
+msgstr "색(_C):"
 
 #: ../src/bookmarkeditdialog.c:1038
 msgid "Au_to-Connect"
-msgstr "자동 연결 (_U)"
+msgstr "자동 연결(_T)"
 
 #: ../src/bookmarkeditdialog.c:1049
 msgid "Service t_ype:"
-msgstr "서비스 유형 (_Y):"
+msgstr "서비스 유형(_Y):"
 
 #: ../src/bookmarkeditdialog.c:1074
 msgid "Set the port to 0 to use the default port"
@@ -387,19 +387,19 @@ msgstr "기본 포트를 사용하기 위해 0으로 포트를 설정"
 
 #: ../src/bookmarkeditdialog.c:1080
 msgid "_Location (URI):"
-msgstr "위치 (URI) (_L):"
+msgstr "위치 (URI)(_L):"
 
 #: ../src/bookmarkeditdialog.c:1082
 msgid "_Folder:"
-msgstr "폴더 (_F):"
+msgstr "폴더(_F):"
 
 #: ../src/bookmarkeditdialog.c:1083
 msgid "P_ath:"
-msgstr "경로 (_A):"
+msgstr "경로(_A):"
 
 #: ../src/bookmarkeditdialog.c:1084
 msgid "_User Name:"
-msgstr "사용자 이름(_U)"
+msgstr "사용자 이름(_U):"
 
 #: ../src/bookmarkeditdialog.c:1085
 msgid "Optional information:"
@@ -407,15 +407,15 @@ msgstr "추가 정보:"
 
 #: ../src/bookmarkeditdialog.c:1086
 msgid "_Port:"
-msgstr "포트 (_P):"
+msgstr "포트(_P):"
 
 #: ../src/bookmarkeditdialog.c:1087
 msgid "_Domain:"
-msgstr "도메인 (_D):"
+msgstr "도메인(_D):"
 
 #: ../src/bookmarkeditdialog.c:1088
 msgid "_Share:"
-msgstr "공유 (_S):"
+msgstr "공유(_S):"
 
 #: ../src/preferencesdialog.c:147
 msgid "Icons"
@@ -455,7 +455,7 @@ msgstr "일반"
 
 #: ../src/preferencesdialog.c:338
 msgid "_File Manager"
-msgstr "파일 관리자 (_F)"
+msgstr "파일 관리자(_F)"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
@@ -463,7 +463,7 @@ msgstr "마운트 지점을 열거나 보기 위해 사용할 프로그램의 �
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
-msgstr "터미널 (_T)"
+msgstr "터미널(_T)"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
@@ -471,7 +471,7 @@ msgstr "터미널에서 마운트 지점을 열 프로그램의 이름을 입력
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "북마크 자동 연결 주기 (_B)"
+msgstr "북마크 자동 연결 주기(_B)"
 
 #: ../src/preferencesdialog.c:378
 msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
@@ -483,7 +483,7 @@ msgstr "인터페이스"
 
 #: ../src/preferencesdialog.c:391
 msgid "_Save window position and geometry"
-msgstr "창의 위치와 크기를 저장 (_S)"
+msgstr "창의 위치와 크기를 저장(_S)"
 
 #: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
@@ -491,11 +491,11 @@ msgstr "창의 위치와 크기를 저장하고 시작시 이를 복원합니다
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
-msgstr "알림 영역에 상태 아이콘 보이기 (_I)"
+msgstr "알림 영역에 상태 아이콘 보이기(_I)"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
-msgstr "알림 영역에 최소화된 상태로 시작 (_M)"
+msgstr "알림 영역에 최소화된 상태로 시작(_M)"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
@@ -515,7 +515,7 @@ msgstr "북마크 자동 연결에 실패했을 때 오류 메시지 대화상�
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
-msgstr "연결 목록 모드 (_C)"
+msgstr "연결 목록 모드(_C)"
 
 #: ../src/preferencesdialog.c:427
 msgid "Toolbar"
@@ -523,15 +523,15 @@ msgstr "도구막대"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "도구막대 보이기 (_T)"
+msgstr "도구막대 보이기(_T)"
 
 #: ../src/preferencesdialog.c:435
 msgid "St_yle"
-msgstr "방식 (_Y)"
+msgstr "방식(_Y)"
 
 #: ../src/preferencesdialog.c:446
 msgid "_Orientation"
-msgstr "방향 (_O)"
+msgstr "방향(_O)"
 
 #: ../src/preferencesdialog.c:507
 msgid "Preferences"
@@ -601,7 +601,7 @@ msgstr "선택된 공유물로 연결"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "선택된 공유물로부터 북마크 생성"
+msgstr "선택된 공유물로부터 북마크 만들기"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
