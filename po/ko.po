@@ -104,7 +104,9 @@ msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr "Seong-ho Cho <darkcircle.0426@gmail.com>"
+msgstr ""
+"Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+""
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
