@@ -3,6 +3,8 @@
 # This file is distributed under the same license as the gigolo package.
 # Seong-ho, Cho <darkcircle.0426@gmail.com>, 2011, 2012.
 #
+# Please write your name and e-mail into "translator-credits" if you update this translation script.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo.master\n"
