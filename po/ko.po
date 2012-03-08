@@ -5,6 +5,10 @@
 #
 # Please write your name and e-mail into "translator-credits" if you update this translation script.
 #
+# ex ) msgstr ""
+#      "Gil-dong Hong <gdhong0101@gmail.com>\n"
+#      "YourName Kim <ynkim@gmail.com"
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo.master\n"
@@ -104,9 +108,8 @@ msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr ""
-"Seong-ho Cho <darkcircle.0426@gmail.com>\n"
-""
+msgstr "Seong-ho Cho <darkcircle.0426@gmail.com>"
+
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
