@@ -184,11 +184,11 @@ msgstr "북마크를 추가, 편집 혹은 삭제하기 위한 북마크 관리�
 
 #: ../src/window.c:1294
 msgid "Disconnect the selected resource"
-msgstr "선택된 자원 연결 해제"
+msgstr "선택한 자원 연결 해제"
 
 #: ../src/window.c:1296
 msgid "Open the selected resource with a file manager"
-msgstr "파일 관리자로 선택된 자원을 엽니다"
+msgstr "파일 관리자로 선택한 자원을 엽니다"
 
 #: ../src/window.c:1297
 msgid "Open in _Terminal"
@@ -604,11 +604,11 @@ msgstr "호스트를 찾을 수 없습니다"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
-msgstr "선택된 공유물로 연결"
+msgstr "선택한 공유물로 연결"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "선택된 공유물로부터 북마크 만들기"
+msgstr "선택한 공유물로부터 북마크 만들기"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
