@@ -38,7 +38,7 @@ msgstr "자세히"
 
 #: ../src/main.c:49
 msgid "Show version information"
-msgstr "버전 정보 보이기"
+msgstr "버전 정보 보기"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
@@ -498,7 +498,7 @@ msgstr "창의 위치와 크기를 저장하고 시작시 이를 복원합니다
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
-msgstr "알림 영역에 상태 아이콘 보이기(_I)"
+msgstr "알림 영역에 상태 아이콘 보기(_I)"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
@@ -506,7 +506,7 @@ msgstr "알림 영역에 최소화된 상태로 시작(_M)"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
-msgstr "변두리 패널 보이기"
+msgstr "변두리 패널 보기"
 
 #: ../src/preferencesdialog.c:404
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
@@ -514,7 +514,7 @@ msgstr "사용가능한 삼바/윈도우 공유와 북마크 목록에 대한 �
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
-msgstr "자동 연결 오류 메시지 보이기"
+msgstr "자동 연결 오류 메시지 보기"
 
 #: ../src/preferencesdialog.c:408
 msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
@@ -530,7 +530,7 @@ msgstr "도구막대"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "도구막대 보이기(_T)"
+msgstr "도구막대 보기(_T)"
 
 #: ../src/preferencesdialog.c:435
 msgid "St_yle"
