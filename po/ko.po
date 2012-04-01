@@ -216,7 +216,7 @@ msgstr "지원되는 프로토콜"
 
 #: ../src/window.c:1308
 msgid "Side _Panel"
-msgstr "변두리 패널(_P)"
+msgstr "측면 패널(_P)"
 
 #: ../src/window.c:1310
 msgid "_Toolbar"
@@ -506,11 +506,11 @@ msgstr "알림 영역에 최소화된 상태로 시작(_M)"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
-msgstr "변두리 패널 보기"
+msgstr "측면 패널 보기"
 
 #: ../src/preferencesdialog.c:404
 msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "사용가능한 삼바/윈도우 공유와 북마크 목록에 대한 로컬 네트워크를 탐색기 위한 변두리 패널을 보일지에 대한 여부"
+msgstr "사용가능한 삼바/윈도우 공유와 북마크 목록에 대한 로컬 네트워크를 탐색기 위한 측면 패널을 보일지에 대한 여부"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
