@@ -180,7 +180,7 @@ msgstr "북마크 편집(_E)"
 
 #: ../src/window.c:1290
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "북마크를 추가, 편집 혹은 삭제하기 위한 북마크 관리자를 엽니다"
+msgstr "북마크를 추가, 편집 또는 삭제하기 위한 북마크 관리자를 엽니다"
 
 #: ../src/window.c:1294
 msgid "Disconnect the selected resource"
