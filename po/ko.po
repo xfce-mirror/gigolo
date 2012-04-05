@@ -212,7 +212,7 @@ msgstr "온라인 도움말"
 
 #: ../src/window.c:1302
 msgid "Supported Protocols"
-msgstr "지원되는 프로토콜"
+msgstr "지원하는 프로토콜"
 
 #: ../src/window.c:1308
 msgid "Side _Panel"
@@ -337,7 +337,7 @@ msgstr "불마크를 위해 이름을 입력하여야 합니다."
 
 #: ../src/bookmarkeditdialog.c:240
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr "입력한 북마크 이름이 이미 사용되고 있습니다. 다른 이름을 선택하여 주시기 바랍니다."
+msgstr "입력한 북마크 이름을 이미 사용하고 있습니다. 다른 이름을 선택하여 주시기 바랍니다."
 
 #: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a server address or name."
