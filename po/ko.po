@@ -244,7 +244,7 @@ msgstr "연결할 북마크를 선택합니다"
 
 #: ../src/window.c:1410
 msgid "Connected"
-msgstr "연결됨"
+msgstr "연결함"
 
 #: ../src/window.c:1419
 #: ../src/bookmarkdialog.c:315
@@ -561,7 +561,7 @@ msgstr ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
-"연결됨: 예\n"
+"연결함: 예\n"
 "서비스 유형: %s\n"
 "북마크: %s"
 
