@@ -134,7 +134,7 @@ msgstr "Erro"
 
 #: ../src/window.c:613
 msgid "Invalid terminal command"
-msgstr ""
+msgstr "Orde de terminal non válida"
 
 #: ../src/window.c:625
 #, c-format
@@ -189,11 +189,11 @@ msgstr "Abrir o recurso seleccionado cun xestor de ficheiros"
 
 #: ../src/window.c:1297
 msgid "Open in _Terminal"
-msgstr ""
+msgstr "Abrir en _Terminal"
 
 #: ../src/window.c:1298
 msgid "Start a terminal from here"
-msgstr ""
+msgstr "Iniciar un terminal desde aquí"
 
 #: ../src/window.c:1299
 msgid "Copy _URI"
