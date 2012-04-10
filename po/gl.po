@@ -139,7 +139,7 @@ msgstr "Orde de terminal non válida"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr ""
+msgstr "Non hai localización predefinida dispoñíbel para \"%s\""
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
