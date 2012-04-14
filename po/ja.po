@@ -1,15 +1,15 @@
 # Japanese translations for gigolo package
 # gigolo パッケージに対する英訳.
-# Copyright (C) 2009 THE gigolo'S COPYRIGHT HOLDER
+# Copyright (C) 2009-2012 THE gigolo'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gigolo package.
-# Masato Hashimoto <cabezon.hashimoto@gmail.com>, 2009.
+# Masato Hashimoto <cabezon.hashimoto@gmail.com>, 2009-2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-11 22:33+0900\n"
-"PO-Revision-Date: 2011-11-11 22:37+0900\n"
+"PO-Revision-Date: 2012-04-14 21:46+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: \n"
@@ -173,7 +173,7 @@ msgstr "ブックマークの編集(_E)"
 
 #: ../src/window.c:1290
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "ブックマークマネージャを開き、ブックマークの追加、編集、または削除を行います"
+msgstr "ブックマークマネージャーを開き、ブックマークの追加、編集、または削除を行います"
 
 #: ../src/window.c:1294
 msgid "Disconnect the selected resource"
@@ -181,7 +181,7 @@ msgstr "選択されたリソースとの接続を切ります"
 
 #: ../src/window.c:1296
 msgid "Open the selected resource with a file manager"
-msgstr "選択されたリソースをファイルマネージャで開きます"
+msgstr "選択されたリソースをファイルマネージャーで開きます"
 
 #: ../src/window.c:1297
 msgid "Open in _Terminal"
@@ -293,7 +293,7 @@ msgstr "共有: %s"
 #: ../src/bookmarkdialog.c:106
 #, c-format
 msgid "Folder: %s"
-msgstr "フォルダ: %s"
+msgstr "フォルダー: %s"
 
 #: ../src/bookmarkdialog.c:112
 #, c-format
@@ -314,7 +314,7 @@ msgstr "自動接続"
 
 #: ../src/bookmarkdialog.c:347
 msgid "Username"
-msgstr "ユーザ名"
+msgstr "ユーザー名"
 
 #: ../src/bookmarkdialog.c:355
 msgid "Other information"
@@ -334,7 +334,7 @@ msgstr "入力されたブックマーク名はすでに使用されています
 
 #: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a server address or name."
-msgstr "サーバのアドレスまたは名前を入力してください。"
+msgstr "サーバーのアドレスまたは名前を入力してください。"
 
 #: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a share name."
@@ -351,7 +351,7 @@ msgstr "デバイス(_D):"
 #: ../src/bookmarkeditdialog.c:569
 #: ../src/bookmarkeditdialog.c:1081
 msgid "_Server:"
-msgstr "サーバ(_S):"
+msgstr "サーバー(_S):"
 
 #: ../src/bookmarkeditdialog.c:880
 msgid "Create Bookmark"
@@ -363,7 +363,7 @@ msgstr "ブックマークの編集"
 
 #: ../src/bookmarkeditdialog.c:895
 msgid "Connect to Server"
-msgstr "サーバへの接続"
+msgstr "サーバーへの接続"
 
 #: ../src/bookmarkeditdialog.c:1019
 msgid "_Bookmark name:"
@@ -391,15 +391,15 @@ msgstr "場所(_L) (URI):"
 
 #: ../src/bookmarkeditdialog.c:1082
 msgid "_Folder:"
-msgstr "フォルダ(_F):"
+msgstr "フォルダー(_F):"
 
 #: ../src/bookmarkeditdialog.c:1083
 msgid "P_ath:"
-msgstr "パス(_P):"
+msgstr "パス(_A):"
 
 #: ../src/bookmarkeditdialog.c:1084
 msgid "_User Name:"
-msgstr "ユーザ名(_U):"
+msgstr "ユーザー名(_U):"
 
 #: ../src/bookmarkeditdialog.c:1085
 msgid "Optional information:"
@@ -455,7 +455,7 @@ msgstr "一般"
 
 #: ../src/preferencesdialog.c:338
 msgid "_File Manager"
-msgstr "ファイルマネージャ(_F)"
+msgstr "ファイルマネージャー(_F)"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
@@ -631,21 +631,21 @@ msgstr "リモートファイルシステムに簡単に接続するシンプル
 #~ "local devices.\n"
 #~ "If you are unsure, use the HAL based monitor."
 #~ msgstr ""
-#~ "HAL ベースのボリュームマネージャの実装はディスクのようなローカルリソースに"
+#~ "HAL ベースのボリュームマネージャーの実装はディスクのようなローカルリソースに"
 #~ "マウントするために 'gnome-mount' ツールを必要とします。Unix ベースのボ"
-#~ "リュームマネージャの実装はそのようなリソースを直接マウントでき、その他の"
+#~ "リュームマネージャーの実装はそのようなリソースを直接マウントでき、その他の"
 #~ "ローカルデバイスを一覧表示します。\n"
 #~ "どちらにするか迷ったら、HAL ベースのモニタを使用して下さい。"
 
 #~ msgid "Use _HAL based volume manager"
-#~ msgstr "HAL ベースボリュームマネージャを使用する(_H)"
+#~ msgstr "HAL ベースボリュームマネージャーを使用する(_H)"
 
 #~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
 #~ msgstr ""
 #~ "<i>このオプションの変更を有効にするには Gigolo の再起動が必要です。</i>"
 
 #~ msgid "Use _Unix based volume manager"
-#~ msgstr "Unix ベースボリュームマネージャを使用する(_U)"
+#~ msgstr "Unix ベースボリュームマネージャーを使用する(_U)"
 
 #~ msgid "Show 'Browse Network' side panel"
 #~ msgstr "'ネットワークの参照' サイドパネルを表示する"
