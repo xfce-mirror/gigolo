@@ -135,7 +135,7 @@ msgstr "No hi ha cal lloc disponible per «%s»"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
-msgstr "Edita _lloc d'interès"
+msgstr "Edita el _lloc d'interès"
 
 #: ../src/window.c:707 ../src/window.c:1287 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
@@ -164,7 +164,7 @@ msgstr "A_juda"
 
 #: ../src/window.c:1289
 msgid "_Edit Bookmarks"
-msgstr "_Edita llocs d'interès"
+msgstr "_Edita els llocs d'interès"
 
 #: ../src/window.c:1290
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
@@ -245,7 +245,7 @@ msgstr "Nom"
 
 #: ../src/window.c:1498
 msgid "Bookmarks"
-msgstr "Adreces d'interès"
+msgstr "Llocs d'interès"
 
 #: ../src/window.c:1554 ../src/window.c:1630 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
@@ -320,7 +320,7 @@ msgstr "Altra informació"
 
 #: ../src/bookmarkdialog.c:412
 msgid "Edit Bookmarks"
-msgstr "Edita llocs d'interès"
+msgstr "Edita els llocs d'interès"
 
 #: ../src/bookmarkeditdialog.c:221
 msgid "You must enter a name for the bookmark."
@@ -357,7 +357,7 @@ msgstr "Crea un lloc d'interès"
 
 #: ../src/bookmarkeditdialog.c:887
 msgid "Edit Bookmark"
-msgstr "Edita lloc d'interès"
+msgstr "Edita el lloc d'interès"
 
 #: ../src/bookmarkeditdialog.c:895
 msgid "Connect to Server"
