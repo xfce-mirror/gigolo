@@ -4,24 +4,24 @@
 # This file is distributed under the same license as the Gigolo package.
 # Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009, 2011.
 # Harald Servat <redcrash@gmail.com>, 2009-2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-18 13:33+0000\n"
+"POT-Creation-Date: 2012-04-15 09:27+0000\n"
 "PO-Revision-Date: 2011-12-18 17:23+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Ignora les instàncies en execució, obra una nova instància"
+msgstr "Ignora les instàncies en execució, força l'inici d'una nova instància"
 
 #: ../src/main.c:47
 msgid "Print a list of supported URI schemes"
@@ -33,7 +33,7 @@ msgstr "Mostra més informació"
 
 #: ../src/main.c:49
 msgid "Show version information"
-msgstr "Mostra informació de la versió"
+msgstr "Mostra la informació de la versió"
 
 #: ../src/main.c:79
 msgid "- a simple frontend to easily connect to remote filesystems"
@@ -115,7 +115,7 @@ msgstr "Gigolo pot emprar els següents protocols mitjançant GVfs:"
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
-msgstr "Ha fallat la comanda '%s' ."
+msgstr "Ha fallat la comanda «%s»"
 
 #: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
 #: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:220
@@ -185,7 +185,7 @@ msgstr "Obre en un _Terminal"
 
 #: ../src/window.c:1298
 msgid "Start a terminal from here"
-msgstr "Inicia un terminal aquí"
+msgstr "Inicia un terminal des d'aquí"
 
 #: ../src/window.c:1299
 msgid "Copy _URI"
@@ -217,7 +217,7 @@ msgstr "_Icona d'estat"
 
 #: ../src/window.c:1318
 msgid "View as _Symbols"
-msgstr "Mostra com _símbols"
+msgstr "Mostra com a _símbols"
 
 #: ../src/window.c:1319
 msgid "View as _Detailed List"
@@ -286,7 +286,7 @@ msgstr "Domini: %s"
 #: ../src/bookmarkdialog.c:100
 #, c-format
 msgid "Share: %s"
-msgstr "Compartit: %s"
+msgstr "Recurs compartit: %s"
 
 #: ../src/bookmarkdialog.c:106
 #, c-format
@@ -316,7 +316,7 @@ msgstr "Nom d'usuari"
 
 #: ../src/bookmarkdialog.c:355
 msgid "Other information"
-msgstr "Altre informació"
+msgstr "Altra informació"
 
 #: ../src/bookmarkdialog.c:412
 msgid "Edit Bookmarks"
@@ -333,11 +333,11 @@ msgstr ""
 
 #: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a server address or name."
-msgstr "Cal que introduïu el nom o adreça del servidor."
+msgstr "Cal que introduïu el nom o l'adreça del servidor."
 
 #: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a share name."
-msgstr "Cal que introduïu el nom de la compartició."
+msgstr "Cal que introduïu el nom del recurs compartit."
 
 #: ../src/bookmarkeditdialog.c:275
 msgid "You must enter a valid URI for the connection."
@@ -413,7 +413,7 @@ msgstr "_Domini:"
 
 #: ../src/bookmarkeditdialog.c:1088
 msgid "_Share:"
-msgstr "_Compartició:"
+msgstr "_Recurs compartit:"
 
 #: ../src/preferencesdialog.c:147
 msgid "Icons"
@@ -429,7 +429,7 @@ msgstr "Ambdós"
 
 #: ../src/preferencesdialog.c:150
 msgid "Both horizontal"
-msgstr "Ambdós horitzontals"
+msgstr "Ambdós, en horitzontal"
 
 #: ../src/preferencesdialog.c:169
 msgid "Horizontal"
@@ -445,7 +445,7 @@ msgstr "Símbols"
 
 #: ../src/preferencesdialog.c:190
 msgid "Detailed List"
-msgstr "Llistat detallada"
+msgstr "Llista detallada"
 
 #: ../src/preferencesdialog.c:333
 msgid "General"
@@ -471,6 +471,7 @@ msgstr ""
 "Introduïu el nom del programa per obrir punts de muntatge en un terminal"
 
 #: ../src/preferencesdialog.c:372
+#, fuzzy
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Interval de connexió automàtica"
 
@@ -599,7 +600,7 @@ msgstr "No s'han trobat grups de treball"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
-msgstr "No s'han trobat grups de treball compartits"
+msgstr "No s'han trobat recursos compartits"
 
 #: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
@@ -607,7 +608,7 @@ msgstr "No s'han trobat màquines"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
-msgstr "Connecta el recurs compartit seleccionat"
+msgstr "Connecta al recurs compartit seleccionat"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
