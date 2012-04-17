@@ -584,7 +584,7 @@ msgstr "\"%s\"(으)로의 연결에 실패했습니다."
 #: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "\"%s\"(으)로부터의 연결 해제에 실패했습니다."
+msgstr "\"%s\"의 연결 해제에 실패했습니다."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
@@ -608,7 +608,7 @@ msgstr "선택한 공유물로 연결"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "선택한 공유물로부터 북마크 만들기"
+msgstr "선택한 공유물에 대한 북마크 만들기"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
