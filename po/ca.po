@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 09:27+0000\n"
+"POT-Creation-Date: 2012-04-18 06:27+0000\n"
 "PO-Revision-Date: 2011-12-18 17:23+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
@@ -471,9 +471,8 @@ msgstr ""
 "Introduïu el nom del programa per obrir punts de muntatge en un terminal"
 
 #: ../src/preferencesdialog.c:372
-#, fuzzy
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "_Interval de connexió automàtica"
+msgstr "_Interval de connexió automàtica dels llocs d'interès"
 
 #: ../src/preferencesdialog.c:378
 msgid ""
