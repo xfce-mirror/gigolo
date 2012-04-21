@@ -100,6 +100,10 @@ gint main(gint argc, gchar **argv)
 		{ "smb://user@localhost/share/", "smb://user@localhost/share/", "smb", "localhost", NULL, "share", 0, "user"},
 		{ "smb://user@name@localhost/share/and/", "smb://user@name@localhost/share/", "smb", "localhost", NULL, "share", 0, "user@name"},
 		{ "smb://domain;user@localhost/share/and/more", "smb://domain;user@localhost/share/", "smb", "localhost", "domain", "share", 0, "user"},
+		{ "dav://localhost.localdomain/", "dav://localhost.localdomain/", "dav", "localhost.localdomain", NULL, NULL, 0, NULL},
+		{ "dav://localhost.localdomain", "dav://localhost.localdomain/", "dav", "localhost.localdomain", NULL, NULL, 0, NULL},
+		{ "dav://user@dav.domain.tld/owncloud/files/webdav.php", "dav://user@dav.domain.tld/owncloud/files/webdav.php", "dav", "dav.domain.tld", NULL, "owncloud/files/webdav.php", 0, "user"},
+		{ "davs://user@localhost.localdomain/path/path2/more", "davs://user@localhost.localdomain/path/path2/more", "davs", "localhost.locaaldomain", NULL, "path/path2/more", 0, "user"},
 		{ NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL }
 	};
 	GigoloBookmark *bm;
