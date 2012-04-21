@@ -234,7 +234,14 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 	{
 		end++; /* skip the slash */
 
-		priv->path = g_strdup(end);
+		/* remove trailing slashes */
+		l = strlen(end);
+		while (end[l-1] == '/')
+		{
+			l--;
+		}
+
+		priv->path = g_strndup(end, l);
 	}
 
 	return TRUE;
@@ -317,7 +324,7 @@ static gchar *gigolo_bookmark_get_uri_real(GigoloBookmark *bookmark, gboolean es
 
 	domain = gigolo_bookmark_get_domain(bookmark);
 
-	result = g_strdup_printf("%s://%s%s%s%s%s%s/%s%s%s%s",
+	result = g_strdup_printf("%s://%s%s%s%s%s%s/%s%s%s",
 		priv->scheme,
 		(NZV(domain)) ? domain : "",
 		(NZV(domain)) ? ";" : "",
@@ -326,7 +333,6 @@ static gchar *gigolo_bookmark_get_uri_real(GigoloBookmark *bookmark, gboolean es
 		priv->host,
 		(port) ? port : "",
 		(NZV(priv->path)) ? priv->path : "",
-		(NZV(priv->path)) ? "/" : "",
 		(NZV(priv->share)) ? priv->share : "",
 		(NZV(priv->share)) ? "/" : "");
 

@@ -103,7 +103,7 @@ gint main(gint argc, gchar **argv)
 		{ "dav://localhost.localdomain/", "dav://localhost.localdomain/", "dav", "localhost.localdomain", NULL, NULL, 0, NULL},
 		{ "dav://localhost.localdomain", "dav://localhost.localdomain/", "dav", "localhost.localdomain", NULL, NULL, 0, NULL},
 		{ "dav://user@dav.domain.tld/owncloud/files/webdav.php", "dav://user@dav.domain.tld/owncloud/files/webdav.php", "dav", "dav.domain.tld", NULL, "owncloud/files/webdav.php", 0, "user"},
-		{ "davs://user@localhost.localdomain/path/path2/more", "davs://user@localhost.localdomain/path/path2/more", "davs", "localhost.locaaldomain", NULL, "path/path2/more", 0, "user"},
+		{ "davs://user@localhost.localdomain/path/path2/more//", "davs://user@localhost.localdomain/path/path2/more/", "davs", "localhost.locaaldomain", NULL, "path/path2/more", 0, "user"},
 		{ NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL }
 	};
 	GigoloBookmark *bm;
