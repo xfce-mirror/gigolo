@@ -106,6 +106,7 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 {
 	gchar *s, *t, *x, *end, *tmp;
 	guint l;
+	gboolean is_uri_dav;
 	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
 	priv->scheme = g_uri_parse_scheme(uri);
@@ -215,7 +216,6 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 		priv->port = (guint) atoi(tmp);
 		g_free(tmp);
 	}
-	/* TODO handle WebDav path parts */
 	if (NZV(end) && *end == '/' && gigolo_str_equal("smb", priv->scheme))
 	{
 		end++; /* skip the slash */
@@ -228,6 +228,13 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 			x++;
 		}
 		priv->share = g_strndup(end, l);
+	}
+	is_uri_dav = gigolo_str_equal("dav", priv->scheme) || gigolo_str_equal("davs", priv->scheme);
+	if (NZV(end) && *end == '/' && is_uri_dav)
+	{
+		end++; /* skip the slash */
+
+		priv->path = g_strdup(end);
 	}
 
 	return TRUE;
