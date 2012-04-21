@@ -113,7 +113,7 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 	s = strstr(uri, "://");
 	if (priv->scheme == NULL || s == NULL)
 	{
-		verbose("Error parsing URI '%s' while reading URI scheme", uri);
+		verbose("Error parsing URI '%s' at reading URI scheme", uri);
 		gigolo_bookmark_bookmark_clear(bookmark);
 		return FALSE;
 	}
@@ -141,7 +141,7 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 		}
 		if (l == 0)
 		{
-			verbose("Error parsing URI '%s' while reading username", uri);
+			verbose("Error parsing URI '%s' at reading username", uri);
 			gigolo_bookmark_bookmark_clear(bookmark);
 			return FALSE;
 		}
@@ -354,6 +354,8 @@ void gigolo_bookmark_set_uri(GigoloBookmark *bookmark, const gchar *uri)
 	tmp = gigolo_bookmark_new_from_uri(priv->name, uri);
 	if (gigolo_bookmark_is_valid(tmp))
 		gigolo_bookmark_clone(bookmark, tmp);
+
+	g_object_unref(tmp);
 }
 
 
