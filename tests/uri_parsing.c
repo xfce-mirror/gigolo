@@ -116,7 +116,7 @@ gint main(gint argc, gchar **argv)
 
 	for (i = 0; tests[i].input != NULL; i++)
 	{
-		gigolo_bookmark_bookmark_clear(bm);
+		gigolo_bookmark_clear(bm);
 		gigolo_bookmark_parse_uri(bm, tests[i].input);
 		new_uri = gigolo_bookmark_get_uri(bm);
 		if (! gigolo_str_equal(tests[i].output, new_uri))
