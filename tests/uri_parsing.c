@@ -36,6 +36,7 @@ typedef struct
 	const gchar	*host;
 	const gchar	*domain;
 	const gchar	*share;
+	const gchar	*path;
 	const guint	 port;
 	const gchar	*user;
 } TestURI;
@@ -65,6 +66,10 @@ static gboolean check_if_details_equal(GigoloBookmark *bm, const TestURI *tu)
 	if (! gigolo_str_equal(val, tu->share))
 		return report_fail(tu, "share", val, tu->share);
 
+	val = gigolo_bookmark_get_path(bm);
+	if (! gigolo_str_equal(val, tu->path))
+		return report_fail(tu, "path", val, tu->path);
+
 	val = gigolo_bookmark_get_domain(bm);
 	if (! gigolo_str_equal(val, tu->domain))
 		return report_fail(tu, "domain", val, tu->domain);
@@ -88,23 +93,23 @@ gint main(gint argc, gchar **argv)
 {
 	const TestURI tests[] =
 	{
-		{ "http://localhost", "http://localhost/", "http", "localhost", NULL, NULL, 0, NULL },
-		{ "http://localhost:8080/", "http://localhost:8080/", "http", "localhost", NULL, NULL, 8080, NULL },
-		{ "sftp://user@localhost:22", "sftp://user@localhost/", "sftp", "localhost", NULL, NULL, 22, "user" },
-		{ "sftp://user@localhost:8022", "sftp://user@localhost:8022/", "sftp", "localhost", NULL, NULL, 8022, "user" },
-		{ "ftp://localhost", "ftp://localhost/", "ftp", "localhost", NULL, NULL, 0, NULL },
-		{ "ftp://user@localhost:21/a", "ftp://user@localhost/", "ftp", "localhost", NULL, NULL, 21, "user" },
-		{ "ftp://user@usershost@localhost:8021/a", "ftp://user@usershost@localhost:8021/", "ftp", "localhost", NULL, NULL, 8021, "user@usershost" },
-		{ "smb://user@localhost", "smb://user@localhost/", "smb", "localhost", NULL, NULL, 0, "user"},
-		{ "smb://user@localhost/share", "smb://user@localhost/share/", "smb", "localhost", NULL, "share", 0, "user"},
-		{ "smb://user@localhost/share/", "smb://user@localhost/share/", "smb", "localhost", NULL, "share", 0, "user"},
-		{ "smb://user@name@localhost/share/and/", "smb://user@name@localhost/share/", "smb", "localhost", NULL, "share", 0, "user@name"},
-		{ "smb://domain;user@localhost/share/and/more", "smb://domain;user@localhost/share/", "smb", "localhost", "domain", "share", 0, "user"},
-		{ "dav://localhost.localdomain/", "dav://localhost.localdomain/", "dav", "localhost.localdomain", NULL, NULL, 0, NULL},
-		{ "dav://localhost.localdomain", "dav://localhost.localdomain/", "dav", "localhost.localdomain", NULL, NULL, 0, NULL},
-		{ "dav://user@dav.domain.tld/owncloud/files/webdav.php", "dav://user@dav.domain.tld/owncloud/files/webdav.php", "dav", "dav.domain.tld", NULL, "owncloud/files/webdav.php", 0, "user"},
-		{ "davs://user@localhost.localdomain/path/path2/more//", "davs://user@localhost.localdomain/path/path2/more/", "davs", "localhost.locaaldomain", NULL, "path/path2/more", 0, "user"},
-		{ NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL }
+		{ "http://localhost", "http://localhost/", "http", "localhost", NULL, NULL, NULL, 0, NULL },
+		{ "http://localhost:8080/", "http://localhost:8080/", "http", "localhost", NULL, NULL, NULL, 8080, NULL },
+		{ "sftp://user@localhost:22", "sftp://user@localhost/", "sftp", "localhost", NULL, NULL, NULL, 22, "user" },
+		{ "sftp://user@localhost:8022", "sftp://user@localhost:8022/", "sftp", "localhost", NULL, NULL, NULL, 8022, "user" },
+		{ "ftp://localhost", "ftp://localhost/", "ftp", "localhost", NULL, NULL, NULL, 0, NULL },
+		{ "ftp://user@localhost:21/a", "ftp://user@localhost/", "ftp", "localhost", NULL, NULL, NULL, 21, "user" },
+		{ "ftp://user@usershost@localhost:8021/a", "ftp://user@usershost@localhost:8021/", "ftp", "localhost", NULL, NULL, NULL, 8021, "user@usershost" },
+		{ "smb://user@localhost", "smb://user@localhost/", "smb", "localhost", NULL, NULL, NULL, 0, "user"},
+		{ "smb://user@localhost/share", "smb://user@localhost/share/", "smb", "localhost", NULL, "share", NULL, 0, "user"},
+		{ "smb://user@localhost/share/", "smb://user@localhost/share/", "smb", "localhost", NULL, "share", NULL, 0, "user"},
+		{ "smb://user@name@localhost/share/and/", "smb://user@name@localhost/share/", "smb", "localhost", NULL, "share", NULL, 0, "user@name"},
+		{ "smb://domain;user@localhost/share/and/more", "smb://domain;user@localhost/share/", "smb", "localhost", "domain", "share", NULL, 0, "user"},
+		{ "dav://localhost.localdomain/", "dav://localhost.localdomain/", "dav", "localhost.localdomain", NULL, NULL, NULL, 0, NULL},
+		{ "dav://localhost.localdomain", "dav://localhost.localdomain/", "dav", "localhost.localdomain", NULL, NULL, NULL, 0, NULL},
+		{ "dav://user@dav.domain.tld/owncloud/files/webdav.php", "dav://user@dav.domain.tld/owncloud/files/webdav.php", "dav", "dav.domain.tld", NULL, NULL, "owncloud/files/webdav.php", 0, "user"},
+		{ "davs://user@localhost.localdomain/path/path2/more//", "davs://user@localhost.localdomain/path/path2/more", "davs", "localhost.localdomain", NULL, NULL, "path/path2/more", 0, "user"},
+		{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL }
 	};
 	GigoloBookmark *bm;
 	gchar *new_uri;
