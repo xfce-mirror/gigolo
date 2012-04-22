@@ -1085,6 +1085,8 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	priv->port_spin = gtk_spin_button_new_with_range(0, 65535, 1);
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), 0.0);
 	gtk_widget_set_tooltip_text(priv->port_spin, _("Set the port to 0 to use the default port"));
+	gtk_widget_set_tooltip_text(priv->folder_entry,
+		_("This is not used for the actual mount, only necessary for opening the mount point in a file browser"));
 	priv->user_entry = gtk_entry_new();
 	priv->domain_entry = gtk_entry_new();
 	priv->share_combo = gtk_combo_box_entry_new_text();
