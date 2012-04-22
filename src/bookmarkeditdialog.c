@@ -194,6 +194,19 @@ static void gigolo_bookmark_edit_dialog_destroy(GtkObject *object)
 }
 
 
+static gboolean check_custom_uri(const gchar *uri)
+{
+	GigoloBookmark *bm;
+	gboolean result;
+
+	bm = gigolo_bookmark_new_from_uri("(validation)", uri);
+	result = gigolo_bookmark_is_valid(bm);
+	g_object_unref(bm);
+
+	return result;
+}
+
+
 gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 {
 	gint res;
@@ -268,7 +281,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 			if (! error && gtk_widget_get_parent(priv->uri_entry) != NULL)
 			{
 				tmp = gtk_entry_get_text(GTK_ENTRY(priv->uri_entry));
-				if (! *tmp)
+				if (! *tmp || ! check_custom_uri(tmp))
 				{
 					error = TRUE;
 					gigolo_message_dialog(dialog, GTK_MESSAGE_ERROR, _("Error"),
