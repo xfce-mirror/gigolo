@@ -94,6 +94,8 @@ void				gigolo_backend_gvfs_get_name_and_uri_from_mount	(gpointer mount, gchar *
 gboolean			gigolo_backend_gvfs_mount_volume				(GigoloBackendGVFS *backend, GtkWindow *window, gpointer vol);
 void				gigolo_backend_gvfs_unmount_mount				(GigoloBackendGVFS *backend, gpointer mount, GtkWindow *parent);
 
+void				gigolo_backend_gvfs_update_mounts_and_volumes	(GigoloBackendGVFS *backend);
+
 void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 																	 const gchar *uri,
 																	 GtkWindow *parent,

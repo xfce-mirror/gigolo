@@ -920,6 +920,8 @@ void gigolo_window_update_bookmarks(GigoloWindow *window)
 
 	/* update the popup menu items */
 	tree_selection_changed_cb(NULL, window);
+
+	gigolo_backend_gvfs_update_mounts_and_volumes(priv->backend_gvfs);
 }
 
 

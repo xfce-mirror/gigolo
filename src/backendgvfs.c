@@ -545,6 +545,15 @@ void gigolo_backend_gvfs_unmount_mount(GigoloBackendGVFS *backend, gpointer moun
 }
 
 
+void gigolo_backend_gvfs_update_mounts_and_volumes(GigoloBackendGVFS *backend)
+{
+	GVolumeMonitor *gvm;
+
+	gvm = g_volume_monitor_get();
+	mount_volume_changed_cb(gvm, NULL, backend);
+}
+
+
 static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 {
 	gchar *uri;
