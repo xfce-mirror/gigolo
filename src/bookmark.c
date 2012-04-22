@@ -55,7 +55,7 @@ static void gigolo_bookmark_finalize  		(GObject *object);
 G_DEFINE_TYPE(GigoloBookmark, gigolo_bookmark, G_TYPE_OBJECT);
 
 
-void gigolo_bookmark_bookmark_clear(GigoloBookmark *bookmark)
+void gigolo_bookmark_clear(GigoloBookmark *bookmark)
 {
 	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
 
@@ -96,7 +96,7 @@ static void gigolo_bookmark_class_init(GigoloBookmarkClass *klass)
 
 static void gigolo_bookmark_finalize(GObject *object)
 {
-	gigolo_bookmark_bookmark_clear(GIGOLO_BOOKMARK(object));
+	gigolo_bookmark_clear(GIGOLO_BOOKMARK(object));
 
 	G_OBJECT_CLASS(gigolo_bookmark_parent_class)->finalize(object);
 }
@@ -115,7 +115,7 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 	if (priv->scheme == NULL || s == NULL)
 	{
 		verbose("Error parsing URI '%s' at reading URI scheme", uri);
-		gigolo_bookmark_bookmark_clear(bookmark);
+		gigolo_bookmark_clear(bookmark);
 		return FALSE;
 	}
 	s += 3;
@@ -143,7 +143,7 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 		if (l == 0)
 		{
 			verbose("Error parsing URI '%s' at reading username", uri);
-			gigolo_bookmark_bookmark_clear(bookmark);
+			gigolo_bookmark_clear(bookmark);
 			return FALSE;
 		}
 		tmp = g_strndup(s, l);
@@ -171,7 +171,7 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 		if (! hostend || hostend > end)
 		{
 			verbose("Error parsing URI '%s', missing ']'", uri);
-			gigolo_bookmark_bookmark_clear(bookmark);
+			gigolo_bookmark_clear(bookmark);
 			return FALSE;
 		}
 		l = 0;
@@ -250,7 +250,7 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 
 static void gigolo_bookmark_init(GigoloBookmark *self)
 {
-	gigolo_bookmark_bookmark_clear(self);
+	gigolo_bookmark_clear(self);
 }
 
 
@@ -286,7 +286,7 @@ void gigolo_bookmark_clone(GigoloBookmark *dst, const GigoloBookmark *src)
 	priv_src = GIGOLO_BOOKMARK_GET_PRIVATE(src);
 
 	/* free existing strings and data */
-	gigolo_bookmark_bookmark_clear(dst);
+	gigolo_bookmark_clear(dst);
 
 	/* copy from src to dst */
 	priv_dst->name = g_strdup(priv_src->name);

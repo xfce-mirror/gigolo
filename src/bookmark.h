@@ -93,7 +93,7 @@ void				gigolo_bookmark_set_should_not_autoconnect	(GigoloBookmark *bookmark, gb
 
 gboolean			gigolo_bookmark_parse_uri		(GigoloBookmark *bookmark, const gchar *uri);
 
-void				gigolo_bookmark_bookmark_clear	(GigoloBookmark *bookmark);
+void				gigolo_bookmark_clear			(GigoloBookmark *bookmark);
 
 const gchar*		gigolo_bookmark_get_color		(GigoloBookmark *bookmark);
 void				gigolo_bookmark_set_color		(GigoloBookmark *bookmark, const gchar *color);
