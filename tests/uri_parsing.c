@@ -131,7 +131,8 @@ gint main(gint argc, gchar **argv)
 		}
 		if (! gigolo_str_equal(tests[i].output, new_uri))
 			return 1;
-		check_if_details_equal(bm, &tests[i]);
+		if (! check_if_details_equal(bm, &tests[i]))
+			return 1;
 		g_free(new_uri);
 	}
 
