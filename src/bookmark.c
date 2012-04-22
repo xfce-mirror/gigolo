@@ -236,12 +236,12 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 
 		/* remove trailing slashes */
 		l = strlen(end);
-		while (end[l-1] == '/')
+		while (*end != '\0' && end[l-1] == '/')
 		{
 			l--;
 		}
-
-		priv->path = g_strndup(end, l);
+		if (l > 0)
+			priv->path = g_strndup(end, l);
 	}
 
 	return TRUE;
