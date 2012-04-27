@@ -382,7 +382,7 @@ msgid ""
 "point in a file browser"
 msgstr ""
 "Tätä ei käytetä liittäessä, vaan ainoastaan kun liitospiste avataan "
-"tiedostoselaimessa.
+"tiedostoselaimessa"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
