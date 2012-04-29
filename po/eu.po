@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: eu\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:46
 msgid "Ignore running instances, enforce opening a new instance"
@@ -207,7 +207,7 @@ msgstr "Onartutako protokoloak"
 
 #: ../src/window.c:1310
 msgid "Side _Panel"
-msgstr "Alboko _Panela"
+msgstr "Alboko _panela"
 
 #: ../src/window.c:1312
 msgid "_Toolbar"
@@ -390,7 +390,7 @@ msgstr "Ezarri 0 ataka zenbakian lehenetsitakoa erabiltzeko"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Hau ez da erabniltzen oraingu muntaketan, bakarrik fitxategi arakatzaile batetan orelotzeklo da beharrezkoa"
+msgstr "Hau ez da erabiltzen oraingo muntaketan, bakarrik fitxategi arakatzaile batean irekitzeko da beharrezkoa"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
