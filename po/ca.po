@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-18 06:27+0000\n"
+"POT-Creation-Date: 2012-05-02 05:24+0000\n"
 "PO-Revision-Date: 2011-12-18 17:23+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
@@ -71,7 +71,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (segur)"
 
-#: ../src/common.c:93 ../src/window.c:1506
+#: ../src/common.c:93 ../src/window.c:1508
 msgid "Network"
 msgstr "Xarxa"
 
@@ -118,9 +118,9 @@ msgid "The command '%s' failed"
 msgstr "Ha fallat la comanda «%s»"
 
 #: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
-#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:220
-#: ../src/bookmarkeditdialog.c:239 ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:263 ../src/bookmarkeditdialog.c:274
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
 msgid "Error"
 msgstr "Error"
 
@@ -137,117 +137,117 @@ msgstr "No hi ha cal lloc disponible per «%s»"
 msgid "Edit _Bookmark"
 msgstr "Edita el _lloc d'interès"
 
-#: ../src/window.c:707 ../src/window.c:1287 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Crea un _lloc d'interès"
 
-#: ../src/window.c:1279
+#: ../src/window.c:1281
 msgid "_File"
 msgstr "_Fitxer"
 
-#: ../src/window.c:1280
+#: ../src/window.c:1282
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../src/window.c:1281
+#: ../src/window.c:1283
 msgid "_Actions"
 msgstr "_Accions"
 
-#: ../src/window.c:1282
+#: ../src/window.c:1284
 msgid "_View"
 msgstr "_Mostra"
 
-#: ../src/window.c:1283
+#: ../src/window.c:1285
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../src/window.c:1289
+#: ../src/window.c:1291
 msgid "_Edit Bookmarks"
 msgstr "_Edita els llocs d'interès"
 
-#: ../src/window.c:1290
+#: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr ""
 "Obre el gestor de llocs d'interès per afegir, editar o esborrar-ne llocs"
 
-#: ../src/window.c:1294
+#: ../src/window.c:1296
 msgid "Disconnect the selected resource"
 msgstr "Desconnecta el recurs seleccionat"
 
-#: ../src/window.c:1296
+#: ../src/window.c:1298
 msgid "Open the selected resource with a file manager"
 msgstr "Obre el recurs seleccionat amb un gestor de fitxers"
 
-#: ../src/window.c:1297
+#: ../src/window.c:1299
 msgid "Open in _Terminal"
 msgstr "Obre en un _Terminal"
 
-#: ../src/window.c:1298
+#: ../src/window.c:1300
 msgid "Start a terminal from here"
 msgstr "Inicia un terminal des d'aquí"
 
-#: ../src/window.c:1299
+#: ../src/window.c:1301
 msgid "Copy _URI"
 msgstr "Copia _URI"
 
-#: ../src/window.c:1300
+#: ../src/window.c:1302
 msgid "Quit Gigolo"
 msgstr "Surt de Gigolo"
 
-#: ../src/window.c:1301
+#: ../src/window.c:1303
 msgid "Online Help"
 msgstr "Ajuda en línia"
 
-#: ../src/window.c:1302
+#: ../src/window.c:1304
 msgid "Supported Protocols"
 msgstr "Protocols admesos"
 
-#: ../src/window.c:1308
+#: ../src/window.c:1310
 msgid "Side _Panel"
 msgstr "_Panell lateral"
 
-#: ../src/window.c:1310
+#: ../src/window.c:1312
 msgid "_Toolbar"
 msgstr "_Barra d'eines"
 
-#: ../src/window.c:1312
+#: ../src/window.c:1314
 msgid "Status _Icon"
 msgstr "_Icona d'estat"
 
-#: ../src/window.c:1318
+#: ../src/window.c:1320
 msgid "View as _Symbols"
 msgstr "Mostra com a _símbols"
 
-#: ../src/window.c:1319
+#: ../src/window.c:1321
 msgid "View as _Detailed List"
 msgstr "Mostra com a llista _detallada"
 
-#: ../src/window.c:1328
+#: ../src/window.c:1330
 msgid "_Bookmarks"
 msgstr "_Llocs d'interès"
 
-#: ../src/window.c:1328
+#: ../src/window.c:1330
 msgid "Choose a bookmark to connect to"
 msgstr "Trieu un lloc d'interès per connectar-vos"
 
-#: ../src/window.c:1410
+#: ../src/window.c:1412
 msgid "Connected"
 msgstr "Connectat"
 
-#: ../src/window.c:1419 ../src/bookmarkdialog.c:315
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "Tipus de servei"
 
-#: ../src/window.c:1427 ../src/bookmarkdialog.c:307
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "Nom"
 
-#: ../src/window.c:1498
+#: ../src/window.c:1500
 msgid "Bookmarks"
 msgstr "Llocs d'interès"
 
-#: ../src/window.c:1554 ../src/window.c:1630 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -322,96 +322,102 @@ msgstr "Altra informació"
 msgid "Edit Bookmarks"
 msgstr "Edita els llocs d'interès"
 
-#: ../src/bookmarkeditdialog.c:221
+#: ../src/bookmarkeditdialog.c:234
 msgid "You must enter a name for the bookmark."
 msgstr "Cal que introduïu un nom per al lloc d'interès."
 
-#: ../src/bookmarkeditdialog.c:240
+#: ../src/bookmarkeditdialog.c:253
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr ""
 "El nom de lloc d'interès introduït ja s'està emprant. Escolliu-ne un altre."
 
-#: ../src/bookmarkeditdialog.c:253
+#: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
 msgstr "Cal que introduïu el nom o l'adreça del servidor."
 
-#: ../src/bookmarkeditdialog.c:264
+#: ../src/bookmarkeditdialog.c:277
 msgid "You must enter a share name."
 msgstr "Cal que introduïu el nom del recurs compartit."
 
-#: ../src/bookmarkeditdialog.c:275
+#: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
 msgstr "Cal que introduïu una URI vàlida per la connexió."
 
-#: ../src/bookmarkeditdialog.c:567
+#: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
 msgstr "_Dispositiu:"
 
-#: ../src/bookmarkeditdialog.c:569 ../src/bookmarkeditdialog.c:1081
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
 msgstr "_Servidor:"
 
-#: ../src/bookmarkeditdialog.c:880
+#: ../src/bookmarkeditdialog.c:897
 msgid "Create Bookmark"
 msgstr "Crea un lloc d'interès"
 
-#: ../src/bookmarkeditdialog.c:887
+#: ../src/bookmarkeditdialog.c:904
 msgid "Edit Bookmark"
 msgstr "Edita el lloc d'interès"
 
-#: ../src/bookmarkeditdialog.c:895
+#: ../src/bookmarkeditdialog.c:912
 msgid "Connect to Server"
 msgstr "Connecta al servidor"
 
-#: ../src/bookmarkeditdialog.c:1019
+#: ../src/bookmarkeditdialog.c:1036
 msgid "_Bookmark name:"
 msgstr "_Nom del lloc d'interès:"
 
-#: ../src/bookmarkeditdialog.c:1027
+#: ../src/bookmarkeditdialog.c:1044
 msgid "_Color:"
 msgstr "_Color:"
 
-#: ../src/bookmarkeditdialog.c:1038
+#: ../src/bookmarkeditdialog.c:1055
 msgid "Au_to-Connect"
 msgstr "Co_nnexió automàtica"
 
-#: ../src/bookmarkeditdialog.c:1049
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Service t_ype:"
 msgstr "_Tipus de servei:"
 
-#: ../src/bookmarkeditdialog.c:1074
+#: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
 msgstr "Posa 0 al port per emprar el port per defecte"
 
-#: ../src/bookmarkeditdialog.c:1080
+#: ../src/bookmarkeditdialog.c:1093
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr "Això no s'empra durant el muntatge, sinó per obrir el punt de muntatge amb un navegador de carpetes"
+
+#: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
 msgstr "_Ubicació (URI):"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1101
 msgid "_Folder:"
 msgstr "_Fitxer:"
 
-#: ../src/bookmarkeditdialog.c:1083
+#: ../src/bookmarkeditdialog.c:1102
 msgid "P_ath:"
 msgstr "_Camí:"
 
-#: ../src/bookmarkeditdialog.c:1084
+#: ../src/bookmarkeditdialog.c:1103
 msgid "_User Name:"
 msgstr "Nom d'_usuari:"
 
-#: ../src/bookmarkeditdialog.c:1085
+#: ../src/bookmarkeditdialog.c:1104
 msgid "Optional information:"
 msgstr "Informació opcional:"
 
-#: ../src/bookmarkeditdialog.c:1086
+#: ../src/bookmarkeditdialog.c:1105
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:1087
+#: ../src/bookmarkeditdialog.c:1106
 msgid "_Domain:"
 msgstr "_Domini:"
 
-#: ../src/bookmarkeditdialog.c:1088
+#: ../src/bookmarkeditdialog.c:1107
 msgid "_Share:"
 msgstr "_Recurs compartit:"
 
@@ -579,7 +585,7 @@ msgstr "<b>Dispositiu Unix: %s</b>"
 msgid "unknown"
 msgstr "desconegut"
 
-#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:558
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Ha fallat la connexió amb «%s»."
