@@ -13,6 +13,8 @@ bookmarks to such.
 Homepage: http://www.uvena.de/gigolo/
 .SH "OPTIONS"
 If called without any arguments, the Gigolo main window is shown.
+.IP "\fB-a\fP, \fB\-\-auto\-connect\fP         " 10
+Connect all bookmarks which are marked as 'auto connect' and exit.
 .IP "\fB-i\fP, \fB\-\-new-instance\fP         " 10
 Don't find and show an already running instance of Gigolo, instead
 force opening a new instance.

@@ -39,16 +39,49 @@
 static gboolean show_version = FALSE;
 static gboolean list_schemes = FALSE;
 static gboolean new_instance = FALSE;
+static gboolean auto_connect = FALSE;
 extern gboolean verbose_mode;
 
 static GOptionEntry cli_options[] =
 {
+	{ "auto-connect", 'a', 0, G_OPTION_ARG_NONE, &auto_connect, N_("Connect all bookmarks marked as 'auto connect' and exit"), NULL },
 	{ "new-instance", 'i', 0, G_OPTION_ARG_NONE, &new_instance, N_("Ignore running instances, enforce opening a new instance"), NULL },
 	{ "list-schemes", 'l', 0, G_OPTION_ARG_NONE, &list_schemes, N_("Print a list of supported URI schemes"), NULL },
 	{ "verbose", 'v', 0, G_OPTION_ARG_NONE, &verbose_mode, N_("Be verbose"), NULL },
 	{ "version", 'V', 0, G_OPTION_ARG_NONE, &show_version, N_("Show version information"), NULL },
 	{ NULL, 0, 0, 0, NULL, NULL, NULL }
 };
+
+
+static gboolean auto_connect_bookmarks(void)
+{
+	GigoloBackendGVFS *backend_gvfs;
+	GigoloSettings *settings;
+	GigoloBookmarkList *bookmarks;
+	GigoloBookmark *bm;
+	guint i;
+	gchar *uri;
+
+	backend_gvfs = gigolo_backend_gvfs_new();
+	settings = gigolo_settings_new();
+	bookmarks = gigolo_settings_get_bookmarks(settings);
+
+	for (i = 0; i < bookmarks->len; i++)
+	{
+		bm = g_ptr_array_index(bookmarks, i);
+		if (gigolo_bookmark_get_autoconnect(bm) && ! gigolo_bookmark_get_should_not_autoconnect(bm))
+		{
+			uri = gigolo_bookmark_get_uri_escaped(bm);
+			/* Mounting happens asynchronously here and so we don't wait until it is finished
+			 * nor de we get any feedback or errors.
+			 * TODO make this synchronous(looping and checking) and check for errors */
+			gigolo_backend_gvfs_mount_uri(backend_gvfs, uri, NULL, NULL, FALSE);
+			g_free(uri);
+		}
+	}
+
+	return TRUE;
+}
 
 
 static void print_supported_schemes(void)
@@ -100,6 +133,13 @@ gint main(gint argc, gchar** argv)
 		print_supported_schemes();
 
 		return EXIT_SUCCESS;
+	}
+
+	if (auto_connect)
+	{
+		gboolean ret = auto_connect_bookmarks();
+
+		return ret ? EXIT_SUCCESS : EXIT_FAILURE;
 	}
 
 	if (! new_instance)
