@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 01:27+0000\n"
+"POT-Creation-Date: 2012-05-07 04:03+0000\n"
 "PO-Revision-Date: 2012-02-01 15:58+0200\n"
 "Last-Translator: Algimantas Margevičius <margevicius.algimantas@gmail.com>\n"
 "Language-Team: Lietuvių <>\n"
@@ -18,23 +18,27 @@ msgstr ""
 "Language: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Prijungti visas žymeles kurios pažymėtos „prijungti automatiškai“ ir išeiti"
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Nepaisyti veikiančių kopijų, priversti atverti naują kopiją"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Parodyti palaikomų URI schemų sąrašą"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Išsamiai"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Rodyti versijos informaciją"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr ""
 "- paprasta grafinė sąsaja kuri suteikia galimybę lengvai prisijungti prie "
@@ -384,7 +388,9 @@ msgstr "Norėdami naudoti numatytąjį prievadą įveskite 0"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Tai nenaudojama tikram prijungimui, tai reikalinga prijungimo taško atvėrimui failų naršyklėje"
+msgstr ""
+"Tai nenaudojama tikram prijungimui, tai reikalinga prijungimo taško "
+"atvėrimui failų naršyklėje"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
