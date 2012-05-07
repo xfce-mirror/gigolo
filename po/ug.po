@@ -75,7 +75,7 @@ msgstr "تور"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr "ئارخىپ"
+msgstr "ئارخىپتا"
 
 #: ../src/common.c:97
 msgid "Photos"
@@ -100,7 +100,7 @@ msgstr "Copyright 2008-2010 Enrico Tröger"
 
 #: ../src/window.c:429
 msgid "translator-credits"
-msgstr "Gheyret T.Kenji <gheyret@gmail.com> 2010"
+msgstr "Gheyret T.Kenji <gheyret@gmail.com>"
 
 #: ../src/window.c:461
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -127,7 +127,7 @@ msgstr "تەھرىر(_E)"
 
 #: ../src/window.c:1155
 msgid "_Actions"
-msgstr "مەشغۇلاتلار(_A)"
+msgstr "ھەرىكەتلەر(_A)"
 
 #: ../src/window.c:1156
 msgid "_View"
@@ -192,11 +192,11 @@ msgstr "بەلگە سۈپىتىدە كۆرسەت(_S)"
 
 #: ../src/window.c:1191
 msgid "View as _Detailed List"
-msgstr "تەپسىلىي تىزىمدا كۆرسەت(_D)"
+msgstr "Detailed List دا كۆرسەت(_D)"
 
 #: ../src/window.c:1197
 msgid "_Bookmarks"
-msgstr "خەتكۈش(_B)"
+msgstr "خەتكۈچلەر(_B)"
 
 #: ../src/window.c:1197
 msgid "Choose a bookmark to connect to"
@@ -351,7 +351,7 @@ msgstr "ئورۇن(URI)(_L)"
 
 #: ../src/bookmarkeditdialog.c:1019
 msgid "_Folder:"
-msgstr "قىسقۇچ(_F):"
+msgstr "مۇندەرىجە(_F)"
 
 #: ../src/bookmarkeditdialog.c:1020
 msgid "P_ath:"
@@ -433,7 +433,7 @@ msgstr "ئاپتوماتىك باغلىنىشنىڭ ئىنتېرۋالىنى ك�
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
-msgstr "ئارايۈز"
+msgstr "كۆرۈنمە يۈز"
 
 #: ../src/preferencesdialog.c:374
 msgid "_Save window position and geometry"
@@ -484,7 +484,7 @@ msgstr "قورال بالداقنى كۆرسەتسۇن(_T)"
 
 #: ../src/preferencesdialog.c:418
 msgid "St_yle"
-msgstr "ئۇسلۇبى(_Y)"
+msgstr "ئۇسلۇب(_Y)"
 
 #: ../src/preferencesdialog.c:429
 msgid "_Orientation"
@@ -557,7 +557,7 @@ msgstr "تور تىزىملىكىنى يېڭىلايدۇ"
 
 #: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
 msgid "Close panel"
-msgstr "كۆزنەكنى تاقا"
+msgstr "تاختىنى تاقا"
 
 #: ../src/bookmarkpanel.c:91
 msgid "No bookmarks"
