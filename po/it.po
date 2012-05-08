@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 18:42+0000\n"
+"POT-Creation-Date: 2012-05-08 06:48+0000\n"
 "PO-Revision-Date: 2010-03-03 15:54+0100\n"
 "Last-Translator: Gianluca Foddis <gianluca.foddis@gmail.com>\n"
 "Language-Team: Italian\n"
@@ -18,23 +18,27 @@ msgstr ""
 "Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Connette tutti i segnalabri evidenziati come \"connetti automaticamente\" ed esce"
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Ignora le istanze in esecuzione, forza l'apertura di una nuova istanza"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Mostra una lista degli schemi URI compatibili"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Mostra più informazioni"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Mostra informazioni sulla versione"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- una semplice interfaccia per connettersi a file system remoti"
 
@@ -385,7 +389,9 @@ msgstr "Inserire il numero di porta 0 per usare la porta predefinita"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Questo non è usato per il montaggio, è solo necessario per aprire il punto di montaggio in un gestore di file."
+msgstr ""
+"Questo non è usato per il montaggio, è solo necessario per aprire il punto "
+"di montaggio in un gestore di file."
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
