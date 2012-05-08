@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-22 19:42+0000\n"
-"PO-Revision-Date: 2012-04-23 05:27+0900\n"
+"POT-Creation-Date: 2012-05-08 01:27+0000\n"
+"PO-Revision-Date: 2012-05-08 12:18+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
 "Language: ko\n"
@@ -24,23 +24,27 @@ msgstr ""
 "X-Poedit-Language: Korean\n"
 "X-Poedit-Country: KOREA, REPUBLIC OF\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "'자동 연결' 로 선택한 모든 북마크에 연결하고 끝냅니다"
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "실행 인스턴스를 무시하고 새 인스턴스를 강제로 엽니다"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "지원하는 URI 스킴의 목록을 출력"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "자세히"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "버전 정보 표시"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- 원격 파일 시스템에 쉽게 연결하기 위한 간단한 프론트엔드"
 
@@ -350,80 +354,80 @@ msgstr "공유 이름을 입력하여야 합니다."
 msgid "You must enter a valid URI for the connection."
 msgstr "연결에 대한 유효한 URI를 입력하여야 합니다."
 
-#: ../src/bookmarkeditdialog.c:580
+#: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
 msgstr "장치(_D):"
 
-#: ../src/bookmarkeditdialog.c:582
-#: ../src/bookmarkeditdialog.c:1096
+#: ../src/bookmarkeditdialog.c:586
+#: ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
 msgstr "서버(_S):"
 
-#: ../src/bookmarkeditdialog.c:893
+#: ../src/bookmarkeditdialog.c:897
 msgid "Create Bookmark"
 msgstr "북마크 만들기"
 
-#: ../src/bookmarkeditdialog.c:900
+#: ../src/bookmarkeditdialog.c:904
 msgid "Edit Bookmark"
 msgstr "북마크 편집"
 
-#: ../src/bookmarkeditdialog.c:908
+#: ../src/bookmarkeditdialog.c:912
 msgid "Connect to Server"
 msgstr "서버로 연결"
 
-#: ../src/bookmarkeditdialog.c:1032
+#: ../src/bookmarkeditdialog.c:1036
 msgid "_Bookmark name:"
 msgstr "북마크 이름(_B):"
 
-#: ../src/bookmarkeditdialog.c:1040
+#: ../src/bookmarkeditdialog.c:1044
 msgid "_Color:"
 msgstr "색(_C):"
 
-#: ../src/bookmarkeditdialog.c:1051
+#: ../src/bookmarkeditdialog.c:1055
 msgid "Au_to-Connect"
 msgstr "자동 연결(_T)"
 
-#: ../src/bookmarkeditdialog.c:1062
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Service t_ype:"
 msgstr "서비스 유형(_Y):"
 
-#: ../src/bookmarkeditdialog.c:1087
+#: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
 msgstr "기본 포트를 사용하기 위해 0으로 포트를 설정"
 
-#: ../src/bookmarkeditdialog.c:1089
+#: ../src/bookmarkeditdialog.c:1093
 msgid "This is not used for the actual mount, only necessary for opening the mount point in a file browser"
 msgstr "실제 마운트에 사용하는 것이 아니라, 파일 탐색기에서 마운트 지점을 열 때만 필요합니다"
 
-#: ../src/bookmarkeditdialog.c:1095
+#: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
 msgstr "위치 (URI)(_L):"
 
-#: ../src/bookmarkeditdialog.c:1097
+#: ../src/bookmarkeditdialog.c:1101
 msgid "_Folder:"
 msgstr "폴더(_F):"
 
-#: ../src/bookmarkeditdialog.c:1098
+#: ../src/bookmarkeditdialog.c:1102
 msgid "P_ath:"
 msgstr "경로(_A):"
 
-#: ../src/bookmarkeditdialog.c:1099
+#: ../src/bookmarkeditdialog.c:1103
 msgid "_User Name:"
 msgstr "사용자 이름(_U):"
 
-#: ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:1104
 msgid "Optional information:"
 msgstr "추가 정보:"
 
-#: ../src/bookmarkeditdialog.c:1101
+#: ../src/bookmarkeditdialog.c:1105
 msgid "_Port:"
 msgstr "포트(_P):"
 
-#: ../src/bookmarkeditdialog.c:1102
+#: ../src/bookmarkeditdialog.c:1106
 msgid "_Domain:"
 msgstr "도메인(_D):"
 
-#: ../src/bookmarkeditdialog.c:1103
+#: ../src/bookmarkeditdialog.c:1107
 msgid "_Share:"
 msgstr "공유(_S):"
 
