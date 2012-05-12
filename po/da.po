@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-27 16:06+0000\n"
+"POT-Creation-Date: 2012-05-12 07:06+0000\n"
 "PO-Revision-Date: 2010-01-19 10:21+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -19,23 +19,27 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: DENMARK\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Forbind alle bogmærker market med 'autoforbind' og afslut"
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Ignorér kørende instanser, gennemtving åbning af en ny instans"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Udskriv en liste med understøttede URI-skemaer"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Vær uddybende"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Vis versionsinformation"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- en simpel grænseflade  til nemt at forbinde til eksterne filsystemer"
 
@@ -387,7 +391,9 @@ msgstr "Indstil porten til 0 for at bruge standardporten"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Dette bruges ikke til den aktuelle montering. Det er kun nødevendigt for at åbne monteringspunktet i en filhåndtering"
+msgstr ""
+"Dette bruges ikke til den aktuelle montering. Det er kun nødevendigt for at "
+"åbne monteringspunktet i en filhåndtering"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
