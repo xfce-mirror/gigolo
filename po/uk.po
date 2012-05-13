@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 18:42+0000\n"
+"POT-Creation-Date: 2012-05-13 04:30+0000\n"
 "PO-Revision-Date: 2010-03-26 19:24+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -18,23 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "З’єднати всі закладки, позначені як 'авто з’єднання', і вийти"
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Ігнорувати вже запущені програми, форсувати відкриття нової"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Вивести список підтримуваних URI схем"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Детально"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Показати інформацію про версію"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr ""
 "- простий інтерфейс для легкого підключення до віддалених файлових систем"
@@ -384,7 +388,9 @@ msgstr "Встановіть порт в 0 для використання ти�
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Це не використовується для справжнього монтування, а тільки необхідно для відкриття точки монтування в переглядачі файлів."
+msgstr ""
+"Це не використовується для справжнього монтування, а тільки необхідно для "
+"відкриття точки монтування в переглядачі файлів."
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
