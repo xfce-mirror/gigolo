@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-29 19:54+0000\n"
+"POT-Creation-Date: 2012-05-13 20:33+0000\n"
 "PO-Revision-Date: 2009-12-15 12:11+0100\n"
 "Last-Translator: Piarres Beobide <pi+debian@beobide.net>\n"
 "Language-Team: Basque <debian-l10n-basque@lists.debian.org>\n"
@@ -16,28 +16,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: eu\n"
-"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.0\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Auto-konektatu bezala markaturiko laster-marka guztiak konektatu eta irten"
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr ""
 "Alde batetara utzi irekirik  dauden instantzia, behartu instantzia berri bat "
 "irekitzea"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Inprimatu onartzen diren URI eskema zerrenda"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Hedatutako irteera"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Bistarazi bertsio argibideak"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- urruneko fitxategi-sistemetara konektatzeko interfaze sinple bat"
 
@@ -390,7 +394,9 @@ msgstr "Ezarri 0 ataka zenbakian lehenetsitakoa erabiltzeko"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Hau ez da erabiltzen oraingo muntaketan, bakarrik fitxategi arakatzaile batean irekitzeko da beharrezkoa"
+msgstr ""
+"Hau ez da erabiltzen oraingo muntaketan, bakarrik fitxategi arakatzaile "
+"batean irekitzeko da beharrezkoa"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
