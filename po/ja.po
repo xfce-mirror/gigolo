@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 20:22+0900\n"
-"PO-Revision-Date: 2012-04-23 20:26+0900\n"
+"POT-Creation-Date: 2012-05-17 20:05+0900\n"
+"PO-Revision-Date: 2012-05-17 20:10+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: \n"
@@ -18,23 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "'自動接続' に設定されているすべてのブックマークを接続して終了する"
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "動作中のインスタンスを無視し、強制的に新しいインスタンスを開く"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "サポートする URI スキームのリストを表示する"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "詳細情報を出力する"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "バージョン情報を表示する"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- リモートファイルシステムに簡単に接続するシンプルなフロントエンド"
 
@@ -70,8 +74,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (セキュア)"
 
-#: ../src/common.c:93
-#: ../src/window.c:1508
+#: ../src/common.c:93 ../src/window.c:1508
 msgid "Network"
 msgstr "ネットワーク"
 
@@ -93,8 +96,11 @@ msgid "Connecting to \"%s\""
 msgstr "接続しています: \"%s\""
 
 #: ../src/window.c:430
-msgid "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "ローカルおよびリモートファイルシステムに簡単に接続/マウントできるシンプルなフロントエンド"
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"ローカルおよびリモートファイルシステムに簡単に接続/マウントできるシンプルなフ"
+"ロントエンド"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -108,22 +114,15 @@ msgstr "Masato Hashimoto <hashimo@xfce.org>"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo は GVFS により以下のプロトコルを使用することができます:"
 
-#: ../src/window.c:579
-#: ../src/window.c:638
+#: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
 msgstr "コマンド '%s' が失敗しました"
 
-#: ../src/window.c:580
-#: ../src/window.c:613
-#: ../src/window.c:626
-#: ../src/window.c:639
-#: ../src/window.c:797
-#: ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:265
-#: ../src/bookmarkeditdialog.c:276
-#: ../src/bookmarkeditdialog.c:287
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
 msgid "Error"
 msgstr "エラー"
 
@@ -140,9 +139,7 @@ msgstr "\"%s\" に対する利用可能なデフォルトの場所はありま�
 msgid "Edit _Bookmark"
 msgstr "ブックマークの編集(_B)"
 
-#: ../src/window.c:707
-#: ../src/window.c:1289
-#: ../src/browsenetworkpanel.c:453
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "ブックマークの作成(_B)"
@@ -173,7 +170,9 @@ msgstr "ブックマークの編集(_E)"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "ブックマークマネージャーを開き、ブックマークの追加、編集、または削除を行います"
+msgstr ""
+"ブックマークマネージャーを開き、ブックマークの追加、編集、または削除を行いま"
+"す"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -239,13 +238,11 @@ msgstr "接続するブックマークを選択します"
 msgid "Connected"
 msgstr "接続中"
 
-#: ../src/window.c:1421
-#: ../src/bookmarkdialog.c:315
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "サービスタイプ"
 
-#: ../src/window.c:1429
-#: ../src/bookmarkdialog.c:307
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "名前"
 
@@ -253,9 +250,7 @@ msgstr "名前"
 msgid "Bookmarks"
 msgstr "ブックマーク"
 
-#: ../src/window.c:1556
-#: ../src/window.c:1632
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -269,8 +264,12 @@ msgstr "Gigolo は起動前に古い設定ディレクトリの移動を必要�
 
 #: ../src/settings.c:703
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "古い設定ディレクトリ \"%s\" を \"%s\" へ移動できませんでした (%s)。ディレクトリを手動で新しい場所へ移動してください。"
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"古い設定ディレクトリ \"%s\" を \"%s\" へ移動できませんでした (%s)。ディレクト"
+"リを手動で新しい場所へ移動してください。"
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -330,7 +329,8 @@ msgstr "ブックマーク名を入力してください。"
 
 #: ../src/bookmarkeditdialog.c:253
 msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr "入力されたブックマーク名はすでに使用されています。他の名前にしてください。"
+msgstr ""
+"入力されたブックマーク名はすでに使用されています。他の名前にしてください。"
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
@@ -348,8 +348,7 @@ msgstr "接続先の正しい URI を入力してください。"
 msgid "_Device:"
 msgstr "デバイス(_D):"
 
-#: ../src/bookmarkeditdialog.c:586
-#: ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
 msgstr "サーバー(_S):"
 
@@ -386,8 +385,12 @@ msgid "Set the port to 0 to use the default port"
 msgstr "0 を設定するとデフォルトポートが使用されます"
 
 #: ../src/bookmarkeditdialog.c:1093
-msgid "This is not used for the actual mount, only necessary for opening the mount point in a file browser"
-msgstr "これは実際のマウントには使用されず、ファイルブラウザーでマウントポイントを開くためのみに必要です"
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr ""
+"これは実際のマウントには使用されず、ファイルブラウザーでマウントポイントを開"
+"くためのみに必要です"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -463,7 +466,9 @@ msgstr "ファイルマネージャー(_F)"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "マウントポイントを開くまたは表示するために使用するプログラムの名前を入力してください"
+msgstr ""
+"マウントポイントを開くまたは表示するために使用するプログラムの名前を入力して"
+"ください"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -478,8 +483,10 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "ブックマークの自動接続間隔(_B)"
 
 #: ../src/preferencesdialog.c:378
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "ブックマークに自動接続を試みる間隔を秒で指定してください。ゼロを指定すると無効になります。"
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr "ブックマークの自動接続を試みる間隔を秒で指定してください。ゼロを指定すると無効になります。"
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -506,16 +513,23 @@ msgid "Show side panel"
 msgstr "サイドパネルを表示する"
 
 #: ../src/preferencesdialog.c:404
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "このオプションを有効にすると、Samba 共有およびブックマークリストで利用可能なローカルネットワークを参照するサイドパネルを表示します"
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"このオプションを有効にすると、Samba 共有およびブックマークリストで利用可能な"
+"ローカルネットワークを参照するサイドパネルを表示します"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
 msgstr "自動接続のエラーメッセージを表示する"
 
 #: ../src/preferencesdialog.c:408
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr "ブックマークの自動接続に失敗した時にエラーメッセージを表示させたい時に設定します"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+"ブックマークの自動接続に失敗した時にエラーメッセージを表示させたい時に設定し"
+"ます"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -567,13 +581,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix デバイス: %s</b>"
 
-#: ../src/backendgvfs.c:453
-#: ../src/backendgvfs.c:492
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "不明"
 
-#: ../src/backendgvfs.c:459
-#: ../src/backendgvfs.c:567
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "\"%s\" への接続に失敗しました。"
@@ -611,8 +623,7 @@ msgstr "選択された共有のブックマークを作成します"
 msgid "Refresh the network list"
 msgstr "ネットワークリストを更新します"
 
-#: ../src/browsenetworkpanel.c:518
-#: ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr "パネルを閉じます"
 
@@ -627,4 +638,3 @@ msgstr "選択されたブックマークに接続します"
 #: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "リモートファイルシステムに簡単に接続するシンプルなフロントエンド"
-
