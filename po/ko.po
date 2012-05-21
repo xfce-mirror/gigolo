@@ -223,7 +223,7 @@ msgstr "측면 패널(_P)"
 
 #: ../src/window.c:1312
 msgid "_Toolbar"
-msgstr "도구막대(_T)"
+msgstr "도구 모음(_T)"
 
 #: ../src/window.c:1314
 msgid "Status _Icon"
@@ -533,11 +533,11 @@ msgstr "연결 목록 모드(_C)"
 
 #: ../src/preferencesdialog.c:427
 msgid "Toolbar"
-msgstr "도구막대"
+msgstr "도구 모음"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "도구막대 표시(_T)"
+msgstr "도구 모음 표시(_T)"
 
 #: ../src/preferencesdialog.c:435
 msgid "St_yle"
