@@ -393,7 +393,7 @@ msgstr "Mettre le port à 0 pour utiliser le port par défaut"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
+msgstr "Non utilisé pour le montage actuel, nécessaire uniquement pour l'ouverture du point de montage dans un explorateur de fichier"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
