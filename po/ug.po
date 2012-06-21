@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo 0.2.1\n"
+"Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-08-01 12:06+0200\n"
 "PO-Revision-Date: 2010-01-18 17:01+0900\n"
@@ -75,7 +75,7 @@ msgstr "تور"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr "ئارخىپتا"
+msgstr "ئارخىپلا"
 
 #: ../src/common.c:97
 msgid "Photos"
@@ -96,7 +96,7 @@ msgstr "يىراقتىكى ھۆججەت سىستېمىسىغا ئوڭاي باغ
 
 #: ../src/window.c:426
 msgid "Copyright 2008-2010 Enrico Tröger"
-msgstr "Copyright 2008-2010 Enrico Tröger"
+msgstr "نەشر ھوقۇقى 2008-2010 Enrico Tröger غا تەۋە"
 
 #: ../src/window.c:429
 msgid "translator-credits"
@@ -127,7 +127,7 @@ msgstr "تەھرىر(_E)"
 
 #: ../src/window.c:1155
 msgid "_Actions"
-msgstr "ھەرىكەتلەر(_A)"
+msgstr "مەشغۇلاتلار(_A)"
 
 #: ../src/window.c:1156
 msgid "_View"
@@ -192,7 +192,7 @@ msgstr "بەلگە سۈپىتىدە كۆرسەت(_S)"
 
 #: ../src/window.c:1191
 msgid "View as _Detailed List"
-msgstr "Detailed List دا كۆرسەت(_D)"
+msgstr "تەپسىلىي تىزىم كۆرسەت(_D)"
 
 #: ../src/window.c:1197
 msgid "_Bookmarks"
