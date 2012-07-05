@@ -27,7 +27,7 @@ msgstr "ئىشلەتكىلى بولىدىغان URI تىزىمىنى بېسىپ 
 
 #: ../src/main.c:48
 msgid "Be verbose"
-msgstr "ئەتراپلىق بولۇش"
+msgstr "ئەتراپلىق بولسۇن"
 
 #: ../src/main.c:49
 msgid "Show version information"
@@ -347,11 +347,11 @@ msgstr "ئېغىز نومۇرى 0 بولسا كۆڭۈلدىكى ئېغىز ئى�
 
 #: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
-msgstr "ئورۇن(URI)(_L)"
+msgstr "ئورۇن(URI)(_L):"
 
 #: ../src/bookmarkeditdialog.c:1019
 msgid "_Folder:"
-msgstr "مۇندەرىجە(_F)"
+msgstr "مۇندەرىجە(_F):"
 
 #: ../src/bookmarkeditdialog.c:1020
 msgid "P_ath:"
@@ -557,7 +557,7 @@ msgstr "تور تىزىملىكىنى يېڭىلايدۇ"
 
 #: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
 msgid "Close panel"
-msgstr "تاختىنى تاقا"
+msgstr "كۆزنەكنى تاقا"
 
 #: ../src/bookmarkpanel.c:91
 msgid "No bookmarks"
