@@ -75,7 +75,7 @@ msgstr "تور"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr "ئارخىپلا"
+msgstr "ئارخىپ"
 
 #: ../src/common.c:97
 msgid "Photos"
@@ -192,7 +192,7 @@ msgstr "بەلگە سۈپىتىدە كۆرسەت(_S)"
 
 #: ../src/window.c:1191
 msgid "View as _Detailed List"
-msgstr "تەپسىلىي تىزىم كۆرسەت(_D)"
+msgstr "تەپسىلىي تىزىم كۆرۈنۈشىدە كۆرسەت(_D)"
 
 #: ../src/window.c:1197
 msgid "_Bookmarks"
@@ -433,7 +433,7 @@ msgstr "ئاپتوماتىك باغلىنىشنىڭ ئىنتېرۋالىنى ك�
 
 #: ../src/preferencesdialog.c:372
 msgid "Interface"
-msgstr "كۆرۈنمە يۈز"
+msgstr "ئارايۈز"
 
 #: ../src/preferencesdialog.c:374
 msgid "_Save window position and geometry"
