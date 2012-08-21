@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-06 11:06+0000\n"
+"POT-Creation-Date: 2012-08-21 06:39+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Urmas <dwqwt3i02@sneakemail.com>\n"
 "Language-Team: None <->\n"
@@ -14,23 +14,27 @@ msgstr ""
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Подключить все автоматически подключаемые закладки и выйти."
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Игнорировать запущенные копии, запустить новую копию"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Вывести список поддерживаемых схем URI"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Подробный вывод"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Информация о версии"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- простой интерфейс для подключения удаленных файловых систем"
 
@@ -66,7 +70,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (поддержка безопасности)"
 
-#: ../src/common.c:93 ../src/window.c:1506
+#: ../src/common.c:93 ../src/window.c:1508
 msgid "Network"
 msgstr "Сеть"
 
@@ -111,9 +115,9 @@ msgid "The command '%s' failed"
 msgstr "При выполнении команды '%s' произошел сбой"
 
 #: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
-#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:220
-#: ../src/bookmarkeditdialog.c:239 ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:263 ../src/bookmarkeditdialog.c:274
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
 msgid "Error"
 msgstr "Ошибка"
 
@@ -130,116 +134,116 @@ msgstr "Для «%s» нет местонахождения по умолчан�
 msgid "Edit _Bookmark"
 msgstr "Редактировать закладку"
 
-#: ../src/window.c:707 ../src/window.c:1287 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Создать _закладку"
 
-#: ../src/window.c:1279
+#: ../src/window.c:1281
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/window.c:1280
+#: ../src/window.c:1282
 msgid "_Edit"
 msgstr "_Правка"
 
-#: ../src/window.c:1281
+#: ../src/window.c:1283
 msgid "_Actions"
 msgstr "_Действия"
 
-#: ../src/window.c:1282
+#: ../src/window.c:1284
 msgid "_View"
 msgstr "_Вид"
 
-#: ../src/window.c:1283
+#: ../src/window.c:1285
 msgid "_Help"
 msgstr "_Справка"
 
-#: ../src/window.c:1289
+#: ../src/window.c:1291
 msgid "_Edit Bookmarks"
 msgstr "П_равка закладок"
 
-#: ../src/window.c:1290
+#: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
 msgstr "Открывает Менеджер закладок для их добавления, изменения или удаления"
 
-#: ../src/window.c:1294
+#: ../src/window.c:1296
 msgid "Disconnect the selected resource"
 msgstr "Отключить выбранный ресурс"
 
-#: ../src/window.c:1296
+#: ../src/window.c:1298
 msgid "Open the selected resource with a file manager"
 msgstr "Открыть выбранный ресурс в менеджере файлов"
 
-#: ../src/window.c:1297
+#: ../src/window.c:1299
 msgid "Open in _Terminal"
 msgstr "Открыть в _терминале"
 
-#: ../src/window.c:1298
+#: ../src/window.c:1300
 msgid "Start a terminal from here"
 msgstr "Открыть окно терминала в данном каталоге"
 
-#: ../src/window.c:1299
+#: ../src/window.c:1301
 msgid "Copy _URI"
 msgstr "Копировать _адрес"
 
-#: ../src/window.c:1300
+#: ../src/window.c:1302
 msgid "Quit Gigolo"
 msgstr "Выход из Gigolo"
 
-#: ../src/window.c:1301
+#: ../src/window.c:1303
 msgid "Online Help"
 msgstr "Справка в _Интернете"
 
-#: ../src/window.c:1302
+#: ../src/window.c:1304
 msgid "Supported Protocols"
 msgstr "Поддерживаемые протоколы"
 
-#: ../src/window.c:1308
+#: ../src/window.c:1310
 msgid "Side _Panel"
 msgstr "_Боковая панель"
 
-#: ../src/window.c:1310
+#: ../src/window.c:1312
 msgid "_Toolbar"
 msgstr "Панель _инструментов"
 
-#: ../src/window.c:1312
+#: ../src/window.c:1314
 msgid "Status _Icon"
 msgstr "_Значок состояния"
 
-#: ../src/window.c:1318
+#: ../src/window.c:1320
 msgid "View as _Symbols"
 msgstr "_Список"
 
-#: ../src/window.c:1319
+#: ../src/window.c:1321
 msgid "View as _Detailed List"
 msgstr "_Таблица"
 
-#: ../src/window.c:1328
+#: ../src/window.c:1330
 msgid "_Bookmarks"
 msgstr "_Закладки"
 
-#: ../src/window.c:1328
+#: ../src/window.c:1330
 msgid "Choose a bookmark to connect to"
 msgstr "Выберите ресурс для подключения"
 
-#: ../src/window.c:1410
+#: ../src/window.c:1412
 msgid "Connected"
 msgstr "Подключен"
 
-#: ../src/window.c:1419 ../src/bookmarkdialog.c:315
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "Тип службы"
 
-#: ../src/window.c:1427 ../src/bookmarkdialog.c:307
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "Имя"
 
-#: ../src/window.c:1498
+#: ../src/window.c:1500
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: ../src/window.c:1554 ../src/window.c:1630 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -312,95 +316,101 @@ msgstr "Прочие сведения"
 msgid "Edit Bookmarks"
 msgstr "Закладки"
 
-#: ../src/bookmarkeditdialog.c:221
+#: ../src/bookmarkeditdialog.c:234
 msgid "You must enter a name for the bookmark."
 msgstr "Укажите название закладки."
 
-#: ../src/bookmarkeditdialog.c:240
+#: ../src/bookmarkeditdialog.c:253
 msgid "The entered bookmark name is already in use. Please choose another one."
 msgstr "Закладка с таким названием уже существует. Укажите другое название."
 
-#: ../src/bookmarkeditdialog.c:253
+#: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
 msgstr "Укажите имя или адрес сервера."
 
-#: ../src/bookmarkeditdialog.c:264
+#: ../src/bookmarkeditdialog.c:277
 msgid "You must enter a share name."
 msgstr "Укажите имя ресурса."
 
-#: ../src/bookmarkeditdialog.c:275
+#: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
 msgstr "Необходимо указать допустимый адрес ресурса."
 
-#: ../src/bookmarkeditdialog.c:567
+#: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
 msgstr "_Устройство:"
 
-#: ../src/bookmarkeditdialog.c:569 ../src/bookmarkeditdialog.c:1081
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
 msgstr "_Сервер:"
 
-#: ../src/bookmarkeditdialog.c:880
+#: ../src/bookmarkeditdialog.c:897
 msgid "Create Bookmark"
 msgstr "Создать закладку"
 
-#: ../src/bookmarkeditdialog.c:887
+#: ../src/bookmarkeditdialog.c:904
 msgid "Edit Bookmark"
 msgstr "Свойства закладки"
 
-#: ../src/bookmarkeditdialog.c:895
+#: ../src/bookmarkeditdialog.c:912
 msgid "Connect to Server"
 msgstr "Подключение"
 
-#: ../src/bookmarkeditdialog.c:1019
+#: ../src/bookmarkeditdialog.c:1036
 msgid "_Bookmark name:"
 msgstr "Имя _закладки:"
 
-#: ../src/bookmarkeditdialog.c:1027
+#: ../src/bookmarkeditdialog.c:1044
 msgid "_Color:"
 msgstr "Цвет:"
 
-#: ../src/bookmarkeditdialog.c:1038
+#: ../src/bookmarkeditdialog.c:1055
 msgid "Au_to-Connect"
 msgstr "_Автоподключение"
 
-#: ../src/bookmarkeditdialog.c:1049
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Service t_ype:"
 msgstr "_Тип службы:"
 
-#: ../src/bookmarkeditdialog.c:1074
+#: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
 msgstr "Для использования порта по умолчанию укажите 0"
 
-#: ../src/bookmarkeditdialog.c:1080
+#: ../src/bookmarkeditdialog.c:1093
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr "Это значение не влияет на подключение и требуется только для просмотра ресурса в менеджере файлов."
+
+#: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
 msgstr "Раз_мещение (URI):"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1101
 msgid "_Folder:"
 msgstr "_Каталог:"
 
-#: ../src/bookmarkeditdialog.c:1083
+#: ../src/bookmarkeditdialog.c:1102
 msgid "P_ath:"
 msgstr "_Путь:"
 
-#: ../src/bookmarkeditdialog.c:1084
+#: ../src/bookmarkeditdialog.c:1103
 msgid "_User Name:"
 msgstr "_Имя пользователя:"
 
-#: ../src/bookmarkeditdialog.c:1085
+#: ../src/bookmarkeditdialog.c:1104
 msgid "Optional information:"
 msgstr "Дополнительные сведения:"
 
-#: ../src/bookmarkeditdialog.c:1086
+#: ../src/bookmarkeditdialog.c:1105
 msgid "_Port:"
 msgstr "_Порт:"
 
-#: ../src/bookmarkeditdialog.c:1087
+#: ../src/bookmarkeditdialog.c:1106
 msgid "_Domain:"
 msgstr "_Домен:"
 
-#: ../src/bookmarkeditdialog.c:1088
+#: ../src/bookmarkeditdialog.c:1107
 msgid "_Share:"
 msgstr "_Ресурс:"
 
@@ -562,7 +572,7 @@ msgstr "<b>Устройство Unix: %s</b>"
 msgid "unknown"
 msgstr "неизвестно"
 
-#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:558
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Не удалось подключиться к %s."
