@@ -1,21 +1,20 @@
-# Uyghur translations for gigolo
-# Copyright (C) 2009 THE gigolo'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the gigolo package.
-# Gheyret T.Kenji <gheyret@gmail.com>, 2010.
-# 
+# Uyghur translation for gigolo.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Gheyret Kenji <gheyret@gmail.com>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-20 04:15+0000\n"
-"PO-Revision-Date: 2010-01-18 17:01+0900\n"
-"Last-Translator: Gheyret T.Kenji <gheyret@gmail.com>\n"
+"POT-Creation-Date: 2012-10-24 00:45+0000\n"
+"PO-Revision-Date: 2011-11-09 16:10+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -39,8 +38,7 @@ msgstr "نەشر ئۇچۇرىنى كۆرسەت"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- يىراقتىكى ھۆججەت سىستېمىسىغا باغلىنىشنى ئاسانلاشتۇرىدىغان ئاددىي ئالدى ئۇچ"
+msgstr "- يىراقتىكى ھۆججەت سىستېمىسىغا باغلىنىشنى ئاسانلاشتۇرىدىغان ئاددىي ئالدى ئۇچ"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -110,8 +108,7 @@ msgstr "غەيرەت ت.كەنجى <gheyret@gmail.com>"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"گىگولو(Gigolo) دا GVfs تەمىنلىگەن تۆۋەندىكى كېلىشىملەرنى ئىشلەتكىلى بولىدۇ"
+msgstr "گىگولو(Gigolo) دا GVfs تەمىنلىگەن تۆۋەندىكى كېلىشىملەرنى ئىشلەتكىلى بولىدۇ"
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -221,11 +218,11 @@ msgstr "بەلگە سۈپىتىدە كۆرسەت(_S)"
 
 #: ../src/window.c:1321
 msgid "View as _Detailed List"
-msgstr "تەپسىلىي تىزىمدا كۆرسەت(_D)"
+msgstr "تەپسىلىي تىزىم كۆرۈنۈشى(_D)"
 
 #: ../src/window.c:1330
 msgid "_Bookmarks"
-msgstr "خەتكۈچلەر(_B)"
+msgstr "خەتكۈش(_B)"
 
 #: ../src/window.c:1330
 msgid "Choose a bookmark to connect to"
@@ -257,18 +254,14 @@ msgstr "ھازىر يۆتكىسۇنمۇ؟"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"گىگولو(Gigolo) نى قوزغىتىشتىن بۇرۇن كونا تەڭشەك مۇندەرىجىسىنى يۆتكىۋېتىش "
-"كېرەك."
+msgstr "گىگولو(Gigolo) نى قوزغىتىشتىن بۇرۇن كونا تەڭشەك مۇندەرىجىسىنى يۆتكىۋېتىش كېرەك."
 
 #: ../src/settings.c:703
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"كونا تەڭشەك مۇندەرىجىسى «%s» نى «%s» (%s) گە يۆتكىگىلى بولمىدى. ئۇنى قولدا "
-"يۆتكەڭ."
+msgstr "كونا تەڭشەك مۇندەرىجىسى «%s» نى «%s» (%s) گە يۆتكىگىلى بولمىدى. ئۇنى قولدا يۆتكەڭ."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -480,9 +473,7 @@ msgstr "ئاپتوماتىك-باغلىنىشىنى خەتكۈشلەش ئىنت�
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"ئاپتوماتىك باغلىنىشنىڭ ئىنتېرۋالىنى كىرگۈزۈڭ، 0 بولسا تەكشۈرۈش ئىناۋەتسىز "
-"بولىدۇ. بىرلىكى سېكۇنت."
+msgstr "ئاپتوماتىك باغلىنىشنىڭ ئىنتېرۋالىنى كىرگۈزۈڭ، 0 بولسا تەكشۈرۈش ئىناۋەتسىز بولىدۇ. بىرلىكى سېكۇنت."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -512,9 +503,7 @@ msgstr "يان كۆزنەكنى كۆرسەتسۇن"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"يەرلىك توردىكى ئىشلەتكىلى بولىدىغان Samba/Windows ھەمبەھىرلىرىنى يان "
-"كۆزنەكتە كۆرسىتەمدۇ يوق"
+msgstr "يەرلىك توردىكى ئىشلەتكىلى بولىدىغان Samba/Windows ھەمبەھىرلىرىنى يان كۆزنەكتە كۆرسىتەمدۇ يوق"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -523,9 +512,7 @@ msgstr "ئاپتوماتىك باغلىنىشتا كۆرۈلگەن خاتالى�
 #: ../src/preferencesdialog.c:408
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"ئاپتوماتىك باغلىنىش خەتكۈشلىرىدە خاتالىق كۆرۈلگەندە خاتالىق سۆزلەشكۈسىنى "
-"كۆرسىتەمدۇ يوق"
+msgstr "ئاپتوماتىك باغلىنىش خەتكۈشلىرىدە خاتالىق كۆرۈلگەندە خاتالىق سۆزلەشكۈسىنى كۆرسىتەمدۇ يوق"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -556,6 +543,7 @@ msgid "No bookmark"
 msgstr "خەتكۈش يوق"
 
 #: ../src/backendgvfs.c:239
+#, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
@@ -563,12 +551,11 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
+msgstr "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "باغلاندى: ھەئە\n"
-"مۇلازىمەت تىپى: %s"
+"مۇلازىمەت تىپى: %s\n"
 "خەتكۈش: %s"
 
 #: ../src/backendgvfs.c:254
@@ -633,13 +620,3 @@ msgstr "تاللانغان خەتكۈشكە باغلىنىدۇ"
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "يىراقتىكى ھۆججەت سىستېمىسىغا ئوڭاي باغلىنىدىغان ئالدى ئۇچ پروگراممىسى"
-
-#~ msgid "Use _HAL based volume manager"
-#~ msgstr "HAL ئاساسىدىكى volume باشقۇرغۇنى ئىشلەت(_H)"
-
-#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-#~ msgstr ""
-#~ "<i>بۇ تاللانما ئۆزگەرتىلسە Gigolo نى قايتا قوزغىتىشقا توغرا كېلىدۇ.</i>"
-
-#~ msgid "Use _Unix based volume manager"
-#~ msgstr "_Unix ئاساسىدىكى volume باشقۇرغۇنى ئىشلەت(_U)"
