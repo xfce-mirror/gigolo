@@ -1,0 +1,641 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Саша Петровић <salepetronije@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-21 13:54+0000\n"
+"PO-Revision-Date: 2012-10-25 22:53+0200\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"Language-Team: српски <xfce-i18n@xfce.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Gtranslator 2.91.5\n"
+
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Повежи све забелешке са ознакама „самостално повежи“ и изађи"
+
+#: ../src/main.c:48
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Занемари покренуте примерке, нагнај отварање новог примерка"
+
+#: ../src/main.c:49
+msgid "Print a list of supported URI schemes"
+msgstr "Штампај списак подржаних УРИ шема"
+
+#: ../src/main.c:50
+msgid "Be verbose"
+msgstr "Опширнији испис"
+
+#: ../src/main.c:51
+msgid "Show version information"
+msgstr "Прикажи податке о издању"
+
+#: ../src/main.c:112
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- једноставно сучеље за лако повезивање са удаљеним системима датотека"
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr "Уникс уређај"
+
+#: ../src/common.c:79
+msgid "Windows Share"
+msgstr "Виндоус дељење"
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr "ФТП"
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "ХТТП"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr "ССХ"
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr "Обекс"
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr "ВебДАВ"
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr "ВебДАВ(безбедни)"
+
+#: ../src/common.c:93 ../src/window.c:1508
+msgid "Network"
+msgstr "Мрежа"
+
+#: ../src/common.c:95
+msgid "Archive"
+msgstr "Архива"
+
+#: ../src/common.c:97
+msgid "Photos"
+msgstr "Фотографије"
+
+#: ../src/common.c:99
+msgid "Custom Location"
+msgstr "Прилагођено место"
+
+#: ../src/window.c:262
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "Повезивање са „%s“"
+
+#: ../src/window.c:430
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"Једноставно сучеље за лако повезивање/качење на месне и удаљене системе "
+"датотека"
+
+#: ../src/window.c:431
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Ауторска права 2008-2011 Enrico Tröger"
+
+#: ../src/window.c:434
+msgid "translator-credits"
+msgstr "Саша Петровић <salepetronije@gmail.com>"
+
+#: ../src/window.c:466
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Жиголо може користити следеће протоколе које обезбеђује GVfs:"
+
+#: ../src/window.c:579 ../src/window.c:638
+#, c-format
+msgid "The command '%s' failed"
+msgstr "Нисам успео да извршим наредбу „%s“"
+
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
+msgid "Error"
+msgstr "Грeшкa"
+
+#: ../src/window.c:613
+msgid "Invalid terminal command"
+msgstr "Неисправна нареба у терминалу"
+
+#: ../src/window.c:625
+#, c-format
+msgid "No default location available for \"%s\""
+msgstr "Није доступно предвиђено место за „%s“"
+
+#: ../src/window.c:705
+msgid "Edit _Bookmark"
+msgstr "Уреди _забелешке"
+
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
+msgid "Create _Bookmark"
+msgstr "Направи _забелешку"
+
+#: ../src/window.c:1281
+msgid "_File"
+msgstr "_Датотека"
+
+#: ../src/window.c:1282
+msgid "_Edit"
+msgstr "_Уреди"
+
+#: ../src/window.c:1283
+msgid "_Actions"
+msgstr "_Радње"
+
+#: ../src/window.c:1284
+msgid "_View"
+msgstr "_Преглед"
+
+#: ../src/window.c:1285
+msgid "_Help"
+msgstr "_Помоћ"
+
+#: ../src/window.c:1291
+msgid "_Edit Bookmarks"
+msgstr "_Уреди забелешке"
+
+#: ../src/window.c:1292
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr ""
+"Отвори управника забелешки за додавања, уређивања или брисања забелешки"
+
+#: ../src/window.c:1296
+msgid "Disconnect the selected resource"
+msgstr "Одспоји одабрани извор"
+
+#: ../src/window.c:1298
+msgid "Open the selected resource with a file manager"
+msgstr "Отвори изабрани извор управником датотека"
+
+#: ../src/window.c:1299
+msgid "Open in _Terminal"
+msgstr "Отвори у _терминалу"
+
+#: ../src/window.c:1300
+msgid "Start a terminal from here"
+msgstr "Покрени терминал одавде"
+
+#: ../src/window.c:1301
+msgid "Copy _URI"
+msgstr "Умножи _УРИ"
+
+#: ../src/window.c:1302
+msgid "Quit Gigolo"
+msgstr "Напусти жиголо"
+
+#: ../src/window.c:1303
+msgid "Online Help"
+msgstr "Помоћ на мрежи"
+
+#: ../src/window.c:1304
+msgid "Supported Protocols"
+msgstr "Подржани протоколи"
+
+#: ../src/window.c:1310
+msgid "Side _Panel"
+msgstr "Бочна _површ"
+
+#: ../src/window.c:1312
+msgid "_Toolbar"
+msgstr "_Палета алата"
+
+#: ../src/window.c:1314
+msgid "Status _Icon"
+msgstr "_Икона стања"
+
+#: ../src/window.c:1320
+msgid "View as _Symbols"
+msgstr "Прикажи као _ознаке"
+
+#: ../src/window.c:1321
+msgid "View as _Detailed List"
+msgstr "Прикажи као _списак"
+
+#: ../src/window.c:1330
+msgid "_Bookmarks"
+msgstr "_Забелешке"
+
+#: ../src/window.c:1330
+msgid "Choose a bookmark to connect to"
+msgstr "Одаберите забелешку за повезивање"
+
+#: ../src/window.c:1412
+msgid "Connected"
+msgstr "Повезан"
+
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
+msgid "Service Type"
+msgstr "Врста услуге"
+
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
+msgid "Name"
+msgstr "Назив"
+
+#: ../src/window.c:1500
+msgid "Bookmarks"
+msgstr "Забелешке"
+
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+msgid "Gigolo"
+msgstr "Жиголо"
+
+#: ../src/settings.c:694
+msgid "Move it now?"
+msgstr "Преместити је сада?"
+
+#: ../src/settings.c:695
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Жиголу је потребно да премести стару фасциклу подешавања пре покретања"
+
+#: ../src/settings.c:703
+#, c-format
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"Ваша стара фасцикла с подешавањима „%s“ није могла бити премештена на "
+"„%s“ (%s). Молим, преместите фасциклу ручно на ново место."
+
+#: ../src/settings.c:706
+msgid "Warning"
+msgstr "Упозорење"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "Повежи се"
+
+#: ../src/bookmarkdialog.c:95
+#, c-format
+msgid "Domain: %s"
+msgstr "Област: %s"
+
+#: ../src/bookmarkdialog.c:100
+#, c-format
+msgid "Share: %s"
+msgstr "Дељење: %s"
+
+#: ../src/bookmarkdialog.c:106
+#, c-format
+msgid "Folder: %s"
+msgstr "Фасцикла: %s"
+
+#: ../src/bookmarkdialog.c:112
+#, c-format
+msgid "Path: %s"
+msgstr "Путања: %s"
+
+#: ../src/bookmarkdialog.c:323
+msgid "Host"
+msgstr "Домаћин"
+
+#: ../src/bookmarkdialog.c:331
+msgid "Port"
+msgstr "Прикључник"
+
+#: ../src/bookmarkdialog.c:339
+msgid "Auto-Connect"
+msgstr "Самостално повезивање"
+
+#: ../src/bookmarkdialog.c:347
+msgid "Username"
+msgstr "Корисничко име"
+
+#: ../src/bookmarkdialog.c:355
+msgid "Other information"
+msgstr "Други подаци"
+
+#: ../src/bookmarkdialog.c:412
+msgid "Edit Bookmarks"
+msgstr "Уреди забелешке"
+
+#: ../src/bookmarkeditdialog.c:234
+msgid "You must enter a name for the bookmark."
+msgstr "Морате унети име за забелешку."
+
+#: ../src/bookmarkeditdialog.c:253
+msgid "The entered bookmark name is already in use. Please choose another one."
+msgstr "Унето име забелешке је већ у употреби. Молим, одаберите неко друго."
+
+#: ../src/bookmarkeditdialog.c:266
+msgid "You must enter a server address or name."
+msgstr "морате унети адресу даваоца услуга или име."
+
+#: ../src/bookmarkeditdialog.c:277
+msgid "You must enter a share name."
+msgstr "Морате унети име дељења."
+
+#: ../src/bookmarkeditdialog.c:288
+msgid "You must enter a valid URI for the connection."
+msgstr "Морате унети исправни УРИ за повезивање."
+
+#: ../src/bookmarkeditdialog.c:584
+msgid "_Device:"
+msgstr "_Уређај:"
+
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
+msgid "_Server:"
+msgstr "_Даваоц услуга:"
+
+#: ../src/bookmarkeditdialog.c:897
+msgid "Create Bookmark"
+msgstr "Направи забелешку"
+
+#: ../src/bookmarkeditdialog.c:904
+msgid "Edit Bookmark"
+msgstr "Уреди забелешку"
+
+#: ../src/bookmarkeditdialog.c:912
+msgid "Connect to Server"
+msgstr "Повежи се са сервером"
+
+#: ../src/bookmarkeditdialog.c:1036
+msgid "_Bookmark name:"
+msgstr "_Име забелешке:"
+
+#: ../src/bookmarkeditdialog.c:1044
+msgid "_Color:"
+msgstr "_Боја:"
+
+#: ../src/bookmarkeditdialog.c:1055
+msgid "Au_to-Connect"
+msgstr "Самостално повезивање"
+
+#: ../src/bookmarkeditdialog.c:1066
+msgid "Service t_ype:"
+msgstr "в_рста услуге:"
+
+#: ../src/bookmarkeditdialog.c:1091
+msgid "Set the port to 0 to use the default port"
+msgstr "Постави прикључник на 0 да би се користио задати прикључник"
+
+#: ../src/bookmarkeditdialog.c:1093
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr ""
+"Ово се не користи заправо за качење, већ је неопходно за отварање тачке "
+"качења у прегледнику датотека"
+
+#: ../src/bookmarkeditdialog.c:1099
+msgid "_Location (URI):"
+msgstr "_Место (адреса):"
+
+#: ../src/bookmarkeditdialog.c:1101
+msgid "_Folder:"
+msgstr "_Фасцикла:"
+
+#: ../src/bookmarkeditdialog.c:1102
+msgid "P_ath:"
+msgstr "Пу_тања:"
+
+#: ../src/bookmarkeditdialog.c:1103
+msgid "_User Name:"
+msgstr "_Корисничко име:"
+
+#: ../src/bookmarkeditdialog.c:1104
+msgid "Optional information:"
+msgstr "Додатне подаци:"
+
+#: ../src/bookmarkeditdialog.c:1105
+msgid "_Port:"
+msgstr "_Прикључник:"
+
+#: ../src/bookmarkeditdialog.c:1106
+msgid "_Domain:"
+msgstr "_Домен:"
+
+#: ../src/bookmarkeditdialog.c:1107
+msgid "_Share:"
+msgstr "_Дељење:"
+
+#: ../src/preferencesdialog.c:147
+msgid "Icons"
+msgstr "иконе"
+
+#: ../src/preferencesdialog.c:148
+msgid "Text"
+msgstr "текст"
+
+#: ../src/preferencesdialog.c:149
+msgid "Both"
+msgstr "оба"
+
+#: ../src/preferencesdialog.c:150
+msgid "Both horizontal"
+msgstr "оба водоравно"
+
+#: ../src/preferencesdialog.c:169
+msgid "Horizontal"
+msgstr "водоравно"
+
+#: ../src/preferencesdialog.c:170
+msgid "Vertical"
+msgstr "усправно"
+
+#: ../src/preferencesdialog.c:189
+msgid "Symbols"
+msgstr "знаци"
+
+#: ../src/preferencesdialog.c:190
+msgid "Detailed List"
+msgstr "детаљан списак"
+
+#: ../src/preferencesdialog.c:333
+msgid "General"
+msgstr "Опште"
+
+#: ../src/preferencesdialog.c:338
+msgid "_File Manager"
+msgstr "Управник _датотека"
+
+#: ../src/preferencesdialog.c:346
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr ""
+"Унесите име програма који ће се користити за отварање или преглед тачака "
+"монтирања"
+
+#: ../src/preferencesdialog.c:355
+msgid "_Terminal"
+msgstr "_Терминал"
+
+#: ../src/preferencesdialog.c:363
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr "Унеси име програма за отварање тачака качења у трминалу"
+
+#: ../src/preferencesdialog.c:372
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "Време за самостално повезивање _забелешки"
+
+#: ../src/preferencesdialog.c:378
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"Колико често покушавати самостално повезивање, у секундама. Нула онемогућава "
+"проверу."
+
+#: ../src/preferencesdialog.c:389
+msgid "Interface"
+msgstr "Сучеље"
+
+#: ../src/preferencesdialog.c:391
+msgid "_Save window position and geometry"
+msgstr "_Чува положај прозора и размеру"
+
+#: ../src/preferencesdialog.c:392
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "Чува положај прозора и размеру и враћа их при покретању"
+
+#: ../src/preferencesdialog.c:395
+msgid "Show status _icon in the Notification Area"
+msgstr "Приказује _икону стања у обавештајној области"
+
+#: ../src/preferencesdialog.c:398
+msgid "Start _minimized in the Notification Area"
+msgstr "Покреће се умањено у обавештајној области"
+
+#: ../src/preferencesdialog.c:403
+msgid "Show side panel"
+msgstr "Приказује бочну површ"
+
+#: ../src/preferencesdialog.c:404
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"Да ли приказује бочну површ за преглед местне мреже за доступна Самба/"
+"Виндоус дељења и списка забелешки"
+
+#: ../src/preferencesdialog.c:407
+msgid "Show auto-connect error messages"
+msgstr "Приказује поруке грешака самосталног повезивања"
+
+#: ../src/preferencesdialog.c:408
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+"Да ли приказује дијалог поруке грешака кад самостално повезивање не успе"
+
+#: ../src/preferencesdialog.c:414
+msgid "_Connection List Mode"
+msgstr "Начин списка _веза"
+
+#: ../src/preferencesdialog.c:427
+msgid "Toolbar"
+msgstr "трака алата"
+
+#: ../src/preferencesdialog.c:429
+msgid "Show _toolbar"
+msgstr "приказује _траку алата"
+
+#: ../src/preferencesdialog.c:435
+msgid "St_yle"
+msgstr "Нач_ин"
+
+#: ../src/preferencesdialog.c:446
+msgid "_Orientation"
+msgstr "_Усмерење"
+
+#: ../src/preferencesdialog.c:507
+msgid "Preferences"
+msgstr "Поставке"
+
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "Нема забележака"
+
+#: ../src/backendgvfs.c:239
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s\n"
+"Bookmark: %s"
+msgstr ""
+"<b>%s</b>\n"
+"\n"
+"Адреса: %s\n"
+"Повезан: да\n"
+"Врста услуге: %s\n"
+"Забелешка: %s"
+
+#: ../src/backendgvfs.c:254
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Уникс уређај: %s</b>"
+
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
+msgid "unknown"
+msgstr "непознато"
+
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "Повезивање са „%s“ неуспело."
+
+#: ../src/backendgvfs.c:496
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "Прекид везе са „%s“ није успео."
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "Повезивање"
+
+#: ../src/browsenetworkpanel.c:188
+msgid "No Workgroups found"
+msgstr "Нема пронађених радних група"
+
+#: ../src/browsenetworkpanel.c:199
+msgid "No Shares found"
+msgstr "Нема пронађених дељења"
+
+#: ../src/browsenetworkpanel.c:204
+msgid "No Hosts found"
+msgstr "Нема пронађених давалаца услуга"
+
+#: ../src/browsenetworkpanel.c:490
+msgid "Connect to the selected share"
+msgstr "Повезује се са одабраним дељењем"
+
+#: ../src/browsenetworkpanel.c:498
+msgid "Create a bookmark from the selected share"
+msgstr "Прави забелешку од одабраног дељења"
+
+#: ../src/browsenetworkpanel.c:507
+msgid "Refresh the network list"
+msgstr "Освежава списак мрежа"
+
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+msgid "Close panel"
+msgstr "Затвара површ"
+
+#: ../src/bookmarkpanel.c:92
+msgid "No bookmarks"
+msgstr "Нема забелешки"
+
+#: ../src/bookmarkpanel.c:256
+msgid "Connect to the selected bookmark"
+msgstr "Повежи се са изабраном забелешком"
+
+#: ../gigolo.desktop.in.h:1
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Лагано сучеље за лако повeзивање са удаљеним системима датотека"
