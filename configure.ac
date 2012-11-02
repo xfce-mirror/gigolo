@@ -16,7 +16,6 @@ AC_PROG_CC
 
 AC_PROG_INSTALL
 AC_PROG_LN_S
-IT_PROG_INTLTOOL
 
 
 # GTK checks
@@ -47,6 +46,7 @@ else
 fi
 
 AM_GLIB_GNU_GETTEXT
+IT_PROG_INTLTOOL
 # workaround for intltool bug (http://bugzilla.gnome.org/show_bug.cgi?id=490845)
 if test "x$MSGFMT" = "xno"; then
 	AC_MSG_ERROR([msgfmt not found. Please install the gettext package.])
