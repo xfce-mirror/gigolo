@@ -22,7 +22,6 @@ For compiling Gigolo, you will need the GTK (>= 2.12.0) libraries
 and header files. You will also need its dependency libraries and header
 files, such as Pango, Cairo, Glib and ATK. All these files are available at
 http://www.gtk.org.
-You also need Python for the included Waf build system.
 
 Furthermore you need, of course, a C compiler as well as the intltool package.
 
@@ -34,27 +33,16 @@ building the code is easy:
 
 Run the following commands::
 
-    $ ./waf configure
-    $ ./waf build
+    $ ./configure
+    $ make
     (maybe as root)
-    % ./waf install
+    % make install
 
-To get a list of available options to customize your build, enable debugging
-or to use a different installation prefix, run::
-
-    $ ./waf help
-
-
-Alternative installation using autotools
-````````````````````````````````````````
-
-You can use the usual autotools chain to configure, compile and install
-the sources by running::
+If there is no configure script, you probably need to run::
 
     $ ./autogen.sh
 
-in the source directory.
-This is mainly intended for distro packagers and people with special needs.
+in the source directory before
 
 
 Usage
@@ -83,8 +71,6 @@ Gigolo is distributed under the terms of the GNU General Public License
 as published by the Free Software Foundation; version 2 of the license.
 A copy of this license can be found in the file COPYING included with
 the source code of this program.
-The included Waf build system ("waf") is licensed under the
-New BSD License (http://www.opensource.org/licenses/bsd-license.php).
 
 
 Ideas, questions, patches and bug reports
