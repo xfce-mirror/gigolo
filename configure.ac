@@ -37,8 +37,7 @@ GETTEXT_PACKAGE=gigolo
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package.])
 
-if [ "${LINGUAS}" ]
-then
+if test "${LINGUAS}"; then
 	ALL_LINGUAS="${LINGUAS}"
 else
 	if test -z "$conf_dir" ; then
