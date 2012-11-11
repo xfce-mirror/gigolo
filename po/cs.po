@@ -3,40 +3,45 @@
 # This file is distributed under the same license as Gigolo.
 # Jan Hrdina <jan.hrdka@gmail.com>, 2009.
 # Michal Várady <miko.vaji@gmail.com>, 2010-2012.
-#
-#
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-28 15:06+0000\n"
+"POT-Creation-Date: 2012-11-11 12:48+0000\n"
 "PO-Revision-Date: 2012-04-28 20:15+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
-"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Připojit všechny záložky označené jako 'automaticky připojované' a ukončit"
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Ignorovat spuštěné instance, vynutit otevření nové instance"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Vypsat seznam podporovaných schémat URI"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Podrobné informace"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Zobrazit informace o verzi"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- jednoduché rozhraní pro snadné připojení ke vzdáleným systémům souborů"
+msgstr ""
+"- jednoduché rozhraní pro snadné připojení ke vzdáleným systémům souborů"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -70,8 +75,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (zabezpečený)"
 
-#: ../src/common.c:93
-#: ../src/window.c:1508
+#: ../src/common.c:93 ../src/window.c:1508
 msgid "Network"
 msgstr "Síť"
 
@@ -93,8 +97,11 @@ msgid "Connecting to \"%s\""
 msgstr "Připojování k \"%s\""
 
 #: ../src/window.c:430
-msgid "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "Jednoduché rozhraní pro snadné připojení k místním a vzdáleným systémům souborů"
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr ""
+"Jednoduché rozhraní pro snadné připojení k místním a vzdáleným systémům "
+"souborů"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -106,24 +113,19 @@ msgstr "Jan Hrdina <jan.hrdka@gmail.com>, Michal Várady <miko.vaji@gmail.com>"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Aplikace Gigolo může používat následující protokoly poskytované systémem souborů GVfs:"
+msgstr ""
+"Aplikace Gigolo může používat následující protokoly poskytované systémem "
+"souborů GVfs:"
 
-#: ../src/window.c:579
-#: ../src/window.c:638
+#: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Provedení příkazu \"%s\" se nezdařilo"
 
-#: ../src/window.c:580
-#: ../src/window.c:613
-#: ../src/window.c:626
-#: ../src/window.c:639
-#: ../src/window.c:797
-#: ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:265
-#: ../src/bookmarkeditdialog.c:276
-#: ../src/bookmarkeditdialog.c:287
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
 msgid "Error"
 msgstr "Chyba"
 
@@ -140,9 +142,7 @@ msgstr "Není dostupné výchozí umístění pro \"%s\""
 msgid "Edit _Bookmark"
 msgstr "Upravit záložku"
 
-#: ../src/window.c:707
-#: ../src/window.c:1289
-#: ../src/browsenetworkpanel.c:453
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Vytvořit _záložku"
@@ -239,13 +239,11 @@ msgstr "Vyberte záložku k připojení"
 msgid "Connected"
 msgstr "Připojen"
 
-#: ../src/window.c:1421
-#: ../src/bookmarkdialog.c:315
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "Typ služby"
 
-#: ../src/window.c:1429
-#: ../src/bookmarkdialog.c:307
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "Název"
 
@@ -253,9 +251,7 @@ msgstr "Název"
 msgid "Bookmarks"
 msgstr "Záložky"
 
-#: ../src/window.c:1556
-#: ../src/window.c:1632
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -265,12 +261,18 @@ msgstr "Přesunout nyní?"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Aplikace Gigolo potřebuje před spuštěním přesunout starý adresář s nastavením."
+msgstr ""
+"Aplikace Gigolo potřebuje před spuštěním přesunout starý adresář s "
+"nastavením."
 
 #: ../src/settings.c:703
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "Starý adresář s nastavením \"%s\" nemohl být přesunut do \"%s\" (%s). Přesuňte jej do nového umístění ručně."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"Starý adresář s nastavením \"%s\" nemohl být přesunut do \"%s\" (%s). "
+"Přesuňte jej do nového umístění ručně."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -348,8 +350,7 @@ msgstr "Je nutné zadat platný identifikátor URI pro připojení."
 msgid "_Device:"
 msgstr "_Zařízení:"
 
-#: ../src/bookmarkeditdialog.c:586
-#: ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
 msgstr "_Server:"
 
@@ -386,8 +387,12 @@ msgid "Set the port to 0 to use the default port"
 msgstr "Pro použití výchozího portu nastavte hodnotu portu na 0"
 
 #: ../src/bookmarkeditdialog.c:1093
-msgid "This is not used for the actual mount, only necessary for opening the mount point in a file browser"
-msgstr "Tato volba se pro skutečné připojení nepoužívá, je pouze nutná k otevření bodu připojení ve správci souborů"
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr ""
+"Tato volba se pro skutečné připojení nepoužívá, je pouze nutná k otevření "
+"bodu připojení ve správci souborů"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -471,15 +476,20 @@ msgstr "_Terminál"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr "Zadejte název programu používaného pro otevření přípojných bodů v terminálu"
+msgstr ""
+"Zadejte název programu používaného pro otevření přípojných bodů v terminálu"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Interval automatického připojení záložky"
 
 #: ../src/preferencesdialog.c:378
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "Četnost automaticky opakovaných připojení záložek, v sekundách. Nula opakované připojování zakáže."
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"Četnost automaticky opakovaných připojení záložek, v sekundách. Nula "
+"opakované připojování zakáže."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -506,16 +516,22 @@ msgid "Show side panel"
 msgstr "Zobrazit postranní panel"
 
 #: ../src/preferencesdialog.c:404
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "Zobrazování postranního panelu pro prohlížení dostupných sdílených složek Samba a Windows v lokální síti a seznamu záložek"
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"Zobrazování postranního panelu pro prohlížení dostupných sdílených složek "
+"Samba a Windows v lokální síti a seznamu záložek"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
 msgstr "Zobrazit chybové zprávy automatického připojení"
 
 #: ../src/preferencesdialog.c:408
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr "Zobrazování chybových dialogů při selhání automatického připojení záložek"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgstr ""
+"Zobrazování chybových dialogů při selhání automatického připojení záložek"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -567,13 +583,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Zařízení Unixu: %s</b>"
 
-#: ../src/backendgvfs.c:453
-#: ../src/backendgvfs.c:492
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "neznámý"
 
-#: ../src/backendgvfs.c:459
-#: ../src/backendgvfs.c:567
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Připojení k \"%s\" se nezdařilo."
@@ -611,8 +625,7 @@ msgstr "Vytvořit záložku z vybrané sdílené složky"
 msgid "Refresh the network list"
 msgstr "Obnovit seznam sítí"
 
-#: ../src/browsenetworkpanel.c:518
-#: ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr "Zavřít panel"
 
