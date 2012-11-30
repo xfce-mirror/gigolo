@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-17 06:21+0000\n"
+"POT-Creation-Date: 2012-11-30 11:33+0000\n"
 "PO-Revision-Date: 2012-08-29 13:46+0200\n"
 "Last-Translator: Isratine Citizen <genghiskhan@gmx.ca>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "X-Poedit-Language: Hebrew\n"
 
 # cli
@@ -80,8 +80,7 @@ msgstr "‫WebDAV‏"
 msgid "WebDAV (secure)"
 msgstr "‏WebDAV (מאובטח)"
 
-#: ../src/common.c:93
-#: ../src/window.c:1508
+#: ../src/common.c:93 ../src/window.c:1508
 msgid "Network"
 msgstr "רשת עבודה"
 
@@ -103,7 +102,8 @@ msgid "Connecting to \"%s\""
 msgstr "מתחבר כעת אל \"%s\""
 
 #: ../src/window.c:430
-msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "מגשר־חזיתי פשוט להתחברות/לעגינה אל מערכות קבצים מקומיות ומרוחקות בקלות"
 
 #: ../src/window.c:431
@@ -120,22 +120,15 @@ msgstr ""
 "ביכולתו של Gigolo לעשות שימוש בפרוטוקולים\n"
 "הבאים שמסופקים באמצעות GVfs:"
 
-#: ../src/window.c:579
-#: ../src/window.c:638
+#: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
 msgstr "הפקודה '%s' נכשלה"
 
-#: ../src/window.c:580
-#: ../src/window.c:613
-#: ../src/window.c:626
-#: ../src/window.c:639
-#: ../src/window.c:797
-#: ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:265
-#: ../src/bookmarkeditdialog.c:276
-#: ../src/bookmarkeditdialog.c:287
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
 msgid "Error"
 msgstr "שגיאה"
 
@@ -152,9 +145,7 @@ msgstr "אין מקום משתמט עבור \"%s\""
 msgid "Edit _Bookmark"
 msgstr "ע_ריכת סימנייה"
 
-#: ../src/window.c:707
-#: ../src/window.c:1289
-#: ../src/browsenetworkpanel.c:453
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "יצירת _סימנייה"
@@ -251,13 +242,11 @@ msgstr "בחירת סימניה להתחבר אליה"
 msgid "Connected"
 msgstr "מחובר"
 
-#: ../src/window.c:1421
-#: ../src/bookmarkdialog.c:315
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "סוג שירות"
 
-#: ../src/window.c:1429
-#: ../src/bookmarkdialog.c:307
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "שם"
 
@@ -265,9 +254,7 @@ msgstr "שם"
 msgid "Bookmarks"
 msgstr "סימניות"
 
-#: ../src/window.c:1556
-#: ../src/window.c:1632
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
 msgid "Gigolo"
 msgstr "‏Gigolo"
 
@@ -281,8 +268,12 @@ msgstr "על Gigolo להעביר את מדור התצורה הישן שלך לפ
 
 #: ../src/settings.c:703
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
-msgstr "מדור התצורה הישן שלך \"%s\" לא יכול היה לעבור אל \"%s\" (%s). נא להעביר באופן ידני את המדור אל המיקום החדש."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr ""
+"מדור התצורה הישן שלך \"%s\" לא יכול היה לעבור אל \"%s\" (%s). נא להעביר "
+"באופן ידני את המדור אל המיקום החדש."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -360,8 +351,7 @@ msgstr "עליך להזין כתובת URI תקפה עבור החיבור."
 msgid "_Device:"
 msgstr "ה_תקן:"
 
-#: ../src/bookmarkeditdialog.c:586
-#: ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
 msgstr "_שרת:"
 
@@ -398,8 +388,10 @@ msgid "Set the port to 0 to use the default port"
 msgstr "הגדרת הפתחה אל 0 כדי לעשות שימוש בפתחה המשתמטת"
 
 #: ../src/bookmarkeditdialog.c:1093
-msgid "This is not used for the actual mount, only necessary for opening the mount point in a file browser"
-msgstr ""
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr "משתנים אלה אינם משמשים לצורך העיגון עצמו, הם רק משמשים לפתיחת נקודת העיגון בסייר הקבצים"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -490,8 +482,11 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "תדירות התחברות-אוטומטית של _סימנייה"
 
 #: ../src/preferencesdialog.c:378
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
-msgstr "באיזו תכיפות לנסות לחבר סימניות באופן אוטומטי, בשניות. אפס מנטרל בידוק."
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr ""
+"באיזו תכיפות לנסות לחבר סימניות באופן אוטומטי, בשניות. אפס מנטרל בידוק."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -518,15 +513,20 @@ msgid "Show side panel"
 msgstr "הצגת סרגל צד"
 
 #: ../src/preferencesdialog.c:404
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
-msgstr "מתי להציג לוח צד עבור עיון ברשת העבודה המקומית עבור חלקי Share של Samba/Windows ועבור רשימת סימניות"
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+"מתי להציג לוח צד עבור עיון ברשת העבודה המקומית עבור חלקי Share של Samba/"
+"Windows ועבור רשימת סימניות"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
 msgstr "הצגת הודעות שגיאה עבור התחברות-אוטומטית"
 
 #: ../src/preferencesdialog.c:408
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks fails"
 msgstr "מתי להציג דו־שיח הודעת שגיאה כאשר התחברות-אוטומטית של סימניות נכשל"
 
 #: ../src/preferencesdialog.c:414
@@ -579,13 +579,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>התקן Unix: ‫%s</b>"
 
-#: ../src/backendgvfs.c:453
-#: ../src/backendgvfs.c:492
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "לא ידוע"
 
-#: ../src/backendgvfs.c:459
-#: ../src/backendgvfs.c:567
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "התחברות אל \"%s\" נכשלה."
@@ -597,7 +595,7 @@ msgstr "התנתקות מן \"%s\" נכשלה."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
-msgstr ""
+msgstr "מתבצעת התחברות"
 
 #: ../src/browsenetworkpanel.c:188
 msgid "No Workgroups found"
@@ -623,8 +621,7 @@ msgstr "יצירת סימנייה מן ה־Share הנבחר"
 msgid "Refresh the network list"
 msgstr "רענון רשימת רשת עבודה"
 
-#: ../src/browsenetworkpanel.c:518
-#: ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr "סגירת לוח"
 
@@ -639,4 +636,3 @@ msgstr "התחברות אל הסימנייה הנבחרת"
 #: ../gigolo.desktop.in.h:1
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "מגשר־חזיתי פשוט להתחברות אל מערכות קבצים מרוחקות בקלות"
-
