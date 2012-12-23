@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gigolo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-30 02:45+0000\n"
+"POT-Creation-Date: 2012-12-23 05:15+0000\n"
 "PO-Revision-Date: 2012-05-13 11:52-0600\n"
 "Last-Translator: Sergio García <oigres200@gmail.com>\n"
 "Language-Team: Spanish/es <xfce-i18n@xfce.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
-msgstr "Mostrar una lista de esquemas URI soportados"
+msgstr "Imprimir una lista de esquemas URI soportados"
 
 #: ../src/main.c:50
 msgid "Be verbose"
@@ -38,7 +38,7 @@ msgstr "Salida detallada"
 
 #: ../src/main.c:51
 msgid "Show version information"
-msgstr "Mostrar información de versión"
+msgstr "Visualizar información de versión"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
@@ -142,7 +142,7 @@ msgstr "Comando de terminal inválido"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "No hay ubicación predeterminada para \"%s\""
+msgstr "No hay ubicación predeterminada para «%s»"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -171,7 +171,7 @@ msgstr "_Ver"
 
 #: ../src/window.c:1285
 msgid "_Help"
-msgstr "A_yuda"
+msgstr "Ay_uda"
 
 #: ../src/window.c:1291
 msgid "_Edit Bookmarks"
@@ -524,7 +524,7 @@ msgstr "Iniciar _minimizado en el área de notificación"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
-msgstr "Mostrar panel lateral"
+msgstr "Visualizar panel lateral"
 
 #: ../src/preferencesdialog.c:404
 msgid ""
@@ -536,7 +536,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
-msgstr "Mostrar mensajes de error de auto-conexión"
+msgstr "Mostrar mensajes de error de autoconexión"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
@@ -546,7 +546,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
-msgstr "_Conexión modo lista"
+msgstr "Lista de modo de _conexión"
 
 #: ../src/preferencesdialog.c:427
 msgid "Toolbar"
@@ -554,7 +554,7 @@ msgstr "Barra de herramientas"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "Mostrar la _barra de herramientas"
+msgstr "Visualizar la _barra de herramientas"
 
 #: ../src/preferencesdialog.c:435
 msgid "St_yle"
@@ -600,12 +600,12 @@ msgstr "desconocido"
 #: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Falló la conexión a \"%s\" ."
+msgstr "Falló la conexión a «%s»."
 
 #: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Falló la desconexión de \"%s\"."
+msgstr "Falló la desconexión de «%s»."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
