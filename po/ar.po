@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # mohammad <malham1@gmail.com>, 2012.
 # محمد الحرقان <malham1@gmail.com>, 2012.
+# كريم أولاد الشلحة <herr.linux88@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: Gogolo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-11-09 12:39+0000\n"
-"PO-Revision-Date: 2012-11-09 19:30+0300\n"
-"Last-Translator: محمد الحرقان <malham1@gmail.com>\n"
-"Language-Team: http://www.vertaal.com.ar/files/factory/ar/list/\n"
+"PO-Revision-Date: 2013-02-03 13:08+0100\n"
+"Last-Translator: كريم أولاد الشلحة <herr.linux88@gmail.com>\n"
+"Language-Team: فريق تعريب إكسفس\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,7 +52,7 @@ msgstr "أجهزة يونكس"
 
 #: ../src/common.c:79
 msgid "Windows Share"
-msgstr "مشاركة Windows"
+msgstr "مشاركة وندوز"
 
 #: ../src/common.c:81
 msgid "FTP"
@@ -109,7 +110,9 @@ msgstr "حقوق الطبع والنشر 2008-2011 إنريكو تروغر"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr "Karim Oulad Chalha محمد الحرقان"
+msgstr "فريق تعريب إكسفس"
+"كريم أولاد الشلحة"
+"محمد الحرقان"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
