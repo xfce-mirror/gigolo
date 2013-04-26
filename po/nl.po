@@ -95,7 +95,7 @@ msgstr "Aangepaste locatie"
 #: ../src/window.c:262
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Verbinding aan het maken met  '%s\'"
+msgstr "Verbinding aan het maken met  '%s'"
 
 #: ../src/window.c:430
 msgid ""
