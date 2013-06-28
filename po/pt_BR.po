@@ -2,19 +2,21 @@
 # Copyright (C) 2009 THE gigolo'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gigolo package.
 # Filipe Rosset <rosset.filipe@gmail.com>, 2009.
-# 
+# Rafael Ferreira <rafael.f.f1@gmail.com>, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gigolo 0.2.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-29 10:42+0000\n"
-"PO-Revision-Date: 2009-12-14 16:59-0500\n"
-"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
-"Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
+"PO-Revision-Date: 2013-06-26 19:33-0300\n"
+"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <xfce-i18n-br@xfce.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
+"X-Generator: Poedit 1.5.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/main.c:47
@@ -389,7 +391,9 @@ msgstr "Defina a porta para 0 para usar a porta padrão"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Isso não é usado pelo mount, sendo somente necessário para abrir os pontos de montagem em um navegador de arquivos"
+msgstr ""
+"Isso não é usado pelo mount, sendo somente necessário para abrir os pontos "
+"de montagem em um navegador de arquivos"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -573,7 +577,8 @@ msgstr ""
 "\n"
 "URI: %s\n"
 "Conectado: Sim\n"
-"Tipo do serviço: %s"
+"Tipo do serviço: %s\n"
+"Favorito: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
