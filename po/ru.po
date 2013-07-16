@@ -1,0 +1,620 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Apps\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-07-16 10:45+0000\n"
+"Last-Translator: Aleksandr P <davian818@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/xfce/language/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Подключить все автоматически подключаемые закладки и выйти."
+
+#: ../src/main.c:48
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Игнорировать запущенные копии, запустить новую копию"
+
+#: ../src/main.c:49
+msgid "Print a list of supported URI schemes"
+msgstr "Вывести список поддерживаемых схем URI"
+
+#: ../src/main.c:50
+msgid "Be verbose"
+msgstr "Подробный вывод"
+
+#: ../src/main.c:51
+msgid "Show version information"
+msgstr "Информация о версии"
+
+#: ../src/main.c:112
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- простой интерфейс для подключения удаленных файловых систем"
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr "Устройство Unix"
+
+#: ../src/common.c:79
+msgid "Windows Share"
+msgstr "Общая папка Windows"
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr "Obex"
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr "WebDAV (поддержка безопасности)"
+
+#: ../src/common.c:93 ../src/window.c:1508
+msgid "Network"
+msgstr "Сеть"
+
+#: ../src/common.c:95
+msgid "Archive"
+msgstr "Архив"
+
+#: ../src/common.c:97
+msgid "Photos"
+msgstr "Фотографии"
+
+#: ../src/common.c:99
+msgid "Custom Location"
+msgstr "Другой тип"
+
+#: ../src/window.c:262
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "Подключение к «%s»"
+
+#: ../src/window.c:430
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "Простой интерфейс для подключения локальных и удаленных файловых систем"
+
+#: ../src/window.c:431
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Copyright 2008-2011 Энрико Трёгер"
+
+#: ../src/window.c:434
+msgid "translator-credits"
+msgstr "Alexandr Ponomarenko, 2009"
+
+#: ../src/window.c:466
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Gigolo может использовать следующие предоставляемые GVfs протоколы:"
+
+#: ../src/window.c:579 ../src/window.c:638
+#, c-format
+msgid "The command '%s' failed"
+msgstr "При выполнении команды '%s' произошел сбой"
+
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../src/window.c:613
+msgid "Invalid terminal command"
+msgstr "Неверная команда-терминал"
+
+#: ../src/window.c:625
+#, c-format
+msgid "No default location available for \"%s\""
+msgstr "Для «%s» нет местонахождения по умолчанию"
+
+#: ../src/window.c:705
+msgid "Edit _Bookmark"
+msgstr "Редактировать закладку"
+
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
+msgid "Create _Bookmark"
+msgstr "Создать _закладку"
+
+#: ../src/window.c:1281
+msgid "_File"
+msgstr "_Файл"
+
+#: ../src/window.c:1282
+msgid "_Edit"
+msgstr "_Правка"
+
+#: ../src/window.c:1283
+msgid "_Actions"
+msgstr "_Действия"
+
+#: ../src/window.c:1284
+msgid "_View"
+msgstr "_Вид"
+
+#: ../src/window.c:1285
+msgid "_Help"
+msgstr "_Справка"
+
+#: ../src/window.c:1291
+msgid "_Edit Bookmarks"
+msgstr "П_равка закладок"
+
+#: ../src/window.c:1292
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Открывает Менеджер закладок для их добавления, изменения или удаления"
+
+#: ../src/window.c:1296
+msgid "Disconnect the selected resource"
+msgstr "Отключить выбранный ресурс"
+
+#: ../src/window.c:1298
+msgid "Open the selected resource with a file manager"
+msgstr "Открыть выбранный ресурс в менеджере файлов"
+
+#: ../src/window.c:1299
+msgid "Open in _Terminal"
+msgstr "Открыть в _терминале"
+
+#: ../src/window.c:1300
+msgid "Start a terminal from here"
+msgstr "Открыть окно терминала в данном каталоге"
+
+#: ../src/window.c:1301
+msgid "Copy _URI"
+msgstr "Копировать _адрес"
+
+#: ../src/window.c:1302
+msgid "Quit Gigolo"
+msgstr "Выход из Gigolo"
+
+#: ../src/window.c:1303
+msgid "Online Help"
+msgstr "Справка в _Интернете"
+
+#: ../src/window.c:1304
+msgid "Supported Protocols"
+msgstr "Поддерживаемые протоколы"
+
+#: ../src/window.c:1310
+msgid "Side _Panel"
+msgstr "_Боковая панель"
+
+#: ../src/window.c:1312
+msgid "_Toolbar"
+msgstr "Панель _инструментов"
+
+#: ../src/window.c:1314
+msgid "Status _Icon"
+msgstr "_Значок состояния"
+
+#: ../src/window.c:1320
+msgid "View as _Symbols"
+msgstr "_Список"
+
+#: ../src/window.c:1321
+msgid "View as _Detailed List"
+msgstr "_Таблица"
+
+#: ../src/window.c:1330
+msgid "_Bookmarks"
+msgstr "_Закладки"
+
+#: ../src/window.c:1330
+msgid "Choose a bookmark to connect to"
+msgstr "Выберите ресурс для подключения"
+
+#: ../src/window.c:1412
+msgid "Connected"
+msgstr "Подключен"
+
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
+msgid "Service Type"
+msgstr "Тип службы"
+
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
+msgid "Name"
+msgstr "Имя"
+
+#: ../src/window.c:1500
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:694
+msgid "Move it now?"
+msgstr "Переместить его сейчас?"
+
+#: ../src/settings.c:695
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Перед началом работы необходимо переместить каталог настроек."
+
+#: ../src/settings.c:703
+#, c-format
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr "Не удалось переместить прежний каталог настроек \"%s\" в \"%s\" (%s). Пожалуйста, переместите его в новое местоположение вручную."
+
+#: ../src/settings.c:706
+msgid "Warning"
+msgstr "Внимание"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "Подключиться"
+
+#: ../src/bookmarkdialog.c:95
+#, c-format
+msgid "Domain: %s"
+msgstr "Домен: %s"
+
+#: ../src/bookmarkdialog.c:100
+#, c-format
+msgid "Share: %s"
+msgstr "Папка: %s"
+
+#: ../src/bookmarkdialog.c:106
+#, c-format
+msgid "Folder: %s"
+msgstr "Каталог: %s"
+
+#: ../src/bookmarkdialog.c:112
+#, c-format
+msgid "Path: %s"
+msgstr "Путь: %s"
+
+#: ../src/bookmarkdialog.c:323
+msgid "Host"
+msgstr "Сервер"
+
+#: ../src/bookmarkdialog.c:331
+msgid "Port"
+msgstr "Порт"
+
+#: ../src/bookmarkdialog.c:339
+msgid "Auto-Connect"
+msgstr "Подключаться автоматически"
+
+#: ../src/bookmarkdialog.c:347
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: ../src/bookmarkdialog.c:355
+msgid "Other information"
+msgstr "Прочие сведения"
+
+#: ../src/bookmarkdialog.c:412
+msgid "Edit Bookmarks"
+msgstr "Закладки"
+
+#: ../src/bookmarkeditdialog.c:234
+msgid "You must enter a name for the bookmark."
+msgstr "Укажите название закладки."
+
+#: ../src/bookmarkeditdialog.c:253
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
+msgstr "Закладка с таким названием уже существует. Укажите другое название."
+
+#: ../src/bookmarkeditdialog.c:266
+msgid "You must enter a server address or name."
+msgstr "Укажите имя или адрес сервера."
+
+#: ../src/bookmarkeditdialog.c:277
+msgid "You must enter a share name."
+msgstr "Укажите имя ресурса."
+
+#: ../src/bookmarkeditdialog.c:288
+msgid "You must enter a valid URI for the connection."
+msgstr "Необходимо указать допустимый адрес ресурса."
+
+#: ../src/bookmarkeditdialog.c:584
+msgid "_Device:"
+msgstr "_Устройство:"
+
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
+msgid "_Server:"
+msgstr "_Сервер:"
+
+#: ../src/bookmarkeditdialog.c:897
+msgid "Create Bookmark"
+msgstr "Создать закладку"
+
+#: ../src/bookmarkeditdialog.c:904
+msgid "Edit Bookmark"
+msgstr "Свойства закладки"
+
+#: ../src/bookmarkeditdialog.c:912
+msgid "Connect to Server"
+msgstr "Подключение"
+
+#: ../src/bookmarkeditdialog.c:1036
+msgid "_Bookmark name:"
+msgstr "Имя _закладки:"
+
+#: ../src/bookmarkeditdialog.c:1044
+msgid "_Color:"
+msgstr "Цвет:"
+
+#: ../src/bookmarkeditdialog.c:1055
+msgid "Au_to-Connect"
+msgstr "_Автоподключение"
+
+#: ../src/bookmarkeditdialog.c:1066
+msgid "Service t_ype:"
+msgstr "_Тип службы:"
+
+#: ../src/bookmarkeditdialog.c:1091
+msgid "Set the port to 0 to use the default port"
+msgstr "Для использования порта по умолчанию укажите 0"
+
+#: ../src/bookmarkeditdialog.c:1093
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr "Это значение не влияет на подключение и требуется только для просмотра ресурса в менеджере файлов."
+
+#: ../src/bookmarkeditdialog.c:1099
+msgid "_Location (URI):"
+msgstr "Раз_мещение (URI):"
+
+#: ../src/bookmarkeditdialog.c:1101
+msgid "_Folder:"
+msgstr "_Каталог:"
+
+#: ../src/bookmarkeditdialog.c:1102
+msgid "P_ath:"
+msgstr "_Путь:"
+
+#: ../src/bookmarkeditdialog.c:1103
+msgid "_User Name:"
+msgstr "_Имя пользователя:"
+
+#: ../src/bookmarkeditdialog.c:1104
+msgid "Optional information:"
+msgstr "Дополнительные сведения:"
+
+#: ../src/bookmarkeditdialog.c:1105
+msgid "_Port:"
+msgstr "_Порт:"
+
+#: ../src/bookmarkeditdialog.c:1106
+msgid "_Domain:"
+msgstr "_Домен:"
+
+#: ../src/bookmarkeditdialog.c:1107
+msgid "_Share:"
+msgstr "_Ресурс:"
+
+#: ../src/preferencesdialog.c:147
+msgid "Icons"
+msgstr "Значки"
+
+#: ../src/preferencesdialog.c:148
+msgid "Text"
+msgstr "Текст"
+
+#: ../src/preferencesdialog.c:149
+msgid "Both"
+msgstr "Текст и значки"
+
+#: ../src/preferencesdialog.c:150
+msgid "Both horizontal"
+msgstr "Текст справа от значков"
+
+#: ../src/preferencesdialog.c:169
+msgid "Horizontal"
+msgstr "Горизонтально"
+
+#: ../src/preferencesdialog.c:170
+msgid "Vertical"
+msgstr "Вертикально"
+
+#: ../src/preferencesdialog.c:189
+msgid "Symbols"
+msgstr "Только значки"
+
+#: ../src/preferencesdialog.c:190
+msgid "Detailed List"
+msgstr "Подробный список"
+
+#: ../src/preferencesdialog.c:333
+msgid "General"
+msgstr "Общие"
+
+#: ../src/preferencesdialog.c:338
+msgid "_File Manager"
+msgstr "Менеджер _файлов:"
+
+#: ../src/preferencesdialog.c:346
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr "Программа для просмотра и открытия подключенных ресурсов."
+
+#: ../src/preferencesdialog.c:355
+msgid "_Terminal"
+msgstr "_Терминал"
+
+#: ../src/preferencesdialog.c:363
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr "Программа для открытия подключенных ресурсовв терминале"
+
+#: ../src/preferencesdialog.c:372
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "Автоподклю_чение к закладкам"
+
+#: ../src/preferencesdialog.c:378
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr "Как часто пытаться подключиться к ресурсам в закладках (в секундах). Чтобы не подключаться к ним, укажите 0."
+
+#: ../src/preferencesdialog.c:389
+msgid "Interface"
+msgstr "Интерфейс"
+
+#: ../src/preferencesdialog.c:391
+msgid "_Save window position and geometry"
+msgstr "Сохранять размеры и положение _окон"
+
+#: ../src/preferencesdialog.c:392
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "Сохранение размера и положения окна программы"
+
+#: ../src/preferencesdialog.c:395
+msgid "Show status _icon in the Notification Area"
+msgstr "_Значок на панели уведомлений"
+
+#: ../src/preferencesdialog.c:398
+msgid "Start _minimized in the Notification Area"
+msgstr "За_пускать как значок"
+
+#: ../src/preferencesdialog.c:403
+msgid "Show side panel"
+msgstr "Боковая панель"
+
+#: ../src/preferencesdialog.c:404
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr "Отображение боковой панели для списка общих ресурсов Samba/Windows в локальной сети, и списка закладок."
+
+#: ../src/preferencesdialog.c:407
+msgid "Show auto-connect error messages"
+msgstr "Сообщения об о_шибках автоподключения"
+
+#: ../src/preferencesdialog.c:408
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Выводить сообщения об ошибке, если не удалось подключиться к закладкам"
+
+#: ../src/preferencesdialog.c:414
+msgid "_Connection List Mode"
+msgstr "_Вид списка соединений"
+
+#: ../src/preferencesdialog.c:427
+msgid "Toolbar"
+msgstr "Панель инструментов"
+
+#: ../src/preferencesdialog.c:429
+msgid "Show _toolbar"
+msgstr "_Показывать панель инструментов"
+
+#: ../src/preferencesdialog.c:435
+msgid "St_yle"
+msgstr "_Стиль"
+
+#: ../src/preferencesdialog.c:446
+msgid "_Orientation"
+msgstr "По_ложение"
+
+#: ../src/preferencesdialog.c:507
+msgid "Preferences"
+msgstr "Настройки"
+
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "(нет закладки)"
+
+#: ../src/backendgvfs.c:239
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s\n"
+"Bookmark: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nПодключено: Да\nТип службы: %s\nЗакладка: %s"
+
+#: ../src/backendgvfs.c:254
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Устройство Unix: %s</b>"
+
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
+msgid "unknown"
+msgstr "неизвестно"
+
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "Не удалось подключиться к %s."
+
+#: ../src/backendgvfs.c:496
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "Не удалось отключиться от %s."
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "Подключение"
+
+#: ../src/browsenetworkpanel.c:188
+msgid "No Workgroups found"
+msgstr "Не найдены Рабочие группы"
+
+#: ../src/browsenetworkpanel.c:199
+msgid "No Shares found"
+msgstr "Ресурсы не найдены"
+
+#: ../src/browsenetworkpanel.c:204
+msgid "No Hosts found"
+msgstr "Серверы не найдены"
+
+#: ../src/browsenetworkpanel.c:490
+msgid "Connect to the selected share"
+msgstr "Подключиться к выбранному ресурсу"
+
+#: ../src/browsenetworkpanel.c:498
+msgid "Create a bookmark from the selected share"
+msgstr "Создание закладки из выбранного ресурса."
+
+#: ../src/browsenetworkpanel.c:507
+msgid "Refresh the network list"
+msgstr "Обновить список сетей"
+
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+msgid "Close panel"
+msgstr "Закрыть панель"
+
+#: ../src/bookmarkpanel.c:92
+msgid "No bookmarks"
+msgstr "Отсутствуют"
+
+#: ../src/bookmarkpanel.c:256
+msgid "Connect to the selected bookmark"
+msgstr "Подключиться к этому ресурсу"
+
+#: ../gigolo.desktop.in.h:2
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Простой интерфейс для подключения удаленных файловых систем"
