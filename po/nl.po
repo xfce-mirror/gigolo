@@ -1,21 +1,22 @@
-# Dutch translation of the gigolo package.
-# Copyright (C) The Xfce development team.
-# This file is distributed under the same license as the gigolo package.
-# Timo Verbeek, 2009.
-# Pjotr pjotrvertaalt@gmail.com , 2011, 2013.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Pjotr pjotrvertaalt@gmail.com , 2011,2013
+# Timo Verbeek, 2009
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-07 04:03+0000\n"
-"PO-Revision-Date: 2011-12-11 12:04+0100\n"
-"Last-Translator: Pjotr pjotrvertaalt@gmail.com\n"
-"Language-Team: Dutch (Flemish)\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-09-19 14:18+0000\n"
+"Last-Translator: Pjotr123 <pjotrvertaalt@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/xfce/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl (Dutch)\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:47
@@ -40,9 +41,7 @@ msgstr "Toon versie-informatie"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- een eenvoudige grafische schil om gemakkelijk verbinding te maken met "
-"externe bestandssystemen"
+msgstr "- een eenvoudige grafische schil om makkelijk te verbinden met bestandssystemen op afstand"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -95,24 +94,20 @@ msgstr "Aangepaste locatie"
 #: ../src/window.c:262
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Verbinding aan het maken met  '%s'"
+msgstr "Verbinding aan het maken met '%s'"
 
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"Een eenvoudige grafische schil om gemakkelijk verbinding te maken met "
-"externe bestandsystemen"
+msgstr "Een eenvoudige grafische schil om gemakkelijk verbinding te maken met bestandsystemen op afstand"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Auteursrecht 2008-2010 Enrico Tröger"
+msgstr "Auteursrecht 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr ""
-"Timo Verbeek\n"
-"Pjotr"
+msgstr "Timo Verbeek\nPjotr <pjotrvertaalt@gmail.com>"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -174,9 +169,7 @@ msgstr "Be_werk bladwijzers"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Open de bladwijzerbeheerder om bladwijzers toe te voegen, te bewerken of te "
-"verwijderen"
+msgstr "Open de bladwijzerbeheerder om bladwijzers toe te voegen, te bewerken of te verwijderen"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -254,7 +247,7 @@ msgstr "Naam"
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -271,9 +264,7 @@ msgstr "Gigolo moet uw oude configuratiemap verplaatsen voordat hij begint."
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"Uw oude configuratiemap '%s' kon niet worden verplaatst naar '%s' (%s). "
-"Verplaats de map a.u.b. handmatig naar de nieuwe locatie."
+msgstr "Uw oude configuratiemap '%s' kon niet worden verplaatst naar '%s' (%s). Verplaats de map a.u.b. handmatig naar de nieuwe locatie."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -332,7 +323,8 @@ msgid "You must enter a name for the bookmark."
 msgstr "U moet een naam voor de bladwijzer invullen."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "De ingevoerde bladwijzernaam is al in gebruik. Kies a.u.b. een andere."
 
 #: ../src/bookmarkeditdialog.c:266
@@ -391,9 +383,7 @@ msgstr "Stel de poort in op 0 om de standaardpoort te gebruiken"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
-"Dit wordt niet gebruikt voor de eigenlijke aankoppeling, het is slechts "
-"benodigd voor het openen van het koppelpunt in een bestandbeheerder"
+msgstr "Dit wordt niet gebruikt voor de eigenlijke aankoppeling, het is slechts benodigd voor het openen van het koppelpunt in een bestandbeheerder"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -469,9 +459,7 @@ msgstr "_Bestandbeheerder"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Voer de naam in van een programma om te gebruiken voor het openen of "
-"bekijken van koppelpunten"
+msgstr "Voer de naam in van een programma om te gebruiken voor het openen of bekijken van koppelpunten"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -479,9 +467,7 @@ msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr ""
-"Voer de naam in van een programma om te gebruiken voor het openen van "
-"koppelpunten in een terminal"
+msgstr "Voer de naam in van een programma om te gebruiken voor het openen van koppelpunten in een terminal"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
@@ -491,9 +477,7 @@ msgstr "_Bladwijzer auto-verbind-interval"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"Hoe vaak te proberen om automatisch verbinding te maken met bladwijzers, in "
-"seconden. Nul schakelt controleren uit."
+msgstr "Hoe vaak te proberen om automatisch verbinding te maken met bladwijzers, in seconden. Nul schakelt controleren uit."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -523,9 +507,7 @@ msgstr "Toon zijbalk"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"Al dan niet een zijbalk tonen voor het doorzoeken van het lokale netwerk op "
-"beschikbare Samba/Windows-Delen en een bladwijzerlijst"
+msgstr "Al dan niet een zijbalk tonen voor het doorzoeken van het lokale netwerk op beschikbare Samba/Windows-Delen en een bladwijzerlijst"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -533,10 +515,9 @@ msgstr "Toon foutmeldingen voor auto-verbinden"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Al dan niet foutmeldingdialogen tonen als het automatisch verbinden met "
-"bladwijzers mislukt"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Al dan niet foutmeldingdialogen tonen als het automatisch verbinden met bladwijzers mislukt"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -575,17 +556,12 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b> \n"
-"\n"
-"URI:%s \n"
-"Verbonden: Ja \n"
-"Diensttype:%sBladwijzer: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nVerbonden: Ja\nDiensttype: %s\nBladwijzer: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
-msgstr "<b>Unix-apparaat:%s</b>"
+msgstr "<b>Unix-apparaat: %s</b>"
 
 #: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
@@ -641,33 +617,6 @@ msgstr "Geen bladwijzers"
 msgid "Connect to the selected bookmark"
 msgstr "Verbind met de gekozen bladwijzer"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
-"Een eenvoudige grafische schil om gemakkelijk verbinding te maken met "
-"externe bestandsystemen"
-
-#~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
-#~ "If you are unsure, use the HAL based monitor."
-#~ msgstr ""
-#~ "De HAL gebaseerde mediabeheerder-implementatie vereist het gereedschap "
-#~ "'gnome-mount' om  lokale bronnen te koppelen, zoals schijven. De Unix-"
-#~ "gebaseerde Mediabeheerder-implementatie kan deze bronnen direct koppelen "
-#~ "rechtstreeks en toont ook lijsten van lokale apparaten.\n"
-#~ "Als u er niet zeker van bent, gebruik dan de op HAL gebaseerde monitor."
-
-#~ msgid "Use _HAL based volume manager"
-#~ msgstr "Gebruik _HAL-gebaseerde mediumbeheerder"
-
-#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-#~ msgstr "<i>Het wijzigen van deze optie vereist een herstart van Gigolo.</i>"
-
-#~ msgid "Use _Unix based volume manager"
-#~ msgstr "Gebruik _Unix-gebaseerde mediumbeheerder"
-
-#~ msgid "Show 'Browse Network' side panel"
-#~ msgstr "Toon 'Verken Netwerk'-zijbalk"
+msgstr "Een eenvoudige grafische schil om makkelijk te verbinden met bestandssystemen op afstand"
