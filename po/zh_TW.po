@@ -1,0 +1,621 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Walter Cheuk <wwycheuk@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Apps\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-10-12 15:19+0000\n"
+"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/xfce/language/zh_TW/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "連接所有標為「自動連接」的書籤然後結束"
+
+#: ../src/main.c:48
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr ""
+
+#: ../src/main.c:49
+msgid "Print a list of supported URI schemes"
+msgstr ""
+
+#: ../src/main.c:50
+msgid "Be verbose"
+msgstr "詳盡"
+
+#: ../src/main.c:51
+msgid "Show version information"
+msgstr "顯示版本資訊"
+
+#: ../src/main.c:112
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr ""
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr "Unix 裝置"
+
+#: ../src/common.c:79
+msgid "Windows Share"
+msgstr "Windows 共享資源"
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr "Obex"
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr "WebDAV (安全)"
+
+#: ../src/common.c:93 ../src/window.c:1508
+msgid "Network"
+msgstr "網路"
+
+#: ../src/common.c:95
+msgid "Archive"
+msgstr "封存檔"
+
+#: ../src/common.c:97
+msgid "Photos"
+msgstr "相片"
+
+#: ../src/common.c:99
+msgid "Custom Location"
+msgstr "自訂位置"
+
+#: ../src/window.c:262
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "正在連接「%s」"
+
+#: ../src/window.c:430
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "讓您連接／掛載本機和遠端檔案系統的簡易前端程式"
+
+#: ../src/window.c:431
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Copyright 2008-2011 Enrico Tröger"
+
+#: ../src/window.c:434
+msgid "translator-credits"
+msgstr "Walter Cheuk <wwycheuk@gmail.com>, 2013."
+
+#: ../src/window.c:466
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr ""
+
+#: ../src/window.c:579 ../src/window.c:638
+#, c-format
+msgid "The command '%s' failed"
+msgstr "「%s」失敗"
+
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
+msgid "Error"
+msgstr "出錯"
+
+#: ../src/window.c:613
+msgid "Invalid terminal command"
+msgstr "終端機指令無效"
+
+#: ../src/window.c:625
+#, c-format
+msgid "No default location available for \"%s\""
+msgstr "沒有可用於「%s」的預設位置"
+
+#: ../src/window.c:705
+msgid "Edit _Bookmark"
+msgstr "編輯書籤(_B)"
+
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
+msgid "Create _Bookmark"
+msgstr "建立書籤(_B)"
+
+#: ../src/window.c:1281
+msgid "_File"
+msgstr "檔案(_F)"
+
+#: ../src/window.c:1282
+msgid "_Edit"
+msgstr "編輯(_E)"
+
+#: ../src/window.c:1283
+msgid "_Actions"
+msgstr "動作(_A)"
+
+#: ../src/window.c:1284
+msgid "_View"
+msgstr "檢視(_V)"
+
+#: ../src/window.c:1285
+msgid "_Help"
+msgstr "求助(_H)"
+
+#: ../src/window.c:1291
+msgid "_Edit Bookmarks"
+msgstr "編輯書籤(_E)"
+
+#: ../src/window.c:1292
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr ""
+
+#: ../src/window.c:1296
+msgid "Disconnect the selected resource"
+msgstr "結束連接所選資源"
+
+#: ../src/window.c:1298
+msgid "Open the selected resource with a file manager"
+msgstr "以檔案管理員開啟所選資源"
+
+#: ../src/window.c:1299
+msgid "Open in _Terminal"
+msgstr "在終端機開啟(_T)"
+
+#: ../src/window.c:1300
+msgid "Start a terminal from here"
+msgstr "在此啟動終端機"
+
+#: ../src/window.c:1301
+msgid "Copy _URI"
+msgstr "複製 _URI"
+
+#: ../src/window.c:1302
+msgid "Quit Gigolo"
+msgstr "結束 Gigolo"
+
+#: ../src/window.c:1303
+msgid "Online Help"
+msgstr "線上說明"
+
+#: ../src/window.c:1304
+msgid "Supported Protocols"
+msgstr "支援的協定"
+
+#: ../src/window.c:1310
+msgid "Side _Panel"
+msgstr "側面板(_P)"
+
+#: ../src/window.c:1312
+msgid "_Toolbar"
+msgstr "工作列(_T)"
+
+#: ../src/window.c:1314
+msgid "Status _Icon"
+msgstr "狀態圖示(_I)"
+
+#: ../src/window.c:1320
+msgid "View as _Symbols"
+msgstr "以符號方式檢視(_S)"
+
+#: ../src/window.c:1321
+msgid "View as _Detailed List"
+msgstr "以詳細清單檢視(_D)"
+
+#: ../src/window.c:1330
+msgid "_Bookmarks"
+msgstr "書籤(_B)"
+
+#: ../src/window.c:1330
+msgid "Choose a bookmark to connect to"
+msgstr "選擇書籤以連接"
+
+#: ../src/window.c:1412
+msgid "Connected"
+msgstr "已連接"
+
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
+msgid "Service Type"
+msgstr "服務類型"
+
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
+msgid "Name"
+msgstr "名稱"
+
+#: ../src/window.c:1500
+msgid "Bookmarks"
+msgstr "書籤"
+
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:694
+msgid "Move it now?"
+msgstr "要馬上移動嗎？"
+
+#: ../src/settings.c:695
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Gigolo 要在啟動前移動您的舊設定目錄。"
+
+#: ../src/settings.c:703
+#, c-format
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr "您的舊設定目錄「%s」無法移動至「%s」(%s)。請手動將目錄移至新位置。"
+
+#: ../src/settings.c:706
+msgid "Warning"
+msgstr "警告"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "連接"
+
+#: ../src/bookmarkdialog.c:95
+#, c-format
+msgid "Domain: %s"
+msgstr "網域：%s"
+
+#: ../src/bookmarkdialog.c:100
+#, c-format
+msgid "Share: %s"
+msgstr "共享資源：%s"
+
+#: ../src/bookmarkdialog.c:106
+#, c-format
+msgid "Folder: %s"
+msgstr "資料夾：%s"
+
+#: ../src/bookmarkdialog.c:112
+#, c-format
+msgid "Path: %s"
+msgstr "路徑：%s"
+
+#: ../src/bookmarkdialog.c:323
+msgid "Host"
+msgstr "主機"
+
+#: ../src/bookmarkdialog.c:331
+msgid "Port"
+msgstr "連接埠"
+
+#: ../src/bookmarkdialog.c:339
+msgid "Auto-Connect"
+msgstr "自動連接"
+
+#: ../src/bookmarkdialog.c:347
+msgid "Username"
+msgstr "使用者名稱"
+
+#: ../src/bookmarkdialog.c:355
+msgid "Other information"
+msgstr "其他資訊"
+
+#: ../src/bookmarkdialog.c:412
+msgid "Edit Bookmarks"
+msgstr "編輯書籤"
+
+#: ../src/bookmarkeditdialog.c:234
+msgid "You must enter a name for the bookmark."
+msgstr "必須為書籤輸入名稱。"
+
+#: ../src/bookmarkeditdialog.c:253
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
+msgstr "輸入的書籤名稱已在使用。請選擇其他名稱。"
+
+#: ../src/bookmarkeditdialog.c:266
+msgid "You must enter a server address or name."
+msgstr "必須輸入伺服器位址或名稱。"
+
+#: ../src/bookmarkeditdialog.c:277
+msgid "You must enter a share name."
+msgstr "必須輸入共享資源名稱。"
+
+#: ../src/bookmarkeditdialog.c:288
+msgid "You must enter a valid URI for the connection."
+msgstr "必須為連接輸入有效的 URI。"
+
+#: ../src/bookmarkeditdialog.c:584
+msgid "_Device:"
+msgstr "裝置(_D)："
+
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
+msgid "_Server:"
+msgstr "伺服器(_S)："
+
+#: ../src/bookmarkeditdialog.c:897
+msgid "Create Bookmark"
+msgstr "建立書籤"
+
+#: ../src/bookmarkeditdialog.c:904
+msgid "Edit Bookmark"
+msgstr "編輯書籤"
+
+#: ../src/bookmarkeditdialog.c:912
+msgid "Connect to Server"
+msgstr "連接伺服器"
+
+#: ../src/bookmarkeditdialog.c:1036
+msgid "_Bookmark name:"
+msgstr "書籤名稱(_B)："
+
+#: ../src/bookmarkeditdialog.c:1044
+msgid "_Color:"
+msgstr "色彩(_C)："
+
+#: ../src/bookmarkeditdialog.c:1055
+msgid "Au_to-Connect"
+msgstr "自動連接(_T)"
+
+#: ../src/bookmarkeditdialog.c:1066
+msgid "Service t_ype:"
+msgstr "服務類型(_Y)："
+
+#: ../src/bookmarkeditdialog.c:1091
+msgid "Set the port to 0 to use the default port"
+msgstr "將連接埠設為 0 代表使用預設連接埠"
+
+#: ../src/bookmarkeditdialog.c:1093
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1099
+msgid "_Location (URI):"
+msgstr "位置(_L) (URI)："
+
+#: ../src/bookmarkeditdialog.c:1101
+msgid "_Folder:"
+msgstr "資料夾(_F)："
+
+#: ../src/bookmarkeditdialog.c:1102
+msgid "P_ath:"
+msgstr "路徑(_A)："
+
+#: ../src/bookmarkeditdialog.c:1103
+msgid "_User Name:"
+msgstr "使用者名稱(_U)："
+
+#: ../src/bookmarkeditdialog.c:1104
+msgid "Optional information:"
+msgstr "額外選用的資訊："
+
+#: ../src/bookmarkeditdialog.c:1105
+msgid "_Port:"
+msgstr "連接埠(_P)："
+
+#: ../src/bookmarkeditdialog.c:1106
+msgid "_Domain:"
+msgstr "網域(_D)："
+
+#: ../src/bookmarkeditdialog.c:1107
+msgid "_Share:"
+msgstr "共享資源(_S)："
+
+#: ../src/preferencesdialog.c:147
+msgid "Icons"
+msgstr "圖示"
+
+#: ../src/preferencesdialog.c:148
+msgid "Text"
+msgstr "文字"
+
+#: ../src/preferencesdialog.c:149
+msgid "Both"
+msgstr "兩者皆是"
+
+#: ../src/preferencesdialog.c:150
+msgid "Both horizontal"
+msgstr "兩者皆水平"
+
+#: ../src/preferencesdialog.c:169
+msgid "Horizontal"
+msgstr "水平"
+
+#: ../src/preferencesdialog.c:170
+msgid "Vertical"
+msgstr "垂直"
+
+#: ../src/preferencesdialog.c:189
+msgid "Symbols"
+msgstr "符號"
+
+#: ../src/preferencesdialog.c:190
+msgid "Detailed List"
+msgstr "詳細清單"
+
+#: ../src/preferencesdialog.c:333
+msgid "General"
+msgstr "一般"
+
+#: ../src/preferencesdialog.c:338
+msgid "_File Manager"
+msgstr "檔案管理員(_F)"
+
+#: ../src/preferencesdialog.c:346
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr "輸入用來開啟或檢視掛載點的程式名稱"
+
+#: ../src/preferencesdialog.c:355
+msgid "_Terminal"
+msgstr "終端機(_T)"
+
+#: ../src/preferencesdialog.c:363
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr "輸入用來在終端機開啟掛載點的程式名稱"
+
+#: ../src/preferencesdialog.c:372
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "書籤自動連接間隔(_B)"
+
+#: ../src/preferencesdialog.c:378
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr "隔多久嘗試自動連接書籤 (以秒數計)。設為零代表停止檢查。"
+
+#: ../src/preferencesdialog.c:389
+msgid "Interface"
+msgstr "介面"
+
+#: ../src/preferencesdialog.c:391
+msgid "_Save window position and geometry"
+msgstr ""
+
+#: ../src/preferencesdialog.c:392
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr ""
+
+#: ../src/preferencesdialog.c:395
+msgid "Show status _icon in the Notification Area"
+msgstr "在通知區域顯示狀態圖示(_I)"
+
+#: ../src/preferencesdialog.c:398
+msgid "Start _minimized in the Notification Area"
+msgstr "以最小化狀態啟動在通知區域(_M)"
+
+#: ../src/preferencesdialog.c:403
+msgid "Show side panel"
+msgstr "顯示側面板"
+
+#: ../src/preferencesdialog.c:404
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr ""
+
+#: ../src/preferencesdialog.c:407
+msgid "Show auto-connect error messages"
+msgstr ""
+
+#: ../src/preferencesdialog.c:408
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr ""
+
+#: ../src/preferencesdialog.c:414
+msgid "_Connection List Mode"
+msgstr "連線清單模式(_C)"
+
+#: ../src/preferencesdialog.c:427
+msgid "Toolbar"
+msgstr "工具列"
+
+#: ../src/preferencesdialog.c:429
+msgid "Show _toolbar"
+msgstr "顯示工作列(_T)"
+
+#: ../src/preferencesdialog.c:435
+msgid "St_yle"
+msgstr "樣式(_Y)"
+
+#: ../src/preferencesdialog.c:446
+msgid "_Orientation"
+msgstr "方向(_O)"
+
+#: ../src/preferencesdialog.c:507
+msgid "Preferences"
+msgstr "偏好設定"
+
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr ""
+
+#: ../src/backendgvfs.c:239
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s\n"
+"Bookmark: %s"
+msgstr "<b>%s</b>\n\nURI: %s\n已連接：是\n服務類型：%s\n書籤：%s"
+
+#: ../src/backendgvfs.c:254
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Unix 裝置：%s</b>"
+
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
+msgid "unknown"
+msgstr "不明"
+
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "未能連接「%s」。"
+
+#: ../src/backendgvfs.c:496
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "未能中止連接「%s」。"
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "正在連接"
+
+#: ../src/browsenetworkpanel.c:188
+msgid "No Workgroups found"
+msgstr "找不到工作群組"
+
+#: ../src/browsenetworkpanel.c:199
+msgid "No Shares found"
+msgstr "找不到共享資源"
+
+#: ../src/browsenetworkpanel.c:204
+msgid "No Hosts found"
+msgstr "找不到主機"
+
+#: ../src/browsenetworkpanel.c:490
+msgid "Connect to the selected share"
+msgstr "連接所選共享資源"
+
+#: ../src/browsenetworkpanel.c:498
+msgid "Create a bookmark from the selected share"
+msgstr "自所選共享資源建立書籤"
+
+#: ../src/browsenetworkpanel.c:507
+msgid "Refresh the network list"
+msgstr "重刷網路清單"
+
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+msgid "Close panel"
+msgstr "關閉面板"
+
+#: ../src/bookmarkpanel.c:92
+msgid "No bookmarks"
+msgstr "沒有書籤"
+
+#: ../src/bookmarkpanel.c:256
+msgid "Connect to the selected bookmark"
+msgstr "連接所選書籤"
+
+#: ../gigolo.desktop.in.h:2
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "讓您連接遠端檔案系統的簡易前端程式"
