@@ -1,21 +1,22 @@
-# gigolo to kazakh.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010.
-#
+# 
+# Translators:
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010
 msgid ""
 msgstr ""
-"Project-Id-Version: trunk\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-04 02:42+0000\n"
-"PO-Revision-Date: 2012-08-04 08:50+0600\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-11-04 14:49+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
-"Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
-"Language: kk\n"
+"Language-Team: Kazakh (http://www.transifex.com/projects/p/xfce/language/kk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: kk\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -73,8 +74,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (қауіпсіз)"
 
-#: ../src/common.c:93
-#: ../src/window.c:1508
+#: ../src/common.c:93 ../src/window.c:1508
 msgid "Network"
 msgstr "Желі"
 
@@ -91,12 +91,13 @@ msgid "Custom Location"
 msgstr "Таңдауыңызша орналасу"
 
 #: ../src/window.c:262
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to \"%s\""
-msgstr "\"%s\" үшін қосылу"
+msgstr ""
 
 #: ../src/window.c:430
-msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr ""
 
 #: ../src/window.c:431
@@ -111,22 +112,15 @@ msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com> 2010"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr ""
 
-#: ../src/window.c:579
-#: ../src/window.c:638
+#: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
 msgstr "'%s' командасы қатемен аяқталды"
 
-#: ../src/window.c:580
-#: ../src/window.c:613
-#: ../src/window.c:626
-#: ../src/window.c:639
-#: ../src/window.c:797
-#: ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:265
-#: ../src/bookmarkeditdialog.c:276
-#: ../src/bookmarkeditdialog.c:287
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
 msgid "Error"
 msgstr "Қате"
 
@@ -143,9 +137,7 @@ msgstr ""
 msgid "Edit _Bookmark"
 msgstr "Б_етбелгіні түзету"
 
-#: ../src/window.c:707
-#: ../src/window.c:1289
-#: ../src/browsenetworkpanel.c:453
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr ""
@@ -212,7 +204,7 @@ msgstr ""
 
 #: ../src/window.c:1310
 msgid "Side _Panel"
-msgstr ""
+msgstr "Бү_йір панелі"
 
 #: ../src/window.c:1312
 msgid "_Toolbar"
@@ -242,13 +234,11 @@ msgstr ""
 msgid "Connected"
 msgstr "Байланысқан"
 
-#: ../src/window.c:1421
-#: ../src/bookmarkdialog.c:315
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr ""
 
-#: ../src/window.c:1429
-#: ../src/bookmarkdialog.c:307
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "Аты"
 
@@ -256,9 +246,7 @@ msgstr "Аты"
 msgid "Bookmarks"
 msgstr "Бетбелгілер"
 
-#: ../src/window.c:1556
-#: ../src/window.c:1632
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr ""
 
@@ -272,7 +260,9 @@ msgstr ""
 
 #: ../src/settings.c:703
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
 msgstr ""
 
 #: ../src/settings.c:706
@@ -332,7 +322,8 @@ msgid "You must enter a name for the bookmark."
 msgstr ""
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr ""
 
 #: ../src/bookmarkeditdialog.c:266
@@ -351,8 +342,7 @@ msgstr ""
 msgid "_Device:"
 msgstr "Құр_ылғы"
 
-#: ../src/bookmarkeditdialog.c:586
-#: ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
 msgstr "_Сервер:"
 
@@ -366,7 +356,7 @@ msgstr "Бетбелгіні түзету"
 
 #: ../src/bookmarkeditdialog.c:912
 msgid "Connect to Server"
-msgstr ""
+msgstr "Серверге байланысты орнату"
 
 #: ../src/bookmarkeditdialog.c:1036
 msgid "_Bookmark name:"
@@ -389,7 +379,9 @@ msgid "Set the port to 0 to use the default port"
 msgstr ""
 
 #: ../src/bookmarkeditdialog.c:1093
-msgid "This is not used for the actual mount, only necessary for opening the mount point in a file browser"
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
 msgstr ""
 
 #: ../src/bookmarkeditdialog.c:1099
@@ -481,7 +473,9 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr ""
 
 #: ../src/preferencesdialog.c:378
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
 msgstr ""
 
 #: ../src/preferencesdialog.c:389
@@ -509,7 +503,9 @@ msgid "Show side panel"
 msgstr ""
 
 #: ../src/preferencesdialog.c:404
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
 msgstr ""
 
 #: ../src/preferencesdialog.c:407
@@ -517,7 +513,9 @@ msgid "Show auto-connect error messages"
 msgstr ""
 
 #: ../src/preferencesdialog.c:408
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
 msgstr ""
 
 #: ../src/preferencesdialog.c:414
@@ -564,13 +562,11 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix құрылғысы: %s</b>"
 
-#: ../src/backendgvfs.c:453
-#: ../src/backendgvfs.c:492
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "белгісіз"
 
-#: ../src/backendgvfs.c:459
-#: ../src/backendgvfs.c:567
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr ""
@@ -608,8 +604,7 @@ msgstr ""
 msgid "Refresh the network list"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:518
-#: ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr ""
 
@@ -621,7 +616,6 @@ msgstr "Бетбелгілер жоқ"
 msgid "Connect to the selected bookmark"
 msgstr ""
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr ""
-
