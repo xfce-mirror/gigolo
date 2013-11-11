@@ -1,38 +1,45 @@
-# Finnish translation for Gigolo.
-# Copyright (C) 2008-2011 Enrico Tröger
-# This file is distributed under the same license as the Gigolo package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2012
-#
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-27 10:21+0000\n"
-"PO-Revision-Date: 2012-04-27 14:18+0300\n"
-"Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
-"Language-Team: Finnish\n"
-"Language: \n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-11-11 21:48+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/xfce/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Yhdistä kaikkiin \"Yhdistä automaattisesti\"-merkittyihin kirjanmerkkeihin ja lopeta"
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Käynnistä uusi instanssi, vaikka sovellus olisi jo käynnissä"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Tulosta lista tuetuista URI-skeemoista"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Yksityiskohtainen tulostus"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Näytä versiotiedot"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- käyttöliittymä, jonka avulla yhdistät helposti verkkojakoihin"
 
@@ -92,8 +99,7 @@ msgstr "Yhdistetään kohteeseen \"%s\""
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"Työkalu, jolla liität paikalliset ja verkon tiedostojärjestelmät helposti"
+msgstr "Työkalu, jolla liität paikalliset ja verkon tiedostojärjestelmät helposti"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -163,9 +169,7 @@ msgstr "_Muokkaa kirjanmerkkejä"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Avaa kirjanmerkkien hallinta luodaksesi, muokataksesi tai poistaaksesi "
-"kirjanmerkkejä"
+msgstr "Avaa kirjanmerkkien hallinta luodaksesi, muokataksesi tai poistaaksesi kirjanmerkkejä"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -243,7 +247,7 @@ msgstr "Nimi"
 msgid "Bookmarks"
 msgstr "Kirjanmerkit"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -260,9 +264,7 @@ msgstr "Gigolon täytyy siirtää vanha asetuskansio ennen käynnistystä."
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"Vanhan asetuskansiosi \"%s\" siirto kohteeseen \"%s\" epäonnistui (%s). Ole "
-"hyvä ja siirrä kansio itse uuteen sijaintiin."
+msgstr "Vanhan asetuskansiosi \"%s\" siirto kohteeseen \"%s\" epäonnistui (%s). Ole hyvä ja siirrä kansio itse uuteen sijaintiin."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -321,7 +323,8 @@ msgid "You must enter a name for the bookmark."
 msgstr "Anna kirjanmerkille nimi."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "Antamasi kirjanmerkin nimi on jo käytössä. Valitse jokin toinen nimi."
 
 #: ../src/bookmarkeditdialog.c:266
@@ -380,9 +383,7 @@ msgstr "Aseta portiksi 0 käyttääksesi oletusporttia"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
-"Tätä ei käytetä liittäessä, vaan ainoastaan kun liitospiste avataan "
-"tiedostoselaimessa"
+msgstr "Tätä ei käytetä liittäessä, vaan ainoastaan kun liitospiste avataan tiedostoselaimessa"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -458,8 +459,7 @@ msgstr "Tie_dostonhallinta"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Anna liitospisteiden avaamiseen tai näyttämiseen käytettävän sovelluksen nimi"
+msgstr "Anna liitospisteiden avaamiseen tai näyttämiseen käytettävän sovelluksen nimi"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -477,9 +477,7 @@ msgstr "_Kirjanmerkkien automaattiyhdistämisen väli"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"Ajanjakso sekunteina, jonka välein yritetään yhdistää automaattisesti "
-"kirjanmerkkeihin. Nolla estää tarkistuksen."
+msgstr "Ajanjakso sekunteina, jonka välein yritetään yhdistää automaattisesti kirjanmerkkeihin. Nolla estää tarkistuksen."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -491,8 +489,7 @@ msgstr "_Muista ikkunan sijainti ja mittasuhteet"
 
 #: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
-"Tallentaa ikkunan sijainnin sekä mittasuhteet ja lataa ne käynnistettäessä"
+msgstr "Tallentaa ikkunan sijainnin sekä mittasuhteet ja lataa ne käynnistettäessä"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
@@ -510,8 +507,7 @@ msgstr "Näytä sivupaneeli"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"Näytä kirjanmerkit sekä paikallisverkon Samba/Windows-jaot sivupaneelissa"
+msgstr "Näytä kirjanmerkit sekä paikallisverkon Samba/Windows-jaot sivupaneelissa"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -519,10 +515,9 @@ msgstr "Näytä automaattiyhdistämisen virheet"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Näytä virheilmoitusdialogi, kun kirjanmerkin automaattiyhdistäminen "
-"epäonnistuu"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Näytä virheilmoitusdialogi, kun kirjanmerkin automaattiyhdistäminen epäonnistuu"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -561,13 +556,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"Yhdistetty: On\n"
-"Palvelutyyppi: %s\n"
-"Kirjanmerkki: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nYhdistetty: On\nPalvelutyyppi: %s\nKirjanmerkki: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -628,6 +617,6 @@ msgstr "Ei kirjanmerkkejä"
 msgid "Connect to the selected bookmark"
 msgstr "Yhdistä merkittyyn kirjanmerkkiin"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Käyttöliittymä, jonka avulla yhdistät helposti verkkojakoihin"
