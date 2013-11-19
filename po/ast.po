@@ -1,39 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 12:06+0200\n"
-"PO-Revision-Date: 2009-07-13 19:55+0100\n"
-"Last-Translator: Marcos Antonio Alvarez Costales <marcoscostales@gmail.com>\n"
-"Language-Team: Asturian <alministradores@softastur.org>\n"
-"Language: ast\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-11-19 14:48+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: Asturian (http://www.transifex.com/projects/p/xfce/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ast\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/main.c:46
-msgid "Ignore running instances, enforce opening a new instance"
-msgstr ""
-"Inorar instancies n'execución, forciar l'apertura d'una nueva instancia"
-
 #: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr ""
+
+#: ../src/main.c:48
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Inorar instancies n'execución, forciar l'apertura d'una nueva instancia"
+
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Amosar una llista d'esquemes URI sofitaos"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Salida detallada"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Amosar información de versión"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- una interface cenciella pa coneutase cenciellamente a sistemes de ficheros "
-"remotos"
+msgstr "- una interface cenciella pa coneutase cenciellamente a sistemes de ficheros remotos"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -67,7 +73,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (seguru)"
 
-#: ../src/common.c:93 ../src/window.c:1367
+#: ../src/common.c:93 ../src/window.c:1508
 msgid "Network"
 msgstr "Rede"
 
@@ -76,176 +82,189 @@ msgid "Archive"
 msgstr ""
 
 #: ../src/common.c:97
-#, fuzzy
 msgid "Photos"
-msgstr "Puertu"
+msgstr ""
 
 #: ../src/common.c:99
 msgid "Custom Location"
 msgstr "Llugar personalizáu"
 
-#: ../src/window.c:257
+#: ../src/window.c:262
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Coneutando a \"%s\""
 
-#: ../src/window.c:425 ../gigolo.desktop.in.h:1
-msgid "A simple frontend to easily connect to remote filesystems"
+#: ../src/window.c:430
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr ""
-"Una interface cenciella pa coneutase cenciellamente a sistemes de ficheros "
-"remotos"
 
-#: ../src/window.c:426
-#, fuzzy
-msgid "Copyright 2008-2010 Enrico Tröger"
-msgstr "Copyright 2008-2009 Enrico Tröger"
+#: ../src/window.c:431
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr ""
 
-#: ../src/window.c:429
+#: ../src/window.c:434
 msgid "translator-credits"
 msgstr "Softastur www.softastur.org"
 
-#: ../src/window.c:461
+#: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo puede usar los siguientes protocolos proporcionaos por GVfs:"
 
-#: ../src/window.c:558
+#: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
 msgstr ""
 
-#: ../src/window.c:559 ../src/window.c:686 ../src/bookmarkeditdialog.c:214
-#: ../src/bookmarkeditdialog.c:233 ../src/bookmarkeditdialog.c:246
-#: ../src/bookmarkeditdialog.c:257 ../src/bookmarkeditdialog.c:268
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
 msgid "Error"
 msgstr "Fallu"
 
-#: ../src/window.c:1153
-msgid "_File"
-msgstr "_Ficheru"
+#: ../src/window.c:613
+msgid "Invalid terminal command"
+msgstr ""
 
-#: ../src/window.c:1154
-msgid "_Edit"
-msgstr "_Editar"
+#: ../src/window.c:625
+#, c-format
+msgid "No default location available for \"%s\""
+msgstr ""
 
-#: ../src/window.c:1155
-msgid "_Actions"
-msgstr "A_iciones"
+#: ../src/window.c:705
+msgid "Edit _Bookmark"
+msgstr ""
 
-#: ../src/window.c:1156
-msgid "_View"
-msgstr "_Ver"
-
-#: ../src/window.c:1157
-msgid "_Help"
-msgstr "A_ida"
-
-#: ../src/window.c:1161 ../src/browsenetworkpanel.c:453
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "Criar _marcadores"
 
-#: ../src/window.c:1163
+#: ../src/window.c:1281
+msgid "_File"
+msgstr "_Ficheru"
+
+#: ../src/window.c:1282
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../src/window.c:1283
+msgid "_Actions"
+msgstr "A_iciones"
+
+#: ../src/window.c:1284
+msgid "_View"
+msgstr "_Ver"
+
+#: ../src/window.c:1285
+msgid "_Help"
+msgstr "A_ida"
+
+#: ../src/window.c:1291
 msgid "_Edit Bookmarks"
 msgstr "_Editar marcadores"
 
-#: ../src/window.c:1164
+#: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Abrir l'alministrador de marcadores p'amestar, editar o desaniciar marcadores"
+msgstr "Abrir l'alministrador de marcadores p'amestar, editar o desaniciar marcadores"
 
-#: ../src/window.c:1168
+#: ../src/window.c:1296
 msgid "Disconnect the selected resource"
 msgstr "Desconeutar el recursu seleicionáu"
 
-#: ../src/window.c:1170
+#: ../src/window.c:1298
 msgid "Open the selected resource with a file manager"
 msgstr "Abrir el recursu seleicionáu col alministrador de ficheros"
 
-#: ../src/window.c:1171
+#: ../src/window.c:1299
+msgid "Open in _Terminal"
+msgstr ""
+
+#: ../src/window.c:1300
+msgid "Start a terminal from here"
+msgstr ""
+
+#: ../src/window.c:1301
 msgid "Copy _URI"
 msgstr "Copiar _URI"
 
-#: ../src/window.c:1172
+#: ../src/window.c:1302
 msgid "Quit Gigolo"
 msgstr "Colar de Gigolo"
 
-#: ../src/window.c:1173
+#: ../src/window.c:1303
 msgid "Online Help"
 msgstr "Aida en llinia"
 
-#: ../src/window.c:1174
+#: ../src/window.c:1304
 msgid "Supported Protocols"
 msgstr "Protocolos sofitaos"
 
-#: ../src/window.c:1180
+#: ../src/window.c:1310
 msgid "Side _Panel"
 msgstr "_Panel llateral"
 
-#: ../src/window.c:1182
+#: ../src/window.c:1312
 msgid "_Toolbar"
 msgstr "_Barra de ferramientes"
 
-#: ../src/window.c:1184
+#: ../src/window.c:1314
 msgid "Status _Icon"
 msgstr "_Iconu d'estáu"
 
-#: ../src/window.c:1190
+#: ../src/window.c:1320
 msgid "View as _Symbols"
 msgstr "Ver como _símbolos"
 
-#: ../src/window.c:1191
+#: ../src/window.c:1321
 msgid "View as _Detailed List"
 msgstr "Ver como llista _detallada"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1330
 msgid "_Bookmarks"
 msgstr "_Marcadores"
 
-#: ../src/window.c:1197
+#: ../src/window.c:1330
 msgid "Choose a bookmark to connect to"
 msgstr "Escoyer un marcador al que coneutase"
 
-#: ../src/window.c:1271
+#: ../src/window.c:1412
 msgid "Connected"
 msgstr "Coneutáu"
 
-#: ../src/window.c:1280 ../src/bookmarkdialog.c:313
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "Triba de serviciu"
 
-#: ../src/window.c:1288 ../src/bookmarkdialog.c:305
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "Nome"
 
-#: ../src/window.c:1359
-#, fuzzy
+#: ../src/window.c:1500
 msgid "Bookmarks"
-msgstr "_Marcadores"
+msgstr ""
 
-#: ../src/window.c:1409 ../src/window.c:1484 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:631
+#: ../src/settings.c:694
 msgid "Move it now?"
 msgstr "¿Movelu agora?"
 
-#: ../src/settings.c:632
+#: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo necesita que muevas el to antiguu direutoriu de configuración enantes "
-"d'entamar."
+msgstr "Gigolo necesita que muevas el to antiguu direutoriu de configuración enantes d'entamar."
 
-#: ../src/settings.c:640
+#: ../src/settings.c:703
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"El to antiguu direutoriu de configuración \"%s\" nun pudo movese a \"%s"
-"\" (%s). Por favor, mueve manualmente'l direutoriu a la nueva llocalización."
+msgstr "El to antiguu direutoriu de configuración \"%s\" nun pudo movese a \"%s\" (%s). Por favor, mueve manualmente'l direutoriu a la nueva llocalización."
 
-#: ../src/settings.c:643
+#: ../src/settings.c:706
 msgid "Warning"
 msgstr "Atención"
 
@@ -253,137 +272,146 @@ msgstr "Atención"
 msgid "Connect"
 msgstr "Coneutar"
 
-#: ../src/bookmarkdialog.c:94
+#: ../src/bookmarkdialog.c:95
 #, c-format
 msgid "Domain: %s"
 msgstr "Dominiu: %s"
 
-#: ../src/bookmarkdialog.c:99
+#: ../src/bookmarkdialog.c:100
 #, c-format
 msgid "Share: %s"
 msgstr "Recursu compartíu: %s"
 
-#: ../src/bookmarkdialog.c:105
+#: ../src/bookmarkdialog.c:106
 #, c-format
 msgid "Folder: %s"
 msgstr ""
 
-#: ../src/bookmarkdialog.c:111
+#: ../src/bookmarkdialog.c:112
 #, c-format
 msgid "Path: %s"
 msgstr ""
 
-#: ../src/bookmarkdialog.c:321
+#: ../src/bookmarkdialog.c:323
 msgid "Host"
 msgstr "Equipu"
 
-#: ../src/bookmarkdialog.c:329
+#: ../src/bookmarkdialog.c:331
 msgid "Port"
 msgstr "Puertu"
 
-#: ../src/bookmarkdialog.c:337
+#: ../src/bookmarkdialog.c:339
 msgid "Auto-Connect"
 msgstr "Auto-coneutar"
 
-#: ../src/bookmarkdialog.c:345
+#: ../src/bookmarkdialog.c:347
 msgid "Username"
 msgstr "Usuariu"
 
-#: ../src/bookmarkdialog.c:353
+#: ../src/bookmarkdialog.c:355
 msgid "Other information"
 msgstr "Otra información"
 
-#: ../src/bookmarkdialog.c:410
+#: ../src/bookmarkdialog.c:412
 msgid "Edit Bookmarks"
 msgstr "Editar marcadores"
 
-#: ../src/bookmarkeditdialog.c:215
+#: ../src/bookmarkeditdialog.c:234
 msgid "You must enter a name for the bookmark."
 msgstr "Tienes d'introducir un nome pal marcador."
 
-#: ../src/bookmarkeditdialog.c:234
-msgid "The entered bookmark name is already in use. Please choose another one."
+#: ../src/bookmarkeditdialog.c:253
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "El nome de marcador introducíu ya ta n'usu. Por favor, escueye otru."
 
-#: ../src/bookmarkeditdialog.c:247
+#: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
 msgstr "Tienes d'introducir una direición o nome de sirvidor."
 
-#: ../src/bookmarkeditdialog.c:258
+#: ../src/bookmarkeditdialog.c:277
 msgid "You must enter a share name."
 msgstr "Tienes d'introducir un nome de recursu compartíu."
 
-#: ../src/bookmarkeditdialog.c:269
+#: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
 msgstr "Tienes d'introducir un URI válido pa la conexón."
 
-#: ../src/bookmarkeditdialog.c:553
+#: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
 msgstr "_Preseos:"
 
-#: ../src/bookmarkeditdialog.c:555 ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
 msgstr "_Sirvidor:"
 
-#: ../src/bookmarkeditdialog.c:845
+#: ../src/bookmarkeditdialog.c:897
 msgid "Create Bookmark"
 msgstr "Criar marcador"
 
-#: ../src/bookmarkeditdialog.c:852
+#: ../src/bookmarkeditdialog.c:904
 msgid "Edit Bookmark"
 msgstr "Editar marcador"
 
-#: ../src/bookmarkeditdialog.c:860
+#: ../src/bookmarkeditdialog.c:912
 msgid "Connect to Server"
 msgstr "Coneutar al sirvidor"
 
-#: ../src/bookmarkeditdialog.c:970
+#: ../src/bookmarkeditdialog.c:1036
 msgid "_Bookmark name:"
 msgstr "Nome del _marcador:"
 
-#: ../src/bookmarkeditdialog.c:978
+#: ../src/bookmarkeditdialog.c:1044
+msgid "_Color:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1055
 msgid "Au_to-Connect"
 msgstr "Au_to-coneutar"
 
-#: ../src/bookmarkeditdialog.c:986
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Service t_ype:"
 msgstr "Tr_iba de serviciu:"
 
-#: ../src/bookmarkeditdialog.c:1011
+#: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
 msgstr "Pon el puertu a 0 pa usar el puertu predetermináu"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1093
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
 msgstr "_Llugar (URI):"
 
-#: ../src/bookmarkeditdialog.c:1019
-#, fuzzy
+#: ../src/bookmarkeditdialog.c:1101
 msgid "_Folder:"
-msgstr "_Ficheru"
+msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1020
-#, fuzzy
+#: ../src/bookmarkeditdialog.c:1102
 msgid "P_ath:"
-msgstr "_Puertu:"
+msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1021
+#: ../src/bookmarkeditdialog.c:1103
 msgid "_User Name:"
 msgstr "_Usuariu:"
 
-#: ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:1104
 msgid "Optional information:"
 msgstr "Información opcional:"
 
-#: ../src/bookmarkeditdialog.c:1023
+#: ../src/bookmarkeditdialog.c:1105
 msgid "_Port:"
 msgstr "_Puertu:"
 
-#: ../src/bookmarkeditdialog.c:1024
+#: ../src/bookmarkeditdialog.c:1106
 msgid "_Domain:"
 msgstr "_Dominiu:"
 
-#: ../src/bookmarkeditdialog.c:1025
+#: ../src/bookmarkeditdialog.c:1107
 msgid "_Share:"
 msgstr "_Recursu compartíu:"
 
@@ -429,118 +457,120 @@ msgstr "A_lministrador de ficheros"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Introduz el nome del programa a usar p'abrir o ver los puntos de montaxe"
+msgstr "Introduz el nome del programa a usar p'abrir o ver los puntos de montaxe"
 
 #: ../src/preferencesdialog.c:355
+msgid "_Terminal"
+msgstr ""
+
+#: ../src/preferencesdialog.c:363
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr ""
+
+#: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "Intervalu d'auto-conexón del _marcador"
 
-#: ../src/preferencesdialog.c:361
+#: ../src/preferencesdialog.c:378
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"La frecuencia cola que intentar la auto-conexón de marcadores, en segundos. "
-"Cero desactiva la comprobación."
+msgstr "La frecuencia cola que intentar la auto-conexón de marcadores, en segundos. Cero desactiva la comprobación."
 
-#: ../src/preferencesdialog.c:372
+#: ../src/preferencesdialog.c:389
 msgid "Interface"
 msgstr "Interface"
 
-#: ../src/preferencesdialog.c:374
+#: ../src/preferencesdialog.c:391
 msgid "_Save window position and geometry"
 msgstr "_Guardar la posición y xeometría de la ventana"
 
-#: ../src/preferencesdialog.c:375
+#: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr "Guarda la posición y xeometría de la ventana y restablezla al aniciu"
 
-#: ../src/preferencesdialog.c:378
+#: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
 msgstr "Amosar i_conu d'estáu na estaya de notificación"
 
-#: ../src/preferencesdialog.c:381
+#: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
 msgstr "Entamar _minimizáu na estaya de notificación"
 
-#: ../src/preferencesdialog.c:386
-#, fuzzy
+#: ../src/preferencesdialog.c:403
 msgid "Show side panel"
-msgstr "_Panel llateral"
+msgstr ""
 
-#: ../src/preferencesdialog.c:387
-#, fuzzy
+#: ../src/preferencesdialog.c:404
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
 msgstr ""
-"Amuesa un panel llateral pa restolar pola rede llocal pa les comparticiones "
-"disponibles de Samba"
 
-#: ../src/preferencesdialog.c:390
+#: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
 msgstr "Amosar mensaxes de fallu d'auto-conexón"
 
-#: ../src/preferencesdialog.c:391
+#: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
 msgstr "Amuesa mensaxes de fallu cuando falla l'auto-conexón de los marcadores"
 
-#: ../src/preferencesdialog.c:397
+#: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
 msgstr "_Conexón mou llista"
 
-#: ../src/preferencesdialog.c:410
+#: ../src/preferencesdialog.c:427
 msgid "Toolbar"
 msgstr "Barra de ferramientes"
 
-#: ../src/preferencesdialog.c:412
+#: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
 msgstr "Amosar la _barra de ferramientes"
 
-#: ../src/preferencesdialog.c:418
+#: ../src/preferencesdialog.c:435
 msgid "St_yle"
 msgstr "Est_ilu"
 
-#: ../src/preferencesdialog.c:429
+#: ../src/preferencesdialog.c:446
 msgid "_Orientation"
 msgstr "_Orientación"
 
-#: ../src/preferencesdialog.c:490
+#: ../src/preferencesdialog.c:507
 msgid "Preferences"
 msgstr "Preferencies"
 
-#: ../src/backendgvfs.c:241
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr ""
+
+#: ../src/backendgvfs.c:239
 #, c-format
 msgid ""
 "<b>%s</b>\n"
 "\n"
 "URI: %s\n"
 "Connected: Yes\n"
-"Service Type: %s"
+"Service Type: %s\n"
+"Bookmark: %s"
 msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"Coneutáu: Sí\n"
-"Triba de serviciu: %s"
 
-#: ../src/backendgvfs.c:255
+#: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Preseos Unix: %s</b>"
 
-#: ../src/backendgvfs.c:441 ../src/backendgvfs.c:477
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "desconocíu"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:543
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Falló la conexón a \"%s\" ."
 
-#: ../src/backendgvfs.c:481
+#: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Falló la desconexión de \"%s\"."
@@ -573,56 +603,18 @@ msgstr "Criar un marcador del recursu compartíu"
 msgid "Refresh the network list"
 msgstr "Anovar la llista de redes"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:263
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr "Zarrar panel"
 
-#: ../src/bookmarkpanel.c:91
-#, fuzzy
+#: ../src/bookmarkpanel.c:92
 msgid "No bookmarks"
-msgstr "_Marcadores"
+msgstr ""
 
-#: ../src/bookmarkpanel.c:252
-#, fuzzy
+#: ../src/bookmarkpanel.c:256
 msgid "Connect to the selected bookmark"
-msgstr "Coneutar al recursu compartíu seleicionáu"
+msgstr ""
 
-#~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
-#~ "If you are unsure, use the HAL based monitor."
-#~ msgstr ""
-#~ "La implementación basada n'HAL del xestor de volúmenes requier la "
-#~ "ferramienta 'gnome-mount' pa montar recursos llocales como discos. La "
-#~ "implementación basada n'Unix del xestor de volúmenes puede montar estos "
-#~ "recursos direutamente y tamién llistar otros preseos llocales.\n"
-#~ "Si nun tas seguru, usa'l monitor basáu n'HAL."
-
-#~ msgid "Use _HAL based volume manager"
-#~ msgstr "Usar xestor de volúmenes basáu n'_HAL"
-
-#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-#~ msgstr "<i>Camudar esta opción requier el reaniciu de Gigolo.</i>"
-
-#~ msgid "Use _Unix based volume manager"
-#~ msgstr "Usar xestor de volúmenes basáu n'_Unix"
-
-#~ msgid "Show 'Browse Network' side panel"
-#~ msgstr "Amosar el panel llateral 'Restolar rede'"
-
-#~ msgid "_View Mode"
-#~ msgstr "Mou de _visualización"
-
-#~ msgid "OBEX"
-#~ msgstr "OBEX"
-
-#~ msgid "Authentication information needed"
-#~ msgstr "Información de autenticación requerida"
-
-#~ msgid "_Username:"
-#~ msgstr "_Usuariu:"
-
-#~ msgid "_Password:"
-#~ msgstr "_Contraseña:"
+#: ../gigolo.desktop.in.h:2
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Una interface cenciella pa coneutase cenciellamente a sistemes de ficheros remotos"
