@@ -1,41 +1,44 @@
-# Catalan translations for Gigolo package
-# Traduccions al català del paquet «Gigolo».
-# Copyright (C) 2008-2010 Enrico Tröger
-# This file is distributed under the same license as the Gigolo package.
-# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009, 2011.
-# Harald Servat <redcrash@gmail.com>, 2009-2010.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# carlesmu <carlesmu@internautas.org>, 2009,2011
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo 0.2.0\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-02 05:24+0000\n"
-"PO-Revision-Date: 2011-12-18 17:23+0100\n"
-"Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
-"Language-Team: Catalan\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-11-19 14:48+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: Catalan (http://www.transifex.com/projects/p/xfce/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
+"Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/main.c:46
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr ""
+
+#: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Ignora les instàncies en execució, força l'inici d'una nova instància"
 
-#: ../src/main.c:47
+#: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
 msgstr "Mostra una llista dels esquemes URI compatibles"
 
-#: ../src/main.c:48
+#: ../src/main.c:50
 msgid "Be verbose"
 msgstr "Mostra més informació"
 
-#: ../src/main.c:49
+#: ../src/main.c:51
 msgid "Show version information"
 msgstr "Mostra la informació de la versió"
 
-#: ../src/main.c:79
+#: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- una interfície simple per connectar-se a sistemes de fitxers remots"
 
@@ -95,8 +98,7 @@ msgstr "S'està connectant a «%s»"
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"Una interfície simple per connectar i muntar sistemes de fitxers remots"
+msgstr "Una interfície simple per connectar i muntar sistemes de fitxers remots"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -104,9 +106,7 @@ msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr ""
-"Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.\n"
-"Harald Servat <redcrash@gmail.com>, 2009-2010."
+msgstr "Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.\nHarald Servat <redcrash@gmail.com>, 2009-2010."
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -168,8 +168,7 @@ msgstr "_Edita els llocs d'interès"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Obre el gestor de llocs d'interès per afegir, editar o esborrar-ne llocs"
+msgstr "Obre el gestor de llocs d'interès per afegir, editar o esborrar-ne llocs"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -247,7 +246,7 @@ msgstr "Nom"
 msgid "Bookmarks"
 msgstr "Llocs d'interès"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -257,18 +256,14 @@ msgstr "Moure'l ara?"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Gigolo ha de moure el vostre directori de configuració antic abans "
-"d'inicialitzar-se."
+msgstr "Gigolo ha de moure el vostre directori de configuració antic abans d'inicialitzar-se."
 
 #: ../src/settings.c:703
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"El vostre directori de configuració antic «%s» no es por moure a «%s» (%s). "
-"Moveu manualment el directori al nou lloc."
+msgstr "El vostre directori de configuració antic «%s» no es por moure a «%s» (%s). Moveu manualment el directori al nou lloc."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -327,9 +322,9 @@ msgid "You must enter a name for the bookmark."
 msgstr "Cal que introduïu un nom per al lloc d'interès."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
-"El nom de lloc d'interès introduït ja s'està emprant. Escolliu-ne un altre."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
+msgstr "El nom de lloc d'interès introduït ja s'està emprant. Escolliu-ne un altre."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
@@ -463,9 +458,7 @@ msgstr "Gestor de _fitxers"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Introduïu el nom del programa que s'emprarà per obrir o veure els punts de "
-"muntatge"
+msgstr "Introduïu el nom del programa que s'emprarà per obrir o veure els punts de muntatge"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -473,8 +466,7 @@ msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr ""
-"Introduïu el nom del programa per obrir punts de muntatge en un terminal"
+msgstr "Introduïu el nom del programa per obrir punts de muntatge en un terminal"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
@@ -484,9 +476,7 @@ msgstr "_Interval de connexió automàtica dels llocs d'interès"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"Amb quina freqüència voleu que s'intenti la connexió automàtica dels llocs "
-"d'interès expressat en segons. Zero deshabilita la comprovació."
+msgstr "Amb quina freqüència voleu que s'intenti la connexió automàtica dels llocs d'interès expressat en segons. Zero deshabilita la comprovació."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -516,9 +506,7 @@ msgstr "Mostrar panell lateral"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"Si s'ha de mostrar un panell lateral per a navegar dins els recursos "
-"compartits Samba/Windows de la xarxa local i de la llista d'interès"
+msgstr "Si s'ha de mostrar un panell lateral per a navegar dins els recursos compartits Samba/Windows de la xarxa local i de la llista d'interès"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -526,10 +514,9 @@ msgstr "Mostra els errors de connexió automàtica"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Si s'ha de mostrar o no el diàleg d'errors quan la connexió automàtica als "
-"llocs d'interès falla"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Si s'ha de mostrar o no el diàleg d'errors quan la connexió automàtica als llocs d'interès falla"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -568,13 +555,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"Connectat: Sí\n"
-"Tipus de servei: %s\n"
-"Lloc d'interès: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nConnectat: Sí\nTipus de servei: %s\nLloc d'interès: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -635,64 +616,6 @@ msgstr "No hi ha llocs d'interès"
 msgid "Connect to the selected bookmark"
 msgstr "Connecta al lloc d'interès seleccionat"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Una interfície simple per connectar-se a sistemes de fitxers remots"
-
-#~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
-#~ "If you are unsure, use the HAL based monitor."
-#~ msgstr ""
-#~ "A la implementació del gestor de volums basat en HAL li cal l'opció "
-#~ "«gnome-mount» per muntar els recursos local com els discs. El gestor de "
-#~ "volums basat en Unix pot muntar aquests recursos directament així com "
-#~ "mostrat la llista d'altres dispositius locals.\n"
-#~ "Si no esteu segur, empreu el gestor basat en HAL."
-
-#~ msgid "Use _HAL based volume manager"
-#~ msgstr "Empra un gestor de volums basat en _HAL"
-
-#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-#~ msgstr "<i>El canvi d'aquesta opció fa que calgui reiniciar Gigolo.</i>"
-
-#~ msgid "Use _Unix based volume manager"
-#~ msgstr "Empra un gestor de volums basat en _Unix"
-
-#~ msgid "Show 'Browse Network' side panel"
-#~ msgstr "Mostra el quadre lateral «Navegador de xarxes»"
-
-#~ msgid "_View Mode"
-#~ msgstr "Mode de _visualització"
-
-#~ msgid "OBEX"
-#~ msgstr "OBEX"
-
-#~ msgid "Authentication information needed"
-#~ msgstr "Calen dades d'autenticació"
-
-#~ msgid "_Username:"
-#~ msgstr "Nom d'_usuari:"
-
-#~ msgid "_Password:"
-#~ msgstr "_Contrasenya:"
-
-#~ msgid "Mounted"
-#~ msgstr "Muntat"
-
-#~ msgid "Automount"
-#~ msgstr "Muntatge automàtic"
-
-#~ msgid "Unmounting of \"%s\" failed."
-#~ msgstr "Ha fallat el desmuntatge de «%s»."
-
-#~ msgid "Mounting"
-#~ msgstr "Muntat"
-
-#~ msgid "Secure WebDAV"
-#~ msgstr "WebDAV segur"
-
-#~ msgid "Show tray _icon"
-#~ msgstr "Mostra la _icona a la safata"
