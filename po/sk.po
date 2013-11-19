@@ -1,29 +1,27 @@
-# Slovak translation of Gigolo.
-# Copyright (C) 2008-2009 Enrico Tröger
-# This file is distributed under the same license as Gigolo.
-# Robert Hartl <hartl.robert@gmail.com>, 2009.
-# Tomáš Vadina <kyberdev@gmail.com>, 2011, 2012.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Robert Hartl <hartl.robert@gmail.com>, 2009
+# Tomáš Vadina <tomasvadina+transifex@myopera.com>, 2011-2012
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-15 10:00+0000\n"
-"PO-Revision-Date: 2012-05-15 16:36+0200\n"
-"Last-Translator: Tomáš Vadina <kyberdev@gmail.com>\n"
-"Language-Team: slovenčina <slovenska-lokalizacia-xfce@googlegroups.com>\n"
-"Language: \n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-11-19 14:48+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: Slovak (http://www.transifex.com/projects/p/xfce/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Slovak\n"
-"X-Poedit-Country: SLOVAKIA\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"Language: sk\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr ""
-"Pripojiť všetky záložky označené ako \"pripojiť automaticky\" a ukončiť"
+msgstr "Pripojiť všetky záložky označené ako \"pripojiť automaticky\" a ukončiť"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
@@ -43,8 +41,7 @@ msgstr "Zobraziť informácie o verzii"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov."
+msgstr "- jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov."
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -102,8 +99,7 @@ msgstr "Pripojovanie k \"%s\""
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"Jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov"
+msgstr "Jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -111,15 +107,11 @@ msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr ""
-"Robert Hartl <hartl.robert@gmail.com>\n"
-"Tomáš Vadina <kyberdev@gmail.com>"
+msgstr "Robert Hartl <hartl.robert@gmail.com>\nTomáš Vadina <kyberdev@gmail.com>"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"Aplikácia Gigolo môže používať nasledujúce protokoly poskytované systémom "
-"súborov GVfs:"
+msgstr "Aplikácia Gigolo môže používať nasledujúce protokoly poskytované systémom súborov GVfs:"
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -255,7 +247,7 @@ msgstr "Názov"
 msgid "Bookmarks"
 msgstr "Záložky"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -265,18 +257,14 @@ msgstr "Presunúť teraz?"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Aplikácia Gigolo potrebuje pred spustením presunúť starý priečinok s "
-"nastaveniami."
+msgstr "Aplikácia Gigolo potrebuje pred spustením presunúť starý priečinok s nastaveniami."
 
 #: ../src/settings.c:703
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"Váš starý adresár s nastaveniami \"%s\" nemohol byť presunutý do \"%s"
-"\" (%s). Prosím presuňte ho do nového umiestnenia ručne."
+msgstr "Váš starý adresár s nastaveniami \"%s\" nemohol byť presunutý do \"%s\" (%s). Prosím presuňte ho do nového umiestnenia ručne."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -335,7 +323,8 @@ msgid "You must enter a name for the bookmark."
 msgstr "Musíte zadať názov záložky"
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "Zadaný názov záložky je už použitý. Zvoľte nejaký iný."
 
 #: ../src/bookmarkeditdialog.c:266
@@ -394,9 +383,7 @@ msgstr "Pre použitie predvoleného portu nastavte hodnotu portu na 0"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
-"Toto nie je aktuálne pripojené, je to potrebné iba pre otvorenie prípojného "
-"bodu v prehliadači súborov"
+msgstr "Toto nie je aktuálne pripojené, je to potrebné iba pre otvorenie prípojného bodu v prehliadači súborov"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -490,9 +477,7 @@ msgstr "_Interval automatického pripojenia záložky"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"Ako často sa majú automaticky pripájať záložky, v sekundách. Nula opakované "
-"pripájanie zakáže."
+msgstr "Ako často sa majú automaticky pripájať záložky, v sekundách. Nula opakované pripájanie zakáže."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -522,9 +507,7 @@ msgstr "Zobraziť bočný panel"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"Zobrazovanie postranného panelu pre prehliadanie dostupných zdieľaných "
-"priečinkov Samba/Windows v lokálnej sieti a zoznamu záložiek"
+msgstr "Zobrazovanie postranného panelu pre prehliadanie dostupných zdieľaných priečinkov Samba/Windows v lokálnej sieti a zoznamu záložiek"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -532,9 +515,9 @@ msgstr "Zobraziť chybové správy automatického pripojenia"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Zobrazovanie chybových dialógov pri zlyhaní automatického pripojenia záložiek"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Zobrazovanie chybových dialógov pri zlyhaní automatického pripojenia záložiek"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -573,13 +556,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"Pripojený: áno\n"
-"Typ služby: %s\n"
-"Záložka: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nPripojený: áno\nTyp služby: %s\nZáložka: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -640,10 +617,6 @@ msgstr "Žiadne záložky"
 msgid "Connect to the selected bookmark"
 msgstr "Pripojiť sa k vybranej záložke"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
-"Jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov."
-
-#~ msgid "Show 'Browse Network' side panel"
-#~ msgstr "Zobraziť bočný panel 'Prehľadávať sieť'"
+msgstr "Jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov."
