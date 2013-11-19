@@ -1,37 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2009.
-# Efstathios Iosifidis <iosifidis@opensuse.org>, 2012.
-#
+# 
+# Translators:
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2012
+# ebal <ebalaskas@ebalaskas.gr>, 2009
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-19 21:00+0000\n"
-"PO-Revision-Date: 2012-07-30 00:52+0300\n"
-"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
-"Language-Team: Ελληνικά, Σύγχρονα <opensuse-translation-el@opensuse.org>\n"
-"Language: el\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-11-19 14:48+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/xfce/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Poedit-Language: Greek\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Country: GREECE\n"
-"X-Generator: Lokalize 0.2\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr ""
-"Σύνδεση όλων των σελιδοδεικτών με σήμανση 'αυτόματη σύνδεση' και έξοδος"
+msgstr "Σύνδεση όλων των σελιδοδεικτών με σήμανση 'αυτόματη σύνδεση' και έξοδος"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr ""
-"Αγνόησε τις εκτελούμενα στιγμιότυπα, επιβολή ανοίγματος ενός νέου "
-"στιγμιότυπου"
+msgstr "Αγνόησε τις εκτελούμενα στιγμιότυπα, επιβολή ανοίγματος ενός νέου στιγμιότυπου"
 
 #: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
@@ -47,8 +41,7 @@ msgstr "Εμφάνιση πληροφορίες έκδοσης"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- μία απλή εφαρμογή για να συνδέονται εύκολα απομακρυσμένα συστήματα αρχείων"
+msgstr "- μία απλή εφαρμογή για να συνδέονται εύκολα απομακρυσμένα συστήματα αρχείων"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -106,9 +99,7 @@ msgstr "Σύνδεση στο \"%s\""
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"Ένα απλό εργαλείο διεπαφής για την εύκολη σύνδεση/προσάρτηση τοπικών και "
-"απομακρυσμένων συστημάτων αρχείων"
+msgstr "Ένα απλό εργαλείο διεπαφής για την εύκολη σύνδεση/προσάρτηση τοπικών και απομακρυσμένων συστημάτων αρχείων"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -120,9 +111,7 @@ msgstr "Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2009"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"Το gigolo δεν μπορεί να κάνει χρήση των ακόλουθων πρωτοκόλλων που παρέχει το "
-"GVfs:"
+msgstr "Το gigolo δεν μπορεί να κάνει χρήση των ακόλουθων πρωτοκόλλων που παρέχει το GVfs:"
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -180,9 +169,7 @@ msgstr "_Επεξεργασία συνδέσμων"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Άνοιγμα του διαχειριστή συνδέσμων για προσθήκη, επεξεργασία ή διαγραφή "
-"συνδέσμων"
+msgstr "Άνοιγμα του διαχειριστή συνδέσμων για προσθήκη, επεξεργασία ή διαγραφή συνδέσμων"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -260,7 +247,7 @@ msgstr "Όνομα"
 msgid "Bookmarks"
 msgstr "Σύνδεσμοι"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -270,18 +257,14 @@ msgstr "Να μετακινηθεί τώρα;"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Πριν εκκινήσετε το gigolo χρειάζεται να μετακινήσετε το παλιό κατάλογο "
-"ρυθμίσεων."
+msgstr "Πριν εκκινήσετε το gigolo χρειάζεται να μετακινήσετε το παλιό κατάλογο ρυθμίσεων."
 
 #: ../src/settings.c:703
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"Ο παλιός κατάλογος ρυθμίσεων \"%s\" δεν μπορεί να μετακινηθεί στο  \"%s"
-"\" (%s). Παρακαλώ μετακινήστε χειροκίνητα τον κατάλογο σε μία νέα τοποθεσία."
+msgstr "Ο παλιός κατάλογος ρυθμίσεων \"%s\" δεν μπορεί να μετακινηθεί στο  \"%s\" (%s). Παρακαλώ μετακινήστε χειροκίνητα τον κατάλογο σε μία νέα τοποθεσία."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -340,10 +323,9 @@ msgid "You must enter a name for the bookmark."
 msgstr "Πρέπει να εισάγετε ένα όνομα για την σύνδεση."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr ""
-"Το όνομα του συνδέσμου που δώσατε είναι ήδη σε χρήση. Παρακαλώ επιλέξτε ένα "
-"άλλο."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
+msgstr "Το όνομα του συνδέσμου που δώσατε είναι ήδη σε χρήση. Παρακαλώ επιλέξτε ένα άλλο."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
@@ -401,9 +383,7 @@ msgstr "Ορίστε την πόρτα σε 0 για χρήση της προε�
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
-"Αυτό δεν χρησιμοποιείται για πραγματική προσάρτηση, είναι μόνο απαραίτητο "
-"για άνοιγμα του σημείου προσάρτησης στον διαχειριστή αρχείων"
+msgstr "Αυτό δεν χρησιμοποιείται για πραγματική προσάρτηση, είναι μόνο απαραίτητο για άνοιγμα του σημείου προσάρτησης στον διαχειριστή αρχείων"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -479,9 +459,7 @@ msgstr "_Διαχειριστής αρχείων"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Εισάγετε το όνομα ενός προγράμματος για χρήση για άνοιγμα ή εμφάνιση των "
-"σημείων προσάρτησης"
+msgstr "Εισάγετε το όνομα ενός προγράμματος για χρήση για άνοιγμα ή εμφάνιση των σημείων προσάρτησης"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -489,9 +467,7 @@ msgstr "_Τερματικό"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr ""
-"Εισάγετε το όνομα ενός προγράμματος για άνοιγμα σημείων προσάρτησης στο "
-"τερματικό"
+msgstr "Εισάγετε το όνομα ενός προγράμματος για άνοιγμα σημείων προσάρτησης στο τερματικό"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
@@ -501,9 +477,7 @@ msgstr "Εσωτερική αυτόματη σύνδεση σ_υνδέσμου"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"Πόσο συχνά να προσπαθεί να επανασυνδέσοι τους συνδέσμους, σε δευτερόλεπτα. "
-"Το μηδέν απενεργοποιεί τον έλεγχο."
+msgstr "Πόσο συχνά να προσπαθεί να επανασυνδέσοι τους συνδέσμους, σε δευτερόλεπτα. Το μηδέν απενεργοποιεί τον έλεγχο."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -515,9 +489,7 @@ msgstr "_Αποθήκευση θέσης και γεωμετρίας παραθ�
 
 #: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
-"Αποθηκεύει την θέση και γεωμετρία των παραθύρων και τα επαναφέρει κατά την "
-"εκκίνηση"
+msgstr "Αποθηκεύει την θέση και γεωμετρία των παραθύρων και τα επαναφέρει κατά την εκκίνηση"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
@@ -535,9 +507,7 @@ msgstr "Εμφάνιση πλαϊνού ταμπλό"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"Εάν θα εμφανίζεται το πλαϊνό ταμπλό για περιήγηση του τοπικού δικτύου για "
-"διαθέσιμους Samba/Windows κοινόχρηστους πόρους και λίστα συνδέσμων"
+msgstr "Εάν θα εμφανίζεται το πλαϊνό ταμπλό για περιήγηση του τοπικού δικτύου για διαθέσιμους Samba/Windows κοινόχρηστους πόρους και λίστα συνδέσμων"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -545,10 +515,9 @@ msgstr "Εμφάνιση σφαλμάτων μηνυμάτων αυτόματη�
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Εάν και πόσο να φαίνονται οι διάλογοι των μηνυμάτων λάθους κατά την αυτόματη "
-"σύνδεση όταν οι σύνδεσμοι αποτυγχάνουν"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Εάν και πόσο να φαίνονται οι διάλογοι των μηνυμάτων λάθους κατά την αυτόματη σύνδεση όταν οι σύνδεσμοι αποτυγχάνουν"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -587,13 +556,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"Συνδέθηκε: Ναι\n"
-"Τύπος υπηρεσίας: %s\n"
-"Σελιδοδείκτης: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nΣυνδέθηκε: Ναι\nΤύπος υπηρεσίας: %s\nΣελιδοδείκτης: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -654,31 +617,6 @@ msgstr "Όχι σύνδεσμοι"
 msgid "Connect to the selected bookmark"
 msgstr "Σύνδεση σε επιλεγμένο σύνδεσμο"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
-"Ένα απλό εργαλείο για την εύκολο σύνδεση σε απομακρυσμένα συστήματα αρχείων"
-
-#~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
-#~ "If you are unsure, use the HAL based monitor."
-#~ msgstr ""
-#~ "Η υλοποίηση του διαχειριστή τόμων βασισμένος στο HAL χρειάζεται στο "
-#~ "εργαλείο 'gnome-mount' για να προσαρτήση τις τοπικές πηγές όπως τους "
-#~ "δίσκους. Η υλοποίηση του διαχειριστή τομέων βασισμένο στο UNIX μπορεί να "
-#~ "προσαρτήσει τέτοιες πηγές απευθείας και επίσης να εμφανίσει σε λίστα "
-#~ "άλλες τοπικές συσκευές.\n"
-#~ "Αν δεν είστε σίγουροι, χρησιμοποιήστε τον ελεκτή βασισμένο στο HAL."
-
-#~ msgid "Use _HAL based volume manager"
-#~ msgstr "Χρήση του διαχειριστή τόμων βασισμένο στο HAL"
-
-#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-#~ msgstr ""
-#~ "<i>Τροποποιώντας αυτή την επιλογή το gigolo χρειάζεται επανεκκίνηση.</i>"
-
-#~ msgid "Use _Unix based volume manager"
-#~ msgstr "Χρήση του διαχειριστή τόμων βασισμένο στο Unix"
+msgstr "Ένα απλό εργαλείο για την εύκολο σύνδεση σε απομακρυσμένα συστήματα αρχείων"
