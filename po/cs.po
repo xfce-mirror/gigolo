@@ -1,22 +1,22 @@
-# Czech translation of Gigolo.
-# Copyright (C) 2008-2009 Enrico Tröger
-# This file is distributed under the same license as Gigolo.
-# Jan Hrdina <jan.hrdka@gmail.com>, 2009.
-# Michal Várady <miko.vaji@gmail.com>, 2010-2012.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
-# 
+# Translators:
+# Jan Hrdina <jan.hrdka@gmail.com>, 2009
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo 0.3.1\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-11 12:48+0000\n"
-"PO-Revision-Date: 2012-04-28 20:15+0100\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-11-19 14:48+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: Czech (http://www.transifex.com/projects/p/xfce/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -40,8 +40,7 @@ msgstr "Zobrazit informace o verzi"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- jednoduché rozhraní pro snadné připojení ke vzdáleným systémům souborů"
+msgstr "- jednoduché rozhraní pro snadné připojení ke vzdáleným systémům souborů"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -99,9 +98,7 @@ msgstr "Připojování k \"%s\""
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"Jednoduché rozhraní pro snadné připojení k místním a vzdáleným systémům "
-"souborů"
+msgstr "Jednoduché rozhraní pro snadné připojení k místním a vzdáleným systémům souborů"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -113,9 +110,7 @@ msgstr "Jan Hrdina <jan.hrdka@gmail.com>, Michal Várady <miko.vaji@gmail.com>"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
-"Aplikace Gigolo může používat následující protokoly poskytované systémem "
-"souborů GVfs:"
+msgstr "Aplikace Gigolo může používat následující protokoly poskytované systémem souborů GVfs:"
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -251,7 +246,7 @@ msgstr "Název"
 msgid "Bookmarks"
 msgstr "Záložky"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -261,18 +256,14 @@ msgstr "Přesunout nyní?"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Aplikace Gigolo potřebuje před spuštěním přesunout starý adresář s "
-"nastavením."
+msgstr "Aplikace Gigolo potřebuje před spuštěním přesunout starý adresář s nastavením."
 
 #: ../src/settings.c:703
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"Starý adresář s nastavením \"%s\" nemohl být přesunut do \"%s\" (%s). "
-"Přesuňte jej do nového umístění ručně."
+msgstr "Starý adresář s nastavením \"%s\" nemohl být přesunut do \"%s\" (%s). Přesuňte jej do nového umístění ručně."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -331,7 +322,8 @@ msgid "You must enter a name for the bookmark."
 msgstr "Je nutné zadat název záložky."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "Název záložky se již používá. Vyberte jiný název."
 
 #: ../src/bookmarkeditdialog.c:266
@@ -390,9 +382,7 @@ msgstr "Pro použití výchozího portu nastavte hodnotu portu na 0"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
-"Tato volba se pro skutečné připojení nepoužívá, je pouze nutná k otevření "
-"bodu připojení ve správci souborů"
+msgstr "Tato volba se pro skutečné připojení nepoužívá, je pouze nutná k otevření bodu připojení ve správci souborů"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -476,8 +466,7 @@ msgstr "_Terminál"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr ""
-"Zadejte název programu používaného pro otevření přípojných bodů v terminálu"
+msgstr "Zadejte název programu používaného pro otevření přípojných bodů v terminálu"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
@@ -487,9 +476,7 @@ msgstr "_Interval automatického připojení záložky"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"Četnost automaticky opakovaných připojení záložek, v sekundách. Nula "
-"opakované připojování zakáže."
+msgstr "Četnost automaticky opakovaných připojení záložek, v sekundách. Nula opakované připojování zakáže."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -519,9 +506,7 @@ msgstr "Zobrazit postranní panel"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"Zobrazování postranního panelu pro prohlížení dostupných sdílených složek "
-"Samba a Windows v lokální síti a seznamu záložek"
+msgstr "Zobrazování postranního panelu pro prohlížení dostupných sdílených složek Samba a Windows v lokální síti a seznamu záložek"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -529,9 +514,9 @@ msgstr "Zobrazit chybové zprávy automatického připojení"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Zobrazování chybových dialogů při selhání automatického připojení záložek"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Zobrazování chybových dialogů při selhání automatického připojení záložek"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -570,13 +555,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"Připojen: Yes\n"
-"Typ služby: %s\n"
-"Záložka: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nPřipojen: Yes\nTyp služby: %s\nZáložka: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -637,34 +616,6 @@ msgstr "Žádné záložky"
 msgid "Connect to the selected bookmark"
 msgstr "Připojit se k vybrané záložce"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Jednoduché rozhraní pro snadné připojení ke vzdáleným systémům souborů"
-
-#~ msgid ""
-#~ "The HAL based volume manager implementation requires the tool 'gnome-"
-#~ "mount' to mount local resources like disks. The Unix based volume manager "
-#~ "implementation can mount such resources directly and also lists other "
-#~ "local devices.\n"
-#~ "If you are unsure, use the HAL based monitor."
-#~ msgstr ""
-#~ "Implementace správce svazků založeného na vrstvě HAL vyžaduje pro "
-#~ "připojování lokálních zdrojů (např. disků) aplikaci 'gnome-mount' . "
-#~ "Implementace správce svazků založeného na Unixu dokáže připojit takové "
-#~ "zdroje okamžitě a to včetně seznamu ostatních místních zařízení.\n"
-#~ "Pokud si nejste jisti, použijte sledování založené na vrstvě HAL."
-
-#~ msgid "Use _HAL based volume manager"
-#~ msgstr "Používat správce svazků založeného na vrstvě _HAL"
-
-#~ msgid "<i>Changing this option requires a restart of Gigolo.</i>"
-#~ msgstr "<i>Změna této volby vyžaduje restart aplikace Gigolo.</i>"
-
-#~ msgid "Use _Unix based volume manager"
-#~ msgstr "Používat správce svazků založeného na _Unixu"
-
-#~ msgid "Show 'Browse Network' side panel"
-#~ msgstr "Zobrazit postranní panel 'Procházet síť'"
-
-#~ msgid "_View Mode"
-#~ msgstr "_Režim zobrazení"
