@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2013-10-12 15:19+0000\n"
+"PO-Revision-Date: 2013-12-27 04:04+0000\n"
 "Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/xfce/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -24,11 +24,11 @@ msgstr "連接所有標為「自動連接」的書籤然後結束"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr ""
+msgstr "忽略正在運行的執行實體，強行開啟新執行實體。"
 
 #: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
-msgstr ""
+msgstr "列出支援的 URI scheme 清單"
 
 #: ../src/main.c:50
 msgid "Be verbose"
@@ -40,7 +40,7 @@ msgstr "顯示版本資訊"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
+msgstr "- 連接遠端檔案系統的簡易前端程式"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -102,7 +102,7 @@ msgstr "讓您連接／掛載本機和遠端檔案系統的簡易前端程式"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Copyright 2008-2011 Enrico Tröger"
+msgstr "著作權 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
@@ -110,12 +110,12 @@ msgstr "Walter Cheuk <wwycheuk@gmail.com>, 2013."
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr ""
+msgstr "Gigolo 可使用以下由 GVfs 提供的協定："
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
-msgstr "「%s」失敗"
+msgstr "「%s」指令失敗"
 
 #: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
 #: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
@@ -168,7 +168,7 @@ msgstr "編輯書籤(_E)"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
+msgstr "開啟書籤管理員以加入、編輯或刪除書籤"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -208,7 +208,7 @@ msgstr "側面板(_P)"
 
 #: ../src/window.c:1312
 msgid "_Toolbar"
-msgstr "工作列(_T)"
+msgstr "工具列(_T)"
 
 #: ../src/window.c:1314
 msgid "Status _Icon"
@@ -336,7 +336,7 @@ msgstr "必須輸入共享資源名稱。"
 
 #: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
-msgstr "必須為連接輸入有效的 URI。"
+msgstr "必須為連線輸入有效的 URI。"
 
 #: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
@@ -382,7 +382,7 @@ msgstr "將連接埠設為 0 代表使用預設連接埠"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
+msgstr "並非用於實際掛載，只有以檔案瀏覽器開啟掛載點時才需要"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -484,11 +484,11 @@ msgstr "介面"
 
 #: ../src/preferencesdialog.c:391
 msgid "_Save window position and geometry"
-msgstr ""
+msgstr "儲存視窗位置和大小(_S)"
 
 #: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr ""
+msgstr "儲存視窗位置和大小並在啟動時還原"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
@@ -506,17 +506,17 @@ msgstr "顯示側面板"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
+msgstr "是否顯示供瀏覽可用 Samba/Windows 共享資源和書籤清單的側面板"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
-msgstr ""
+msgstr "顯示自動連接出錯訊息"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
-msgstr ""
+msgstr "當自動連接書籤失敗時是否顯示出錯訊息對話窗"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -528,7 +528,7 @@ msgstr "工具列"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "顯示工作列(_T)"
+msgstr "顯示工具列(_T)"
 
 #: ../src/preferencesdialog.c:435
 msgid "St_yle"
@@ -544,7 +544,7 @@ msgstr "偏好設定"
 
 #: ../src/backendgvfs.c:221
 msgid "No bookmark"
-msgstr ""
+msgstr "沒有書籤"
 
 #: ../src/backendgvfs.c:239
 #, c-format
