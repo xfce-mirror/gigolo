@@ -1,0 +1,623 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# gem <eckert.georg@gmx.de>, 2013
+# Marcel Kapfer <marcelmichaelkapfer@yahoo.co.nz>, 2013
+# M4he, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Apps\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2013-12-30 15:04+0000\n"
+"Last-Translator: M4he\n"
+"Language-Team: German (http://www.transifex.com/projects/p/xfce/language/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Alle mit »Automatisch verbinden« markierten Lesezeichen verbinden und beenden"
+
+#: ../src/main.c:48
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Laufende Instanzen ignorieren und neue Instanz erzwingen"
+
+#: ../src/main.c:49
+msgid "Print a list of supported URI schemes"
+msgstr "Liste unterstützter URI-Schemata ausgeben"
+
+#: ../src/main.c:50
+msgid "Be verbose"
+msgstr "Ausführliche Meldungen"
+
+#: ../src/main.c:51
+msgid "Show version information"
+msgstr "Versionsinformationen anzeigen"
+
+#: ../src/main.c:112
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- eine schlichte Oberfläche zur einfachen Verbindung mit entfernten Dateisystemen"
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr "Unix-Gerät"
+
+#: ../src/common.c:79
+msgid "Windows Share"
+msgstr "Windows-Freigabe"
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr "Obex"
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr "WebDAV (sicher)"
+
+#: ../src/common.c:93 ../src/window.c:1508
+msgid "Network"
+msgstr "Netzwerk"
+
+#: ../src/common.c:95
+msgid "Archive"
+msgstr "Archiv"
+
+#: ../src/common.c:97
+msgid "Photos"
+msgstr "Fotos"
+
+#: ../src/common.c:99
+msgid "Custom Location"
+msgstr "Benutzerdefinierter Ort"
+
+#: ../src/window.c:262
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "Verbinde zu »%s«…"
+
+#: ../src/window.c:430
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "Eine einfache Oberfläche zum Einbinden lokaler und entfernter Dateisysteme"
+
+#: ../src/window.c:431
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Copyright 2008-2011 Enrico Tröger"
+
+#: ../src/window.c:434
+msgid "translator-credits"
+msgstr ""
+
+#: ../src/window.c:466
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Gigolo kann mit folgenden von GVfs bereitgestellten Protokollen umgehen:"
+
+#: ../src/window.c:579 ../src/window.c:638
+#, c-format
+msgid "The command '%s' failed"
+msgstr "Der Befehl »%s« schlug fehl"
+
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
+msgid "Error"
+msgstr "Fehler"
+
+#: ../src/window.c:613
+msgid "Invalid terminal command"
+msgstr "Ungültiger Terminalbefehl"
+
+#: ../src/window.c:625
+#, c-format
+msgid "No default location available for \"%s\""
+msgstr "Kein Standardort für »%s« vorhanden"
+
+#: ../src/window.c:705
+msgid "Edit _Bookmark"
+msgstr "_Lesezeichen bearbeiten"
+
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
+msgid "Create _Bookmark"
+msgstr "_Lesezeichen erstellen"
+
+#: ../src/window.c:1281
+msgid "_File"
+msgstr "_Datei"
+
+#: ../src/window.c:1282
+msgid "_Edit"
+msgstr "_Bearbeiten"
+
+#: ../src/window.c:1283
+msgid "_Actions"
+msgstr "_Aktionen"
+
+#: ../src/window.c:1284
+msgid "_View"
+msgstr "_Ansicht"
+
+#: ../src/window.c:1285
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: ../src/window.c:1291
+msgid "_Edit Bookmarks"
+msgstr "Lesezeichen _bearbeiten"
+
+#: ../src/window.c:1292
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Lesezeichen-Verwaltung, zum Hinzufügen, Bearbeiten und Löschen von Lesezeichen, öffnen"
+
+#: ../src/window.c:1296
+msgid "Disconnect the selected resource"
+msgstr "Die ausgewählte Verbindung trennen"
+
+#: ../src/window.c:1298
+msgid "Open the selected resource with a file manager"
+msgstr "Die ausgewählte Verbindung in einem Dateimanager öffnen"
+
+#: ../src/window.c:1299
+msgid "Open in _Terminal"
+msgstr "In _Terminal öffnen"
+
+#: ../src/window.c:1300
+msgid "Start a terminal from here"
+msgstr "Terminal im aktuellen Ordner öffnen"
+
+#: ../src/window.c:1301
+msgid "Copy _URI"
+msgstr "_URI kopieren"
+
+#: ../src/window.c:1302
+msgid "Quit Gigolo"
+msgstr "Gigolo beenden"
+
+#: ../src/window.c:1303
+msgid "Online Help"
+msgstr "Online-Hilfe"
+
+#: ../src/window.c:1304
+msgid "Supported Protocols"
+msgstr "Unterstützte Protokolle"
+
+#: ../src/window.c:1310
+msgid "Side _Panel"
+msgstr "Seiten_leiste"
+
+#: ../src/window.c:1312
+msgid "_Toolbar"
+msgstr "_Werkzeugleiste"
+
+#: ../src/window.c:1314
+msgid "Status _Icon"
+msgstr "Statuss_ymbol"
+
+#: ../src/window.c:1320
+msgid "View as _Symbols"
+msgstr "Als _Symbole anzeigen"
+
+#: ../src/window.c:1321
+msgid "View as _Detailed List"
+msgstr "Als _detaillierte Liste anzeigen"
+
+#: ../src/window.c:1330
+msgid "_Bookmarks"
+msgstr "_Lesezeichen"
+
+#: ../src/window.c:1330
+msgid "Choose a bookmark to connect to"
+msgstr "Wählen Sie ein Lesezeichen, zu dem eine Verbindung aufgebaut werden soll"
+
+#: ../src/window.c:1412
+msgid "Connected"
+msgstr "Verbunden"
+
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
+msgid "Service Type"
+msgstr "Art des Dienstes"
+
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
+msgid "Name"
+msgstr "Name"
+
+#: ../src/window.c:1500
+msgid "Bookmarks"
+msgstr "Lesezeichen"
+
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:694
+msgid "Move it now?"
+msgstr "Jetzt verschieben?"
+
+#: ../src/settings.c:695
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Gigolo muss Ihr aktuelles Konfigurationsverzeichnis an einen neuen Ort verschieben, bevor es gestartet wird."
+
+#: ../src/settings.c:703
+#, c-format
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr "Ihr altes Konfigurationsverzeichnis »%s« konnte nicht nach »%s« verschoben werden. Fehler: %s. Bitte führen Sie die Aktion manuell aus."
+
+#: ../src/settings.c:706
+msgid "Warning"
+msgstr "Warnung"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "Verbinden"
+
+#: ../src/bookmarkdialog.c:95
+#, c-format
+msgid "Domain: %s"
+msgstr "Domäne: %s"
+
+#: ../src/bookmarkdialog.c:100
+#, c-format
+msgid "Share: %s"
+msgstr "Freigabe: %s"
+
+#: ../src/bookmarkdialog.c:106
+#, c-format
+msgid "Folder: %s"
+msgstr "Ordner: %s"
+
+#: ../src/bookmarkdialog.c:112
+#, c-format
+msgid "Path: %s"
+msgstr "Pfad: %s"
+
+#: ../src/bookmarkdialog.c:323
+msgid "Host"
+msgstr "Rechner"
+
+#: ../src/bookmarkdialog.c:331
+msgid "Port"
+msgstr "Port"
+
+#: ../src/bookmarkdialog.c:339
+msgid "Auto-Connect"
+msgstr "Automatisch verbinden"
+
+#: ../src/bookmarkdialog.c:347
+msgid "Username"
+msgstr "Benutzername"
+
+#: ../src/bookmarkdialog.c:355
+msgid "Other information"
+msgstr "Andere Informationen"
+
+#: ../src/bookmarkdialog.c:412
+msgid "Edit Bookmarks"
+msgstr "Lesezeichen bearbeiten"
+
+#: ../src/bookmarkeditdialog.c:234
+msgid "You must enter a name for the bookmark."
+msgstr "Sie müssen dem Lesezeichen eine Bezeichnung geben."
+
+#: ../src/bookmarkeditdialog.c:253
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
+msgstr "Der angegebene Lesezeichenname ist bereits vergeben. Bitte wählen Sie einen anderen."
+
+#: ../src/bookmarkeditdialog.c:266
+msgid "You must enter a server address or name."
+msgstr "Sie müssen eine Serveradresse oder einen Servernamen angeben."
+
+#: ../src/bookmarkeditdialog.c:277
+msgid "You must enter a share name."
+msgstr "Sie müssen einen Freigabenamen angeben."
+
+#: ../src/bookmarkeditdialog.c:288
+msgid "You must enter a valid URI for the connection."
+msgstr "Sie müssen eine gültige URI für die Verbindung angeben."
+
+#: ../src/bookmarkeditdialog.c:584
+msgid "_Device:"
+msgstr "_Gerät:"
+
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
+msgid "_Server:"
+msgstr "_Server:"
+
+#: ../src/bookmarkeditdialog.c:897
+msgid "Create Bookmark"
+msgstr "Lesezeichen erstellen"
+
+#: ../src/bookmarkeditdialog.c:904
+msgid "Edit Bookmark"
+msgstr "Lesezeichen bearbeiten"
+
+#: ../src/bookmarkeditdialog.c:912
+msgid "Connect to Server"
+msgstr "Zum Server verbinden"
+
+#: ../src/bookmarkeditdialog.c:1036
+msgid "_Bookmark name:"
+msgstr "_Lesezeichenname:"
+
+#: ../src/bookmarkeditdialog.c:1044
+msgid "_Color:"
+msgstr "_Farbe:"
+
+#: ../src/bookmarkeditdialog.c:1055
+msgid "Au_to-Connect"
+msgstr "Au_tomatisch verbinden"
+
+#: ../src/bookmarkeditdialog.c:1066
+msgid "Service t_ype:"
+msgstr "Art des D_ienstes"
+
+#: ../src/bookmarkeditdialog.c:1091
+msgid "Set the port to 0 to use the default port"
+msgstr "Setzen Sie den Port auf 0 um den Standardport zu benutzen"
+
+#: ../src/bookmarkeditdialog.c:1093
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr "Dies wird nicht für das eigentliche Einhängen verwenden, sondern dient nur dem Öffnen des Einhängepunkts in einem Dateimanager."
+
+#: ../src/bookmarkeditdialog.c:1099
+msgid "_Location (URI):"
+msgstr "_Ort (URI):"
+
+#: ../src/bookmarkeditdialog.c:1101
+msgid "_Folder:"
+msgstr "_Ordner:"
+
+#: ../src/bookmarkeditdialog.c:1102
+msgid "P_ath:"
+msgstr "_Pfad:"
+
+#: ../src/bookmarkeditdialog.c:1103
+msgid "_User Name:"
+msgstr "Ben_utzer:"
+
+#: ../src/bookmarkeditdialog.c:1104
+msgid "Optional information:"
+msgstr "Optionale Information:"
+
+#: ../src/bookmarkeditdialog.c:1105
+msgid "_Port:"
+msgstr "_Port:"
+
+#: ../src/bookmarkeditdialog.c:1106
+msgid "_Domain:"
+msgstr "_Domain:"
+
+#: ../src/bookmarkeditdialog.c:1107
+msgid "_Share:"
+msgstr "_Freigabe:"
+
+#: ../src/preferencesdialog.c:147
+msgid "Icons"
+msgstr "Symbole"
+
+#: ../src/preferencesdialog.c:148
+msgid "Text"
+msgstr "Text"
+
+#: ../src/preferencesdialog.c:149
+msgid "Both"
+msgstr "Beide"
+
+#: ../src/preferencesdialog.c:150
+msgid "Both horizontal"
+msgstr "Beide horizontal"
+
+#: ../src/preferencesdialog.c:169
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: ../src/preferencesdialog.c:170
+msgid "Vertical"
+msgstr "Vertikal"
+
+#: ../src/preferencesdialog.c:189
+msgid "Symbols"
+msgstr "Symbole"
+
+#: ../src/preferencesdialog.c:190
+msgid "Detailed List"
+msgstr "Detaillierte Liste"
+
+#: ../src/preferencesdialog.c:333
+msgid "General"
+msgstr "Allgemein"
+
+#: ../src/preferencesdialog.c:338
+msgid "_File Manager"
+msgstr "_Dateimanager"
+
+#: ../src/preferencesdialog.c:346
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr "Geben Sie den Namen des Programms an, welches zum Öffnen oder Anzeigen von Einhängepunkten verwendet werden soll"
+
+#: ../src/preferencesdialog.c:355
+msgid "_Terminal"
+msgstr "_Terminal"
+
+#: ../src/preferencesdialog.c:363
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr "Geben Sie den Namen des Programms an, welches zum Öffnen von Einhängepunkten in der Terminal verwendet werden soll"
+
+#: ../src/preferencesdialog.c:372
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "Intervall für die automatische Ver_bindung der Lesezeichen"
+
+#: ../src/preferencesdialog.c:378
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr "Wie oft eine automatische Verbindung der Lesezeichen versucht werden soll (in Sekunden). Null deaktiviert die Prüfung."
+
+#: ../src/preferencesdialog.c:389
+msgid "Interface"
+msgstr "Oberfläche"
+
+#: ../src/preferencesdialog.c:391
+msgid "_Save window position and geometry"
+msgstr "Fensterposition und -größe _speichern"
+
+#: ../src/preferencesdialog.c:392
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "Speichert die Fensterposition und -größe und stellt sie beim Start wieder her."
+
+#: ../src/preferencesdialog.c:395
+msgid "Show status _icon in the Notification Area"
+msgstr "Statussymbol _im Benachrichtigungsbereich anzeigen"
+
+#: ../src/preferencesdialog.c:398
+msgid "Start _minimized in the Notification Area"
+msgstr "_Minimiert im Benachrichtiungsbereich starten"
+
+#: ../src/preferencesdialog.c:403
+msgid "Show side panel"
+msgstr "Seitenleiste anzeigen"
+
+#: ../src/preferencesdialog.c:404
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr "Ob eine Seitenleiste zum Durchsuchen des lokalen Netzwerks nach Samba/Windows-Freigaben und der Lesezeichenliste angezeigt werden soll"
+
+#: ../src/preferencesdialog.c:407
+msgid "Show auto-connect error messages"
+msgstr "Zeige Fehlermeldungen bei automatischen Verbindungen"
+
+#: ../src/preferencesdialog.c:408
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Ob Fehlermeldungen angezeigt werden sollen, wenn die automatische Verbindung eines Lesezeichens fehlschlägt"
+
+#: ../src/preferencesdialog.c:414
+msgid "_Connection List Mode"
+msgstr "_Verbindungslistenmodus"
+
+#: ../src/preferencesdialog.c:427
+msgid "Toolbar"
+msgstr "Werkzeugleiste"
+
+#: ../src/preferencesdialog.c:429
+msgid "Show _toolbar"
+msgstr "_Werkzeugleiste anzeigen"
+
+#: ../src/preferencesdialog.c:435
+msgid "St_yle"
+msgstr "_Darstellung"
+
+#: ../src/preferencesdialog.c:446
+msgid "_Orientation"
+msgstr "_Orientierung"
+
+#: ../src/preferencesdialog.c:507
+msgid "Preferences"
+msgstr "Einstellungen"
+
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "Kein Lesezeichen"
+
+#: ../src/backendgvfs.c:239
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s\n"
+"Bookmark: %s"
+msgstr "<b>%s</b>\nURI: %s\nVerbunden: Ja\nArt des Dienstes: %s\nLesezeichen: %s"
+
+#: ../src/backendgvfs.c:254
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Unix Gerät: %s</b>"
+
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
+msgid "unknown"
+msgstr "unbekannt"
+
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "Verbindung zu »%s« fehlgeschlagen."
+
+#: ../src/backendgvfs.c:496
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "Verbindungstrennung von »%s« fehlgeschlagen."
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "Verbinde"
+
+#: ../src/browsenetworkpanel.c:188
+msgid "No Workgroups found"
+msgstr "Keine Arbeitsgruppen gefunden"
+
+#: ../src/browsenetworkpanel.c:199
+msgid "No Shares found"
+msgstr "Keine Freigaben gefunden"
+
+#: ../src/browsenetworkpanel.c:204
+msgid "No Hosts found"
+msgstr "Keine Rechner gefunden"
+
+#: ../src/browsenetworkpanel.c:490
+msgid "Connect to the selected share"
+msgstr "Verbinde zur ausgewählten Freigabe"
+
+#: ../src/browsenetworkpanel.c:498
+msgid "Create a bookmark from the selected share"
+msgstr "Erstelle ein Lesezeichen für die ausgewählte Freigabe"
+
+#: ../src/browsenetworkpanel.c:507
+msgid "Refresh the network list"
+msgstr "Netzwerkliste aktualisieren"
+
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+msgid "Close panel"
+msgstr "Seitenleiste schließen"
+
+#: ../src/bookmarkpanel.c:92
+msgid "No bookmarks"
+msgstr "Keine Lesezeichen"
+
+#: ../src/bookmarkpanel.c:256
+msgid "Connect to the selected bookmark"
+msgstr "Verbinde zum ausgewählten Lesezeichen"
+
+#: ../gigolo.desktop.in.h:2
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Eine schlichte Oberfläche zur einfachen Verbindung mit entfernten Dateisystemen"
