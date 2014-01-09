@@ -6,7 +6,6 @@ SUBDIRS = src po
 
 EXTRA_DIST =					\
 	autogen.sh					\
-	README.I18N					\
 	gigolo.desktop.in			\
 	intltool-extract.in			\
 	intltool-merge.in			\

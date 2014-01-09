@@ -1,3 +1,35 @@
+Gigolo 0.4.2 (January 9, 2014)
+
+	* Fix mnemonics in the Connect dialog.
+	* Resolve symbolic links before writing config files.
+	* Remember side panel position.
+	* Store and display colours for bookmarks.
+	* Allow editing bookmarks from the main window popup menu.
+	* Do not set the colour when no colour is explicitly selected.
+	* Add a separator to the Bookmark Edit Dialog.
+	* Don't show errors we are not supposed to show.
+	* Automatically choose the first Samba share if any were found.
+	* Add 'Open in Terminal' command.
+	* Remove some set but unused variables.
+	* Display bookmark name in the connection list if the connection
+	  has a bookmark.
+	* Do not make the Connect button insensitive, never (bug #8103).
+	* Improve WebDav URI handling.
+	* Validate an entered custom URI by trying to parse it.
+	* After creating/editing a bookmark, update the list of mounts.
+	* Fix WebDav path parsing when there is no path.
+	* Add new command-line option to auto connect bookmarks.
+	* Drop Waf build system support and just use autotools.
+	* Translation updates: Arabic, Asturian, Bulgarian, Catalan
+	  (Valencian), Czech, Danish, German, Greek, English (Australia),
+	  Esperanto, Spanish (Castilian), Basque, Finnish, French, Galician,
+	  Hebrew, Croatian, Hungarian, Indonesian, Icelandic, Italian,
+	  Japanese, Kazakh, Korean, Lithuanian, Latvian, Dutch (Flemish),
+	  Occitan (post 1500), Polish, Portuguese, Portuguese (Brazilian),
+	  Russian, Slovak, Slovenian, Serbian, Swedish, Telugu, Turkish,
+	  Uyghur, Ukrainian, Urdu, Urdu (Pakistan), Chinese (China), Chinese
+	  (Taiwan).
+
 Gigolo 0.4.1 (July 31, 2010)
 
 	* Use SSH/SFTP as default connection type for new bookmarks/connections
