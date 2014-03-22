@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2014-02-17 10:26+0000\n"
+"PO-Revision-Date: 2014-03-22 09:45+0000\n"
 "Last-Translator: PavelNicklasson <pavelnicklasson@bahnhof.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/xfce/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr ""
+msgstr "Anslut alla bokmärken märkta som 'auto anslut' och avsluta"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
@@ -133,7 +133,7 @@ msgstr "Ogiltigt terminalkommando"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr ""
+msgstr "Ingen standardplats tillgänglig för \"%s\""
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -384,7 +384,7 @@ msgstr "Ställ in porten till 0 för att använda standardporten"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
+msgstr "Detta används inte för själva monteringen, bara nödvändigt för att öppna monteringspunkten i en filhanterare"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -468,7 +468,7 @@ msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr ""
+msgstr "Skriv in namnet på ett program för att öppna monteringspunkter i en terminal"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
@@ -557,7 +557,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
+msgstr "<b>%s</b>\n\nURI: %s\nAnsluten: Ja\nTjänstetyp: %s\nBokmärke: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
