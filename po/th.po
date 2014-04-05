@@ -1,0 +1,621 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# theppitak <theppitak@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Apps\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2014-04-05 08:00+0000\n"
+"Last-Translator: theppitak <theppitak@gmail.com>\n"
+"Language-Team: Thai (http://www.transifex.com/projects/p/xfce/language/th/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/main.c:47
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "เชื่อมต่อไปยังที่คั่นหน้าทั้งหมดที่ทำเครื่องหมาย 'เชื่อมต่ออัตโนมัติ' ไว้ แล้วจบโปรแกรม"
+
+#: ../src/main.c:48
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "ไม่สนใจอินสแตนซ์ที่ทำงานอยู่ และบังคับเปิดอินสแตนซ์ใหม่"
+
+#: ../src/main.c:49
+msgid "Print a list of supported URI schemes"
+msgstr "แสดงรายชื่อ URI scheme ที่รองรับ"
+
+#: ../src/main.c:50
+msgid "Be verbose"
+msgstr "แสดงข้อความอย่างละเอียด"
+
+#: ../src/main.c:51
+msgid "Show version information"
+msgstr "แสดงข้อมูลรุ่น"
+
+#: ../src/main.c:112
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- โปรแกรมส่วนหน้าสำหรับเชื่อมต่อไปยังระบบแฟ้มในเครือข่ายอย่างง่ายดาย"
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr "อุปกรณ์ยูนิกซ์"
+
+#: ../src/common.c:79
+msgid "Windows Share"
+msgstr "แหล่งใช้ร่วมของวินโดวส์"
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr "Obex"
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr "WebDAV (นิรภัย)"
+
+#: ../src/common.c:93 ../src/window.c:1508
+msgid "Network"
+msgstr "เครือข่าย"
+
+#: ../src/common.c:95
+msgid "Archive"
+msgstr "แฟ้มจัดเก็บ"
+
+#: ../src/common.c:97
+msgid "Photos"
+msgstr "ภาพถ่าย"
+
+#: ../src/common.c:99
+msgid "Custom Location"
+msgstr "ตำแหน่งกำหนดเอง"
+
+#: ../src/window.c:262
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "กำลังเชื่อมต่อไปยัง \"%s\""
+
+#: ../src/window.c:430
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "โปรแกรมส่วนหน้าสำหรับเชื่อมต่อ/เมานท์ระบบแฟ้มในเครื่องและในเครือข่ายอย่างง่ายดาย"
+
+#: ../src/window.c:431
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Copyright 2008-2011 Enrico Tröger"
+
+#: ../src/window.c:434
+msgid "translator-credits"
+msgstr "Theppitak Karoonboonyanan <theppitak@gmail.com>"
+
+#: ../src/window.c:466
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Gigolo สามารถใช้โพรโทคอลต่อไปนี้ซึ่งจัดเตรียมโดย GVfs:"
+
+#: ../src/window.c:579 ../src/window.c:638
+#, c-format
+msgid "The command '%s' failed"
+msgstr "คำสั่ง '%s' ล้มเหลว"
+
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
+msgid "Error"
+msgstr "ข้อผิดพลาด"
+
+#: ../src/window.c:613
+msgid "Invalid terminal command"
+msgstr "คำสั่งเทอร์มินัลไม่ถูกต้อง"
+
+#: ../src/window.c:625
+#, c-format
+msgid "No default location available for \"%s\""
+msgstr "ไม่มีตำแหน่งปริยายสำหรับ \"%s\""
+
+#: ../src/window.c:705
+msgid "Edit _Bookmark"
+msgstr "แก้ไขที่_คั่นหน้า"
+
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
+#: ../src/browsenetworkpanel.c:497
+msgid "Create _Bookmark"
+msgstr "สร้างที่_คั่นหน้า"
+
+#: ../src/window.c:1281
+msgid "_File"
+msgstr "แ_ฟ้ม"
+
+#: ../src/window.c:1282
+msgid "_Edit"
+msgstr "แ_ก้ไข"
+
+#: ../src/window.c:1283
+msgid "_Actions"
+msgstr "การกระ_ทำ"
+
+#: ../src/window.c:1284
+msgid "_View"
+msgstr "มุ_มมอง"
+
+#: ../src/window.c:1285
+msgid "_Help"
+msgstr "_วิธีใช้"
+
+#: ../src/window.c:1291
+msgid "_Edit Bookmarks"
+msgstr "แ_ก้ไขที่คั่นหน้า"
+
+#: ../src/window.c:1292
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "เปิดเครื่องมือจัดการที่คั่นหน้า เพื่อเพิ่ม แก้ไข หรือลบที่คั่นหน้าต่างๆ"
+
+#: ../src/window.c:1296
+msgid "Disconnect the selected resource"
+msgstr "ตัดการเชื่อมต่อกับทรัพยากรที่เลือก"
+
+#: ../src/window.c:1298
+msgid "Open the selected resource with a file manager"
+msgstr "เปิดทรัพยากรที่เลือกด้วยโปรแกรมจัดการแฟ้ม"
+
+#: ../src/window.c:1299
+msgid "Open in _Terminal"
+msgstr "เปิดในเ_ทอร์มินัล"
+
+#: ../src/window.c:1300
+msgid "Start a terminal from here"
+msgstr "เปิดเทอร์มินัลทำงานที่นี่"
+
+#: ../src/window.c:1301
+msgid "Copy _URI"
+msgstr "คัดลอก _URI"
+
+#: ../src/window.c:1302
+msgid "Quit Gigolo"
+msgstr "ออกจาก Gigolo"
+
+#: ../src/window.c:1303
+msgid "Online Help"
+msgstr "คู่มือออนไลน์"
+
+#: ../src/window.c:1304
+msgid "Supported Protocols"
+msgstr "โพรโทคอลที่รองรับ"
+
+#: ../src/window.c:1310
+msgid "Side _Panel"
+msgstr "_ช่องด้านข้าง"
+
+#: ../src/window.c:1312
+msgid "_Toolbar"
+msgstr "แถบเ_ครื่องมือ"
+
+#: ../src/window.c:1314
+msgid "Status _Icon"
+msgstr "ไ_อคอนสถานะ"
+
+#: ../src/window.c:1320
+msgid "View as _Symbols"
+msgstr "แสดงแบบ_สัญลักษณ์"
+
+#: ../src/window.c:1321
+msgid "View as _Detailed List"
+msgstr "แสดงแบบ_รายละเอียด"
+
+#: ../src/window.c:1330
+msgid "_Bookmarks"
+msgstr "ที่_คั่นหน้า"
+
+#: ../src/window.c:1330
+msgid "Choose a bookmark to connect to"
+msgstr "เลือกที่คั่นหน้าที่จะเชื่อมต่อ"
+
+#: ../src/window.c:1412
+msgid "Connected"
+msgstr "เชื่อมต่ออยู่"
+
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
+msgid "Service Type"
+msgstr "ชนิดบริการ"
+
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
+msgid "Name"
+msgstr "ชื่อ"
+
+#: ../src/window.c:1500
+msgid "Bookmarks"
+msgstr "ที่คั่นหน้า"
+
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:694
+msgid "Move it now?"
+msgstr "ย้ายเลยหรือไม่?"
+
+#: ../src/settings.c:695
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Gigolo จำเป็นต้องย้ายไดเรกทอรีค่าตั้งเดิมของคุณก่อนที่จะเริ่มทำงาน"
+
+#: ../src/settings.c:703
+#, c-format
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr "ไม่สามารถย้ายไดเรกทอรีค่าตั้งเดิมของคุณที่ \"%s\" ไปที่ \"%s\" ได้ (%s) กรุณาย้ายไดเรกทอรีดังกล่าวไปยังตำแหน่งใหม่ด้วยตัวเอง"
+
+#: ../src/settings.c:706
+msgid "Warning"
+msgstr "คำเตือน"
+
+#: ../src/menubuttonaction.c:157
+msgid "Connect"
+msgstr "เชื่อมต่อ"
+
+#: ../src/bookmarkdialog.c:95
+#, c-format
+msgid "Domain: %s"
+msgstr "โดเมน: %s"
+
+#: ../src/bookmarkdialog.c:100
+#, c-format
+msgid "Share: %s"
+msgstr "แหล่งใช้ร่วม: %s"
+
+#: ../src/bookmarkdialog.c:106
+#, c-format
+msgid "Folder: %s"
+msgstr "โฟลเดอร์: %s"
+
+#: ../src/bookmarkdialog.c:112
+#, c-format
+msgid "Path: %s"
+msgstr "พาธ: %s"
+
+#: ../src/bookmarkdialog.c:323
+msgid "Host"
+msgstr "โฮสต์"
+
+#: ../src/bookmarkdialog.c:331
+msgid "Port"
+msgstr "พอร์ต"
+
+#: ../src/bookmarkdialog.c:339
+msgid "Auto-Connect"
+msgstr "เชื่อมต่ออัตโนมัติ"
+
+#: ../src/bookmarkdialog.c:347
+msgid "Username"
+msgstr "ชื่อผู้ใช้"
+
+#: ../src/bookmarkdialog.c:355
+msgid "Other information"
+msgstr "ข้อมูลอื่นๆ"
+
+#: ../src/bookmarkdialog.c:412
+msgid "Edit Bookmarks"
+msgstr "แก้ไขที่คั่นหน้า"
+
+#: ../src/bookmarkeditdialog.c:234
+msgid "You must enter a name for the bookmark."
+msgstr "คุณต้องป้อนชื่อของที่คั่นหน้าด้วย"
+
+#: ../src/bookmarkeditdialog.c:253
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
+msgstr "ชื่อที่คั่นหน้านี้ถูกใช้ไปแล้ว กรุณาใช้ชื่ออื่น"
+
+#: ../src/bookmarkeditdialog.c:266
+msgid "You must enter a server address or name."
+msgstr "คุณต้องป้อนที่อยู่หรือชื่อของแม่ข่ายด้วย"
+
+#: ../src/bookmarkeditdialog.c:277
+msgid "You must enter a share name."
+msgstr "คุณต้องป้อนชื่อของแหล่งใช้ร่วมด้วย"
+
+#: ../src/bookmarkeditdialog.c:288
+msgid "You must enter a valid URI for the connection."
+msgstr "คุณต้องป้อน URI ที่ถูกรูปแบบสำหรับการเชื่อมต่อ"
+
+#: ../src/bookmarkeditdialog.c:584
+msgid "_Device:"
+msgstr "อุ_ปกรณ์:"
+
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
+msgid "_Server:"
+msgstr "แ_ม่ข่าย:"
+
+#: ../src/bookmarkeditdialog.c:897
+msgid "Create Bookmark"
+msgstr "สร้างที่คั่นหน้า"
+
+#: ../src/bookmarkeditdialog.c:904
+msgid "Edit Bookmark"
+msgstr "แก้ไขที่คั่นหน้า"
+
+#: ../src/bookmarkeditdialog.c:912
+msgid "Connect to Server"
+msgstr "เชื่อมต่อไปยังแม่ข่าย"
+
+#: ../src/bookmarkeditdialog.c:1036
+msgid "_Bookmark name:"
+msgstr "ชื่อที่_คั่นหน้า:"
+
+#: ../src/bookmarkeditdialog.c:1044
+msgid "_Color:"
+msgstr "_สี:"
+
+#: ../src/bookmarkeditdialog.c:1055
+msgid "Au_to-Connect"
+msgstr "เชื่อมต่อ_อัตโนมัติ"
+
+#: ../src/bookmarkeditdialog.c:1066
+msgid "Service t_ype:"
+msgstr "_ชนิดบริการ:"
+
+#: ../src/bookmarkeditdialog.c:1091
+msgid "Set the port to 0 to use the default port"
+msgstr "กำหนดพอร์ตเป็น 0 หากต้องการใช้พอร์ตปริยาย"
+
+#: ../src/bookmarkeditdialog.c:1093
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr "นี่ไม่ใช่ตำแหน่งในแหล่งต้นทางที่จะเมานท์ แต่ต้องใช้ในการเปิดจุดเมานท์ในเครื่องมือท่องดูแฟ้มเท่านั้น"
+
+#: ../src/bookmarkeditdialog.c:1099
+msgid "_Location (URI):"
+msgstr "_ตำแหน่ง (URI):"
+
+#: ../src/bookmarkeditdialog.c:1101
+msgid "_Folder:"
+msgstr "โ_ฟลเดอร์:"
+
+#: ../src/bookmarkeditdialog.c:1102
+msgid "P_ath:"
+msgstr "_พาธ:"
+
+#: ../src/bookmarkeditdialog.c:1103
+msgid "_User Name:"
+msgstr "_ชื่อผู้ใช้:"
+
+#: ../src/bookmarkeditdialog.c:1104
+msgid "Optional information:"
+msgstr "ข้อมูลเสริม:"
+
+#: ../src/bookmarkeditdialog.c:1105
+msgid "_Port:"
+msgstr "พอร์_ต:"
+
+#: ../src/bookmarkeditdialog.c:1106
+msgid "_Domain:"
+msgstr "โดเ_มน:"
+
+#: ../src/bookmarkeditdialog.c:1107
+msgid "_Share:"
+msgstr "แห_ล่งใช้ร่วม:"
+
+#: ../src/preferencesdialog.c:147
+msgid "Icons"
+msgstr "ไอคอน"
+
+#: ../src/preferencesdialog.c:148
+msgid "Text"
+msgstr "ข้อความ"
+
+#: ../src/preferencesdialog.c:149
+msgid "Both"
+msgstr "ทั้งสองอย่าง"
+
+#: ../src/preferencesdialog.c:150
+msgid "Both horizontal"
+msgstr "ทั้งสองอย่างแนวนอน"
+
+#: ../src/preferencesdialog.c:169
+msgid "Horizontal"
+msgstr "แนวนอน"
+
+#: ../src/preferencesdialog.c:170
+msgid "Vertical"
+msgstr "แนวตั้ง"
+
+#: ../src/preferencesdialog.c:189
+msgid "Symbols"
+msgstr "สัญลักษณ์"
+
+#: ../src/preferencesdialog.c:190
+msgid "Detailed List"
+msgstr "รายละเอียด"
+
+#: ../src/preferencesdialog.c:333
+msgid "General"
+msgstr "ทั่วไป"
+
+#: ../src/preferencesdialog.c:338
+msgid "_File Manager"
+msgstr "โปรแกรมจัดการแ_ฟ้ม"
+
+#: ../src/preferencesdialog.c:346
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr "ป้อนชื่อของโปรแกรมที่จะใช้เปิดหรือดูจุดเมานท์ต่างๆ"
+
+#: ../src/preferencesdialog.c:355
+msgid "_Terminal"
+msgstr "เ_ทอร์มินัล"
+
+#: ../src/preferencesdialog.c:363
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr "ป้อนชื่อของโปรแกรมที่จะใช้เปิดจุดเมานท์ในเทอร์มินัล"
+
+#: ../src/preferencesdialog.c:372
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "ช่วงเวลาที่จะเชื่อมต่อที่_คั่นหน้าโดยอัตโนมัติ"
+
+#: ../src/preferencesdialog.c:378
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr "ความถี่ที่จะพยายามเชื่อมต่อที่คั่นหน้าต่างๆ โดยอัตโนมัติ ในหน่วยวินาที ค่าศูนย์จะเป็นการปิดการตรวจสอบ"
+
+#: ../src/preferencesdialog.c:389
+msgid "Interface"
+msgstr "ส่วนติดต่อผู้ใช้"
+
+#: ../src/preferencesdialog.c:391
+msgid "_Save window position and geometry"
+msgstr "_บันทึกตำแหน่งและขนาดของหน้าต่าง"
+
+#: ../src/preferencesdialog.c:392
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "บันทึกตำแหน่งและขนาดของหน้าต่างไว้ และคืนค่าเมื่อเริ่มโปรแกรม"
+
+#: ../src/preferencesdialog.c:395
+msgid "Show status _icon in the Notification Area"
+msgstr "แสดงไ_อคอนสถานะในพื้นที่แจ้งเหตุ"
+
+#: ../src/preferencesdialog.c:398
+msgid "Start _minimized in the Notification Area"
+msgstr "เริ่มทำงานโดยย่อเ_ก็บในพื้นที่แจ้งเหตุ"
+
+#: ../src/preferencesdialog.c:403
+msgid "Show side panel"
+msgstr "แสดงช่องด้านข้าง"
+
+#: ../src/preferencesdialog.c:404
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr "กำหนดว่าจะแสดงช่องด้านข้างสำหรับท่องดูเครือข่ายเฉพาะที่เพื่อดูแหล่งใช้ร่วมของ Samba/Windows ที่มี และเพื่อดูรายชื่อที่คั่นหน้าหรือไม่"
+
+#: ../src/preferencesdialog.c:407
+msgid "Show auto-connect error messages"
+msgstr "แสดงข้อผิดพลาดของการเชื่อมต่ออัตโนมัติ"
+
+#: ../src/preferencesdialog.c:408
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "กำหนดว่าจะแสดงกล่องโต้ตอบรายงานข้อผิดพลาดหรือไม่ เมื่อเชื่อมต่อที่คั่นหน้าโดยอัตโนมัติไม่สำเร็จ"
+
+#: ../src/preferencesdialog.c:414
+msgid "_Connection List Mode"
+msgstr "รูปแบบของรายชื่อการเ_ชื่อมต่อ"
+
+#: ../src/preferencesdialog.c:427
+msgid "Toolbar"
+msgstr "แถบเครื่องมือ"
+
+#: ../src/preferencesdialog.c:429
+msgid "Show _toolbar"
+msgstr "แสดงแถบเ_ครื่องมือ"
+
+#: ../src/preferencesdialog.c:435
+msgid "St_yle"
+msgstr "รูปแ_บบ"
+
+#: ../src/preferencesdialog.c:446
+msgid "_Orientation"
+msgstr "แ_นววาง"
+
+#: ../src/preferencesdialog.c:507
+msgid "Preferences"
+msgstr "ปรับแต่ง"
+
+#: ../src/backendgvfs.c:221
+msgid "No bookmark"
+msgstr "ไม่มีที่คั่นหน้า"
+
+#: ../src/backendgvfs.c:239
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s\n"
+"Bookmark: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nเชื่อมต่ออยู่: ใช่\nชนิดบริการ: %s\nที่คั่นหน้า: %s"
+
+#: ../src/backendgvfs.c:254
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>อุปกรณ์ยูนิกซ์: %s</b>"
+
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
+msgid "unknown"
+msgstr "ไม่ทราบ"
+
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "เชื่อมต่อไปยัง \"%s\" ไม่สำเร็จ"
+
+#: ../src/backendgvfs.c:496
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "ตัดการเชื่อมต่อกับ \"%s\" ไม่สำเร็จ"
+
+#: ../src/mountdialog.c:102
+msgid "Connecting"
+msgstr "กำลังเชื่อมต่อ"
+
+#: ../src/browsenetworkpanel.c:188
+msgid "No Workgroups found"
+msgstr "ไม่พบเวิร์กกรุ๊ปใด"
+
+#: ../src/browsenetworkpanel.c:199
+msgid "No Shares found"
+msgstr "ไม่พบแหล่งใช้ร่วมใด"
+
+#: ../src/browsenetworkpanel.c:204
+msgid "No Hosts found"
+msgstr "ไม่พบโฮสต์ใด"
+
+#: ../src/browsenetworkpanel.c:490
+msgid "Connect to the selected share"
+msgstr "เชื่อมต่อไปยังแหล่งใช้ร่วมที่เลือก"
+
+#: ../src/browsenetworkpanel.c:498
+msgid "Create a bookmark from the selected share"
+msgstr "สร้างที่คั่นหน้าจากแหล่งใช้ร่วมที่เลือก"
+
+#: ../src/browsenetworkpanel.c:507
+msgid "Refresh the network list"
+msgstr "ปรับข้อมูลรายชื่อเครือข่าย"
+
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+msgid "Close panel"
+msgstr "ปิดพาเนล"
+
+#: ../src/bookmarkpanel.c:92
+msgid "No bookmarks"
+msgstr "ไม่มีที่คั่นหน้า"
+
+#: ../src/bookmarkpanel.c:256
+msgid "Connect to the selected bookmark"
+msgstr "เชื่อมต่อไปยังที่คั่นหน้าที่เลือก"
+
+#: ../gigolo.desktop.in.h:2
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "โปรแกรมส่วนหน้าอย่างง่ายสำหรับเชื่อมต่อไปยังระบบแฟ้มในเครือข่ายอย่างง่ายดาย"
