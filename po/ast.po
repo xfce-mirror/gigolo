@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2014-04-14 01:26+0000\n"
+"PO-Revision-Date: 2014-04-25 08:13+0000\n"
 "Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
-"Language-Team: Asturian (http://www.transifex.com/projects/p/xfce/language/ast/)\n"
+"Language-Team: Asturian (http://www.transifex.com/projects/p/xfce-apps/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -140,7 +140,7 @@ msgstr "Editar _marcador"
 #: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
-msgstr "Criar _marcadores"
+msgstr "Crear _marcadores"
 
 #: ../src/window.c:1281
 msgid "_File"
@@ -256,7 +256,7 @@ msgstr "¿Movelu agora?"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Gigolo necesita que muevas el to antiguu direutoriu de configuración enantes d'entamar."
+msgstr "Gigolo necesita muevete'l to antiguu direutoriu de configuración enantes d'entamar."
 
 #: ../src/settings.c:703
 #, c-format
@@ -324,7 +324,7 @@ msgstr "Tienes d'introducir un nome pal marcador."
 #: ../src/bookmarkeditdialog.c:253
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "El nome de marcador introducíu yá ta n'usu. Por favor, escueyi otru."
+msgstr "El nome'l marcador introducíu yá ta n'usu. Por favor, escueyi otru."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
