@@ -5,15 +5,15 @@
 # Translators:
 # Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013
 # MC <correomc2000-ing@yahoo.es>, 2013
-# Pablo Lezaeta <prflr88@gmail.com>, 2013
+# Pablo Lezaeta <prflr88@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2013-07-30 09:53+0000\n"
+"PO-Revision-Date: 2014-05-19 05:06+0000\n"
 "Last-Translator: Pablo Lezaeta <prflr88@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/xfce/language/es/)\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/xfce-apps/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Conectar todos los marcadores definidos con «conectar autom.» y salir"
+msgstr "Conectar todos los marcadores definidos con «conectar automáticamente» y salir"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
@@ -30,7 +30,7 @@ msgstr "Ignorar instancias en ejecución, forzar apertura de una nueva"
 
 #: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
-msgstr "Mostrar una lista de esquemas de URI admitidos"
+msgstr "Mostrar una lista de esquemas URI admitidos"
 
 #: ../src/main.c:50
 msgid "Be verbose"
@@ -104,11 +104,11 @@ msgstr "Una interfaz sencilla para conectarse/montar sistemas de archivos locale
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Copyright 2008-2011 Enrico Tröger"
+msgstr "Derechos de autor © 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr "Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013"
+msgstr "Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013\\n\nPablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -137,12 +137,12 @@ msgstr "No hay una ubicación predeterminada disponible para «%s»"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
-msgstr "Editar _marcadores"
+msgstr "Editar el _marcador"
 
 #: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
-msgstr "Crear  _marcadores"
+msgstr "Crear un _marcador"
 
 #: ../src/window.c:1281
 msgid "_File"
@@ -154,7 +154,7 @@ msgstr "_Editar"
 
 #: ../src/window.c:1283
 msgid "_Actions"
-msgstr "_Acciones"
+msgstr "A_cciones"
 
 #: ../src/window.c:1284
 msgid "_View"
@@ -162,7 +162,7 @@ msgstr "_Ver"
 
 #: ../src/window.c:1285
 msgid "_Help"
-msgstr "_Ayuda"
+msgstr "Ay_uda"
 
 #: ../src/window.c:1291
 msgid "_Edit Bookmarks"
@@ -174,7 +174,7 @@ msgstr "Abra el gestor de marcadores para añadir, editar o eliminar marcadores"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
-msgstr "Conectar a la ruta seleccionada"
+msgstr "Desconectar el recurso seleccionado"
 
 #: ../src/window.c:1298
 msgid "Open the selected resource with a file manager"
@@ -194,7 +194,7 @@ msgstr "Copiar el _URI"
 
 #: ../src/window.c:1302
 msgid "Quit Gigolo"
-msgstr "Cerrar Gigolo"
+msgstr "Salir de Gigolo"
 
 #: ../src/window.c:1303
 msgid "Online Help"
@@ -342,11 +342,11 @@ msgstr "Debe escribir un URI válido para la conexión."
 
 #: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
-msgstr "_Dispositivo"
+msgstr "_Dispositivo:"
 
 #: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
-msgstr "_Servidor"
+msgstr "_Servidor:"
 
 #: ../src/bookmarkeditdialog.c:897
 msgid "Create Bookmark"
@@ -358,7 +358,7 @@ msgstr "Editar marcador"
 
 #: ../src/bookmarkeditdialog.c:912
 msgid "Connect to Server"
-msgstr "Conectar al servidor"
+msgstr "Conectar con el servidor"
 
 #: ../src/bookmarkeditdialog.c:1036
 msgid "_Bookmark name:"
@@ -508,7 +508,7 @@ msgstr "Mostrar el panel lateral"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Si mostrará un panel lateral para navegar por la red local en búsca de puntos Samba / Windows disponibles y la lista de favoritos"
+msgstr "Si se mostrará un panel lateral para explorar la red local en busca de recursos Samba/Windows disponibles y de una lista de marcadores"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -518,7 +518,7 @@ msgstr "Mostrar mensajes de error de conexión automática"
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
-msgstr "Si mostrará un mensage de error cuando la autoconexión falle"
+msgstr "Si se mostrarán mensajes de error cuando falle la conexión automática de marcadores"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -546,7 +546,7 @@ msgstr "Preferencias"
 
 #: ../src/backendgvfs.c:221
 msgid "No bookmark"
-msgstr "Sin marcadores"
+msgstr "No hay marcador"
 
 #: ../src/backendgvfs.c:239
 #, c-format
