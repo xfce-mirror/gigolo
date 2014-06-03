@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Piotr Sokół <psokol@jabster.pl>, 2009,2011
+# Piotr Sokół <psokol@jabster.pl>, 2009,2011,2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2013-07-04 21:47+0000\n"
-"Last-Translator: OSWorld <michal.olber@osworld.pl>\n"
-"Language-Team: Polish (http://www.transifex.com/projects/p/xfce/language/pl/)\n"
+"PO-Revision-Date: 2014-06-03 15:44+0000\n"
+"Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
+"Language-Team: Polish (http://www.transifex.com/projects/p/xfce-apps/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -135,7 +135,7 @@ msgstr "Domyślne lokacja jest niedostępna dla \"%s\""
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
-msgstr "Edycja _zakładki"
+msgstr "Edytuj _zakładkę"
 
 #: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
@@ -180,7 +180,7 @@ msgstr "Otwiera zaznaczone zasoby za pomocą menedżera plików"
 
 #: ../src/window.c:1299
 msgid "Open in _Terminal"
-msgstr "Otwórz w terminalu"
+msgstr "Otwórz w _terminalu"
 
 #: ../src/window.c:1300
 msgid "Start a terminal from here"
