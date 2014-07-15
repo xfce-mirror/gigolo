@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2014-06-03 15:44+0000\n"
+"PO-Revision-Date: 2014-07-15 08:32+0000\n"
 "Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/xfce-apps/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Połącz wszystkie zakładki oznaczone jako 'połącz samoczynnie' i wyjdź"
+msgstr "Łączy wszystkie zakładki oznaczone jako „Automatyczne nawiązywanie połączenia” i kończy"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
@@ -106,7 +106,7 @@ msgstr "Copyright 2008-20011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr "Piotr Sokół <psokol@jabster.pl>, 2009, 2011."
+msgstr "Piotr Sokół <psokol@jabster.pl>, 2009, 2011, 2014."
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -336,7 +336,7 @@ msgstr "Proszę wprowadzić nazwę udziału."
 
 #: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
-msgstr "Aby uzyskać połączenie, proszę wprowadzić poprawny adres URI."
+msgstr "Proszę wprowadzić poprawny adres URI, aby nawiązać połączenie."
 
 #: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
@@ -582,15 +582,15 @@ msgstr "Nawiązywanie połączenia"
 
 #: ../src/browsenetworkpanel.c:188
 msgid "No Workgroups found"
-msgstr "Nie znaleziono grup roboczych"
+msgstr "Nie odnaleziono grup roboczych"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
-msgstr "Nie znaleziono udziałów"
+msgstr "Nie odnaleziono udziałów"
 
 #: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
-msgstr "Nie znaleziono komputerów zdalnych"
+msgstr "Nie odnaleziono komputerów zdalnych"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
@@ -602,7 +602,7 @@ msgstr "Tworzy zakładkę do zaznaczonego udziału"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
-msgstr "Odświeża listę sieci"
+msgstr "Wczytuje ponownie listę sieci"
 
 #: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
