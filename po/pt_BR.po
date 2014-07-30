@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# AndreLDM <andreldm1989@gmail.com>, 2013
+# André Miranda <andreldm1989@gmail.com>, 2013-2014
 # filiperosset <rosset.filipe@gmail.com>, 2009
 # Rafael Ferreira <rafael.f.f1@gmail.com>, 2013
 msgid ""
@@ -11,9 +11,9 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2013-10-31 02:49+0000\n"
-"Last-Translator: AndreLDM <andreldm1989@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/xfce/language/pt_BR/)\n"
+"PO-Revision-Date: 2014-07-30 04:05+0000\n"
+"Last-Translator: André Miranda <andreldm1989@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/xfce-apps/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Conecta todos os favoritos marcados como ''auto conexão\" e sai"
+msgstr "Conecta todos os marcadores marcados como ''auto conectar\" e sai"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
@@ -104,15 +104,15 @@ msgstr "Uma simples interface para conectar facilmente a sistemas de arquivos re
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Copyright 2008-2009 Enrico Tröger"
+msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr "Filipe Rosset <rosset.filipe@gmail.com>"
+msgstr "Filipe Rosset <rosset.filipe@gmail.com>, André Miranda <andreldm1989@gmail.com>"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "O Gigolo pode utilizar os seguintes protocolos providos por GVfs:"
+msgstr "O Gigolo pode utilizar os seguintes protocolos providos pelo GVfs:"
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -246,7 +246,7 @@ msgstr "Nome"
 
 #: ../src/window.c:1500
 msgid "Bookmarks"
-msgstr "Favoritos"
+msgstr "Marcadores"
 
 #: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
@@ -265,7 +265,7 @@ msgstr "O Gigolo precisa mover seu antigo diretório de configurações antes de
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "O seu antigo diretório de configurações \"%s\" não pode ser movido para \"%s\" (%s). Por favor mover manualmente o diretório para a nova localização."
+msgstr "O seu antigo diretório de configurações \"%s\" não pode ser movido para \"%s\" (%s). Favor mover manualmente o diretório para o novo local."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -321,7 +321,7 @@ msgstr "Editar marcadores"
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "You must enter a name for the bookmark."
-msgstr "Você precisa digitar um nome para o marcador."
+msgstr "Você deve digitar um nome para o marcador."
 
 #: ../src/bookmarkeditdialog.c:253
 msgid ""
@@ -330,15 +330,15 @@ msgstr "O nome do marcador digitado já existe. Por favor escolha outro."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
-msgstr "Você precisa digitar um endereço ou nome de servidor."
+msgstr "Você deve digitar um endereço ou nome de servidor."
 
 #: ../src/bookmarkeditdialog.c:277
 msgid "You must enter a share name."
-msgstr "Você precisa digitar um nome de compartilhamento."
+msgstr "Você deve digitar um nome de compartilhamento."
 
 #: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
-msgstr "Você precisa digitar uma URI válida para a conexão."
+msgstr "Você deve digitar uma URI válida para a conexão."
 
 #: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
@@ -374,7 +374,7 @@ msgstr "Au_to-conectar"
 
 #: ../src/bookmarkeditdialog.c:1066
 msgid "Service t_ype:"
-msgstr "Tipo do serv_iço"
+msgstr "Tipo do serv_iço:"
 
 #: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
@@ -460,7 +460,7 @@ msgstr "_Gerenciador de arquivos"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Digite o nome do programa para abrir ou visualizar pontos de montagens."
+msgstr "Digite o nome do programa para abrir ou visualizar pontos de montagens"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -494,11 +494,11 @@ msgstr "Salva a posição e geometria da janela e as restaura quando iniciar"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
-msgstr "Mostrar ícone de status na Área de not_ificação"
+msgstr "Mostrar ícone de status na Área de Not_ificação"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
-msgstr "Iniciar _minimizado na Área de notificação"
+msgstr "Iniciar _minimizado na Área de Notificação"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
@@ -530,7 +530,7 @@ msgstr "Barra de ferramentas"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "Exibir a barra de ferramen_tas"
+msgstr "Mostrar barra de ferramen_tas"
 
 #: ../src/preferencesdialog.c:435
 msgid "St_yle"
@@ -557,7 +557,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr "<b>%s</b>\n\nURI: %s\nConectado: Sim\nTipo do serviço: %s\nFavorito: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nConectado: Sim\nTipo do serviço: %s\nMarcador: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -600,7 +600,7 @@ msgstr "Conectar ao compartilhamento selecionado"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "Criar um favorito do compartilhamento selecionado"
+msgstr "Criar um marcador a partir do compartilhamento selecionado"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
