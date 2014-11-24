@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Tornes Llume <l.lumex03.tornes@gmail.com>, 2014
+# Ḷḷumex03 <tornes@opmbx.org>, 2014
+# Ḷḷumex03 <tornes@opmbx.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2014-04-25 08:13+0000\n"
-"Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
+"PO-Revision-Date: 2014-11-24 16:26+0000\n"
+"Last-Translator: Ḷḷumex03 <tornes@opmbx.org>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/xfce-apps/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -160,7 +161,7 @@ msgstr "_Ver"
 
 #: ../src/window.c:1285
 msgid "_Help"
-msgstr "A_ida"
+msgstr "A_yuda"
 
 #: ../src/window.c:1291
 msgid "_Edit Bookmarks"
@@ -196,7 +197,7 @@ msgstr "Colar de Gigolo"
 
 #: ../src/window.c:1303
 msgid "Online Help"
-msgstr "Aida en llinia"
+msgstr "Ayuda en llinia"
 
 #: ../src/window.c:1304
 msgid "Supported Protocols"
