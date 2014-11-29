@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2014-06-29 20:06+0000\n"
-"Last-Translator: Urien Desterres <urien.desterres@gmail.com>\n"
+"PO-Revision-Date: 2014-11-29 14:35+0000\n"
+"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/xfce-apps/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Connecter tous les signets marqués en 'connexion automatique' et quitter"
+msgstr "Connecter tous les signets marqués en « connexion automatique » et quitter"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
@@ -134,7 +134,7 @@ msgstr "Commande terminal invalide"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "Pas d'emplacement par défaut pour « %s »"
+msgstr "Aucun emplacement par défaut pour « %s »"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -183,7 +183,7 @@ msgstr "Ouvrir la ressource sélectionnée avec un gestionnaire de fichiers"
 
 #: ../src/window.c:1299
 msgid "Open in _Terminal"
-msgstr "Ouvrir dans _Terminal"
+msgstr "Ouvrir dans un _terminal"
 
 #: ../src/window.c:1300
 msgid "Start a terminal from here"
@@ -327,7 +327,7 @@ msgstr "Vous devez entrer un nom pour le signet."
 #: ../src/bookmarkeditdialog.c:253
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "Le nom du signet entré est déjà utilisé. Merci d'en choisir un autre."
+msgstr "Le nom du signet saisi est déjà utilisé. Merci d'en choisir un autre."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
@@ -503,13 +503,13 @@ msgstr "Démarrer _minimisé dans la zone de notification"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
-msgstr "_Afficher le panneau latéral"
+msgstr "Afficher le panneau latéral"
 
 #: ../src/preferencesdialog.c:404
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Pour afficher, ou non, un panneau latéral pour naviguer sur le réseau local pour les partages Samba / Windows  disponibles et une liste de signets"
+msgstr "Afficher ou non un panneau latéral pour parcourir le réseau local afin de trouver les partages Samba / Windows disponibles et une liste de signets"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -519,7 +519,7 @@ msgstr "Afficher les messages d'erreur de connexion automatique"
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
-msgstr "Pour afficher, ou non, les messages d'erreur lorsque la connexion automatique d'un signet échoue."
+msgstr "Afficher ou non les messages d'erreur lorsque la connexion automatique d'un signet échoue."
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -547,7 +547,7 @@ msgstr "Préférences"
 
 #: ../src/backendgvfs.c:221
 msgid "No bookmark"
-msgstr "Pas de signet"
+msgstr "Aucun signet"
 
 #: ../src/backendgvfs.c:239
 #, c-format
@@ -613,7 +613,7 @@ msgstr "Fermer le panneau"
 
 #: ../src/bookmarkpanel.c:92
 msgid "No bookmarks"
-msgstr "_Pas de signets"
+msgstr "Aucun signet"
 
 #: ../src/bookmarkpanel.c:256
 msgid "Connect to the selected bookmark"
