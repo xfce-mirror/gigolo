@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2014-11-24 16:26+0000\n"
+"PO-Revision-Date: 2014-12-07 00:53+0000\n"
 "Last-Translator: Ḷḷumex03 <tornes@opmbx.org>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/xfce-apps/language/ast/)\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr "Coneutar tolos marcadores conseñaos como 'coneutar automáticamente' y 
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Inorar instancies n'execución, forciar l'apertura d'una nueva instancia"
+msgstr "Inorar instancies n'execución, forciar l'apertura d'una instancia nueva"
 
 #: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
@@ -49,7 +49,7 @@ msgstr "Preséu Unix"
 
 #: ../src/common.c:79
 msgid "Windows Share"
-msgstr "Recursu compartíu de Windows"
+msgstr "Compartición de Windows"
 
 #: ../src/common.c:81
 msgid "FTP"
@@ -111,7 +111,7 @@ msgstr "Softastur www.softastur.org"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Gigolo pue usar los siguientes protocolos apurríos por GVfs:"
+msgstr "Gigolo pue usar los protocolos siguientes apurríos per GVfs:"
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -169,7 +169,7 @@ msgstr "_Editar marcadores"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Abrir l'alministrador de marcadores p'amestar, editar o desaniciar marcadores"
+msgstr "Abri l'alministrador de marcadores p'amestar, editar o desaniciar marcadores"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -383,7 +383,7 @@ msgstr "Afita'l puertu a 0 pa usar el puertu por defeutu"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Esto nun ta usandose pal actual montaxe, namái necesario p'abrir el puntu de montaxe nun restolador de ficheros"
+msgstr "Esto nun s'usa pal montaxe actual, namái ye necesario p'abrir el puntu de montaxe nun restolador de ficheros"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -497,7 +497,7 @@ msgstr "Amosar i_conu d'estáu na estaya de notificación"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
-msgstr "Entamar _minimizáu na estaya de notificación"
+msgstr "Aniciar _minimizáu na estaya de notificación"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
