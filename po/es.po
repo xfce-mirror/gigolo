@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013
+# Adolfo Jayme Barrientos <fito@libreoffice.org>, 2013
 # mc <correomc2000-ing@yahoo.es>, 2013
 # Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2013-2014
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2014-08-03 06:04+0000\n"
+"PO-Revision-Date: 2014-12-26 20:28+0000\n"
 "Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/xfce-apps/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr "Derechos de autor © 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr "Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013\\n\nPablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>"
+msgstr "Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013\\n\nPablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com> 2013-2015"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -190,7 +190,7 @@ msgstr "Iniciar el terminal desde aquí"
 
 #: ../src/window.c:1301
 msgid "Copy _URI"
-msgstr "Copiar el _URI"
+msgstr "Copiar la dirección _URI"
 
 #: ../src/window.c:1302
 msgid "Quit Gigolo"
@@ -420,7 +420,7 @@ msgstr "_Compartir:"
 
 #: ../src/preferencesdialog.c:147
 msgid "Icons"
-msgstr "iconos"
+msgstr "Iconos"
 
 #: ../src/preferencesdialog.c:148
 msgid "Text"
