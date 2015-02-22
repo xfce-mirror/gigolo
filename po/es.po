@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos <fito@libreoffice.org>, 2013
+# Adolfo Jayme Barrientos, 2013
 # mc <correomc2000-ing@yahoo.es>, 2013
-# Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2013-2014
+# Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2014-12-26 20:28+0000\n"
+"PO-Revision-Date: 2015-02-22 06:59+0000\n"
 "Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/xfce-apps/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -265,7 +265,7 @@ msgstr "Gigoló necesita mover su carpeta de configuración antigua antes de ini
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "No se pudo mover la carpeta de configuración antigua «%s» a «%s» (%s). Muévala manualmente a la ubicación nueva."
+msgstr "No se pudo mover la carpeta de configuración antigua «%s» a «%s» (%s). Muévala manualmente a la nueva ubicación."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -378,7 +378,7 @@ msgstr "T_ipo de servicio:"
 
 #: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
-msgstr "Defina el puerto a 0 para utilizar el predeterminado"
+msgstr "Defina el puerto a «0» para utilizar el predeterminado"
 
 #: ../src/bookmarkeditdialog.c:1093
 msgid ""
