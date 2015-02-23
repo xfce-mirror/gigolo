@@ -4,14 +4,15 @@
 # 
 # Translators:
 # Adrian Dimitrov <Enzo_01@abv.bg>, 2009
+# Lyubomir Vasilev, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2013-11-19 14:48+0000\n"
-"Last-Translator: Nick <nick@xfce.org>\n"
-"Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce/language/bg/)\n"
+"PO-Revision-Date: 2015-02-23 11:18+0000\n"
+"Last-Translator: Lyubomir Vasilev\n"
+"Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce-apps/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -93,7 +94,7 @@ msgstr "Друго местонахождение"
 #: ../src/window.c:262
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Свързване към \"%s\""
+msgstr "Свързване към „%s“"
 
 #: ../src/window.c:430
 msgid ""
@@ -131,7 +132,7 @@ msgstr "Невалидна команда"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "Не е наличен адрес по подразбиране за \"%s\""
+msgstr "Не е наличен адрес по подразбиране за „%s“"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -263,7 +264,7 @@ msgstr "Gigolo трябва да премести старата конфигу�
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "Твоята стара конфигурационна директория \"%s\" не може да бъде преместена на \"%s\" (%s). Моля, премести я ръчно на новото местонахождение."
+msgstr "Вашата стара конфигурационна директория „%s“ не може да бъде преместена в „%s“ (%s). Моля, преместете я ръчно в новото местоположение."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -569,12 +570,12 @@ msgstr "непознато"
 #: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Свързването към \"%s\" се провали."
+msgstr "Свързването към „%s“ се провали."
 
 #: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Разкачането от \"%s\" се провали."
+msgstr "Разкачането от „%s“ се провали."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
