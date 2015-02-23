@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2015-02-23 11:18+0000\n"
+"PO-Revision-Date: 2015-02-23 12:27+0000\n"
 "Last-Translator: Lyubomir Vasilev\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce-apps/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Свържи всички маркирани отметки като 'auto connect' и излез"
+msgstr "Свържете всички отбелязани отметки като „автоматично свързване“ и излезте"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
@@ -116,7 +116,7 @@ msgstr "Gigolo може да използва следните протокол�
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
-msgstr "Командата '%s' се провали"
+msgstr "Командата „%s“ беше неуспешна"
 
 #: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
 #: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
@@ -377,7 +377,7 @@ msgstr "Тип услуга:"
 
 #: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
-msgstr "Задай за порт '0', за да се използва порта по подразбиране"
+msgstr "Задайте за порт „0“, за да се използва порта по подразбиране"
 
 #: ../src/bookmarkeditdialog.c:1093
 msgid ""
