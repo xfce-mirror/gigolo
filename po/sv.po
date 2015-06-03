@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Alex Nordlund <deep.alexander@gmail.com>, 2013
+# Alexander Nordlund <deep.alexander@gmail.com>, 2013
 # Daniel Nylander <po@danielnylander.se>, 2008-2009
-# PavelNicklasson <pavelnicklasson@bahnhof.se>, 2014
+# Påvel Nicklasson <pavelnicklasson@bahnhof.se>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2014-03-22 09:45+0000\n"
-"Last-Translator: PavelNicklasson <pavelnicklasson@bahnhof.se>\n"
-"Language-Team: Swedish (http://www.transifex.com/projects/p/xfce/language/sv/)\n"
+"PO-Revision-Date: 2015-06-03 15:36+0000\n"
+"Last-Translator: Påvel Nicklasson <pavelnicklasson@bahnhof.se>\n"
+"Language-Team: Swedish (http://www.transifex.com/projects/p/xfce-apps/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,7 +42,7 @@ msgstr "Visa versionsinformation"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- ett enkelt gränssnitt för att enkelt ansluta till fjärrfilsystem"
+msgstr "- ett enkelt gränssnitt för att lätt ansluta till fjärrfilsystem"
 
 #: ../src/common.c:77
 msgid "Unix Device"
