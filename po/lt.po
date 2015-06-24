@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2015-04-08 22:14+0000\n"
+"PO-Revision-Date: 2015-06-24 12:28+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/projects/p/xfce-apps/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -521,7 +521,7 @@ msgstr "Ar rodyti klaidos pranešimą nepavykus prisijungti prie žymelių"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
-msgstr "_Prisijungimo sąrašo režimas"
+msgstr "_Prisijungimo sąrašo veiksena"
 
 #: ../src/preferencesdialog.c:427
 msgid "Toolbar"
