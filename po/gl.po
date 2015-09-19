@@ -5,14 +5,15 @@
 # Translators:
 # Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2009-2010,2013
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2013
+# Xosé <xosecalvo@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2013-07-04 09:06+0000\n"
-"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
-"Language-Team: Galician (http://www.transifex.com/projects/p/xfce/language/gl/)\n"
+"PO-Revision-Date: 2015-09-19 08:05+0000\n"
+"Last-Translator: Xosé <xosecalvo@gmail.com>\n"
+"Language-Team: Galician (http://www.transifex.com/xfce/xfce-apps/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -94,12 +95,12 @@ msgstr "Localización personalizada"
 #: ../src/window.c:262
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Conectando a \"%s\""
+msgstr "Conectando con «%s»"
 
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "Unha sinxela interface para conectar/montar facilmente a sistemas de ficheiros locais e remotos"
+msgstr "Unha interface sinxela para conectar/montar facilmente a sistemas de ficheiros locais e remotos"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -107,7 +108,7 @@ msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr "Leandro Regueiro <leandro.regueiro@gmail.com>, 2009.\n\nProxecto Trasno - Adaptación de software libre ó galego.\nSe queres colaborar podes obter máis información en <http://trasno.net>"
+msgstr "Leandro Regueiro <leandro.regueiro@gmail.com>, 2009.\nXosé <xosecalvo@gmail.com>, 2015\n\nProxecto Trasno - Adaptación de software libre ó galego.\nSe queres colaborar podes obter máis información en <http://trasno.net>"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -116,7 +117,7 @@ msgstr "Gigolo pode usar os seguintes protocolos proporcionados por GVfs:"
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
-msgstr "Fallou a orde '%s'"
+msgstr "Fallou a orde «%s»"
 
 #: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
 #: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
@@ -132,7 +133,7 @@ msgstr "Orde de terminal non válida"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "Non hai localización predefinida dispoñíbel para \"%s\""
+msgstr "Non hai localización predefinida dispoñíbel para «%s»"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -197,11 +198,11 @@ msgstr "Saír de Gigolo"
 
 #: ../src/window.c:1303
 msgid "Online Help"
-msgstr "Axuda en liña"
+msgstr "Axuda na rede"
 
 #: ../src/window.c:1304
 msgid "Supported Protocols"
-msgstr "Protocolos soportados"
+msgstr "Protocolos admitidos"
 
 #: ../src/window.c:1310
 msgid "Side _Panel"
@@ -229,7 +230,7 @@ msgstr "_Marcadores"
 
 #: ../src/window.c:1330
 msgid "Choose a bookmark to connect to"
-msgstr "Escolla un marcador ó que conectar"
+msgstr "Escolla un marcador ao que conectar"
 
 #: ../src/window.c:1412
 msgid "Connected"
@@ -264,7 +265,7 @@ msgstr "Gigolo ten que mover o antigo directorio de configuración antes de inic
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "O seu antigo directorio de configuración \"%s\" non se pode mover a \"%s\" (%s). Mova o directorio a man á nova localización."
+msgstr "O seu antigo directorio de configuración «%s» non se pode mover a «%s» (%s). Mova o directorio a man á nova localización."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -570,12 +571,12 @@ msgstr "descoñecido"
 #: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Ocorreu un erro ó conectar a \"%s\"."
+msgstr "Produciuse un erro ao se conectar a «%s»."
 
 #: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Ocorreu un erro ó desconectar de \"%s\"."
+msgstr "Produciuse un erro ao se desconectar de «%s»."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
