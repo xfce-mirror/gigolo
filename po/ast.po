@@ -11,9 +11,9 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2015-02-23 00:29+0000\n"
+"PO-Revision-Date: 2015-11-15 00:06+0000\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
-"Language-Team: Asturian (http://www.transifex.com/projects/p/xfce-apps/language/ast/)\n"
+"Language-Team: Asturian (http://www.transifex.com/xfce/xfce-apps/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -95,7 +95,7 @@ msgstr "Allugamientu personalizáu"
 #: ../src/window.c:262
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Coneutando a \"%s\""
+msgstr "Coneutando a «%s»"
 
 #: ../src/window.c:430
 msgid ""
@@ -133,7 +133,7 @@ msgstr "Comandu de terminal non válidu"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "Nun hai allugamientu por defeutu disponible pa \"%s\""
+msgstr "Nun hai allugamientu por defeutu disponible pa «%s»"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -265,7 +265,7 @@ msgstr "Gigolo necesita mover el to antiguu direutoriu de configuración enantes
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "El to antiguu direutoriu de configuración \"%s\" nun pudo movese a \"%s\" (%s). Por favor, mueve manualmente'l direutoriu al allugamientu nuevu."
+msgstr "El to antiguu direutoriu de configuración «%s» nun pudo movese a «%s» (%s). Por favor, mueve manualmente'l direutoriu al allugamientu nuevu."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -571,12 +571,12 @@ msgstr "desconocíu"
 #: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Falló la conexón a \"%s\"."
+msgstr "Falló la conexón a «%s»."
 
 #: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Falló la desconexón de \"%s\"."
+msgstr "Falló la desconexón de «%s»."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
