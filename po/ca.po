@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009,2011
+# Davidmp <medipas@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2015-12-15 17:52+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"PO-Revision-Date: 2015-12-16 17:17+0000\n"
+"Last-Translator: Davidmp <medipas@gmail.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr ""
+msgstr "Connecta tots els llocs d'interès marcats com a \"connexió automàtica\" i surt"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
