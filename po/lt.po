@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
-# Moo, 2015
+# Moo, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2015-09-20 19:55+0000\n"
+"PO-Revision-Date: 2016-03-01 21:02+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-apps/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -497,7 +497,7 @@ msgstr "Pranešimų srityje rodyti _būsenos piktogramą"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
-msgstr "Pranešimų srityje paleisti _sumažintą"
+msgstr "Pranešimų srityje paleisti _suskleistą"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
