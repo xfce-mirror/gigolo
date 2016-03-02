@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# GenghisKhan <genghiskhan@gmx.ca>, 2015
+# GenghisKhan <genghiskhan@gmx.ca>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-01-29 10:26+0000\n"
+"PO-Revision-Date: 2016-03-02 05:50+0000\n"
 "Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-apps/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgstr "מתחבר כעת אל \"%s\""
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "מגשר־חזיתי פשוט לשם התחברות/עגינה קלה למערכות קבצים מקומיות ומרוחקות"
+msgstr "מגשר חזיתי פשוט לצורך התחברות/עגינה קלה למערכות קבצים מקומיות ומרוחקות"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -131,7 +131,7 @@ msgstr "פקודת מסוף שגויה"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "אין מקום משתמט עבור \"%s\""
+msgstr "אין מקום שגרתי עבור \"%s\""
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
@@ -180,11 +180,11 @@ msgstr "פתח את המקור הנבחר בעזרת מנהל קבצים"
 
 #: ../src/window.c:1299
 msgid "Open in _Terminal"
-msgstr "פתיחה בתוך _מסוף"
+msgstr "פתח בתוך _מסוף"
 
 #: ../src/window.c:1300
 msgid "Start a terminal from here"
-msgstr "התחלת מסוף מכאן"
+msgstr "התחל מסוף מכאן"
 
 #: ../src/window.c:1301
 msgid "Copy _URI"
@@ -216,11 +216,11 @@ msgstr "_סמל מצב"
 
 #: ../src/window.c:1320
 msgid "View as _Symbols"
-msgstr "הצג כ_סמלים"
+msgstr "הצג בתור _סמלים"
 
 #: ../src/window.c:1321
 msgid "View as _Detailed List"
-msgstr "הצג כרשימה מ_פורטת"
+msgstr "הצג בתור רשימה מ_פורטת"
 
 #: ../src/window.c:1330
 msgid "_Bookmarks"
@@ -256,14 +256,14 @@ msgstr "להעביר אותו כעת?"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "על Gigolo להעביר את מדור התצורה הישן שלך לפני שאנחנו מתחילים."
+msgstr "על Gigolo להעביר את ספריית התצורה הישנה שלך לפני שאנחנו מתחילים."
 
 #: ../src/settings.c:703
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "מדור התצורה הישן שלך \"%s\" לא יכול היה לעבור אל \"%s\" (%s). נא להעביר באופן ידני את המדור אל המיקום החדש."
+msgstr "ספריית התצורה הישנה שלך \"%s\" לא היתה יכולה לעבור לתוך \"%s\" ‏(%s). אנא העבר ידנית את הספרייה למיקום החדש."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -286,7 +286,7 @@ msgstr "‏Share: ‫%s"
 #: ../src/bookmarkdialog.c:106
 #, c-format
 msgid "Folder: %s"
-msgstr "תיקיה: %s"
+msgstr "תיקייה: %s"
 
 #: ../src/bookmarkdialog.c:112
 #, c-format
@@ -390,7 +390,7 @@ msgstr "_מיקום (URI):"
 
 #: ../src/bookmarkeditdialog.c:1101
 msgid "_Folder:"
-msgstr "_תיקיה:"
+msgstr "_תיקייה:"
 
 #: ../src/bookmarkeditdialog.c:1102
 msgid "P_ath:"
@@ -582,7 +582,7 @@ msgstr "כעת מתחבר"
 
 #: ../src/browsenetworkpanel.c:188
 msgid "No Workgroups found"
-msgstr "לא נמצאו קבוצות עבודה"
+msgstr "לא נמצאו Workgroups"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
@@ -598,7 +598,7 @@ msgstr "התחבר אל Share נבחר"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "יצירת סימנייה מתוך חלק Share הנבחר"
+msgstr "צור סימנייה מתוך חלק Share הנבחר"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
@@ -618,4 +618,4 @@ msgstr "התחבר אל הסימנייה הנבחרת"
 
 #: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "מגשר־חזיתי פשוט לשם התחברות קלה למערכות קבצים מרוחקות"
+msgstr "מגשר חזיתי פשוט לצורך התחברות קלה למערכות קבצים מרוחקות"
