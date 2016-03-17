@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-03-01 21:02+0000\n"
+"PO-Revision-Date: 2016-03-17 17:47+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-apps/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -485,11 +485,11 @@ msgstr "Sąsaja"
 
 #: ../src/preferencesdialog.c:391
 msgid "_Save window position and geometry"
-msgstr "_Išsaugoti lango poziciją ir dydį"
+msgstr "Į_rašyti lango poziciją ir dydį"
 
 #: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Išsaugo lango poziciją ir dydį ir atstato paleidžiant"
+msgstr "Įrašo lango poziciją ir dydį ir atstato paleidžiant"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
