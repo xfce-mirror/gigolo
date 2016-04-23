@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-02-09 17:58+0000\n"
+"PO-Revision-Date: 2016-04-23 09:57+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-apps/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -209,7 +209,7 @@ msgstr "_Hliðarspjald"
 
 #: ../src/window.c:1312
 msgid "_Toolbar"
-msgstr "_Tækjaslá"
+msgstr "_Verkfærastika"
 
 #: ../src/window.c:1314
 msgid "Status _Icon"
@@ -525,11 +525,11 @@ msgstr "Tengingalista_hamur"
 
 #: ../src/preferencesdialog.c:427
 msgid "Toolbar"
-msgstr "Tækjaslá"
+msgstr "Verkfærastika"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "Birta áhaldaslá"
+msgstr "Bir_ta verkfærastiku"
 
 #: ../src/preferencesdialog.c:435
 msgid "St_yle"
