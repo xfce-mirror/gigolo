@@ -5,13 +5,14 @@
 # Translators:
 # Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009,2011
 # Davidmp <medipas@gmail.com>, 2015
+# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-01-13 00:29+0000\n"
-"Last-Translator: Davidmp <medipas@gmail.com>\n"
+"PO-Revision-Date: 2016-04-30 10:26+0000\n"
+"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,7 +112,7 @@ msgstr "Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.\nHarald Servat <r
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Gigolo pot emprar els següents protocols mitjançant GVfs:"
+msgstr "Gigolo pot utilitzar els següents protocols mitjançant GVfs:"
 
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
@@ -325,7 +326,7 @@ msgstr "Cal que introduïu un nom per al lloc d'interès."
 #: ../src/bookmarkeditdialog.c:253
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "El nom de lloc d'interès introduït ja s'està emprant. Escolliu-ne un altre."
+msgstr "El nom del lloc d'interès que heu introduït ja s'està utilitzant. Escolliu-ne un altre."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
@@ -377,13 +378,13 @@ msgstr "_Tipus de servei:"
 
 #: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
-msgstr "Posa 0 al port per emprar el port per defecte"
+msgstr "Establiu el port a 0 per a utilitzar el port per defecte"
 
 #: ../src/bookmarkeditdialog.c:1093
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Això no s'empra durant el muntatge, sinó per obrir el punt de muntatge amb un navegador de carpetes"
+msgstr "Això no s'utilitza per al muntatge, només és per a l'opertura del punt de muntatge al navegador de fitxers"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
