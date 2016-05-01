@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-05-01 13:03+0000\n"
+"PO-Revision-Date: 2016-05-01 21:21+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -117,7 +117,7 @@ msgstr "Gigolo pot utilitzar els següents protocols mitjançant GVfs:"
 #: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
-msgstr "Ha fallat la comanda «%s»"
+msgstr "Ha fallat l'ordre «%s»"
 
 #: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
 #: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
@@ -133,16 +133,16 @@ msgstr "Ordre de terminal errònia"
 #: ../src/window.c:625
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "No hi ha cal lloc disponible per «%s»"
+msgstr "No hi ha disponible cap ubicació predeterminada per «%s»"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
-msgstr "Edita el _lloc d'interès"
+msgstr "Edita l'a_dreça d'interès"
 
 #: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
-msgstr "Crea un _lloc d'interès"
+msgstr "Crea una a_dreça d'interès"
 
 #: ../src/window.c:1281
 msgid "_File"
@@ -206,7 +206,7 @@ msgstr "Protocols admesos"
 
 #: ../src/window.c:1310
 msgid "Side _Panel"
-msgstr "_Panell lateral"
+msgstr "_Plafó lateral"
 
 #: ../src/window.c:1312
 msgid "_Toolbar"
@@ -230,7 +230,7 @@ msgstr "A_dreces d'interès"
 
 #: ../src/window.c:1330
 msgid "Choose a bookmark to connect to"
-msgstr "Trieu un lloc d'interès per connectar-vos"
+msgstr "Trieu una adreça d'interès per connectar-vos"
 
 #: ../src/window.c:1412
 msgid "Connected"
@@ -265,7 +265,7 @@ msgstr "Gigolo ha de moure el vostre directori de configuració antic abans d'in
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "El vostre directori de configuració antic «%s» no es por moure a «%s» (%s). Moveu manualment el directori al nou lloc."
+msgstr "El vostre directori de configuració antic «%s» no s'ha pogut moure a «%s» (%s). Moveu manualment el directori a la ubicació nova."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -297,7 +297,7 @@ msgstr "Camí: %s"
 
 #: ../src/bookmarkdialog.c:323
 msgid "Host"
-msgstr "Màquina"
+msgstr "Amfitrió"
 
 #: ../src/bookmarkdialog.c:331
 msgid "Port"
@@ -321,12 +321,12 @@ msgstr "Edita les adreces d'interès"
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "You must enter a name for the bookmark."
-msgstr "Cal que introduïu un nom per al lloc d'interès."
+msgstr "Heu d'introduir un nom per a l'adreça d'interès."
 
 #: ../src/bookmarkeditdialog.c:253
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "El nom del lloc d'interès que heu introduït ja s'està utilitzant. Escolliu-ne un altre."
+msgstr "El nom de l'adreça d'interès que heu introduït ja està en ús. Escolliu-ne una altra."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
@@ -350,11 +350,11 @@ msgstr "_Servidor:"
 
 #: ../src/bookmarkeditdialog.c:897
 msgid "Create Bookmark"
-msgstr "Crea un lloc d'interès"
+msgstr "Crea una adreça d'interès"
 
 #: ../src/bookmarkeditdialog.c:904
 msgid "Edit Bookmark"
-msgstr "Edita el lloc d'interès"
+msgstr "Edita l'adreça d'interès"
 
 #: ../src/bookmarkeditdialog.c:912
 msgid "Connect to Server"
@@ -362,7 +362,7 @@ msgstr "Connecta al servidor"
 
 #: ../src/bookmarkeditdialog.c:1036
 msgid "_Bookmark name:"
-msgstr "_Nom del lloc d'interès:"
+msgstr "_Nom de l'adreça d'interès:"
 
 #: ../src/bookmarkeditdialog.c:1044
 msgid "_Color:"
@@ -502,13 +502,13 @@ msgstr "Inicia _minimitzat a l'espai de notificacions del sistema"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
-msgstr "Mostra el panell lateral"
+msgstr "Mostra el plafó lateral"
 
 #: ../src/preferencesdialog.c:404
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Si s'ha de mostrar un panell lateral per a navegar dins els recursos compartits Samba/Windows de la xarxa local i de la llista d'interès"
+msgstr "Si s'ha de mostrar un plafó lateral per a navegar pels recursos compartits Samba/Windows de la xarxa local i per la llista d'adreces interès"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -546,7 +546,7 @@ msgstr "Preferències"
 
 #: ../src/backendgvfs.c:221
 msgid "No bookmark"
-msgstr "Cap lloc d'interès"
+msgstr "Cap adreça d'interès"
 
 #: ../src/backendgvfs.c:239
 #, c-format
@@ -557,7 +557,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr "<b>%s</b>\n\nURI: %s\nConnectat: Sí\nTipus de servei: %s\nLloc d'interès: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nConnectat: Sí\nTipus de servei: %s\nAdreça d'interès: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -592,7 +592,7 @@ msgstr "No s'han trobat recursos compartits"
 
 #: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
-msgstr "No s'han trobat màquines"
+msgstr "No s'ha trobat cap amfitrió"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
@@ -600,7 +600,7 @@ msgstr "Connecta al recurs compartit seleccionat"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "Crea un lloc d'interès pel recurs compartit seleccionat"
+msgstr "Crea una adreça d'interès a partir del recurs compartit seleccionat"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
@@ -608,7 +608,7 @@ msgstr "Refresca la llista xarxes"
 
 #: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
-msgstr "Tanca el quadre"
+msgstr "Tanca el plafó"
 
 #: ../src/bookmarkpanel.c:92
 msgid "No bookmarks"
@@ -616,7 +616,7 @@ msgstr "No hi ha adreces d'interès"
 
 #: ../src/bookmarkpanel.c:256
 msgid "Connect to the selected bookmark"
-msgstr "Connecta al lloc d'interès seleccionat"
+msgstr "Connecta a l'adreça d'interès seleccionada"
 
 #: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
