@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-04-30 22:05+0000\n"
+"PO-Revision-Date: 2016-05-01 13:03+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -486,11 +486,11 @@ msgstr "Interfície"
 
 #: ../src/preferencesdialog.c:391
 msgid "_Save window position and geometry"
-msgstr "_Desa la mida i posició de la finestra"
+msgstr "_Desa la mida i la posició de la finestra"
 
 #: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Desa la mida i posició de la finestra i la restaura a l'inici"
+msgstr "Desa la mida i la posició de la finestra i restaura-ho a l'inici"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
