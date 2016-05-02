@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-05-01 21:21+0000\n"
+"PO-Revision-Date: 2016-05-02 10:05+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -494,11 +494,11 @@ msgstr "Desa la mida i la posició de la finestra i restaura-ho a l'inici"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
-msgstr "Mostra la _icona d'estat a l'espai de notificacions del sistema"
+msgstr "Mostra la _icona d'estat a l'àrea de les notificacions del sistema"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
-msgstr "Inicia _minimitzat a l'espai de notificacions del sistema"
+msgstr "Inicia _minimitzat a l'àrea de les notificacions del sistema"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
