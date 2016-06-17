@@ -421,8 +421,6 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 {
     const gchar *authors[]= { "Enrico Tröger <enrico@xfce.org>", NULL };
 
-	gtk_about_dialog_set_email_hook(about_activate_link, NULL, NULL);
-	gtk_about_dialog_set_url_hook(about_activate_link, NULL, NULL);
 	gtk_show_about_dialog(GTK_WINDOW(window),
 		"authors", authors,
 		"logo-icon-name", gigolo_get_application_icon_name(),
