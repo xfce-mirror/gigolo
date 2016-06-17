@@ -261,10 +261,10 @@ static void button_close_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrowse
 static gboolean tree_key_press_event(G_GNUC_UNUSED GtkWidget *widget, GdkEventKey *event,
 									 GigoloBrowseNetworkPanel *panel)
 {
-	if (event->keyval == GDK_Return ||
-		event->keyval == GDK_ISO_Enter ||
-		event->keyval == GDK_KP_Enter ||
-		event->keyval == GDK_space)
+	if (event->keyval == GDK_KEY_Return ||
+		event->keyval == GDK_KEY_ISO_Enter ||
+		event->keyval == GDK_KEY_KP_Enter ||
+		event->keyval == GDK_KEY_space)
 	{
 		mount_share(panel, GIGOLO_BE_MODE_CONNECT);
 		return TRUE;
