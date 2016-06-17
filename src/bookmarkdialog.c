@@ -27,7 +27,6 @@
 #include "settings.h"
 #include "backendgvfs.h"
 #include "window.h"
-#include "compat.h"
 #include "common.h"
 #include "bookmarkdialog.h"
 #include "bookmarkeditdialog.h"
