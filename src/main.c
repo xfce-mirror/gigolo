@@ -96,11 +96,18 @@ static void print_supported_schemes(void)
 	}
 }
 
+static void activate (GApplication *app, gpointer user_data)
+{
+	GtkWidget *widget;
+
+	widget = gtk_application_window_new (GTK_APPLICATION (app));
+	gtk_widget_show (widget);
+}
 
 gint main(gint argc, gchar** argv)
 {
 	GigoloSettings *settings;
-	GigoloSingleInstance *gis = NULL;
+	GtkApplication *gis = NULL;
 	gchar *accel_filename;
 	GOptionContext *context;
 	GtkWidget *window;
@@ -144,13 +151,8 @@ gint main(gint argc, gchar** argv)
 
 	if (! new_instance)
 	{
-		gis = gigolo_single_instance_new();
-		if (gigolo_single_instance_is_running(gis))
-		{
-			gigolo_single_instance_present(gis);
-			g_object_unref(gis);
-			exit(0);
-		}
+		gis = gtk_application_new("org.xfce.gigolo", G_APPLICATION_FLAGS_NONE);
+		g_signal_connect (gis, "activate", G_CALLBACK (activate), NULL);
 	}
 
 	verbose("Gigolo %s (GTK+ %u.%u.%u, GLib %u.%u.%u)",
@@ -166,7 +168,7 @@ gint main(gint argc, gchar** argv)
 	window = gigolo_window_new(settings);
 
 	if (gis != NULL)
-		gigolo_single_instance_set_parent(gis, GTK_WINDOW(window));
+		gtk_application_add_window(gis, GTK_WINDOW(window));
 
 	if (gigolo_settings_get_boolean(settings, "start-in-systray") &&
 		gigolo_settings_get_boolean(settings, "show-in-systray"))
