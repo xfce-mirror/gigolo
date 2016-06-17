@@ -3,7 +3,6 @@ bin_PROGRAMS = gigolo
 
 gigolo_SOURCES =								\
 	main.c main.h								\
-	compat.c compat.h							\
 	common.c common.h							\
 	window.c window.h							\
 	bookmark.c bookmark.h						\
@@ -11,12 +10,10 @@ gigolo_SOURCES =								\
 	backendgvfs.c backendgvfs.h					\
 	menubuttonaction.c menubuttonaction.h		\
 	mountdialog.c mountdialog.h					\
-	mountoperation.c mountoperation.h			\
 	bookmarkpanel.c bookmarkpanel.h				\
 	bookmarkdialog.c bookmarkdialog.h			\
 	bookmarkeditdialog.c bookmarkeditdialog.h	\
 	browsenetworkpanel.c browsenetworkpanel.h	\
-	singleinstance.c singleinstance.h			\
 	preferencesdialog.c preferencesdialog.h
 
 
