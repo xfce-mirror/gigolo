@@ -49,7 +49,7 @@ struct _GigoloMountDialogPrivate
 	guint timer_id;
 };
 
-static void gigolo_mount_dialog_destroy				(GtkObject *widget);
+static void gigolo_mount_dialog_finalize			(GObject *widget);
 
 
 G_DEFINE_TYPE(GigoloMountDialog, gigolo_mount_dialog, GTK_TYPE_DIALOG);
@@ -58,15 +58,15 @@ G_DEFINE_TYPE(GigoloMountDialog, gigolo_mount_dialog, GTK_TYPE_DIALOG);
 
 static void gigolo_mount_dialog_class_init(GigoloMountDialogClass *klass)
 {
-	GtkObjectClass *object_class = GTK_OBJECT_CLASS(klass);
+	GObjectClass *object_class = G_OBJECT_CLASS(klass);
 
-	object_class->destroy = gigolo_mount_dialog_destroy;
+	object_class->finalize = gigolo_mount_dialog_finalize;
 
 	g_type_class_add_private(klass, sizeof(GigoloMountDialogPrivate));
 }
 
 
-static void gigolo_mount_dialog_destroy(GtkObject *widget)
+static void gigolo_mount_dialog_finalize(GObject *widget)
 {
 	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(widget);
 
@@ -76,7 +76,7 @@ static void gigolo_mount_dialog_destroy(GtkObject *widget)
 		priv->timer_id = -1;
 	}
 
-	GTK_OBJECT_CLASS(gigolo_mount_dialog_parent_class)->destroy(widget);
+	G_OBJECT_CLASS(gigolo_mount_dialog_parent_class)->finalize(widget);
 }
 
 

@@ -160,7 +160,7 @@ G_DEFINE_TYPE(GigoloBookmarkEditDialog, gigolo_bookmark_edit_dialog, GTK_TYPE_DI
 
 
 
-static void gigolo_bookmark_edit_dialog_destroy(GtkObject *object)
+static void gigolo_bookmark_edit_dialog_finalize(GObject *object)
 {
 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(object);
 	GigoloBackendGVFS *backend;
@@ -189,7 +189,7 @@ static void gigolo_bookmark_edit_dialog_destroy(GtkObject *object)
 	gtk_widget_destroy(priv->share_label);
 	gtk_widget_destroy(priv->information_label);
 
-	GTK_OBJECT_CLASS(gigolo_bookmark_edit_dialog_parent_class)->destroy(object);
+	G_OBJECT_CLASS(gigolo_bookmark_edit_dialog_parent_class)->finalize(object);
 }
 
 
@@ -319,10 +319,9 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 
 static void gigolo_bookmark_edit_dialog_class_init(GigoloBookmarkEditDialogClass *klass)
 {
-	GtkObjectClass *gtk_object_class = (GtkObjectClass *) klass;
 	GObjectClass *g_object_class = G_OBJECT_CLASS(klass);
 
-	gtk_object_class->destroy = gigolo_bookmark_edit_dialog_destroy;
+	g_object_class->finalize = gigolo_bookmark_edit_dialog_finalize;
 
 	g_object_class->set_property = gigolo_bookmark_edit_dialog_set_property;
 
