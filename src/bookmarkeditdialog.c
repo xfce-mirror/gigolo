@@ -945,7 +945,7 @@ static void browse_host_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GSList
 		GSList *node;
 		for (node = shares; node != NULL; node = node->next)
 		{
-			gtk_combo_box_append_text(GTK_COMBO_BOX(priv->share_combo), node->data);
+			gtk_combo_box_text_append(GTK_COMBO_BOX(priv->share_combo), NULL, node->data);
 		}
 		gtk_combo_box_set_active(GTK_COMBO_BOX(priv->share_combo), 0);
 
@@ -1091,7 +1091,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 		_("This is not used for the actual mount, only necessary for opening the mount point in a file browser"));
 	priv->user_entry = gtk_entry_new();
 	priv->domain_entry = gtk_entry_new();
-	priv->share_combo = gtk_combo_box_entry_new_text();
+	priv->share_combo = gtk_combo_box_new_with_entry();
 	priv->share_entry = gtk_bin_get_child(GTK_BIN(priv->share_combo));
 
 	priv->uri_label = gtk_label_new_with_mnemonic(_("_Location (URI):"));
