@@ -34,6 +34,8 @@ GTK_VERSION=`$PKG_CONFIG --modversion gtk+-3.0`
 # i18n
 XDT_I18N([@LINGUAS@])
 
+XDT_FEATURE_DEBUG()
+
 AM_GLIB_GNU_GETTEXT
 IT_PROG_INTLTOOL
 # workaround for intltool bug (http://bugzilla.gnome.org/show_bug.cgi?id=490845)
