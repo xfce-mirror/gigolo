@@ -95,7 +95,6 @@ static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 
 	priv->timer_id = (guint) -1;
 
-	gtk_dialog_set_has_separator(GTK_DIALOG(self), FALSE);
 	gtk_window_set_destroy_with_parent(GTK_WINDOW(self), TRUE);
 	gtk_window_set_default_size(GTK_WINDOW(self), 200, -1);
 	gtk_window_set_title(GTK_WINDOW(self), _("Connecting"));

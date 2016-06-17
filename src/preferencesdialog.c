@@ -504,7 +504,6 @@ static void gigolo_preferences_dialog_init(GigoloPreferencesDialog *dialog)
     g_object_set(dialog,
 		"icon-name", GTK_STOCK_PREFERENCES,
 		"title", _("Preferences"),
-		"has-separator", FALSE,
 		NULL);
 	gtk_dialog_add_buttons(GTK_DIALOG(dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE, NULL);
 }
