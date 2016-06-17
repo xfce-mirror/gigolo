@@ -33,7 +33,6 @@
 #include "settings.h"
 #include "backendgvfs.h"
 #include "window.h"
-#include "singleinstance.h"
 
 
 static gboolean show_version = FALSE;
