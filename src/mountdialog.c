@@ -24,7 +24,6 @@
 #include <gtk/gtk.h>
 
 #include "common.h"
-#include "compat.h"
 #include "main.h"
 #include "mountdialog.h"
 

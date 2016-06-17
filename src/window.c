@@ -26,7 +26,6 @@
 #include <gio/gio.h>
 #include <gtk/gtk.h>
 
-#include "compat.h"
 #include "common.h"
 #include "bookmark.h"
 #include "settings.h"

@@ -26,7 +26,6 @@
 #include <gio/gio.h>
 
 #include "common.h"
-#include "compat.h"
 #include "backendgvfs.h"
 #include "bookmark.h"
 #include "settings.h"

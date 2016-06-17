@@ -27,7 +27,6 @@
 #include <gtk/gtk.h>
 
 #include "common.h"
-#include "compat.h"
 #include "bookmark.h"
 #include "settings.h"
 #include "backendgvfs.h"
