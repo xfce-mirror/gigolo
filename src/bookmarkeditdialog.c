@@ -224,7 +224,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 		/* perform some error checking and don't return until entered values are sane */
 		else
 		{
-			if (gigolo_widget_get_flags(priv->name_entry) & GTK_VISIBLE)
+			if (gtk_widget_is_visible(priv->name_entry))
 			{	/* check the name only if we are creating/editing a bookmark */
 				tmp = gtk_entry_get_text(GTK_ENTRY(priv->name_entry));
 				if (! *tmp)
@@ -1013,7 +1013,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	priv->dialog_type = GIGOLO_BE_MODE_EDIT;
 
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
-	gtk_box_set_spacing(GTK_BOX(gigolo_dialog_get_content_area(GTK_DIALOG(dialog))), 2);
+	gtk_box_set_spacing(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(dialog))), 2);
 
 	gtk_dialog_add_buttons(GTK_DIALOG(dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, NULL);
 	gtk_window_set_destroy_with_parent(GTK_WINDOW(dialog), TRUE);
@@ -1022,7 +1022,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 
 	vbox = gtk_vbox_new(FALSE, 6);
 	gtk_container_set_border_width(GTK_CONTAINER (vbox), 5);
-	gtk_box_pack_start(GTK_BOX(gigolo_dialog_get_content_area(GTK_DIALOG(dialog))),
+	gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(dialog))),
 		vbox, FALSE, TRUE, 0);
 
 	hbox = gtk_hbox_new(FALSE, 6);

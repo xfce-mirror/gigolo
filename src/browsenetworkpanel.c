@@ -215,7 +215,7 @@ static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, Gig
 
 	gtk_widget_set_sensitive(priv->button_refresh, TRUE);
 
-	gdk_window_set_cursor(gigolo_widget_get_window(GTK_WIDGET(panel)), NULL);
+	gdk_window_set_cursor(gtk_widget_get_window(GTK_WIDGET(panel)), NULL);
 }
 
 
@@ -235,7 +235,7 @@ static gboolean delay_refresh(GigoloBrowseNetworkPanel *panel)
 {
 	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
 
-	gdk_window_set_cursor(gigolo_widget_get_window(GTK_WIDGET(panel)), priv->wait_cursor);
+	gdk_window_set_cursor(gtk_widget_get_window(GTK_WIDGET(panel)), priv->wait_cursor);
 	/* Force the update of the cursor */
 	while (g_main_context_iteration(NULL, FALSE));
 

@@ -310,7 +310,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	GtkWidget *label1, *label2, *label3, *label4, *image;
 	GtkSizeGroup *sg;
 
-    vbox = gigolo_dialog_get_content_area(GTK_DIALOG(dialog));
+    vbox = gtk_dialog_get_content_area(GTK_DIALOG(dialog));
 
 	if (gigolo_is_desktop_xfce())
     {

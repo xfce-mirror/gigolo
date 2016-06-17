@@ -412,7 +412,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 		"title", _("Edit Bookmarks"),
 		NULL);
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
-	vbox = gigolo_dialog_get_content_area(GTK_DIALOG(dialog));
+	vbox = gtk_dialog_get_content_area(GTK_DIALOG(dialog));
 	gtk_box_set_spacing(GTK_BOX(vbox), 2);
 
 	gtk_dialog_add_button(GTK_DIALOG(dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);

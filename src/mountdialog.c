@@ -103,7 +103,7 @@ static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 
 	vbox = gtk_vbox_new(FALSE, 0);
 	gtk_container_set_border_width(GTK_CONTAINER(vbox), 5);
-	gtk_container_add(GTK_CONTAINER(gigolo_dialog_get_content_area(GTK_DIALOG(self))), vbox);
+	gtk_container_add(GTK_CONTAINER(gtk_dialog_get_content_area(GTK_DIALOG(self))), vbox);
 
 	priv->label = gtk_label_new(NULL);
 	gtk_misc_set_alignment(GTK_MISC(priv->label), 0.1, 0.5);

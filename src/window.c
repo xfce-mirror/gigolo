@@ -125,7 +125,7 @@ static void gigolo_window_destroy(GigoloWindow *window)
 
 	if (gigolo_settings_get_boolean(priv->settings, "save-geometry"))
 	{
-		GdkWindow *gdk_window = gigolo_widget_get_window(GTK_WIDGET(window));
+		GdkWindow *gdk_window = gtk_widget_get_window(GTK_WIDGET(window));
 		gtk_window_get_position(GTK_WINDOW(window), &geo[0], &geo[1]);
 		gtk_window_get_size(GTK_WINDOW(window), &geo[2], &geo[3]);
 		if (gdk_window != NULL && gdk_window_get_state(gdk_window) & GDK_WINDOW_STATE_MAXIMIZED)
@@ -1082,7 +1082,7 @@ static void gigolo_window_set_toolbar_orientation(GigoloWindow *window, gint ori
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	gigolo_toolbar_set_orientation(GTK_TOOLBAR(priv->toolbar), orientation);
+	gtk_orientable_set_orientation(GTK_ORIENTABLE(priv->toolbar), orientation);
 	if (orientation == GTK_ORIENTATION_HORIZONTAL && priv->vbox != gtk_widget_get_parent(priv->toolbar))
 	{
 		gtk_container_remove(GTK_CONTAINER(priv->hbox_view), priv->toolbar);
@@ -1629,7 +1629,7 @@ static void gigolo_window_init(GigoloWindow *window)
 
 	/* Status icon */
 	priv->systray_icon = gtk_status_icon_new_from_icon_name(gigolo_get_application_icon_name());
-	gigolo_status_icon_set_tooltip_text(priv->systray_icon, _("Gigolo"));
+	gtk_status_icon_set_tooltip_text(priv->systray_icon, _("Gigolo"));
 	g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
 	g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 	g_signal_connect(priv->systray_icon, "notify", G_CALLBACK(gigolo_window_systray_notify_cb), window);
