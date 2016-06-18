@@ -99,7 +99,7 @@ static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 	gtk_window_set_default_size(GTK_WINDOW(self), 200, -1);
 	gtk_window_set_title(GTK_WINDOW(self), _("Connecting"));
 
-	vbox = gtk_vbox_new(FALSE, 0);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 	gtk_container_set_border_width(GTK_CONTAINER(vbox), 5);
 	gtk_container_add(GTK_CONTAINER(gtk_dialog_get_content_area(GTK_DIALOG(self))), vbox);
 

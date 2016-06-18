@@ -429,7 +429,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	priv->button_delete = gtk_button_new_from_stock("gtk-delete");
 	g_signal_connect(priv->button_delete, "clicked", G_CALLBACK(delete_button_click_cb), dialog);
 
-	hbox = gtk_hbox_new(FALSE, 10);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
 	gtk_box_pack_start(GTK_BOX(hbox), button_add, FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(hbox), priv->button_edit, FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(hbox), priv->button_delete, FALSE, FALSE, 0);
@@ -442,7 +442,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(swin), GTK_SHADOW_IN);
 	gtk_container_add(GTK_CONTAINER(swin), priv->tree);
 
-	vbox2 = gtk_vbox_new(FALSE, 6);
+	vbox2 = gtk_box_new(GTK_ORIENTATION_VERTICAL, 6);
 	gtk_box_pack_start(GTK_BOX(vbox2), swin, TRUE, TRUE, 0);
 	gtk_box_pack_start(GTK_BOX(vbox2), hbox, FALSE, FALSE, 0);
 

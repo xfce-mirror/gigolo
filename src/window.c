@@ -1510,8 +1510,8 @@ static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
 	gtk_widget_show(priv->browse_panel);
 	gtk_notebook_append_page(GTK_NOTEBOOK(priv->notebook_panel), priv->browse_panel, label);
 
-	priv->hbox_view = gtk_hbox_new(FALSE, 0);
-	priv->hbox_pane = gtk_hbox_new(FALSE, 0);
+	priv->hbox_view = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+	priv->hbox_pane = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
 
 	gtk_paned_add1(GTK_PANED(panel_pane), priv->hbox_pane);
 	gtk_paned_add2(GTK_PANED(panel_pane), priv->hbox_view);
@@ -1610,7 +1610,7 @@ static void gigolo_window_init(GigoloWindow *window)
 	priv->panel_pane = panel_pane = gigolo_window_create_panel(window);
 
 	/* Pack the widgets altogether */
-	priv->vbox = gtk_vbox_new(FALSE, 0);
+	priv->vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 
 	gtk_box_pack_start(GTK_BOX(priv->vbox), menubar, FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(priv->vbox), priv->toolbar, FALSE, FALSE, 0);
