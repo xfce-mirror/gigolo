@@ -427,9 +427,9 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 	tmp = gigolo_bookmark_get_color(priv->bookmark_init);
 	if (tmp != NULL)
 	{
-		GdkColor color;
-		if (gdk_color_parse(tmp, &color))
-			gtk_color_button_set_color(GTK_COLOR_BUTTON(priv->color_chooser), &color);
+		GdkRGBA color;
+		if (gdk_rgba_parse(&color, tmp))
+			gtk_color_chooser_set_rgba(GTK_COLOR_CHOOSER(priv->color_chooser), &color);
 	}
 	/* URI */
 	uri = gigolo_bookmark_get_uri(priv->bookmark_init);
@@ -772,7 +772,7 @@ static void fill_method_combo_box(GigoloBookmarkEditDialog *dialog)
 static void update_bookmark_color(GigoloBookmarkEditDialog *dialog)
 {
 	GigoloBookmarkEditDialogPrivate *priv;
-	GdkColor color;
+	GdkRGBA color;
 	gchar *color_string;
 
 	priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
@@ -781,8 +781,8 @@ static void update_bookmark_color(GigoloBookmarkEditDialog *dialog)
 		/* if no colour has been chosen by the user, don't set the default colour (black) */
 		return;
 
-	gtk_color_button_get_color(GTK_COLOR_BUTTON(priv->color_chooser), &color);
-	color_string = gdk_color_to_string(&color);
+	gtk_color_chooser_get_rgba(GTK_COLOR_CHOOSER(priv->color_chooser), &color);
+	color_string = gdk_rgba_to_string(&color);
 	gigolo_bookmark_set_color(priv->bookmark_update, color_string);
 	g_free(color_string);
 }
