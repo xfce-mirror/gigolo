@@ -162,6 +162,7 @@ gint main(gint argc, gchar** argv)
 		gis = gtk_application_new("org.xfce.gigolo", G_APPLICATION_FLAGS_NONE);
 		g_signal_connect (gis, "activate", G_CALLBACK (activate), NULL);
 		status = g_application_run (G_APPLICATION (gis), argc, argv);
+		g_object_unref(gis);
 	}
 	else
 	{
@@ -199,9 +200,6 @@ static int gigolo_create(GtkApplication *gis)
 	gtk_main();
 
 	g_object_unref(settings);
-	if (gis != NULL)
-		g_object_unref(gis);
-
 	gtk_accel_map_save(accel_filename);
 	g_free(accel_filename);
 
