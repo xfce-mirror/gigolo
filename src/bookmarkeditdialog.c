@@ -1058,7 +1058,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->autoconnect_label), priv->autoconnect_checkbtn);
 	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_checkbtn, 1, 2, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
 
-	priv->separator = gtk_hseparator_new();
+	priv->separator = gtk_separator_new(GTK_ORIENTATION_HORIZONTAL);
 	gtk_table_attach(GTK_TABLE(table), priv->separator, 0, 2, 3, 4, GTK_FILL, GTK_FILL, 0, 0);
 
 	label = gtk_label_new_with_mnemonic(_("Service t_ype:"));
