@@ -76,7 +76,7 @@ static void gigolo_browse_network_panel_finalize(GObject *object)
 	GigoloBackendGVFS *backend;
 
 	gtk_widget_destroy(priv->popup_menu);
-	gdk_cursor_unref(priv->wait_cursor);
+	g_object_unref(priv->wait_cursor);
 
 	backend = gigolo_window_get_backend(priv->parent);
 	if (backend != NULL && IS_GIGOLO_BACKEND_GVFS(backend) && priv->browse_network_signal_id > 0)
@@ -533,7 +533,7 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	gtk_widget_show_all(toolbar);
 	gtk_widget_show_all(swin);
 
-	priv->wait_cursor = gdk_cursor_new(GDK_WATCH);
+	priv->wait_cursor = gdk_cursor_new_for_display(gdk_display_get_default(), GDK_WATCH);
 
 	g_signal_connect_after(panel, "realize", G_CALLBACK(realize_cb), NULL);
 }
