@@ -945,7 +945,7 @@ static void browse_host_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GSList
 		GSList *node;
 		for (node = shares; node != NULL; node = node->next)
 		{
-			gtk_combo_box_text_append(GTK_COMBO_BOX(priv->share_combo), NULL, node->data);
+			gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(priv->share_combo), NULL, node->data);
 		}
 		gtk_combo_box_set_active(GTK_COMBO_BOX(priv->share_combo), 0);
 
