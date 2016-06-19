@@ -143,10 +143,10 @@ static GtkWidget *add_toolbar_style_combo(GigoloSettings *settings, const gchar 
 	g_object_get(settings, property, &value, NULL);
 
 	widget = gtk_combo_box_text_new();
-	gtk_combo_box_text_append(GTK_COMBO_BOX(widget), NULL, _("Icons"));
-	gtk_combo_box_text_append(GTK_COMBO_BOX(widget), NULL, _("Text"));
-	gtk_combo_box_text_append(GTK_COMBO_BOX(widget), NULL, _("Both"));
-	gtk_combo_box_text_append(GTK_COMBO_BOX(widget), NULL, _("Both horizontal"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Icons"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Text"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Both"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Both horizontal"));
 
 	gtk_combo_box_set_active(GTK_COMBO_BOX(widget), value);
 
@@ -165,8 +165,8 @@ static GtkWidget *add_toolbar_orientation_combo(GigoloSettings *settings, const 
 	g_object_get(settings, property, &value, NULL);
 
 	widget = gtk_combo_box_text_new();
-	gtk_combo_box_text_append(GTK_COMBO_BOX(widget), NULL, _("Horizontal"));
-	gtk_combo_box_text_append(GTK_COMBO_BOX(widget), NULL, _("Vertical"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Horizontal"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Vertical"));
 
 	gtk_combo_box_set_active(GTK_COMBO_BOX(widget), value);
 
@@ -185,8 +185,8 @@ static GtkWidget *add_view_mode_combo(GigoloSettings *settings, const gchar *pro
 	g_object_get(settings, property, &value, NULL);
 
 	widget = gtk_combo_box_text_new();
-	gtk_combo_box_text_append(GTK_COMBO_BOX(widget), NULL, _("Symbols"));
-	gtk_combo_box_text_append(GTK_COMBO_BOX(widget), NULL, _("Detailed List"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Symbols"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Detailed List"));
 
 	gtk_combo_box_set_active(GTK_COMBO_BOX(widget), value);
 
