@@ -1480,7 +1480,7 @@ static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
 	GtkWidget *panel_pane, *label;
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	panel_pane = gtk_hpaned_new();
+	panel_pane = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
 	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
 
 	priv->notebook_panel = gtk_notebook_new();

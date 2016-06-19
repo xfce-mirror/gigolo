@@ -55,12 +55,12 @@ enum
 
 struct _GigoloBookmarkPanel
 {
-	GtkVBox parent;
+	GtkBox parent;
 };
 
 struct _GigoloBookmarkPanelClass
 {
-	GtkVBoxClass parent_class;
+	GtkBoxClass parent_class;
 };
 
 struct _GigoloBookmarkPanelPrivate
@@ -73,7 +73,7 @@ struct _GigoloBookmarkPanelPrivate
 	GtkListStore *store;
 };
 
-G_DEFINE_TYPE(GigoloBookmarkPanel, gigolo_bookmark_panel, GTK_TYPE_VBOX);
+G_DEFINE_TYPE(GigoloBookmarkPanel, gigolo_bookmark_panel, GTK_TYPE_BOX);
 
 
 
@@ -248,6 +248,7 @@ static void gigolo_bookmark_panel_init(GigoloBookmarkPanel *self)
 	GtkToolItem *toolitem;
 	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(self);
 
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (self), GTK_ORIENTATION_VERTICAL);
 	toolbar = gtk_toolbar_new();
 	gtk_toolbar_set_style(GTK_TOOLBAR(toolbar), GTK_TOOLBAR_BOTH_HORIZ);
 	gtk_toolbar_set_icon_size(GTK_TOOLBAR(toolbar), GTK_ICON_SIZE_BUTTON);
