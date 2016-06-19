@@ -566,13 +566,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 	{
 		gtk_label_set_xalign(GTK_LABEL(priv->uri_label), 0);
 		gtk_widget_show(priv->uri_label);
-		gtk_table_attach(GTK_TABLE(table), priv->uri_label,
-				  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+		gtk_grid_attach(GTK_GRID(table), priv->uri_label, 0, i, 1, 1);
 
 		gtk_label_set_mnemonic_widget(GTK_LABEL(priv->uri_label), priv->uri_entry);
 		gtk_widget_show(priv->uri_entry);
-		gtk_table_attach(GTK_TABLE(table), priv->uri_entry,
-				  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+		gtk_grid_attach(GTK_GRID(table), priv->uri_entry, 1, i, 1, 1);
 
 		i++;
 	}
@@ -585,13 +583,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 
 		gtk_label_set_xalign(GTK_LABEL(priv->host_label), 0);
 		gtk_widget_show(priv->host_label);
-		gtk_table_attach(GTK_TABLE(table), priv->host_label,
-				  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+		gtk_grid_attach(GTK_GRID(table), priv->host_label, 0, i, 1, 1);
 
 		gtk_label_set_mnemonic_widget(GTK_LABEL(priv->host_label), priv->host_entry);
 		gtk_widget_show(priv->host_entry);
-		gtk_table_attach(GTK_TABLE(table), priv->host_entry,
-				  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+		gtk_grid_attach(GTK_GRID(table), priv->host_entry, 1, i, 1, 1);
 
 		i++;
 
@@ -599,17 +595,14 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		{
 			gtk_label_set_xalign(GTK_LABEL(priv->share_label), 0);
 			gtk_widget_show(priv->share_label);
-			gtk_table_attach(GTK_TABLE(table), priv->share_label,
-					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->share_label, 0, i, 1, 1);
 
 			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->share_label), priv->share_combo);
 			gtk_widget_show(priv->share_combo);
-			gtk_table_attach(GTK_TABLE(table), priv->share_combo,
-					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->share_combo, 1, i, 1, 1);
 
 			gtk_widget_show(priv->share_button);
-			gtk_table_attach(GTK_TABLE(table), priv->share_button,
-					  2, 3, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->share_button, 2, i, 1, 1);
 
 			i++;
 		}
@@ -617,13 +610,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		{
 			gtk_label_set_xalign(GTK_LABEL(priv->path_label), 0);
 			gtk_widget_show(priv->path_label);
-			gtk_table_attach(GTK_TABLE(table), priv->path_label,
-					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->path_label, 0, i, 1, 1);
 
 			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->path_label), priv->path_entry);
 			gtk_widget_show(priv->path_entry);
-			gtk_table_attach(GTK_TABLE(table), priv->path_entry,
-					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->path_entry, 1, i, 1, 1);
 
 			i++;
 		}
@@ -633,8 +624,7 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 	{
 		gtk_label_set_xalign(GTK_LABEL(priv->information_label), 0);
 		gtk_widget_show(priv->information_label);
-		gtk_table_attach(GTK_TABLE(table), priv->information_label,
-			0, 2, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+		gtk_grid_attach(GTK_GRID(table), priv->information_label, 0, i, 2, 1);
 
 		i++;
 
@@ -642,13 +632,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		{
 			gtk_label_set_xalign(GTK_LABEL(priv->port_label), 0);
 			gtk_widget_show(priv->port_label);
-			gtk_table_attach(GTK_TABLE(table), priv->port_label,
-					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->port_label, 0, i, 1, 1);
 
 			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->port_label), priv->port_spin);
 			gtk_widget_show(priv->port_spin);
-			gtk_table_attach(GTK_TABLE(table), priv->port_spin,
-					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->port_spin, 1, i, 1, 1);
 
 			i++;
 		}
@@ -657,13 +645,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		{
 			gtk_label_set_xalign(GTK_LABEL(priv->folder_label), 0);
 			gtk_widget_show(priv->folder_label);
-			gtk_table_attach(GTK_TABLE(table), priv->folder_label,
-					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->folder_label, 0, i, 1, 1);
 
 			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->folder_label), priv->folder_entry);
 			gtk_widget_show(priv->folder_entry);
-			gtk_table_attach(GTK_TABLE(table), priv->folder_entry,
-					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->folder_entry, 1, i, 1, 1);
 
 			i++;
 		}
@@ -672,13 +658,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		{
 			gtk_label_set_xalign(GTK_LABEL(priv->domain_label), 0);
 			gtk_widget_show(priv->domain_label);
-			gtk_table_attach(GTK_TABLE(table), priv->domain_label,
-					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->domain_label, 0, i, 1, 1);
 
 			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->domain_label), priv->domain_entry);
 			gtk_widget_show(priv->domain_entry);
-			gtk_table_attach(GTK_TABLE(table), priv->domain_entry,
-					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->domain_entry, 1, i, 1, 1);
 
 			i++;
 		}
@@ -687,13 +671,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 		{
 			gtk_label_set_xalign(GTK_LABEL(priv->user_label), 0);
 			gtk_widget_show(priv->user_label);
-			gtk_table_attach(GTK_TABLE(table), priv->user_label,
-					  0, 1, i, i+1, GTK_FILL, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->user_label, 0, i, 1, 1);
 
 			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->user_label), priv->user_entry);
 			gtk_widget_show(priv->user_entry);
-			gtk_table_attach(GTK_TABLE(table), priv->user_entry,
-					  1, 2, i, i+1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+			gtk_grid_attach(GTK_GRID(table), priv->user_entry, 1, i, 1, 1);
 
 			i++;
 		}
@@ -1026,50 +1008,51 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
 	gtk_box_pack_start(GTK_BOX(vbox), hbox, FALSE, TRUE, 0);
 
-	priv->table = table = gtk_table_new(9, 3, FALSE);
-	gtk_table_set_row_spacings(GTK_TABLE(table), 6);
-	gtk_table_set_col_spacings(GTK_TABLE(table), 12);
+	priv->table = table = gtk_grid_new();
+	gtk_grid_set_row_spacing(GTK_GRID(table), 6);
+	gtk_grid_set_column_spacing(GTK_GRID(table), 12);
 	gtk_box_pack_start(GTK_BOX(hbox), table, TRUE, TRUE, 0);
 
 	priv->name_label = gtk_label_new_with_mnemonic(_("_Bookmark name:"));
 	gtk_label_set_xalign(GTK_LABEL(priv->name_label), 0);
-	gtk_table_attach(GTK_TABLE(table), priv->name_label, 0, 1, 0, 1, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), priv->name_label, 0, 0, 1, 1);
 
 	priv->name_entry = entry = gtk_entry_new();
+	/* will make sure column 1 expands if the window is resized */
+	gtk_widget_set_hexpand(GTK_WIDGET(entry), TRUE);
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->name_label), entry);
-	gtk_table_attach(GTK_TABLE(table), entry, 1, 2, 0, 1, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), entry, 1, 0, 1, 1);
 
 	priv->color_label = gtk_label_new_with_mnemonic(_("_Color:"));
 	gtk_label_set_xalign(GTK_LABEL(priv->color_label), 0);
-	gtk_table_attach(GTK_TABLE(table), priv->color_label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), priv->color_label, 0, 1, 1, 1);
 
 	priv->color_set = FALSE;
 	priv->color_chooser = gtk_color_button_new();
 	g_signal_connect(priv->color_chooser, "color-set", G_CALLBACK(color_chooser_set_cb), dialog);
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->color_label), priv->color_chooser);
-	gtk_table_attach(GTK_TABLE(table), priv->color_chooser,
-		1, 2, 1, 2, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), priv->color_chooser, 1, 1, 1, 1);
 
 	priv->autoconnect_label = gtk_label_new_with_mnemonic(_("Au_to-Connect"));
 	gtk_label_set_xalign(GTK_LABEL(priv->autoconnect_label), 0);
-	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_label, 0, 1, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), priv->autoconnect_label, 0, 2, 1, 1);
 
 	priv->autoconnect_checkbtn = gtk_check_button_new();
 	gtk_label_set_mnemonic_widget(GTK_LABEL(priv->autoconnect_label), priv->autoconnect_checkbtn);
-	gtk_table_attach(GTK_TABLE(table), priv->autoconnect_checkbtn, 1, 2, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), priv->autoconnect_checkbtn, 1, 2, 1, 1);
 
 	priv->separator = gtk_separator_new(GTK_ORIENTATION_HORIZONTAL);
-	gtk_table_attach(GTK_TABLE(table), priv->separator, 0, 2, 3, 4, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), priv->separator, 0, 3, 2, 1);
 
 	label = gtk_label_new_with_mnemonic(_("Service t_ype:"));
 	gtk_label_set_xalign(GTK_LABEL(label), 0);
-	gtk_table_attach(GTK_TABLE(table), label, 0, 1, 4, 5, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), label, 0, 4, 1, 1);
 
 	priv->type_combo = combo = gtk_combo_box_new();
-	gtk_table_attach(GTK_TABLE(table), combo, 1, 2, 4, 5, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), combo, 1, 4, 1, 1);
 
 	label_tmp = gtk_label_new(" ");
-	gtk_table_attach(GTK_TABLE(table), label_tmp, 0, 2, 5, 6, GTK_FILL | GTK_EXPAND, GTK_FILL, 0, 0);
+	gtk_grid_attach(GTK_GRID(table), label_tmp, 0, 5, 2, 1);
 
 	renderer = gtk_cell_renderer_text_new();
 	gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(combo), renderer, TRUE);
