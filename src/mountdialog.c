@@ -104,7 +104,7 @@ static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 	gtk_container_add(GTK_CONTAINER(gtk_dialog_get_content_area(GTK_DIALOG(self))), vbox);
 
 	priv->label = gtk_label_new(NULL);
-	gtk_misc_set_alignment(GTK_MISC(priv->label), 0.1, 0.5);
+	gtk_label_set_xalign(GTK_LABEL(priv->label), 0.1);
 	gtk_box_pack_start(GTK_BOX(vbox), priv->label, FALSE, FALSE, 6);
 
 	progress = gtk_progress_bar_new();

@@ -335,7 +335,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label1 = gtk_label_new_with_mnemonic(_("_File Manager"));
-	gtk_misc_set_alignment(GTK_MISC(label1), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label1), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
 
 	image = gtk_image_new();
@@ -352,7 +352,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label1 = gtk_label_new_with_mnemonic(_("_Terminal"));
-	gtk_misc_set_alignment(GTK_MISC(label1), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label1), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
 
 	image = gtk_image_new();
@@ -369,7 +369,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label1 = gtk_label_new_with_mnemonic(_("_Bookmark Auto-Connect Interval"));
-	gtk_misc_set_alignment(GTK_MISC(label1), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label1), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
 
 	spinbutton = add_spinbutton(settings, "autoconnect-interval");
@@ -411,7 +411,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label4 = gtk_label_new_with_mnemonic(_("_Connection List Mode"));
-	gtk_misc_set_alignment(GTK_MISC(label4), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label4), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label4, FALSE, FALSE, 0);
 
 	combo = add_view_mode_combo(settings, "view-mode");
@@ -432,7 +432,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label2 = gtk_label_new_with_mnemonic(_("St_yle"));
-	gtk_misc_set_alignment(GTK_MISC(label2), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label2), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label2, FALSE, FALSE, 0);
 
 	combo_toolbar_style = add_toolbar_style_combo(settings, "toolbar-style");
@@ -443,7 +443,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label3 = gtk_label_new_with_mnemonic(_("_Orientation"));
-	gtk_misc_set_alignment(GTK_MISC(label3), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label3), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label3, FALSE, FALSE, 0);
 
 	combo_toolbar_orient = add_toolbar_orientation_combo(settings, "toolbar-orientation");
