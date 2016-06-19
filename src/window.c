@@ -410,13 +410,6 @@ static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindo
 }
 
 
-static void about_activate_link(G_GNUC_UNUSED GtkAboutDialog *dialog,
-								const gchar *uri, G_GNUC_UNUSED gpointer data)
-{
-	gigolo_show_uri(uri);
-}
-
-
 static void action_about_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
     const gchar *authors[]= { "Enrico Tröger <enrico@xfce.org>", NULL };
