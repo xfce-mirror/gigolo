@@ -35,6 +35,8 @@
 #include "window.h"
 
 
+static int gigolo_create(GtkApplication *);
+
 static gboolean show_version = FALSE;
 static gboolean list_schemes = FALSE;
 static gboolean new_instance = FALSE;
@@ -95,21 +97,25 @@ static void print_supported_schemes(void)
 	}
 }
 
-static void activate (GApplication *app, gpointer user_data)
+static int activate (GtkApplication *app, gpointer user_data)
 {
-	GtkWidget *widget;
+	GList *list;
 
-	widget = gtk_application_window_new (GTK_APPLICATION (app));
-	gtk_widget_show (widget);
+	list = gtk_application_get_windows (app);
+	if (list)
+	{
+		gtk_window_present (GTK_WINDOW (list->data));
+	}
+	else
+		return gigolo_create(app);
+	return 0;
 }
 
 gint main(gint argc, gchar** argv)
 {
-	GigoloSettings *settings;
 	GtkApplication *gis = NULL;
-	gchar *accel_filename;
+	gint status;
 	GOptionContext *context;
-	GtkWidget *window;
 
 	bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
 	bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
@@ -121,8 +127,6 @@ gint main(gint argc, gchar** argv)
 	g_option_context_add_group(context, gtk_get_option_group(FALSE));
 	g_option_context_parse(context, &argc, &argv, NULL);
 	g_option_context_free(context);
-
-	gtk_init(&argc, &argv);
 
 	if (show_version)
 	{
@@ -148,16 +152,31 @@ gint main(gint argc, gchar** argv)
 		return ret ? EXIT_SUCCESS : EXIT_FAILURE;
 	}
 
-	if (! new_instance)
-	{
-		gis = gtk_application_new("org.xfce.gigolo", G_APPLICATION_FLAGS_NONE);
-		g_signal_connect (gis, "activate", G_CALLBACK (activate), NULL);
-	}
-
 	verbose("Gigolo %s (GTK+ %u.%u.%u, GLib %u.%u.%u)",
 		VERSION,
 		gtk_major_version, gtk_minor_version, gtk_micro_version,
 		glib_major_version, glib_minor_version, glib_micro_version);
+
+	if (! new_instance)
+	{
+		gis = gtk_application_new("org.xfce.gigolo", G_APPLICATION_FLAGS_NONE);
+		g_signal_connect (gis, "activate", G_CALLBACK (activate), NULL);
+		status = g_application_run (G_APPLICATION (gis), argc, argv);
+	}
+	else
+	{
+		gtk_init(&argc, &argv);
+		status = gigolo_create(NULL);
+	}
+
+	return status;
+}
+
+static int gigolo_create(GtkApplication *gis)
+{
+	GigoloSettings *settings;
+	gchar *accel_filename;
+	GtkWidget *window;
 
 	settings = gigolo_settings_new();
 
