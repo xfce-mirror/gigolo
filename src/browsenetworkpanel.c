@@ -67,7 +67,7 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseN
 static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GigoloBrowseNetworkPanel *panel);
 
 
-G_DEFINE_TYPE(GigoloBrowseNetworkPanel, gigolo_browse_network_panel, GTK_TYPE_VBOX);
+G_DEFINE_TYPE(GigoloBrowseNetworkPanel, gigolo_browse_network_panel, GTK_TYPE_BOX);
 
 
 static void gigolo_browse_network_panel_finalize(GObject *object)
@@ -98,7 +98,7 @@ static void gigolo_browse_network_panel_class_init(GigoloBrowseNetworkPanelClass
 	g_object_class = G_OBJECT_CLASS(klass);
 	g_object_class->finalize = gigolo_browse_network_panel_finalize;
 
-	gigolo_browse_network_panel_parent_class = (GtkVBoxClass*) g_type_class_peek(GTK_TYPE_VBOX);
+	gigolo_browse_network_panel_parent_class = (GtkBoxClass*) g_type_class_peek(GTK_TYPE_BOX);
 	g_type_class_add_private(klass, sizeof(GigoloBrowseNetworkPanelPrivate));
 }
 
@@ -481,6 +481,7 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 
 	priv->browse_network_signal_id = 0;
 
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (panel), GTK_ORIENTATION_VERTICAL);
 	toolbar = gtk_toolbar_new();
 	gtk_toolbar_set_style(GTK_TOOLBAR(toolbar), GTK_TOOLBAR_BOTH_HORIZ);
 	gtk_toolbar_set_icon_size(GTK_TOOLBAR(toolbar), GTK_ICON_SIZE_BUTTON);
