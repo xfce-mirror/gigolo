@@ -502,10 +502,10 @@ static void gigolo_preferences_dialog_class_init(GigoloPreferencesDialogClass *k
 static void gigolo_preferences_dialog_init(GigoloPreferencesDialog *dialog)
 {
     g_object_set(dialog,
-		"icon-name", GTK_STOCK_PREFERENCES,
+		"icon-name", "gtk-preferences",
 		"title", _("Preferences"),
 		NULL);
-	gtk_dialog_add_buttons(GTK_DIALOG(dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE, NULL);
+	gtk_dialog_add_buttons(GTK_DIALOG(dialog), "gtk-close", GTK_RESPONSE_CLOSE, NULL);
 }
 
 

@@ -452,7 +452,7 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	priv->item_bookmark = item = gtk_image_menu_item_new_with_mnemonic(_("Create _Bookmark"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(item),
 		gtk_image_new_from_icon_name(
-			gigolo_find_icon_name("bookmark-new", GTK_STOCK_EDIT), GTK_ICON_SIZE_BUTTON));
+			gigolo_find_icon_name("bookmark-new", "gtk-edit"), GTK_ICON_SIZE_BUTTON));
 	g_object_set_data(G_OBJECT(item), "panel", panel);
 	gtk_widget_show(item);
 	gtk_container_add(GTK_CONTAINER(menu), item);
@@ -486,14 +486,15 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	gtk_toolbar_set_style(GTK_TOOLBAR(toolbar), GTK_TOOLBAR_BOTH_HORIZ);
 	gtk_toolbar_set_icon_size(GTK_TOOLBAR(toolbar), GTK_ICON_SIZE_BUTTON);
 
-	toolitem = gtk_tool_button_new_from_stock(GTK_STOCK_CONNECT);
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-connect",
+		gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Connect to the selected share"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 	g_signal_connect(toolitem, "clicked", G_CALLBACK(button_connect_click_cb), panel);
 	priv->button_connect = GTK_WIDGET(toolitem);
 
 	toolitem = gtk_tool_button_new(
-		gtk_image_new_from_icon_name(gigolo_find_icon_name("bookmark-new", GTK_STOCK_EDIT), GTK_ICON_SIZE_BUTTON),
+		gtk_image_new_from_icon_name(gigolo_find_icon_name("bookmark-new", "gtk-edit"), GTK_ICON_SIZE_BUTTON),
 		_("Create _Bookmark"));
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Create a bookmark from the selected share"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
