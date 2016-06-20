@@ -504,7 +504,8 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	toolitem = gtk_separator_tool_item_new();
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 
-	toolitem = gtk_tool_button_new_from_stock(GTK_STOCK_REFRESH);
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-refresh",
+		gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Refresh the network list"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 	g_signal_connect(toolitem, "clicked", G_CALLBACK(button_refresh_click_cb), panel);
@@ -515,7 +516,8 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	gtk_tool_item_set_expand(toolitem, TRUE);
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 
-	toolitem = gtk_tool_button_new_from_stock(GTK_STOCK_CLOSE);
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-close",
+		gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Close panel"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 	g_signal_connect(toolitem, "clicked", G_CALLBACK(button_close_click_cb), panel);
