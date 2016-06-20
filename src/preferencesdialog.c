@@ -74,7 +74,7 @@ static GtkWidget *xfce_header_new(const gchar *icon, const gchar *title)
 
 	gtk_widget_destroy(entry);
 
-	vbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 	gtk_box_pack_start(GTK_BOX(vbox), xfce_heading, FALSE, FALSE, 0);
 
 	separator = gtk_separator_new(GTK_ORIENTATION_HORIZONTAL);
