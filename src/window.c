@@ -1563,6 +1563,7 @@ static void gigolo_window_init(GigoloWindow *window)
 	gtk_container_add(GTK_CONTAINER(priv->swin_treeview), priv->treeview);
 
 	priv->swin_iconview = gtk_scrolled_window_new(NULL, NULL);
+	gtk_widget_set_hexpand(GTK_WIDGET(priv->swin_iconview), TRUE);
 	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(priv->swin_iconview),
 		GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(priv->swin_iconview), GTK_SHADOW_IN);
