@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-08-07 13:52+0000\n"
+"PO-Revision-Date: 2016-08-07 19:36+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -171,7 +171,7 @@ msgstr "_Edita els marcadors"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Obre el gestor dels marcador per afegir, editar o suprimir els marcadors"
+msgstr "Obre el gestor dels marcadors per afegir, editar o suprimir els marcadors"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
