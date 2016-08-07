@@ -5,14 +5,15 @@
 # Translators:
 # Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009,2011
 # Davidmp <medipas@gmail.com>, 2015
-# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-06-17 08:00+0000\n"
-"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
+"PO-Revision-Date: 2016-08-07 13:52+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Connecta totes les adreces d'interès marcades com a «connexió automàtica» i surt"
+msgstr "Connecta tots els marcadors marcats com a «connexió automàtica» i surt"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
@@ -128,7 +129,7 @@ msgstr "Error"
 
 #: ../src/window.c:613
 msgid "Invalid terminal command"
-msgstr "Ordre de terminal errònia"
+msgstr "Ordre incorrecta de terminal"
 
 #: ../src/window.c:625
 #, c-format
@@ -137,12 +138,12 @@ msgstr "No hi ha disponible cap ubicació predeterminada per «%s»"
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
-msgstr "Edita l'a_dreça d'interès"
+msgstr "Edita el marca_dor"
 
 #: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
-msgstr "Crea una a_dreça d'interès"
+msgstr "Crea un m_arcador"
 
 #: ../src/window.c:1281
 msgid "_File"
@@ -166,11 +167,11 @@ msgstr "A_juda"
 
 #: ../src/window.c:1291
 msgid "_Edit Bookmarks"
-msgstr "_Edita les adreces d'interès"
+msgstr "_Edita els marcadors"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Obre el gestor de les adreces d'interès per afegir, editar o suprimir les adreces d'interès"
+msgstr "Obre el gestor dels marcador per afegir, editar o suprimir els marcadors"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -182,7 +183,7 @@ msgstr "Obre el recurs seleccionat amb un gestor de fitxers"
 
 #: ../src/window.c:1299
 msgid "Open in _Terminal"
-msgstr "Obre en un _Terminal"
+msgstr "Obre al _terminal"
 
 #: ../src/window.c:1300
 msgid "Start a terminal from here"
@@ -226,11 +227,11 @@ msgstr "Mostra com a llista _detallada"
 
 #: ../src/window.c:1330
 msgid "_Bookmarks"
-msgstr "A_dreces d'interès"
+msgstr "Marca_dors"
 
 #: ../src/window.c:1330
 msgid "Choose a bookmark to connect to"
-msgstr "Trieu una adreça d'interès per connectar-vos"
+msgstr "Trieu un marcador per connectar-vos"
 
 #: ../src/window.c:1412
 msgid "Connected"
@@ -246,7 +247,7 @@ msgstr "Nom"
 
 #: ../src/window.c:1500
 msgid "Bookmarks"
-msgstr "Adreces d'interès"
+msgstr "Marcadors"
 
 #: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
@@ -317,16 +318,16 @@ msgstr "Altra informació"
 
 #: ../src/bookmarkdialog.c:412
 msgid "Edit Bookmarks"
-msgstr "Edita les adreces d'interès"
+msgstr "Edita els marcadors"
 
 #: ../src/bookmarkeditdialog.c:234
 msgid "You must enter a name for the bookmark."
-msgstr "Heu d'introduir un nom per a l'adreça d'interès."
+msgstr "Heu d'introduir un nom per al marcador."
 
 #: ../src/bookmarkeditdialog.c:253
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "El nom de l'adreça d'interès que heu introduït ja està en ús. Escolliu-ne una altra."
+msgstr "El nom del marcador que heu introduït ja està en ús. Escolliu-ne una altra."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
@@ -350,11 +351,11 @@ msgstr "_Servidor:"
 
 #: ../src/bookmarkeditdialog.c:897
 msgid "Create Bookmark"
-msgstr "Crea una adreça d'interès"
+msgstr "Crea un marcador"
 
 #: ../src/bookmarkeditdialog.c:904
 msgid "Edit Bookmark"
-msgstr "Edita l'adreça d'interès"
+msgstr "Edita el marcador"
 
 #: ../src/bookmarkeditdialog.c:912
 msgid "Connect to Server"
@@ -362,7 +363,7 @@ msgstr "Connecta al servidor"
 
 #: ../src/bookmarkeditdialog.c:1036
 msgid "_Bookmark name:"
-msgstr "_Nom de l'adreça d'interès:"
+msgstr "_Nom del marcador:"
 
 #: ../src/bookmarkeditdialog.c:1044
 msgid "_Color:"
@@ -472,13 +473,13 @@ msgstr "Introduïu el nom del programa per obrir punts de muntatge en un termina
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "_Interval de connexió automàtica de les adreces d'interès"
+msgstr "_Interval de connexió automàtica del marcador"
 
 #: ../src/preferencesdialog.c:378
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr "Amb quina freqüència voleu que s'intenti la connexió automàtica a les adreces d'interès, en segons. Zero inhabilita la comprovació."
+msgstr "Amb quina freqüència voleu que s'intenti la connexió automàtica als marcadors, en segons. Zero inhabilita la comprovació."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -508,7 +509,7 @@ msgstr "Mostra el plafó lateral"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Si s'ha de mostrar un plafó lateral per a navegar pels recursos compartits Samba/Windows de la xarxa local i per la llista d'adreces interès"
+msgstr "Si s'ha de mostrar un plafó lateral per a navegar pels recursos compartits Samba/Windows de la xarxa local i una llista dels marcadors"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -518,7 +519,7 @@ msgstr "Mostra els errors de connexió automàtica"
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
-msgstr "Si s'ha de mostrar o no el diàleg d'errors quan falla la connexió automàtica a les adreces d'interès"
+msgstr "Si s'ha de mostrar o no el diàleg d'errors quan falla la connexió automàtica al marcador"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -546,7 +547,7 @@ msgstr "Preferències"
 
 #: ../src/backendgvfs.c:221
 msgid "No bookmark"
-msgstr "Cap adreça d'interès"
+msgstr "Cap marcador"
 
 #: ../src/backendgvfs.c:239
 #, c-format
@@ -557,7 +558,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr "<b>%s</b>\n\nURI: %s\nConnectat: Sí\nTipus de servei: %s\nAdreça d'interès: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nConnectat: Sí\nTipus de servei: %s\nMarcador: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -600,7 +601,7 @@ msgstr "Connecta al recurs compartit seleccionat"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "Crea una adreça d'interès a partir del recurs compartit seleccionat"
+msgstr "Crea un marcador a partir del recurs compartit seleccionat"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
@@ -612,11 +613,11 @@ msgstr "Tanca el plafó"
 
 #: ../src/bookmarkpanel.c:92
 msgid "No bookmarks"
-msgstr "No hi ha adreces d'interès"
+msgstr "No hi ha marcadors"
 
 #: ../src/bookmarkpanel.c:256
 msgid "Connect to the selected bookmark"
-msgstr "Connecta a l'adreça d'interès seleccionada"
+msgstr "Connecta al marcador seleccionat"
 
 #: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
