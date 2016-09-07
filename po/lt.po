@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-07-18 17:56+0000\n"
+"PO-Revision-Date: 2016-09-07 13:40+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-apps/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -525,11 +525,11 @@ msgstr "_Prisijungimo sąrašo veiksena"
 
 #: ../src/preferencesdialog.c:427
 msgid "Toolbar"
-msgstr "Įrankinė"
+msgstr "Įrankių juosta"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "Rodyti įrankinę"
+msgstr "Rodyti įrankių juostą"
 
 #: ../src/preferencesdialog.c:435
 msgid "St_yle"
