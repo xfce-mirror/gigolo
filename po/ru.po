@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Igor <f2404@yandex.ru>, 2016
-# Sergey Alyoshin <alyoshin.s@gmail.com>, 2013
+# Sergey Alyoshin <alyoshin.s@gmail.com>, 2013,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-07-08 15:14+0000\n"
-"Last-Translator: Igor <f2404@yandex.ru>\n"
+"PO-Revision-Date: 2016-09-25 06:36+0000\n"
+"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/xfce/xfce-apps/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Подключить все автоматически подключаемые закладки\\n\\t\\t\\t\\tи выйти."
+msgstr "Подключить все автоматически подключаемые закладки и выйти."
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
@@ -73,7 +73,7 @@ msgstr "WebDAV"
 
 #: ../src/common.c:91
 msgid "WebDAV (secure)"
-msgstr "WebDAV (поддержка безопасности)"
+msgstr "WebDAV (защищённый)"
 
 #: ../src/common.c:93 ../src/window.c:1508
 msgid "Network"
@@ -89,7 +89,7 @@ msgstr "Фотографии"
 
 #: ../src/common.c:99
 msgid "Custom Location"
-msgstr "Выбрать расположение"
+msgstr "Указать расположение"
 
 #: ../src/window.c:262
 #, c-format
@@ -272,7 +272,7 @@ msgstr "Внимание"
 
 #: ../src/menubuttonaction.c:157
 msgid "Connect"
-msgstr "Подключиться"
+msgstr "Подключить"
 
 #: ../src/bookmarkdialog.c:95
 #, c-format
@@ -304,7 +304,7 @@ msgstr "Порт"
 
 #: ../src/bookmarkdialog.c:339
 msgid "Auto-Connect"
-msgstr "Подключаться автоматически"
+msgstr "Подключать автоматически"
 
 #: ../src/bookmarkdialog.c:347
 msgid "Username"
@@ -373,7 +373,7 @@ msgstr "_Автоподключение"
 
 #: ../src/bookmarkeditdialog.c:1066
 msgid "Service t_ype:"
-msgstr "_Тип службы:"
+msgstr "Тип _службы:"
 
 #: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
@@ -387,7 +387,7 @@ msgstr "Это значение не влияет на подключение и
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
-msgstr "Раз_мещение (URI):"
+msgstr "_Расположение (URI):"
 
 #: ../src/bookmarkeditdialog.c:1101
 msgid "_Folder:"
