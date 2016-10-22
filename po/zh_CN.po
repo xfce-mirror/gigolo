@@ -1,19 +1,20 @@
-# Simplified Chinese translations for
-# the gigolo package.
-# This file is distributed under the same license as
-# the gigolo package.
-# Hunt Xu <huntxu@live.cn>, 2009, 2010.
-# Jiahua Huang <jhuangjiahua@gmail.com>, 2009.
-# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Chipong Luo <chipong.luo@yahoo.com>, 2011-2012
+# Hunt Xu <huntxu@live.cn>, 2009-2010
+# Jiahua Huang <jhuangjiahua@gmail.com>, 2009
+# Levi Zhou <congzhou821@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-17 04:48+0000\n"
-"PO-Revision-Date: 2010-11-23 23:33+0800\n"
-"Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
-"Language-Team: Chinese (Simplified) <xfce-i18n-cn@xfce.org>\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2016-10-22 13:32+0000\n"
+"Last-Translator: Levi Zhou <congzhou821@gmail.com>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/xfce/xfce-apps/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -95,12 +96,12 @@ msgstr "自定义位置"
 #: ../src/window.c:262
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "正在与 “%s” 连接"
+msgstr "正在连接到 “%s” "
 
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "易于与本地或远程文件系统连接/挂载的简单前端"
+msgstr "易于连接和挂载本地或远程文件系统的简单前端"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -108,10 +109,7 @@ msgstr "Enrico Tröger 2008-2011 版权所有"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr ""
-"Hunt Xu <huntxu@live.cn>, 2009, 2010.\n"
-"Jiahua Huang <jhuangjiahua@gmail.com>, 2009.\n"
-"Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012."
+msgstr "Hunt Xu <huntxu@live.cn>, 2009, 2010.\nJiahua Huang <jhuangjiahua@gmail.com>, 2009.\nChipong Luo <chipong.luo@yahoo.com>, 2011, 2012."
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -251,7 +249,7 @@ msgstr "名称"
 msgid "Bookmarks"
 msgstr "书签"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo 远程连接"
 
@@ -261,15 +259,14 @@ msgstr "现在移动？"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Gigolo 在启动前需要移动您旧有的配置目录。"
+msgstr "Gigolo 在启动前需要移动您原有的配置目录。"
 
 #: ../src/settings.c:703
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"无法将您的原配置目录 “%s” 移动至 “%s”(%s)。请手动将此目录移动至新位置。"
+msgstr "无法将您的原配置目录 “%s” 移动至 “%s”(%s)。请手动将此目录移动至新位置。"
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -328,7 +325,8 @@ msgid "You must enter a name for the bookmark."
 msgstr "您必须为书签输入一个名称。"
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "输入的书签名称已在使用。请选择另一个。"
 
 #: ../src/bookmarkeditdialog.c:266
@@ -519,7 +517,8 @@ msgstr "显示自动连接错误信息"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
 msgstr "无法自动连接书签时是否显示错误信息对话框"
 
 #: ../src/preferencesdialog.c:414
@@ -559,13 +558,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI：%s\n"
-"已连接：是\n"
-"服务类型：%s\n"
-"书签：%s"
+msgstr "<b>%s</b>\n\nURI：%s\n已连接：是\n服务类型：%s\n书签：%s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -626,6 +619,6 @@ msgstr "无书签"
 msgid "Connect to the selected bookmark"
 msgstr "与选中的书签连接"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "易于与远程文件系统连接的简单前端"
