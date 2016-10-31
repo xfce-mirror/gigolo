@@ -24,7 +24,6 @@
 #include <gtk/gtk.h>
 
 #include "common.h"
-#include "compat.h"
 #include "main.h"
 #include "mountdialog.h"
 
@@ -50,7 +49,7 @@ struct _GigoloMountDialogPrivate
 	guint timer_id;
 };
 
-static void gigolo_mount_dialog_destroy				(GtkObject *widget);
+static void gigolo_mount_dialog_finalize			(GObject *widget);
 
 
 G_DEFINE_TYPE(GigoloMountDialog, gigolo_mount_dialog, GTK_TYPE_DIALOG);
@@ -59,15 +58,15 @@ G_DEFINE_TYPE(GigoloMountDialog, gigolo_mount_dialog, GTK_TYPE_DIALOG);
 
 static void gigolo_mount_dialog_class_init(GigoloMountDialogClass *klass)
 {
-	GtkObjectClass *object_class = GTK_OBJECT_CLASS(klass);
+	GObjectClass *object_class = G_OBJECT_CLASS(klass);
 
-	object_class->destroy = gigolo_mount_dialog_destroy;
+	object_class->finalize = gigolo_mount_dialog_finalize;
 
 	g_type_class_add_private(klass, sizeof(GigoloMountDialogPrivate));
 }
 
 
-static void gigolo_mount_dialog_destroy(GtkObject *widget)
+static void gigolo_mount_dialog_finalize(GObject *widget)
 {
 	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(widget);
 
@@ -77,7 +76,7 @@ static void gigolo_mount_dialog_destroy(GtkObject *widget)
 		priv->timer_id = -1;
 	}
 
-	GTK_OBJECT_CLASS(gigolo_mount_dialog_parent_class)->destroy(widget);
+	G_OBJECT_CLASS(gigolo_mount_dialog_parent_class)->finalize(widget);
 }
 
 
@@ -96,17 +95,16 @@ static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 
 	priv->timer_id = (guint) -1;
 
-	gtk_dialog_set_has_separator(GTK_DIALOG(self), FALSE);
 	gtk_window_set_destroy_with_parent(GTK_WINDOW(self), TRUE);
 	gtk_window_set_default_size(GTK_WINDOW(self), 200, -1);
 	gtk_window_set_title(GTK_WINDOW(self), _("Connecting"));
 
-	vbox = gtk_vbox_new(FALSE, 0);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 	gtk_container_set_border_width(GTK_CONTAINER(vbox), 5);
-	gtk_container_add(GTK_CONTAINER(gigolo_dialog_get_content_area(GTK_DIALOG(self))), vbox);
+	gtk_container_add(GTK_CONTAINER(gtk_dialog_get_content_area(GTK_DIALOG(self))), vbox);
 
 	priv->label = gtk_label_new(NULL);
-	gtk_misc_set_alignment(GTK_MISC(priv->label), 0.1, 0.5);
+	gtk_label_set_xalign(GTK_LABEL(priv->label), 0.1);
 	gtk_box_pack_start(GTK_BOX(vbox), priv->label, FALSE, FALSE, 6);
 
 	progress = gtk_progress_bar_new();

@@ -27,7 +27,6 @@
 #include "settings.h"
 #include "backendgvfs.h"
 #include "window.h"
-#include "compat.h"
 #include "common.h"
 #include "bookmarkdialog.h"
 #include "bookmarkeditdialog.h"
@@ -408,14 +407,14 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
 
 	g_object_set(dialog,
-		"icon-name", gigolo_find_icon_name("bookmark-new", GTK_STOCK_EDIT),
+		"icon-name", gigolo_find_icon_name("bookmark-new", "gtk-edit"),
 		"title", _("Edit Bookmarks"),
 		NULL);
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
-	vbox = gigolo_dialog_get_content_area(GTK_DIALOG(dialog));
+	vbox = gtk_dialog_get_content_area(GTK_DIALOG(dialog));
 	gtk_box_set_spacing(GTK_BOX(vbox), 2);
 
-	gtk_dialog_add_button(GTK_DIALOG(dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+	gtk_dialog_add_button(GTK_DIALOG(dialog), "gtk-close", GTK_RESPONSE_CLOSE);
 
 	gtk_window_set_destroy_with_parent(GTK_WINDOW(dialog), TRUE);
 	gtk_window_set_default_size(GTK_WINDOW(dialog), 550, 350);
@@ -430,7 +429,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	priv->button_delete = gtk_button_new_from_stock("gtk-delete");
 	g_signal_connect(priv->button_delete, "clicked", G_CALLBACK(delete_button_click_cb), dialog);
 
-	hbox = gtk_hbox_new(FALSE, 10);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
 	gtk_box_pack_start(GTK_BOX(hbox), button_add, FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(hbox), priv->button_edit, FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(hbox), priv->button_delete, FALSE, FALSE, 0);
@@ -443,7 +442,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(swin), GTK_SHADOW_IN);
 	gtk_container_add(GTK_CONTAINER(swin), priv->tree);
 
-	vbox2 = gtk_vbox_new(FALSE, 6);
+	vbox2 = gtk_box_new(GTK_ORIENTATION_VERTICAL, 6);
 	gtk_box_pack_start(GTK_BOX(vbox2), swin, TRUE, TRUE, 0);
 	gtk_box_pack_start(GTK_BOX(vbox2), hbox, FALSE, FALSE, 0);
 

@@ -26,7 +26,6 @@
 #include <gio/gio.h>
 
 #include "common.h"
-#include "compat.h"
 #include "backendgvfs.h"
 #include "bookmark.h"
 #include "settings.h"
@@ -68,7 +67,7 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseN
 static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GigoloBrowseNetworkPanel *panel);
 
 
-G_DEFINE_TYPE(GigoloBrowseNetworkPanel, gigolo_browse_network_panel, GTK_TYPE_VBOX);
+G_DEFINE_TYPE(GigoloBrowseNetworkPanel, gigolo_browse_network_panel, GTK_TYPE_BOX);
 
 
 static void gigolo_browse_network_panel_finalize(GObject *object)
@@ -77,7 +76,7 @@ static void gigolo_browse_network_panel_finalize(GObject *object)
 	GigoloBackendGVFS *backend;
 
 	gtk_widget_destroy(priv->popup_menu);
-	gdk_cursor_unref(priv->wait_cursor);
+	g_object_unref(priv->wait_cursor);
 
 	backend = gigolo_window_get_backend(priv->parent);
 	if (backend != NULL && IS_GIGOLO_BACKEND_GVFS(backend) && priv->browse_network_signal_id > 0)
@@ -99,7 +98,7 @@ static void gigolo_browse_network_panel_class_init(GigoloBrowseNetworkPanelClass
 	g_object_class = G_OBJECT_CLASS(klass);
 	g_object_class->finalize = gigolo_browse_network_panel_finalize;
 
-	gigolo_browse_network_panel_parent_class = (GtkVBoxClass*) g_type_class_peek(GTK_TYPE_VBOX);
+	gigolo_browse_network_panel_parent_class = (GtkBoxClass*) g_type_class_peek(GTK_TYPE_BOX);
 	g_type_class_add_private(klass, sizeof(GigoloBrowseNetworkPanelPrivate));
 }
 
@@ -215,7 +214,7 @@ static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, Gig
 
 	gtk_widget_set_sensitive(priv->button_refresh, TRUE);
 
-	gdk_window_set_cursor(gigolo_widget_get_window(GTK_WIDGET(panel)), NULL);
+	gdk_window_set_cursor(gtk_widget_get_window(GTK_WIDGET(panel)), NULL);
 }
 
 
@@ -235,7 +234,7 @@ static gboolean delay_refresh(GigoloBrowseNetworkPanel *panel)
 {
 	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
 
-	gdk_window_set_cursor(gigolo_widget_get_window(GTK_WIDGET(panel)), priv->wait_cursor);
+	gdk_window_set_cursor(gtk_widget_get_window(GTK_WIDGET(panel)), priv->wait_cursor);
 	/* Force the update of the cursor */
 	while (g_main_context_iteration(NULL, FALSE));
 
@@ -262,10 +261,10 @@ static void button_close_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrowse
 static gboolean tree_key_press_event(G_GNUC_UNUSED GtkWidget *widget, GdkEventKey *event,
 									 GigoloBrowseNetworkPanel *panel)
 {
-	if (event->keyval == GDK_Return ||
-		event->keyval == GDK_ISO_Enter ||
-		event->keyval == GDK_KP_Enter ||
-		event->keyval == GDK_space)
+	if (event->keyval == GDK_KEY_Return ||
+		event->keyval == GDK_KEY_ISO_Enter ||
+		event->keyval == GDK_KEY_KP_Enter ||
+		event->keyval == GDK_KEY_space)
 	{
 		mount_share(panel, GIGOLO_BE_MODE_CONNECT);
 		return TRUE;
@@ -453,7 +452,7 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	priv->item_bookmark = item = gtk_image_menu_item_new_with_mnemonic(_("Create _Bookmark"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(item),
 		gtk_image_new_from_icon_name(
-			gigolo_find_icon_name("bookmark-new", GTK_STOCK_EDIT), GTK_ICON_SIZE_BUTTON));
+			gigolo_find_icon_name("bookmark-new", "gtk-edit"), GTK_ICON_SIZE_BUTTON));
 	g_object_set_data(G_OBJECT(item), "panel", panel);
 	gtk_widget_show(item);
 	gtk_container_add(GTK_CONTAINER(menu), item);
@@ -482,18 +481,20 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 
 	priv->browse_network_signal_id = 0;
 
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (panel), GTK_ORIENTATION_VERTICAL);
 	toolbar = gtk_toolbar_new();
 	gtk_toolbar_set_style(GTK_TOOLBAR(toolbar), GTK_TOOLBAR_BOTH_HORIZ);
 	gtk_toolbar_set_icon_size(GTK_TOOLBAR(toolbar), GTK_ICON_SIZE_BUTTON);
 
-	toolitem = gtk_tool_button_new_from_stock(GTK_STOCK_CONNECT);
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-connect",
+		gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Connect to the selected share"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 	g_signal_connect(toolitem, "clicked", G_CALLBACK(button_connect_click_cb), panel);
 	priv->button_connect = GTK_WIDGET(toolitem);
 
 	toolitem = gtk_tool_button_new(
-		gtk_image_new_from_icon_name(gigolo_find_icon_name("bookmark-new", GTK_STOCK_EDIT), GTK_ICON_SIZE_BUTTON),
+		gtk_image_new_from_icon_name(gigolo_find_icon_name("bookmark-new", "gtk-edit"), GTK_ICON_SIZE_BUTTON),
 		_("Create _Bookmark"));
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Create a bookmark from the selected share"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
@@ -503,7 +504,8 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	toolitem = gtk_separator_tool_item_new();
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 
-	toolitem = gtk_tool_button_new_from_stock(GTK_STOCK_REFRESH);
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-refresh",
+		gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Refresh the network list"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 	g_signal_connect(toolitem, "clicked", G_CALLBACK(button_refresh_click_cb), panel);
@@ -514,7 +516,8 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	gtk_tool_item_set_expand(toolitem, TRUE);
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 
-	toolitem = gtk_tool_button_new_from_stock(GTK_STOCK_CLOSE);
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-close",
+		gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Close panel"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 	g_signal_connect(toolitem, "clicked", G_CALLBACK(button_close_click_cb), panel);
@@ -533,7 +536,7 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	gtk_widget_show_all(toolbar);
 	gtk_widget_show_all(swin);
 
-	priv->wait_cursor = gdk_cursor_new(GDK_WATCH);
+	priv->wait_cursor = gdk_cursor_new_for_display(gdk_display_get_default(), GDK_WATCH);
 
 	g_signal_connect_after(panel, "realize", G_CALLBACK(realize_cb), NULL);
 }

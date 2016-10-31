@@ -28,7 +28,6 @@
 #include "bookmark.h"
 #include "settings.h"
 #include "window.h"
-#include "mountoperation.h"
 
 typedef struct _GigoloBackendGVFSPrivate			GigoloBackendGVFSPrivate;
 
@@ -513,7 +512,7 @@ gboolean gigolo_backend_gvfs_mount_volume(GigoloBackendGVFS *backend, GtkWindow 
 
 	if (! G_IS_MOUNT(vol) && G_IS_VOLUME(vol) && g_volume_can_mount(G_VOLUME(vol)))
 	{
-		GMountOperation *op = gigolo_mount_operation_new(window);
+		GMountOperation *op = gtk_mount_operation_new(window);
 
 		g_volume_mount(G_VOLUME(vol), G_MOUNT_MOUNT_NONE, op, NULL, volume_mount_finished_cb, backend);
 
@@ -535,7 +534,7 @@ void gigolo_backend_gvfs_unmount_mount(GigoloBackendGVFS *backend, gpointer moun
 	g_return_if_fail(mount != NULL);
 
 #if GLIB_CHECK_VERSION(2, 22, 0)
-	op = gigolo_mount_operation_new(parent);
+	op = gtk_mount_operation_new(parent);
 	g_mount_unmount_with_operation(
 		G_MOUNT(mount), G_MOUNT_UNMOUNT_NONE, op, NULL, unmount_finished_cb, backend);
 	g_object_unref(op);
@@ -593,7 +592,7 @@ void gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
 	g_return_if_fail(uri != NULL);
 	g_return_if_fail(backend != NULL);
 
-	op = gigolo_mount_operation_new(GTK_WINDOW(parent));
+	op = gtk_mount_operation_new(GTK_WINDOW(parent));
 	file = g_file_new_for_uri(uri);
 	mi = g_new0(MountInfo, 1);
 	mi->self = backend;
@@ -714,7 +713,7 @@ static void browse_network_real(BrowseData *bd)
 	{
 		if (g_error_matches(error, G_IO_ERROR, G_IO_ERROR_NOT_MOUNTED))
 		{
-			GMountOperation *op = gigolo_mount_operation_new(bd->parent);
+			GMountOperation *op = gtk_mount_operation_new(bd->parent);
 			/* if the URI wasn't mounted yet, mount it and try again from the mount ready callback */
 			g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
 				(GAsyncReadyCallback) browse_network_mount_ready_cb, bd);
@@ -850,7 +849,7 @@ static void browse_host_real(BrowseData *bd)
 	{
 		if (g_error_matches(error, G_IO_ERROR, G_IO_ERROR_NOT_MOUNTED))
 		{
-			GMountOperation *op = gigolo_mount_operation_new(bd->parent);
+			GMountOperation *op = gtk_mount_operation_new(bd->parent);
 			/* if the URI wasn't mounted yet, mount it and try again from the mount ready callback */
 			g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
 				(GAsyncReadyCallback) browse_network_mount_ready_cb, bd);

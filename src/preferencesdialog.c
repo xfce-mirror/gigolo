@@ -25,7 +25,6 @@
 #include <string.h>
 
 #include "common.h"
-#include "compat.h"
 #include "bookmark.h"
 #include "settings.h"
 #include "backendgvfs.h"
@@ -62,7 +61,7 @@ static GtkWidget *xfce_header_new(const gchar *icon, const gchar *title)
 
 	xfce_heading = gtk_event_box_new();
 	entry = gtk_entry_new();
-	hbox = gtk_hbox_new(FALSE, 12);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
 	gtk_container_set_border_width(GTK_CONTAINER(hbox), 6);
 	image = gtk_image_new_from_icon_name(icon, GTK_ICON_SIZE_DIALOG);
 	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 0);
@@ -75,10 +74,10 @@ static GtkWidget *xfce_header_new(const gchar *icon, const gchar *title)
 
 	gtk_widget_destroy(entry);
 
-	vbox = gtk_vbox_new(FALSE, 0);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 	gtk_box_pack_start(GTK_BOX(vbox), xfce_heading, FALSE, FALSE, 0);
 
-	separator = gtk_hseparator_new();
+	separator = gtk_separator_new(GTK_ORIENTATION_HORIZONTAL);
 	gtk_box_pack_start(GTK_BOX(vbox), separator, FALSE, FALSE, 0);
 
 	return vbox;
@@ -143,11 +142,11 @@ static GtkWidget *add_toolbar_style_combo(GigoloSettings *settings, const gchar 
 
 	g_object_get(settings, property, &value, NULL);
 
-	widget = gtk_combo_box_new_text();
-	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Icons"));
-	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Text"));
-	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Both"));
-	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Both horizontal"));
+	widget = gtk_combo_box_text_new();
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Icons"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Text"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Both"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Both horizontal"));
 
 	gtk_combo_box_set_active(GTK_COMBO_BOX(widget), value);
 
@@ -165,9 +164,9 @@ static GtkWidget *add_toolbar_orientation_combo(GigoloSettings *settings, const 
 
 	g_object_get(settings, property, &value, NULL);
 
-	widget = gtk_combo_box_new_text();
-	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Horizontal"));
-	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Vertical"));
+	widget = gtk_combo_box_text_new();
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Horizontal"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Vertical"));
 
 	gtk_combo_box_set_active(GTK_COMBO_BOX(widget), value);
 
@@ -185,9 +184,9 @@ static GtkWidget *add_view_mode_combo(GigoloSettings *settings, const gchar *pro
 
 	g_object_get(settings, property, &value, NULL);
 
-	widget = gtk_combo_box_new_text();
-	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Symbols"));
-	gtk_combo_box_append_text(GTK_COMBO_BOX(widget), _("Detailed List"));
+	widget = gtk_combo_box_text_new();
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Symbols"));
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(widget), NULL, _("Detailed List"));
 
 	gtk_combo_box_set_active(GTK_COMBO_BOX(widget), value);
 
@@ -222,11 +221,11 @@ static void entry_check_input(GtkEntry *entry)
 			gtk_image_set_from_icon_name(icon, first_part, GTK_ICON_SIZE_MENU);
 		}
 		else
-			gtk_image_set_from_stock(icon, GTK_STOCK_EXECUTE, GTK_ICON_SIZE_MENU);
+			gtk_image_set_from_icon_name(icon, "gtk-execute", GTK_ICON_SIZE_MENU);
 		g_free(path);
 	}
 	else
-		gtk_image_set_from_stock(icon, GTK_STOCK_STOP, GTK_ICON_SIZE_MENU);
+		gtk_image_set_from_icon_name(icon, "gtk-stop", GTK_ICON_SIZE_MENU);
 
 	g_free(first_part);
 
@@ -310,7 +309,7 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	GtkWidget *label1, *label2, *label3, *label4, *image;
 	GtkSizeGroup *sg;
 
-    vbox = gigolo_dialog_get_content_area(GTK_DIALOG(dialog));
+    vbox = gtk_dialog_get_content_area(GTK_DIALOG(dialog));
 
 	if (gigolo_is_desktop_xfce())
     {
@@ -326,17 +325,17 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_container_set_border_width(GTK_CONTAINER(notebook), 5);
 
 #define PAGE_GENERAL
-	notebook_vbox = gtk_vbox_new(FALSE, 2);
-	frame_vbox = gtk_vbox_new(FALSE, 5);
+	notebook_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 2);
+	frame_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
 	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 5);
 	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_vbox, TRUE, TRUE, 5);
 	gtk_notebook_append_page(GTK_NOTEBOOK(notebook), notebook_vbox, gtk_label_new(_("General")));
 
-	hbox = gtk_hbox_new(FALSE, 6);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label1 = gtk_label_new_with_mnemonic(_("_File Manager"));
-	gtk_misc_set_alignment(GTK_MISC(label1), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label1), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
 
 	image = gtk_image_new();
@@ -349,11 +348,11 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(hbox), entry, FALSE, FALSE, 0);
 	entry_check_input(GTK_ENTRY(entry));
 
-	hbox = gtk_hbox_new(FALSE, 6);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label1 = gtk_label_new_with_mnemonic(_("_Terminal"));
-	gtk_misc_set_alignment(GTK_MISC(label1), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label1), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
 
 	image = gtk_image_new();
@@ -366,11 +365,11 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(hbox), entry, FALSE, FALSE, 0);
 	entry_check_input(GTK_ENTRY(entry));
 
-	hbox = gtk_hbox_new(FALSE, 6);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label1 = gtk_label_new_with_mnemonic(_("_Bookmark Auto-Connect Interval"));
-	gtk_misc_set_alignment(GTK_MISC(label1), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label1), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
 
 	spinbutton = add_spinbutton(settings, "autoconnect-interval");
@@ -382,8 +381,8 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(frame_vbox), gtk_label_new(""), FALSE, FALSE, 0);
 
 #define PAGE_INTERFACE
-	notebook_vbox = gtk_vbox_new(FALSE, 2);
-	frame_vbox = gtk_vbox_new(FALSE, 5);
+	notebook_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 2);
+	frame_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
 	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 5);
 	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_vbox, TRUE, TRUE, 5);
 	gtk_notebook_append_page(GTK_NOTEBOOK(notebook), notebook_vbox, gtk_label_new(_("Interface")));
@@ -408,11 +407,11 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_widget_set_tooltip_text(checkbox, _("Whether to show error message dialogs when auto-connecting of bookmarks fails"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
-	hbox = gtk_hbox_new(FALSE, 6);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label4 = gtk_label_new_with_mnemonic(_("_Connection List Mode"));
-	gtk_misc_set_alignment(GTK_MISC(label4), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label4), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label4, FALSE, FALSE, 0);
 
 	combo = add_view_mode_combo(settings, "view-mode");
@@ -420,8 +419,8 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	gtk_box_pack_start(GTK_BOX(hbox), combo, FALSE, FALSE, 0);
 
 #define PAGE_TOOLBAR
-	notebook_vbox = gtk_vbox_new(FALSE, 2);
-	frame_vbox = gtk_vbox_new(FALSE, 5);
+	notebook_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 2);
+	frame_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
 	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 5);
 	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_vbox, TRUE, TRUE, 5);
 	gtk_notebook_append_page(GTK_NOTEBOOK(notebook), notebook_vbox, gtk_label_new(_("Toolbar")));
@@ -429,22 +428,22 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	checkbox = add_check_button(settings, "show-toolbar", _("Show _toolbar"));
 	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
 
-	hbox = gtk_hbox_new(FALSE, 6);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label2 = gtk_label_new_with_mnemonic(_("St_yle"));
-	gtk_misc_set_alignment(GTK_MISC(label2), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label2), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label2, FALSE, FALSE, 0);
 
 	combo_toolbar_style = add_toolbar_style_combo(settings, "toolbar-style");
 	gtk_label_set_mnemonic_widget(GTK_LABEL(label2), combo_toolbar_style);
 	gtk_box_pack_start(GTK_BOX(hbox), combo_toolbar_style, FALSE, FALSE, 0);
 
-	hbox = gtk_hbox_new(FALSE, 6);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
 	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
 
 	label3 = gtk_label_new_with_mnemonic(_("_Orientation"));
-	gtk_misc_set_alignment(GTK_MISC(label3), 0.0f, 0.5f);
+	gtk_label_set_xalign(GTK_LABEL(label3), 0);
 	gtk_box_pack_start(GTK_BOX(hbox), label3, FALSE, FALSE, 0);
 
 	combo_toolbar_orient = add_toolbar_orientation_combo(settings, "toolbar-orientation");
@@ -503,11 +502,10 @@ static void gigolo_preferences_dialog_class_init(GigoloPreferencesDialogClass *k
 static void gigolo_preferences_dialog_init(GigoloPreferencesDialog *dialog)
 {
     g_object_set(dialog,
-		"icon-name", GTK_STOCK_PREFERENCES,
+		"icon-name", "gtk-preferences",
 		"title", _("Preferences"),
-		"has-separator", FALSE,
 		NULL);
-	gtk_dialog_add_buttons(GTK_DIALOG(dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE, NULL);
+	gtk_dialog_add_buttons(GTK_DIALOG(dialog), "gtk-close", GTK_RESPONSE_CLOSE, NULL);
 }
 
 

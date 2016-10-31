@@ -33,8 +33,9 @@
 #include "settings.h"
 #include "backendgvfs.h"
 #include "window.h"
-#include "singleinstance.h"
 
+
+static int gigolo_create(GtkApplication *);
 
 static gboolean show_version = FALSE;
 static gboolean list_schemes = FALSE;
@@ -96,14 +97,25 @@ static void print_supported_schemes(void)
 	}
 }
 
+static int activate (GtkApplication *app, gpointer user_data)
+{
+	GList *list;
+
+	list = gtk_application_get_windows (app);
+	if (list)
+	{
+		gtk_window_present (GTK_WINDOW (list->data));
+	}
+	else
+		return gigolo_create(app);
+	return 0;
+}
 
 gint main(gint argc, gchar** argv)
 {
-	GigoloSettings *settings;
-	GigoloSingleInstance *gis = NULL;
-	gchar *accel_filename;
+	GtkApplication *gis = NULL;
+	gint status;
 	GOptionContext *context;
-	GtkWidget *window;
 
 	bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
 	bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
@@ -115,8 +127,6 @@ gint main(gint argc, gchar** argv)
 	g_option_context_add_group(context, gtk_get_option_group(FALSE));
 	g_option_context_parse(context, &argc, &argv, NULL);
 	g_option_context_free(context);
-
-	gtk_init(&argc, &argv);
 
 	if (show_version)
 	{
@@ -142,21 +152,32 @@ gint main(gint argc, gchar** argv)
 		return ret ? EXIT_SUCCESS : EXIT_FAILURE;
 	}
 
-	if (! new_instance)
-	{
-		gis = gigolo_single_instance_new();
-		if (gigolo_single_instance_is_running(gis))
-		{
-			gigolo_single_instance_present(gis);
-			g_object_unref(gis);
-			exit(0);
-		}
-	}
-
 	verbose("Gigolo %s (GTK+ %u.%u.%u, GLib %u.%u.%u)",
 		VERSION,
 		gtk_major_version, gtk_minor_version, gtk_micro_version,
 		glib_major_version, glib_minor_version, glib_micro_version);
+
+	if (! new_instance)
+	{
+		gis = gtk_application_new("org.xfce.gigolo", G_APPLICATION_FLAGS_NONE);
+		g_signal_connect (gis, "activate", G_CALLBACK (activate), NULL);
+		status = g_application_run (G_APPLICATION (gis), argc, argv);
+		g_object_unref(gis);
+	}
+	else
+	{
+		gtk_init(&argc, &argv);
+		status = gigolo_create(NULL);
+	}
+
+	return status;
+}
+
+static int gigolo_create(GtkApplication *gis)
+{
+	GigoloSettings *settings;
+	gchar *accel_filename;
+	GtkWidget *window;
 
 	settings = gigolo_settings_new();
 
@@ -166,7 +187,7 @@ gint main(gint argc, gchar** argv)
 	window = gigolo_window_new(settings);
 
 	if (gis != NULL)
-		gigolo_single_instance_set_parent(gis, GTK_WINDOW(window));
+		gtk_application_add_window(gis, GTK_WINDOW(window));
 
 	if (gigolo_settings_get_boolean(settings, "start-in-systray") &&
 		gigolo_settings_get_boolean(settings, "show-in-systray"))
@@ -179,9 +200,6 @@ gint main(gint argc, gchar** argv)
 	gtk_main();
 
 	g_object_unref(settings);
-	if (gis != NULL)
-		g_object_unref(gis);
-
 	gtk_accel_map_save(accel_filename);
 	g_free(accel_filename);
 

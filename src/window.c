@@ -26,7 +26,6 @@
 #include <gio/gio.h>
 #include <gtk/gtk.h>
 
-#include "compat.h"
 #include "common.h"
 #include "bookmark.h"
 #include "settings.h"
@@ -125,7 +124,7 @@ static void gigolo_window_destroy(GigoloWindow *window)
 
 	if (gigolo_settings_get_boolean(priv->settings, "save-geometry"))
 	{
-		GdkWindow *gdk_window = gigolo_widget_get_window(GTK_WIDGET(window));
+		GdkWindow *gdk_window = gtk_widget_get_window(GTK_WIDGET(window));
 		gtk_window_get_position(GTK_WINDOW(window), &geo[0], &geo[1]);
 		gtk_window_get_size(GTK_WINDOW(window), &geo[2], &geo[3]);
 		if (gdk_window != NULL && gdk_window_get_state(gdk_window) & GDK_WINDOW_STATE_MAXIMIZED)
@@ -411,19 +410,10 @@ static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindo
 }
 
 
-static void about_activate_link(G_GNUC_UNUSED GtkAboutDialog *dialog,
-								const gchar *uri, G_GNUC_UNUSED gpointer data)
-{
-	gigolo_show_uri(uri);
-}
-
-
 static void action_about_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
     const gchar *authors[]= { "Enrico Tröger <enrico@xfce.org>", NULL };
 
-	gtk_about_dialog_set_email_hook(about_activate_link, NULL, NULL);
-	gtk_about_dialog_set_url_hook(about_activate_link, NULL, NULL);
 	gtk_show_about_dialog(GTK_WINDOW(window),
 		"authors", authors,
 		"logo-icon-name", gigolo_get_application_icon_name(),
@@ -1082,7 +1072,7 @@ static void gigolo_window_set_toolbar_orientation(GigoloWindow *window, gint ori
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	gigolo_toolbar_set_orientation(GTK_TOOLBAR(priv->toolbar), orientation);
+	gtk_orientable_set_orientation(GTK_ORIENTABLE(priv->toolbar), orientation);
 	if (orientation == GTK_ORIENTATION_HORIZONTAL && priv->vbox != gtk_widget_get_parent(priv->toolbar))
 	{
 		gtk_container_remove(GTK_CONTAINER(priv->hbox_view), priv->toolbar);
@@ -1490,7 +1480,7 @@ static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
 	GtkWidget *panel_pane, *label;
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
-	panel_pane = gtk_hpaned_new();
+	panel_pane = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
 	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
 
 	priv->notebook_panel = gtk_notebook_new();
@@ -1513,8 +1503,8 @@ static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
 	gtk_widget_show(priv->browse_panel);
 	gtk_notebook_append_page(GTK_NOTEBOOK(priv->notebook_panel), priv->browse_panel, label);
 
-	priv->hbox_view = gtk_hbox_new(FALSE, 0);
-	priv->hbox_pane = gtk_hbox_new(FALSE, 0);
+	priv->hbox_view = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+	priv->hbox_pane = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
 
 	gtk_paned_add1(GTK_PANED(panel_pane), priv->hbox_pane);
 	gtk_paned_add2(GTK_PANED(panel_pane), priv->hbox_view);
@@ -1566,12 +1556,14 @@ static void gigolo_window_init(GigoloWindow *window)
 	create_icon_view(window);
 
 	priv->swin_treeview = gtk_scrolled_window_new(NULL, NULL);
+	gtk_widget_set_hexpand(GTK_WIDGET(priv->swin_treeview), TRUE);
 	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(priv->swin_treeview),
 		GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(priv->swin_treeview), GTK_SHADOW_IN);
 	gtk_container_add(GTK_CONTAINER(priv->swin_treeview), priv->treeview);
 
 	priv->swin_iconview = gtk_scrolled_window_new(NULL, NULL);
+	gtk_widget_set_hexpand(GTK_WIDGET(priv->swin_iconview), TRUE);
 	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(priv->swin_iconview),
 		GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(priv->swin_iconview), GTK_SHADOW_IN);
@@ -1613,7 +1605,7 @@ static void gigolo_window_init(GigoloWindow *window)
 	priv->panel_pane = panel_pane = gigolo_window_create_panel(window);
 
 	/* Pack the widgets altogether */
-	priv->vbox = gtk_vbox_new(FALSE, 0);
+	priv->vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 
 	gtk_box_pack_start(GTK_BOX(priv->vbox), menubar, FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(priv->vbox), priv->toolbar, FALSE, FALSE, 0);
@@ -1629,7 +1621,7 @@ static void gigolo_window_init(GigoloWindow *window)
 
 	/* Status icon */
 	priv->systray_icon = gtk_status_icon_new_from_icon_name(gigolo_get_application_icon_name());
-	gigolo_status_icon_set_tooltip_text(priv->systray_icon, _("Gigolo"));
+	gtk_status_icon_set_tooltip_text(priv->systray_icon, _("Gigolo"));
 	g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
 	g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 	g_signal_connect(priv->systray_icon, "notify", G_CALLBACK(gigolo_window_systray_notify_cb), window);

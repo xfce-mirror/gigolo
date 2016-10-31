@@ -55,12 +55,12 @@ enum
 
 struct _GigoloBookmarkPanel
 {
-	GtkVBox parent;
+	GtkBox parent;
 };
 
 struct _GigoloBookmarkPanelClass
 {
-	GtkVBoxClass parent_class;
+	GtkBoxClass parent_class;
 };
 
 struct _GigoloBookmarkPanelPrivate
@@ -73,7 +73,7 @@ struct _GigoloBookmarkPanelPrivate
 	GtkListStore *store;
 };
 
-G_DEFINE_TYPE(GigoloBookmarkPanel, gigolo_bookmark_panel, GTK_TYPE_VBOX);
+G_DEFINE_TYPE(GigoloBookmarkPanel, gigolo_bookmark_panel, GTK_TYPE_BOX);
 
 
 
@@ -248,11 +248,13 @@ static void gigolo_bookmark_panel_init(GigoloBookmarkPanel *self)
 	GtkToolItem *toolitem;
 	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(self);
 
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (self), GTK_ORIENTATION_VERTICAL);
 	toolbar = gtk_toolbar_new();
 	gtk_toolbar_set_style(GTK_TOOLBAR(toolbar), GTK_TOOLBAR_BOTH_HORIZ);
 	gtk_toolbar_set_icon_size(GTK_TOOLBAR(toolbar), GTK_ICON_SIZE_BUTTON);
 
-	toolitem = gtk_tool_button_new_from_stock(GTK_STOCK_CONNECT);
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-connect",
+			gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Connect to the selected bookmark"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 	g_signal_connect(toolitem, "clicked", G_CALLBACK(button_connect_click_cb), self);
@@ -263,7 +265,8 @@ static void gigolo_bookmark_panel_init(GigoloBookmarkPanel *self)
 	gtk_tool_item_set_expand(toolitem, TRUE);
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 
-	toolitem = gtk_tool_button_new_from_stock(GTK_STOCK_CLOSE);
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-close",
+			gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Close panel"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 	g_signal_connect(toolitem, "clicked", G_CALLBACK(button_close_click_cb), self);
