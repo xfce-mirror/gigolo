@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-12-19 22:50+0000\n"
+"PO-Revision-Date: 2016-12-22 20:58+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-apps/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Ignorer kørende instanser, gennemtving åbning af ny instans"
 
 #: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
-msgstr "Vis en liste over understøttede URI-skemaer"
+msgstr "Udskriv en liste over understøttede URI-skemaer"
 
 #: ../src/main.c:50
 msgid "Be verbose"
@@ -100,7 +100,7 @@ msgstr "Opretter forbindelse til \"%s\""
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "En simpel frontend til nemt at oprette forbindelse til/montere fjern-filsystemer"
+msgstr "En simpel frontend til nemt at oprette forbindelse til/montere lokale og fjern-filsystemer"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -150,7 +150,7 @@ msgstr "_Filer"
 
 #: ../src/window.c:1282
 msgid "_Edit"
-msgstr "R_edigér"
+msgstr "_Redigér"
 
 #: ../src/window.c:1283
 msgid "_Actions"
@@ -230,7 +230,7 @@ msgstr "_Bogmærker"
 
 #: ../src/window.c:1330
 msgid "Choose a bookmark to connect to"
-msgstr "Vælg et bogmærke som skal oprettes forbindelse til"
+msgstr "Vælg et bogmærke, der skal oprettes forbindelse til"
 
 #: ../src/window.c:1412
 msgid "Connected"
@@ -330,11 +330,11 @@ msgstr "Det indtastede bogmærkenavn er allerede i brug. Vælg venligst et andet
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
-msgstr "Du skal indtaste en serveradresse eller et navn."
+msgstr "Du skal indtaste en serveradresse eller -navn."
 
 #: ../src/bookmarkeditdialog.c:277
 msgid "You must enter a share name."
-msgstr "Du skal indtaste et share-navn."
+msgstr "Du skal indtaste et sharenavn."
 
 #: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
@@ -472,13 +472,13 @@ msgstr "Indtast navnet på et program som skal bruges til at åbne monteringspun
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "Auto-tilslut interval for _bogmærker"
+msgstr "Interval for auto-tilslut af _bogmærke"
 
 #: ../src/preferencesdialog.c:378
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr "Hvor ofte auto-tilslut skal forsøges, i sekunder. Nul deaktivere tjek."
+msgstr "Hvor ofte auto-tilslut skal forsøges, i sekunder. Nul deaktiverer tjek."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -512,7 +512,7 @@ msgstr "Hvorvidt et sidepanel skal vises til gennemgang af det lokale netværk a
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
-msgstr "Vis auto-tilslut fejlmeddelelser"
+msgstr "Vis fejlmeddelelser for auto-tilslut"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
@@ -522,7 +522,7 @@ msgstr "Hvorvidt fejlmeddelelsesdialoger skal vises når auto-tilslutning af bog
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
-msgstr "_Tilslutnings liste-tilstand"
+msgstr "_Tilslutningsliste-tilstand"
 
 #: ../src/preferencesdialog.c:427
 msgid "Toolbar"
@@ -600,7 +600,7 @@ msgstr "Opret forbindelse til den valgte share"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "Opret et bogmærke fra den valgte share"
+msgstr "Opret et bogmærke ud fra den valgte share"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
