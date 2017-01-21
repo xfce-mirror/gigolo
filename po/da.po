@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2017-01-15 20:21+0000\n"
+"PO-Revision-Date: 2017-01-21 17:53+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-apps/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -146,7 +146,7 @@ msgstr "Opret _bogmærke"
 
 #: ../src/window.c:1281
 msgid "_File"
-msgstr "_Filer"
+msgstr "_Fil"
 
 #: ../src/window.c:1282
 msgid "_Edit"
