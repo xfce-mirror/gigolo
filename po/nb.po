@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2017-02-02 02:44+0000\n"
+"PO-Revision-Date: 2017-05-07 09:52+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/xfce/xfce-apps/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -326,7 +326,7 @@ msgstr "Du må angi et navn for bokmerket."
 #: ../src/bookmarkeditdialog.c:253
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "Navnet du angav for bokmerket er allerede i bruk. Vennligst velg et annet."
+msgstr "Navnet du angav for bokmerket er allerede i bruk. Velg noe annet."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
