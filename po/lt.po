@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2017-07-01 12:06+0000\n"
+"PO-Revision-Date: 2017-07-02 20:06+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-apps/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -157,7 +157,7 @@ msgstr "_Veiksmai"
 
 #: ../src/window.c:1284
 msgid "_View"
-msgstr "R_odymas"
+msgstr "R_odinys"
 
 #: ../src/window.c:1285
 msgid "_Help"
