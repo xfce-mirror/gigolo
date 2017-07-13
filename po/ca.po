@@ -5,14 +5,14 @@
 # Translators:
 # Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009,2011
 # Davidmp <medipas@gmail.com>, 2015
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2017
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2016-08-07 19:36+0000\n"
+"PO-Revision-Date: 2017-07-13 09:48+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -605,7 +605,7 @@ msgstr "Crea un marcador a partir del recurs compartit seleccionat"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
-msgstr "Refresca la llista xarxes"
+msgstr "Refresca la llista de xarxes"
 
 #: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
