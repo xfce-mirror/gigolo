@@ -1,24 +1,23 @@
-# Slovenian translation for gigolo.
-# Copyright (C) 2013 The Xfce Development Team.
-# This file is distributed under the same license as the gigolo package.
-#
-# Nenad Latinović <nenadlatinovic@lavabit.com>, 2013.
-# Klemen Košir <klemen913@gmail.com>, 2013.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Klemen Košir <klemen.kosir@kream.io>, 2013
+# Nenad Latinović <latinovic87@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-19 11:42+0000\n"
-"PO-Revision-Date: 2013-06-27 17:26+0100\n"
-"Last-Translator: Klemen Košir <klemen913@gmail.com>\n"
-"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
-"Language: sl\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"Last-Translator: Klemen Košir <klemen.kosir@kream.io>\n"
+"Language-Team: Slovenian (http://www.transifex.com/xfce/xfce-apps/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -34,7 +33,7 @@ msgstr "Seznam podprtih URI-jev"
 
 #: ../src/main.c:50
 msgid "Be verbose"
-msgstr "Uporabi podroben izpis"
+msgstr "Podroben izpis"
 
 #: ../src/main.c:51
 msgid "Show version information"
@@ -100,8 +99,7 @@ msgstr "Povezovanje z \"%s\""
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"Enostavno začelje za povezavo s krajevnimi in oddaljenimi datotečnimi sistemi"
+msgstr "Enostavno začelje za povezavo s krajevnimi in oddaljenimi datotečnimi sistemi"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -109,9 +107,7 @@ msgstr "Avtorske pravice (C) 2008 - 2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr ""
-"Klemen Košir <klemen913@gmail.com>\n"
-"Nenad Latinović <nenadlatinovic@lavabit.com>"
+msgstr "Klemen Košir <klemen913@gmail.com>\nNenad Latinović <nenadlatinovic@lavabit.com>"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -251,7 +247,7 @@ msgstr "Ime"
 msgid "Bookmarks"
 msgstr "Zaznamki"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -268,9 +264,7 @@ msgstr "Pred začetkom mora Gigolo premakniti stare nastavitvene datoteke."
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"Mape s starimi nastavitvenimi datotekami \"%s\" ni mogoče prestaviti v \"%s"
-"\" (%s). Prosimo, ročno premaknite mapo na novo mesto."
+msgstr "Mape s starimi nastavitvenimi datotekami \"%s\" ni mogoče prestaviti v \"%s\" (%s). Prosimo, ročno premaknite mapo na novo mesto."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -329,8 +323,9 @@ msgid "You must enter a name for the bookmark."
 msgstr "Prosimo, vnesite ime zaznamka."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
-msgstr "Ime zaznamka je že v uporabi. Prosimo, vnesite drugo ime."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
+msgstr "Zaznamek s tem imenom že obstaja. Prosimo, vnesite drugo ime."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
@@ -342,7 +337,7 @@ msgstr "Prosimo, vnesite ime souporabe."
 
 #: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
-msgstr "Prosimo, vnesite veljaven URI povezave."
+msgstr "Prosimo, vnesite veljaven naslov URI."
 
 #: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
@@ -366,7 +361,7 @@ msgstr "Poveži se s strežnikom"
 
 #: ../src/bookmarkeditdialog.c:1036
 msgid "_Bookmark name:"
-msgstr "_Ime zaznamka:"
+msgstr "Ime _zaznamka:"
 
 #: ../src/bookmarkeditdialog.c:1044
 msgid "_Color:"
@@ -388,9 +383,7 @@ msgstr "Če želite uporabiti privzeta vrata, vnesite 0"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
-"Priklopna točka je uporabljena samo za odpiranje zaznamka v upravljalniku "
-"datotek"
+msgstr "Priklopna točka je uporabljena samo za odpiranje zaznamka v upravljalniku datotek"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -398,11 +391,11 @@ msgstr "_Mesto (URI):"
 
 #: ../src/bookmarkeditdialog.c:1101
 msgid "_Folder:"
-msgstr "_Mapa:"
+msgstr "M_apa:"
 
 #: ../src/bookmarkeditdialog.c:1102
 msgid "P_ath:"
-msgstr "P_ot:"
+msgstr "_Pot:"
 
 #: ../src/bookmarkeditdialog.c:1103
 msgid "_User Name:"
@@ -422,7 +415,7 @@ msgstr "_Domena:"
 
 #: ../src/bookmarkeditdialog.c:1107
 msgid "_Share:"
-msgstr "S_ouporaba:"
+msgstr "Sou_poraba:"
 
 #: ../src/preferencesdialog.c:147
 msgid "Icons"
@@ -474,8 +467,7 @@ msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr ""
-"Vnesite ime programa, s katerim želite v terminalu odpreti priklopne točke"
+msgstr "Vnesite ime programa, s katerim želite v terminalu odpreti priklopne točke"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
@@ -485,8 +477,7 @@ msgstr "_Razmik med samodejnimi povezavami"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"Kako pogosto naj Gigolo poskuša samodejno povezati zaznamke (v sekundah)."
+msgstr "Kako pogosto naj Gigolo poskuša samodejno povezati zaznamke (v sekundah)."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -502,7 +493,7 @@ msgstr "Shrani položaj in obliko okna ter ju obnovi ob zagonu programa"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
-msgstr "Pokaži _ikono stanja v obvestilnem območju"
+msgstr "Pokaži _ikono stanja v obvestilnem področju"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
@@ -516,9 +507,7 @@ msgstr "Pokaži stranski pult"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"Ali naj se pokaže stranski pult s krajevnimi souporabami Samba in Windows "
-"ter seznamom zaznamkov"
+msgstr "Ali naj se pokaže stranski pult s krajevnimi souporabami Samba in Windows ter seznamom zaznamkov"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -526,9 +515,9 @@ msgstr "Pokaži obvestila o napakah samodejnih povezav"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Ali naj se ob neuspešni samodejni povezavi pokaže pogovorno okno z napakami"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Ali naj se ob neuspešni samodejni povezavi pokaže pogovorno okno z napakami"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -567,13 +556,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"Povezava: Da\n"
-"Storitev: %s\n"
-"Zaznamek: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nPovezava: Da\nStoritev: %s\nZaznamek: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -634,6 +617,6 @@ msgstr "Ni zaznamkov"
 msgid "Connect to the selected bookmark"
 msgstr "Poveži se z izbranim zaznamkom"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Enostavno začelje za povezavo z oddaljenimi datotečnimi sistemi"
