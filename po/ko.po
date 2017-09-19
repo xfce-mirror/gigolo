@@ -1,28 +1,23 @@
-# Korean translation for gigolo package.
-# Copyright (C) 2008-2012 Enrico TrÃ¶ger et al.
-# This file is distributed under the same license as the gigolo package.
-# Seong-ho, Cho <darkcircle.0426@gmail.com>, 2011, 2012.
-#
-# Please write your name and e-mail into "translator-credits" if you update this translation script.
-#
-# ex ) msgstr ""
-#      "Gil-dong Hong <gdhong0101@gmail.com>\n"
-#      "YourName Kim <ynkim@gmail.com"
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2013
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2011-2012
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo.master\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-08 01:27+0000\n"
-"PO-Revision-Date: 2012-05-08 12:18+0900\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2017-09-19 18:04+0000\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
-"Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
-"Language: ko\n"
+"Language-Team: Korean (http://www.transifex.com/xfce/xfce-apps/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Korean\n"
-"X-Poedit-Country: KOREA, REPUBLIC OF\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -80,8 +75,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (보안)"
 
-#: ../src/common.c:93
-#: ../src/window.c:1508
+#: ../src/common.c:93 ../src/window.c:1508
 msgid "Network"
 msgstr "네트워크"
 
@@ -103,7 +97,8 @@ msgid "Connecting to \"%s\""
 msgstr "\"%s\"(으)로 연결하는중"
 
 #: ../src/window.c:430
-msgid "A simple frontend to easily connect/mount to local and remote filesystems"
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "로컬과 원격 파일 시스템에 쉽게 연결하고 마운트하기 위한 간단한 프론트엔드"
 
 #: ../src/window.c:431
@@ -118,22 +113,15 @@ msgstr "Seong-ho Cho <darkcircle.0426@gmail.com>"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "기골로는 GVfs에서 지원하는 다음 프로토콜을 사용할 수 있습니다:"
 
-#: ../src/window.c:579
-#: ../src/window.c:638
+#: ../src/window.c:579 ../src/window.c:638
 #, c-format
 msgid "The command '%s' failed"
 msgstr "명령 '%s' 실패"
 
-#: ../src/window.c:580
-#: ../src/window.c:613
-#: ../src/window.c:626
-#: ../src/window.c:639
-#: ../src/window.c:797
-#: ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:252
-#: ../src/bookmarkeditdialog.c:265
-#: ../src/bookmarkeditdialog.c:276
-#: ../src/bookmarkeditdialog.c:287
+#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
+#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
+#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
 msgid "Error"
 msgstr "오류"
 
@@ -150,9 +138,7 @@ msgstr "\"%s\"에 대해 사용할 수 있는 기본 위치가 없습니다"
 msgid "Edit _Bookmark"
 msgstr "북마크 편집(_B)"
 
-#: ../src/window.c:707
-#: ../src/window.c:1289
-#: ../src/browsenetworkpanel.c:453
+#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
 msgid "Create _Bookmark"
 msgstr "북마크 만들기(_B)"
@@ -249,13 +235,11 @@ msgstr "연결할 북마크를 선택합니다"
 msgid "Connected"
 msgstr "연결함"
 
-#: ../src/window.c:1421
-#: ../src/bookmarkdialog.c:315
+#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
 msgid "Service Type"
 msgstr "서비스 유형"
 
-#: ../src/window.c:1429
-#: ../src/bookmarkdialog.c:307
+#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
 msgid "Name"
 msgstr "이름"
 
@@ -263,9 +247,7 @@ msgstr "이름"
 msgid "Bookmarks"
 msgstr "북마크"
 
-#: ../src/window.c:1556
-#: ../src/window.c:1632
-#: ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -279,7 +261,9 @@ msgstr "Gigolo는 시작전에 이전 설정 디렉터리를 옮길 필요가 �
 
 #: ../src/settings.c:703
 #, c-format
-msgid "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). Please move manually the directory to the new location."
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
 msgstr "이전 설정 디렉터리 \"%s\"을(를) \"%s\"(으)로 옮길 수 없습니다 (%s). 새 위치로 직접 이동하여 주시기 바랍니다."
 
 #: ../src/settings.c:706
@@ -339,7 +323,8 @@ msgid "You must enter a name for the bookmark."
 msgstr "불마크를 위해 이름을 입력하여야 합니다."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "입력한 북마크 이름을 이미 사용하고 있습니다. 다른 이름을 선택하여 주시기 바랍니다."
 
 #: ../src/bookmarkeditdialog.c:266
@@ -358,8 +343,7 @@ msgstr "연결에 대한 유효한 URI를 입력하여야 합니다."
 msgid "_Device:"
 msgstr "장치(_D):"
 
-#: ../src/bookmarkeditdialog.c:586
-#: ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
 msgid "_Server:"
 msgstr "서버(_S):"
 
@@ -396,7 +380,9 @@ msgid "Set the port to 0 to use the default port"
 msgstr "기본 포트를 사용하기 위해 0으로 포트를 설정"
 
 #: ../src/bookmarkeditdialog.c:1093
-msgid "This is not used for the actual mount, only necessary for opening the mount point in a file browser"
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
 msgstr "실제 마운트에 사용하는 것이 아니라, 파일 탐색기에서 마운트 지점을 열 때만 필요합니다"
 
 #: ../src/bookmarkeditdialog.c:1099
@@ -488,7 +474,9 @@ msgid "_Bookmark Auto-Connect Interval"
 msgstr "북마크 자동 연결 주기(_B)"
 
 #: ../src/preferencesdialog.c:378
-msgid "How often to try auto connecting bookmarks, in seconds. Zero disables checking."
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
 msgstr "얼마나 자주 북마크로 자동 연결을 시도할지 초단위로 입력합니다. 0 값은 확인을 끕니다."
 
 #: ../src/preferencesdialog.c:389
@@ -497,11 +485,11 @@ msgstr "인터페이스"
 
 #: ../src/preferencesdialog.c:391
 msgid "_Save window position and geometry"
-msgstr "창의 위치와 크기를 저장(_S)"
+msgstr "창의 위치와 크기 저장(_S)"
 
 #: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "창의 위치와 크기를 저장하고 시작시 이를 복원합니다"
+msgstr "창의 위치와 크기를 저장하고 시작할 때 이를 복원합니다"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
@@ -516,7 +504,9 @@ msgid "Show side panel"
 msgstr "측면 패널 표시"
 
 #: ../src/preferencesdialog.c:404
-msgid "Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
 msgstr "사용가능한 삼바/윈도우 공유와 북마크 목록에 대한 로컬 네트워크를 탐색기 위한 측면 패널을 보일지에 대한 여부"
 
 #: ../src/preferencesdialog.c:407
@@ -524,7 +514,9 @@ msgid "Show auto-connect error messages"
 msgstr "자동 연결 오류 메시지 표시"
 
 #: ../src/preferencesdialog.c:408
-msgid "Whether to show error message dialogs when auto-connecting of bookmarks fails"
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
 msgstr "북마크 자동 연결에 실패했을 때 오류 메시지 대화상자를 보일지에 대한 여부"
 
 #: ../src/preferencesdialog.c:414
@@ -564,26 +556,18 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"연결함: 예\n"
-"서비스 유형: %s\n"
-"북마크: %s"
+msgstr "<b>%s</b>\n\nURI: %s\n연결함: 예\n서비스 유형: %s\n북마크: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>유닉스 장치: %s</b>"
 
-#: ../src/backendgvfs.c:453
-#: ../src/backendgvfs.c:492
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
 msgid "unknown"
 msgstr "알 수 없음"
 
-#: ../src/backendgvfs.c:459
-#: ../src/backendgvfs.c:567
+#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "\"%s\"(으)로의 연결에 실패했습니다."
@@ -621,8 +605,7 @@ msgstr "선택한 공유물에 대한 북마크 만들기"
 msgid "Refresh the network list"
 msgstr "네트워크 목록을 새로 고침"
 
-#: ../src/browsenetworkpanel.c:518
-#: ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
 msgid "Close panel"
 msgstr "패널 닫기"
 
@@ -634,7 +617,6 @@ msgstr "북마크 없음"
 msgid "Connect to the selected bookmark"
 msgstr "선택한 북마크로 연결"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "원격 파일 시스템을 쉽게 연결하기 위한 간단한 프론트엔드"
-
