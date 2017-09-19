@@ -1,26 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# mohammad <malham1@gmail.com>, 2012.
-# محمد الحرقان <malham1@gmail.com>, 2012.
-# كريم أولاد الشلحة <herr.linux88@gmail.com>, 2013.
+# 
+# Translators:
+# محمد الحرقان <malham1@gmail.com>, 2012
+# كريم أولاد الشلحة <herr.linux88@gmail.com>, 2013
+# محمد الحرقان <malham1@gmail.com>, 2012
 msgid ""
 msgstr ""
-"Project-Id-Version: Gogolo\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-09 12:39+0000\n"
-"PO-Revision-Date: 2013-02-03 13:08+0100\n"
-"Last-Translator: كريم أولاد الشلحة <herr.linux88@gmail.com>\n"
-"Language-Team: فريق تعريب إكسفس\n"
-"Language: ar\n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"Language-Team: Arabic (http://www.transifex.com/xfce/xfce-apps/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.7.1\n"
-"X-Poedit-Language: Arabic\n"
-"X-Poedit-Country: Morocco\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -110,9 +108,7 @@ msgstr "حقوق الطبع والنشر 2008-2011 إنريكو تروغر"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr "فريق تعريب إكسفس"
-"كريم أولاد الشلحة"
-"محمد الحرقان"
+msgstr "فريق تعريب إكسفسكريم أولاد الشلحةمحمد الحرقان"
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -252,7 +248,7 @@ msgstr "إسم"
 msgid "Bookmarks"
 msgstr "علامات"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -269,9 +265,7 @@ msgstr "Gigolo بحاجة لنقل مجلد الإعداد القديم قبل �
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"مجلد الإعداد القديم \"%s\" لا يمكنك نقله إلى \"%s\" (%s). المرجوا نقل المجلد "
-"يدويا إلى المكان الجديد."
+msgstr "مجلد الإعداد القديم \"%s\" لا يمكنك نقله إلى \"%s\" (%s). المرجوا نقل المجلد يدويا إلى المكان الجديد."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -330,7 +324,8 @@ msgid "You must enter a name for the bookmark."
 msgstr "يجب إدخال إسم العلامات."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "إسم العلامة الذي أدخلت يوجد قيد الإستخدام. الرجاء إختيار إسم آخر."
 
 #: ../src/bookmarkeditdialog.c:266
@@ -389,8 +384,7 @@ msgstr "تعيين المنفذ إلى 0 لإستخدام المنفذ الاف�
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
-"لا يستخدم هذا للتوصيل الفعلي يستخدم فقط لفتح نقطة التوصيل في متصفح الملفات"
+msgstr "لا يستخدم هذا للتوصيل الفعلي يستخدم فقط لفتح نقطة التوصيل في متصفح الملفات"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -484,9 +478,7 @@ msgstr "_الفاصل الزمني للاتصال التلقائي للعلام�
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"كثير من الأحيان. عند ضبط الإتصال التلقائي للعلامات بالثواني إلى صفر يقوم "
-"يتعطيل التحقق."
+msgstr "كثير من الأحيان. عند ضبط الإتصال التلقائي للعلامات بالثواني إلى صفر يقوم يتعطيل التحقق."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -516,9 +508,7 @@ msgstr "عرض اللوحة الجانبية"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"لأظهار لوحة جانبية لتصفح الشبكة المحلية المتوفرة سامبا/ويندوز مشاركة وقائمة "
-"العلامات"
+msgstr "لأظهار لوحة جانبية لتصفح الشبكة المحلية المتوفرة سامبا/ويندوز مشاركة وقائمة العلامات"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -526,7 +516,8 @@ msgstr "تظهر رسائل خطأ الإتصال التلقائي"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
 msgstr "لتظهر رسالة خطأ عند فشل الاتصال التلقائي بالعلامات"
 
 #: ../src/preferencesdialog.c:414
@@ -566,13 +557,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"متصل: نعم\n"
-"نوع الخدمة: %s\n"
-"علامة : %s"
+msgstr "<b>%s</b>\n\nURI: %s\nمتصل: نعم\nنوع الخدمة: %s\nعلامة : %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -633,6 +618,6 @@ msgstr "بدون علامات"
 msgid "Connect to the selected bookmark"
 msgstr "إلاتصال بالعلامة المحددة"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "واجهة بسيطة للإتصال بسهولة بنظام الملفات البعيدة"
