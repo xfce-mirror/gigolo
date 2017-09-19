@@ -1,23 +1,23 @@
-# Portuguese translations for gigolo package.
-# Copyright (C) 2009 THE gigolo'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the gigolo package.
-# Nuno Miguel <nunis@netcabo.pt>, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Nuno Miguel <nunis@netcabo.pt>, 2009
+# Nuno Miguel <nunomgue@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: gigolo 0.4.0\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-07 14:45+0000\n"
-"PO-Revision-Date: 2012-01-12 12:55-0000\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"Last-Translator: Nuno Miguel <nunomgue@gmail.com>\n"
+"Language-Team: Portuguese (http://www.transifex.com/xfce/xfce-apps/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: PORTUGAL\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -41,8 +41,7 @@ msgstr "Mostrar informações da versão"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr ""
-"- uma interface simples para ligar facilmente a sistemas de ficheiros remotos"
+msgstr "- uma interface simples para ligar facilmente a sistemas de ficheiros remotos"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -100,9 +99,7 @@ msgstr "A ligar a \"%s\""
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"Uma interface simples para ligar/montar facilmente os sistemas de ficheiros "
-"remotos/locais"
+msgstr "Uma interface simples para ligar/montar facilmente os sistemas de ficheiros remotos/locais"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -164,7 +161,7 @@ msgstr "_Ver"
 
 #: ../src/window.c:1285
 msgid "_Help"
-msgstr "A_juda"
+msgstr "_Ajuda"
 
 #: ../src/window.c:1291
 msgid "_Edit Bookmarks"
@@ -172,8 +169,7 @@ msgstr "_Editar marcadores"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Abrir o gestor de marcadores para adicionar, editar ou apagar marcadores"
+msgstr "Abrir o gestor de marcadores para adicionar, editar ou apagar marcadores"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -251,7 +247,7 @@ msgstr "Nome"
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -261,18 +257,14 @@ msgstr "Mover agora?"
 
 #: ../src/settings.c:695
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr ""
-"Antes de iniciar, o Gigolo tem de mover o seu antigo diretório de "
-"configurações."
+msgstr "Antes de iniciar, o Gigolo tem de mover o seu antigo diretório de configurações."
 
 #: ../src/settings.c:703
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"O seu antigo diretório de configurações \"%s\" não pode ser movido para \"%s"
-"\" (%s). Por favor, mova-o para a sua nova localização manualmente."
+msgstr "O seu antigo diretório de configurações \"%s\" não pode ser movido para \"%s\" (%s). Por favor, mova-o para a sua nova localização manualmente."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -331,7 +323,8 @@ msgid "You must enter a name for the bookmark."
 msgstr "Precisa de indicar o nome para o marcador."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "O nome indicado já existe. Por favor, escolha outro."
 
 #: ../src/bookmarkeditdialog.c:266
@@ -390,9 +383,7 @@ msgstr "Defina a porta para 0 para usar a porta por omissão"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
-"Isto não é utilizado para o ponto de montagem e só é necessário para abrir o "
-"ponto de montagem no gestor de ficheiros."
+msgstr "Isto não é utilizado para o ponto de montagem e só é necessário para abrir o ponto de montagem no gestor de ficheiros."
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -468,8 +459,7 @@ msgstr "Gestor de _ficheiros"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Indique o nome do programa para abrir ou visualizar os pontos de montagem"
+msgstr "Indique o nome do programa para abrir ou visualizar os pontos de montagem"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -477,8 +467,7 @@ msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr ""
-"Indique o nome do programa para abrir os pontos de montagem num terminal"
+msgstr "Indique o nome do programa para abrir os pontos de montagem num terminal"
 
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
@@ -488,9 +477,7 @@ msgstr "Intervalo para ligação automática ao _marcador"
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"Quantas vezes se tenta a ligação automática aos marcadores, em segundos. "
-"Zero desliga a verificação."
+msgstr "Quantas vezes se tenta a ligação automática aos marcadores, em segundos. Zero desliga a verificação."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -520,9 +507,7 @@ msgstr "Mostrar painel lateral"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"Mostar ou não um painel lateral para navegar na rede local para partilhas "
-"Samba/Windows e uma lista de marcadores"
+msgstr "Mostar ou não um painel lateral para navegar na rede local para partilhas Samba/Windows e uma lista de marcadores"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -530,10 +515,9 @@ msgstr "Mostrar mensagens de erro para ligação automática"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Mostrar ou não a mensagem de erro ao falhar a ligação automática aos "
-"marcadores"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Mostrar ou não a mensagem de erro ao falhar a ligação automática aos marcadores"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -572,13 +556,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"URI: %s\n"
-"Ligado: Sim\n"
-"Tipo do serviço: %s\n"
-"Marcador: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nLigado: Sim\nTipo do serviço: %s\nMarcador: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -639,7 +617,6 @@ msgstr "Sem marcadores"
 msgid "Connect to the selected bookmark"
 msgstr "Ligar ao marcador selecionado"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr ""
-"Uma interface simples para ligar facilmente a sistemas de ficheiros remotos"
+msgstr "Uma interface simples para ligar facilmente a sistemas de ficheiros remotos"
