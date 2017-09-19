@@ -1,24 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Саша Петровић <salepetronije@gmail.com>, 2012.
-#
+# 
+# Translators:
+# Саша Петровић <salepetronije@gmail.com>, 2012
 msgid ""
 msgstr ""
-"Project-Id-Version: master\n"
+"Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-21 13:54+0000\n"
-"PO-Revision-Date: 2012-10-25 22:53+0200\n"
-"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
-"Language-Team: српски <xfce-i18n@xfce.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2013-07-03 20:23+0200\n"
+"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"Language-Team: Serbian (http://www.transifex.com/xfce/xfce-apps/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 2.91.5\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/main.c:47
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -100,9 +98,7 @@ msgstr "Повезивање са „%s“"
 #: ../src/window.c:430
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
-"Једноставно сучеље за лако повезивање/качење на месне и удаљене системе "
-"датотека"
+msgstr "Једноставно сучеље за лако повезивање/качење на месне и удаљене системе датотека"
 
 #: ../src/window.c:431
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -172,8 +168,7 @@ msgstr "_Уреди забелешке"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr ""
-"Отвори управника забелешки за додавања, уређивања или брисања забелешки"
+msgstr "Отвори управника забелешки за додавања, уређивања или брисања забелешки"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
@@ -251,7 +246,7 @@ msgstr "Назив"
 msgid "Bookmarks"
 msgstr "Забелешке"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:2
+#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Жиголо"
 
@@ -268,9 +263,7 @@ msgstr "Жиголу је потребно да премести стару фа
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr ""
-"Ваша стара фасцикла с подешавањима „%s“ није могла бити премештена на "
-"„%s“ (%s). Молим, преместите фасциклу ручно на ново место."
+msgstr "Ваша стара фасцикла с подешавањима „%s“ није могла бити премештена на „%s“ (%s). Молим, преместите фасциклу ручно на ново место."
 
 #: ../src/settings.c:706
 msgid "Warning"
@@ -329,7 +322,8 @@ msgid "You must enter a name for the bookmark."
 msgstr "Морате унети име за забелешку."
 
 #: ../src/bookmarkeditdialog.c:253
-msgid "The entered bookmark name is already in use. Please choose another one."
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
 msgstr "Унето име забелешке је већ у употреби. Молим, одаберите неко друго."
 
 #: ../src/bookmarkeditdialog.c:266
@@ -388,9 +382,7 @@ msgstr "Постави прикључник на 0 да би се користи
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
-"Ово се не користи заправо за качење, већ је неопходно за отварање тачке "
-"качења у прегледнику датотека"
+msgstr "Ово се не користи заправо за качење, већ је неопходно за отварање тачке качења у прегледнику датотека"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -466,9 +458,7 @@ msgstr "Управник _датотека"
 
 #: ../src/preferencesdialog.c:346
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr ""
-"Унесите име програма који ће се користити за отварање или преглед тачака "
-"монтирања"
+msgstr "Унесите име програма који ће се користити за отварање или преглед тачака монтирања"
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
@@ -486,9 +476,7 @@ msgstr "Време за самостално повезивање _забеле�
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr ""
-"Колико често покушавати самостално повезивање, у секундама. Нула онемогућава "
-"проверу."
+msgstr "Колико често покушавати самостално повезивање, у секундама. Нула онемогућава проверу."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -518,9 +506,7 @@ msgstr "Приказује бочну површ"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
-"Да ли приказује бочну површ за преглед местне мреже за доступна Самба/"
-"Виндоус дељења и списка забелешки"
+msgstr "Да ли приказује бочну површ за преглед местне мреже за доступна Самба/Виндоус дељења и списка забелешки"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -528,9 +514,9 @@ msgstr "Приказује поруке грешака самосталног п
 
 #: ../src/preferencesdialog.c:408
 msgid ""
-"Whether to show error message dialogs when auto-connecting of bookmarks fails"
-msgstr ""
-"Да ли приказује дијалог поруке грешака кад самостално повезивање не успе"
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Да ли приказује дијалог поруке грешака кад самостално повезивање не успе"
 
 #: ../src/preferencesdialog.c:414
 msgid "_Connection List Mode"
@@ -569,13 +555,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
-"<b>%s</b>\n"
-"\n"
-"Адреса: %s\n"
-"Повезан: да\n"
-"Врста услуге: %s\n"
-"Забелешка: %s"
+msgstr "<b>%s</b>\n\nАдреса: %s\nПовезан: да\nВрста услуге: %s\nЗабелешка: %s"
 
 #: ../src/backendgvfs.c:254
 #, c-format
@@ -636,6 +616,6 @@ msgstr "Нема забелешки"
 msgid "Connect to the selected bookmark"
 msgstr "Повежи се са изабраном забелешком"
 
-#: ../gigolo.desktop.in.h:1
+#: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Лагано сучеље за лако повeзивање са удаљеним системима датотека"
