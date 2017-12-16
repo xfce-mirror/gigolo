@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2017-11-27 21:30+0000\n"
+"PO-Revision-Date: 2017-12-16 14:59+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-apps/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -137,7 +137,7 @@ msgstr "Ingen standardplacering tilgængelig til \"%s\""
 
 #: ../src/window.c:705
 msgid "Edit _Bookmark"
-msgstr "Redigér _bogmærke"
+msgstr "Rediger _bogmærke"
 
 #: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
 #: ../src/browsenetworkpanel.c:497
@@ -150,7 +150,7 @@ msgstr "_Fil"
 
 #: ../src/window.c:1282
 msgid "_Edit"
-msgstr "_Redigér"
+msgstr "_Rediger"
 
 #: ../src/window.c:1283
 msgid "_Actions"
@@ -166,7 +166,7 @@ msgstr "_Hjælp"
 
 #: ../src/window.c:1291
 msgid "_Edit Bookmarks"
-msgstr "_Redigér bogmærker"
+msgstr "_Rediger bogmærker"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
