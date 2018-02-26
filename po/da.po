@@ -5,13 +5,13 @@
 # Translators:
 # Chris Darnell <chris@cedeel.com>, 2016
 # scootergrisen, 2016
-# scootergrisen, 2016-2017
+# scootergrisen, 2016-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2017-12-16 14:59+0000\n"
+"PO-Revision-Date: 2018-02-26 16:53+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-apps/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Tilslut alle bogmærker mærket som 'auto-tilslut' og afslut"
 
 #: ../src/main.c:48
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Ignorer kørende instanser, gennemtving åbning af ny instans"
+msgstr "Ignorer kørende instanser, gennemtving åbning af en ny instans"
 
 #: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
@@ -34,7 +34,7 @@ msgstr "Udskriv en liste over understøttede URI-skemaer"
 
 #: ../src/main.c:50
 msgid "Be verbose"
-msgstr "Vær udførlig"
+msgstr "Vær uddybende"
 
 #: ../src/main.c:51
 msgid "Show version information"
@@ -154,7 +154,7 @@ msgstr "_Rediger"
 
 #: ../src/window.c:1283
 msgid "_Actions"
-msgstr "H_andlinger"
+msgstr "_Handlinger"
 
 #: ../src/window.c:1284
 msgid "_View"
@@ -170,7 +170,7 @@ msgstr "_Rediger bogmærker"
 
 #: ../src/window.c:1292
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Åbn bogmærke-håndteringen for at tilføje, redigere eller slette bogmærker"
+msgstr "Åbn bogmærkehåndteringen for at tilføje, redigere eller slette bogmærker"
 
 #: ../src/window.c:1296
 msgid "Disconnect the selected resource"
