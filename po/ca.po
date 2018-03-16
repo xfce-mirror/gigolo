@@ -5,14 +5,14 @@
 # Translators:
 # Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009,2011
 # Davidmp <medipas@gmail.com>, 2015
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2017
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2017-12-30 13:21+0000\n"
+"PO-Revision-Date: 2018-03-16 11:52+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -331,15 +331,15 @@ msgstr "El nom del marcador que heu introduït ja està en ús. Escolliu-ne una 
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
-msgstr "Cal que introduïu el nom o l'adreça del servidor."
+msgstr "Heu d'introduir el nom o l'adreça d'un servidor."
 
 #: ../src/bookmarkeditdialog.c:277
 msgid "You must enter a share name."
-msgstr "Cal que introduïu el nom del recurs compartit."
+msgstr "Heu d'introduir el nom d'un recurs compartit."
 
 #: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
-msgstr "Cal que introduïu un URI vàlid per la connexió."
+msgstr "Heu d'introduïr un URI vàlid per a la connexió."
 
 #: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
