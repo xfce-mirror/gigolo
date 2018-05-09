@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2018-03-16 11:52+0000\n"
+"PO-Revision-Date: 2018-05-09 14:27+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -339,7 +339,7 @@ msgstr "Heu d'introduir el nom d'un recurs compartit."
 
 #: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
-msgstr "Heu d'introduïr un URI vàlid per a la connexió."
+msgstr "Heu d'introduir un URI vàlid per a la connexió."
 
 #: ../src/bookmarkeditdialog.c:584
 msgid "_Device:"
