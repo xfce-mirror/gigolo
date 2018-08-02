@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2018-08-02 05:29+0000\n"
+"PO-Revision-Date: 2018-08-02 14:40+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/xfce/xfce-apps/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -541,7 +541,7 @@ msgstr "_Orientace"
 
 #: ../src/preferencesdialog.c:507
 msgid "Preferences"
-msgstr "Nastavení"
+msgstr "Předvolby"
 
 #: ../src/backendgvfs.c:221
 msgid "No bookmark"
@@ -570,12 +570,12 @@ msgstr "neznámý"
 #: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Připojení k \"%s\" se nezdařilo."
+msgstr "Připojení k „%s“ se nezdařilo."
 
 #: ../src/backendgvfs.c:496
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Odpojení od \"%s\" se nezdařilo."
+msgstr "Odpojení od „%s“ se nezdařilo."
 
 #: ../src/mountdialog.c:102
 msgid "Connecting"
