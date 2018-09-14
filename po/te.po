@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"PO-Revision-Date: 2018-09-14 00:15+0000\n"
 "Last-Translator: Nick Schermer <nick@xfce.org>\n"
 "Language-Team: Telugu (http://www.transifex.com/xfce/xfce-apps/language/te/)\n"
 "MIME-Version: 1.0\n"
@@ -462,7 +462,7 @@ msgstr ""
 
 #: ../src/preferencesdialog.c:355
 msgid "_Terminal"
-msgstr ""
+msgstr "టెర్మినల్ (_T)"
 
 #: ../src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
