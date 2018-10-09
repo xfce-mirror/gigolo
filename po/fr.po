@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Charles Monzat <c.monzat@laposte.net>, 2018
+# Charles Monzat <c.monzat@laposte.net>, 2018
 # jc1 <jc1.quebecos@gmail.com>, 2013
 # jc1 <jc1.quebecos@gmail.com>, 2013
 # Maximilian Schleiss <maximilian@xfce.org>, 2008
@@ -14,8 +15,8 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"PO-Revision-Date: 2018-10-09 12:00+0000\n"
+"Last-Translator: Charles Monzat <c.monzat@laposte.net>\n"
 "Language-Team: French (http://www.transifex.com/xfce/xfce-apps/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +34,7 @@ msgstr "Ignorer les instances en cours d’exécution, forcer l’ouverture d’
 
 #: ../src/main.c:49
 msgid "Print a list of supported URI schemes"
-msgstr "Imprimer la liste des schémas URI pris en charge"
+msgstr "Afficher la liste des schémas URI pris en charge"
 
 #: ../src/main.c:50
 msgid "Be verbose"
@@ -41,11 +42,11 @@ msgstr "Mode bavard"
 
 #: ../src/main.c:51
 msgid "Show version information"
-msgstr "Informations sur la version"
+msgstr "Afficher les informations de version"
 
 #: ../src/main.c:112
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- une interface simple pour se connecter facilement à des systèmes de fichiers à distance"
+msgstr "- une interface simple pour se connecter facilement à des systèmes de fichiers distants"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -93,7 +94,7 @@ msgstr "Photos"
 
 #: ../src/common.c:99
 msgid "Custom Location"
-msgstr "Emplacement personnalisé"
+msgstr "Emplacement personnalisé"
 
 #: ../src/window.c:262
 #, c-format
@@ -153,7 +154,7 @@ msgstr "_Fichier"
 
 #: ../src/window.c:1282
 msgid "_Edit"
-msgstr "É_diter"
+msgstr "É_dition"
 
 #: ../src/window.c:1283
 msgid "_Actions"
@@ -213,7 +214,7 @@ msgstr "_Panneau latéral"
 
 #: ../src/window.c:1312
 msgid "_Toolbar"
-msgstr "Barre d’ou_tils"
+msgstr "_Barre d’outils"
 
 #: ../src/window.c:1314
 msgid "Status _Icon"
@@ -221,7 +222,7 @@ msgstr "_Icône d’état"
 
 #: ../src/window.c:1320
 msgid "View as _Symbols"
-msgstr "Vue en _icônes"
+msgstr "Vue en i_cônes"
 
 #: ../src/window.c:1321
 msgid "View as _Detailed List"
