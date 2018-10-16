@@ -357,7 +357,6 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->tree), column);
 
-	gtk_tree_view_set_rules_hint(GTK_TREE_VIEW(priv->tree), TRUE);
 	gtk_tree_view_set_headers_clickable(GTK_TREE_VIEW(priv->tree), TRUE);
 
 	/* sorting */

@@ -21,9 +21,6 @@ browsenetworkpanel.c:452:2: warning: ‘gtk_image_menu_item_new_with_mnemonic’
 browsenetworkpanel.c:453:2: warning: ‘gtk_image_menu_item_get_type’ is deprecated: Use 'gtk_menu_item_get_type' instead
 browsenetworkpanel.c:453:2: warning: ‘gtk_image_menu_item_set_image’ is deprecated
 
-=== GtkTreeView deprecations ===
-bookmarkdialog.c:360:2: warning: ‘gtk_tree_view_set_rules_hint’ is deprecated
-
 === GObject deprecations ===
 window.c:182:2: warning: ‘g_type_class_add_private’ is deprecated
 bookmark.c:93:2: warning: ‘g_type_class_add_private’ is deprecated
