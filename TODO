@@ -3,3 +3,121 @@
 - split GigoloApp from GigoloWindow
 - Samba mounts with set credentials can fail
 
+=== GtkMenu deprecations ===
+window.c:204:3: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
+window.c:831:4: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
+window.c:872:4: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
+browsenetworkpanel.c:282:3: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
+bookmarkdialog.c:258:3: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
+
+=== GtkImageMenuItem deprecations ===
+menubuttonaction.c:68:2: warning: ‘gtk_image_menu_item_get_type’ is deprecated: Use 'gtk_menu_item_get_type' instead
+menubuttonaction.c:189:2: warning: ‘gtk_image_menu_item_get_type’ is deprecated: Use 'gtk_menu_item_get_type' instead
+bookmarkdialog.c:376:2: warning: ‘gtk_image_menu_item_new_from_stock’ is deprecated: Use 'gtk_menu_item_new' instead
+bookmarkdialog.c:383:2: warning: ‘gtk_image_menu_item_new_from_stock’ is deprecated: Use 'gtk_menu_item_new' instead
+bookmarkdialog.c:390:2: warning: ‘gtk_image_menu_item_new_from_stock’ is deprecated: Use 'gtk_menu_item_new' instead
+browsenetworkpanel.c:445:2: warning: ‘gtk_image_menu_item_new_from_stock’ is deprecated: Use 'gtk_menu_item_new' instead
+browsenetworkpanel.c:452:2: warning: ‘gtk_image_menu_item_new_with_mnemonic’ is deprecated: Use 'gtk_menu_item_new_with_mnemonic' instead
+browsenetworkpanel.c:453:2: warning: ‘gtk_image_menu_item_get_type’ is deprecated: Use 'gtk_menu_item_get_type' instead
+browsenetworkpanel.c:453:2: warning: ‘gtk_image_menu_item_set_image’ is deprecated
+
+=== GtkTreeView deprecations ===
+bookmarkdialog.c:360:2: warning: ‘gtk_tree_view_set_rules_hint’ is deprecated
+
+=== GObject deprecations ===
+window.c:182:2: warning: ‘g_type_class_add_private’ is deprecated
+bookmark.c:93:2: warning: ‘g_type_class_add_private’ is deprecated
+settings.c:222:2: warning: ‘g_type_class_add_private’ is deprecated
+backendgvfs.c:149:2: warning: ‘g_type_class_add_private’ is deprecated
+mountdialog.c:65:2: warning: ‘g_type_class_add_private’ is deprecated
+bookmarkpanel.c:144:2: warning: ‘g_type_class_add_private’ is deprecated
+bookmarkdialog.c:77:2: warning: ‘g_type_class_add_private’ is deprecated
+bookmarkeditdialog.c:328:2: warning: ‘g_type_class_add_private’ is deprecated
+browsenetworkpanel.c:102:2: warning: ‘g_type_class_add_private’ is deprecated
+
+=== GtkStock deprecations ===
+menubuttonaction.c:156:3: warning: ‘gtk_tool_button_set_stock_id’ is deprecated: Use 'gtk_tool_button_set_icon_name' instead
+bookmarkdialog.c:423:2: warning: ‘gtk_button_new_from_stock’ is deprecated: Use 'gtk_button_new_with_label' instead
+bookmarkdialog.c:426:2: warning: ‘gtk_button_new_from_stock’ is deprecated: Use 'gtk_button_new_with_label' instead
+bookmarkdialog.c:429:2: warning: ‘gtk_button_new_from_stock’ is deprecated: Use 'gtk_button_new_with_label' instead
+window.c:1276:3: warning: ‘GtkStock’ is deprecated
+window.c:1278:3: warning: ‘GtkStock’ is deprecated
+window.c:1280:3: warning: ‘GtkStock’ is deprecated
+window.c:1284:3: warning: ‘GtkStock’ is deprecated
+window.c:1285:3: warning: ‘GtkStock’ is deprecated
+window.c:1287:3: warning: ‘GtkStock’ is deprecated
+window.c:1291:3: warning: ‘GtkStock’ is deprecated
+window.c:1292:3: warning: ‘GtkStock’ is deprecated
+window.c:1293:3: warning: ‘GtkStock’ is deprecated
+window.c:1295:3: warning: ‘GtkStock’ is deprecated
+window.c:1321:3: warning: ‘GtkStock’ is deprecated
+window.c:1342:3: warning: ‘GtkStock’ is deprecated
+menubuttonaction.c:156:3: warning: ‘GtkStock’ is deprecated
+browsenetworkpanel.c:445:2: warning: ‘GtkStock’ is deprecated
+
+=== GtkStatusIcon deprecations ===
+window.c:1041:2: warning: ‘gtk_status_icon_set_visible’ is deprecated
+window.c:1623:2: warning: ‘gtk_status_icon_new_from_icon_name’ is deprecated
+window.c:1624:2: warning: ‘gtk_status_icon_set_tooltip_text’ is deprecated
+
+=== GtkUiManager deprecations ===
+window.c:1333:2: warning: ‘gtk_ui_manager_insert_action_group’ is deprecated
+window.c:1334:2: warning: ‘gtk_ui_manager_get_accel_group’ is deprecated
+window.c:1344:2: warning: ‘gtk_ui_manager_add_ui_from_string’ is deprecated
+window.c:1579:2: warning: ‘gtk_ui_manager_new’ is deprecated
+window.c:1581:2: warning: ‘gtk_ui_manager_get_widget’ is deprecated
+window.c:1582:2: warning: ‘gtk_ui_manager_get_widget’ is deprecated
+window.c:1583:2: warning: ‘gtk_ui_manager_get_widget’ is deprecated
+window.c:1584:2: warning: ‘gtk_ui_manager_get_widget’ is deprecated
+
+=== GtkAction deprecations ===
+window.c:337:2: warning: ‘gtk_toggle_action_get_active’ is deprecated
+window.c:1116:2: warning: ‘gtk_toggle_action_set_active’ is deprecated
+window.c:1116:2: warning: ‘gtk_toggle_action_get_type’ is deprecated
+
+window.c:356:2: warning: ‘gtk_radio_action_get_current_value’ is deprecated
+window.c:1125:2: warning: ‘gtk_radio_action_set_current_value’ is deprecated
+window.c:1125:2: warning: ‘gtk_radio_action_get_type’ is deprecated
+
+window.c:340:2: warning: ‘gtk_action_get_name’ is deprecated
+window.c:340:2: warning: ‘gtk_action_get_type’ is deprecated
+window.c:342:2: warning: ‘gtk_action_get_name’ is deprecated
+window.c:342:2: warning: ‘gtk_action_get_type’ is deprecated
+window.c:344:2: warning: ‘gtk_action_get_name’ is deprecated
+window.c:344:2: warning: ‘gtk_action_get_type’ is deprecated
+window.c:693:2: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:695:3: warning: ‘gtk_action_set_label’ is deprecated
+window.c:697:3: warning: ‘gtk_action_set_label’ is deprecated
+window.c:716:3: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:718:3: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:719:3: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:720:3: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:725:3: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:726:3: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:727:3: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:728:3: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:729:3: warning: ‘gtk_action_set_sensitive’ is deprecated
+window.c:1340:3: warning: ‘gtk_action_set_icon_name’ is deprecated
+window.c:1342:3: warning: ‘gtk_action_set_stock_id’ is deprecated
+menubuttonaction.c:49:1: warning: ‘gtk_action_get_type’ is deprecated
+menubuttonaction.c:112:2: warning: ‘gtk_action_get_proxies’ is deprecated
+menubuttonaction.c:112:2: warning: ‘gtk_action_get_type’ is deprecated
+menubuttonaction.c:151:2: warning: ‘gtk_action_get_type’ is deprecated
+menubuttonaction.c:182:2: warning: ‘gtk_action_get_type’ is deprecated
+
+window.c:1114:2: warning: ‘gtk_action_group_get_action’ is deprecated
+window.c:1123:2: warning: ‘gtk_action_group_get_action’ is deprecated
+window.c:1326:2: warning: ‘gtk_action_group_new’ is deprecated
+window.c:1327:2: warning: ‘gtk_action_group_set_translation_domain’ is deprecated
+window.c:1328:2: warning: ‘gtk_action_group_add_actions’ is deprecated
+window.c:1329:2: warning: ‘gtk_action_group_add_toggle_actions’ is deprecated
+window.c:1330:2: warning: ‘gtk_action_group_add_radio_actions’ is deprecated
+window.c:1332:2: warning: ‘gtk_action_group_add_action’ is deprecated
+window.c:1337:2: warning: ‘gtk_action_group_get_action’ is deprecated
+window.c:1593:2: warning: ‘gtk_action_group_get_action’ is deprecated
+window.c:1594:2: warning: ‘gtk_action_group_get_action’ is deprecated
+window.c:1595:2: warning: ‘gtk_action_group_get_action’ is deprecated
+window.c:1596:2: warning: ‘gtk_action_group_get_action’ is deprecated
+window.c:1597:2: warning: ‘gtk_action_group_get_action’ is deprecated
+window.c:1598:2: warning: ‘gtk_action_group_get_action’ is deprecated
+window.c:1601:2: warning: ‘gtk_action_group_get_action’ is deprecated
