@@ -420,13 +420,19 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	gtk_window_set_default_size(GTK_WINDOW(dialog), 550, 350);
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_CLOSE);
 
-	button_add = gtk_button_new_from_stock("gtk-add");
+	button_add = gtk_button_new_from_icon_name ("list-add", GTK_ICON_SIZE_BUTTON);
+	gtk_button_set_label (GTK_BUTTON (button_add), _("_Add"));
+	gtk_button_set_use_underline (GTK_BUTTON (button_add), TRUE);
 	g_signal_connect(button_add, "clicked", G_CALLBACK(add_button_click_cb), dialog);
 
-	priv->button_edit = gtk_button_new_from_stock("gtk-edit");
+	priv->button_edit = gtk_button_new_from_icon_name ("gtk-edit", GTK_ICON_SIZE_BUTTON);
+	gtk_button_set_label (GTK_BUTTON (priv->button_edit), _("_Edit"));
+	gtk_button_set_use_underline (GTK_BUTTON (priv->button_edit), TRUE);
 	g_signal_connect(priv->button_edit, "clicked", G_CALLBACK(edit_button_click_cb), dialog);
 
-	priv->button_delete = gtk_button_new_from_stock("gtk-delete");
+	priv->button_delete = gtk_button_new_from_icon_name ("edit-delete", GTK_ICON_SIZE_BUTTON);
+	gtk_button_set_label (GTK_BUTTON (priv->button_delete), _("_Delete"));
+	gtk_button_set_use_underline (GTK_BUTTON (priv->button_delete), TRUE);
 	g_signal_connect(priv->button_delete, "clicked", G_CALLBACK(delete_button_click_cb), dialog);
 
 	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);

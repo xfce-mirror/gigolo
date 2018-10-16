@@ -442,7 +442,7 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	/* popup menu */
 	menu = gtk_menu_new();
 
-	priv->item_connect = item = gtk_image_menu_item_new_from_stock(GTK_STOCK_CONNECT, NULL);
+	priv->item_connect = item = gtk_image_menu_item_new_from_stock("gtk-connect", NULL);
 	g_object_set_data(G_OBJECT(item), "panel", panel);
 	gtk_widget_show(item);
 	gtk_container_add(GTK_CONTAINER(menu), item);

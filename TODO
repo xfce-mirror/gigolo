@@ -35,26 +35,6 @@ bookmarkdialog.c:77:2: warning: ‘g_type_class_add_private’ is deprecated
 bookmarkeditdialog.c:328:2: warning: ‘g_type_class_add_private’ is deprecated
 browsenetworkpanel.c:102:2: warning: ‘g_type_class_add_private’ is deprecated
 
-=== GtkStock deprecations ===
-menubuttonaction.c:156:3: warning: ‘gtk_tool_button_set_stock_id’ is deprecated: Use 'gtk_tool_button_set_icon_name' instead
-bookmarkdialog.c:423:2: warning: ‘gtk_button_new_from_stock’ is deprecated: Use 'gtk_button_new_with_label' instead
-bookmarkdialog.c:426:2: warning: ‘gtk_button_new_from_stock’ is deprecated: Use 'gtk_button_new_with_label' instead
-bookmarkdialog.c:429:2: warning: ‘gtk_button_new_from_stock’ is deprecated: Use 'gtk_button_new_with_label' instead
-window.c:1276:3: warning: ‘GtkStock’ is deprecated
-window.c:1278:3: warning: ‘GtkStock’ is deprecated
-window.c:1280:3: warning: ‘GtkStock’ is deprecated
-window.c:1284:3: warning: ‘GtkStock’ is deprecated
-window.c:1285:3: warning: ‘GtkStock’ is deprecated
-window.c:1287:3: warning: ‘GtkStock’ is deprecated
-window.c:1291:3: warning: ‘GtkStock’ is deprecated
-window.c:1292:3: warning: ‘GtkStock’ is deprecated
-window.c:1293:3: warning: ‘GtkStock’ is deprecated
-window.c:1295:3: warning: ‘GtkStock’ is deprecated
-window.c:1321:3: warning: ‘GtkStock’ is deprecated
-window.c:1342:3: warning: ‘GtkStock’ is deprecated
-menubuttonaction.c:156:3: warning: ‘GtkStock’ is deprecated
-browsenetworkpanel.c:445:2: warning: ‘GtkStock’ is deprecated
-
 === GtkStatusIcon deprecations ===
 window.c:1041:2: warning: ‘gtk_status_icon_set_visible’ is deprecated
 window.c:1623:2: warning: ‘gtk_status_icon_new_from_icon_name’ is deprecated
@@ -98,7 +78,7 @@ window.c:727:3: warning: ‘gtk_action_set_sensitive’ is deprecated
 window.c:728:3: warning: ‘gtk_action_set_sensitive’ is deprecated
 window.c:729:3: warning: ‘gtk_action_set_sensitive’ is deprecated
 window.c:1340:3: warning: ‘gtk_action_set_icon_name’ is deprecated
-window.c:1342:3: warning: ‘gtk_action_set_stock_id’ is deprecated
+window.c:1342:3: warning: ‘gtk_action_set_icon_name’ is deprecated
 menubuttonaction.c:49:1: warning: ‘gtk_action_get_type’ is deprecated
 menubuttonaction.c:112:2: warning: ‘gtk_action_get_proxies’ is deprecated
 menubuttonaction.c:112:2: warning: ‘gtk_action_get_type’ is deprecated

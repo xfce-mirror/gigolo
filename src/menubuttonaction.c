@@ -153,7 +153,7 @@ static void gigolo_menu_button_action_connect_proxy(GtkAction *action, GtkWidget
 	/* Overwrite the icon and label of the toolbar button */
 	if (GTK_IS_TOOL_BUTTON(widget))
 	{
-		gtk_tool_button_set_stock_id(GTK_TOOL_BUTTON(widget), GTK_STOCK_CONNECT);
+		gtk_tool_button_set_icon_name (GTK_TOOL_BUTTON(widget), "gtk-connect");
 		gtk_tool_button_set_label(GTK_TOOL_BUTTON(widget), _("Connect"));
 	}
 }

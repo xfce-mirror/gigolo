@@ -1273,26 +1273,26 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 		{ "Actions", NULL, N_("_Actions"), NULL, NULL, NULL },
 		{ "View", NULL, N_("_View"), NULL, NULL, NULL },
 		{ "Help", NULL, N_("_Help"), NULL, NULL, NULL },
-		{ "Preferences", GTK_STOCK_PREFERENCES,
+		{ "Preferences", "preferences-system",
 			NULL, "<Ctrl>p", NULL, G_CALLBACK(action_preferences_cb) },
-		{ "CreateBookmark", GTK_STOCK_ADD,
+		{ "CreateBookmark", "list-add",
 			N_("Create _Bookmark"), "<Ctrl>n", NULL, G_CALLBACK(action_create_bookmark_cb) },
-		{ "EditBookmarks", GTK_STOCK_EDIT,
+		{ "EditBookmarks", "gtk-edit",
 			N_("_Edit Bookmarks"), "<Ctrl>b",
 			N_("Open the bookmark manager to add, edit or delete bookmarks"),
 			G_CALLBACK(action_bookmark_edit_cb) },
-		{ "Connect", GTK_STOCK_CONNECT, NULL, NULL, NULL, G_CALLBACK(action_mount_cb) },
-		{ "Disconnect", GTK_STOCK_DISCONNECT, NULL, NULL,
+		{ "Connect", "gtk-connect", NULL, NULL, NULL, G_CALLBACK(action_mount_cb) },
+		{ "Disconnect", "gtk-disconnect", NULL, NULL,
 			N_("Disconnect the selected resource"), G_CALLBACK(action_unmount_cb) },
-		{ "Open", GTK_STOCK_OPEN, NULL, "<Ctrl>o",
+		{ "Open", "document-open", NULL, "<Ctrl>o",
 			N_("Open the selected resource with a file manager"), G_CALLBACK(action_open_cb) },
 		{ "OpenTerminal", NULL, _("Open in _Terminal"), "<Ctrl>t",
 			N_("Start a terminal from here"), G_CALLBACK(action_open_terminal_cb) },
-		{ "CopyURI", GTK_STOCK_COPY, N_("Copy _URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
-		{ "Quit", GTK_STOCK_QUIT, NULL, "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb) },
-		{ "OnlineHelp", GTK_STOCK_HELP, _("Online Help"), NULL, NULL, G_CALLBACK(action_help_cb) },
+		{ "CopyURI", "edit-copy", N_("Copy _URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb) },
+		{ "Quit", "application-exit", NULL, "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb) },
+		{ "OnlineHelp", "go-home", _("Online Help"), NULL, NULL, G_CALLBACK(action_help_cb) },
 		{ "SupportedSchemes", NULL, _("Supported Protocols"), NULL, NULL, G_CALLBACK(action_supported_schemes_cb) },
-		{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
+		{ "About", "help-abount", NULL, NULL, NULL, G_CALLBACK(action_about_cb) }
 	};
 	const guint entries_n = G_N_ELEMENTS(entries);
 
@@ -1318,7 +1318,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 
 	priv->action_bookmarks = gigolo_menu_button_action_new(
 		"Bookmarks", _("_Bookmarks"), _("Choose a bookmark to connect to"),
-		gigolo_find_icon_name("bookmark-new", GTK_STOCK_EDIT));
+		gigolo_find_icon_name("bookmark-new", "gtk-edit"));
 	g_signal_connect(priv->action_bookmarks, "item-clicked",
 		G_CALLBACK(action_bookmark_activate_cb), window);
 	g_signal_connect(priv->action_bookmarks, "button-clicked", G_CALLBACK(action_mount_cb), window);
@@ -1339,7 +1339,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 	if (gtk_icon_theme_has_icon(icon_theme, "utilities-terminal"))
 		gtk_action_set_icon_name(open_terminal, "utilities-terminal");
 	else
-		gtk_action_set_stock_id(open_terminal, GTK_STOCK_OPEN);
+		gtk_action_set_icon_name(open_terminal, "document-open");
 
 	if (! gtk_ui_manager_add_ui_from_string(ui_manager, ui_markup, -1, &error))
 	{
