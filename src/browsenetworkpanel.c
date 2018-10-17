@@ -442,17 +442,14 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	/* popup menu */
 	menu = gtk_menu_new();
 
-	priv->item_connect = item = gtk_image_menu_item_new_from_stock("gtk-connect", NULL);
+	priv->item_connect = item = gtk_menu_item_new_with_mnemonic(_("_Connect"));
 	g_object_set_data(G_OBJECT(item), "panel", panel);
 	gtk_widget_show(item);
 	gtk_container_add(GTK_CONTAINER(menu), item);
 	g_signal_connect(item, "activate", G_CALLBACK(tree_popup_activate_cb),
 		GINT_TO_POINTER(ACTION_CONNECT));
 
-	priv->item_bookmark = item = gtk_image_menu_item_new_with_mnemonic(_("Create _Bookmark"));
-	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(item),
-		gtk_image_new_from_icon_name(
-			gigolo_find_icon_name("bookmark-new", "gtk-edit"), GTK_ICON_SIZE_BUTTON));
+	priv->item_bookmark = item = gtk_menu_item_new_with_mnemonic(_("Create _Bookmark"));
 	g_object_set_data(G_OBJECT(item), "panel", panel);
 	gtk_widget_show(item);
 	gtk_container_add(GTK_CONTAINER(menu), item);

@@ -65,7 +65,7 @@ static GtkWidget *gigolo_menu_button_action_create_menu_item(G_GNUC_UNUSED GtkAc
 {
 	GtkWidget *menuitem;
 
-	menuitem = g_object_new(GTK_TYPE_IMAGE_MENU_ITEM, NULL);
+	menuitem = g_object_new(GTK_TYPE_MENU_ITEM, NULL);
 
 	return menuitem;
 }
@@ -186,7 +186,7 @@ static void gigolo_menu_button_action_class_init(GigoloMenubuttonActionClass *kl
 	action_class->connect_proxy = gigolo_menu_button_action_connect_proxy;
 	action_class->create_menu_item = gigolo_menu_button_action_create_menu_item;
 	action_class->create_tool_item = gigolo_menu_button_action_create_tool_item;
-	action_class->menu_item_type = GTK_TYPE_IMAGE_MENU_ITEM;
+	action_class->menu_item_type = GTK_TYPE_MENU_ITEM;
 	action_class->toolbar_item_type = GTK_TYPE_MENU_TOOL_BUTTON;
 
 	g_object_class_install_property(g_object_class,

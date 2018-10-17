@@ -10,17 +10,6 @@ window.c:872:4: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popu
 browsenetworkpanel.c:282:3: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
 bookmarkdialog.c:258:3: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
 
-=== GtkImageMenuItem deprecations ===
-menubuttonaction.c:68:2: warning: ‘gtk_image_menu_item_get_type’ is deprecated: Use 'gtk_menu_item_get_type' instead
-menubuttonaction.c:189:2: warning: ‘gtk_image_menu_item_get_type’ is deprecated: Use 'gtk_menu_item_get_type' instead
-bookmarkdialog.c:376:2: warning: ‘gtk_image_menu_item_new_from_stock’ is deprecated: Use 'gtk_menu_item_new' instead
-bookmarkdialog.c:383:2: warning: ‘gtk_image_menu_item_new_from_stock’ is deprecated: Use 'gtk_menu_item_new' instead
-bookmarkdialog.c:390:2: warning: ‘gtk_image_menu_item_new_from_stock’ is deprecated: Use 'gtk_menu_item_new' instead
-browsenetworkpanel.c:445:2: warning: ‘gtk_image_menu_item_new_from_stock’ is deprecated: Use 'gtk_menu_item_new' instead
-browsenetworkpanel.c:452:2: warning: ‘gtk_image_menu_item_new_with_mnemonic’ is deprecated: Use 'gtk_menu_item_new_with_mnemonic' instead
-browsenetworkpanel.c:453:2: warning: ‘gtk_image_menu_item_get_type’ is deprecated: Use 'gtk_menu_item_get_type' instead
-browsenetworkpanel.c:453:2: warning: ‘gtk_image_menu_item_set_image’ is deprecated
-
 === GObject deprecations ===
 window.c:182:2: warning: ‘g_type_class_add_private’ is deprecated
 bookmark.c:93:2: warning: ‘g_type_class_add_private’ is deprecated

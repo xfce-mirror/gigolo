@@ -372,21 +372,21 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 
 	priv->popup_menu = gtk_menu_new();
 
-	item = gtk_image_menu_item_new_from_stock("gtk-add", NULL);
+	item = gtk_menu_item_new_with_mnemonic (_("_Add"));
 	g_object_set_data(G_OBJECT(item), "dialog", dialog);
 	gtk_widget_show(item);
 	gtk_container_add(GTK_CONTAINER(priv->popup_menu), item);
 	g_signal_connect(item, "activate", G_CALLBACK(tree_popup_activate_cb),
 		GINT_TO_POINTER(ACTION_ADD));
 
-	priv->edit_item = gtk_image_menu_item_new_from_stock("gtk-edit", NULL);
+	priv->edit_item = gtk_menu_item_new_with_mnemonic (_("_Edit"));
 	g_object_set_data(G_OBJECT(priv->edit_item), "dialog", dialog);
 	gtk_widget_show(priv->edit_item);
 	gtk_container_add(GTK_CONTAINER(priv->popup_menu), priv->edit_item);
 	g_signal_connect(priv->edit_item, "activate", G_CALLBACK(tree_popup_activate_cb),
 		GINT_TO_POINTER(ACTION_EDIT));
 
-	priv->delete_item = gtk_image_menu_item_new_from_stock("gtk-delete", NULL);
+	priv->delete_item = gtk_menu_item_new_with_mnemonic (_("_Delete"));
 	g_object_set_data(G_OBJECT(priv->delete_item), "dialog", dialog);
 	gtk_widget_show(priv->delete_item);
 	gtk_container_add(GTK_CONTAINER(priv->popup_menu), priv->delete_item);
