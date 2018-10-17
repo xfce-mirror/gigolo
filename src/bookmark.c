@@ -29,9 +29,6 @@
 
 typedef struct _GigoloBookmarkPrivate			GigoloBookmarkPrivate;
 
-#define GIGOLO_BOOKMARK_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			GIGOLO_BOOKMARK_TYPE, GigoloBookmarkPrivate))
-
 struct _GigoloBookmarkPrivate
 {
 	gchar	*name;
@@ -52,12 +49,12 @@ struct _GigoloBookmarkPrivate
 
 static void gigolo_bookmark_finalize  		(GObject *object);
 
-G_DEFINE_TYPE(GigoloBookmark, gigolo_bookmark, G_TYPE_OBJECT);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloBookmark, gigolo_bookmark, G_TYPE_OBJECT);
 
 
 void gigolo_bookmark_clear(GigoloBookmark *bookmark)
 {
-	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	GigoloBookmarkPrivate *priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->name);
 	g_free(priv->scheme);
@@ -89,8 +86,6 @@ static void gigolo_bookmark_class_init(GigoloBookmarkClass *klass)
 	g_object_class = G_OBJECT_CLASS(klass);
 
 	g_object_class->finalize = gigolo_bookmark_finalize;
-
-	g_type_class_add_private(klass, sizeof(GigoloBookmarkPrivate));
 }
 
 
@@ -107,7 +102,7 @@ gboolean gigolo_bookmark_parse_uri(GigoloBookmark *bookmark, const gchar *uri)
 	gchar *s, *t, *x, *end, *tmp;
 	guint l;
 	gboolean is_uri_dav;
-	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	GigoloBookmarkPrivate *priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	priv->scheme = g_uri_parse_scheme(uri);
 
@@ -263,7 +258,7 @@ GigoloBookmark *gigolo_bookmark_new(void)
 GigoloBookmark *gigolo_bookmark_new_from_uri(const gchar *name, const gchar *uri)
 {
 	GigoloBookmark *bm = g_object_new(GIGOLO_BOOKMARK_TYPE, NULL);
-	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bm);
+	GigoloBookmarkPrivate *priv = gigolo_bookmark_get_instance_private(bm);
 
 	gigolo_bookmark_set_name(bm, name);
 	if (! gigolo_bookmark_parse_uri(bm, uri))
@@ -282,8 +277,8 @@ void gigolo_bookmark_clone(GigoloBookmark *dst, const GigoloBookmark *src)
 	g_return_if_fail(dst != NULL);
 	g_return_if_fail(src != NULL);
 
-	priv_dst = GIGOLO_BOOKMARK_GET_PRIVATE(dst);
-	priv_src = GIGOLO_BOOKMARK_GET_PRIVATE(src);
+	priv_dst = gigolo_bookmark_get_instance_private(dst);
+	priv_src = gigolo_bookmark_get_instance_private(GIGOLO_BOOKMARK(src));
 
 	/* free existing strings and data */
 	gigolo_bookmark_clear(dst);
@@ -303,7 +298,7 @@ void gigolo_bookmark_clone(GigoloBookmark *dst, const GigoloBookmark *src)
 
 static gchar *gigolo_bookmark_get_uri_real(GigoloBookmark *bookmark, gboolean escaped)
 {
-	GigoloBookmarkPrivate *priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	GigoloBookmarkPrivate *priv = gigolo_bookmark_get_instance_private(bookmark);
 	gchar *result;
 	const gchar *domain = NULL;
 	gchar *user = NULL;
@@ -362,7 +357,7 @@ void gigolo_bookmark_set_uri(GigoloBookmark *bookmark, const gchar *uri)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(NZV(uri));
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	tmp = gigolo_bookmark_new_from_uri(priv->name, uri);
 	if (gigolo_bookmark_is_valid(tmp))
@@ -374,9 +369,13 @@ void gigolo_bookmark_set_uri(GigoloBookmark *bookmark, const gchar *uri)
 
 const gchar *gigolo_bookmark_get_name(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->name;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->name;
 }
 
 
@@ -387,7 +386,7 @@ void gigolo_bookmark_set_name(GigoloBookmark *bookmark, const gchar *name)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(NZV(name));
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->name);
 	priv->name = g_strdup(name);
@@ -396,9 +395,13 @@ void gigolo_bookmark_set_name(GigoloBookmark *bookmark, const gchar *name)
 
 const gchar *gigolo_bookmark_get_scheme(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->scheme;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->scheme;
 }
 
 
@@ -409,7 +412,7 @@ void gigolo_bookmark_set_scheme(GigoloBookmark *bookmark, const gchar *scheme)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(NZV(scheme));
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->scheme);
 	priv->scheme = g_strdup(scheme);
@@ -418,9 +421,13 @@ void gigolo_bookmark_set_scheme(GigoloBookmark *bookmark, const gchar *scheme)
 
 const gchar *gigolo_bookmark_get_host(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->host;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->host;
 }
 
 
@@ -431,7 +438,7 @@ void gigolo_bookmark_set_host(GigoloBookmark *bookmark, const gchar *host)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(NZV(host));
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->host);
 	priv->host = g_strdup(host);
@@ -440,21 +447,28 @@ void gigolo_bookmark_set_host(GigoloBookmark *bookmark, const gchar *host)
 
 const gchar *gigolo_bookmark_get_folder(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->folder;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->folder;
 }
 
 
 gchar *gigolo_bookmark_get_folder_expanded(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
 	const gchar *folder;
 	const gchar *username;
 	gchar *result;
 
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	folder = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->folder;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	folder = priv->folder;
 	username = gigolo_bookmark_get_user(bookmark);
 	if (NZV(folder) && folder[0] == '~')
 	{
@@ -476,7 +490,7 @@ void gigolo_bookmark_set_folder(GigoloBookmark *bookmark, const gchar *folder)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(folder != NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->folder);
 	priv->folder = g_strdup(folder);
@@ -485,9 +499,13 @@ void gigolo_bookmark_set_folder(GigoloBookmark *bookmark, const gchar *folder)
 
 const gchar *gigolo_bookmark_get_path(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->path;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->path;
 }
 
 
@@ -498,7 +516,7 @@ void gigolo_bookmark_set_path(GigoloBookmark *bookmark, const gchar *path)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(path != NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->path);
 	priv->path = g_strdup(path);
@@ -507,9 +525,13 @@ void gigolo_bookmark_set_path(GigoloBookmark *bookmark, const gchar *path)
 
 guint gigolo_bookmark_get_port(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, 0);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->port;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->port;
 }
 
 
@@ -519,7 +541,7 @@ void gigolo_bookmark_set_port(GigoloBookmark *bookmark, guint port)
 
 	g_return_if_fail(bookmark != NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	priv->port = port;
 }
@@ -527,9 +549,13 @@ void gigolo_bookmark_set_port(GigoloBookmark *bookmark, guint port)
 
 gboolean gigolo_bookmark_get_autoconnect(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, 0);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->autoconnect;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->autoconnect;
 }
 
 
@@ -539,7 +565,7 @@ void gigolo_bookmark_set_autoconnect(GigoloBookmark *bookmark, gboolean autoconn
 
 	g_return_if_fail(bookmark != NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	priv->autoconnect = autoconnect;
 }
@@ -547,9 +573,13 @@ void gigolo_bookmark_set_autoconnect(GigoloBookmark *bookmark, gboolean autoconn
 
 gboolean gigolo_bookmark_get_should_not_autoconnect(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, 0);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->should_not_autoconnect;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->should_not_autoconnect;
 }
 
 
@@ -559,7 +589,7 @@ void gigolo_bookmark_set_should_not_autoconnect(GigoloBookmark *bookmark, gboole
 
 	g_return_if_fail(bookmark != NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	priv->should_not_autoconnect = should_not_autoconnect;
 }
@@ -572,7 +602,7 @@ gchar *gigolo_bookmark_get_user_unescaped(GigoloBookmark *bookmark)
 
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	if (NZV(priv->user))
 		username = g_uri_unescape_string(priv->user, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO);
@@ -585,9 +615,13 @@ gchar *gigolo_bookmark_get_user_unescaped(GigoloBookmark *bookmark)
 
 const gchar *gigolo_bookmark_get_user(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->user;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->user;
 }
 
 
@@ -598,7 +632,7 @@ void gigolo_bookmark_set_user(GigoloBookmark *bookmark, const gchar *user)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(user != NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->user);
 	priv->user = g_strdup(user);
@@ -607,9 +641,13 @@ void gigolo_bookmark_set_user(GigoloBookmark *bookmark, const gchar *user)
 
 const gchar *gigolo_bookmark_get_share(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->share;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->share;
 }
 
 
@@ -620,7 +658,7 @@ void gigolo_bookmark_set_share(GigoloBookmark *bookmark, const gchar *share)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(share != NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->share);
 	priv->share = g_strdup(share);
@@ -629,9 +667,13 @@ void gigolo_bookmark_set_share(GigoloBookmark *bookmark, const gchar *share)
 
 const gchar *gigolo_bookmark_get_domain(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->domain;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->domain;
 }
 
 
@@ -642,7 +684,7 @@ void gigolo_bookmark_set_domain(GigoloBookmark *bookmark, const gchar *domain)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(domain != NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->domain);
 	priv->domain = g_strdup(domain);
@@ -651,9 +693,13 @@ void gigolo_bookmark_set_domain(GigoloBookmark *bookmark, const gchar *domain)
 
 const gchar *gigolo_bookmark_get_color(GigoloBookmark *bookmark)
 {
+	GigoloBookmarkPrivate *priv;
+
 	g_return_val_if_fail(bookmark != NULL, NULL);
 
-	return GIGOLO_BOOKMARK_GET_PRIVATE(bookmark)->color;
+	priv = gigolo_bookmark_get_instance_private(bookmark);
+
+	return priv->color;
 }
 
 
@@ -664,7 +710,7 @@ void gigolo_bookmark_set_color(GigoloBookmark *bookmark, const gchar *color)
 	g_return_if_fail(bookmark != NULL);
 	g_return_if_fail(color != NULL);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	g_free(priv->color);
 	priv->color = g_strdup(color);
@@ -677,7 +723,7 @@ gboolean gigolo_bookmark_is_valid(GigoloBookmark *bookmark)
 
 	g_return_val_if_fail(bookmark != NULL, FALSE);
 
-	priv = GIGOLO_BOOKMARK_GET_PRIVATE(bookmark);
+	priv = gigolo_bookmark_get_instance_private(bookmark);
 
 	return priv->is_valid;
 }

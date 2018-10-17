@@ -31,9 +31,6 @@
 
 typedef struct _GigoloBackendGVFSPrivate			GigoloBackendGVFSPrivate;
 
-#define GIGOLO_BACKEND_GVFS_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			GIGOLO_BACKEND_GVFS_TYPE, GigoloBackendGVFSPrivate))
-
 enum
 {
     PROP_0,
@@ -96,7 +93,7 @@ static void browse_network_real						(BrowseData *bd);
 static void browse_host_real						(BrowseData *bd);
 
 
-G_DEFINE_TYPE(GigoloBackendGVFS, gigolo_backend_gvfs, G_TYPE_OBJECT);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloBackendGVFS, gigolo_backend_gvfs, G_TYPE_OBJECT);
 
 
 
@@ -145,8 +142,6 @@ static void gigolo_backend_gvfs_class_init(GigoloBackendGVFSClass *klass)
 
 	g_object_class->finalize = gigolo_backend_gvfs_finalize;
 	g_object_class->set_property = gigolo_backend_gvfs_set_property;
-
-	g_type_class_add_private(klass, sizeof(GigoloBackendGVFSPrivate));
 
 	g_object_class_install_property(g_object_class,
 										PROP_PARENT,
@@ -211,7 +206,7 @@ static void gigolo_backend_gvfs_finalize(GObject *object)
 static gchar *get_tooltip_text(GigoloBackendGVFS *backend, gpointer ref, gint ref_type, const gchar *type)
 {
 	gchar *result = NULL;
-	GigoloBackendGVFSPrivate *priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
+	GigoloBackendGVFSPrivate *priv = gigolo_backend_gvfs_get_instance_private(backend);
 	switch (ref_type)
 	{
 		case GIGOLO_WINDOW_REF_TYPE_MOUNT:
@@ -269,7 +264,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 	GtkTreeIter iter;
 	gchar *vol_name, *mount_name, *display_name, *scheme, *uri, *tooltip_text;
 	const gchar *scheme_name;
-	GigoloBackendGVFSPrivate *priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
+	GigoloBackendGVFSPrivate *priv = gigolo_backend_gvfs_get_instance_private(backend);
 	GigoloBookmark *bookmark;
 	GigoloSettings *settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
 
@@ -364,7 +359,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 static void gigolo_backend_gvfs_set_property(GObject *object, guint prop_id,
 											 const GValue *value, GParamSpec *pspec)
 {
-	GigoloBackendGVFSPrivate *priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(object);
+	GigoloBackendGVFSPrivate *priv = gigolo_backend_gvfs_get_instance_private(GIGOLO_BACKEND_GVFS(object));
 
 	switch (prop_id)
 	{
@@ -635,7 +630,7 @@ gchar *gigolo_backend_gvfs_get_mount_path(gpointer mount)
 static gboolean browse_network_ready_cb(gpointer backend)
 {
 	GigoloBackendGVFSPrivate *priv;
-	priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
+	priv = gigolo_backend_gvfs_get_instance_private(GIGOLO_BACKEND_GVFS(backend));
 
 	g_return_val_if_fail(backend != NULL, FALSE);
 
@@ -659,7 +654,7 @@ static void browse_network_mount_ready_cb(GFile *location, GAsyncResult *res, Br
 
 	g_file_mount_enclosing_volume_finish(location, res, &error);
 
-	priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(bd->self);
+	priv = gigolo_backend_gvfs_get_instance_private(bd->self);
 	priv->browse_counter--;
 
 	if (error != NULL)
@@ -698,7 +693,7 @@ static void browse_network_real(BrowseData *bd)
 	mode = bd->mode;
 	parent = bd->parent;
 	backend = bd->self;
-	priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
+	priv = gigolo_backend_gvfs_get_instance_private(backend);
 	priv->browse_counter++;
 
 	file = g_file_new_for_uri(bd->uri);
@@ -817,7 +812,7 @@ void gigolo_backend_gvfs_browse_network(GigoloBackendGVFS *backend, GtkWindow *p
 	bd->self = backend;
 	bd->browse_func = browse_network_real;
 
-	priv = GIGOLO_BACKEND_GVFS_GET_PRIVATE(backend);
+	priv = gigolo_backend_gvfs_get_instance_private(backend);
 	priv->browse_counter = 0;
 
 	browse_network_real(bd);

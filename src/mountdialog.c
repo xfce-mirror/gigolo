@@ -30,9 +30,6 @@
 
 typedef struct _GigoloMountDialogPrivate			GigoloMountDialogPrivate;
 
-#define GIGOLO_MOUNT_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			GIGOLO_MOUNT_DIALOG_TYPE, GigoloMountDialogPrivate))
-
 struct _GigoloMountDialog
 {
 	GtkDialog parent;
@@ -61,14 +58,12 @@ static void gigolo_mount_dialog_class_init(GigoloMountDialogClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS(klass);
 
 	object_class->finalize = gigolo_mount_dialog_finalize;
-
-	g_type_class_add_private(klass, sizeof(GigoloMountDialogPrivate));
 }
 
 
 static void gigolo_mount_dialog_finalize(GObject *widget)
 {
-	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(widget);
+	GigoloMountDialogPrivate *priv = gigolo_mount_dialog_get_instance_private(GIGOLO_MOUNT_DIALOG(widget));
 
 	if (priv->timer_id != (guint) -1)
 	{
@@ -91,7 +86,7 @@ static gboolean do_pulse(gpointer data)
 static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 {
 	GtkWidget *vbox, *progress;
-	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(self);
+	GigoloMountDialogPrivate *priv = gigolo_mount_dialog_get_instance_private(self);
 
 	priv->timer_id = (guint) -1;
 
@@ -120,7 +115,7 @@ GtkWidget *gigolo_mount_dialog_new(GtkWindow *parent, const gchar *label)
 		"transient-for", parent,
 		"icon-name", gigolo_get_application_icon_name(),
 		NULL);
-	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(dialog);
+	GigoloMountDialogPrivate *priv = gigolo_mount_dialog_get_instance_private(GIGOLO_MOUNT_DIALOG(dialog));
 
 	gtk_label_set_text(GTK_LABEL(priv->label), label);
 

@@ -3,17 +3,6 @@
 - split GigoloApp from GigoloWindow
 - Samba mounts with set credentials can fail
 
-=== GObject deprecations ===
-window.c:182:2: warning: ‘g_type_class_add_private’ is deprecated
-bookmark.c:93:2: warning: ‘g_type_class_add_private’ is deprecated
-settings.c:222:2: warning: ‘g_type_class_add_private’ is deprecated
-backendgvfs.c:149:2: warning: ‘g_type_class_add_private’ is deprecated
-mountdialog.c:65:2: warning: ‘g_type_class_add_private’ is deprecated
-bookmarkpanel.c:144:2: warning: ‘g_type_class_add_private’ is deprecated
-bookmarkdialog.c:77:2: warning: ‘g_type_class_add_private’ is deprecated
-bookmarkeditdialog.c:328:2: warning: ‘g_type_class_add_private’ is deprecated
-browsenetworkpanel.c:102:2: warning: ‘g_type_class_add_private’ is deprecated
-
 === GtkUiManager deprecations ===
 window.c:1333:2: warning: ‘gtk_ui_manager_insert_action_group’ is deprecated
 window.c:1334:2: warning: ‘gtk_ui_manager_get_accel_group’ is deprecated

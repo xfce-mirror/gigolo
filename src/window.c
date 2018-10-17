@@ -42,9 +42,6 @@
 
 typedef struct _GigoloWindowPrivate			GigoloWindowPrivate;
 
-#define GIGOLO_WINDOW_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-		GIGOLO_WINDOW_TYPE, GigoloWindowPrivate))
-
 /* Returns: TRUE if @a ptr points to a non-zero value. */
 #define NZV(ptr) \
 	((ptr) && (ptr)[0])
@@ -100,12 +97,12 @@ enum
 };
 
 
-G_DEFINE_TYPE(GigoloWindow, gigolo_window, GTK_TYPE_WINDOW);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloWindow, gigolo_window, GTK_TYPE_WINDOW);
 
 
 static void remove_autoconnect_timeout(GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	if (priv->autoconnect_timeout_id != (guint) -1)
 	{
@@ -117,7 +114,7 @@ static void remove_autoconnect_timeout(GigoloWindow *window)
 
 static void gigolo_window_destroy(GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gint geo[5];
 
 	remove_autoconnect_timeout(window);
@@ -159,7 +156,7 @@ static void gigolo_window_destroy(GigoloWindow *window)
 
 static gboolean gigolo_window_delete_event(GtkWidget *widget, G_GNUC_UNUSED GdkEventAny *event)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(widget);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(GIGOLO_WINDOW(widget));
 
 	if (gigolo_settings_get_boolean(priv->settings, "show-in-systray"))
 	{
@@ -178,8 +175,6 @@ static void gigolo_window_class_init(GigoloWindowClass *klass)
 {
 	GtkWidgetClass *gtkwidget_class = GTK_WIDGET_CLASS(klass);
 	gtkwidget_class->delete_event = gigolo_window_delete_event;
-
-	g_type_class_add_private(klass, sizeof(GigoloWindowPrivate));
 }
 
 
@@ -198,7 +193,7 @@ static void systray_icon_activate_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, G
 static void systray_icon_popup_menu_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon, guint button,
 								   guint activate_time, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	if (button == 3)
 		gtk_menu_popup_at_pointer (GTK_MENU(priv->systray_icon_popup_menu),
@@ -210,7 +205,7 @@ static void systray_icon_popup_menu_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon,
  * whichever is currently used for display. */
 static void get_selected_iter(GigoloWindow *window, GtkTreeIter *iter)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	g_return_if_fail(window != NULL);
 	g_return_if_fail(iter != NULL);
@@ -247,7 +242,7 @@ void gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *boo
 	g_return_if_fail(window != NULL);
 	g_return_if_fail(bookmark != NULL);
 
-	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	priv = gigolo_window_get_instance_private(window);
 
 	uri = gigolo_bookmark_get_uri_escaped(bookmark);
 
@@ -277,7 +272,7 @@ void gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *boo
 
 static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
 	gpointer vol;
@@ -319,7 +314,7 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
 	GtkWidget *dialog;
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	dialog = gigolo_preferences_dialog_new(GTK_WINDOW(window), priv->settings);
 
@@ -333,7 +328,7 @@ static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow 
 
 static void action_toggle_view_cb(GtkToggleAction *action, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gboolean active = gtk_toggle_action_get_active(action);
 	const gchar *property = NULL;
 
@@ -352,7 +347,7 @@ static void action_toggle_view_cb(GtkToggleAction *action, GigoloWindow *window)
 static void action_view_mode_change_cb(G_GNUC_UNUSED GtkRadioAction *action,
 									   GtkRadioAction *current, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gint mode = gtk_radio_action_get_current_value(current);
 
 	g_object_set(priv->settings, "view-mode", mode, NULL);
@@ -361,7 +356,7 @@ static void action_view_mode_change_cb(G_GNUC_UNUSED GtkRadioAction *action,
 
 static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeIter iter;
 	GigoloBookmark *bm;
 
@@ -399,7 +394,7 @@ static void action_quit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
 	GtkWidget *dialog;
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	dialog = gigolo_bookmark_dialog_new(window);
 
@@ -480,7 +475,7 @@ static void action_supported_schemes_cb(G_GNUC_UNUSED GtkAction *action, GigoloW
 
 static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
 
@@ -515,7 +510,7 @@ static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *wi
 
 static gpointer get_selected_mount(GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
 
@@ -535,7 +530,7 @@ static gpointer get_selected_mount(GigoloWindow *window)
 
 static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gpointer mnt;
 
 	if (! gigolo_settings_has_file_manager(priv->settings))
@@ -582,7 +577,7 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 
 static void action_open_terminal_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gpointer mnt;
 
 	if (! gigolo_settings_has_terminal(priv->settings))
@@ -657,7 +652,7 @@ static gboolean iter_is_bookmark(GigoloWindow *window, GtkTreeModel *model, GtkT
 	{
 		gchar *uri;
 		gboolean found = FALSE;
-		GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+		GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 		gigolo_backend_gvfs_get_name_and_uri_from_mount(ref, NULL, &uri);
 
@@ -700,7 +695,7 @@ static void update_create_edit_bookmark_action_label(GtkAction *action, gboolean
 
 static void update_sensitive_buttons(GigoloWindow *window, GtkTreeModel *model, GtkTreeIter *iter)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gint ref_type;
 	gboolean is_bookmark,is_mount, open_possible, open_terminal_possible;
 
@@ -735,7 +730,7 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloWindow 
 {
 	GtkTreeIter iter;
 	GtkTreeModel *model;
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	if (selection == NULL)
 		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview));
@@ -767,7 +762,7 @@ static void iconview_selection_changed_cb(GtkIconView *view, GigoloWindow *windo
 
 static void mounts_changed_cb(G_GNUC_UNUSED GigoloBackendGVFS *backend, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gint view_mode = gigolo_settings_get_integer(priv->settings, "view-mode");
 
 	if (view_mode == VIEW_MODE_ICONVIEW)
@@ -793,7 +788,7 @@ static void tree_row_activated_cb(G_GNUC_UNUSED GtkTreeView *treeview, GtkTreePa
 {
 	GtkTreeIter iter;
 	gint ref_type;
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	if (gtk_tree_model_get_iter(GTK_TREE_MODEL(priv->store), &iter, path))
 	{
@@ -823,7 +818,7 @@ static gboolean tree_button_press_event_cb(G_GNUC_UNUSED GtkWidget *widget,
 {
 	if (event->button == 3)
 	{
-		GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+		GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 		GtkTreeSelection *treesel = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview));
 		gboolean have_sel = (gtk_tree_selection_count_selected_rows(treesel) > 0);
 
@@ -857,7 +852,7 @@ static gboolean iconview_button_press_event_cb(GtkWidget *widget, GdkEventButton
 {
 	if (event->button == 3)
 	{
-		GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+		GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 		GList *items;
 		gboolean have_sel;
 
@@ -898,7 +893,7 @@ static gint sort_bookmarks(gconstpointer a, gconstpointer b)
 
 void gigolo_window_update_bookmarks(GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GigoloBookmarkList *bookmarks = gigolo_settings_get_bookmarks(priv->settings);
 
 	/* sort the bookmarks */
@@ -918,7 +913,7 @@ void gigolo_window_update_bookmarks(GigoloWindow *window)
 gboolean gigolo_window_do_autoconnect(gpointer data)
 {
 	GigoloWindow *window = GIGOLO_WINDOW(data);
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GigoloBookmarkList *bookmarks = gigolo_settings_get_bookmarks(priv->settings);
 	static gint old_interval = -1;
 	gint interval;
@@ -957,7 +952,7 @@ gboolean gigolo_window_do_autoconnect(gpointer data)
 
 static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeIter iter;
 	GtkTreeModel *model = GTK_TREE_MODEL(priv->store);
 
@@ -1025,7 +1020,7 @@ static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWin
 
 static void gigolo_window_show_side_panel(GigoloWindow *window, gboolean show)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	if (show)
 		gtk_widget_show(priv->hbox_pane);
@@ -1036,7 +1031,7 @@ static void gigolo_window_show_side_panel(GigoloWindow *window, gboolean show)
 
 static void gigolo_window_show_systray_icon(GigoloWindow *window, gboolean show)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS /* Gtk 3.14 */
 	gtk_status_icon_set_visible(priv->systray_icon, show);
@@ -1046,7 +1041,7 @@ static void gigolo_window_show_systray_icon(GigoloWindow *window, gboolean show)
 
 static void gigolo_window_show_toolbar(GigoloWindow *window, gboolean show)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	if (show)
 		gtk_widget_show(priv->toolbar);
@@ -1057,7 +1052,7 @@ static void gigolo_window_show_toolbar(GigoloWindow *window, gboolean show)
 
 static void gigolo_window_set_toolbar_style(GigoloWindow *window, gint style)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	if (style == -1)
 	{
 		g_object_get(gtk_widget_get_settings(GTK_WIDGET(window)), "gtk-toolbar-style", &style, NULL);
@@ -1072,7 +1067,7 @@ static void gigolo_window_set_toolbar_style(GigoloWindow *window, gint style)
 
 static void gigolo_window_set_toolbar_orientation(GigoloWindow *window, gint orientation)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	gtk_orientable_set_orientation(GTK_ORIENTABLE(priv->toolbar), orientation);
 	if (orientation == GTK_ORIENTATION_HORIZONTAL && priv->vbox != gtk_widget_get_parent(priv->toolbar))
@@ -1093,7 +1088,7 @@ static void gigolo_window_set_toolbar_orientation(GigoloWindow *window, gint ori
 
 static void gigolo_window_set_view_mode(GigoloWindow *window, gint mode)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	if (mode == VIEW_MODE_ICONVIEW && priv->hbox_view != gtk_widget_get_parent(priv->swin_iconview))
 	{
@@ -1112,7 +1107,7 @@ static void gigolo_window_set_view_mode(GigoloWindow *window, gint mode)
 
 static void toggle_action_set_active(GigoloWindow *window, const gchar *name, gboolean set)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkAction *action = gtk_action_group_get_action(priv->action_group, name);
 
 	gtk_toggle_action_set_active(GTK_TOGGLE_ACTION(action), set);
@@ -1121,7 +1116,7 @@ static void toggle_action_set_active(GigoloWindow *window, const gchar *name, gb
 
 static void view_mode_action_set_active(GigoloWindow *window, gint val)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkAction *action = gtk_action_group_get_action(priv->action_group, "ViewSymbols");
 
 	gtk_radio_action_set_current_value(GTK_RADIO_ACTION(action), val);
@@ -1314,7 +1309,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 	};
 	const guint radio_entries_n = G_N_ELEMENTS(radio_entries);
 	GError *error = NULL;
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkAction *open_terminal;
 	GtkIconTheme *icon_theme;
 
@@ -1353,7 +1348,7 @@ static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
 
 static void tree_mounted_col_toggled_cb(GtkCellRendererToggle *cell, gchar *pth, GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeSelection *selection;
 	GtkTreePath *path;
 
@@ -1373,7 +1368,7 @@ static void tree_mounted_col_toggled_cb(GtkCellRendererToggle *cell, gchar *pth,
 
 static void create_tree_view(GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
 	GtkTreeSelection *sel;
@@ -1435,7 +1430,7 @@ static void create_tree_view(GigoloWindow *window)
 
 static void create_icon_view(GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkCellRenderer *renderer;
 
 	priv->iconview = gtk_icon_view_new();
@@ -1480,7 +1475,7 @@ static void create_icon_view(GigoloWindow *window)
 static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
 {
 	GtkWidget *panel_pane, *label;
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	panel_pane = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
 	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
@@ -1518,7 +1513,7 @@ static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
 
 static void update_side_panel(GigoloWindow *window)
 {
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	guint panel_position;
 
 	if (! gigolo_backend_gvfs_is_scheme_supported("smb"))
@@ -1541,7 +1536,7 @@ static void gigolo_window_init(GigoloWindow *window)
 {
 	GtkWidget *menubar, *panel_pane;
 	GtkUIManager *ui_manager;
-	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	priv->autoconnect_timeout_id = (guint) -1;
 
@@ -1643,7 +1638,7 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	gint value;
 
 	window = g_object_new(GIGOLO_WINDOW_TYPE, NULL);
-	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	priv = gigolo_window_get_instance_private(GIGOLO_WINDOW(window));
 	priv->settings = settings;
 	g_signal_connect(settings, "notify", G_CALLBACK(gigolo_window_settings_notify_cb), window);
 
@@ -1699,7 +1694,7 @@ GigoloSettings *gigolo_window_get_settings(GigoloWindow *window)
 
 	g_return_val_if_fail(window != NULL, NULL);
 
-	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	priv = gigolo_window_get_instance_private(window);
 
 	return priv->settings;
 }
@@ -1711,7 +1706,7 @@ GigoloBackendGVFS *gigolo_window_get_backend(GigoloWindow *window)
 
 	g_return_val_if_fail(window != NULL, NULL);
 
-	priv = GIGOLO_WINDOW_GET_PRIVATE(window);
+	priv = gigolo_window_get_instance_private(window);
 
 	return priv->backend_gvfs;
 }

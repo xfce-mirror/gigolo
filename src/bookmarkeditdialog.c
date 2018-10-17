@@ -36,9 +36,6 @@
 
 typedef struct _GigoloBookmarkEditDialogPrivate			GigoloBookmarkEditDialogPrivate;
 
-#define GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(obj)	(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE, GigoloBookmarkEditDialogPrivate))
-
 struct _GigoloBookmarkEditDialogPrivate
 {
 	GigoloWindow *parent;
@@ -156,13 +153,13 @@ static guint methods_len = G_N_ELEMENTS(methods);
 
 
 
-G_DEFINE_TYPE(GigoloBookmarkEditDialog, gigolo_bookmark_edit_dialog, GTK_TYPE_DIALOG);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloBookmarkEditDialog, gigolo_bookmark_edit_dialog, GTK_TYPE_DIALOG);
 
 
 
 static void gigolo_bookmark_edit_dialog_finalize(GObject *object)
 {
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(object);
+	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(GIGOLO_BOOKMARK_EDIT_DIALOG(object));
 	GigoloBackendGVFS *backend;
 
 	backend = gigolo_window_get_backend(priv->parent);
@@ -210,7 +207,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 {
 	gint res;
 	gboolean error = FALSE;
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 	const gchar *tmp;
 
 	while (TRUE)
@@ -325,8 +322,6 @@ static void gigolo_bookmark_edit_dialog_class_init(GigoloBookmarkEditDialogClass
 
 	g_object_class->set_property = gigolo_bookmark_edit_dialog_set_property;
 
-	g_type_class_add_private(klass, sizeof(GigoloBookmarkEditDialogPrivate));
-
 	g_object_class_install_property(g_object_class,
 									PROP_MODE,
 									g_param_spec_int(
@@ -413,7 +408,7 @@ static void combo_set_active(GtkWidget *combo, guint idx)
 
 static void init_values(GigoloBookmarkEditDialog *dialog)
 {
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 	gchar *uri, *user;
 	const gchar *tmp;
 	guint port;
@@ -503,7 +498,7 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 	guint idx;
 	GtkWidget *table;
 	GtkTreeIter iter;
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 
 	if (! gtk_combo_box_get_active_iter(GTK_COMBO_BOX(priv->type_combo), &iter))
 		return;
@@ -700,7 +695,7 @@ static void fill_method_combo_box(GigoloBookmarkEditDialog *dialog)
 	GtkTreeModel *filter;
 	GtkTreeIter iter;
 	const gchar *scheme;
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 
 	/* 0 - method index, 1 - visible/supported flag, 2 - description */
 	store = gtk_list_store_new(3, G_TYPE_UINT, G_TYPE_BOOLEAN, G_TYPE_STRING);
@@ -757,7 +752,7 @@ static void update_bookmark_color(GigoloBookmarkEditDialog *dialog)
 	GdkRGBA color;
 	gchar *color_string;
 
-	priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 
 	if (! priv->color_set)
 		/* if no colour has been chosen by the user, don't set the default colour (black) */
@@ -781,7 +776,7 @@ static void update_bookmark(GigoloBookmarkEditDialog *dialog)
 
 	g_return_if_fail(dialog != NULL);
 
-	priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 	g_return_if_fail(priv->bookmark_update != NULL);
 	g_return_if_fail(gigolo_bookmark_is_valid(priv->bookmark_update));
 
@@ -851,7 +846,7 @@ static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop
 												   const GValue *value, GParamSpec *pspec)
 {
  	GigoloBookmarkEditDialog *dialog = GIGOLO_BOOKMARK_EDIT_DIALOG(object);
- 	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+ 	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 
 	switch (prop_id)
     {
@@ -920,7 +915,7 @@ static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop
 static void browse_host_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GSList *shares,
 									GigoloBookmarkEditDialog *dialog)
 {
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 
 	if (shares != NULL)
 	{
@@ -938,7 +933,7 @@ static void browse_host_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GSList
 
 static void share_button_clicked_cb(GtkWidget *btn, GigoloBookmarkEditDialog *dialog)
 {
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 	const gchar *hostname;
 
 	gtk_list_store_clear(GTK_LIST_STORE(gtk_combo_box_get_model(GTK_COMBO_BOX(priv->share_combo))));
@@ -971,7 +966,7 @@ static void entry_activate_cb(G_GNUC_UNUSED GtkEditable *editable, GigoloBookmar
 static void color_chooser_set_cb(G_GNUC_UNUSED GtkColorButton *widget,
 								 GigoloBookmarkEditDialog *dialog)
 {
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 
 	priv->color_set = TRUE;
 }
@@ -987,7 +982,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	GtkWidget *hbox;
 	GtkWidget *vbox;
 	GtkCellRenderer *renderer;
-	GigoloBookmarkEditDialogPrivate *priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 
 	priv->browse_host_signal_id = 0;
 	priv->dialog_type = GIGOLO_BE_MODE_EDIT;
@@ -1145,7 +1140,7 @@ GtkWidget *gigolo_bookmark_edit_dialog_new(GigoloWindow *parent, GigoloBookmarkE
 		"mode", mode,
 		NULL);
 
-	priv = GIGOLO_BOOKMARK_EDIT_DIALOG_GET_PRIVATE(dialog);
+	priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 	priv->parent = parent;
 
 	priv->browse_host_signal_id = g_signal_connect(gigolo_window_get_backend(parent),
