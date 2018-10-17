@@ -3,13 +3,6 @@
 - split GigoloApp from GigoloWindow
 - Samba mounts with set credentials can fail
 
-=== GtkMenu deprecations ===
-window.c:204:3: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
-window.c:831:4: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
-window.c:872:4: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
-browsenetworkpanel.c:282:3: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
-bookmarkdialog.c:258:3: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead
-
 === GObject deprecations ===
 window.c:182:2: warning: ‘g_type_class_add_private’ is deprecated
 bookmark.c:93:2: warning: ‘g_type_class_add_private’ is deprecated

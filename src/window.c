@@ -201,8 +201,8 @@ static void systray_icon_popup_menu_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon,
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
 	if (button == 3)
-		gtk_menu_popup(GTK_MENU(priv->systray_icon_popup_menu), NULL, NULL, NULL, NULL,
-			button, activate_time);
+		gtk_menu_popup_at_pointer (GTK_MENU(priv->systray_icon_popup_menu),
+								   NULL);
 }
 
 
@@ -828,8 +828,8 @@ static gboolean tree_button_press_event_cb(G_GNUC_UNUSED GtkWidget *widget,
 		gboolean have_sel = (gtk_tree_selection_count_selected_rows(treesel) > 0);
 
 		if (have_sel)
-			gtk_menu_popup(GTK_MENU(priv->tree_popup_menu), NULL, NULL, NULL, NULL,
-																event->button, event->time);
+			gtk_menu_popup_at_pointer (GTK_MENU(priv->tree_popup_menu),
+									   (GdkEvent*)event);
 	}
 	return FALSE;
 }
@@ -869,8 +869,8 @@ static gboolean iconview_button_press_event_cb(GtkWidget *widget, GdkEventButton
 		g_list_free(items);
 
 		if (have_sel)
-			gtk_menu_popup(GTK_MENU(priv->tree_popup_menu), NULL, NULL, NULL, NULL,
-																event->button, event->time);
+			gtk_menu_popup_at_pointer (GTK_MENU(priv->tree_popup_menu),
+									   (GdkEvent *)event);
 	}
 	return FALSE;
 }

@@ -279,8 +279,8 @@ static gboolean tree_button_release_event(G_GNUC_UNUSED GtkWidget *widget, GdkEv
 	if (event->button == 3)
 	{
 		GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
-		gtk_menu_popup(GTK_MENU(priv->popup_menu), NULL, NULL, NULL, NULL,
-															event->button, event->time);
+		gtk_menu_popup_at_pointer (GTK_MENU(priv->popup_menu),
+								   (GdkEvent *)event);
 		return TRUE;
 	}
 	return FALSE;

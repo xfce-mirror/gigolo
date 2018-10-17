@@ -255,8 +255,8 @@ static gboolean tree_button_press_event_cb(G_GNUC_UNUSED GtkWidget *widget,
 		gtk_widget_set_sensitive(priv->edit_item, have_sel);
 		gtk_widget_set_sensitive(priv->delete_item, have_sel);
 
-		gtk_menu_popup(GTK_MENU(priv->popup_menu), NULL, NULL, NULL, NULL,
-																event->button, event->time);
+		gtk_menu_popup_at_pointer (GTK_MENU(priv->popup_menu),
+								   (GdkEvent *)event);
 		return TRUE;
 	}
 	return FALSE;
