@@ -1038,7 +1038,9 @@ static void gigolo_window_show_systray_icon(GigoloWindow *window, gboolean show)
 {
 	GigoloWindowPrivate *priv = GIGOLO_WINDOW_GET_PRIVATE(window);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS /* Gtk 3.14 */
 	gtk_status_icon_set_visible(priv->systray_icon, show);
+	G_GNUC_END_IGNORE_DEPRECATIONS
 }
 
 
@@ -1620,8 +1622,10 @@ static void gigolo_window_init(GigoloWindow *window)
 	gtk_widget_show_all(priv->swin_treeview);
 
 	/* Status icon */
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS /* Gtk 3.14 */
 	priv->systray_icon = gtk_status_icon_new_from_icon_name(gigolo_get_application_icon_name());
 	gtk_status_icon_set_tooltip_text(priv->systray_icon, _("Gigolo"));
+	G_GNUC_END_IGNORE_DEPRECATIONS
 	g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
 	g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 	g_signal_connect(priv->systray_icon, "notify", G_CALLBACK(gigolo_window_systray_notify_cb), window);

@@ -21,11 +21,6 @@ bookmarkdialog.c:77:2: warning: ‘g_type_class_add_private’ is deprecated
 bookmarkeditdialog.c:328:2: warning: ‘g_type_class_add_private’ is deprecated
 browsenetworkpanel.c:102:2: warning: ‘g_type_class_add_private’ is deprecated
 
-=== GtkStatusIcon deprecations ===
-window.c:1041:2: warning: ‘gtk_status_icon_set_visible’ is deprecated
-window.c:1623:2: warning: ‘gtk_status_icon_new_from_icon_name’ is deprecated
-window.c:1624:2: warning: ‘gtk_status_icon_set_tooltip_text’ is deprecated
-
 === GtkUiManager deprecations ===
 window.c:1333:2: warning: ‘gtk_ui_manager_insert_action_group’ is deprecated
 window.c:1334:2: warning: ‘gtk_ui_manager_get_accel_group’ is deprecated
