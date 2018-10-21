@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2018-10-21 08:24+0000\n"
+"PO-Revision-Date: 2018-10-21 21:14+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "Dispositiu Unix"
 
 #: ../src/common.c:79
 msgid "Windows Share"
-msgstr "Recurs compartit de Windows"
+msgstr "Compartició de Windows"
 
 #: ../src/common.c:81
 msgid "FTP"
@@ -109,7 +109,7 @@ msgstr "Drets d'autor 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:434
 msgid "translator-credits"
-msgstr "Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.\nHarald Servat <redcrash@gmail.com>, 2009-2010.\nRobert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2017."
+msgstr "Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.\nHarald Servat <redcrash@gmail.com>, 2009-2010.\nRobert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2018."
 
 #: ../src/window.c:466
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -159,7 +159,7 @@ msgstr "_Accions"
 
 #: ../src/window.c:1284
 msgid "_View"
-msgstr "_Mostra"
+msgstr "_Visualitza"
 
 #: ../src/window.c:1285
 msgid "_Help"
@@ -284,7 +284,7 @@ msgstr "Domini: %s"
 #: ../src/bookmarkdialog.c:100
 #, c-format
 msgid "Share: %s"
-msgstr "Recurs compartit: %s"
+msgstr "Compartició: %s"
 
 #: ../src/bookmarkdialog.c:106
 #, c-format
@@ -327,7 +327,7 @@ msgstr "Heu d'introduir un nom per al marcador."
 #: ../src/bookmarkeditdialog.c:253
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "El nom del marcador que heu introduït ja està en ús. Escolliu-ne una altra."
+msgstr "El nom del marcador introduït ja està en ús. Escolliu-ne una altra."
 
 #: ../src/bookmarkeditdialog.c:266
 msgid "You must enter a server address or name."
@@ -335,7 +335,7 @@ msgstr "Heu d'introduir el nom o l'adreça d'un servidor."
 
 #: ../src/bookmarkeditdialog.c:277
 msgid "You must enter a share name."
-msgstr "Heu d'introduir el nom d'un recurs compartit."
+msgstr "Heu d'introduir el nom d'una compartició."
 
 #: ../src/bookmarkeditdialog.c:288
 msgid "You must enter a valid URI for the connection."
@@ -379,13 +379,13 @@ msgstr "_Tipus de servei:"
 
 #: ../src/bookmarkeditdialog.c:1091
 msgid "Set the port to 0 to use the default port"
-msgstr "Establiu el port a 0 per a utilitzar el port per defecte"
+msgstr "Establiu el port a 0 per utilitzar el port predeterminat"
 
 #: ../src/bookmarkeditdialog.c:1093
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Això no s'utilitza per al muntatge, només és per a l'obriment del punt de muntatge al navegador de fitxers"
+msgstr "No s'utilitza per al muntatge real, només és necessari per obrir el punt de muntatge en un navegador de fitxers"
 
 #: ../src/bookmarkeditdialog.c:1099
 msgid "_Location (URI):"
@@ -393,7 +393,7 @@ msgstr "_Ubicació (URI):"
 
 #: ../src/bookmarkeditdialog.c:1101
 msgid "_Folder:"
-msgstr "_Fitxer:"
+msgstr "Carpe_ta:"
 
 #: ../src/bookmarkeditdialog.c:1102
 msgid "P_ath:"
@@ -417,7 +417,7 @@ msgstr "_Domini:"
 
 #: ../src/bookmarkeditdialog.c:1107
 msgid "_Share:"
-msgstr "_Recurs compartit:"
+msgstr "_Compartició:"
 
 #: ../src/preferencesdialog.c:147
 msgid "Icons"
@@ -509,7 +509,7 @@ msgstr "Mostra el plafó lateral"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Si s'ha de mostrar un plafó lateral per a navegar pels recursos compartits Samba/Windows de la xarxa local i una llista dels marcadors"
+msgstr "Si s'ha de mostrar un plafó lateral per navegar per les comparticions Samba/Windows de la xarxa local i una llista dels marcadors"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -585,11 +585,11 @@ msgstr "Connectant-se"
 
 #: ../src/browsenetworkpanel.c:188
 msgid "No Workgroups found"
-msgstr "No s'han trobat grups de treball"
+msgstr "No s'ha trobat cap grup de treball"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Shares found"
-msgstr "No s'han trobat recursos compartits"
+msgstr "No s'ha trobat cap compartició"
 
 #: ../src/browsenetworkpanel.c:204
 msgid "No Hosts found"
@@ -597,11 +597,11 @@ msgstr "No s'ha trobat cap amfitrió"
 
 #: ../src/browsenetworkpanel.c:490
 msgid "Connect to the selected share"
-msgstr "Connecta al recurs compartit seleccionat"
+msgstr "Connecta't a la compartició seleccionada"
 
 #: ../src/browsenetworkpanel.c:498
 msgid "Create a bookmark from the selected share"
-msgstr "Crea un marcador a partir del recurs compartit seleccionat"
+msgstr "Crea un marcador a partir de la compartició seleccionada"
 
 #: ../src/browsenetworkpanel.c:507
 msgid "Refresh the network list"
