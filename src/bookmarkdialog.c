@@ -438,6 +438,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	tree_prepare(dialog);
 
 	swin = gtk_scrolled_window_new(NULL, NULL);
+	gtk_widget_set_vexpand (GTK_WIDGET (swin), TRUE);
 	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(swin),
 		GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(swin), GTK_SHADOW_IN);
