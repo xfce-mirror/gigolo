@@ -38,19 +38,16 @@ typedef struct _GigoloMenubuttonActionClass		GigoloMenubuttonActionClass;
 
 struct _GigoloMenubuttonAction
 {
-	GtkAction parent;
+	GtkMenu parent;
 };
 
 struct _GigoloMenubuttonActionClass
 {
-	GtkActionClass parent_class;
+	GtkMenuClass parent_class;
 };
 
 GType		gigolo_menu_button_action_get_type	(void);
-GtkAction*	gigolo_menu_button_action_new		(const gchar	*name,
-												 const gchar	*label,
-												 const gchar	*tooltip,
-												 const gchar	*icon_name);
+GtkMenu*	gigolo_menu_button_action_new		(const gchar	*name);
 
 G_END_DECLS
 

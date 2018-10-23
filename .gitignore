@@ -22,4 +22,6 @@ po/stamp-it
 src/*.o
 src/.deps/
 src/gigolo
+src/gigolo.ui~
+src/gigolo_ui.h
 stamp-h1

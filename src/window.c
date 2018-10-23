@@ -39,6 +39,8 @@
 #include "browsenetworkpanel.h"
 #include "bookmarkpanel.h"
 
+#include "gigolo_ui.h"
+
 
 typedef struct _GigoloWindowPrivate			GigoloWindowPrivate;
 
@@ -50,30 +52,23 @@ struct _GigoloWindowPrivate
 {
 	GigoloSettings	*settings;
 	GigoloBackendGVFS	*backend_gvfs;
+	GtkBuilder      *builder;
 
 	GtkWidget		*vbox;
-	GtkWidget		*hbox_pane;
 	GtkWidget		*hbox_view;
 
 	GtkWidget		*panel_pane;
 	GtkWidget		*browse_panel;
 	GtkWidget		*bookmark_panel;
 	GtkWidget		*notebook_panel;
+	GtkWidget		*notebook_store;
 	GtkWidget		*treeview;
 	GtkWidget		*iconview;
 	GtkWidget		*swin_treeview;
 	GtkWidget		*swin_iconview;
 	GtkListStore	*store;
 	GtkWidget		*tree_popup_menu;
-	GtkAction		*action_connect;
-	GtkAction		*action_disconnect;
-	GtkAction		*action_bookmarks;
-	GtkAction		*action_bookmark_create;
-	GtkAction		*action_open;
-	GtkAction		*action_open_terminal;
-	GtkAction		*action_copyuri;
-
-	GtkActionGroup	*action_group;
+	GtkMenu		    *bookmarks_menu;
 
 	GtkWidget		*toolbar;
 	GtkStatusIcon	*systray_icon;
@@ -142,7 +137,6 @@ static void gigolo_window_destroy(GigoloWindow *window)
 	gtk_widget_destroy(priv->swin_treeview);
 	gtk_widget_destroy(priv->swin_iconview);
 	g_object_unref(priv->toolbar);
-	g_object_unref(priv->action_group);
 	g_object_unref(priv->systray_icon);
 	g_object_unref(priv->systray_icon_popup_menu);
 	g_object_unref(priv->backend_gvfs);
@@ -270,7 +264,7 @@ void gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *boo
 }
 
 
-static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void mount_cb(G_GNUC_UNUSED GtkWidget *widget, GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeIter iter;
@@ -311,7 +305,7 @@ static void action_mount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 }
 
 
-static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void preferences_cb(GtkWidget *widget, GigoloWindow *window)
 {
 	GtkWidget *dialog;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
@@ -326,35 +320,30 @@ static void action_preferences_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow 
 }
 
 
-static void action_toggle_view_cb(GtkToggleAction *action, GigoloWindow *window)
+static void toggle_view_cb(GtkWidget *item, GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
-	gboolean active = gtk_toggle_action_get_active(action);
-	const gchar *property = NULL;
-
-	if (gtk_action_get_name(GTK_ACTION(action)) == g_intern_string("ShowPanel"))
-		property = "show-panel";
-	else if (gtk_action_get_name(GTK_ACTION(action)) == g_intern_string("ShowToolbar"))
-		property = "show-toolbar";
-	else if (gtk_action_get_name(GTK_ACTION(action)) == g_intern_string("ShowInSystray"))
-		property = "show-in-systray";
+	gboolean active = gtk_check_menu_item_get_active (GTK_CHECK_MENU_ITEM (item));
+	gchar *property = (gchar *) g_object_get_data (G_OBJECT (item), "opt-view");
 
 	if (property != NULL)
 		g_object_set(priv->settings, property, active, NULL);
 }
 
 
-static void action_view_mode_change_cb(G_GNUC_UNUSED GtkRadioAction *action,
-									   GtkRadioAction *current, GigoloWindow *window)
+static void view_mode_change_cb(GtkWidget    *widget,
+									   GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
-	gint mode = gtk_radio_action_get_current_value(current);
-
+	gint mode = VIEW_MODE_ICONVIEW;
+	if (!gtk_check_menu_item_get_active (GTK_CHECK_MENU_ITEM (widget))) {
+		mode = VIEW_MODE_TREEVIEW;
+	}
 	g_object_set(priv->settings, "view-mode", mode, NULL);
 }
 
 
-static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void unmount_cb(GtkWidget *widget, GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeIter iter;
@@ -385,13 +374,13 @@ static void action_unmount_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *win
 }
 
 
-static void action_quit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void quit_cb(GtkWidget *widget, GigoloWindow *window)
 {
     gigolo_window_destroy(window);
 }
 
 
-static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void bookmark_edit_cb(GtkWidget *widget, GigoloWindow *window)
 {
 	GtkWidget *dialog;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
@@ -405,7 +394,7 @@ static void action_bookmark_edit_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindo
 }
 
 
-static void action_about_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void about_cb(GtkWidget *widget, GigoloWindow *window)
 {
     const gchar *authors[]= { "Enrico Tröger <enrico@xfce.org>", NULL };
 
@@ -434,13 +423,13 @@ static void action_about_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *windo
 }
 
 
-static void action_help_cb(G_GNUC_UNUSED GtkAction *action, G_GNUC_UNUSED GigoloWindow *window)
+static void help_cb(GtkWidget *widget, G_GNUC_UNUSED GigoloWindow *window)
 {
 	gigolo_show_uri("http://www.uvena.de/gigolo/help.html");
 }
 
 
-static void action_supported_schemes_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void supported_schemes_cb(GtkWidget *widget, GigoloWindow *window)
 {
 	const gchar* const *supported;
 	const gchar *description;
@@ -473,7 +462,7 @@ static void action_supported_schemes_cb(G_GNUC_UNUSED GtkAction *action, GigoloW
 }
 
 
-static void action_copy_uri_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void copy_uri_cb(GtkWidget *widget, GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeIter iter;
@@ -528,7 +517,7 @@ static gpointer get_selected_mount(GigoloWindow *window)
 }
 
 
-static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void open_cb(GtkWidget *widget, GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gpointer mnt;
@@ -575,7 +564,7 @@ static void action_open_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window
 }
 
 
-static void action_open_terminal_cb(G_GNUC_UNUSED GtkAction *action, GigoloWindow *window)
+static void open_terminal_cb(GtkWidget *widget, GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gpointer mnt;
@@ -683,13 +672,53 @@ static gboolean iter_is_mount(GtkTreeModel *model, GtkTreeIter *iter)
 }
 
 
-static void update_create_edit_bookmark_action_label(GtkAction *action, gboolean is_bookmark)
+static void set_action_sensitive (GtkBuilder *builder, const gchar *action, gboolean is_sensitive)
 {
-	gtk_action_set_sensitive(action, TRUE);
+	GObject *object;
+	gchar   *id;
+
+	id = g_strconcat ("menuitem_", action, NULL);
+	object = gtk_builder_get_object (builder, id);
+	if (object != NULL)
+	{
+		gtk_widget_set_sensitive (GTK_WIDGET (object), is_sensitive);
+	}
+	g_free (id);
+
+	id = g_strconcat ("toolitem_", action, NULL);
+	object = gtk_builder_get_object (builder, id);
+	if (object != NULL)
+	{
+		gtk_widget_set_sensitive (GTK_WIDGET (object), is_sensitive);
+	}
+	g_free (id);
+
+	id = g_strconcat ("systray_", action, NULL);
+	object = gtk_builder_get_object (builder, id);
+	if (object != NULL)
+	{
+		gtk_widget_set_sensitive (GTK_WIDGET (object), is_sensitive);
+	}
+	g_free (id);
+
+	id = g_strconcat ("popupitem_", action, NULL);
+	object = gtk_builder_get_object (builder, id);
+	if (object != NULL)
+	{
+		gtk_widget_set_sensitive (GTK_WIDGET (object), is_sensitive);
+	}
+	g_free (id);
+}
+
+
+static void update_create_edit_bookmark_action_label(GtkBuilder *builder, gboolean is_bookmark)
+{
+	GtkWidget *widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_EditBookmark"));
+	gtk_widget_set_sensitive (widget, TRUE);
 	if (is_bookmark)
-		gtk_action_set_label(action, _("Edit _Bookmark"));
+		gtk_menu_item_set_label(GTK_MENU_ITEM (widget), _("Edit _Bookmark"));
 	else
-		gtk_action_set_label(action, _("Create _Bookmark"));
+		gtk_menu_item_set_label(GTK_MENU_ITEM (widget), _("Create _Bookmark"));
 }
 
 
@@ -707,21 +736,21 @@ static void update_sensitive_buttons(GigoloWindow *window, GtkTreeModel *model, 
 		open_possible = is_mount && gigolo_settings_has_file_manager(priv->settings);
 		open_terminal_possible = is_mount && gigolo_settings_has_terminal(priv->settings);
 
-		/* gtk_action_set_sensitive(priv->action_connect, (ref_type != GIGOLO_WINDOW_REF_TYPE_MOUNT));*/
-		gtk_action_set_sensitive(priv->action_disconnect, (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
-		update_create_edit_bookmark_action_label(priv->action_bookmark_create, is_bookmark);
-		gtk_action_set_sensitive(priv->action_open, open_possible);
-		gtk_action_set_sensitive(priv->action_open_terminal, open_terminal_possible);
-		gtk_action_set_sensitive(priv->action_copyuri, (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
+		/* set_action_sensitive (priv->builder, "Connect", (ref_type != GIGOLO_WINDOW_REF_TYPE_MOUNT));*/
+		set_action_sensitive (priv->builder, "Disconnect", (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
+		update_create_edit_bookmark_action_label(priv->builder, is_bookmark);
+		set_action_sensitive (priv->builder, "Open", open_possible);
+		set_action_sensitive (priv->builder, "OpenTerminal", open_terminal_possible);
+		set_action_sensitive (priv->builder, "CopyURI", (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT));
 	}
 	else
 	{
-		/* gtk_action_set_sensitive(priv->action_connect, FALSE); */
-		gtk_action_set_sensitive(priv->action_disconnect, FALSE);
-		gtk_action_set_sensitive(priv->action_bookmark_create, FALSE);
-		gtk_action_set_sensitive(priv->action_open, FALSE);
-		gtk_action_set_sensitive(priv->action_open_terminal, FALSE);
-		gtk_action_set_sensitive(priv->action_copyuri, FALSE);
+		/* set_action_sensitive (priv->builder, "Connect", FALSE); */
+		set_action_sensitive (priv->builder, "Disconnect", FALSE);
+		set_action_sensitive (priv->builder, "EditBookmark", FALSE);
+		set_action_sensitive (priv->builder, "Open", FALSE);
+		set_action_sensitive (priv->builder, "OpenTerminal", FALSE);
+		set_action_sensitive (priv->builder, "CopyURI", FALSE);
 	}
 }
 
@@ -796,11 +825,11 @@ static void tree_row_activated_cb(G_GNUC_UNUSED GtkTreeView *treeview, GtkTreePa
 			GIGOLO_WINDOW_COL_REF_TYPE, &ref_type, -1);
 		if (ref_type == GIGOLO_WINDOW_REF_TYPE_MOUNT)
 		{	/* action_unmount_cb(NULL, data); */
-			action_open_cb(NULL, window);
+			open_cb(NULL, window);
 		}
 		else
 		{
-			action_mount_cb(NULL, window);
+			mount_cb(NULL, window);
 		}
 	}
 }
@@ -900,7 +929,7 @@ void gigolo_window_update_bookmarks(GigoloWindow *window)
 	g_ptr_array_sort(bookmarks, sort_bookmarks);
 
 	/* writing to the 'settings' property will update the menus */
-	g_object_set(priv->action_bookmarks, "settings", priv->settings, NULL);
+	g_object_set(priv->bookmarks_menu, "settings", priv->settings, NULL);
 	g_object_set(priv->bookmark_panel, "settings", priv->settings, NULL);
 
 	/* update the popup menu items */
@@ -950,7 +979,7 @@ gboolean gigolo_window_do_autoconnect(gpointer data)
 }
 
 
-static void action_create_bookmark_cb(G_GNUC_UNUSED GtkAction *button, GigoloWindow *window)
+static void create_bookmark_cb(GtkWidget *widget, GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkTreeIter iter;
@@ -1023,9 +1052,9 @@ static void gigolo_window_show_side_panel(GigoloWindow *window, gboolean show)
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	if (show)
-		gtk_widget_show(priv->hbox_pane);
+		gtk_widget_show(priv->notebook_panel);
 	else
-		gtk_widget_hide(priv->hbox_pane);
+		gtk_widget_hide(priv->notebook_panel);
 }
 
 
@@ -1090,36 +1119,46 @@ static void gigolo_window_set_view_mode(GigoloWindow *window, gint mode)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
-	if (mode == VIEW_MODE_ICONVIEW && priv->hbox_view != gtk_widget_get_parent(priv->swin_iconview))
+	if (mode == VIEW_MODE_ICONVIEW)
 	{
 		gtk_tree_selection_unselect_all(gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview)));
-		gtk_container_remove(GTK_CONTAINER(priv->hbox_view), priv->swin_treeview);
-		gtk_container_add(GTK_CONTAINER(priv->hbox_view), priv->swin_iconview);
+		gtk_notebook_set_current_page (GTK_NOTEBOOK (priv->notebook_store), 1);
 	}
-	else if (mode == VIEW_MODE_TREEVIEW &&  priv->hbox_view != gtk_widget_get_parent(priv->swin_treeview))
+	else if (mode == VIEW_MODE_TREEVIEW)
 	{
 		gtk_icon_view_unselect_all(GTK_ICON_VIEW(priv->iconview));
-		gtk_container_remove(GTK_CONTAINER(priv->hbox_view), priv->swin_iconview);
-		gtk_container_add(GTK_CONTAINER(priv->hbox_view), priv->swin_treeview);
+		gtk_notebook_set_current_page (GTK_NOTEBOOK (priv->notebook_store), 0);
 	}
 }
 
 
-static void toggle_action_set_active(GigoloWindow *window, const gchar *name, gboolean set)
+static void toggle_set_active(GigoloWindow *window, const gchar *name, gboolean set)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
-	GtkAction *action = gtk_action_group_get_action(priv->action_group, name);
+	GtkBuilder *builder = priv->builder;
+	GtkWidget  *widget;
+	gchar *widget_name;
 
-	gtk_toggle_action_set_active(GTK_TOGGLE_ACTION(action), set);
+	widget_name = g_strconcat ("menuitem_", name, NULL);
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, widget_name));
+
+	gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (widget), set);
 }
 
 
 static void view_mode_action_set_active(GigoloWindow *window, gint val)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
-	GtkAction *action = gtk_action_group_get_action(priv->action_group, "ViewSymbols");
+	GtkBuilder *builder = priv->builder;
+	GtkWidget *widget;
 
-	gtk_radio_action_set_current_value(GTK_RADIO_ACTION(action), val);
+	if (val == VIEW_MODE_ICONVIEW) {
+		widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_ViewSymbols"));
+	} else {
+		widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_ViewDetailed"));
+	}
+
+	gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (widget), TRUE);
 }
 
 
@@ -1163,13 +1202,13 @@ static void gigolo_window_settings_notify_cb(GigoloSettings *settings, GParamSpe
 	{
 		gboolean state = g_value_get_boolean(value);
 		gigolo_window_show_toolbar(window, state);
-		toggle_action_set_active(window, "ShowToolbar", state);
+		toggle_set_active(window, "ShowToolbar", state);
 	}
 	else if (name == g_intern_string("show-in-systray"))
 	{
 		gboolean state = g_value_get_boolean(value);
 		gigolo_window_show_systray_icon(window, state);
-		toggle_action_set_active(window, "ShowInSystray", state);
+		toggle_set_active(window, "ShowInSystray", state);
 	}
 	else if (name == g_intern_string("toolbar-style"))
 		gigolo_window_set_toolbar_style(window, g_value_get_int(value));
@@ -1185,7 +1224,7 @@ static void gigolo_window_settings_notify_cb(GigoloSettings *settings, GParamSpe
 	{
 		gboolean state = g_value_get_boolean(value);
 		gigolo_window_show_side_panel(window, state);
-		toggle_action_set_active(window, "ShowPanel", state);
+		toggle_set_active(window, "ShowPanel", state);
 	}
 	else if (! g_object_class_find_property(G_OBJECT_GET_CLASS(settings), name))
 		 verbose("Unexpected setting '%s'", name);
@@ -1194,154 +1233,163 @@ static void gigolo_window_settings_notify_cb(GigoloSettings *settings, GParamSpe
 }
 
 
-static void create_ui_elements(GigoloWindow *window, GtkUIManager *ui_manager)
+static void bind_actions (GigoloWindow *window)
 {
-	const gchar *ui_markup =
-	"<ui>"
-		"<menubar>"
-			"<menu action='File'>"
-				"<menuitem action='Quit'/>"
-			"</menu>"
-			"<menu action='Edit'>"
-				"<menuitem action='EditBookmarks'/>"
-				"<separator/>"
-				"<menuitem action='Preferences'/>"
-			"</menu>"
-			"<menu action='View'>"
-				"<menuitem action='ShowToolbar'/>"
-				"<menuitem action='ShowPanel'/>"
-				"<menuitem action='ShowInSystray'/>"
-				"<separator/>"
-				"<menuitem action='ViewDetailed'/>"
-				"<menuitem action='ViewSymbols'/>"
-			"</menu>"
-			"<menu action='Actions'>"
-				"<menuitem action='Connect'/>"
-				"<menuitem action='Disconnect'/>"
-				"<menuitem action='Bookmarks'/>"
-				"<separator/>"
-				"<menuitem action='Open'/>"
-				"<menuitem action='OpenTerminal'/>"
-				"<menuitem action='CopyURI'/>"
-			"</menu>"
-			"<menu action='Help'>"
-				"<menuitem action='OnlineHelp'/>"
-				"<menuitem action='SupportedSchemes'/>"
-				"<separator/>"
-				"<menuitem action='About'/>"
-			"</menu>"
-		"</menubar>"
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
+	GtkBuilder          *builder = priv->builder;
+	GtkWidget           *widget;
 
-		"<popup name='systraymenu'>"
-			"<menuitem action='Connect'/>"
-			"<menuitem action='Bookmarks'/>"
-			"<separator/>"
-			"<menuitem action='EditBookmarks'/>"
-			"<menuitem action='Preferences'/>"
-			"<separator/>"
-			"<menuitem action='Quit'/>"
-		"</popup>"
+	/* Preferences (Ctrl + P) */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_Preferences"));
+	g_signal_connect (widget, "activate", G_CALLBACK(preferences_cb), window);
 
-		"<popup name='treemenu'>"
-			"<menuitem action='Open'/>"
-			"<menuitem action='OpenTerminal'/>"
-			"<menuitem action='CopyURI'/>"
-			"<menuitem action='CreateBookmark'/>"
-			"<separator/>"
-			"<menuitem action='Connect'/>"
-			"<menuitem action='Disconnect'/>"
-		"</popup>"
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "systray_Preferences"));
+	g_signal_connect (widget, "activate", G_CALLBACK(preferences_cb), window);
 
-		"<toolbar>"
-			"<toolitem action='Bookmarks'/>"
-			"<toolitem action='Disconnect'/>"
-			"<separator/>"
-			"<toolitem action='EditBookmarks'/>"
-			"<separator/>"
-			"<toolitem action='Open'/>"
-			"<toolitem action='OpenTerminal'/>"
-			"<separator/>"
-			"<toolitem action='Quit'/>"
-		"</toolbar>"
-	"</ui>";
-	const GtkActionEntry entries[] = {
-		{"File", NULL, N_("_File"), NULL, NULL, NULL},
-		{"Edit", NULL, N_("_Edit"), NULL, NULL, NULL},
-		{"Actions", NULL, N_("_Actions"), NULL, NULL, NULL},
-		{"View", NULL, N_("_View"), NULL, NULL, NULL},
-		{"Help", NULL, N_("_Help"), NULL, NULL, NULL},
-		{"Preferences", "preferences-system",
-		 N_("_Preferences"), "<Ctrl>p", NULL, G_CALLBACK(action_preferences_cb)},
-		{"CreateBookmark", "list-add",
-		 N_("Create _Bookmark"), "<Ctrl>n", NULL, G_CALLBACK(action_create_bookmark_cb)},
-		{"EditBookmarks", "gtk-edit",
-		 N_("_Edit Bookmarks"), "<Ctrl>b",
-		 N_("Open the bookmark manager to add, edit or delete bookmarks"),
-		 G_CALLBACK(action_bookmark_edit_cb)},
-		{"Connect", "gtk-connect", N_("_Connect"), NULL, NULL, G_CALLBACK(action_mount_cb)},
-		{"Disconnect", "gtk-disconnect", N_("_Disconnect"), NULL,
-		 N_("Disconnect the selected resource"), G_CALLBACK(action_unmount_cb)},
-		{"Open", "document-open", N_("_Open"), "<Ctrl>o",
-		 N_("Open the selected resource with a file manager"), G_CALLBACK(action_open_cb)},
-		{"OpenTerminal", NULL, _("Open in _Terminal"), "<Ctrl>t",
-		 N_("Start a terminal from here"), G_CALLBACK(action_open_terminal_cb)},
-		{"CopyURI", "edit-copy", N_("Copy _URI"), "<Ctrl>c", NULL, G_CALLBACK(action_copy_uri_cb)},
-		{"Quit", "application-exit", N_("_Quit"), "<Ctrl>q", N_("Quit Gigolo"), G_CALLBACK(action_quit_cb)},
-		{"OnlineHelp", "go-home", _("Online Help"), NULL, NULL, G_CALLBACK(action_help_cb)},
-		{"SupportedSchemes", NULL, _("Supported Protocols"), NULL, NULL, G_CALLBACK(action_supported_schemes_cb)},
-		{"About", "help-about", N_("_About"), NULL, NULL, G_CALLBACK(action_about_cb)}};
-	const guint entries_n = G_N_ELEMENTS(entries);
+	/* Bookmarks */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menu_Bookmarks"));
+	gtk_menu_item_set_submenu (GTK_MENU_ITEM (widget), GTK_WIDGET (priv->bookmarks_menu));
+	gtk_widget_set_sensitive (widget, TRUE);
 
-	const GtkToggleActionEntry toggle_entries[] = {
-		{ "ShowPanel", NULL, N_("Side _Panel"),
-			NULL, NULL, G_CALLBACK(action_toggle_view_cb), FALSE },
-		{ "ShowToolbar", NULL, N_("_Toolbar"),
-			NULL, NULL, G_CALLBACK(action_toggle_view_cb), FALSE },
-		{ "ShowInSystray", NULL, N_("Status _Icon"),
-			NULL, NULL, G_CALLBACK(action_toggle_view_cb), FALSE }
-	};
-	const guint toggle_entries_n = G_N_ELEMENTS(toggle_entries);
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_Bookmarks"));
+	gtk_menu_tool_button_set_menu (GTK_MENU_TOOL_BUTTON (widget), GTK_WIDGET (priv->bookmarks_menu));
 
-	const GtkRadioActionEntry radio_entries[] = {
-		{ "ViewDetailed", NULL, N_("View as _Symbols"), NULL, NULL, 0 },
-		{ "ViewSymbols", NULL, N_("View as _Detailed List"), NULL, NULL, 1 },
-	};
-	const guint radio_entries_n = G_N_ELEMENTS(radio_entries);
+	/* Create (Edit) Bookmark (Ctrl + N) */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_EditBookmark"));
+	g_signal_connect (widget, "activate", G_CALLBACK(create_bookmark_cb), window);
+
+	/* Edit Bookmarks (Ctrl + B) */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_EditBookmarks"));
+	g_signal_connect (widget, "activate", G_CALLBACK(bookmark_edit_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_EditBookmarks"));
+	g_signal_connect (widget, "clicked", G_CALLBACK(bookmark_edit_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "systray_EditBookmarks"));
+	g_signal_connect (widget, "activate", G_CALLBACK(bookmark_edit_cb), window);
+
+	/* Connect */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_Connect"));
+	g_signal_connect (widget, "activate", G_CALLBACK(mount_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_Bookmarks"));
+	g_signal_connect (widget, "clicked", G_CALLBACK(mount_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "systray_Connect"));
+	g_signal_connect (widget, "activate", G_CALLBACK(mount_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_Connect"));
+	g_signal_connect (widget, "activate", G_CALLBACK(mount_cb), window);
+
+	/* Disconnect */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_Disconnect"));
+	g_signal_connect (widget, "activate", G_CALLBACK(unmount_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_Disconnect"));
+	g_signal_connect (widget, "clicked", G_CALLBACK(unmount_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_Disconnect"));
+	g_signal_connect (widget, "activate", G_CALLBACK(unmount_cb), window);
+
+	/* Open */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_Open"));
+	g_signal_connect (widget, "activate", G_CALLBACK(open_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_Open"));
+	g_signal_connect (widget, "clicked", G_CALLBACK(open_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_Open"));
+	g_signal_connect (widget, "activate", G_CALLBACK(open_cb), window);
+
+	/* Open Terminal (Ctrl + T) */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_OpenTerminal"));
+	g_signal_connect (widget, "activate", G_CALLBACK(open_terminal_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_OpenTerminal"));
+	g_signal_connect (widget, "clicked", G_CALLBACK(open_terminal_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_OpenTerminal"));
+	g_signal_connect (widget, "activate", G_CALLBACK(open_terminal_cb), window);
+
+	/* Copy URI (Ctrl + C) */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_CopyURI"));
+	g_signal_connect (widget, "activate", G_CALLBACK(copy_uri_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_CopyURI"));
+	g_signal_connect (widget, "activate", G_CALLBACK(copy_uri_cb), window);
+
+	/* Quit (Ctrl + Q) */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_Quit"));
+	g_signal_connect (widget, "activate", G_CALLBACK(quit_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_Quit"));
+	g_signal_connect (widget, "clicked", G_CALLBACK(quit_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "systray_Quit"));
+	g_signal_connect (widget, "activate", G_CALLBACK(quit_cb), window);
+
+	/* Online Help (Ctrl + H) */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_OnlineHelp"));
+	g_signal_connect (widget, "activate", G_CALLBACK(help_cb), window);
+
+	/* Supported Schemes */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_SupportedSchemes"));
+	g_signal_connect (widget, "activate", G_CALLBACK(supported_schemes_cb), window);
+
+	/* About */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_About"));
+	g_signal_connect (widget, "activate", G_CALLBACK(about_cb), window);
+
+	/* Views */
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_ShowPanel"));
+	g_object_set_data_full (G_OBJECT (widget), "opt-view", g_strdup("show-panel"), (GDestroyNotify) g_free);
+	g_signal_connect (widget, "toggled", G_CALLBACK(toggle_view_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_ShowToolbar"));
+	g_object_set_data_full (G_OBJECT (widget), "opt-view", g_strdup("show-toolbar"), (GDestroyNotify) g_free);
+	g_signal_connect (widget, "toggled", G_CALLBACK(toggle_view_cb), window);
+	
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_ShowInSystray"));
+	g_object_set_data_full (G_OBJECT (widget), "opt-view", g_strdup("show-in-systray"), (GDestroyNotify) g_free);
+	g_signal_connect (widget, "toggled", G_CALLBACK(toggle_view_cb), window);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_ViewSymbols"));
+	g_signal_connect (widget, "toggled", G_CALLBACK(view_mode_change_cb), window);
+}
+
+
+static void create_ui_elements(GigoloWindow *window)
+{
 	GError *error = NULL;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
-	GtkAction *open_terminal;
-	GtkIconTheme *icon_theme;
+	priv->builder = gtk_builder_new();
+	gtk_builder_add_from_string(priv->builder, gigolo_ui,
+								gigolo_ui_length, &error);
 
-	priv->action_bookmarks = gigolo_menu_button_action_new(
-		"Bookmarks", _("_Bookmarks"), _("Choose a bookmark to connect to"),
-		gigolo_find_icon_name("bookmark-new", "gtk-edit"));
-	g_signal_connect(priv->action_bookmarks, "item-clicked",
+	priv->vbox = GTK_WIDGET (gtk_builder_get_object (priv->builder, "vbox"));
+	priv->hbox_view = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_view"));
+	priv->notebook_panel = GTK_WIDGET (gtk_builder_get_object (priv->builder, "notebook_panel"));
+	priv->panel_pane = GTK_WIDGET (gtk_builder_get_object (priv->builder, "panel_pane"));
+	priv->swin_treeview = GTK_WIDGET (gtk_builder_get_object (priv->builder, "swin_treeview"));
+	priv->swin_iconview = GTK_WIDGET (gtk_builder_get_object (priv->builder, "swin_iconview"));
+	priv->tree_popup_menu = GTK_WIDGET (gtk_builder_get_object (priv->builder, "tree_popup_menu"));
+	priv->toolbar = GTK_WIDGET (gtk_builder_get_object (priv->builder, "toolbar"));
+	priv->systray_icon_popup_menu = GTK_WIDGET (gtk_builder_get_object (priv->builder, "systray_icon_popup_menu"));
+	priv->notebook_store = GTK_WIDGET (gtk_builder_get_object (priv->builder, "notebook_store"));
+
+	gtk_notebook_set_current_page (GTK_NOTEBOOK (priv->notebook_store), 0);
+
+	g_object_ref (priv->vbox);
+	gtk_container_remove (GTK_CONTAINER (gtk_builder_get_object (priv->builder, "gigolo_window")), priv->vbox);
+	gtk_container_add (GTK_CONTAINER (window), priv->vbox);
+	g_object_unref (priv->vbox);
+
+	priv->bookmarks_menu = gigolo_menu_button_action_new("Bookmarks");
+	g_signal_connect(priv->bookmarks_menu, "item-clicked",
 		G_CALLBACK(action_bookmark_activate_cb), window);
-	g_signal_connect(priv->action_bookmarks, "button-clicked", G_CALLBACK(action_mount_cb), window);
+	g_signal_connect(priv->bookmarks_menu, "button-clicked", G_CALLBACK(mount_cb), window);
 
-	priv->action_group = gtk_action_group_new("UI");
-	gtk_action_group_set_translation_domain(priv->action_group, GETTEXT_PACKAGE);
-	gtk_action_group_add_actions(priv->action_group, entries, entries_n, window);
-	gtk_action_group_add_toggle_actions(priv->action_group, toggle_entries, toggle_entries_n, window);
-	gtk_action_group_add_radio_actions(priv->action_group, radio_entries, radio_entries_n, -1,
-		G_CALLBACK(action_view_mode_change_cb), window);
-	gtk_action_group_add_action(priv->action_group, priv->action_bookmarks);
-	gtk_ui_manager_insert_action_group(ui_manager, priv->action_group, 0);
-	gtk_window_add_accel_group(GTK_WINDOW(window), gtk_ui_manager_get_accel_group(ui_manager));
-
-	/* set terminal icon for the "OpenTerminal" action */
-	open_terminal = gtk_action_group_get_action(priv->action_group, "OpenTerminal");
-	icon_theme = gtk_icon_theme_get_for_screen(gtk_widget_get_screen(GTK_WIDGET(window)));
-	if (gtk_icon_theme_has_icon(icon_theme, "utilities-terminal"))
-		gtk_action_set_icon_name(open_terminal, "utilities-terminal");
-	else
-		gtk_action_set_icon_name(open_terminal, "document-open");
-
-	if (! gtk_ui_manager_add_ui_from_string(ui_manager, ui_markup, -1, &error))
-	{
-		verbose("User interface couldn't be created: %s", error->message);
-		g_error_free(error);
-	}
+	bind_actions (window);
 }
 
 
@@ -1357,9 +1405,9 @@ static void tree_mounted_col_toggled_cb(GtkCellRendererToggle *cell, gchar *pth,
 	gtk_tree_selection_select_path(selection, path);
 
 	if (gtk_cell_renderer_toggle_get_active(cell))
-		action_unmount_cb(NULL, window);
+		unmount_cb(NULL, window);
 	else
-		action_mount_cb(NULL, window);
+		mount_cb(NULL, window);
 
 	gtk_tree_path_free(path);
 }
@@ -1471,17 +1519,10 @@ static void create_icon_view(GigoloWindow *window)
 }
 
 
-static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
+static void gigolo_window_create_panel(GigoloWindow *window)
 {
-	GtkWidget *panel_pane, *label;
+	GtkWidget *label;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
-
-	panel_pane = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
-	gtk_paned_set_position(GTK_PANED(panel_pane), 200);
-
-	priv->notebook_panel = gtk_notebook_new();
-	gtk_notebook_set_tab_pos(GTK_NOTEBOOK(priv->notebook_panel), GTK_POS_LEFT);
-	gtk_widget_show(priv->notebook_panel);
 
 	label = gtk_label_new(_("Bookmarks"));
 	gtk_label_set_angle(GTK_LABEL(label), 90.0);
@@ -1498,15 +1539,6 @@ static GtkWidget *gigolo_window_create_panel(GigoloWindow *window)
 	priv->browse_panel = gigolo_browse_network_panel_new(window);
 	gtk_widget_show(priv->browse_panel);
 	gtk_notebook_append_page(GTK_NOTEBOOK(priv->notebook_panel), priv->browse_panel, label);
-
-	priv->hbox_view = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-	priv->hbox_pane = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-
-	gtk_paned_add1(GTK_PANED(panel_pane), priv->hbox_pane);
-	gtk_paned_add2(GTK_PANED(panel_pane), priv->hbox_view);
-	gtk_box_pack_start(GTK_BOX(priv->hbox_pane), priv->notebook_panel, TRUE, TRUE, 0);
-
-	return panel_pane;
 }
 
 
@@ -1533,8 +1565,6 @@ static void update_side_panel(GigoloWindow *window)
 
 static void gigolo_window_init(GigoloWindow *window)
 {
-	GtkWidget *menubar, *panel_pane;
-	GtkUIManager *ui_manager;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	priv->autoconnect_timeout_id = (guint) -1;
@@ -1550,19 +1580,9 @@ static void gigolo_window_init(GigoloWindow *window)
 
 	create_tree_view(window);
 	create_icon_view(window);
+	create_ui_elements(window);
 
-	priv->swin_treeview = gtk_scrolled_window_new(NULL, NULL);
-	gtk_widget_set_hexpand(GTK_WIDGET(priv->swin_treeview), TRUE);
-	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(priv->swin_treeview),
-		GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
-	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(priv->swin_treeview), GTK_SHADOW_IN);
 	gtk_container_add(GTK_CONTAINER(priv->swin_treeview), priv->treeview);
-
-	priv->swin_iconview = gtk_scrolled_window_new(NULL, NULL);
-	gtk_widget_set_hexpand(GTK_WIDGET(priv->swin_iconview), TRUE);
-	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(priv->swin_iconview),
-		GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
-	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(priv->swin_iconview), GTK_SHADOW_IN);
 	gtk_container_add(GTK_CONTAINER(priv->swin_iconview), priv->iconview);
 
 	/* Init the GVfs backend */
@@ -1571,49 +1591,13 @@ static void gigolo_window_init(GigoloWindow *window)
 	g_signal_connect(priv->backend_gvfs, "operation-failed",
 		G_CALLBACK(mount_operation_failed_cb), window);
 
-	/* UI Manager */
-	ui_manager = gtk_ui_manager_new();
-	create_ui_elements(window, ui_manager);
-	menubar = gtk_ui_manager_get_widget(ui_manager, "/menubar");
-	priv->toolbar = gtk_ui_manager_get_widget(ui_manager, "/toolbar");
-	priv->systray_icon_popup_menu = gtk_ui_manager_get_widget(ui_manager, "/systraymenu");
-	priv->tree_popup_menu = gtk_ui_manager_get_widget(ui_manager, "/treemenu");
-	/* increase refcount to keep the widgets after the ui manager is destroyed */
-	g_object_ref(priv->systray_icon_popup_menu);
-	g_object_ref(priv->tree_popup_menu);
-	g_object_ref(priv->toolbar);
-	g_object_ref(priv->swin_treeview);
-	g_object_ref(priv->swin_iconview);
-
-	/* Buttons */
-	priv->action_connect = gtk_action_group_get_action(priv->action_group, "Connect");
-	priv->action_disconnect = gtk_action_group_get_action(priv->action_group, "Disconnect");
-	priv->action_bookmark_create = gtk_action_group_get_action(priv->action_group, "CreateBookmark");
-	priv->action_open = gtk_action_group_get_action(priv->action_group, "Open");
-	priv->action_open_terminal = gtk_action_group_get_action(priv->action_group, "OpenTerminal");
-	priv->action_copyuri = gtk_action_group_get_action(priv->action_group, "CopyURI");
-
-	g_object_set(priv->action_bookmarks, "is-important", TRUE, NULL);
-	g_object_set(gtk_action_group_get_action(priv->action_group, "EditBookmarks"),
-		"is-important", TRUE, NULL);
-
 	/* Panel */
-	priv->panel_pane = panel_pane = gigolo_window_create_panel(window);
-
-	/* Pack the widgets altogether */
-	priv->vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
-
-	gtk_box_pack_start(GTK_BOX(priv->vbox), menubar, FALSE, FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(priv->vbox), priv->toolbar, FALSE, FALSE, 0);
-
-	gtk_box_pack_start(GTK_BOX(priv->hbox_view), priv->swin_iconview, TRUE, TRUE, 0);
-	gtk_box_pack_start(GTK_BOX(priv->vbox), panel_pane, TRUE, TRUE, 0);
-
-	gtk_container_add(GTK_CONTAINER(window), priv->vbox);
+	gigolo_window_create_panel(window);
 
 	/* Show everything */
 	gtk_widget_show_all(priv->vbox);
 	gtk_widget_show_all(priv->swin_treeview);
+	gtk_widget_show_all(priv->swin_iconview);
 
 	/* Status icon */
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS /* Gtk 3.14 */
@@ -1623,8 +1607,6 @@ static void gigolo_window_init(GigoloWindow *window)
 	g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
 	g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 	g_signal_connect(priv->systray_icon, "notify", G_CALLBACK(gigolo_window_systray_notify_cb), window);
-
-	g_object_unref(ui_manager);
 }
 
 
@@ -1641,7 +1623,7 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	priv->settings = settings;
 	g_signal_connect(settings, "notify", G_CALLBACK(gigolo_window_settings_notify_cb), window);
 
-	g_object_set(priv->action_bookmarks, "settings", settings, NULL);
+	g_object_set(priv->bookmarks_menu, "settings", settings, NULL);
 
 	g_object_set(priv->backend_gvfs, "parent", window, "store", priv->store, NULL);
 
@@ -1652,16 +1634,16 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	/* Show Panel */
 	state = gigolo_settings_get_boolean(settings, "show-panel");
 	gigolo_window_show_side_panel(GIGOLO_WINDOW(window), state);
-	toggle_action_set_active(GIGOLO_WINDOW(window), "ShowPanel", state);
+	toggle_set_active(GIGOLO_WINDOW(window), "ShowPanel", state);
 	update_side_panel(GIGOLO_WINDOW(window));
 	/* Show Toolbar */
 	state = gigolo_settings_get_boolean(settings, "show-toolbar");
 	gigolo_window_show_toolbar(GIGOLO_WINDOW(window), state);
-	toggle_action_set_active(GIGOLO_WINDOW(window), "ShowToolbar", state);
+	toggle_set_active(GIGOLO_WINDOW(window), "ShowToolbar", state);
 	/* Show Status Icon */
 	state = gigolo_settings_get_boolean(settings, "show-in-systray");
 	gigolo_window_show_systray_icon(GIGOLO_WINDOW(window), state);
-	toggle_action_set_active(GIGOLO_WINDOW(window), "ShowInSystray", state);
+	toggle_set_active(GIGOLO_WINDOW(window), "ShowInSystray", state);
 	/* View Mode */
 	value = gigolo_settings_get_integer(settings, "view-mode");
 	gigolo_window_set_view_mode(GIGOLO_WINDOW(window), value);
