@@ -142,8 +142,6 @@ static void gigolo_window_destroy(GigoloWindow *window)
 	g_object_unref(priv->backend_gvfs);
 	priv->backend_gvfs = NULL;
 
-	g_object_unref (G_OBJECT (priv->builder));
-
 	gtk_widget_destroy(GTK_WIDGET(window));
 
 	gtk_main_quit();
