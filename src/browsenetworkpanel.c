@@ -405,14 +405,11 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 
     column = gtk_tree_view_column_new();
 
-	if (gtk_check_version(2, 14, 0) == NULL)
-	{
-		icon_renderer = gtk_cell_renderer_pixbuf_new();
-		gtk_tree_view_column_pack_start(column, icon_renderer, FALSE);
-		gtk_tree_view_column_set_attributes(column, icon_renderer,
-			"gicon", GIGOLO_BROWSE_NETWORK_COL_ICON, NULL);
-		g_object_set(icon_renderer, "xalign", 0.0, NULL);
-	}
+	icon_renderer = gtk_cell_renderer_pixbuf_new();
+	gtk_tree_view_column_pack_start(column, icon_renderer, FALSE);
+	gtk_tree_view_column_set_attributes(column, icon_renderer,
+		"gicon", GIGOLO_BROWSE_NETWORK_COL_ICON, NULL);
+	g_object_set(icon_renderer, "xalign", 0.0, NULL);
 
 	text_renderer = gtk_cell_renderer_text_new();
 	gtk_tree_view_set_enable_search(GTK_TREE_VIEW(tree), FALSE);

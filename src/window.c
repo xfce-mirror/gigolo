@@ -1431,15 +1431,12 @@ static void create_tree_view(GigoloWindow *window)
 	sel = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->treeview));
 	gtk_tree_selection_set_mode(sel, GTK_SELECTION_SINGLE);
 
-	if (gtk_check_version(2, 14, 0) == NULL)
-	{
-		renderer = gtk_cell_renderer_pixbuf_new();
-		column = gtk_tree_view_column_new_with_attributes(NULL, renderer,
-			"gicon", GIGOLO_WINDOW_COL_PIXBUF, NULL);
-		gtk_tree_view_column_set_sort_indicator(column, FALSE);
-		gtk_tree_view_column_set_resizable(column, TRUE);
-		gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
-	}
+	renderer = gtk_cell_renderer_pixbuf_new();
+	column = gtk_tree_view_column_new_with_attributes(NULL, renderer,
+		"gicon", GIGOLO_WINDOW_COL_PIXBUF, NULL);
+	gtk_tree_view_column_set_sort_indicator(column, FALSE);
+	gtk_tree_view_column_set_resizable(column, TRUE);
+	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->treeview), column);
 
 	renderer = gtk_cell_renderer_toggle_new();
 	column = gtk_tree_view_column_new_with_attributes(
@@ -1495,12 +1492,8 @@ static void create_icon_view(GigoloWindow *window)
 		"xalign", 0.5,
 		"yalign", 1.0, NULL);
 	gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(priv->iconview), renderer, FALSE);
-	if (gtk_check_version(2, 14, 0) == NULL)
-		gtk_cell_layout_add_attribute(GTK_CELL_LAYOUT(priv->iconview), renderer,
-			"gicon", GIGOLO_WINDOW_COL_PIXBUF);
-	else
-		gtk_cell_layout_add_attribute(GTK_CELL_LAYOUT(priv->iconview), renderer,
-			"icon-name", GIGOLO_WINDOW_COL_ICON_NAME);
+	gtk_cell_layout_add_attribute(GTK_CELL_LAYOUT(priv->iconview), renderer,
+		"gicon", GIGOLO_WINDOW_COL_PIXBUF);
 
 	renderer = gtk_cell_renderer_text_new();
 	g_object_set(renderer, "xalign", 0.5, "yalign", 0.0, NULL);
