@@ -49,7 +49,7 @@ struct _GigoloMountDialogPrivate
 static void gigolo_mount_dialog_finalize			(GObject *widget);
 
 
-G_DEFINE_TYPE(GigoloMountDialog, gigolo_mount_dialog, GTK_TYPE_DIALOG);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloMountDialog, gigolo_mount_dialog, GTK_TYPE_DIALOG);
 
 
 
