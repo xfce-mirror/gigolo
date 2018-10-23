@@ -142,6 +142,8 @@ static void gigolo_window_destroy(GigoloWindow *window)
 	g_object_unref(priv->backend_gvfs);
 	priv->backend_gvfs = NULL;
 
+	g_object_unref (G_OBJECT (priv->builder));
+
 	gtk_widget_destroy(GTK_WIDGET(window));
 
 	gtk_main_quit();
@@ -1141,6 +1143,7 @@ static void toggle_set_active(GigoloWindow *window, const gchar *name, gboolean 
 
 	widget_name = g_strconcat ("menuitem_", name, NULL);
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, widget_name));
+	g_free (widget_name);
 
 	gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (widget), set);
 }
@@ -1388,6 +1391,7 @@ static void create_ui_elements(GigoloWindow *window)
 	g_signal_connect(priv->bookmarks_menu, "item-clicked",
 		G_CALLBACK(action_bookmark_activate_cb), window);
 	g_signal_connect(priv->bookmarks_menu, "button-clicked", G_CALLBACK(mount_cb), window);
+	g_object_ref (priv->bookmarks_menu);
 
 	bind_actions (window);
 }

@@ -548,6 +548,8 @@ static void gigolo_settings_finalize(GObject* object)
 	g_free(priv->config_filename);
 	g_free(priv->bookmarks_filename);
 	g_free(priv->config_path);
+	g_free(priv->file_manager);
+	g_free(priv->terminal);
 
 	G_OBJECT_CLASS(gigolo_settings_parent_class)->finalize(object);
 }
