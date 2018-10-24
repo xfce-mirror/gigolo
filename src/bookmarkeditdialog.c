@@ -1069,7 +1069,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 		_("This is not used for the actual mount, only necessary for opening the mount point in a file browser"));
 	priv->user_entry = gtk_entry_new();
 	priv->domain_entry = gtk_entry_new();
-	priv->share_combo = gtk_combo_box_new_with_entry();
+	priv->share_combo = gtk_combo_box_text_new_with_entry();
 	priv->share_entry = gtk_bin_get_child(GTK_BIN(priv->share_combo));
 
 	priv->uri_label = gtk_label_new_with_mnemonic(_("_Location (URI):"));
