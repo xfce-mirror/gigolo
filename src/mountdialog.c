@@ -94,16 +94,16 @@ static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 	gtk_window_set_default_size(GTK_WINDOW(self), 200, -1);
 	gtk_window_set_title(GTK_WINDOW(self), _("Connecting"));
 
-	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
-	gtk_container_set_border_width(GTK_CONTAINER(vbox), 5);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 6);
+	gtk_container_set_border_width(GTK_CONTAINER(vbox), 12);
 	gtk_container_add(GTK_CONTAINER(gtk_dialog_get_content_area(GTK_DIALOG(self))), vbox);
 
 	priv->label = gtk_label_new(NULL);
 	gtk_label_set_xalign(GTK_LABEL(priv->label), 0.1);
-	gtk_box_pack_start(GTK_BOX(vbox), priv->label, FALSE, FALSE, 6);
+	gtk_box_pack_start(GTK_BOX(vbox), priv->label, FALSE, FALSE, 0);
 
 	progress = gtk_progress_bar_new();
-	gtk_box_pack_start(GTK_BOX(vbox), progress, FALSE, FALSE, 6);
+	gtk_box_pack_start(GTK_BOX(vbox), progress, FALSE, FALSE, 0);
 
 	priv->timer_id = g_timeout_add(250, do_pulse, GTK_PROGRESS_BAR(progress));
 }
