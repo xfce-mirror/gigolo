@@ -68,7 +68,10 @@ struct _GigoloWindowPrivate
 	GtkWidget		*swin_iconview;
 	GtkListStore	*store;
 	GtkWidget		*tree_popup_menu;
-	GtkMenu		    *bookmarks_menu;
+
+	GtkMenu		    *menubar_bookmarks_menu;
+	GtkMenu		    *systray_bookmarks_menu;
+	GtkMenu		    *toolbar_bookmarks_menu;
 
 	GtkWidget		*toolbar;
 	GtkStatusIcon	*systray_icon;
@@ -929,7 +932,9 @@ void gigolo_window_update_bookmarks(GigoloWindow *window)
 	g_ptr_array_sort(bookmarks, sort_bookmarks);
 
 	/* writing to the 'settings' property will update the menus */
-	g_object_set(priv->bookmarks_menu, "settings", priv->settings, NULL);
+	g_object_set(priv->menubar_bookmarks_menu, "settings", priv->settings, NULL);
+	g_object_set(priv->systray_bookmarks_menu, "settings", priv->settings, NULL);
+	g_object_set(priv->toolbar_bookmarks_menu, "settings", priv->settings, NULL);
 	g_object_set(priv->bookmark_panel, "settings", priv->settings, NULL);
 
 	/* update the popup menu items */
@@ -1248,12 +1253,14 @@ static void bind_actions (GigoloWindow *window)
 	g_signal_connect (widget, "activate", G_CALLBACK(preferences_cb), window);
 
 	/* Bookmarks */
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menu_Bookmarks"));
-	gtk_menu_item_set_submenu (GTK_MENU_ITEM (widget), GTK_WIDGET (priv->bookmarks_menu));
-	gtk_widget_set_sensitive (widget, TRUE);
+	g_signal_connect(priv->menubar_bookmarks_menu, "item-clicked", G_CALLBACK(action_bookmark_activate_cb), window);
+	g_signal_connect(priv->menubar_bookmarks_menu, "button-clicked", G_CALLBACK(mount_cb), window);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_Bookmarks"));
-	gtk_menu_tool_button_set_menu (GTK_MENU_TOOL_BUTTON (widget), GTK_WIDGET (priv->bookmarks_menu));
+	g_signal_connect(priv->systray_bookmarks_menu, "item-clicked", G_CALLBACK(action_bookmark_activate_cb), window);
+	g_signal_connect(priv->systray_bookmarks_menu, "button-clicked", G_CALLBACK(mount_cb), window);
+
+	g_signal_connect(priv->toolbar_bookmarks_menu, "item-clicked", G_CALLBACK(action_bookmark_activate_cb), window);
+	g_signal_connect(priv->toolbar_bookmarks_menu, "button-clicked", G_CALLBACK(mount_cb), window);
 
 	/* Create (Edit) Bookmark (Ctrl + N) */
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_EditBookmark"));
@@ -1363,6 +1370,7 @@ static void create_ui_elements(GigoloWindow *window)
 {
 	GError *error = NULL;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
+	GtkWidget *widget;
 	priv->builder = gtk_builder_new();
 	gtk_builder_add_from_string(priv->builder, gigolo_ui,
 								gigolo_ui_length, &error);
@@ -1377,6 +1385,19 @@ static void create_ui_elements(GigoloWindow *window)
 	priv->toolbar = GTK_WIDGET (gtk_builder_get_object (priv->builder, "toolbar"));
 	priv->systray_icon_popup_menu = GTK_WIDGET (gtk_builder_get_object (priv->builder, "systray_icon_popup_menu"));
 	priv->notebook_store = GTK_WIDGET (gtk_builder_get_object (priv->builder, "notebook_store"));
+	priv->menubar_bookmarks_menu = gigolo_menu_button_action_new("Bookmarks");
+	priv->systray_bookmarks_menu = gigolo_menu_button_action_new("Bookmarks");
+	priv->toolbar_bookmarks_menu = gigolo_menu_button_action_new("Bookmarks");
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "menu_Bookmarks"));
+	gtk_menu_item_set_submenu (GTK_MENU_ITEM (widget), GTK_WIDGET (priv->menubar_bookmarks_menu));
+	gtk_widget_set_sensitive (widget, TRUE);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "systray_Bookmarks"));
+	gtk_menu_item_set_submenu (GTK_MENU_ITEM (widget), GTK_WIDGET (priv->systray_bookmarks_menu));
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "toolitem_Bookmarks"));
+	gtk_menu_tool_button_set_menu (GTK_MENU_TOOL_BUTTON (widget), GTK_WIDGET (priv->toolbar_bookmarks_menu));
 
 	gtk_notebook_set_current_page (GTK_NOTEBOOK (priv->notebook_store), 0);
 
@@ -1384,12 +1405,6 @@ static void create_ui_elements(GigoloWindow *window)
 	gtk_container_remove (GTK_CONTAINER (gtk_builder_get_object (priv->builder, "gigolo_window")), priv->vbox);
 	gtk_container_add (GTK_CONTAINER (window), priv->vbox);
 	g_object_unref (priv->vbox);
-
-	priv->bookmarks_menu = gigolo_menu_button_action_new("Bookmarks");
-	g_signal_connect(priv->bookmarks_menu, "item-clicked",
-		G_CALLBACK(action_bookmark_activate_cb), window);
-	g_signal_connect(priv->bookmarks_menu, "button-clicked", G_CALLBACK(mount_cb), window);
-	g_object_ref (priv->bookmarks_menu);
 
 	bind_actions (window);
 }
@@ -1618,7 +1633,9 @@ GtkWidget *gigolo_window_new(GigoloSettings *settings)
 	priv->settings = settings;
 	g_signal_connect(settings, "notify", G_CALLBACK(gigolo_window_settings_notify_cb), window);
 
-	g_object_set(priv->bookmarks_menu, "settings", settings, NULL);
+	g_object_set(priv->menubar_bookmarks_menu, "settings", settings, NULL);
+	g_object_set(priv->systray_bookmarks_menu, "settings", settings, NULL);
+	g_object_set(priv->toolbar_bookmarks_menu, "settings", settings, NULL);
 
 	g_object_set(priv->backend_gvfs, "parent", window, "store", priv->store, NULL);
 
