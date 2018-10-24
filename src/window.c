@@ -1356,7 +1356,7 @@ static void bind_actions (GigoloWindow *window)
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_ShowToolbar"));
 	g_object_set_data_full (G_OBJECT (widget), "opt-view", g_strdup("show-toolbar"), (GDestroyNotify) g_free);
 	g_signal_connect (widget, "toggled", G_CALLBACK(toggle_view_cb), window);
-	
+
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_ShowInSystray"));
 	g_object_set_data_full (G_OBJECT (widget), "opt-view", g_strdup("show-in-systray"), (GDestroyNotify) g_free);
 	g_signal_connect (widget, "toggled", G_CALLBACK(toggle_view_cb), window);
@@ -1499,12 +1499,12 @@ static void create_icon_view(GigoloWindow *window)
 	gtk_icon_view_set_tooltip_column(GTK_ICON_VIEW(priv->iconview), GIGOLO_WINDOW_COL_TOOLTIP);
 	gtk_icon_view_set_selection_mode(GTK_ICON_VIEW(priv->iconview), GTK_SELECTION_SINGLE);
 	gtk_icon_view_set_spacing(GTK_ICON_VIEW(priv->iconview), 3);
-	gtk_icon_view_set_column_spacing(GTK_ICON_VIEW(priv->iconview), 30);
-	gtk_icon_view_set_row_spacing(GTK_ICON_VIEW(priv->iconview), 30);
+	gtk_icon_view_set_column_spacing(GTK_ICON_VIEW(priv->iconview), 6);
+	gtk_icon_view_set_row_spacing(GTK_ICON_VIEW(priv->iconview), 6);
 
 	renderer = gtk_cell_renderer_pixbuf_new();
     g_object_set(renderer,
-		"stock-size", GTK_ICON_SIZE_DND,
+		"stock-size", GTK_ICON_SIZE_DIALOG,
 		"follow-state", TRUE,
 		"xalign", 0.5,
 		"yalign", 1.0, NULL);
@@ -1513,7 +1513,12 @@ static void create_icon_view(GigoloWindow *window)
 		"gicon", GIGOLO_WINDOW_COL_PIXBUF);
 
 	renderer = gtk_cell_renderer_text_new();
-	g_object_set(renderer, "xalign", 0.5, "yalign", 0.0, NULL);
+	g_object_set(renderer,
+		"xalign", 0.5,
+		"yalign", 0.0,
+		"wrap-mode", PANGO_WRAP_WORD,
+		"wrap-width", 110,
+		NULL);
 	gtk_cell_layout_pack_end(GTK_CELL_LAYOUT(priv->iconview), renderer, TRUE);
 	gtk_cell_layout_set_attributes(GTK_CELL_LAYOUT(priv->iconview), renderer,
 		"text", GIGOLO_WINDOW_COL_NAME, NULL);
