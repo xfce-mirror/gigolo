@@ -166,22 +166,6 @@ static void gigolo_bookmark_edit_dialog_finalize(GObject *object)
 		priv->browse_host_signal_id = 0;
 	}
 
-	gtk_widget_destroy(priv->uri_entry);
-	gtk_widget_destroy(priv->uri_label);
-	gtk_widget_destroy(priv->host_entry);
-	gtk_widget_destroy(priv->host_label);
-	gtk_widget_destroy(priv->folder_entry);
-	gtk_widget_destroy(priv->folder_label);
-	gtk_widget_destroy(priv->port_label);
-	gtk_widget_destroy(priv->port_spin);
-	gtk_widget_destroy(priv->user_entry);
-	gtk_widget_destroy(priv->user_label);
-	gtk_widget_destroy(priv->domain_entry);
-	gtk_widget_destroy(priv->domain_label);
-	gtk_widget_destroy(priv->share_combo);
-	gtk_widget_destroy(priv->share_button);
-	gtk_widget_destroy(priv->share_label);
-
 	G_OBJECT_CLASS(gigolo_bookmark_edit_dialog_parent_class)->finalize(object);
 }
 
@@ -915,8 +899,6 @@ static GtkWidget *make_frame (const gchar *label)
 	formatted = g_markup_printf_escaped ("<b>%s</b>", label);
 	gtk_label_set_markup (GTK_LABEL (widget), formatted);
 
-	gtk_widget_show (frame);
-
 	return frame;
 }
 
@@ -1119,25 +1101,6 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	g_signal_connect(priv->folder_entry, "activate", G_CALLBACK(entry_activate_cb), dialog);
 	g_signal_connect(priv->path_entry, "activate", G_CALLBACK(entry_activate_cb), dialog);
 	g_signal_connect(priv->user_entry, "activate", G_CALLBACK(entry_activate_cb), dialog);
-
-	/* We need an extra ref so we can remove them from the table */
-	g_object_ref(priv->uri_entry);
-	g_object_ref(priv->uri_label);
-	g_object_ref(priv->host_entry);
-	g_object_ref(priv->host_label);
-	g_object_ref(priv->folder_entry);
-	g_object_ref(priv->folder_label);
-	g_object_ref(priv->path_entry);
-	g_object_ref(priv->path_label);
-	g_object_ref(priv->port_label);
-	g_object_ref(priv->port_spin);
-	g_object_ref(priv->user_entry);
-	g_object_ref(priv->user_label);
-	g_object_ref(priv->domain_entry);
-	g_object_ref(priv->domain_label);
-	g_object_ref(priv->share_combo);
-	g_object_ref(priv->share_button);
-	g_object_ref(priv->share_label);
 
 	gtk_widget_show_all(vbox);
 }
