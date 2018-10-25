@@ -34,9 +34,6 @@
 
 typedef struct _GigoloSettingsPrivate			GigoloSettingsPrivate;
 
-#define GIGOLO_SETTINGS_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-		GIGOLO_SETTINGS_TYPE, GigoloSettingsPrivate))
-
 struct _GigoloSettingsPrivate
 {
 	gchar		*config_path;
@@ -95,12 +92,12 @@ enum
 };
 
 
-G_DEFINE_TYPE(GigoloSettings, gigolo_settings, G_TYPE_OBJECT);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloSettings, gigolo_settings, G_TYPE_OBJECT);
 
 
 static void gigolo_settings_set_property(GObject *object, guint prop_id, const GValue *value, GParamSpec *pspec)
 {
-	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(object);
+	GigoloSettingsPrivate *priv = gigolo_settings_get_instance_private(GIGOLO_SETTINGS(object));
 
 	switch (prop_id)
 	{
@@ -157,7 +154,7 @@ static void gigolo_settings_set_property(GObject *object, guint prop_id, const G
 
 static void gigolo_settings_get_property(GObject *object, guint prop_id, GValue *value, GParamSpec *pspec)
 {
-	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(object);
+	GigoloSettingsPrivate *priv = gigolo_settings_get_instance_private(GIGOLO_SETTINGS(object));
 
 	switch (prop_id)
 	{
@@ -218,8 +215,6 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 	gobject_class->finalize = gigolo_settings_finalize;
 	gobject_class->get_property = gigolo_settings_get_property;
 	gobject_class->set_property = gigolo_settings_set_property;
-
-	g_type_class_add_private(klass, sizeof(GigoloSettingsPrivate));
 
 	g_object_class_install_property(gobject_class,
 									PROP_SAVE_GEOMETRY,
@@ -454,7 +449,7 @@ static void write_data(GKeyFile *k, const gchar *filename)
 static void write_settings_config(GigoloSettings *settings)
 {
 	GKeyFile *k;
-	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
+	GigoloSettingsPrivate *priv = gigolo_settings_get_instance_private(settings);
 
 	if (! g_file_test(priv->config_path, G_FILE_TEST_IS_DIR))
 		g_mkdir_with_parents(priv->config_path, 0700);
@@ -494,7 +489,7 @@ static void write_settings_bookmarks(GigoloSettings *settings)
 	gsize i;
 	GigoloBookmark *bm;
 	GigoloBookmarkList *bml;
-	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
+	GigoloSettingsPrivate *priv = gigolo_settings_get_instance_private(settings);
 
 	if (! g_file_test(priv->config_path, G_FILE_TEST_IS_DIR))
 		g_mkdir_with_parents(priv->config_path, 0700);
@@ -540,7 +535,7 @@ void gigolo_settings_write(GigoloSettings *settings, GigoloSettingsFlags flags)
 
 static void gigolo_settings_finalize(GObject* object)
 {
-	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(object);
+	GigoloSettingsPrivate *priv = gigolo_settings_get_instance_private(GIGOLO_SETTINGS(object));
 
 	gigolo_settings_write(GIGOLO_SETTINGS(object),
 		GIGOLO_SETTINGS_PREFERENCES | GIGOLO_SETTINGS_BOOKMARKS);
@@ -553,6 +548,8 @@ static void gigolo_settings_finalize(GObject* object)
 	g_free(priv->config_filename);
 	g_free(priv->bookmarks_filename);
 	g_free(priv->config_path);
+	g_free(priv->file_manager);
+	g_free(priv->terminal);
 
 	G_OBJECT_CLASS(gigolo_settings_parent_class)->finalize(object);
 }
@@ -712,7 +709,7 @@ static void check_for_old_dir(GigoloSettingsPrivate *priv)
 
 static void gigolo_settings_init(GigoloSettings *self)
 {
-	GigoloSettingsPrivate *priv = GIGOLO_SETTINGS_GET_PRIVATE(self);
+	GigoloSettingsPrivate *priv = gigolo_settings_get_instance_private(self);
 
 	priv->config_path = g_build_filename(g_get_user_config_dir(), PACKAGE, NULL);
 	priv->config_filename = g_build_filename(priv->config_path, "config", NULL);
@@ -735,9 +732,13 @@ GigoloSettings *gigolo_settings_new(void)
 
 const gint *gigolo_settings_get_geometry(GigoloSettings *settings)
 {
+	GigoloSettingsPrivate *priv;
+
 	g_return_val_if_fail(settings != NULL, NULL);
 
-	return GIGOLO_SETTINGS_GET_PRIVATE(settings)->geometry;
+	priv = gigolo_settings_get_instance_private(settings);
+
+	return priv->geometry;
 }
 
 
@@ -750,7 +751,7 @@ void gigolo_settings_set_geometry(GigoloSettings *settings, const gint *geometry
 	g_return_if_fail(geometry != NULL);
 	g_return_if_fail(len > 0);
 
-	priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
+	priv = gigolo_settings_get_instance_private(settings);
 
 	g_free(priv->geometry);
 	priv->geometry = g_new(gint, len);
@@ -764,9 +765,13 @@ void gigolo_settings_set_geometry(GigoloSettings *settings, const gint *geometry
 
 GigoloBookmarkList *gigolo_settings_get_bookmarks(GigoloSettings *settings)
 {
+	GigoloSettingsPrivate *priv;
+
 	g_return_val_if_fail(settings != NULL, NULL);
 
-	return GIGOLO_SETTINGS_GET_PRIVATE(settings)->bookmarks;
+	priv = gigolo_settings_get_instance_private(settings);
+
+	return priv->bookmarks;
 }
 
 
@@ -815,7 +820,7 @@ gboolean gigolo_settings_has_file_manager(GigoloSettings *settings)
 
 	g_return_val_if_fail(settings != NULL, FALSE);
 
-	priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
+	priv = gigolo_settings_get_instance_private(settings);
 
 	return NZV(priv->file_manager);
 }
@@ -827,7 +832,7 @@ gboolean gigolo_settings_has_terminal(GigoloSettings *settings)
 
 	g_return_val_if_fail(settings != NULL, FALSE);
 
-	priv = GIGOLO_SETTINGS_GET_PRIVATE(settings);
+	priv = gigolo_settings_get_instance_private(settings);
 
 	return NZV(priv->terminal);
 }

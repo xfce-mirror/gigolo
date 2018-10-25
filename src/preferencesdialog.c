@@ -303,11 +303,10 @@ static GtkWidget *add_spinbutton(GigoloSettings *settings, const gchar *property
 
 static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settings)
 {
-	GtkWidget *frame_vbox, *notebook_vbox, *vbox, *hbox, *notebook;
+	GtkWidget *frame_grid, *notebook_vbox, *vbox, *hbox, *notebook;
 	GtkWidget *checkbox, *combo, *entry, *combo_toolbar_style, *tmp_box;
 	GtkWidget *combo_toolbar_orient, *spinbutton;
-	GtkWidget *label1, *label2, *label3, *label4, *image;
-	GtkSizeGroup *sg;
+	GtkWidget *label, *image;
 
     vbox = gtk_dialog_get_content_area(GTK_DIALOG(dialog));
 
@@ -322,21 +321,24 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 
 	notebook = gtk_notebook_new();
 	gtk_box_pack_start(GTK_BOX(vbox), notebook, FALSE, TRUE, 0);
-	gtk_container_set_border_width(GTK_CONTAINER(notebook), 5);
+	gtk_container_set_border_width(GTK_CONTAINER(notebook), 6);
 
 #define PAGE_GENERAL
-	notebook_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 2);
-	frame_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
-	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 5);
-	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_vbox, TRUE, TRUE, 5);
+	notebook_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+	frame_grid = gtk_grid_new ();
+	gtk_grid_set_row_spacing (GTK_GRID (frame_grid), 6);
+	gtk_grid_set_column_spacing (GTK_GRID (frame_grid), 12);
+	gtk_container_set_border_width(GTK_CONTAINER(frame_grid), 12);
+	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_grid, TRUE, TRUE, 0);
 	gtk_notebook_append_page(GTK_NOTEBOOK(notebook), notebook_vbox, gtk_label_new(_("General")));
 
-	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
+	/* Row */
+	label = gtk_label_new_with_mnemonic(_("_File Manager"));
+	gtk_label_set_xalign(GTK_LABEL(label), 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), label, 0, 0, 1, 1);
 
-	label1 = gtk_label_new_with_mnemonic(_("_File Manager"));
-	gtk_label_set_xalign(GTK_LABEL(label1), 0);
-	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
+	gtk_grid_attach (GTK_GRID (frame_grid), hbox, 1, 0, 2, 1);
 
 	image = gtk_image_new();
 	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 3);
@@ -344,16 +346,17 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	entry = add_program_entry(settings, "file-manager");
 	gtk_widget_set_tooltip_text(entry, _("Enter the name of a program to use to open or view mount points"));
 	g_object_set_data(G_OBJECT(entry), "image", image);
-	gtk_label_set_mnemonic_widget(GTK_LABEL(label1), entry);
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label), entry);
 	gtk_box_pack_start(GTK_BOX(hbox), entry, FALSE, FALSE, 0);
 	entry_check_input(GTK_ENTRY(entry));
 
-	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
+	/* Row */
+	label = gtk_label_new_with_mnemonic(_("_Terminal"));
+	gtk_label_set_xalign(GTK_LABEL(label), 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), label, 0, 1, 1, 1);
 
-	label1 = gtk_label_new_with_mnemonic(_("_Terminal"));
-	gtk_label_set_xalign(GTK_LABEL(label1), 0);
-	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
+	gtk_grid_attach (GTK_GRID (frame_grid), hbox, 1, 1, 2, 1);
 
 	image = gtk_image_new();
 	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 3);
@@ -361,104 +364,91 @@ static void set_settings(GigoloPreferencesDialog *dialog, GigoloSettings *settin
 	entry = add_program_entry(settings, "terminal");
 	gtk_widget_set_tooltip_text(entry, _("Enter the name of a program to open mount points in a terminal"));
 	g_object_set_data(G_OBJECT(entry), "image", image);
-	gtk_label_set_mnemonic_widget(GTK_LABEL(label1), entry);
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label), entry);
 	gtk_box_pack_start(GTK_BOX(hbox), entry, FALSE, FALSE, 0);
 	entry_check_input(GTK_ENTRY(entry));
 
-	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
-
-	label1 = gtk_label_new_with_mnemonic(_("_Bookmark Auto-Connect Interval"));
-	gtk_label_set_xalign(GTK_LABEL(label1), 0);
-	gtk_box_pack_start(GTK_BOX(hbox), label1, FALSE, FALSE, 0);
+	/* Row */
+	label = gtk_label_new_with_mnemonic(_("_Bookmark Auto-Connect Interval"));
+	gtk_label_set_xalign(GTK_LABEL(label), 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), label, 0, 2, 2, 1);
 
 	spinbutton = add_spinbutton(settings, "autoconnect-interval");
 	gtk_widget_set_tooltip_text(spinbutton,
 		_("How often to try auto connecting bookmarks, in seconds. Zero disables checking."));
-	gtk_label_set_mnemonic_widget(GTK_LABEL(label1), spinbutton);
-	gtk_box_pack_start(GTK_BOX(hbox), spinbutton, FALSE, FALSE, 10);
-
-	gtk_box_pack_start(GTK_BOX(frame_vbox), gtk_label_new(""), FALSE, FALSE, 0);
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label), spinbutton);
+	gtk_grid_attach (GTK_GRID (frame_grid), spinbutton, 2, 2, 1, 1);
 
 #define PAGE_INTERFACE
-	notebook_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 2);
-	frame_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
-	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 5);
-	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_vbox, TRUE, TRUE, 5);
+	notebook_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+	frame_grid = gtk_grid_new ();
+	gtk_grid_set_row_spacing (GTK_GRID (frame_grid), 6);
+	gtk_grid_set_column_spacing (GTK_GRID (frame_grid), 12);
+	gtk_container_set_border_width(GTK_CONTAINER(frame_grid), 12);
+	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_grid, TRUE, TRUE, 0);
 	gtk_notebook_append_page(GTK_NOTEBOOK(notebook), notebook_vbox, gtk_label_new(_("Interface")));
 
 	checkbox = add_check_button(settings, "save-geometry", _("_Save window position and geometry"));
 	gtk_widget_set_tooltip_text(checkbox, _("Saves the window position and geometry and restores it at the start"));
-	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), checkbox, 0, 0, 2, 1);
 
 	tmp_box = checkbox = add_check_button(settings, "show-in-systray", _("Show status _icon in the Notification Area"));
-	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), checkbox, 0, 1, 2, 1);
 
 	checkbox = add_check_button(settings, "start-in-systray", _("Start _minimized in the Notification Area"));
-	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), checkbox, 0, 2, 2, 1);
 	g_signal_connect(tmp_box, "toggled", G_CALLBACK(check_button_toggle_sensitive_cb), checkbox);
 	check_button_toggle_sensitive_cb(GTK_TOGGLE_BUTTON(tmp_box), checkbox);
 
 	checkbox = add_check_button(settings, "show-panel", _("Show side panel"));
 	gtk_widget_set_tooltip_text(checkbox, _("Whether to show a side panel for browsing the local network for available Samba/Windows shares and a bookmark list"));
-	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), checkbox, 0, 3, 2, 1);
 
 	checkbox = add_check_button(settings, "show-autoconnect-errors", _("Show auto-connect error messages"));
 	gtk_widget_set_tooltip_text(checkbox, _("Whether to show error message dialogs when auto-connecting of bookmarks fails"));
-	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), checkbox, 0, 4, 2, 1);
 
-	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
-
-	label4 = gtk_label_new_with_mnemonic(_("_Connection List Mode"));
-	gtk_label_set_xalign(GTK_LABEL(label4), 0);
-	gtk_box_pack_start(GTK_BOX(hbox), label4, FALSE, FALSE, 0);
+	label = gtk_label_new_with_mnemonic(_("_Connection List Mode"));
+	gtk_label_set_xalign(GTK_LABEL(label), 0);
+	gtk_widget_set_hexpand (GTK_WIDGET (label), TRUE);
+	gtk_grid_attach (GTK_GRID (frame_grid), label, 0, 5, 1, 1);
 
 	combo = add_view_mode_combo(settings, "view-mode");
-	gtk_label_set_mnemonic_widget(GTK_LABEL(label4), combo);
-	gtk_box_pack_start(GTK_BOX(hbox), combo, FALSE, FALSE, 0);
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label), combo);
+	gtk_grid_attach (GTK_GRID (frame_grid), combo, 1, 5, 1, 1);
 
 #define PAGE_TOOLBAR
 	notebook_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 2);
-	frame_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
-	gtk_container_set_border_width(GTK_CONTAINER(frame_vbox), 5);
-	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_vbox, TRUE, TRUE, 5);
+	frame_grid = gtk_grid_new ();
+	gtk_grid_set_row_spacing (GTK_GRID (frame_grid), 6);
+	gtk_grid_set_column_spacing (GTK_GRID (frame_grid), 12);
+	gtk_container_set_border_width(GTK_CONTAINER(frame_grid), 12);
+	gtk_box_pack_start(GTK_BOX(notebook_vbox), frame_grid, TRUE, TRUE, 0);
 	gtk_notebook_append_page(GTK_NOTEBOOK(notebook), notebook_vbox, gtk_label_new(_("Toolbar")));
 
 	checkbox = add_check_button(settings, "show-toolbar", _("Show _toolbar"));
-	gtk_box_pack_start(GTK_BOX(frame_vbox), checkbox, FALSE, FALSE, 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), checkbox, 0, 0, 2, 1);
 
-	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
-
-	label2 = gtk_label_new_with_mnemonic(_("St_yle"));
-	gtk_label_set_xalign(GTK_LABEL(label2), 0);
-	gtk_box_pack_start(GTK_BOX(hbox), label2, FALSE, FALSE, 0);
+	label = gtk_label_new_with_mnemonic(_("St_yle"));
+	gtk_label_set_xalign(GTK_LABEL(label), 0);
+	gtk_widget_set_hexpand (GTK_WIDGET (label), TRUE);
+	gtk_grid_attach (GTK_GRID (frame_grid), label, 0, 1, 1, 1);
 
 	combo_toolbar_style = add_toolbar_style_combo(settings, "toolbar-style");
-	gtk_label_set_mnemonic_widget(GTK_LABEL(label2), combo_toolbar_style);
-	gtk_box_pack_start(GTK_BOX(hbox), combo_toolbar_style, FALSE, FALSE, 0);
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label), combo_toolbar_style);
+	gtk_grid_attach (GTK_GRID (frame_grid), combo_toolbar_style, 1, 1, 1, 1);
 
-	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start(GTK_BOX(frame_vbox), hbox, FALSE, FALSE, 0);
-
-	label3 = gtk_label_new_with_mnemonic(_("_Orientation"));
-	gtk_label_set_xalign(GTK_LABEL(label3), 0);
-	gtk_box_pack_start(GTK_BOX(hbox), label3, FALSE, FALSE, 0);
+	label = gtk_label_new_with_mnemonic(_("_Orientation"));
+	gtk_label_set_xalign(GTK_LABEL(label), 0);
+	gtk_grid_attach (GTK_GRID (frame_grid), label, 0, 2, 1, 1);
 
 	combo_toolbar_orient = add_toolbar_orientation_combo(settings, "toolbar-orientation");
-	gtk_label_set_mnemonic_widget(GTK_LABEL(label3), combo_toolbar_orient);
-	gtk_box_pack_start(GTK_BOX(hbox), combo_toolbar_orient, FALSE, FALSE, 0);
+	gtk_label_set_mnemonic_widget(GTK_LABEL(label), combo_toolbar_orient);
+	gtk_grid_attach (GTK_GRID (frame_grid), combo_toolbar_orient, 1, 2, 1, 1);
 
 	g_object_set_data(G_OBJECT(checkbox), "combo_toolbar_style", combo_toolbar_style);
 	g_object_set_data(G_OBJECT(checkbox), "combo_toolbar_orient", combo_toolbar_orient);
 	g_signal_connect(checkbox, "toggled", G_CALLBACK(check_toolbar_show_toggle_cb), settings);
-
-	sg = gtk_size_group_new(GTK_SIZE_GROUP_HORIZONTAL);
-	gtk_size_group_add_widget(sg, label2);
-	gtk_size_group_add_widget(sg, label3);
-	g_object_unref(sg);
-
 
 	gtk_widget_show_all(vbox);
 }

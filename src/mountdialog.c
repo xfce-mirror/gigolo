@@ -30,9 +30,6 @@
 
 typedef struct _GigoloMountDialogPrivate			GigoloMountDialogPrivate;
 
-#define GIGOLO_MOUNT_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			GIGOLO_MOUNT_DIALOG_TYPE, GigoloMountDialogPrivate))
-
 struct _GigoloMountDialog
 {
 	GtkDialog parent;
@@ -52,7 +49,7 @@ struct _GigoloMountDialogPrivate
 static void gigolo_mount_dialog_finalize			(GObject *widget);
 
 
-G_DEFINE_TYPE(GigoloMountDialog, gigolo_mount_dialog, GTK_TYPE_DIALOG);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloMountDialog, gigolo_mount_dialog, GTK_TYPE_DIALOG);
 
 
 
@@ -61,14 +58,12 @@ static void gigolo_mount_dialog_class_init(GigoloMountDialogClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS(klass);
 
 	object_class->finalize = gigolo_mount_dialog_finalize;
-
-	g_type_class_add_private(klass, sizeof(GigoloMountDialogPrivate));
 }
 
 
 static void gigolo_mount_dialog_finalize(GObject *widget)
 {
-	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(widget);
+	GigoloMountDialogPrivate *priv = gigolo_mount_dialog_get_instance_private(GIGOLO_MOUNT_DIALOG(widget));
 
 	if (priv->timer_id != (guint) -1)
 	{
@@ -91,7 +86,7 @@ static gboolean do_pulse(gpointer data)
 static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 {
 	GtkWidget *vbox, *progress;
-	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(self);
+	GigoloMountDialogPrivate *priv = gigolo_mount_dialog_get_instance_private(self);
 
 	priv->timer_id = (guint) -1;
 
@@ -99,16 +94,16 @@ static void gigolo_mount_dialog_init(GigoloMountDialog *self)
 	gtk_window_set_default_size(GTK_WINDOW(self), 200, -1);
 	gtk_window_set_title(GTK_WINDOW(self), _("Connecting"));
 
-	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
-	gtk_container_set_border_width(GTK_CONTAINER(vbox), 5);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 6);
+	gtk_container_set_border_width(GTK_CONTAINER(vbox), 12);
 	gtk_container_add(GTK_CONTAINER(gtk_dialog_get_content_area(GTK_DIALOG(self))), vbox);
 
 	priv->label = gtk_label_new(NULL);
 	gtk_label_set_xalign(GTK_LABEL(priv->label), 0.1);
-	gtk_box_pack_start(GTK_BOX(vbox), priv->label, FALSE, FALSE, 6);
+	gtk_box_pack_start(GTK_BOX(vbox), priv->label, FALSE, FALSE, 0);
 
 	progress = gtk_progress_bar_new();
-	gtk_box_pack_start(GTK_BOX(vbox), progress, FALSE, FALSE, 6);
+	gtk_box_pack_start(GTK_BOX(vbox), progress, FALSE, FALSE, 0);
 
 	priv->timer_id = g_timeout_add(250, do_pulse, GTK_PROGRESS_BAR(progress));
 }
@@ -120,7 +115,7 @@ GtkWidget *gigolo_mount_dialog_new(GtkWindow *parent, const gchar *label)
 		"transient-for", parent,
 		"icon-name", gigolo_get_application_icon_name(),
 		NULL);
-	GigoloMountDialogPrivate *priv = GIGOLO_MOUNT_DIALOG_GET_PRIVATE(dialog);
+	GigoloMountDialogPrivate *priv = gigolo_mount_dialog_get_instance_private(GIGOLO_MOUNT_DIALOG(dialog));
 
 	gtk_label_set_text(GTK_LABEL(priv->label), label);
 

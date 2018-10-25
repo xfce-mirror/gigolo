@@ -35,9 +35,6 @@
 
 typedef struct _GigoloBrowseNetworkPanelPrivate			GigoloBrowseNetworkPanelPrivate;
 
-#define GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			GIGOLO_BROWSE_NETWORK_PANEL_TYPE, GigoloBrowseNetworkPanelPrivate))
-
 struct _GigoloBrowseNetworkPanelPrivate
 {
 	GigoloWindow *parent;
@@ -67,12 +64,12 @@ static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseN
 static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GigoloBrowseNetworkPanel *panel);
 
 
-G_DEFINE_TYPE(GigoloBrowseNetworkPanel, gigolo_browse_network_panel, GTK_TYPE_BOX);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloBrowseNetworkPanel, gigolo_browse_network_panel, GTK_TYPE_BOX);
 
 
 static void gigolo_browse_network_panel_finalize(GObject *object)
 {
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(object);
+	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(GIGOLO_BROWSE_NETWORK_PANEL(object));
 	GigoloBackendGVFS *backend;
 
 	gtk_widget_destroy(priv->popup_menu);
@@ -99,13 +96,12 @@ static void gigolo_browse_network_panel_class_init(GigoloBrowseNetworkPanelClass
 	g_object_class->finalize = gigolo_browse_network_panel_finalize;
 
 	gigolo_browse_network_panel_parent_class = (GtkBoxClass*) g_type_class_peek(GTK_TYPE_BOX);
-	g_type_class_add_private(klass, sizeof(GigoloBrowseNetworkPanelPrivate));
 }
 
 
 static void mount_share(GigoloBrowseNetworkPanel *panel, GigoloBookmarkEditDialogMode mode)
 {
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
 	GtkTreeSelection *selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->tree));
 	GtkTreeModel *model;
 	GtkTreeIter iter;
@@ -208,7 +204,7 @@ static void find_empty_nodes(GtkTreeModel *model)
 
 static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, GigoloBrowseNetworkPanel *panel)
 {
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
 
 	find_empty_nodes(GTK_TREE_MODEL(priv->store));
 
@@ -220,7 +216,7 @@ static void browse_network_finished_cb(G_GNUC_UNUSED GigoloBackendGVFS *bnd, Gig
 
 static void gigolo_browse_network_panel_refresh(GigoloBrowseNetworkPanel *panel)
 {
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
 
 	gtk_widget_set_sensitive(priv->button_refresh, FALSE);
 	gtk_tree_store_clear(priv->store);
@@ -232,7 +228,7 @@ static void gigolo_browse_network_panel_refresh(GigoloBrowseNetworkPanel *panel)
 
 static gboolean delay_refresh(GigoloBrowseNetworkPanel *panel)
 {
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
 
 	gdk_window_set_cursor(gtk_widget_get_window(GTK_WIDGET(panel)), priv->wait_cursor);
 	/* Force the update of the cursor */
@@ -251,7 +247,7 @@ static void button_refresh_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrow
 
 static void button_close_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrowseNetworkPanel *panel)
 {
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
 	GigoloSettings *settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
 	/* hide the panel by setting the property to FALSE */
 	g_object_set(settings, "show-panel", FALSE, NULL);
@@ -278,9 +274,9 @@ static gboolean tree_button_release_event(G_GNUC_UNUSED GtkWidget *widget, GdkEv
 {
 	if (event->button == 3)
 	{
-		GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
-		gtk_menu_popup(GTK_MENU(priv->popup_menu), NULL, NULL, NULL, NULL,
-															event->button, event->time);
+		GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
+		gtk_menu_popup_at_pointer (GTK_MENU(priv->popup_menu),
+								   (GdkEvent *)event);
 		return TRUE;
 	}
 	return FALSE;
@@ -348,7 +344,7 @@ static void tree_popup_activate_cb(GtkCheckMenuItem *item, gpointer user_data)
 
 static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBrowseNetworkPanel *panel)
 {
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
 	GtkTreeModel *model;
 	GtkTreeIter iter;
 	gboolean set = FALSE;
@@ -401,7 +397,7 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	GtkTreeSelection *selection;
 	GtkWidget *tree, *menu, *item;
 	GtkTreeStore *store;
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
 
 	tree = gtk_tree_view_new();
 	store = gtk_tree_store_new(GIGOLO_BROWSE_NETWORK_N_COLUMNS,
@@ -409,14 +405,11 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 
     column = gtk_tree_view_column_new();
 
-	if (gtk_check_version(2, 14, 0) == NULL)
-	{
-		icon_renderer = gtk_cell_renderer_pixbuf_new();
-		gtk_tree_view_column_pack_start(column, icon_renderer, FALSE);
-		gtk_tree_view_column_set_attributes(column, icon_renderer,
-			"gicon", GIGOLO_BROWSE_NETWORK_COL_ICON, NULL);
-		g_object_set(icon_renderer, "xalign", 0.0, NULL);
-	}
+	icon_renderer = gtk_cell_renderer_pixbuf_new();
+	gtk_tree_view_column_pack_start(column, icon_renderer, FALSE);
+	gtk_tree_view_column_set_attributes(column, icon_renderer,
+		"gicon", GIGOLO_BROWSE_NETWORK_COL_ICON, NULL);
+	g_object_set(icon_renderer, "xalign", 0.0, NULL);
 
 	text_renderer = gtk_cell_renderer_text_new();
 	gtk_tree_view_set_enable_search(GTK_TREE_VIEW(tree), FALSE);
@@ -442,17 +435,14 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 	/* popup menu */
 	menu = gtk_menu_new();
 
-	priv->item_connect = item = gtk_image_menu_item_new_from_stock(GTK_STOCK_CONNECT, NULL);
+	priv->item_connect = item = gtk_menu_item_new_with_mnemonic(_("_Connect"));
 	g_object_set_data(G_OBJECT(item), "panel", panel);
 	gtk_widget_show(item);
 	gtk_container_add(GTK_CONTAINER(menu), item);
 	g_signal_connect(item, "activate", G_CALLBACK(tree_popup_activate_cb),
 		GINT_TO_POINTER(ACTION_CONNECT));
 
-	priv->item_bookmark = item = gtk_image_menu_item_new_with_mnemonic(_("Create _Bookmark"));
-	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(item),
-		gtk_image_new_from_icon_name(
-			gigolo_find_icon_name("bookmark-new", "gtk-edit"), GTK_ICON_SIZE_BUTTON));
+	priv->item_bookmark = item = gtk_menu_item_new_with_mnemonic(_("Create _Bookmark"));
 	g_object_set_data(G_OBJECT(item), "panel", panel);
 	gtk_widget_show(item);
 	gtk_container_add(GTK_CONTAINER(menu), item);
@@ -477,7 +467,7 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 {
 	GtkWidget *swin, *toolbar;
 	GtkToolItem *toolitem;
-	GigoloBrowseNetworkPanelPrivate *priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(panel);
+	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
 
 	priv->browse_network_signal_id = 0;
 
@@ -550,7 +540,7 @@ GtkWidget *gigolo_browse_network_panel_new(GigoloWindow *parent)
 
 	self = g_object_new(GIGOLO_BROWSE_NETWORK_PANEL_TYPE, NULL);
 
-	priv = GIGOLO_BROWSE_NETWORK_PANEL_GET_PRIVATE(self);
+	priv = gigolo_browse_network_panel_get_instance_private(GIGOLO_BROWSE_NETWORK_PANEL(self));
 	priv->parent = parent;
 
 	backend = gigolo_window_get_backend(parent);

@@ -34,8 +34,6 @@
 
 typedef struct _GigoloBookmarkPanelPrivate			GigoloBookmarkPanelPrivate;
 
-#define GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			GIGOLO_BOOKMARK_PANEL_TYPE, GigoloBookmarkPanelPrivate))
 
 
 enum
@@ -73,7 +71,7 @@ struct _GigoloBookmarkPanelPrivate
 	GtkListStore *store;
 };
 
-G_DEFINE_TYPE(GigoloBookmarkPanel, gigolo_bookmark_panel, GTK_TYPE_BOX);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloBookmarkPanel, gigolo_bookmark_panel, GTK_TYPE_BOX);
 
 
 
@@ -82,7 +80,7 @@ static void update_store(GigoloBookmarkPanel *panel, GigoloSettings *settings)
 	guint i;
 	GigoloBookmark *bm;
 	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(settings);
-	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(panel);
+	GigoloBookmarkPanelPrivate *priv = gigolo_bookmark_panel_get_instance_private(panel);
 
 	gtk_list_store_clear(priv->store);
 
@@ -139,15 +137,12 @@ static void gigolo_bookmark_panel_class_init(GigoloBookmarkPanelClass *klass)
 										"The associated settings",
 										GIGOLO_SETTINGS_TYPE,
 										G_PARAM_WRITABLE));
-
-
-	g_type_class_add_private(klass, sizeof(GigoloBookmarkPanelPrivate));
 }
 
 
 static void button_close_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBookmarkPanel *panel)
 {
-	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(panel);
+	GigoloBookmarkPanelPrivate *priv = gigolo_bookmark_panel_get_instance_private(panel);
 	GigoloSettings *settings = gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent));
 
 	g_object_set(settings, "show-panel", FALSE, NULL);
@@ -156,7 +151,7 @@ static void button_close_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBookma
 
 static void button_connect_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBookmarkPanel *panel)
 {
-	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(panel);
+	GigoloBookmarkPanelPrivate *priv = gigolo_bookmark_panel_get_instance_private(panel);
 	GtkTreeSelection *selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->tree));
 	GtkTreeModel *model;
 	GtkTreeIter iter;
@@ -174,7 +169,7 @@ static void button_connect_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBook
 static void tree_selection_changed_cb(GtkTreeSelection *selection, GigoloBookmarkPanel *panel)
 {
 	gboolean set;
-	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(panel);
+	GigoloBookmarkPanelPrivate *priv = gigolo_bookmark_panel_get_instance_private(panel);
 
 	set = (selection != NULL) ? gtk_tree_selection_get_selected(selection, NULL, NULL) : FALSE;
 
@@ -186,7 +181,7 @@ static void tree_row_activated_cb(GtkTreeView *view, GtkTreePath *path,
 								  G_GNUC_UNUSED GtkTreeViewColumn *col,
 								  GigoloBookmarkPanel *panel)
 {
-	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(panel);
+	GigoloBookmarkPanelPrivate *priv = gigolo_bookmark_panel_get_instance_private(panel);
 	GtkTreeModel *model;
 	GtkTreeIter iter;
 
@@ -208,7 +203,7 @@ static void tree_prepare(GigoloBookmarkPanel *panel)
 	GtkTreeSelection *selection;
 	GtkWidget *tree;
 	GtkListStore *store;
-	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(panel);
+	GigoloBookmarkPanelPrivate *priv = gigolo_bookmark_panel_get_instance_private(panel);
 
 	tree = gtk_tree_view_new();
 	store = gtk_list_store_new(GIGOLO_BOOKMARK_PANEL_N_COLUMNS,
@@ -246,7 +241,7 @@ static void gigolo_bookmark_panel_init(GigoloBookmarkPanel *self)
 {
 	GtkWidget *swin, *toolbar;
 	GtkToolItem *toolitem;
-	GigoloBookmarkPanelPrivate *priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(self);
+	GigoloBookmarkPanelPrivate *priv = gigolo_bookmark_panel_get_instance_private(self);
 
 	gtk_orientable_set_orientation (GTK_ORIENTABLE (self), GTK_ORIENTATION_VERTICAL);
 	toolbar = gtk_toolbar_new();
@@ -294,7 +289,7 @@ GtkWidget *gigolo_bookmark_panel_new(GigoloWindow *parent)
 
 	self = g_object_new(GIGOLO_BOOKMARK_PANEL_TYPE, NULL);
 
-	priv = GIGOLO_BOOKMARK_PANEL_GET_PRIVATE(self);
+	priv = gigolo_bookmark_panel_get_instance_private(GIGOLO_BOOKMARK_PANEL(self));
 	priv->parent = parent;
 
 	return self;

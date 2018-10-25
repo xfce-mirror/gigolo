@@ -14,7 +14,8 @@ gigolo_SOURCES =								\
 	bookmarkdialog.c bookmarkdialog.h			\
 	bookmarkeditdialog.c bookmarkeditdialog.h	\
 	browsenetworkpanel.c browsenetworkpanel.h	\
-	preferencesdialog.c preferencesdialog.h
+	preferencesdialog.c preferencesdialog.h		\
+	gigolo_ui.h
 
 
 AM_CFLAGS = -DLOCALEDIR=\""$(localedir)"\"
@@ -23,3 +24,13 @@ AM_CFLAGS = -DLOCALEDIR=\""$(localedir)"\"
 INCLUDES = @GTK_CFLAGS@
 
 gigolo_LDADD = @GTK_LIBS@ $(INTLLIBS)
+
+if MAINTAINER_MODE
+
+BUILT_SOURCES = \
+	gigolo_ui.h
+
+gigolo_ui.h: gigolo.ui
+	exo-csource --static --strip-comments --strip-content --name=gigolo_ui $< >$@
+
+endif

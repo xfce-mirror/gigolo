@@ -1,3 +1,9 @@
+Gigolo 0.4.90 (UNRELEASED)
+
+  * Port to GTK+ 3
+	* Improved appearance of various dialogs
+	* Improved sizings of the icon view
+
 Gigolo 0.4.2 (January 9, 2014)
 
 	* Fix mnemonics in the Connect dialog.

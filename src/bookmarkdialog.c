@@ -33,9 +33,6 @@
 
 typedef struct _GigoloBookmarkDialogPrivate			GigoloBookmarkDialogPrivate;
 
-#define GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			GIGOLO_BOOKMARK_DIALOG_TYPE, GigoloBookmarkDialogPrivate))
-
 struct _GigoloBookmarkDialogPrivate
 {
 	GigoloWindow *parent;
@@ -69,18 +66,17 @@ enum
 };
 
 
-G_DEFINE_TYPE(GigoloBookmarkDialog, gigolo_bookmark_dialog, GTK_TYPE_DIALOG);
+G_DEFINE_TYPE_WITH_PRIVATE(GigoloBookmarkDialog, gigolo_bookmark_dialog, GTK_TYPE_DIALOG);
 
 
 static void gigolo_bookmark_dialog_class_init(GigoloBookmarkDialogClass *klass)
 {
-	g_type_class_add_private(klass, sizeof(GigoloBookmarkDialogPrivate));
 }
 
 
 static void update_row_in_model(GigoloBookmarkDialog *dialog, GtkTreeIter *iter, GigoloBookmark *bm)
 {
-	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(dialog);
 	gchar port[6];
 	GString *other_text = g_string_new(NULL);
 	const gchar *tmp;
@@ -128,7 +124,7 @@ static void update_row_in_model(GigoloBookmarkDialog *dialog, GtkTreeIter *iter,
 
 static void add_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWindow *dialog)
 {
-	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(GIGOLO_BOOKMARK_DIALOG(dialog));
 	GtkWidget *edit_dialog = gigolo_bookmark_edit_dialog_new(priv->parent, GIGOLO_BE_MODE_CREATE);
 	GigoloBookmark *bm = NULL;
 
@@ -157,7 +153,7 @@ static void edit_button_click_cb(G_GNUC_UNUSED GtkButton *button, GtkWindow *dia
 	GtkTreeSelection *treesel;
 	GtkTreeIter iter;
 	GtkWidget *edit_dialog;
-	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(GIGOLO_BOOKMARK_DIALOG(dialog));
 	GigoloBookmark *bm;
 
 	treesel = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->tree));
@@ -187,7 +183,7 @@ static void delete_button_click_cb(G_GNUC_UNUSED GtkButton *button, gpointer use
 {
 	GtkTreeSelection *treesel;
 	GtkTreeIter iter;
-	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(user_data);
+	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(user_data);
 	GigoloBookmark *bm;
 	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(
 		gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent)));
@@ -211,7 +207,7 @@ static void tree_fill(GigoloBookmarkDialog *dialog)
 {
 	guint i;
 	GigoloBookmark *bm;
-	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(dialog);
 	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(
 		gigolo_window_get_settings(GIGOLO_WINDOW(priv->parent)));
 	GtkTreeIter iter;
@@ -236,7 +232,7 @@ static void tree_row_activated_cb(G_GNUC_UNUSED GtkTreeView *treeview,
 
 static void tree_selection_changed_cb(GtkTreeSelection *selection, gpointer data)
 {
-	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(data);
+	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(data);
 
 	gtk_widget_set_sensitive(priv->button_edit, (selection != NULL));
 	gtk_widget_set_sensitive(priv->button_delete, (selection != NULL));
@@ -248,15 +244,15 @@ static gboolean tree_button_press_event_cb(G_GNUC_UNUSED GtkWidget *widget,
 {
 	if (event->button == 3)
 	{
-		GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(data);
+		GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(data);
 		GtkTreeSelection *treesel = gtk_tree_view_get_selection(GTK_TREE_VIEW(priv->tree));
 		gboolean have_sel = (gtk_tree_selection_count_selected_rows(treesel) > 0);
 
 		gtk_widget_set_sensitive(priv->edit_item, have_sel);
 		gtk_widget_set_sensitive(priv->delete_item, have_sel);
 
-		gtk_menu_popup(GTK_MENU(priv->popup_menu), NULL, NULL, NULL, NULL,
-																event->button, event->time);
+		gtk_menu_popup_at_pointer (GTK_MENU(priv->popup_menu),
+								   (GdkEvent *)event);
 		return TRUE;
 	}
 	return FALSE;
@@ -294,7 +290,7 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 	GtkTreeViewColumn *column;
 	GtkTreeSelection *sel;
 	GtkWidget *item;
-	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(dialog);
 
 	priv->tree = gtk_tree_view_new();
 	priv->store = gtk_list_store_new(N_COLUMNS,
@@ -357,7 +353,6 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 	gtk_tree_view_column_set_resizable(GTK_TREE_VIEW_COLUMN(column), TRUE);
 	gtk_tree_view_append_column(GTK_TREE_VIEW(priv->tree), column);
 
-	gtk_tree_view_set_rules_hint(GTK_TREE_VIEW(priv->tree), TRUE);
 	gtk_tree_view_set_headers_clickable(GTK_TREE_VIEW(priv->tree), TRUE);
 
 	/* sorting */
@@ -373,21 +368,21 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 
 	priv->popup_menu = gtk_menu_new();
 
-	item = gtk_image_menu_item_new_from_stock("gtk-add", NULL);
+	item = gtk_menu_item_new_with_mnemonic (_("_Add"));
 	g_object_set_data(G_OBJECT(item), "dialog", dialog);
 	gtk_widget_show(item);
 	gtk_container_add(GTK_CONTAINER(priv->popup_menu), item);
 	g_signal_connect(item, "activate", G_CALLBACK(tree_popup_activate_cb),
 		GINT_TO_POINTER(ACTION_ADD));
 
-	priv->edit_item = gtk_image_menu_item_new_from_stock("gtk-edit", NULL);
+	priv->edit_item = gtk_menu_item_new_with_mnemonic (_("_Edit"));
 	g_object_set_data(G_OBJECT(priv->edit_item), "dialog", dialog);
 	gtk_widget_show(priv->edit_item);
 	gtk_container_add(GTK_CONTAINER(priv->popup_menu), priv->edit_item);
 	g_signal_connect(priv->edit_item, "activate", G_CALLBACK(tree_popup_activate_cb),
 		GINT_TO_POINTER(ACTION_EDIT));
 
-	priv->delete_item = gtk_image_menu_item_new_from_stock("gtk-delete", NULL);
+	priv->delete_item = gtk_menu_item_new_with_mnemonic (_("_Delete"));
 	g_object_set_data(G_OBJECT(priv->delete_item), "dialog", dialog);
 	gtk_widget_show(priv->delete_item);
 	gtk_container_add(GTK_CONTAINER(priv->popup_menu), priv->delete_item);
@@ -404,7 +399,7 @@ static void tree_prepare(GigoloBookmarkDialog *dialog)
 static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 {
 	GtkWidget *vbox, *vbox2, *hbox, *swin, *button_add;
-	GigoloBookmarkDialogPrivate *priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
+	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(dialog);
 
 	g_object_set(dialog,
 		"icon-name", gigolo_find_icon_name("bookmark-new", "gtk-edit"),
@@ -420,13 +415,19 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	gtk_window_set_default_size(GTK_WINDOW(dialog), 550, 350);
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_CLOSE);
 
-	button_add = gtk_button_new_from_stock("gtk-add");
+	button_add = gtk_button_new_from_icon_name ("list-add", GTK_ICON_SIZE_BUTTON);
+	gtk_button_set_label (GTK_BUTTON (button_add), _("_Add"));
+	gtk_button_set_use_underline (GTK_BUTTON (button_add), TRUE);
 	g_signal_connect(button_add, "clicked", G_CALLBACK(add_button_click_cb), dialog);
 
-	priv->button_edit = gtk_button_new_from_stock("gtk-edit");
+	priv->button_edit = gtk_button_new_from_icon_name ("gtk-edit", GTK_ICON_SIZE_BUTTON);
+	gtk_button_set_label (GTK_BUTTON (priv->button_edit), _("_Edit"));
+	gtk_button_set_use_underline (GTK_BUTTON (priv->button_edit), TRUE);
 	g_signal_connect(priv->button_edit, "clicked", G_CALLBACK(edit_button_click_cb), dialog);
 
-	priv->button_delete = gtk_button_new_from_stock("gtk-delete");
+	priv->button_delete = gtk_button_new_from_icon_name ("edit-delete", GTK_ICON_SIZE_BUTTON);
+	gtk_button_set_label (GTK_BUTTON (priv->button_delete), _("_Delete"));
+	gtk_button_set_use_underline (GTK_BUTTON (priv->button_delete), TRUE);
 	g_signal_connect(priv->button_delete, "clicked", G_CALLBACK(delete_button_click_cb), dialog);
 
 	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
@@ -437,6 +438,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	tree_prepare(dialog);
 
 	swin = gtk_scrolled_window_new(NULL, NULL);
+	gtk_widget_set_vexpand (GTK_WIDGET (swin), TRUE);
 	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(swin),
 		GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(swin), GTK_SHADOW_IN);
@@ -457,7 +459,7 @@ GtkWidget *gigolo_bookmark_dialog_new(GigoloWindow *parent)
 	GigoloBookmarkDialogPrivate *priv;
 
 	dialog = g_object_new(GIGOLO_BOOKMARK_DIALOG_TYPE, "transient-for", parent, NULL);
-	priv = GIGOLO_BOOKMARK_DIALOG_GET_PRIVATE(dialog);
+	priv = gigolo_bookmark_dialog_get_instance_private(GIGOLO_BOOKMARK_DIALOG(dialog));
 
 	priv->parent = parent;
 

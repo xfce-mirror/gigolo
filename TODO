@@ -2,4 +2,3 @@
 - libnotify - to notify about new mounts or disappeared mounts (ftp timeout, etc.)
 - split GigoloApp from GigoloWindow
 - Samba mounts with set credentials can fail
-
