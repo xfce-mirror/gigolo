@@ -77,6 +77,8 @@ struct _GigoloWindowPrivate
 	GtkStatusIcon	*systray_icon;
 	GtkWidget		*systray_icon_popup_menu;
 
+	GtkAccelGroup   *accel_group;
+
 	guint			 autoconnect_timeout_id;
 };
 
@@ -1273,6 +1275,8 @@ static void bind_actions (GigoloWindow *window)
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_Preferences"));
 	g_signal_connect (widget, "activate", G_CALLBACK(preferences_cb), window);
 
+	gtk_widget_add_accelerator (widget, "activate", priv->accel_group, GDK_KEY_p, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
+
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "systray_Preferences"));
 	g_signal_connect (widget, "activate", G_CALLBACK(preferences_cb), window);
 
@@ -1290,9 +1294,13 @@ static void bind_actions (GigoloWindow *window)
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_EditBookmark"));
 	g_signal_connect (widget, "activate", G_CALLBACK(create_bookmark_cb), window);
 
+	gtk_widget_add_accelerator (widget, "activate", priv->accel_group, GDK_KEY_n, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
+
 	/* Edit Bookmarks (Ctrl + B) */
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_EditBookmarks"));
 	g_signal_connect (widget, "activate", G_CALLBACK(bookmark_edit_cb), window);
+
+	gtk_widget_add_accelerator (widget, "activate", priv->accel_group, GDK_KEY_b, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_EditBookmarks"));
 	g_signal_connect (widget, "clicked", G_CALLBACK(bookmark_edit_cb), window);
@@ -1323,9 +1331,11 @@ static void bind_actions (GigoloWindow *window)
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_Disconnect"));
 	g_signal_connect (widget, "activate", G_CALLBACK(unmount_cb), window);
 
-	/* Open */
+	/* Open (Ctrl + O) */
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_Open"));
 	g_signal_connect (widget, "activate", G_CALLBACK(open_cb), window);
+
+	gtk_widget_add_accelerator (widget, "activate", priv->accel_group, GDK_KEY_o, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_Open"));
 	g_signal_connect (widget, "clicked", G_CALLBACK(open_cb), window);
@@ -1337,6 +1347,8 @@ static void bind_actions (GigoloWindow *window)
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_OpenTerminal"));
 	g_signal_connect (widget, "activate", G_CALLBACK(open_terminal_cb), window);
 
+	gtk_widget_add_accelerator (widget, "activate", priv->accel_group, GDK_KEY_t, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
+
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_OpenTerminal"));
 	g_signal_connect (widget, "clicked", G_CALLBACK(open_terminal_cb), window);
 
@@ -1347,12 +1359,16 @@ static void bind_actions (GigoloWindow *window)
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_CopyURI"));
 	g_signal_connect (widget, "activate", G_CALLBACK(copy_uri_cb), window);
 
+	gtk_widget_add_accelerator (widget, "activate", priv->accel_group, GDK_KEY_c, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
+
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "popupitem_CopyURI"));
 	g_signal_connect (widget, "activate", G_CALLBACK(copy_uri_cb), window);
 
 	/* Quit (Ctrl + Q) */
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_Quit"));
 	g_signal_connect (widget, "activate", G_CALLBACK(quit_cb), window);
+
+	gtk_widget_add_accelerator (widget, "activate", priv->accel_group, GDK_KEY_q, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "toolitem_Quit"));
 	g_signal_connect (widget, "clicked", G_CALLBACK(quit_cb), window);
@@ -1363,6 +1379,8 @@ static void bind_actions (GigoloWindow *window)
 	/* Online Help (Ctrl + H) */
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_OnlineHelp"));
 	g_signal_connect (widget, "activate", G_CALLBACK(help_cb), window);
+
+	gtk_widget_add_accelerator (widget, "activate", priv->accel_group, GDK_KEY_h, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
 
 	/* Supported Schemes */
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "menuitem_SupportedSchemes"));
@@ -1422,6 +1440,9 @@ static void create_ui_elements(GigoloWindow *window)
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "toolitem_Bookmarks"));
 	gtk_menu_tool_button_set_menu (GTK_MENU_TOOL_BUTTON (widget), GTK_WIDGET (priv->toolbar_bookmarks_menu));
+
+	priv->accel_group = gtk_accel_group_new ();
+	gtk_window_add_accel_group (GTK_WINDOW (window), priv->accel_group);
 
 	gtk_notebook_set_current_page (GTK_NOTEBOOK (priv->notebook_store), 0);
 
