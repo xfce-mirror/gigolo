@@ -432,16 +432,23 @@ static void help_cb(GtkWidget *widget, G_GNUC_UNUSED GigoloWindow *window)
 }
 
 
+static void align_message_dialog (GtkWidget *widget, gpointer ptr)
+{
+	gtk_label_set_xalign (GTK_LABEL (widget), 0);
+	gtk_widget_set_halign (GTK_WIDGET (widget), GTK_ALIGN_START);
+}
+
+
 static void supported_schemes_cb(GtkWidget *widget, GigoloWindow *window)
 {
 	const gchar* const *supported;
 	const gchar *description;
 	GString *str;
 	GtkWidget *dialog;
+	GtkWidget *message_area;
 	guint j;
-
-	str = g_string_new(_("Gigolo can use the following protocols provided by GVfs:"));
-	g_string_append(str, "\n\n");
+	GList *items = NULL;
+	GList *iter = NULL;
 
 	supported = gigolo_backend_gvfs_get_supported_uri_schemes();
 	for (j = 0; supported[j] != NULL; j++)
@@ -449,14 +456,31 @@ static void supported_schemes_cb(GtkWidget *widget, GigoloWindow *window)
 		description = gigolo_describe_scheme(supported[j]);
 		if (description != NULL)
 		{
-			g_string_append_printf(str, "%s (%s)", description, supported[j]);
-			g_string_append_c(str, '\n');
+			// Translators: This is a list of "protocol description (protocol)"
+			items = g_list_prepend (items, g_strdup_printf (_("%s (%s)"), description, supported[j]));
 		}
 	}
+	items = g_list_sort (items, (GCompareFunc) g_strcmp0);
 
-	dialog = gtk_message_dialog_new(GTK_WINDOW(window),
+	str = g_string_new(_("Gigolo can use the following protocols provided by GVfs:"));
+	g_string_append(str, "\n\n");
+
+	for (iter = g_list_first (items); iter != NULL; iter = g_list_next (iter))
+	{
+		g_string_append_printf (str, "%s", (gchar *)iter->data);
+		g_string_append_c (str, '\n');
+	}
+
+	g_list_free_full (items, (GDestroyNotify) g_free);
+
+	dialog = gtk_message_dialog_new_with_markup(GTK_WINDOW(window),
 		GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_INFO,
-		GTK_BUTTONS_OK, "%s", str->str);
+		GTK_BUTTONS_OK, "<b>%s</b>", _("Supported Protocols"));
+
+	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s", str->str);
+
+	message_area = gtk_message_dialog_get_message_area (GTK_MESSAGE_DIALOG (dialog));
+	gtk_container_forall (GTK_CONTAINER (message_area), align_message_dialog, NULL);
 
 	gtk_dialog_run(GTK_DIALOG(dialog));
 
