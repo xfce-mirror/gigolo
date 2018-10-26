@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-10-26 03:56+0000\n"
+"PO-Revision-Date: 2018-10-26 04:55+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/xfce/xfce-apps/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -237,7 +237,7 @@ msgstr "其它信息"
 
 #: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
 msgid "_Add"
-msgstr ""
+msgstr "增加(_A)"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
 msgid "_Edit"
@@ -295,11 +295,11 @@ msgstr "与服务器连接"
 #. Bookmark Settings
 #: ../src/bookmarkeditdialog.c:959
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "书签设置"
 
 #: ../src/bookmarkeditdialog.c:965
 msgid "_Name:"
-msgstr ""
+msgstr "名称(_N):"
 
 #: ../src/bookmarkeditdialog.c:974
 msgid "_Color:"
@@ -307,12 +307,12 @@ msgstr "颜色(_C)："
 
 #: ../src/bookmarkeditdialog.c:983
 msgid "Au_to-Connect:"
-msgstr ""
+msgstr "自动连接(_T):"
 
 #. Connection Settings
 #: ../src/bookmarkeditdialog.c:994
 msgid "Connection Settings"
-msgstr ""
+msgstr "连接设置"
 
 #: ../src/bookmarkeditdialog.c:1000
 msgid "Service t_ype:"
@@ -333,7 +333,7 @@ msgstr "共享(_S)："
 #. Optional Information
 #: ../src/bookmarkeditdialog.c:1053
 msgid "Optional Information"
-msgstr ""
+msgstr "可选信息"
 
 #: ../src/bookmarkeditdialog.c:1059
 msgid "_Port:"
@@ -542,7 +542,7 @@ msgstr "未找到主机"
 
 #: ../src/browsenetworkpanel.c:438
 msgid "_Connect"
-msgstr ""
+msgstr "连接(_C)"
 
 #: ../src/browsenetworkpanel.c:481
 msgid "Connect to the selected share"
