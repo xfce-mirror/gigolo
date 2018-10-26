@@ -7,13 +7,14 @@
 # Hunt Xu <huntxu@live.cn>, 2009-2010
 # Jiahua Huang <jhuangjiahua@gmail.com>, 2009
 # Levi Zhou <congzhou821@gmail.com>, 2016
+# 玉堂白鹤 <yjwork@qq.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
+"POT-Creation-Date: 2018-10-25 12:30+0200\n"
+"PO-Revision-Date: 2018-10-26 03:56+0000\n"
+"Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/xfce/xfce-apps/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,27 +22,27 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/main.c:47
+#: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
 msgstr "连接所有标记为'自动连接'的书签,并退出"
 
-#: ../src/main.c:48
+#: ../src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "忽略正在运行的实例，强制打开一个新实例"
 
-#: ../src/main.c:49
+#: ../src/main.c:50
 msgid "Print a list of supported URI schemes"
 msgstr "列印支持的 URI 方案列表"
 
-#: ../src/main.c:50
+#: ../src/main.c:51
 msgid "Be verbose"
 msgstr "冗长"
 
-#: ../src/main.c:51
+#: ../src/main.c:52
 msgid "Show version information"
 msgstr "显示版本信息"
 
-#: ../src/main.c:112
+#: ../src/main.c:124
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "-易于与远程文件系统连接的简单前端"
 
@@ -77,7 +78,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV(安全的)"
 
-#: ../src/common.c:93 ../src/window.c:1508
+#: ../src/common.c:93 ../src/window.c:1595
 msgid "Network"
 msgstr "网络"
 
@@ -93,361 +94,302 @@ msgstr "照片"
 msgid "Custom Location"
 msgstr "自定义位置"
 
-#: ../src/window.c:262
+#: ../src/window.c:255
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "正在连接到 “%s” "
 
-#: ../src/window.c:430
+#: ../src/window.c:409
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "易于连接和挂载本地或远程文件系统的简单前端"
 
-#: ../src/window.c:431
+#: ../src/window.c:410
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "Enrico Tröger 2008-2011 版权所有"
 
-#: ../src/window.c:434
+#: ../src/window.c:413
 msgid "translator-credits"
 msgstr "Hunt Xu <huntxu@live.cn>, 2009, 2010.\nJiahua Huang <jhuangjiahua@gmail.com>, 2009.\nChipong Luo <chipong.luo@yahoo.com>, 2011, 2012."
 
-#: ../src/window.c:466
+#. Translators: This is a list of "protocol description (protocol)"
+#: ../src/window.c:462
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/window.c:467
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo 可以使用 GVfs 提供的下列协议："
 
-#: ../src/window.c:579 ../src/window.c:638
+#: ../src/window.c:480
+msgid "Supported Protocols"
+msgstr "支持的协议"
+
+#: ../src/window.c:582 ../src/window.c:641
 #, c-format
 msgid "The command '%s' failed"
 msgstr "无法执行命令 ‘%s’"
 
-#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
-#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
-#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
+#: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
+#: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
+#: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "错误"
 
-#: ../src/window.c:613
+#: ../src/window.c:616
 msgid "Invalid terminal command"
 msgstr "无效的终端命令"
 
-#: ../src/window.c:625
+#: ../src/window.c:628
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "“%s” 无可用的默认位置"
 
-#: ../src/window.c:705
+#: ../src/window.c:748
 msgid "Edit _Bookmark"
 msgstr "编辑书签(_B)"
 
-#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
-#: ../src/browsenetworkpanel.c:497
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
+#: ../src/browsenetworkpanel.c:488
 msgid "Create _Bookmark"
 msgstr "创建书签(_B)"
 
-#: ../src/window.c:1281
-msgid "_File"
-msgstr "文件(_F)"
-
-#: ../src/window.c:1282
-msgid "_Edit"
-msgstr "编辑(_E)"
-
-#: ../src/window.c:1283
-msgid "_Actions"
-msgstr "动作(_A)"
-
-#: ../src/window.c:1284
-msgid "_View"
-msgstr "视图(_V)"
-
-#: ../src/window.c:1285
-msgid "_Help"
-msgstr "帮助(_H)"
-
-#: ../src/window.c:1291
-msgid "_Edit Bookmarks"
-msgstr "编辑书签(_E)"
-
-#: ../src/window.c:1292
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "打开书签管理器以添加、编辑或删除书签"
-
-#: ../src/window.c:1296
-msgid "Disconnect the selected resource"
-msgstr "断开选中的资源"
-
-#: ../src/window.c:1298
-msgid "Open the selected resource with a file manager"
-msgstr "用文件管理器打开选中的资源"
-
-#: ../src/window.c:1299
-msgid "Open in _Terminal"
-msgstr "在终端打开(_T)"
-
-#: ../src/window.c:1300
-msgid "Start a terminal from here"
-msgstr "在此启动终端"
-
-#: ../src/window.c:1301
-msgid "Copy _URI"
-msgstr "复制 URI(_U)"
-
-#: ../src/window.c:1302
-msgid "Quit Gigolo"
-msgstr "退出 Gigolo"
-
-#: ../src/window.c:1303
-msgid "Online Help"
-msgstr "在线帮助"
-
-#: ../src/window.c:1304
-msgid "Supported Protocols"
-msgstr "支持的协议"
-
-#: ../src/window.c:1310
-msgid "Side _Panel"
-msgstr "侧边栏(_P)"
-
-#: ../src/window.c:1312
-msgid "_Toolbar"
-msgstr "工具栏(_T)"
-
-#: ../src/window.c:1314
-msgid "Status _Icon"
-msgstr "状态图标(_I)"
-
-#: ../src/window.c:1320
-msgid "View as _Symbols"
-msgstr "以符号方式查看(_S)"
-
-#: ../src/window.c:1321
-msgid "View as _Detailed List"
-msgstr "以详细列表方式查看(_D)"
-
-#: ../src/window.c:1330
-msgid "_Bookmarks"
-msgstr "书签(_B)"
-
-#: ../src/window.c:1330
-msgid "Choose a bookmark to connect to"
-msgstr "选择要连接的书签"
-
-#: ../src/window.c:1412
+#: ../src/window.c:1505
 msgid "Connected"
 msgstr "已连接"
 
-#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
+#: ../src/window.c:1514 ../src/bookmarkdialog.c:310
 msgid "Service Type"
 msgstr "服务类型"
 
-#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
+#: ../src/window.c:1522 ../src/bookmarkdialog.c:302
 msgid "Name"
 msgstr "名称"
 
-#: ../src/window.c:1500
+#: ../src/window.c:1587
 msgid "Bookmarks"
 msgstr "书签"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo 远程连接"
 
-#: ../src/settings.c:694
+#: ../src/settings.c:691
 msgid "Move it now?"
 msgstr "现在移动？"
 
-#: ../src/settings.c:695
+#: ../src/settings.c:692
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo 在启动前需要移动您原有的配置目录。"
 
-#: ../src/settings.c:703
+#: ../src/settings.c:700
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr "无法将您的原配置目录 “%s” 移动至 “%s”(%s)。请手动将此目录移动至新位置。"
 
-#: ../src/settings.c:706
+#: ../src/settings.c:703
 msgid "Warning"
 msgstr "警告"
 
-#: ../src/menubuttonaction.c:157
-msgid "Connect"
-msgstr "连接"
-
-#: ../src/bookmarkdialog.c:95
+#: ../src/bookmarkdialog.c:90
 #, c-format
 msgid "Domain: %s"
 msgstr "域：%s"
 
-#: ../src/bookmarkdialog.c:100
+#: ../src/bookmarkdialog.c:95
 #, c-format
 msgid "Share: %s"
 msgstr "共享：%s"
 
-#: ../src/bookmarkdialog.c:106
+#: ../src/bookmarkdialog.c:101
 #, c-format
 msgid "Folder: %s"
 msgstr "文件夹：%s"
 
-#: ../src/bookmarkdialog.c:112
+#: ../src/bookmarkdialog.c:107
 #, c-format
 msgid "Path: %s"
 msgstr "路径：%s"
 
-#: ../src/bookmarkdialog.c:323
+#: ../src/bookmarkdialog.c:318
 msgid "Host"
 msgstr "主机"
 
-#: ../src/bookmarkdialog.c:331
+#: ../src/bookmarkdialog.c:326
 msgid "Port"
 msgstr "端口"
 
-#: ../src/bookmarkdialog.c:339
+#: ../src/bookmarkdialog.c:334
 msgid "Auto-Connect"
 msgstr "自动连接"
 
-#: ../src/bookmarkdialog.c:347
+#: ../src/bookmarkdialog.c:342
 msgid "Username"
 msgstr "用户名"
 
-#: ../src/bookmarkdialog.c:355
+#: ../src/bookmarkdialog.c:350
 msgid "Other information"
 msgstr "其它信息"
 
-#: ../src/bookmarkdialog.c:412
+#: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
+msgid "_Add"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+msgid "_Edit"
+msgstr "编辑(_E)"
+
+#: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
+msgid "_Delete"
+msgstr "删除(&D)"
+
+#: ../src/bookmarkdialog.c:406
 msgid "Edit Bookmarks"
 msgstr "编辑书签"
 
-#: ../src/bookmarkeditdialog.c:234
+#: ../src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
 msgstr "您必须为书签输入一个名称。"
 
-#: ../src/bookmarkeditdialog.c:253
+#: ../src/bookmarkeditdialog.c:229
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
 msgstr "输入的书签名称已在使用。请选择另一个。"
 
-#: ../src/bookmarkeditdialog.c:266
+#: ../src/bookmarkeditdialog.c:242
 msgid "You must enter a server address or name."
 msgstr "您必须输入一个服务器地址或名称。"
 
-#: ../src/bookmarkeditdialog.c:277
+#: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
 msgstr "您必须输入一个共享名称。"
 
-#: ../src/bookmarkeditdialog.c:288
+#: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a valid URI for the connection."
 msgstr "您必须为连接输入一个有效的 URI。"
 
-#: ../src/bookmarkeditdialog.c:584
+#: ../src/bookmarkeditdialog.c:527
 msgid "_Device:"
 msgstr "设备(_D)："
 
-#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
 msgid "_Server:"
 msgstr "服务器(_S)："
 
-#: ../src/bookmarkeditdialog.c:897
+#: ../src/bookmarkeditdialog.c:789
 msgid "Create Bookmark"
 msgstr "创建书签"
 
-#: ../src/bookmarkeditdialog.c:904
+#: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
 msgstr "编辑书签"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:804
 msgid "Connect to Server"
 msgstr "与服务器连接"
 
-#: ../src/bookmarkeditdialog.c:1036
-msgid "_Bookmark name:"
-msgstr "书签名(_B)："
+#. Bookmark Settings
+#: ../src/bookmarkeditdialog.c:959
+msgid "Bookmark Settings"
+msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1044
+#: ../src/bookmarkeditdialog.c:965
+msgid "_Name:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:974
 msgid "_Color:"
 msgstr "颜色(_C)："
 
-#: ../src/bookmarkeditdialog.c:1055
-msgid "Au_to-Connect"
-msgstr "自动连接(_T)"
+#: ../src/bookmarkeditdialog.c:983
+msgid "Au_to-Connect:"
+msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1066
+#. Connection Settings
+#: ../src/bookmarkeditdialog.c:994
+msgid "Connection Settings"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1000
 msgid "Service t_ype:"
 msgstr "服务类型(_Y)："
 
-#: ../src/bookmarkeditdialog.c:1091
+#: ../src/bookmarkeditdialog.c:1016
+msgid "_Location (URI):"
+msgstr "位置(URI)(_L)："
+
+#: ../src/bookmarkeditdialog.c:1028
+msgid "P_ath:"
+msgstr "路径(_A)："
+
+#: ../src/bookmarkeditdialog.c:1034
+msgid "_Share:"
+msgstr "共享(_S)："
+
+#. Optional Information
+#: ../src/bookmarkeditdialog.c:1053
+msgid "Optional Information"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1059
+msgid "_Port:"
+msgstr "端口(_P)："
+
+#: ../src/bookmarkeditdialog.c:1065
 msgid "Set the port to 0 to use the default port"
 msgstr "将端口设置为 0 以便使用默认端口"
 
-#: ../src/bookmarkeditdialog.c:1093
+#: ../src/bookmarkeditdialog.c:1067
+msgid "_Folder:"
+msgstr "文件夹(_F)："
+
+#: ../src/bookmarkeditdialog.c:1073
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "它并不真正用于挂载，只在文件浏览器中打开此挂载点时才需要"
 
-#: ../src/bookmarkeditdialog.c:1099
-msgid "_Location (URI):"
-msgstr "位置(URI)(_L)："
-
-#: ../src/bookmarkeditdialog.c:1101
-msgid "_Folder:"
-msgstr "文件夹(_F)："
-
-#: ../src/bookmarkeditdialog.c:1102
-msgid "P_ath:"
-msgstr "路径(_A)："
-
-#: ../src/bookmarkeditdialog.c:1103
-msgid "_User Name:"
-msgstr "用户名(_U)："
-
-#: ../src/bookmarkeditdialog.c:1104
-msgid "Optional information:"
-msgstr "可选信息："
-
-#: ../src/bookmarkeditdialog.c:1105
-msgid "_Port:"
-msgstr "端口(_P)："
-
-#: ../src/bookmarkeditdialog.c:1106
+#: ../src/bookmarkeditdialog.c:1076
 msgid "_Domain:"
 msgstr "域(_D)："
 
-#: ../src/bookmarkeditdialog.c:1107
-msgid "_Share:"
-msgstr "共享(_S)："
+#: ../src/bookmarkeditdialog.c:1082
+msgid "_User Name:"
+msgstr "用户名(_U)："
 
-#: ../src/preferencesdialog.c:147
+#: ../src/preferencesdialog.c:146
 msgid "Icons"
 msgstr "图标"
 
-#: ../src/preferencesdialog.c:148
+#: ../src/preferencesdialog.c:147
 msgid "Text"
 msgstr "文本"
 
-#: ../src/preferencesdialog.c:149
+#: ../src/preferencesdialog.c:148
 msgid "Both"
 msgstr "都是"
 
-#: ../src/preferencesdialog.c:150
+#: ../src/preferencesdialog.c:149
 msgid "Both horizontal"
 msgstr "都是水平"
 
-#: ../src/preferencesdialog.c:169
+#: ../src/preferencesdialog.c:168
 msgid "Horizontal"
 msgstr "水平"
 
-#: ../src/preferencesdialog.c:170
+#: ../src/preferencesdialog.c:169
 msgid "Vertical"
 msgstr "竖直"
 
-#: ../src/preferencesdialog.c:189
+#: ../src/preferencesdialog.c:188
 msgid "Symbols"
 msgstr "符号"
 
-#: ../src/preferencesdialog.c:190
+#: ../src/preferencesdialog.c:189
 msgid "Detailed List"
 msgstr "详细列表"
 
@@ -455,22 +397,25 @@ msgstr "详细列表"
 msgid "General"
 msgstr "一般"
 
-#: ../src/preferencesdialog.c:338
+#. Row
+#: ../src/preferencesdialog.c:336
 msgid "_File Manager"
 msgstr "文件管理器(_F)"
 
-#: ../src/preferencesdialog.c:346
+#: ../src/preferencesdialog.c:347
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr "输入用来打开或查看挂载点的程序名称"
 
-#: ../src/preferencesdialog.c:355
+#. Row
+#: ../src/preferencesdialog.c:354
 msgid "_Terminal"
 msgstr "终端(_T)"
 
-#: ../src/preferencesdialog.c:363
+#: ../src/preferencesdialog.c:365
 msgid "Enter the name of a program to open mount points in a terminal"
 msgstr "在终端中输入打开挂载点的程序名称"
 
+#. Row
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "书签自动连接间隔(_B)"
@@ -521,7 +466,7 @@ msgid ""
 "fails"
 msgstr "无法自动连接书签时是否显示错误信息对话框"
 
-#: ../src/preferencesdialog.c:414
+#: ../src/preferencesdialog.c:411
 msgid "_Connection List Mode"
 msgstr "连接列表模式(_C)"
 
@@ -533,23 +478,23 @@ msgstr "工具栏"
 msgid "Show _toolbar"
 msgstr "显示工具栏(_T)"
 
-#: ../src/preferencesdialog.c:435
+#: ../src/preferencesdialog.c:432
 msgid "St_yle"
 msgstr "样式(_Y)"
 
-#: ../src/preferencesdialog.c:446
+#: ../src/preferencesdialog.c:441
 msgid "_Orientation"
 msgstr "方向(_O)"
 
-#: ../src/preferencesdialog.c:507
+#: ../src/preferencesdialog.c:496
 msgid "Preferences"
 msgstr "首选项"
 
-#: ../src/backendgvfs.c:221
+#: ../src/backendgvfs.c:215
 msgid "No bookmark"
 msgstr "无书签"
 
-#: ../src/backendgvfs.c:239
+#: ../src/backendgvfs.c:233
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -560,62 +505,66 @@ msgid ""
 "Bookmark: %s"
 msgstr "<b>%s</b>\n\nURI：%s\n已连接：是\n服务类型：%s\n书签：%s"
 
-#: ../src/backendgvfs.c:254
+#: ../src/backendgvfs.c:248
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix 设备：%s</b>"
 
-#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:486
 msgid "unknown"
 msgstr "未知"
 
-#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "无法与 “%s” 连接。"
 
-#: ../src/backendgvfs.c:496
+#: ../src/backendgvfs.c:490
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "无法从 “%s” 断开。"
 
-#: ../src/mountdialog.c:102
+#: ../src/mountdialog.c:95
 msgid "Connecting"
 msgstr "正在连接"
 
-#: ../src/browsenetworkpanel.c:188
+#: ../src/browsenetworkpanel.c:183
 msgid "No Workgroups found"
 msgstr "未找到工作组"
 
-#: ../src/browsenetworkpanel.c:199
+#: ../src/browsenetworkpanel.c:194
 msgid "No Shares found"
 msgstr "未找到共享"
 
-#: ../src/browsenetworkpanel.c:204
+#: ../src/browsenetworkpanel.c:199
 msgid "No Hosts found"
 msgstr "未找到主机"
 
-#: ../src/browsenetworkpanel.c:490
+#: ../src/browsenetworkpanel.c:438
+msgid "_Connect"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:481
 msgid "Connect to the selected share"
 msgstr "与选中的共享连接"
 
-#: ../src/browsenetworkpanel.c:498
+#: ../src/browsenetworkpanel.c:489
 msgid "Create a bookmark from the selected share"
 msgstr "从选中的共享创建一个书签"
 
-#: ../src/browsenetworkpanel.c:507
+#: ../src/browsenetworkpanel.c:499
 msgid "Refresh the network list"
 msgstr "刷新网络列表"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "关闭侧边栏"
 
-#: ../src/bookmarkpanel.c:92
+#: ../src/bookmarkpanel.c:90
 msgid "No bookmarks"
 msgstr "无书签"
 
-#: ../src/bookmarkpanel.c:256
+#: ../src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr "与选中的书签连接"
 
