@@ -1,8 +1,9 @@
-Gigolo 0.4.90 (UNRELEASED)
+Gigolo 0.4.90 (October 27, 2018)
 
-  * Port to GTK+ 3
+	* Port to GTK+ 3
 	* Improved appearance of various dialogs
 	* Improved sizings of the icon view
+	* Updated translations
 
 Gigolo 0.4.2 (January 9, 2014)
 
