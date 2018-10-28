@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-10-27 09:36+0000\n"
+"PO-Revision-Date: 2018-10-28 20:52+0000\n"
 "Last-Translator: Charles Monzat <c.monzat@laposte.net>\n"
 "Language-Team: French (http://www.transifex.com/xfce/xfce-apps/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -260,19 +260,19 @@ msgstr "Vous devez entrer un nom pour le signet."
 #: ../src/bookmarkeditdialog.c:229
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "Le nom du signet saisi est déjà utilisé. Merci d’en choisir un autre."
+msgstr "Le nom du signet saisi est déjà utilisé. Veuillez en choisir un autre."
 
 #: ../src/bookmarkeditdialog.c:242
 msgid "You must enter a server address or name."
-msgstr "Vous devez entrer un nom ou une adresse de serveur."
+msgstr "Vous devez saisir un nom ou une adresse de serveur."
 
 #: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
-msgstr "Vous devez entrer un nom de partage."
+msgstr "Vous devez saisir un nom de partage."
 
 #: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a valid URI for the connection."
-msgstr "Vous devez entrer une URI valide pour la connexion."
+msgstr "Vous devez saisir un URI valide pour la connexion."
 
 #: ../src/bookmarkeditdialog.c:527
 msgid "_Device:"
@@ -288,7 +288,7 @@ msgstr "Créer un signet"
 
 #: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
-msgstr "Modifier un signet"
+msgstr "Modifier le signet"
 
 #: ../src/bookmarkeditdialog.c:804
 msgid "Connect to Server"
@@ -335,7 +335,7 @@ msgstr "Pa_rtage :"
 #. Optional Information
 #: ../src/bookmarkeditdialog.c:1053
 msgid "Optional Information"
-msgstr ""
+msgstr "Informations facultatives"
 
 #: ../src/bookmarkeditdialog.c:1059
 msgid "_Port:"
@@ -373,19 +373,19 @@ msgstr "Texte"
 
 #: ../src/preferencesdialog.c:148
 msgid "Both"
-msgstr "Les deux"
+msgstr "Icônes et texte"
 
 #: ../src/preferencesdialog.c:149
 msgid "Both horizontal"
-msgstr "Les deux horizontal"
+msgstr "Icônes et texte horizontalement"
 
 #: ../src/preferencesdialog.c:168
 msgid "Horizontal"
-msgstr "Horizontal"
+msgstr "Horizontale"
 
 #: ../src/preferencesdialog.c:169
 msgid "Vertical"
-msgstr "Vertical"
+msgstr "Verticale"
 
 #: ../src/preferencesdialog.c:188
 msgid "Symbols"
@@ -406,7 +406,7 @@ msgstr "Gestionnaire de _fichiers"
 
 #: ../src/preferencesdialog.c:347
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Entrer le nom de l’application à utiliser pour ouvrir ou afficher les points de montage"
+msgstr "Saisissez le nom de l’application à utiliser pour ouvrir ou afficher les points de montage"
 
 #. Row
 #: ../src/preferencesdialog.c:354
@@ -415,7 +415,7 @@ msgstr "_Terminal"
 
 #: ../src/preferencesdialog.c:365
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr "Entrer le nom d’un programme à utiliser pour ouvrir les points de montage dans un terminal"
+msgstr "Saisissez le nom d’un programme à utiliser pour ouvrir les points de montage dans un terminal"
 
 #. Row
 #: ../src/preferencesdialog.c:372
@@ -544,7 +544,7 @@ msgstr "Aucun serveur trouvé"
 
 #: ../src/browsenetworkpanel.c:438
 msgid "_Connect"
-msgstr ""
+msgstr "_Connexion"
 
 #: ../src/browsenetworkpanel.c:481
 msgid "Connect to the selected share"
