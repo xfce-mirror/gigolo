@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Sveinn í Felli <sv1@fellsnet.is>, 2014-2015
-# Sveinn í Felli <sveinki@nett.is>, 2011,2016
+# Sveinn í Felli <sveinki@nett.is>, 2011,2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
+"POT-Creation-Date: 2018-10-25 12:30+0200\n"
+"PO-Revision-Date: 2018-11-05 20:26+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-apps/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Language: is\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 
-#: ../src/main.c:47
+#: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
 msgstr "Tengja öll bókamerki sem merkt eru með 'tengjast sjálfvirkt' og hætta"
 
-#: ../src/main.c:48
+#: ../src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Hunsa þau tilvik sem eru í keyrslu, krefjast að opna nýtt tilvik"
 
-#: ../src/main.c:49
+#: ../src/main.c:50
 msgid "Print a list of supported URI schemes"
 msgstr "Birta lista yfir studd URI-skemu"
 
-#: ../src/main.c:50
+#: ../src/main.c:51
 msgid "Be verbose"
 msgstr "Vera ítarlegri"
 
-#: ../src/main.c:51
+#: ../src/main.c:52
 msgid "Show version information"
 msgstr "Sýna upplýsingar um útgáfu"
 
-#: ../src/main.c:112
+#: ../src/main.c:124
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- Einfalt viðmót til að tengjast fjartengdum skráakerfum"
 
@@ -75,7 +75,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (öruggt)"
 
-#: ../src/common.c:93 ../src/window.c:1508
+#: ../src/common.c:93 ../src/window.c:1595
 msgid "Network"
 msgstr "Netkerfi"
 
@@ -91,361 +91,302 @@ msgstr "Ljósmyndir"
 msgid "Custom Location"
 msgstr "Sérsniðin staðsetning"
 
-#: ../src/window.c:262
+#: ../src/window.c:255
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Tengist \"%s\""
 
-#: ../src/window.c:430
+#: ../src/window.c:409
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Einfalt viðmót til að tengjast/tengja inn staðvær og fjartengd skráakerfi"
 
-#: ../src/window.c:431
+#: ../src/window.c:410
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "Höfundarréttur 2008-2011 Enrico Tröger"
 
-#: ../src/window.c:434
+#: ../src/window.c:413
 msgid "translator-credits"
 msgstr "Sveinn í Felli"
 
-#: ../src/window.c:466
+#. Translators: This is a list of "protocol description (protocol)"
+#: ../src/window.c:462
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/window.c:467
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo getur notað eftirfarandi samskiptamáta í gegnum GVfs (GNOME Virtual file system):"
 
-#: ../src/window.c:579 ../src/window.c:638
+#: ../src/window.c:480
+msgid "Supported Protocols"
+msgstr "Studdar samskiptareglur"
+
+#: ../src/window.c:582 ../src/window.c:641
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Skipunin '%s' mistókst"
 
-#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
-#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
-#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
+#: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
+#: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
+#: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Villa"
 
-#: ../src/window.c:613
+#: ../src/window.c:616
 msgid "Invalid terminal command"
 msgstr "Ógild terminal skipun"
 
-#: ../src/window.c:625
+#: ../src/window.c:628
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "Engin sjálfgefin staðsetning til fyrir \"%s\""
 
-#: ../src/window.c:705
+#: ../src/window.c:748
 msgid "Edit _Bookmark"
 msgstr "_Breyta bókamerki"
 
-#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
-#: ../src/browsenetworkpanel.c:497
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
+#: ../src/browsenetworkpanel.c:488
 msgid "Create _Bookmark"
 msgstr "_Búa til bókamerki"
 
-#: ../src/window.c:1281
-msgid "_File"
-msgstr "_Skrá"
-
-#: ../src/window.c:1282
-msgid "_Edit"
-msgstr "_Breyta"
-
-#: ../src/window.c:1283
-msgid "_Actions"
-msgstr "_Aðgerðir"
-
-#: ../src/window.c:1284
-msgid "_View"
-msgstr "S_koða"
-
-#: ../src/window.c:1285
-msgid "_Help"
-msgstr "_Hjálp"
-
-#: ../src/window.c:1291
-msgid "_Edit Bookmarks"
-msgstr "Br_eyta bókamerkjum"
-
-#: ../src/window.c:1292
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Opna bókamerkjastjórann til að bæta við, breyta eða eyða bókamerkjum"
-
-#: ../src/window.c:1296
-msgid "Disconnect the selected resource"
-msgstr "Aftengja valið tilfang"
-
-#: ../src/window.c:1298
-msgid "Open the selected resource with a file manager"
-msgstr "Opna valið tilfang í skráarstjóra"
-
-#: ../src/window.c:1299
-msgid "Open in _Terminal"
-msgstr "O_pna í skjáhermi"
-
-#: ../src/window.c:1300
-msgid "Start a terminal from here"
-msgstr "Ræsa skjáhermisetu héðan"
-
-#: ../src/window.c:1301
-msgid "Copy _URI"
-msgstr "A_frita slóð"
-
-#: ../src/window.c:1302
-msgid "Quit Gigolo"
-msgstr "Hætta í Gigolo"
-
-#: ../src/window.c:1303
-msgid "Online Help"
-msgstr "Hjálp á netinu"
-
-#: ../src/window.c:1304
-msgid "Supported Protocols"
-msgstr "Studdar samskiptareglur"
-
-#: ../src/window.c:1310
-msgid "Side _Panel"
-msgstr "_Hliðarspjald"
-
-#: ../src/window.c:1312
-msgid "_Toolbar"
-msgstr "_Verkfærastika"
-
-#: ../src/window.c:1314
-msgid "Status _Icon"
-msgstr "Stöðu_tákn"
-
-#: ../src/window.c:1320
-msgid "View as _Symbols"
-msgstr "_Skoða sem tákn"
-
-#: ../src/window.c:1321
-msgid "View as _Detailed List"
-msgstr "Skoða sem ítarlegan _lista"
-
-#: ../src/window.c:1330
-msgid "_Bookmarks"
-msgstr "_Bókamerki"
-
-#: ../src/window.c:1330
-msgid "Choose a bookmark to connect to"
-msgstr "Veldu bókamerki til að tengjast"
-
-#: ../src/window.c:1412
+#: ../src/window.c:1505
 msgid "Connected"
 msgstr "Tengdur"
 
-#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
+#: ../src/window.c:1514 ../src/bookmarkdialog.c:310
 msgid "Service Type"
 msgstr "Tegund þjónustu"
 
-#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
+#: ../src/window.c:1522 ../src/bookmarkdialog.c:302
 msgid "Name"
 msgstr "Heiti"
 
-#: ../src/window.c:1500
+#: ../src/window.c:1587
 msgid "Bookmarks"
 msgstr "Bókamerki"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:694
+#: ../src/settings.c:691
 msgid "Move it now?"
 msgstr "Færa það núna?"
 
-#: ../src/settings.c:695
+#: ../src/settings.c:692
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo þarf að færa gömlu stillingamöppuna áður en ræst er."
 
-#: ../src/settings.c:703
+#: ../src/settings.c:700
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr "Ekki var hægt að færa gömlu stillingamöppuna \"%s\"yfir í \"%s\" (%s). Færðu möppuna handvirkt á nýja staðinn."
 
-#: ../src/settings.c:706
+#: ../src/settings.c:703
 msgid "Warning"
 msgstr "Aðvörun"
 
-#: ../src/menubuttonaction.c:157
-msgid "Connect"
-msgstr "Tengjast"
-
-#: ../src/bookmarkdialog.c:95
+#: ../src/bookmarkdialog.c:90
 #, c-format
 msgid "Domain: %s"
 msgstr "Lén: %s"
 
-#: ../src/bookmarkdialog.c:100
+#: ../src/bookmarkdialog.c:95
 #, c-format
 msgid "Share: %s"
 msgstr "Sameign: %s"
 
-#: ../src/bookmarkdialog.c:106
+#: ../src/bookmarkdialog.c:101
 #, c-format
 msgid "Folder: %s"
 msgstr "Mappa: %s"
 
-#: ../src/bookmarkdialog.c:112
+#: ../src/bookmarkdialog.c:107
 #, c-format
 msgid "Path: %s"
 msgstr "Slóð: %s"
 
-#: ../src/bookmarkdialog.c:323
+#: ../src/bookmarkdialog.c:318
 msgid "Host"
 msgstr "Miðlari"
 
-#: ../src/bookmarkdialog.c:331
+#: ../src/bookmarkdialog.c:326
 msgid "Port"
 msgstr "Gátt"
 
-#: ../src/bookmarkdialog.c:339
+#: ../src/bookmarkdialog.c:334
 msgid "Auto-Connect"
 msgstr "Tengjast sjálfvirkt"
 
-#: ../src/bookmarkdialog.c:347
+#: ../src/bookmarkdialog.c:342
 msgid "Username"
 msgstr "Notandanafn"
 
-#: ../src/bookmarkdialog.c:355
+#: ../src/bookmarkdialog.c:350
 msgid "Other information"
 msgstr "Aðrar upplýsingar"
 
-#: ../src/bookmarkdialog.c:412
+#: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
+msgid "_Add"
+msgstr "Bæt_a við"
+
+#: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+msgid "_Edit"
+msgstr "_Breyta"
+
+#: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
+msgid "_Delete"
+msgstr "_Eyða"
+
+#: ../src/bookmarkdialog.c:406
 msgid "Edit Bookmarks"
 msgstr "Breyta bókamerkjum"
 
-#: ../src/bookmarkeditdialog.c:234
+#: ../src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
 msgstr "Þú verður að velja nafn fyrir þetta bókamerki."
 
-#: ../src/bookmarkeditdialog.c:253
+#: ../src/bookmarkeditdialog.c:229
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
 msgstr "Þetta bókamerkisnafn er í notkun. Vinsamlegast veldu þér annað."
 
-#: ../src/bookmarkeditdialog.c:266
+#: ../src/bookmarkeditdialog.c:242
 msgid "You must enter a server address or name."
 msgstr "Þú verður að setja inn vistfang þjóns eða heiti."
 
-#: ../src/bookmarkeditdialog.c:277
+#: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
 msgstr "Þú verður að setja inn heiti á sameign."
 
-#: ../src/bookmarkeditdialog.c:288
+#: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a valid URI for the connection."
 msgstr "Þú verður að setja inn gilda URI-slóð fyrir tenginguna."
 
-#: ../src/bookmarkeditdialog.c:584
+#: ../src/bookmarkeditdialog.c:527
 msgid "_Device:"
 msgstr "_Tæki:"
 
-#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
 msgid "_Server:"
 msgstr "Þ_jónn:"
 
-#: ../src/bookmarkeditdialog.c:897
+#: ../src/bookmarkeditdialog.c:789
 msgid "Create Bookmark"
 msgstr "Búa til bókamerki"
 
-#: ../src/bookmarkeditdialog.c:904
+#: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
 msgstr "Breyta bókamerki"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:804
 msgid "Connect to Server"
 msgstr "Tengjast þjóni"
 
-#: ../src/bookmarkeditdialog.c:1036
-msgid "_Bookmark name:"
-msgstr "Heiti bókamerkis"
+#. Bookmark Settings
+#: ../src/bookmarkeditdialog.c:959
+msgid "Bookmark Settings"
+msgstr "Stillingar bókamerkja"
 
-#: ../src/bookmarkeditdialog.c:1044
+#: ../src/bookmarkeditdialog.c:965
+msgid "_Name:"
+msgstr "_Heiti:"
+
+#: ../src/bookmarkeditdialog.c:974
 msgid "_Color:"
 msgstr "_Litur:"
 
-#: ../src/bookmarkeditdialog.c:1055
-msgid "Au_to-Connect"
-msgstr "_Tengjast sjálfvirkt"
+#: ../src/bookmarkeditdialog.c:983
+msgid "Au_to-Connect:"
+msgstr "_Tengjast sjálfvirkt:"
 
-#: ../src/bookmarkeditdialog.c:1066
+#. Connection Settings
+#: ../src/bookmarkeditdialog.c:994
+msgid "Connection Settings"
+msgstr "Valkostir tengingar"
+
+#: ../src/bookmarkeditdialog.c:1000
 msgid "Service t_ype:"
 msgstr "T_egund þjónustu"
 
-#: ../src/bookmarkeditdialog.c:1091
+#: ../src/bookmarkeditdialog.c:1016
+msgid "_Location (URI):"
+msgstr "Staðsetning (_URI):"
+
+#: ../src/bookmarkeditdialog.c:1028
+msgid "P_ath:"
+msgstr "S_lóð:"
+
+#: ../src/bookmarkeditdialog.c:1034
+msgid "_Share:"
+msgstr "_Sameign:"
+
+#. Optional Information
+#: ../src/bookmarkeditdialog.c:1053
+msgid "Optional Information"
+msgstr "Valfrjálsar upplýsingar"
+
+#: ../src/bookmarkeditdialog.c:1059
+msgid "_Port:"
+msgstr "_Gátt:"
+
+#: ../src/bookmarkeditdialog.c:1065
 msgid "Set the port to 0 to use the default port"
 msgstr "Settu gáttina á 0 til að nota sjálfgefna gátt"
 
-#: ../src/bookmarkeditdialog.c:1093
+#: ../src/bookmarkeditdialog.c:1067
+msgid "_Folder:"
+msgstr "_Mappa:"
+
+#: ../src/bookmarkeditdialog.c:1073
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Þetta er ekki notað sem raunverulegur tengipunktur, heldur er nauðsynlegt til að hægt sé að opna tengipunktinn í skráastjóra"
 
-#: ../src/bookmarkeditdialog.c:1099
-msgid "_Location (URI):"
-msgstr "Staðsetning (_URI):"
-
-#: ../src/bookmarkeditdialog.c:1101
-msgid "_Folder:"
-msgstr "_Mappa:"
-
-#: ../src/bookmarkeditdialog.c:1102
-msgid "P_ath:"
-msgstr "S_lóð:"
-
-#: ../src/bookmarkeditdialog.c:1103
-msgid "_User Name:"
-msgstr "_Notandanafn:"
-
-#: ../src/bookmarkeditdialog.c:1104
-msgid "Optional information:"
-msgstr "Valfrjálsar upplýsingar:"
-
-#: ../src/bookmarkeditdialog.c:1105
-msgid "_Port:"
-msgstr "_Gátt:"
-
-#: ../src/bookmarkeditdialog.c:1106
+#: ../src/bookmarkeditdialog.c:1076
 msgid "_Domain:"
 msgstr "_Lén:"
 
-#: ../src/bookmarkeditdialog.c:1107
-msgid "_Share:"
-msgstr "_Sameign:"
+#: ../src/bookmarkeditdialog.c:1082
+msgid "_User Name:"
+msgstr "_Notandanafn:"
 
-#: ../src/preferencesdialog.c:147
+#: ../src/preferencesdialog.c:146
 msgid "Icons"
 msgstr "Táknmyndir"
 
-#: ../src/preferencesdialog.c:148
+#: ../src/preferencesdialog.c:147
 msgid "Text"
 msgstr "Texti"
 
-#: ../src/preferencesdialog.c:149
+#: ../src/preferencesdialog.c:148
 msgid "Both"
 msgstr "Bæði"
 
-#: ../src/preferencesdialog.c:150
+#: ../src/preferencesdialog.c:149
 msgid "Both horizontal"
 msgstr "Bæði lárétt"
 
-#: ../src/preferencesdialog.c:169
+#: ../src/preferencesdialog.c:168
 msgid "Horizontal"
 msgstr "Lárétt"
 
-#: ../src/preferencesdialog.c:170
+#: ../src/preferencesdialog.c:169
 msgid "Vertical"
 msgstr "Lóðrétt"
 
-#: ../src/preferencesdialog.c:189
+#: ../src/preferencesdialog.c:188
 msgid "Symbols"
 msgstr "Táknmerki"
 
-#: ../src/preferencesdialog.c:190
+#: ../src/preferencesdialog.c:189
 msgid "Detailed List"
 msgstr "Ítarlegur listi"
 
@@ -453,22 +394,25 @@ msgstr "Ítarlegur listi"
 msgid "General"
 msgstr "Almennt"
 
-#: ../src/preferencesdialog.c:338
+#. Row
+#: ../src/preferencesdialog.c:336
 msgid "_File Manager"
 msgstr "S_kráastjóri"
 
-#: ../src/preferencesdialog.c:346
+#: ../src/preferencesdialog.c:347
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr "Settu inn heiti á forriti sem nota skal til að opna eða skoða tengipunkta"
 
-#: ../src/preferencesdialog.c:355
+#. Row
+#: ../src/preferencesdialog.c:354
 msgid "_Terminal"
 msgstr "Skjá_hermir"
 
-#: ../src/preferencesdialog.c:363
+#: ../src/preferencesdialog.c:365
 msgid "Enter the name of a program to open mount points in a terminal"
 msgstr "Settu inn heiti á forriti sem nota skal til að opna tengipunkta í skjáhermi (terminal)"
 
+#. Row
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "Tengjast _bókamerkjum sjálfvirkt"
@@ -519,7 +463,7 @@ msgid ""
 "fails"
 msgstr "Hvort birta eigi villuboðaglugga þegar sjálfvirk tenging bókamerkja mistekst"
 
-#: ../src/preferencesdialog.c:414
+#: ../src/preferencesdialog.c:411
 msgid "_Connection List Mode"
 msgstr "Tengingalista_hamur"
 
@@ -531,23 +475,23 @@ msgstr "Verkfærastika"
 msgid "Show _toolbar"
 msgstr "Bir_ta verkfærastiku"
 
-#: ../src/preferencesdialog.c:435
+#: ../src/preferencesdialog.c:432
 msgid "St_yle"
 msgstr "St_íll"
 
-#: ../src/preferencesdialog.c:446
+#: ../src/preferencesdialog.c:441
 msgid "_Orientation"
 msgstr "Ste_fna"
 
-#: ../src/preferencesdialog.c:507
+#: ../src/preferencesdialog.c:496
 msgid "Preferences"
 msgstr "Stillingar"
 
-#: ../src/backendgvfs.c:221
+#: ../src/backendgvfs.c:215
 msgid "No bookmark"
 msgstr "Engin bókamerki"
 
-#: ../src/backendgvfs.c:239
+#: ../src/backendgvfs.c:233
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -558,62 +502,66 @@ msgid ""
 "Bookmark: %s"
 msgstr "<b>%s</b>\n\nURI: %s\nTengt: Já\nTegund þjónustu: %s\nBókamerki: %s"
 
-#: ../src/backendgvfs.c:254
+#: ../src/backendgvfs.c:248
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix tæki: %s</b>"
 
-#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:486
 msgid "unknown"
 msgstr "óþekkt"
 
-#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Tengingin við \"%s\" mistókst."
 
-#: ../src/backendgvfs.c:496
+#: ../src/backendgvfs.c:490
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Mistókst að aftengjast frá \"%s\"."
 
-#: ../src/mountdialog.c:102
+#: ../src/mountdialog.c:95
 msgid "Connecting"
 msgstr "Tengist"
 
-#: ../src/browsenetworkpanel.c:188
+#: ../src/browsenetworkpanel.c:183
 msgid "No Workgroups found"
 msgstr "Engir vinnuhópar fundust"
 
-#: ../src/browsenetworkpanel.c:199
+#: ../src/browsenetworkpanel.c:194
 msgid "No Shares found"
 msgstr "Engar sameignir fundust"
 
-#: ../src/browsenetworkpanel.c:204
+#: ../src/browsenetworkpanel.c:199
 msgid "No Hosts found"
 msgstr "Engir þjónar fundust"
 
-#: ../src/browsenetworkpanel.c:490
+#: ../src/browsenetworkpanel.c:438
+msgid "_Connect"
+msgstr "Teng_jast"
+
+#: ../src/browsenetworkpanel.c:481
 msgid "Connect to the selected share"
 msgstr "Tengjast valdri sameign"
 
-#: ../src/browsenetworkpanel.c:498
+#: ../src/browsenetworkpanel.c:489
 msgid "Create a bookmark from the selected share"
 msgstr "Búa til nýtt bókamerki úr valinni sameign"
 
-#: ../src/browsenetworkpanel.c:507
+#: ../src/browsenetworkpanel.c:499
 msgid "Refresh the network list"
 msgstr "Endurnýja lista yfir netkerfi"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Loka spjaldi"
 
-#: ../src/bookmarkpanel.c:92
+#: ../src/bookmarkpanel.c:90
 msgid "No bookmarks"
 msgstr "Engin bókamerki"
 
-#: ../src/bookmarkpanel.c:256
+#: ../src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr "Tengjast völdu bókamerki"
 
