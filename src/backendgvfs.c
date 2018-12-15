@@ -459,7 +459,7 @@ static void volume_mount_finished_cb(GObject *src, GAsyncResult *res, gpointer b
 		}
 	}
 	else
-		verbose("Mount finished sucessfully");
+		verbose("Mount finished successfully");
 }
 
 
