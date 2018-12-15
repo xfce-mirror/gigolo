@@ -569,7 +569,7 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 		error = NULL;
 	}
 
-	priv->file_manager = get_setting_string(k, SECTION_GENERAL, "file_manager", "gvfs-open");
+	priv->file_manager = get_setting_string(k, SECTION_GENERAL, "file_manager", "gio open");
 	/* is there a generic way to open a default terminal? */
 	priv->terminal = get_setting_string(k, SECTION_GENERAL, "terminal", "xterm");
 	priv->autoconnect_interval = get_setting_int(k, SECTION_GENERAL, "autoconnect_interval",
