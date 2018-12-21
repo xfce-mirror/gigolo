@@ -133,6 +133,7 @@ enum {
 	SCHEME_SMB,
 	SCHEME_DAV,
 	SCHEME_DAVS,
+	SCHEME_AFP,
 	SCHEME_OBEX,
 	SCHEME_CUSTOM
 };
@@ -143,6 +144,7 @@ static struct MethodInfo methods[] = {
 	{ "smb",  0,	SHOW_SHARE | SHOW_USER | SHOW_DOMAIN | SHOW_FOLDER },
 	{ "dav",  80,	SHOW_PATH | SHOW_PORT | SHOW_USER | SHOW_FOLDER },
 	{ "davs", 443,	SHOW_PATH | SHOW_PORT | SHOW_USER | SHOW_FOLDER },
+	{ "afp",  548,	SHOW_PORT | SHOW_USER | SHOW_FOLDER },
 	{ "obex", 0,	SHOW_DEVICE },
 	{ NULL,   0,	0 }
 };

@@ -89,6 +89,8 @@ const gchar *gigolo_describe_scheme(const gchar *scheme)
 		return _("WebDAV");
 	else if (gigolo_str_equal(scheme, "davs"))
 		return _("WebDAV (secure)");
+	else if (gigolo_str_equal(scheme, "afp"))
+		return _("Apple Filing Protocol");
 	else if (gigolo_str_equal(scheme, "network"))
 		return _("Network");
 	else if (gigolo_str_equal(scheme, "archive"))
@@ -112,6 +114,8 @@ guint gigolo_get_default_port(const gchar *scheme)
 		return 80;
 	else if (gigolo_str_equal(scheme, "davs"))
 		return 443;
+	else if (gigolo_str_equal(scheme, "afp"))
+		return 548;
 
 	return 0;
 }
