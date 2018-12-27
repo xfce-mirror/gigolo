@@ -21,6 +21,7 @@
 #include "config.h"
 
 #include <string.h>
+#include <memory.h>
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
@@ -1628,6 +1629,8 @@ static void update_side_panel(GigoloWindow *window)
 
 static void gigolo_window_init(GigoloWindow *window)
 {
+	const char *XDG_CURRENT_DESKTOP = getenv("XDG_CURRENT_DESKTOP");
+
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
 	priv->autoconnect_timeout_id = (guint) -1;
@@ -1663,20 +1666,21 @@ static void gigolo_window_init(GigoloWindow *window)
 	gtk_widget_show_all(priv->swin_iconview);
 
 	/* Status icon */
-	G_GNUC_BEGIN_IGNORE_DEPRECATIONS /* Gtk 3.14 */
-	if (gtk_get_major_version()<3 || gtk_get_major_version()==3 && gtk_get_minor_version()<14)
+	if (!XDG_CURRENT_DESKTOP || strcmp(XDG_CURRENT_DESKTOP, "ubuntu:GNOME"))  /* Not Ubuntu 18.04 */
 	{
+		/* Deprecated in Gtk 3.14, not supported in Gnome3 on Ubuntu 18.04 */
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 		priv->systray_icon = gtk_status_icon_new_from_icon_name(gigolo_get_application_icon_name());
 		gtk_status_icon_set_tooltip_text(priv->systray_icon, _("Gigolo"));
 		g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
 		g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 		g_signal_connect(priv->systray_icon, "notify", G_CALLBACK(gigolo_window_systray_notify_cb), window);
+		G_GNUC_END_IGNORE_DEPRECATIONS
 	}
 	else
 	{
 		priv->systray_icon = NULL;
 	}
-	G_GNUC_END_IGNORE_DEPRECATIONS
 }
 
 
