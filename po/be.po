@@ -5,14 +5,14 @@
 # Translators:
 # Igor <f2404@yandex.ru>, 2016
 # Sergey Alyoshin <alyoshin.s@gmail.com>, 2013,2016
-# Zmicer Turok <zmicerturok@gmail.com>, 2018
+# Zmicer Turok <zmicerturok@gmail.com>, 2018-2019
 # Zmicer Turok <zmicerturok@gmail.com >, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-11-22 16:02+0000\n"
+"PO-Revision-Date: 2019-01-13 16:40+0000\n"
 "Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/xfce-apps/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -350,7 +350,7 @@ msgstr "_Каталог:"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Гэтае значэнне не ўплывае на мантаванне, а патрэбна для агляду рэсурсуў кіраўніку файлаў"
+msgstr "Гэтае значэнне не ўплывае на мантаванне, а патрэбна для агляду рэсурсу ў кіраўніку файлаў"
 
 #: ../src/bookmarkeditdialog.c:1076
 msgid "_Domain:"
