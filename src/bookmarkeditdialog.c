@@ -563,6 +563,8 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 
 			gtk_label_set_mnemonic_widget(GTK_LABEL(priv->port_label), priv->port_spin);
 			gtk_widget_show(priv->port_spin);
+
+			gtk_spin_button_set_value (GTK_SPIN_BUTTON (priv->port_spin), meth->port);
 		}
 
 		if (meth->flags & SHOW_FOLDER && priv->dialog_type != GIGOLO_BE_MODE_CONNECT)
