@@ -1,3 +1,8 @@
+Gigolo 0.4.91 (February 28, 2019)
+	* Set port number when connection type changes
+	* Only ask for share name if the field is shown/mandatory (bug #14928)
+	* Updated translations
+
 Gigolo 0.4.90 (October 27, 2018)
 
 	* Port to GTK+ 3
