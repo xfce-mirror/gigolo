@@ -243,7 +243,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 					gtk_widget_grab_focus(priv->host_entry);
 				}
 			}
-			if (! error && gtk_widget_get_parent(priv->share_combo) != NULL)
+			if (gtk_widget_is_visible(priv->share_combo) && ! error && gtk_widget_get_parent(priv->share_combo) != NULL)
 			{
 				tmp = gtk_entry_get_text(GTK_ENTRY(priv->share_entry));
 				if (! *tmp)
@@ -254,7 +254,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 					gtk_widget_grab_focus(priv->share_combo);
 				}
 			}
-			if (! error && gtk_widget_get_parent(priv->uri_entry) != NULL)
+			if (gtk_widget_is_visible(priv->uri_entry) && ! error && gtk_widget_get_parent(priv->uri_entry) != NULL)
 			{
 				tmp = gtk_entry_get_text(GTK_ENTRY(priv->uri_entry));
 				if (! *tmp || ! check_custom_uri(tmp))
