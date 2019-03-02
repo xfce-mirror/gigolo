@@ -5,14 +5,14 @@
 # Translators:
 # José Vieira <jvieira33@sapo.pt>, 2018
 # Nuno Miguel <nunis@netcabo.pt>, 2009
-# Nuno Miguel <nunomgue@gmail.com>, 2013
+# Nuno Miguel <nunomgue@gmail.com>, 2013,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-12-09 20:57+0000\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>\n"
+"PO-Revision-Date: 2019-03-02 18:14+0000\n"
+"Last-Translator: Nuno Miguel <nunomgue@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/xfce-apps/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -108,7 +108,7 @@ msgstr "Direitos de autor 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:413
 msgid "translator-credits"
-msgstr "Nuno Miguel <nunis@netcabo.pt>"
+msgstr "Nuno Miguel <nunomgue@gmail.com>"
 
 #. Translators: This is a list of "protocol description (protocol)"
 #: ../src/window.c:462
@@ -305,7 +305,7 @@ msgstr "_Cor:"
 
 #: ../src/bookmarkeditdialog.c:983
 msgid "Au_to-Connect:"
-msgstr "Ligação automática:"
+msgstr "Ligação au_tomática:"
 
 #. Connection Settings
 #: ../src/bookmarkeditdialog.c:994
