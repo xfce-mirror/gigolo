@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Daniel Muñiz Fontoira <dani@damufo.com>, 2018
+# Daniel Muñiz Fontoira <dani@damufo.com>, 2018-2019
 # Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2009-2010,2013
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2013
 # Xosé, 2015
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-11-09 17:46+0000\n"
+"PO-Revision-Date: 2019-03-09 23:36+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-apps/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -109,7 +109,7 @@ msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:413
 msgid "translator-credits"
-msgstr "Leandro Regueiro <leandro.regueiro@gmail.com>, 2009.\nXosé <xosecalvo@gmail.com>, 2015\n\nProxecto Trasno - Adaptación de software libre ó galego.\nSe queres colaborar podes obter máis información en <http://trasno.net>"
+msgstr "Leandro Regueiro <leandro.regueiro@gmail.com>, 2009, Xosé <xosecalvo@gmail.com>, 2015"
 
 #. Translators: This is a list of "protocol description (protocol)"
 #: ../src/window.c:462
