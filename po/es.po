@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos, 2013
+# Fito JB, 2013
 # Jaime Marquínez Ferrándiz, 2019
 # mc <correomc2000-ing@yahoo.es>, 2013
 # Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>, 2013-2015
