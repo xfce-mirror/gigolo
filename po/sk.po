@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"POT-Creation-Date: 2018-10-25 12:30+0200\n"
+"PO-Revision-Date: 2018-10-25 10:31+0000\n"
+"Last-Translator: Slavko <linux@slavino.sk>\n"
 "Language-Team: Slovak (http://www.transifex.com/xfce/xfce-apps/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Language: sk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: ../src/main.c:47
+#: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
 msgstr "Pripojiť všetky záložky označené ako \"pripojiť automaticky\" a ukončiť"
 
-#: ../src/main.c:48
+#: ../src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Ignorovať spustené inštancie, vynútiť otvorenie novej inštancie"
 
-#: ../src/main.c:49
+#: ../src/main.c:50
 msgid "Print a list of supported URI schemes"
 msgstr "Vypísať zoznam podporovaných schém URI"
 
-#: ../src/main.c:50
+#: ../src/main.c:51
 msgid "Be verbose"
 msgstr "Podrobné informácie"
 
-#: ../src/main.c:51
+#: ../src/main.c:52
 msgid "Show version information"
 msgstr "Zobraziť informácie o verzii"
 
-#: ../src/main.c:112
+#: ../src/main.c:124
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov."
 
@@ -75,7 +75,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (zabezbečený)"
 
-#: ../src/common.c:93 ../src/window.c:1508
+#: ../src/common.c:93 ../src/window.c:1595
 msgid "Network"
 msgstr "Sieť"
 
@@ -91,361 +91,302 @@ msgstr "Fotky"
 msgid "Custom Location"
 msgstr "Vlastné umiestnenie"
 
-#: ../src/window.c:262
+#: ../src/window.c:255
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Pripojovanie k \"%s\""
 
-#: ../src/window.c:430
+#: ../src/window.c:409
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Jednoduché rozhranie pre ľahké pripojenie k vzdialeným systémom súborov"
 
-#: ../src/window.c:431
+#: ../src/window.c:410
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "Copyright 2008-2011 Enrico Tröger"
 
-#: ../src/window.c:434
+#: ../src/window.c:413
 msgid "translator-credits"
 msgstr "Robert Hartl <hartl.robert@gmail.com>\nTomáš Vadina <kyberdev@gmail.com>"
 
-#: ../src/window.c:466
+#. Translators: This is a list of "protocol description (protocol)"
+#: ../src/window.c:462
+#, c-format
+msgid "%s (%s)"
+msgstr ""
+
+#: ../src/window.c:467
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Aplikácia Gigolo môže používať nasledujúce protokoly poskytované systémom súborov GVfs:"
 
-#: ../src/window.c:579 ../src/window.c:638
+#: ../src/window.c:480
+msgid "Supported Protocols"
+msgstr "Podporované protokoly"
+
+#: ../src/window.c:582 ../src/window.c:641
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Príkaz '%s' zlyhal"
 
-#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
-#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
-#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
+#: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
+#: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
+#: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Chyba"
 
-#: ../src/window.c:613
+#: ../src/window.c:616
 msgid "Invalid terminal command"
 msgstr "Neplatný príkaz terminálu"
 
-#: ../src/window.c:625
+#: ../src/window.c:628
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "Nie je predvolené umiestnenie pre \"%s\""
 
-#: ../src/window.c:705
+#: ../src/window.c:748
 msgid "Edit _Bookmark"
 msgstr "Upraviť _záložku"
 
-#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
-#: ../src/browsenetworkpanel.c:497
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
+#: ../src/browsenetworkpanel.c:488
 msgid "Create _Bookmark"
 msgstr "Vytvoriť _záložku"
 
-#: ../src/window.c:1281
-msgid "_File"
-msgstr "_Súbor"
-
-#: ../src/window.c:1282
-msgid "_Edit"
-msgstr "_Upraviť"
-
-#: ../src/window.c:1283
-msgid "_Actions"
-msgstr "_Akcie"
-
-#: ../src/window.c:1284
-msgid "_View"
-msgstr "_Zobraziť"
-
-#: ../src/window.c:1285
-msgid "_Help"
-msgstr "_Pomocník"
-
-#: ../src/window.c:1291
-msgid "_Edit Bookmarks"
-msgstr "_Upraviť záložku"
-
-#: ../src/window.c:1292
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Otvoriť, upraviť alebo odstrániť záložky pomocou správcu záložiek"
-
-#: ../src/window.c:1296
-msgid "Disconnect the selected resource"
-msgstr "Odpojiť vybrané zdroje"
-
-#: ../src/window.c:1298
-msgid "Open the selected resource with a file manager"
-msgstr "Otvoriť vybraný zdroj správcom súborov"
-
-#: ../src/window.c:1299
-msgid "Open in _Terminal"
-msgstr "Otvoriť v _Termináli"
-
-#: ../src/window.c:1300
-msgid "Start a terminal from here"
-msgstr "Otvoriť túto pozíciu v termináli"
-
-#: ../src/window.c:1301
-msgid "Copy _URI"
-msgstr "Kopírovať _URI"
-
-#: ../src/window.c:1302
-msgid "Quit Gigolo"
-msgstr "Ukončiť aplikáciu Gigolo"
-
-#: ../src/window.c:1303
-msgid "Online Help"
-msgstr "Pomocník online"
-
-#: ../src/window.c:1304
-msgid "Supported Protocols"
-msgstr "Podporované protokoly"
-
-#: ../src/window.c:1310
-msgid "Side _Panel"
-msgstr "Bočný _panel"
-
-#: ../src/window.c:1312
-msgid "_Toolbar"
-msgstr "_Panel nástrojov"
-
-#: ../src/window.c:1314
-msgid "Status _Icon"
-msgstr "_Stavová ikona"
-
-#: ../src/window.c:1320
-msgid "View as _Symbols"
-msgstr "Zobraziť ako _ikony"
-
-#: ../src/window.c:1321
-msgid "View as _Detailed List"
-msgstr "Zobraziť ako _podrobný zoznam"
-
-#: ../src/window.c:1330
-msgid "_Bookmarks"
-msgstr "_Záložky"
-
-#: ../src/window.c:1330
-msgid "Choose a bookmark to connect to"
-msgstr "Vyberte záložku k pripojeniu"
-
-#: ../src/window.c:1412
+#: ../src/window.c:1505
 msgid "Connected"
 msgstr "Pripojený"
 
-#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
+#: ../src/window.c:1514 ../src/bookmarkdialog.c:310
 msgid "Service Type"
 msgstr "Typ služby"
 
-#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
+#: ../src/window.c:1522 ../src/bookmarkdialog.c:302
 msgid "Name"
 msgstr "Názov"
 
-#: ../src/window.c:1500
+#: ../src/window.c:1587
 msgid "Bookmarks"
 msgstr "Záložky"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:694
+#: ../src/settings.c:691
 msgid "Move it now?"
 msgstr "Presunúť teraz?"
 
-#: ../src/settings.c:695
+#: ../src/settings.c:692
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Aplikácia Gigolo potrebuje pred spustením presunúť starý priečinok s nastaveniami."
 
-#: ../src/settings.c:703
+#: ../src/settings.c:700
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr "Váš starý adresár s nastaveniami \"%s\" nemohol byť presunutý do \"%s\" (%s). Prosím presuňte ho do nového umiestnenia ručne."
 
-#: ../src/settings.c:706
+#: ../src/settings.c:703
 msgid "Warning"
 msgstr "Varovanie"
 
-#: ../src/menubuttonaction.c:157
-msgid "Connect"
-msgstr "Pripojiť"
-
-#: ../src/bookmarkdialog.c:95
+#: ../src/bookmarkdialog.c:90
 #, c-format
 msgid "Domain: %s"
 msgstr "Doména: %s"
 
-#: ../src/bookmarkdialog.c:100
+#: ../src/bookmarkdialog.c:95
 #, c-format
 msgid "Share: %s"
 msgstr "Zdieľaný priečinok: %s"
 
-#: ../src/bookmarkdialog.c:106
+#: ../src/bookmarkdialog.c:101
 #, c-format
 msgid "Folder: %s"
 msgstr "Priečinok: %s"
 
-#: ../src/bookmarkdialog.c:112
+#: ../src/bookmarkdialog.c:107
 #, c-format
 msgid "Path: %s"
 msgstr "Cesta: %s"
 
-#: ../src/bookmarkdialog.c:323
+#: ../src/bookmarkdialog.c:318
 msgid "Host"
 msgstr "Hostiteľ"
 
-#: ../src/bookmarkdialog.c:331
+#: ../src/bookmarkdialog.c:326
 msgid "Port"
 msgstr "Port"
 
-#: ../src/bookmarkdialog.c:339
+#: ../src/bookmarkdialog.c:334
 msgid "Auto-Connect"
 msgstr "Pripojiť _automaticky"
 
-#: ../src/bookmarkdialog.c:347
+#: ../src/bookmarkdialog.c:342
 msgid "Username"
 msgstr "Užívateľské meno"
 
-#: ../src/bookmarkdialog.c:355
+#: ../src/bookmarkdialog.c:350
 msgid "Other information"
 msgstr "Ďalšie informácie"
 
-#: ../src/bookmarkdialog.c:412
+#: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
+msgid "_Add"
+msgstr ""
+
+#: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+msgid "_Edit"
+msgstr "_Upraviť"
+
+#: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
+msgid "_Delete"
+msgstr "O_dstrániť"
+
+#: ../src/bookmarkdialog.c:406
 msgid "Edit Bookmarks"
 msgstr "Upraviť záložky"
 
-#: ../src/bookmarkeditdialog.c:234
+#: ../src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
 msgstr "Musíte zadať názov záložky"
 
-#: ../src/bookmarkeditdialog.c:253
+#: ../src/bookmarkeditdialog.c:229
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
 msgstr "Zadaný názov záložky je už použitý. Zvoľte nejaký iný."
 
-#: ../src/bookmarkeditdialog.c:266
+#: ../src/bookmarkeditdialog.c:242
 msgid "You must enter a server address or name."
 msgstr "Musíte zadať adresu alebo názov servera."
 
-#: ../src/bookmarkeditdialog.c:277
+#: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
 msgstr "Musíte zadať názov zdieľanej zložky."
 
-#: ../src/bookmarkeditdialog.c:288
+#: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a valid URI for the connection."
 msgstr "Musíte zadať platné URI pre pripojenie."
 
-#: ../src/bookmarkeditdialog.c:584
+#: ../src/bookmarkeditdialog.c:527
 msgid "_Device:"
 msgstr "_Zariadenie:"
 
-#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:897
+#: ../src/bookmarkeditdialog.c:789
 msgid "Create Bookmark"
 msgstr "Vytvoriť záložku"
 
-#: ../src/bookmarkeditdialog.c:904
+#: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
 msgstr "Upraviť záložku"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:804
 msgid "Connect to Server"
 msgstr "Pripojiť sa k serveru"
 
-#: ../src/bookmarkeditdialog.c:1036
-msgid "_Bookmark name:"
-msgstr "Názov _záložky:"
+#. Bookmark Settings
+#: ../src/bookmarkeditdialog.c:959
+msgid "Bookmark Settings"
+msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1044
+#: ../src/bookmarkeditdialog.c:965
+msgid "_Name:"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:974
 msgid "_Color:"
 msgstr "_Farba:"
 
-#: ../src/bookmarkeditdialog.c:1055
-msgid "Au_to-Connect"
-msgstr "Pripojiť sa _automaticky"
+#: ../src/bookmarkeditdialog.c:983
+msgid "Au_to-Connect:"
+msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1066
+#. Connection Settings
+#: ../src/bookmarkeditdialog.c:994
+msgid "Connection Settings"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1000
 msgid "Service t_ype:"
 msgstr "_Typ služby:"
 
-#: ../src/bookmarkeditdialog.c:1091
+#: ../src/bookmarkeditdialog.c:1016
+msgid "_Location (URI):"
+msgstr "_Umiestenie (URI):"
+
+#: ../src/bookmarkeditdialog.c:1028
+msgid "P_ath:"
+msgstr "_Cesta:"
+
+#: ../src/bookmarkeditdialog.c:1034
+msgid "_Share:"
+msgstr "_Zdieľaná zložka"
+
+#. Optional Information
+#: ../src/bookmarkeditdialog.c:1053
+msgid "Optional Information"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:1059
+msgid "_Port:"
+msgstr "_Port:"
+
+#: ../src/bookmarkeditdialog.c:1065
 msgid "Set the port to 0 to use the default port"
 msgstr "Pre použitie predvoleného portu nastavte hodnotu portu na 0"
 
-#: ../src/bookmarkeditdialog.c:1093
+#: ../src/bookmarkeditdialog.c:1067
+msgid "_Folder:"
+msgstr "_Priečinok:"
+
+#: ../src/bookmarkeditdialog.c:1073
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Toto nie je aktuálne pripojené, je to potrebné iba pre otvorenie prípojného bodu v prehliadači súborov"
 
-#: ../src/bookmarkeditdialog.c:1099
-msgid "_Location (URI):"
-msgstr "_Umiestenie (URI):"
-
-#: ../src/bookmarkeditdialog.c:1101
-msgid "_Folder:"
-msgstr "_Priečinok:"
-
-#: ../src/bookmarkeditdialog.c:1102
-msgid "P_ath:"
-msgstr "_Cesta:"
-
-#: ../src/bookmarkeditdialog.c:1103
-msgid "_User Name:"
-msgstr "_Užívateľské meno:"
-
-#: ../src/bookmarkeditdialog.c:1104
-msgid "Optional information:"
-msgstr "Nepovinné informácie:"
-
-#: ../src/bookmarkeditdialog.c:1105
-msgid "_Port:"
-msgstr "_Port:"
-
-#: ../src/bookmarkeditdialog.c:1106
+#: ../src/bookmarkeditdialog.c:1076
 msgid "_Domain:"
 msgstr "_Doména:"
 
-#: ../src/bookmarkeditdialog.c:1107
-msgid "_Share:"
-msgstr "_Zdieľaná zložka"
+#: ../src/bookmarkeditdialog.c:1082
+msgid "_User Name:"
+msgstr "_Užívateľské meno:"
 
-#: ../src/preferencesdialog.c:147
+#: ../src/preferencesdialog.c:146
 msgid "Icons"
 msgstr "Ikony"
 
-#: ../src/preferencesdialog.c:148
+#: ../src/preferencesdialog.c:147
 msgid "Text"
 msgstr "Text"
 
-#: ../src/preferencesdialog.c:149
+#: ../src/preferencesdialog.c:148
 msgid "Both"
 msgstr "Text s ikonami"
 
-#: ../src/preferencesdialog.c:150
+#: ../src/preferencesdialog.c:149
 msgid "Both horizontal"
 msgstr "Text s ikonami vodorovne"
 
-#: ../src/preferencesdialog.c:169
+#: ../src/preferencesdialog.c:168
 msgid "Horizontal"
 msgstr "Vodorovne"
 
-#: ../src/preferencesdialog.c:170
+#: ../src/preferencesdialog.c:169
 msgid "Vertical"
 msgstr "Zvislo"
 
-#: ../src/preferencesdialog.c:189
+#: ../src/preferencesdialog.c:188
 msgid "Symbols"
 msgstr "Symboly"
 
-#: ../src/preferencesdialog.c:190
+#: ../src/preferencesdialog.c:189
 msgid "Detailed List"
 msgstr "Podrobný zoznam"
 
@@ -453,22 +394,25 @@ msgstr "Podrobný zoznam"
 msgid "General"
 msgstr "Všeobecné"
 
-#: ../src/preferencesdialog.c:338
+#. Row
+#: ../src/preferencesdialog.c:336
 msgid "_File Manager"
 msgstr "_Správca súborov"
 
-#: ../src/preferencesdialog.c:346
+#: ../src/preferencesdialog.c:347
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr "Zadajte názov programu používaného pre zobrazovanie prípojných bodov"
 
-#: ../src/preferencesdialog.c:355
+#. Row
+#: ../src/preferencesdialog.c:354
 msgid "_Terminal"
 msgstr "_Terminál"
 
-#: ../src/preferencesdialog.c:363
+#: ../src/preferencesdialog.c:365
 msgid "Enter the name of a program to open mount points in a terminal"
 msgstr "Zadajte názov programu pre otvorenie prípojných bodov v termináli"
 
+#. Row
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Interval automatického pripojenia záložky"
@@ -519,7 +463,7 @@ msgid ""
 "fails"
 msgstr "Zobrazovanie chybových dialógov pri zlyhaní automatického pripojenia záložiek"
 
-#: ../src/preferencesdialog.c:414
+#: ../src/preferencesdialog.c:411
 msgid "_Connection List Mode"
 msgstr "_Režim zoznamu pripojení"
 
@@ -531,23 +475,23 @@ msgstr "Panel nástrojov"
 msgid "Show _toolbar"
 msgstr "Zobraziť _panel nástrojov"
 
-#: ../src/preferencesdialog.c:435
+#: ../src/preferencesdialog.c:432
 msgid "St_yle"
 msgstr "Š_týly"
 
-#: ../src/preferencesdialog.c:446
+#: ../src/preferencesdialog.c:441
 msgid "_Orientation"
 msgstr "_Orientácia"
 
-#: ../src/preferencesdialog.c:507
+#: ../src/preferencesdialog.c:496
 msgid "Preferences"
 msgstr "Nastavenia"
 
-#: ../src/backendgvfs.c:221
+#: ../src/backendgvfs.c:215
 msgid "No bookmark"
 msgstr "Žiadne záložky"
 
-#: ../src/backendgvfs.c:239
+#: ../src/backendgvfs.c:233
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -558,62 +502,66 @@ msgid ""
 "Bookmark: %s"
 msgstr "<b>%s</b>\n\nURI: %s\nPripojený: áno\nTyp služby: %s\nZáložka: %s"
 
-#: ../src/backendgvfs.c:254
+#: ../src/backendgvfs.c:248
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Zariadenie Unixu: %s</b>"
 
-#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:486
 msgid "unknown"
 msgstr "neznámy"
 
-#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Pripojenie na \"%s\" zlyhalo."
 
-#: ../src/backendgvfs.c:496
+#: ../src/backendgvfs.c:490
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Odpojenie na \"%s\" zlyhalo."
 
-#: ../src/mountdialog.c:102
+#: ../src/mountdialog.c:95
 msgid "Connecting"
 msgstr "Pripojovanie"
 
-#: ../src/browsenetworkpanel.c:188
+#: ../src/browsenetworkpanel.c:183
 msgid "No Workgroups found"
 msgstr "Neboli nájdené žiadne pracovné skupiny"
 
-#: ../src/browsenetworkpanel.c:199
+#: ../src/browsenetworkpanel.c:194
 msgid "No Shares found"
 msgstr "Neboli nájdené žiadne zdielané zložky"
 
-#: ../src/browsenetworkpanel.c:204
+#: ../src/browsenetworkpanel.c:199
 msgid "No Hosts found"
 msgstr "Neboli nájdení žiadny hostitelia"
 
-#: ../src/browsenetworkpanel.c:490
+#: ../src/browsenetworkpanel.c:438
+msgid "_Connect"
+msgstr ""
+
+#: ../src/browsenetworkpanel.c:481
 msgid "Connect to the selected share"
 msgstr "Pripojiť sa k vybranej zdieľanej zložke"
 
-#: ../src/browsenetworkpanel.c:498
+#: ../src/browsenetworkpanel.c:489
 msgid "Create a bookmark from the selected share"
 msgstr "Vytvoriť záložku z vybranej zdieľanej zložky"
 
-#: ../src/browsenetworkpanel.c:507
+#: ../src/browsenetworkpanel.c:499
 msgid "Refresh the network list"
 msgstr "Obnoviť zoznam sietí"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Zatvoriť panel"
 
-#: ../src/bookmarkpanel.c:92
+#: ../src/bookmarkpanel.c:90
 msgid "No bookmarks"
 msgstr "Žiadne záložky"
 
-#: ../src/bookmarkpanel.c:256
+#: ../src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr "Pripojiť sa k vybranej záložke"
 
