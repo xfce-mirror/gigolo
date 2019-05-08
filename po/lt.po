@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
-# Moo, 2015-2017
+# Moo, 2015-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:23+0200\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"POT-Creation-Date: 2018-10-25 12:30+0200\n"
+"PO-Revision-Date: 2018-10-25 10:44+0000\n"
+"Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-apps/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,29 +19,29 @@ msgstr ""
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: ../src/main.c:47
+#: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
 msgstr "Prijungti visas žymeles kurios pažymėtos „prijungti automatiškai“ ir išeiti"
 
-#: ../src/main.c:48
-msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Nepaisyti veikiančių kopijų, priversti atverti naują kopiją"
-
 #: ../src/main.c:49
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Nepaisyti veikiančių egzempliorių, priversti atverti naują egzempliorių"
+
+#: ../src/main.c:50
 msgid "Print a list of supported URI schemes"
 msgstr "Parodyti palaikomų URI schemų sąrašą"
 
-#: ../src/main.c:50
+#: ../src/main.c:51
 msgid "Be verbose"
 msgstr "Išsamiai"
 
-#: ../src/main.c:51
+#: ../src/main.c:52
 msgid "Show version information"
 msgstr "Rodyti versijos informaciją"
 
-#: ../src/main.c:112
+#: ../src/main.c:124
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- paprasta grafinė sąsaja kuri suteikia galimybę lengvai prisijungti prie nutolusių failų sistemų"
+msgstr "- paprasta grafinė sąsaja, skirta leisti lengvai prisijungti prie nuotolinių failų sistemų"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -49,7 +49,7 @@ msgstr "Unix įrenginys"
 
 #: ../src/common.c:79
 msgid "Windows Share"
-msgstr "Windows bendrinimas"
+msgstr "Windows viešinys"
 
 #: ../src/common.c:81
 msgid "FTP"
@@ -75,7 +75,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (saugus)"
 
-#: ../src/common.c:93 ../src/window.c:1508
+#: ../src/common.c:93 ../src/window.c:1595
 msgid "Network"
 msgstr "Tinklas"
 
@@ -91,384 +91,328 @@ msgstr "Nuotraukos"
 msgid "Custom Location"
 msgstr "Pasirinktinė vieta"
 
-#: ../src/window.c:262
+#: ../src/window.c:255
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Jungiamasi prie „%s“"
 
-#: ../src/window.c:430
+#: ../src/window.c:409
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "Paprasta grafinė sąsaja kuri suteikia galimybę lengvai prisijungti/prijungti prie vietinių ir nutolusių failų sistemų"
+msgstr "Paprasta grafinė sąsaja, skirta leisti lengvai prisijungti/prijungti prie vietinių ir nuotolinių failų sistemų"
 
-#: ../src/window.c:431
+#: ../src/window.c:410
 msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Autorinės teisės 2008-2011 Enrico Tröger"
+msgstr "Autorių teisės 2008-2011 Enrico Tröger"
 
-#: ../src/window.c:434
+#: ../src/window.c:413
 msgid "translator-credits"
-msgstr "Algimantas Margevičius <margevicius.algimantas@gmail.com>"
+msgstr "Algimantas Margevičius <margevicius.algimantas@gmail.com>\nMoo"
 
-#: ../src/window.c:466
+#. Translators: This is a list of "protocol description (protocol)"
+#: ../src/window.c:462
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/window.c:467
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo gali naudoti šiuos GVfs suteiktus protokolus:"
 
-#: ../src/window.c:579 ../src/window.c:638
+#: ../src/window.c:480
+msgid "Supported Protocols"
+msgstr "Palaikomi protokolai"
+
+#: ../src/window.c:582 ../src/window.c:641
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Komanda „%s“ nepavyko"
 
-#: ../src/window.c:580 ../src/window.c:613 ../src/window.c:626
-#: ../src/window.c:639 ../src/window.c:797 ../src/bookmarkeditdialog.c:233
-#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:265
-#: ../src/bookmarkeditdialog.c:276 ../src/bookmarkeditdialog.c:287
+#: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
+#: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
+#: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Klaida"
 
-#: ../src/window.c:613
+#: ../src/window.c:616
 msgid "Invalid terminal command"
 msgstr "Netinkama terminalo komanda"
 
-#: ../src/window.c:625
+#: ../src/window.c:628
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "Nėra numatytosios vietos skirtos „%s“"
 
-#: ../src/window.c:705
+#: ../src/window.c:748
 msgid "Edit _Bookmark"
-msgstr "Keisti ž_ymelę"
+msgstr "Taisyti ž_ymelę"
 
-#: ../src/window.c:707 ../src/window.c:1289 ../src/browsenetworkpanel.c:453
-#: ../src/browsenetworkpanel.c:497
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
+#: ../src/browsenetworkpanel.c:488
 msgid "Create _Bookmark"
 msgstr "_Sukurti žymelę"
 
-#: ../src/window.c:1281
-msgid "_File"
-msgstr "_Failas"
-
-#: ../src/window.c:1282
-msgid "_Edit"
-msgstr "_Taisa"
-
-#: ../src/window.c:1283
-msgid "_Actions"
-msgstr "_Veiksmai"
-
-#: ../src/window.c:1284
-msgid "_View"
-msgstr "R_odinys"
-
-#: ../src/window.c:1285
-msgid "_Help"
-msgstr "Ž_inynas"
-
-#: ../src/window.c:1291
-msgid "_Edit Bookmarks"
-msgstr "K_eisti žymeles"
-
-#: ../src/window.c:1292
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Norėdami pridėti, keisti ar pašalinti žymeles atverkite žymelių tvarkytuvę"
-
-#: ../src/window.c:1296
-msgid "Disconnect the selected resource"
-msgstr "Atjungti pasirinktą išteklių"
-
-#: ../src/window.c:1298
-msgid "Open the selected resource with a file manager"
-msgstr "Atverti pasirinktą išteklių, naudojant failų tvarkytuvę"
-
-#: ../src/window.c:1299
-msgid "Open in _Terminal"
-msgstr "Atverti _terminale"
-
-#: ../src/window.c:1300
-msgid "Start a terminal from here"
-msgstr "Paleisti terminalą iš čia"
-
-#: ../src/window.c:1301
-msgid "Copy _URI"
-msgstr "Kopijuoti _URI"
-
-#: ../src/window.c:1302
-msgid "Quit Gigolo"
-msgstr "Išeiti iš Gigolo"
-
-#: ../src/window.c:1303
-msgid "Online Help"
-msgstr "Žinynas internete"
-
-#: ../src/window.c:1304
-msgid "Supported Protocols"
-msgstr "Palaikomi protokolai"
-
-#: ../src/window.c:1310
-msgid "Side _Panel"
-msgstr "_Šoninis skydelis"
-
-#: ../src/window.c:1312
-msgid "_Toolbar"
-msgstr "_Įrankių juosta"
-
-#: ../src/window.c:1314
-msgid "Status _Icon"
-msgstr "Būsenos _piktograma"
-
-#: ../src/window.c:1320
-msgid "View as _Symbols"
-msgstr "Rodyti kaip _simbolius"
-
-#: ../src/window.c:1321
-msgid "View as _Detailed List"
-msgstr "Rodyti kaip _išsamų sąrašą"
-
-#: ../src/window.c:1330
-msgid "_Bookmarks"
-msgstr "Ž_ymelės"
-
-#: ../src/window.c:1330
-msgid "Choose a bookmark to connect to"
-msgstr "Pasirinkite žymelę prie kurios jungtis"
-
-#: ../src/window.c:1412
+#: ../src/window.c:1505
 msgid "Connected"
 msgstr "Prisijungta"
 
-#: ../src/window.c:1421 ../src/bookmarkdialog.c:315
+#: ../src/window.c:1514 ../src/bookmarkdialog.c:310
 msgid "Service Type"
 msgstr "Tarnybos tipas"
 
-#: ../src/window.c:1429 ../src/bookmarkdialog.c:307
+#: ../src/window.c:1522 ../src/bookmarkdialog.c:302
 msgid "Name"
 msgstr "Pavadinimas"
 
-#: ../src/window.c:1500
+#: ../src/window.c:1587
 msgid "Bookmarks"
 msgstr "Žymelės"
 
-#: ../src/window.c:1556 ../src/window.c:1632 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:694
+#: ../src/settings.c:691
 msgid "Move it now?"
 msgstr "Perkelti dabar?"
 
-#: ../src/settings.c:695
+#: ../src/settings.c:692
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Prieš tęsiant Gigolo turi perkelti jūsų senąjį konfigūracijos katalogą."
+msgstr "Prieš pradedant Gigolo turi perkelti jūsų senąjį konfigūracijos katalogą."
 
-#: ../src/settings.c:703
+#: ../src/settings.c:700
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr "Jūsų senasis konfigūracijos katalogas „%s“ negalėjo būti perkeltas į „%s“ (%s). Perkelkite jį rankiniu būdu."
 
-#: ../src/settings.c:706
+#: ../src/settings.c:703
 msgid "Warning"
 msgstr "Įspėjimas"
 
-#: ../src/menubuttonaction.c:157
-msgid "Connect"
-msgstr "Jungtis"
-
-#: ../src/bookmarkdialog.c:95
+#: ../src/bookmarkdialog.c:90
 #, c-format
 msgid "Domain: %s"
 msgstr "Domenas: %s"
 
-#: ../src/bookmarkdialog.c:100
+#: ../src/bookmarkdialog.c:95
 #, c-format
 msgid "Share: %s"
 msgstr "Bendrinti: %s"
 
-#: ../src/bookmarkdialog.c:106
+#: ../src/bookmarkdialog.c:101
 #, c-format
 msgid "Folder: %s"
 msgstr "Aplankas: %s"
 
-#: ../src/bookmarkdialog.c:112
+#: ../src/bookmarkdialog.c:107
 #, c-format
 msgid "Path: %s"
 msgstr "Kelias: %s"
 
-#: ../src/bookmarkdialog.c:323
+#: ../src/bookmarkdialog.c:318
 msgid "Host"
-msgstr "Mazgas"
+msgstr "Serveris"
 
-#: ../src/bookmarkdialog.c:331
+#: ../src/bookmarkdialog.c:326
 msgid "Port"
 msgstr "Prievadas"
 
-#: ../src/bookmarkdialog.c:339
+#: ../src/bookmarkdialog.c:334
 msgid "Auto-Connect"
 msgstr "Automatiškai prisijungti"
 
-#: ../src/bookmarkdialog.c:347
+#: ../src/bookmarkdialog.c:342
 msgid "Username"
 msgstr "Naudotojo vardas"
 
-#: ../src/bookmarkdialog.c:355
+#: ../src/bookmarkdialog.c:350
 msgid "Other information"
 msgstr "Kita informacija"
 
-#: ../src/bookmarkdialog.c:412
+#: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
+msgid "_Add"
+msgstr "_Pridėti"
+
+#: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+msgid "_Edit"
+msgstr "_Taisa"
+
+#: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
+msgid "_Delete"
+msgstr "_Ištrinti"
+
+#: ../src/bookmarkdialog.c:406
 msgid "Edit Bookmarks"
-msgstr "Keisti žymeles"
+msgstr "Taisyti žymeles"
 
-#: ../src/bookmarkeditdialog.c:234
+#: ../src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
-msgstr "Turite įvesti žymelės pavadinimą."
+msgstr "Privalote įvesti žymelės pavadinimą."
 
-#: ../src/bookmarkeditdialog.c:253
+#: ../src/bookmarkeditdialog.c:229
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
 msgstr "Įvestas žymelės pavadinimas jau naudojamas. Pasirinkite kitą."
 
-#: ../src/bookmarkeditdialog.c:266
+#: ../src/bookmarkeditdialog.c:242
 msgid "You must enter a server address or name."
 msgstr "Turite įvesti serverio adresą arba pavadinimą."
 
-#: ../src/bookmarkeditdialog.c:277
+#: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
-msgstr "Turite įvesti bendrinimo pavadinimą."
+msgstr "Turite įvesti viešinio pavadinimą."
 
-#: ../src/bookmarkeditdialog.c:288
+#: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a valid URI for the connection."
 msgstr "Prisijungimui turite įvesti tinkamą URI."
 
-#: ../src/bookmarkeditdialog.c:584
+#: ../src/bookmarkeditdialog.c:527
 msgid "_Device:"
 msgstr "Į_renginys:"
 
-#: ../src/bookmarkeditdialog.c:586 ../src/bookmarkeditdialog.c:1100
+#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
 msgid "_Server:"
 msgstr "_Serveris:"
 
-#: ../src/bookmarkeditdialog.c:897
+#: ../src/bookmarkeditdialog.c:789
 msgid "Create Bookmark"
 msgstr "Sukurti žymelę"
 
-#: ../src/bookmarkeditdialog.c:904
+#: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
-msgstr "Keisti žymelę"
+msgstr "Taisyti žymelę"
 
-#: ../src/bookmarkeditdialog.c:912
+#: ../src/bookmarkeditdialog.c:804
 msgid "Connect to Server"
 msgstr "Prisijungti prie serverio"
 
-#: ../src/bookmarkeditdialog.c:1036
-msgid "_Bookmark name:"
-msgstr "Žymelės _pavadinimas:"
+#. Bookmark Settings
+#: ../src/bookmarkeditdialog.c:959
+msgid "Bookmark Settings"
+msgstr "Žymelės nustatymai"
 
-#: ../src/bookmarkeditdialog.c:1044
+#: ../src/bookmarkeditdialog.c:965
+msgid "_Name:"
+msgstr "Pavadi_nimas:"
+
+#: ../src/bookmarkeditdialog.c:974
 msgid "_Color:"
 msgstr "_Spalva:"
 
-#: ../src/bookmarkeditdialog.c:1055
-msgid "Au_to-Connect"
-msgstr "_Automatinis prisijungimas"
+#: ../src/bookmarkeditdialog.c:983
+msgid "Au_to-Connect:"
+msgstr "Au_tomatinis prisijungimas:"
 
-#: ../src/bookmarkeditdialog.c:1066
+#. Connection Settings
+#: ../src/bookmarkeditdialog.c:994
+msgid "Connection Settings"
+msgstr "Ryšio nustatymai"
+
+#: ../src/bookmarkeditdialog.c:1000
 msgid "Service t_ype:"
 msgstr "_Tarnybos tipas:"
 
-#: ../src/bookmarkeditdialog.c:1091
+#: ../src/bookmarkeditdialog.c:1016
+msgid "_Location (URI):"
+msgstr "_Vieta (URI):"
+
+#: ../src/bookmarkeditdialog.c:1028
+msgid "P_ath:"
+msgstr "K_elias:"
+
+#: ../src/bookmarkeditdialog.c:1034
+msgid "_Share:"
+msgstr "_Bendrinti:"
+
+#. Optional Information
+#: ../src/bookmarkeditdialog.c:1053
+msgid "Optional Information"
+msgstr "Nebūtina informacija"
+
+#: ../src/bookmarkeditdialog.c:1059
+msgid "_Port:"
+msgstr "_Prievadas:"
+
+#: ../src/bookmarkeditdialog.c:1065
 msgid "Set the port to 0 to use the default port"
 msgstr "Norėdami naudoti numatytąjį prievadą įveskite 0"
 
-#: ../src/bookmarkeditdialog.c:1093
+#: ../src/bookmarkeditdialog.c:1067
+msgid "_Folder:"
+msgstr "_Aplankas:"
+
+#: ../src/bookmarkeditdialog.c:1073
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Tai nenaudojama tikram prijungimui, tai reikalinga prijungimo taško atvėrimui failų naršyklėje"
 
-#: ../src/bookmarkeditdialog.c:1099
-msgid "_Location (URI):"
-msgstr "_Vieta (URI):"
-
-#: ../src/bookmarkeditdialog.c:1101
-msgid "_Folder:"
-msgstr "_Aplankas:"
-
-#: ../src/bookmarkeditdialog.c:1102
-msgid "P_ath:"
-msgstr "K_elias:"
-
-#: ../src/bookmarkeditdialog.c:1103
-msgid "_User Name:"
-msgstr "Na_udotojo vardas:"
-
-#: ../src/bookmarkeditdialog.c:1104
-msgid "Optional information:"
-msgstr "Nebūtina informacija:"
-
-#: ../src/bookmarkeditdialog.c:1105
-msgid "_Port:"
-msgstr "_Prievadas:"
-
-#: ../src/bookmarkeditdialog.c:1106
+#: ../src/bookmarkeditdialog.c:1076
 msgid "_Domain:"
 msgstr "_Domenas:"
 
-#: ../src/bookmarkeditdialog.c:1107
-msgid "_Share:"
-msgstr "_Bendrinti:"
+#: ../src/bookmarkeditdialog.c:1082
+msgid "_User Name:"
+msgstr "Na_udotojo vardas:"
 
-#: ../src/preferencesdialog.c:147
+#: ../src/preferencesdialog.c:146
 msgid "Icons"
 msgstr "Piktogramos"
 
-#: ../src/preferencesdialog.c:148
+#: ../src/preferencesdialog.c:147
 msgid "Text"
 msgstr "Tekstas"
 
-#: ../src/preferencesdialog.c:149
+#: ../src/preferencesdialog.c:148
 msgid "Both"
 msgstr "Abu"
 
-#: ../src/preferencesdialog.c:150
+#: ../src/preferencesdialog.c:149
 msgid "Both horizontal"
 msgstr "Abu horizontaliai"
 
-#: ../src/preferencesdialog.c:169
+#: ../src/preferencesdialog.c:168
 msgid "Horizontal"
 msgstr "Horizontaliai"
 
-#: ../src/preferencesdialog.c:170
+#: ../src/preferencesdialog.c:169
 msgid "Vertical"
 msgstr "Vertikaliai"
 
-#: ../src/preferencesdialog.c:189
+#: ../src/preferencesdialog.c:188
 msgid "Symbols"
 msgstr "Simboliai"
 
-#: ../src/preferencesdialog.c:190
+#: ../src/preferencesdialog.c:189
 msgid "Detailed List"
-msgstr "Detalus sąrašas"
+msgstr "Išsamus sąrašas"
 
 #: ../src/preferencesdialog.c:333
 msgid "General"
 msgstr "Bendra"
 
-#: ../src/preferencesdialog.c:338
+#. Row
+#: ../src/preferencesdialog.c:336
 msgid "_File Manager"
 msgstr "_Failų tvarkytuvė"
 
-#: ../src/preferencesdialog.c:346
+#: ../src/preferencesdialog.c:347
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Įveskite programos, kuri atvers ar peržiūrės prijungimo taškus, vardą"
+msgstr "Įveskite programos, kuri atvers ar peržiūrės prijungimo taškus, pavadinimą"
 
-#: ../src/preferencesdialog.c:355
+#. Row
+#: ../src/preferencesdialog.c:354
 msgid "_Terminal"
 msgstr "_Terminalas"
 
-#: ../src/preferencesdialog.c:363
+#: ../src/preferencesdialog.c:365
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr "Įveskite programos, kuri atvers prijungimo taškus terminale, vardą"
+msgstr "Įveskite programos, kuri atvers prijungimo taškus terminale, pavadinimą"
 
+#. Row
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_Žymelių automatinio prijungimo intervalas"
@@ -489,15 +433,15 @@ msgstr "Į_rašyti lango poziciją ir dydį"
 
 #: ../src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Įrašo lango poziciją ir dydį ir atstato paleidžiant"
+msgstr "Įrašo lango poziciją ir dydį, ir paleidimo metu jį atkuria"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
-msgstr "Pranešimų srityje rodyti _būsenos piktogramą"
+msgstr "Rodyti pranešimų srityje _būsenos piktogramą"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
-msgstr "Pranešimų srityje paleisti _suskleistą"
+msgstr "Paleisti _suskleistą pranešimų srityje"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
@@ -519,7 +463,7 @@ msgid ""
 "fails"
 msgstr "Ar rodyti klaidos pranešimą nepavykus prisijungti prie žymelių"
 
-#: ../src/preferencesdialog.c:414
+#: ../src/preferencesdialog.c:411
 msgid "_Connection List Mode"
 msgstr "_Prisijungimo sąrašo veiksena"
 
@@ -531,23 +475,23 @@ msgstr "Įrankių juosta"
 msgid "Show _toolbar"
 msgstr "Rodyti įrankių juostą"
 
-#: ../src/preferencesdialog.c:435
+#: ../src/preferencesdialog.c:432
 msgid "St_yle"
 msgstr "St_ilius"
 
-#: ../src/preferencesdialog.c:446
+#: ../src/preferencesdialog.c:441
 msgid "_Orientation"
 msgstr "_Orientacija"
 
-#: ../src/preferencesdialog.c:507
+#: ../src/preferencesdialog.c:496
 msgid "Preferences"
 msgstr "Nuostatos"
 
-#: ../src/backendgvfs.c:221
+#: ../src/backendgvfs.c:215
 msgid "No bookmark"
 msgstr "Nėra žymelių"
 
-#: ../src/backendgvfs.c:239
+#: ../src/backendgvfs.c:233
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -558,62 +502,66 @@ msgid ""
 "Bookmark: %s"
 msgstr "<b>%s</b>\n\nURI: %s\nPrisijungta: Taip\nTarnybos tipas: %s\nŽymelė: %s"
 
-#: ../src/backendgvfs.c:254
+#: ../src/backendgvfs.c:248
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Unix įrenginys: %s</b>"
 
-#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:492
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:486
 msgid "unknown"
 msgstr "nežinoma"
 
-#: ../src/backendgvfs.c:459 ../src/backendgvfs.c:567
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Prisijungti prie „%s“ nepavyko."
 
-#: ../src/backendgvfs.c:496
+#: ../src/backendgvfs.c:490
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Atsijungti nuo „%s“ nepavyko."
 
-#: ../src/mountdialog.c:102
+#: ../src/mountdialog.c:95
 msgid "Connecting"
 msgstr "Jungiamasi"
 
-#: ../src/browsenetworkpanel.c:188
+#: ../src/browsenetworkpanel.c:183
 msgid "No Workgroups found"
 msgstr "Darbo grupių nerasta"
 
-#: ../src/browsenetworkpanel.c:199
+#: ../src/browsenetworkpanel.c:194
 msgid "No Shares found"
 msgstr "Bendrinimų nerasta"
 
-#: ../src/browsenetworkpanel.c:204
+#: ../src/browsenetworkpanel.c:199
 msgid "No Hosts found"
 msgstr "Mazgų nerasta"
 
-#: ../src/browsenetworkpanel.c:490
+#: ../src/browsenetworkpanel.c:438
+msgid "_Connect"
+msgstr "_Prisijungti"
+
+#: ../src/browsenetworkpanel.c:481
 msgid "Connect to the selected share"
 msgstr "Prisijungti prie pasirinkto bendrinimo"
 
-#: ../src/browsenetworkpanel.c:498
+#: ../src/browsenetworkpanel.c:489
 msgid "Create a bookmark from the selected share"
 msgstr "Iš pasirinktų žymelių sukurti bendrinimą"
 
-#: ../src/browsenetworkpanel.c:507
+#: ../src/browsenetworkpanel.c:499
 msgid "Refresh the network list"
 msgstr "Atnaujinti tinklų sąrašą"
 
-#: ../src/browsenetworkpanel.c:518 ../src/bookmarkpanel.c:267
+#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Užverti skydelį"
 
-#: ../src/bookmarkpanel.c:92
+#: ../src/bookmarkpanel.c:90
 msgid "No bookmarks"
 msgstr "Nėra žymelių"
 
-#: ../src/bookmarkpanel.c:256
+#: ../src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr "Prijungti prie pasirinktos žymelės"
 
