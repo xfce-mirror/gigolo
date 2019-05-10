@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Sveinn í Felli <sv1@fellsnet.is>, 2014-2015
+# Sveinn í Felli <sv1@fellsnet.is>, 2019
 # Sveinn í Felli <sveinki@nett.is>, 2011,2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-05-10 10:22+0000\n"
+"PO-Revision-Date: 2019-05-10 11:25+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-apps/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +46,7 @@ msgstr "- Einfalt viðmót til að tengjast fjartengdum skráakerfum"
 
 #: ../src/common.c:77
 msgid "Unix Device"
-msgstr "Unix tæki"
+msgstr "Unix-tæki"
 
 #: ../src/common.c:79
 msgid "Windows Share"
