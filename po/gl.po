@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-03-09 23:36+0000\n"
+"PO-Revision-Date: 2019-05-14 20:24+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-apps/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Ignorar as instancias en execución, forzar a apertura dunha nova instan
 
 #: ../src/main.c:50
 msgid "Print a list of supported URI schemes"
-msgstr "Amosar unha lista dos esquemas de URI soportados"
+msgstr "Amosar unha lista dos esquemas de URI admitidos"
 
 #: ../src/main.c:51
 msgid "Be verbose"
