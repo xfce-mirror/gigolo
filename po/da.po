@@ -5,13 +5,13 @@
 # Translators:
 # Chris Darnell <chris@cedeel.com>, 2016
 # scootergrisen, 2016
-# scootergrisen, 2016-2018
+# scootergrisen, 2016-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-04-30 14:32+0000\n"
+"PO-Revision-Date: 2019-05-14 22:58+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-apps/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -438,11 +438,11 @@ msgstr "Gemmer vinduets placering og geometri og genskaber det ved start"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
-msgstr "Vis status_ikon i notifikationsområdet"
+msgstr "Vis status_ikon i underretningsområdet"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
-msgstr "Start _minimeret i notifikationsområdet"
+msgstr "Start _minimeret i underretningsområdet"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
