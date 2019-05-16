@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-05-14 22:58+0000\n"
+"PO-Revision-Date: 2019-05-16 19:08+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-apps/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -127,7 +127,7 @@ msgstr "Understøttede protokoller"
 #: ../src/window.c:582 ../src/window.c:641
 #, c-format
 msgid "The command '%s' failed"
-msgstr "Kommandoen '%s' fejlede"
+msgstr "Kommandoen '%s' mislykkedes"
 
 #: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
 #: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
@@ -515,12 +515,12 @@ msgstr "ukendt"
 #: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Oprettelse af forbindelse til \"%s\" fejlede."
+msgstr "Oprettelse af forbindelse til \"%s\" mislykkedes."
 
 #: ../src/backendgvfs.c:490
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Afbrydelse af forbindelse fra \"%s\" fejlede."
+msgstr "Afbrydelse af forbindelse fra \"%s\" mislykkedes."
 
 #: ../src/mountdialog.c:95
 msgid "Connecting"
