@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-05-14 20:24+0000\n"
+"PO-Revision-Date: 2019-05-21 05:07+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-apps/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -502,7 +502,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr "<b>%s</b>\n\nURI: %s\nConectado: Si\nTipo de servizo: %sMarcador: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nConectado: Si\nTipo de servizo: %s\nMarcador: %s"
 
 #: ../src/backendgvfs.c:248
 #, c-format
