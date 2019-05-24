@@ -6,13 +6,14 @@
 # Ayhan YALÇINSOY <ayhanyalcinsoy@gmail.com>, 2010
 # Demiray Muhterem <mdemiray@msn.com>, 2018
 # Mustafa TEKKOYUN <inactive+tekotek@transifex.com>, 2013
+# Serdar Sağlam <teknomobil@msn.com>, 2019
 # Volkan Gezer <volkangezer@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-05-23 15:41+0000\n"
+"PO-Revision-Date: 2019-05-24 01:29+0000\n"
 "Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/xfce/xfce-apps/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +36,7 @@ msgstr "Desteklenen URI şemaları listesini göster"
 
 #: ../src/main.c:51
 msgid "Be verbose"
-msgstr "Detaylı çıktı göster"
+msgstr "Ayrıntılı çıktı göster"
 
 #: ../src/main.c:52
 msgid "Show version information"
@@ -390,7 +391,7 @@ msgstr "Semboller"
 
 #: ../src/preferencesdialog.c:189
 msgid "Detailed List"
-msgstr "Detaylı Liste"
+msgstr "Ayrıntılı Liste"
 
 #: ../src/preferencesdialog.c:333
 msgid "General"
