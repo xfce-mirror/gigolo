@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-06-01 14:18+0000\n"
+"PO-Revision-Date: 2019-06-02 23:39+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-apps/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,7 @@ msgstr "Vis versionsinformation"
 
 #: ../src/main.c:124
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- en simpel frontend til nemt at oprette forbindelse til fjern-filsystemer"
+msgstr "- en simpel brugerflade til nemt at oprette forbindelse til fjern-filsystemer"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -100,7 +100,7 @@ msgstr "Opretter forbindelse til \"%s\""
 #: ../src/window.c:409
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "En simpel frontend til nemt at oprette forbindelse til/montere lokale og fjern-filsystemer"
+msgstr "En simpel brugerflade til nemt at oprette forbindelse til/montere lokale og fjern-filsystemer"
 
 #: ../src/window.c:410
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -568,4 +568,4 @@ msgstr "Opret forbindelse til det valgte bogmærke"
 
 #: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "En simpel frontend til nemt at oprette forbindelse til fjern-filsystemer"
+msgstr "En simpel brugerflade til nemt at oprette forbindelse til fjern-filsystemer"
