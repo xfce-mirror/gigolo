@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-06-02 23:39+0000\n"
+"PO-Revision-Date: 2019-06-05 14:20+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-apps/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Tilslut alle bogmærker mærket som 'auto-tilslut' og afslut"
+msgstr "Tilslut alle bogmærker mærket som 'autotilslut' og afslut"
 
 #: ../src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
@@ -42,7 +42,7 @@ msgstr "Vis versionsinformation"
 
 #: ../src/main.c:124
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- en simpel brugerflade til nemt at oprette forbindelse til fjern-filsystemer"
+msgstr "- en simpel brugerflade til nemt at oprette forbindelse til fjernfilsystemer"
 
 #: ../src/common.c:77
 msgid "Unix Device"
@@ -100,7 +100,7 @@ msgstr "Opretter forbindelse til \"%s\""
 #: ../src/window.c:409
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "En simpel brugerflade til nemt at oprette forbindelse til/montere lokale og fjern-filsystemer"
+msgstr "En simpel brugerflade til nemt at oprette forbindelse til/montere lokale og fjernfilsystemer"
 
 #: ../src/window.c:410
 msgid "Copyright 2008-2011 Enrico Tröger"
@@ -223,7 +223,7 @@ msgstr "Port"
 
 #: ../src/bookmarkdialog.c:334
 msgid "Auto-Connect"
-msgstr "Auto-tilslut"
+msgstr "Autotilslut"
 
 #: ../src/bookmarkdialog.c:342
 msgid "Username"
@@ -305,7 +305,7 @@ msgstr "_Farve:"
 
 #: ../src/bookmarkeditdialog.c:983
 msgid "Au_to-Connect:"
-msgstr "_Auto-tilslut:"
+msgstr "_Autotilslut:"
 
 #. Connection Settings
 #: ../src/bookmarkeditdialog.c:994
@@ -416,13 +416,13 @@ msgstr "Indtast navnet på et program som skal bruges til at åbne monteringspun
 #. Row
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "Interval for auto-tilslut af _bogmærke"
+msgstr "Interval for autotilslut af _bogmærke"
 
 #: ../src/preferencesdialog.c:378
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr "Hvor ofte auto-tilslut skal forsøges, i sekunder. Nul deaktiverer tjek."
+msgstr "Hvor ofte autotilslut skal forsøges, i sekunder. Nul deaktiverer tjek."
 
 #: ../src/preferencesdialog.c:389
 msgid "Interface"
@@ -456,17 +456,17 @@ msgstr "Hvorvidt et sidepanel skal vises til gennemgang af det lokale netværk a
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
-msgstr "Vis fejlmeddelelser for auto-tilslut"
+msgstr "Vis fejlmeddelelser for autotilslut"
 
 #: ../src/preferencesdialog.c:408
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
-msgstr "Hvorvidt fejlmeddelelsesdialoger skal vises når auto-tilslutning af bogmærker fejler"
+msgstr "Hvorvidt fejlmeddelelsesdialoger skal vises når autotilslutning af bogmærker fejler"
 
 #: ../src/preferencesdialog.c:411
 msgid "_Connection List Mode"
-msgstr "_Tilslutningsliste-tilstand"
+msgstr "_Tilslutningslistetilstand"
 
 #: ../src/preferencesdialog.c:427
 msgid "Toolbar"
@@ -568,4 +568,4 @@ msgstr "Opret forbindelse til det valgte bogmærke"
 
 #: ../gigolo.desktop.in.h:2
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "En simpel brugerflade til nemt at oprette forbindelse til fjern-filsystemer"
+msgstr "En simpel brugerflade til nemt at oprette forbindelse til fjernfilsystemer"
