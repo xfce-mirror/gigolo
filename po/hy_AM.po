@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Hayk Andreasyan <hayk.andreasyan@realschool.am>, 2019
 # Real School <translator_students@realschool.am>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-06-13 10:08+0000\n"
+"PO-Revision-Date: 2019-06-13 12:20+0000\n"
 "Last-Translator: Real School <translator_students@realschool.am>\n"
 "Language-Team: Armenian (Armenia) (http://www.transifex.com/xfce/xfce-apps/language/hy_AM/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Անցնել բոլոր էջանիշներին որոնք նշուած են որպէս \"ինքնամիացող\" եւ դուրս գալ"
+msgstr "Միացնել բոլոր «ինքնամիացուող» էջանիշերը եւ դուրս գալ "
 
 #: ../src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
@@ -262,78 +263,78 @@ msgstr "Պէտք է ներմուծել սպասարկչի հասցէն կամ ա
 
 #: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
-msgstr ""
+msgstr "Ներմուծեք փոխատման անունը։"
 
 #: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a valid URI for the connection."
-msgstr ""
+msgstr "Միացման համար ներմուծեք վաւեր URI։"
 
 #: ../src/bookmarkeditdialog.c:527
 msgid "_Device:"
-msgstr ""
+msgstr "_Սարք․"
 
 #: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
 msgid "_Server:"
-msgstr ""
+msgstr "_Սպասարկիչ․"
 
 #: ../src/bookmarkeditdialog.c:789
 msgid "Create Bookmark"
-msgstr ""
+msgstr "Նոր էջանիշ"
 
 #: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
-msgstr ""
+msgstr "Խմբագրել էջանիշը"
 
 #: ../src/bookmarkeditdialog.c:804
 msgid "Connect to Server"
-msgstr ""
+msgstr "Միանալ սպասարկչին"
 
 #. Bookmark Settings
 #: ../src/bookmarkeditdialog.c:959
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "Էջանիշի կարգաւորումներ"
 
 #: ../src/bookmarkeditdialog.c:965
 msgid "_Name:"
-msgstr ""
+msgstr "_Անուն․"
 
 #: ../src/bookmarkeditdialog.c:974
 msgid "_Color:"
-msgstr ""
+msgstr "_Գոյն․"
 
 #: ../src/bookmarkeditdialog.c:983
 msgid "Au_to-Connect:"
-msgstr ""
+msgstr "Ին_քնամիացում"
 
 #. Connection Settings
 #: ../src/bookmarkeditdialog.c:994
 msgid "Connection Settings"
-msgstr ""
+msgstr "Միացման կարգաւորումներ"
 
 #: ../src/bookmarkeditdialog.c:1000
 msgid "Service t_ype:"
-msgstr ""
+msgstr "Ծառայութեան տ_եսակ․"
 
 #: ../src/bookmarkeditdialog.c:1016
 msgid "_Location (URI):"
-msgstr ""
+msgstr "_Դիրք (URI):"
 
 #: ../src/bookmarkeditdialog.c:1028
 msgid "P_ath:"
-msgstr ""
+msgstr "Ու_ղի․"
 
 #: ../src/bookmarkeditdialog.c:1034
 msgid "_Share:"
-msgstr ""
+msgstr "_Կիսուել․"
 
 #. Optional Information
 #: ../src/bookmarkeditdialog.c:1053
 msgid "Optional Information"
-msgstr ""
+msgstr "Ընտրովի տեղեկութիւն"
 
 #: ../src/bookmarkeditdialog.c:1059
 msgid "_Port:"
-msgstr ""
+msgstr "_Մուտք․"
 
 #: ../src/bookmarkeditdialog.c:1065
 msgid "Set the port to 0 to use the default port"
@@ -341,7 +342,7 @@ msgstr ""
 
 #: ../src/bookmarkeditdialog.c:1067
 msgid "_Folder:"
-msgstr ""
+msgstr "_Պանակ․"
 
 #: ../src/bookmarkeditdialog.c:1073
 msgid ""
@@ -351,27 +352,27 @@ msgstr ""
 
 #: ../src/bookmarkeditdialog.c:1076
 msgid "_Domain:"
-msgstr ""
+msgstr "_Տիրոյթ․"
 
 #: ../src/bookmarkeditdialog.c:1082
 msgid "_User Name:"
-msgstr ""
+msgstr "_Աւգտատիրոջ անուն․"
 
 #: ../src/preferencesdialog.c:146
 msgid "Icons"
-msgstr ""
+msgstr "Պատկերակներ"
 
 #: ../src/preferencesdialog.c:147
 msgid "Text"
-msgstr ""
+msgstr "Գրոյթ"
 
 #: ../src/preferencesdialog.c:148
 msgid "Both"
-msgstr ""
+msgstr "Երկուսը"
 
 #: ../src/preferencesdialog.c:149
 msgid "Both horizontal"
-msgstr ""
+msgstr "Երկուսն էլ հորիզոնական"
 
 #: ../src/preferencesdialog.c:168
 msgid "Horizontal"
