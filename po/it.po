@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2018
+# Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2019
 # gianluca foddis <gianluca.foddis@gmail.com>, 2009
 # Muflone <muflone@vbsimple.net>, 2009
 msgid ""
@@ -11,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-10-25 13:23+0000\n"
+"PO-Revision-Date: 2019-07-23 16:57+0000\n"
 "Last-Translator: Emanuele Petriglia <transifex@emanuelepetriglia.com>\n"
 "Language-Team: Italian (http://www.transifex.com/xfce/xfce-apps/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +109,7 @@ msgstr "Copyright © 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:413
 msgid "translator-credits"
-msgstr "Muflone <muflone@vbsimple.net>\nGianluca Foddis <gianluca.foddis@gmail.com>\nEmanuele Petriglia <inbox@emanuelepetriglia.me>"
+msgstr "Emanuele Petriglia <inbox@emanuelepetriglia.com>\nMuflone <muflone@vbsimple.net>\nGianluca Foddis <gianluca.foddis@gmail.com>"
 
 #. Translators: This is a list of "protocol description (protocol)"
 #: ../src/window.c:462
