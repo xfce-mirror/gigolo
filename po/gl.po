@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-05-21 05:07+0000\n"
+"PO-Revision-Date: 2019-07-30 09:09+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-apps/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -119,7 +119,7 @@ msgstr "%s (%s)"
 
 #: ../src/window.c:467
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Gigolo pode usar os seguintes protocolos proporcionados por GVfs:"
+msgstr "Gigolo pode usar os seguintes protocolos fornecidos por GVfs:"
 
 #: ../src/window.c:480
 msgid "Supported Protocols"
@@ -139,7 +139,7 @@ msgstr "Erro"
 
 #: ../src/window.c:616
 msgid "Invalid terminal command"
-msgstr "Orde de terminal non válida"
+msgstr "A orde de terminal non é correcta"
 
 #: ../src/window.c:628
 #, c-format
@@ -148,7 +148,7 @@ msgstr "Non hai localización predefinida dispoñíbel para «%s»"
 
 #: ../src/window.c:748
 msgid "Edit _Bookmark"
-msgstr "Modificar un _marcador"
+msgstr "Editar o _marcador"
 
 #: ../src/window.c:750 ../src/browsenetworkpanel.c:445
 #: ../src/browsenetworkpanel.c:488
@@ -248,7 +248,7 @@ msgstr "_Eliminar"
 
 #: ../src/bookmarkdialog.c:406
 msgid "Edit Bookmarks"
-msgstr "Modificar os marcadores"
+msgstr "Editar os marcadores"
 
 #: ../src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
@@ -269,7 +269,7 @@ msgstr "Debe introducir un nome de recurso."
 
 #: ../src/bookmarkeditdialog.c:264
 msgid "You must enter a valid URI for the connection."
-msgstr "Debe introducir un URI válido para a conexión."
+msgstr "Debe introducir un URI correcto para a conexión."
 
 #: ../src/bookmarkeditdialog.c:527
 msgid "_Device:"
@@ -285,7 +285,7 @@ msgstr "Crear un marcador"
 
 #: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
-msgstr "Modificar un marcador"
+msgstr "Editar un marcador"
 
 #: ../src/bookmarkeditdialog.c:804
 msgid "Connect to Server"
