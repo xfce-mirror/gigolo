@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-07-30 09:09+0000\n"
+"PO-Revision-Date: 2019-08-08 23:34+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-apps/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -139,12 +139,12 @@ msgstr "Erro"
 
 #: ../src/window.c:616
 msgid "Invalid terminal command"
-msgstr "A orde de terminal non é correcta"
+msgstr "A orde de terminal é incorrecta"
 
 #: ../src/window.c:628
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "Non hai localización predefinida dispoñíbel para «%s»"
+msgstr "Non hai dispoñíbel unha localización predeterminada para «%s»"
 
 #: ../src/window.c:748
 msgid "Edit _Bookmark"
@@ -340,7 +340,7 @@ msgstr "_Porto:"
 
 #: ../src/bookmarkeditdialog.c:1065
 msgid "Set the port to 0 to use the default port"
-msgstr "Definir o porto coma 0 para usar o porto predeterminado"
+msgstr "Definir o porto como 0 para usar o porto predeterminado"
 
 #: ../src/bookmarkeditdialog.c:1067
 msgid "_Folder:"
@@ -453,7 +453,7 @@ msgstr "Amosar o panel lateral"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Amosar ou non un panel lateral para explorar a rede local en busca de recursos Samba/Windows dispoñibles e dunha lista de marcadores"
+msgstr "Amosar ou non un panel lateral para explorar a rede local en busca de recursos Samba/Windows dispoñíbeis e dunha lista de marcadores"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
