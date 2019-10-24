@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Arnold Marko <arnold.marko@gmail.com>, 2019
 # Klemen Košir <klemen.kosir@kream.io>, 2013
 # Nenad Latinović <latinovic87@gmail.com>, 2013
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-10-25 10:31+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"PO-Revision-Date: 2019-10-24 20:43+0000\n"
+"Last-Translator: Arnold Marko <arnold.marko@gmail.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/xfce/xfce-apps/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,7 +114,7 @@ msgstr "Klemen Košir <klemen913@gmail.com>\nNenad Latinović <nenadlatinovic@la
 #: ../src/window.c:462
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #: ../src/window.c:467
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -234,7 +235,7 @@ msgstr "Podrobnosti"
 
 #: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
 msgid "_Add"
-msgstr ""
+msgstr "Dod_aj"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
 msgid "_Edit"
@@ -292,11 +293,11 @@ msgstr "Poveži se s strežnikom"
 #. Bookmark Settings
 #: ../src/bookmarkeditdialog.c:959
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "Nastavitve za zaznamke"
 
 #: ../src/bookmarkeditdialog.c:965
 msgid "_Name:"
-msgstr ""
+msgstr "_Ime:"
 
 #: ../src/bookmarkeditdialog.c:974
 msgid "_Color:"
@@ -304,12 +305,12 @@ msgstr "_Barva:"
 
 #: ../src/bookmarkeditdialog.c:983
 msgid "Au_to-Connect:"
-msgstr ""
+msgstr "Samode_jno povezovanje:"
 
 #. Connection Settings
 #: ../src/bookmarkeditdialog.c:994
 msgid "Connection Settings"
-msgstr ""
+msgstr "Nastavitve povezave"
 
 #: ../src/bookmarkeditdialog.c:1000
 msgid "Service t_ype:"
@@ -330,7 +331,7 @@ msgstr "Sou_poraba:"
 #. Optional Information
 #: ../src/bookmarkeditdialog.c:1053
 msgid "Optional Information"
-msgstr ""
+msgstr "Dodatne informacije"
 
 #: ../src/bookmarkeditdialog.c:1059
 msgid "_Port:"
@@ -539,7 +540,7 @@ msgstr "Gostitelja ni mogoče najti"
 
 #: ../src/browsenetworkpanel.c:438
 msgid "_Connect"
-msgstr ""
+msgstr "_Poveži"
 
 #: ../src/browsenetworkpanel.c:481
 msgid "Connect to the selected share"
