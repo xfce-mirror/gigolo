@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Саша Петровић <salepetronije@gmail.com>, 2012
+# Саша Петровић <salepetronije@gmail.com>, 2012,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-10-30 18:37+0000\n"
+"PO-Revision-Date: 2019-10-31 08:56+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/xfce/xfce-apps/language/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "Занемари покренуте примерке, нагнај от�
 
 #: ../src/main.c:50
 msgid "Print a list of supported URI schemes"
-msgstr "Штампај списак подржаних УРИ шема"
+msgstr "Штампај списак подржаних УРИ-х шема"
 
 #: ../src/main.c:51
 msgid "Be verbose"
@@ -44,11 +44,11 @@ msgstr "- једноставно сучеље за лако повезивање
 
 #: ../src/common.c:77
 msgid "Unix Device"
-msgstr "Уникс уређај"
+msgstr "Униксов уређај"
 
 #: ../src/common.c:79
 msgid "Windows Share"
-msgstr "Виндоус дељење"
+msgstr "Виндоусово дељење"
 
 #: ../src/common.c:81
 msgid "FTP"
@@ -80,11 +80,11 @@ msgstr "Мрежа"
 
 #: ../src/common.c:95
 msgid "Archive"
-msgstr "Архива"
+msgstr "Складиште"
 
 #: ../src/common.c:97
 msgid "Photos"
-msgstr "Фотографије"
+msgstr "Слике"
 
 #: ../src/common.c:99
 msgid "Custom Location"
@@ -112,11 +112,11 @@ msgstr "Саша Петровић <salepetronije@gmail.com>"
 #: ../src/window.c:462
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #: ../src/window.c:467
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Жиголо може користити следеће протоколе које обезбеђује GVfs:"
+msgstr "Џигља може користити следеће протоколе које обезбеђује GVfs:"
 
 #: ../src/window.c:480
 msgid "Supported Protocols"
@@ -170,7 +170,7 @@ msgstr "Забелешке"
 
 #: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
 msgid "Gigolo"
-msgstr "Жиголо"
+msgstr "Џигља"
 
 #: ../src/settings.c:691
 msgid "Move it now?"
@@ -178,7 +178,7 @@ msgstr "Преместити је сада?"
 
 #: ../src/settings.c:692
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Жиголу је потребно да премести стару фасциклу подешавања пре покретања"
+msgstr "Џигљи је потребно да премести стару фасциклу подешавања пре покретања."
 
 #: ../src/settings.c:700
 #, c-format
@@ -258,7 +258,7 @@ msgstr "Унето име забелешке је већ у употреби. М
 
 #: ../src/bookmarkeditdialog.c:242
 msgid "You must enter a server address or name."
-msgstr "морате унети адресу даваоца услуга или име."
+msgstr "Мора да унесете адресу даваоца услуга или име."
 
 #: ../src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
@@ -291,11 +291,11 @@ msgstr "Повежи се са сервером"
 #. Bookmark Settings
 #: ../src/bookmarkeditdialog.c:959
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "Поставке ознака"
 
 #: ../src/bookmarkeditdialog.c:965
 msgid "_Name:"
-msgstr ""
+msgstr "_Име:"
 
 #: ../src/bookmarkeditdialog.c:974
 msgid "_Color:"
@@ -303,16 +303,16 @@ msgstr "_Боја:"
 
 #: ../src/bookmarkeditdialog.c:983
 msgid "Au_to-Connect:"
-msgstr ""
+msgstr "Сам повежи:"
 
 #. Connection Settings
 #: ../src/bookmarkeditdialog.c:994
 msgid "Connection Settings"
-msgstr ""
+msgstr "Поставке везе"
 
 #: ../src/bookmarkeditdialog.c:1000
 msgid "Service t_ype:"
-msgstr "в_рста услуге:"
+msgstr "В_рста услуге:"
 
 #: ../src/bookmarkeditdialog.c:1016
 msgid "_Location (URI):"
@@ -329,7 +329,7 @@ msgstr "_Дељење:"
 #. Optional Information
 #: ../src/bookmarkeditdialog.c:1053
 msgid "Optional Information"
-msgstr ""
+msgstr "Додатни подаци"
 
 #: ../src/bookmarkeditdialog.c:1059
 msgid "_Port:"
@@ -359,11 +359,11 @@ msgstr "_Корисничко име:"
 
 #: ../src/preferencesdialog.c:146
 msgid "Icons"
-msgstr "иконе"
+msgstr "сличице"
 
 #: ../src/preferencesdialog.c:147
 msgid "Text"
-msgstr "текст"
+msgstr "писмо"
 
 #: ../src/preferencesdialog.c:148
 msgid "Both"
@@ -387,7 +387,7 @@ msgstr "знаци"
 
 #: ../src/preferencesdialog.c:189
 msgid "Detailed List"
-msgstr "детаљан списак"
+msgstr "опширан списак"
 
 #: ../src/preferencesdialog.c:333
 msgid "General"
@@ -436,7 +436,7 @@ msgstr "Чува положај прозора и размеру и враћа �
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
-msgstr "Приказује _икону стања у обавештајној области"
+msgstr "Приказује _сличицу стања у обавештајној области"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
@@ -472,7 +472,7 @@ msgstr "трака алата"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "приказује _траку алата"
+msgstr "Приказује _траку алата"
 
 #: ../src/preferencesdialog.c:432
 msgid "St_yle"
@@ -538,7 +538,7 @@ msgstr "Нема пронађених давалаца услуга"
 
 #: ../src/browsenetworkpanel.c:438
 msgid "_Connect"
-msgstr ""
+msgstr "_Повежи"
 
 #: ../src/browsenetworkpanel.c:481
 msgid "Connect to the selected share"
