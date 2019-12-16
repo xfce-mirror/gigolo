@@ -3,17 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Fito JB, 2013
+# Adolfo Jayme-Barrientos, 2013
+# Francisco <fserrador@gmail.com>, 2019
 # Jaime Marquínez Ferrándiz, 2019
 # mc <correomc2000-ing@yahoo.es>, 2013
-# Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>, 2013-2015
+# prflr88 <prflr88@gmail.com>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-01-29 16:10+0000\n"
-"Last-Translator: Jaime Marquínez Ferrándiz\n"
+"PO-Revision-Date: 2019-12-16 16:01+0000\n"
+"Last-Translator: Francisco <fserrador@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-apps/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +28,7 @@ msgstr "Conectar todos los marcadores definidos con «conectar automáticamente�
 
 #: ../src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Ignorar instancias en ejecución, forzar apertura de una nueva"
+msgstr "Descartar instancias en ejecución, forzar apertura de una nueva"
 
 #: ../src/main.c:50
 msgid "Print a list of supported URI schemes"
@@ -216,7 +217,7 @@ msgstr "Ruta: %s"
 
 #: ../src/bookmarkdialog.c:318
 msgid "Host"
-msgstr "Equipo"
+msgstr "Hospedaje"
 
 #: ../src/bookmarkdialog.c:326
 msgid "Port"
@@ -236,7 +237,7 @@ msgstr "Otra información"
 
 #: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
 msgid "_Add"
-msgstr "_Añadir"
+msgstr "_Agregar"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
 msgid "_Edit"
@@ -244,7 +245,7 @@ msgstr "_Editar"
 
 #: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
 msgid "_Delete"
-msgstr "_Eliminar"
+msgstr "_Borrar"
 
 #: ../src/bookmarkdialog.c:406
 msgid "Edit Bookmarks"
@@ -358,7 +359,7 @@ msgstr "_Dominio:"
 
 #: ../src/bookmarkeditdialog.c:1082
 msgid "_User Name:"
-msgstr "_Nombre de usuario:"
+msgstr "_Usuario:"
 
 #: ../src/preferencesdialog.c:146
 msgid "Icons"
@@ -537,7 +538,7 @@ msgstr "No se encontraron recursos compartidos"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Hosts found"
-msgstr "No se encontraron equipos"
+msgstr "No se encontraron hospedajes"
 
 #: ../src/browsenetworkpanel.c:438
 msgid "_Connect"
