@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-11-18 07:35+0000\n"
+"PO-Revision-Date: 2020-01-27 11:48+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/xfce/xfce-apps/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -449,7 +449,7 @@ msgstr "Shfaq panel anësor"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Të shfaqet apo jo një panel anësor për shfletim të rrjetit vendor për ndarej Samba/Windows dhe një listë faqerojtësish"
+msgstr "Të shfaqet apo jo një panel anësor për shfletim të rrjetit vendor për pjesë Samba/Windows dhe një listë faqerojtësish"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -529,7 +529,7 @@ msgstr "S’u gjetën Grupe pune"
 
 #: ../src/browsenetworkpanel.c:194
 msgid "No Shares found"
-msgstr "S’u gjetën ndarje"
+msgstr "S’u gjetën Ndarje"
 
 #: ../src/browsenetworkpanel.c:199
 msgid "No Hosts found"
@@ -545,7 +545,7 @@ msgstr "Lidhu te pjesa e përzgjedhur"
 
 #: ../src/browsenetworkpanel.c:489
 msgid "Create a bookmark from the selected share"
-msgstr "Krijoni një faqerojtës për ndarjen e përzgjedhur"
+msgstr "Krijoni një faqerojtës për pjesën e përzgjedhur"
 
 #: ../src/browsenetworkpanel.c:499
 msgid "Refresh the network list"
