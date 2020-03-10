@@ -5,15 +5,15 @@
 # Translators:
 # Igor <f2404@yandex.ru>, 2016
 # Sergey Alyoshin <alyoshin.s@gmail.com>, 2013,2016
-# Zmicer Turok <zmicerturok@gmail.com>, 2018-2019
+# Zmicer Turok <nashtlumach@gmail.com>, 2018-2019
 # Zmicer Turok <zmicerturok@gmail.com >, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-01-13 16:40+0000\n"
-"Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
+"PO-Revision-Date: 2020-03-10 14:00+0000\n"
+"Last-Translator: Zmicer Turok <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/xfce-apps/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,7 +39,7 @@ msgstr "Падрабязны вывад"
 
 #: ../src/main.c:52
 msgid "Show version information"
-msgstr "Інфармацыя аб версіі"
+msgstr "Інфармацыя пра версію"
 
 #: ../src/main.c:124
 msgid "- a simple frontend to easily connect to remote filesystems"
@@ -161,7 +161,7 @@ msgstr "Злучана"
 
 #: ../src/window.c:1514 ../src/bookmarkdialog.c:310
 msgid "Service Type"
-msgstr "Тып сэрвісу"
+msgstr "Тып службы"
 
 #: ../src/window.c:1522 ../src/bookmarkdialog.c:302
 msgid "Name"
@@ -315,7 +315,7 @@ msgstr "Налады злучэння"
 
 #: ../src/bookmarkeditdialog.c:1000
 msgid "Service t_ype:"
-msgstr "Тып _сэрвісу:"
+msgstr "Тып _службы:"
 
 #: ../src/bookmarkeditdialog.c:1016
 msgid "_Location (URI):"
@@ -453,7 +453,7 @@ msgstr "Бакавая панэль"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Ці адлюстоўваць бакавую панэль для агульных рэсурсаў Samba/Windows у лакальнай сетцы і спіса закладак"
+msgstr "Ці адлюстоўваць бакавую панэль для агульных рэсурсаў Samba/Windows у лакальнай сетцы і спісе закладак"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
@@ -475,7 +475,7 @@ msgstr "Панэль прылад"
 
 #: ../src/preferencesdialog.c:429
 msgid "Show _toolbar"
-msgstr "_Паказваць панэль прылад"
+msgstr "_Паказваць панэль інструментаў"
 
 #: ../src/preferencesdialog.c:432
 msgid "St_yle"
@@ -502,7 +502,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr "<b>%s</b>\n\nURI: %s\nЗлучэнне: Так\nТып сэрвіса: %s\nЗакладка: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nЗлучэнне: Так\nТып службы: %s\nЗакладка: %s"
 
 #: ../src/backendgvfs.c:248
 #, c-format
