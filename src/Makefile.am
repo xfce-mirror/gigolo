@@ -20,8 +20,7 @@ gigolo_SOURCES =								\
 
 AM_CFLAGS = -DLOCALEDIR=\""$(localedir)"\"
 
-
-INCLUDES = @GTK_CFLAGS@
+AM_CPPFLAGS = @GTK_CFLAGS@
 
 gigolo_LDADD = @GTK_LIBS@ $(INTLLIBS)
 
@@ -31,6 +30,6 @@ BUILT_SOURCES = \
 	gigolo_ui.h
 
 gigolo_ui.h: gigolo.ui
-	exo-csource --static --strip-comments --strip-content --name=gigolo_ui $< >$@
+	xdt-csource --static --strip-comments --strip-content --name=gigolo_ui $< >$@
 
 endif
