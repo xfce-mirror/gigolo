@@ -1,0 +1,569 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Priit Jõerüüt <transifex@joeruut.com>, 2020
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Apps\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-25 12:30+0200\n"
+"PO-Revision-Date: 2020-05-05 13:12+0000\n"
+"Last-Translator: Priit Jõerüüt <transifex@joeruut.com>\n"
+"Language-Team: Estonian (http://www.transifex.com/xfce/xfce-apps/language/et/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/main.c:48
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Ühenda kõik järjehoidjad, kus on automaatse ühendamise märge ning lõpeta programmi töö"
+
+#: ../src/main.c:49
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Eira juba töötavaid selle programmi  protsesse ning sunni avama uus"
+
+#: ../src/main.c:50
+msgid "Print a list of supported URI schemes"
+msgstr "Väljasta toetatud URI-vormingute loend"
+
+#: ../src/main.c:51
+msgid "Be verbose"
+msgstr "Ole jutukas"
+
+#: ../src/main.c:52
+msgid "Show version information"
+msgstr "Näita versiooniteavet"
+
+#: ../src/main.c:124
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- lihtne kasutajaliides ühenduse loomiseks väliste failisüsteemidega"
+
+#: ../src/common.c:77
+msgid "Unix Device"
+msgstr "Unixi-põhine seade"
+
+#: ../src/common.c:79
+msgid "Windows Share"
+msgstr "Windows'i võrgukaust"
+
+#: ../src/common.c:81
+msgid "FTP"
+msgstr "FTP"
+
+#: ../src/common.c:83
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ../src/common.c:85
+msgid "SSH"
+msgstr "SSH"
+
+#: ../src/common.c:87
+msgid "Obex"
+msgstr "Obex"
+
+#: ../src/common.c:89
+msgid "WebDAV"
+msgstr "WebDAV (krüpteerimata)"
+
+#: ../src/common.c:91
+msgid "WebDAV (secure)"
+msgstr "WebDAV (krüpteeritud)"
+
+#: ../src/common.c:93 ../src/window.c:1595
+msgid "Network"
+msgstr "Võrk"
+
+#: ../src/common.c:95
+msgid "Archive"
+msgstr "Arhiiv"
+
+#: ../src/common.c:97
+msgid "Photos"
+msgstr "Fotod"
+
+#: ../src/common.c:99
+msgid "Custom Location"
+msgstr "Kohandatud asukoht"
+
+#: ../src/window.c:255
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "Loon ühendust \"%s\""
+
+#: ../src/window.c:409
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "Lihtne kasutajaliides ühenduse loomiseks väliste failisüsteemidega või  kohalike ja väliste süsteemide haakimiseks"
+
+#: ../src/window.c:410
+msgid "Copyright 2008-2011 Enrico Tröger"
+msgstr "Copyright 2008-2011 Enrico Tröger"
+
+#: ../src/window.c:413
+msgid "translator-credits"
+msgstr "Kristjan Siimson <epost@ksiimson.se> & tolge.pingviin.org\nPriit Jõerüüt 2020"
+
+#. Translators: This is a list of "protocol description (protocol)"
+#: ../src/window.c:462
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/window.c:467
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Kasutades GVfs'i suudab Gigolo kasutada järgnevaid protokolle:"
+
+#: ../src/window.c:480
+msgid "Supported Protocols"
+msgstr "Toetatud protokollid"
+
+#: ../src/window.c:582 ../src/window.c:641
+#, c-format
+msgid "The command '%s' failed"
+msgstr "Käsk '%s' ebaõnnestus"
+
+#: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
+#: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
+#: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
+#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
+msgid "Error"
+msgstr "Viga"
+
+#: ../src/window.c:616
+msgid "Invalid terminal command"
+msgstr "Vigane käsk terminalis"
+
+#: ../src/window.c:628
+#, c-format
+msgid "No default location available for \"%s\""
+msgstr "Vaikimisi asukoht \"%s\" jaoks pole saadaval"
+
+#: ../src/window.c:748
+msgid "Edit _Bookmark"
+msgstr "Muuda _järjehoidjat"
+
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
+#: ../src/browsenetworkpanel.c:488
+msgid "Create _Bookmark"
+msgstr "Loo _järjehoidja"
+
+#: ../src/window.c:1505
+msgid "Connected"
+msgstr "Ühendatud"
+
+#: ../src/window.c:1514 ../src/bookmarkdialog.c:310
+msgid "Service Type"
+msgstr "Teenuse tüüp"
+
+#: ../src/window.c:1522 ../src/bookmarkdialog.c:302
+msgid "Name"
+msgstr "Nimi"
+
+#: ../src/window.c:1587
+msgid "Bookmarks"
+msgstr "Järjehoidjad"
+
+#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: ../src/settings.c:691
+msgid "Move it now?"
+msgstr "Kas tõstan nüüd uude kohta?"
+
+#: ../src/settings.c:692
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Enne käivitumist peab Gigolo tõstma ära sinu vanad seadistusfailid."
+
+#: ../src/settings.c:700
+#, c-format
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr "Sinu vana seadistuste kausta \"%s\" ei õnnestunud tõsta uude asukohta \"%s\" (%s). Palun tõsta kaust uude kohta käsitsi."
+
+#: ../src/settings.c:703
+msgid "Warning"
+msgstr "Hoiatus"
+
+#: ../src/bookmarkdialog.c:90
+#, c-format
+msgid "Domain: %s"
+msgstr "Domeen: %s"
+
+#: ../src/bookmarkdialog.c:95
+#, c-format
+msgid "Share: %s"
+msgstr "Võrgukaust: %s"
+
+#: ../src/bookmarkdialog.c:101
+#, c-format
+msgid "Folder: %s"
+msgstr "Kataloog: %s"
+
+#: ../src/bookmarkdialog.c:107
+#, c-format
+msgid "Path: %s"
+msgstr "Otsirada: %s"
+
+#: ../src/bookmarkdialog.c:318
+msgid "Host"
+msgstr "Host"
+
+#: ../src/bookmarkdialog.c:326
+msgid "Port"
+msgstr "Port"
+
+#: ../src/bookmarkdialog.c:334
+msgid "Auto-Connect"
+msgstr "Loo ühendus automaatselt"
+
+#: ../src/bookmarkdialog.c:342
+msgid "Username"
+msgstr "Kasutajanimi"
+
+#: ../src/bookmarkdialog.c:350
+msgid "Other information"
+msgstr "Muu teave"
+
+#: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
+msgid "_Add"
+msgstr "_Lisa"
+
+#: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+msgid "_Edit"
+msgstr "Muu_da"
+
+#: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
+msgid "_Delete"
+msgstr "_Kustuta"
+
+#: ../src/bookmarkdialog.c:406
+msgid "Edit Bookmarks"
+msgstr "Muuda järjehoidjaid"
+
+#: ../src/bookmarkeditdialog.c:210
+msgid "You must enter a name for the bookmark."
+msgstr "Sa pead järjehoidjale andma nime."
+
+#: ../src/bookmarkeditdialog.c:229
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
+msgstr "Sisestatud järjehoidja nimi on juba kasutusel. Palun pane mõni muu nimi."
+
+#: ../src/bookmarkeditdialog.c:242
+msgid "You must enter a server address or name."
+msgstr "Sa pead sisestama server aadressi või nime."
+
+#: ../src/bookmarkeditdialog.c:253
+msgid "You must enter a share name."
+msgstr "Sea pead sisestama võrgukausta nime."
+
+#: ../src/bookmarkeditdialog.c:264
+msgid "You must enter a valid URI for the connection."
+msgstr "Sea pead ühenduse jaoks sisestama kehtiva URI."
+
+#: ../src/bookmarkeditdialog.c:527
+msgid "_Device:"
+msgstr "Sea_de:"
+
+#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+msgid "_Server:"
+msgstr "_Server:"
+
+#: ../src/bookmarkeditdialog.c:789
+msgid "Create Bookmark"
+msgstr "Loo järjehoidja"
+
+#: ../src/bookmarkeditdialog.c:796
+msgid "Edit Bookmark"
+msgstr "Muuda järjehoidjat"
+
+#: ../src/bookmarkeditdialog.c:804
+msgid "Connect to Server"
+msgstr "Ühenda serveriga"
+
+#. Bookmark Settings
+#: ../src/bookmarkeditdialog.c:959
+msgid "Bookmark Settings"
+msgstr "Järjehoidjate seadistused"
+
+#: ../src/bookmarkeditdialog.c:965
+msgid "_Name:"
+msgstr "_Nimi:"
+
+#: ../src/bookmarkeditdialog.c:974
+msgid "_Color:"
+msgstr "_Värv:"
+
+#: ../src/bookmarkeditdialog.c:983
+msgid "Au_to-Connect:"
+msgstr "Ühenda au_tomaatselt:"
+
+#. Connection Settings
+#: ../src/bookmarkeditdialog.c:994
+msgid "Connection Settings"
+msgstr "Ühenduse seadistused"
+
+#: ../src/bookmarkeditdialog.c:1000
+msgid "Service t_ype:"
+msgstr "Teenuse t_üüp:"
+
+#: ../src/bookmarkeditdialog.c:1016
+msgid "_Location (URI):"
+msgstr "_Aadress (URI):"
+
+#: ../src/bookmarkeditdialog.c:1028
+msgid "P_ath:"
+msgstr "Otsir_ada:"
+
+#: ../src/bookmarkeditdialog.c:1034
+msgid "_Share:"
+msgstr "Võrgukau_st:"
+
+#. Optional Information
+#: ../src/bookmarkeditdialog.c:1053
+msgid "Optional Information"
+msgstr "Lisateave"
+
+#: ../src/bookmarkeditdialog.c:1059
+msgid "_Port:"
+msgstr "_Port:"
+
+#: ../src/bookmarkeditdialog.c:1065
+msgid "Set the port to 0 to use the default port"
+msgstr "Vaikimisi pordi kasutamiseks kirjuta 0"
+
+#: ../src/bookmarkeditdialog.c:1067
+msgid "_Folder:"
+msgstr "_Kaust:"
+
+#: ../src/bookmarkeditdialog.c:1073
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr "Seda ei  kasutata tegelikuks haakimiseks vaid ainult haakepunkti avamiseks failihalduris"
+
+#: ../src/bookmarkeditdialog.c:1076
+msgid "_Domain:"
+msgstr "_Domeen:"
+
+#: ../src/bookmarkeditdialog.c:1082
+msgid "_User Name:"
+msgstr "Kas_utajanimi:"
+
+#: ../src/preferencesdialog.c:146
+msgid "Icons"
+msgstr "Ikoonid"
+
+#: ../src/preferencesdialog.c:147
+msgid "Text"
+msgstr "Tekst"
+
+#: ../src/preferencesdialog.c:148
+msgid "Both"
+msgstr "Mõlemad"
+
+#: ../src/preferencesdialog.c:149
+msgid "Both horizontal"
+msgstr "Mõlemad ühel joonel"
+
+#: ../src/preferencesdialog.c:168
+msgid "Horizontal"
+msgstr "Rõhtselt"
+
+#: ../src/preferencesdialog.c:169
+msgid "Vertical"
+msgstr "Püstiselt"
+
+#: ../src/preferencesdialog.c:188
+msgid "Symbols"
+msgstr "Suured ikoonid"
+
+#: ../src/preferencesdialog.c:189
+msgid "Detailed List"
+msgstr "Üksikasjalik loend"
+
+#: ../src/preferencesdialog.c:333
+msgid "General"
+msgstr "Üldine"
+
+#. Row
+#: ../src/preferencesdialog.c:336
+msgid "_File Manager"
+msgstr "_Failihaldur"
+
+#: ../src/preferencesdialog.c:347
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr "Sisesta programmi nimi, millega soovid avada või vaadata haakepunkte"
+
+#. Row
+#: ../src/preferencesdialog.c:354
+msgid "_Terminal"
+msgstr "_Terminal"
+
+#: ../src/preferencesdialog.c:365
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr "Sisesta programmi nimi, millega soovid avada haakepunkte"
+
+#. Row
+#: ../src/preferencesdialog.c:372
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "Mis ajavahemiku järel peaks ühendust kontrollima"
+
+#: ../src/preferencesdialog.c:378
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr "Mis ajavahemiku järel peaks järjehoidjatena salvestatud ühenduse toimimist kontrollima. Kirjutades väärtuseks 0 keelab selle funktsionaalsuse."
+
+#: ../src/preferencesdialog.c:389
+msgid "Interface"
+msgstr "Liides"
+
+#: ../src/preferencesdialog.c:391
+msgid "_Save window position and geometry"
+msgstr "_Salvesta akende asukoht ja mõõdud"
+
+#: ../src/preferencesdialog.c:392
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "Salvesta akende asukoha ja mõõdud ning taastab need programmi käivitamisel"
+
+#: ../src/preferencesdialog.c:395
+msgid "Show status _icon in the Notification Area"
+msgstr "Näita teadete ribal oleku_ikooni"
+
+#: ../src/preferencesdialog.c:398
+msgid "Start _minimized in the Notification Area"
+msgstr "Käivita minimiseerituna teadete ribale"
+
+#: ../src/preferencesdialog.c:403
+msgid "Show side panel"
+msgstr "Näita külgpaneeli"
+
+#: ../src/preferencesdialog.c:404
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr "Kas peaksime kuvama külgpaneeli, kus saab sirvida kohalikus võrgus leiduvaid Samba/Windowsi võrgukaustu ning järjehoidjate loendit"
+
+#: ../src/preferencesdialog.c:407
+msgid "Show auto-connect error messages"
+msgstr "Näita automaatselt käivitatud ühenduste veateateid"
+
+#: ../src/preferencesdialog.c:408
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Kas peaksime näitama veateadete dialoogiaknaid, kui automaatselt käivitatud ühenustes tekin bigu"
+
+#: ../src/preferencesdialog.c:411
+msgid "_Connection List Mode"
+msgstr "_Ühenduste loendivaade"
+
+#: ../src/preferencesdialog.c:427
+msgid "Toolbar"
+msgstr "Tööriistariba"
+
+#: ../src/preferencesdialog.c:429
+msgid "Show _toolbar"
+msgstr "Näita _tööriistariba"
+
+#: ../src/preferencesdialog.c:432
+msgid "St_yle"
+msgstr "St_iil"
+
+#: ../src/preferencesdialog.c:441
+msgid "_Orientation"
+msgstr "_Paigutus"
+
+#: ../src/preferencesdialog.c:496
+msgid "Preferences"
+msgstr "Eelistused"
+
+#: ../src/backendgvfs.c:215
+msgid "No bookmark"
+msgstr "Järjehoidjat pole"
+
+#: ../src/backendgvfs.c:233
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s\n"
+"Bookmark: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nÜhendatud: jah\nTeenuse tüüp: %s\nJärjehoidja: %s"
+
+#: ../src/backendgvfs.c:248
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Unixi seade: %s</b>"
+
+#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:486
+msgid "unknown"
+msgstr "teadmata"
+
+#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "Ühendus \"%s\"-ga ebaõnnestus."
+
+#: ../src/backendgvfs.c:490
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "Ühenduse katkestamine \"%s\"-ga ebaõnnestus."
+
+#: ../src/mountdialog.c:95
+msgid "Connecting"
+msgstr "Ühendan"
+
+#: ../src/browsenetworkpanel.c:183
+msgid "No Workgroups found"
+msgstr "Windowsi võrgu töögruppe ei leidunud"
+
+#: ../src/browsenetworkpanel.c:194
+msgid "No Shares found"
+msgstr "Võrgukaustu ei leidunud"
+
+#: ../src/browsenetworkpanel.c:199
+msgid "No Hosts found"
+msgstr "Hoste ei leidunud"
+
+#: ../src/browsenetworkpanel.c:438
+msgid "_Connect"
+msgstr "_Ühenda"
+
+#: ../src/browsenetworkpanel.c:481
+msgid "Connect to the selected share"
+msgstr "Ühenda valitud võrgukaustaga"
+
+#: ../src/browsenetworkpanel.c:489
+msgid "Create a bookmark from the selected share"
+msgstr "Tee valitud võrgukausta kohta järjehoidja"
+
+#: ../src/browsenetworkpanel.c:499
+msgid "Refresh the network list"
+msgstr "Värskenda võrguvaadet"
+
+#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+msgid "Close panel"
+msgstr "Sulge paneel"
+
+#: ../src/bookmarkpanel.c:90
+msgid "No bookmarks"
+msgstr "Järjehoidjaid pole"
+
+#: ../src/bookmarkpanel.c:253
+msgid "Connect to the selected bookmark"
+msgstr "Ühendus loodud valitud järjehoidja alusel"
+
+#: ../gigolo.desktop.in.h:2
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Lihtne kasutajaliides ühenduse loomiseks väliste failisüsteemidega"
