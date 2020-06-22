@@ -5,13 +5,14 @@
 # Translators:
 # Elishai Eliyahu <e1907@mm.st>, 2016,2018
 # GenghisKhan <genghiskhan@gmx.ca>, 2015-2016
+# Omer, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-10-27 15:18+0000\n"
-"Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
+"PO-Revision-Date: 2020-06-22 16:03+0000\n"
+"Last-Translator: Omer\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-apps/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 
 #: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "חבר את כל הסימניות המסומנות כ-\"חיבור אוטומטי\" וצא"
+msgstr "חבר את כל הסימניות המסומנות כ־\"חיבור אוטומטי\" וצא"
 
 #: ../src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
