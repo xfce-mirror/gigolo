@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2020-06-22 16:03+0000\n"
+"PO-Revision-Date: 2020-06-23 21:20+0000\n"
 "Last-Translator: Omer\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-apps/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "חבר את כל הסימניות המסומנות כ־\"חיבור אוטומטי\" וצא"
+msgstr "חבר את כל הסימניות כמסומנות בתור \"חיבור אוטומטי\" וצא"
 
 #: ../src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
@@ -416,7 +416,7 @@ msgstr "הזנת שם התוכנית לפתיחת נקודת עיגון בתוך
 #. Row
 #: ../src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "תדירות התחברות-אוטומטית של _סימנייה"
+msgstr "תדירות התחברות־אוטומטית של _סימנייה"
 
 #: ../src/preferencesdialog.c:378
 msgid ""
