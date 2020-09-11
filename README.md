@@ -10,25 +10,25 @@ filesystem and manage bookmarks of such.
 
 ### Homepage
 
-[gigolo documentation](https://docs.xfce.org/xfce/gigolo/start)
+[gigolo documentation](https://docs.xfce.org/apps/gigolo/start)
 
 ### Changelog
 
-See [NEWS](https://gitlab.xfce.org/xfce/gigolo/-/blob/master/NEWS) for details on changes and fixes made in the current release.
+See [NEWS](https://gitlab.xfce.org/apps/gigolo/-/blob/master/NEWS) for details on changes and fixes made in the current release.
 
 ### Source Code Repository
 
-[gigolo source code](https://gitlab.xfce.org/xfce/gigolo)
+[gigolo source code](https://gitlab.xfce.org/apps/gigolo)
 
 ### Download A Release Tarball
 
-[gigolo archive](https://archive.xfce.org/src/xfce/gigolo)
+[gigolo archive](https://archive.xfce.org/src/apps/gigolo)
     or
-[gigolo tags](https://gitlab.xfce.org/xfce/gigolo/-/tags)
+[gigolo tags](https://gitlab.xfce.org/apps/gigolo/-/tags)
 
 ### Installation
 
-From source: 
+From source code repository: 
 
     % cd gigolo
     % ./autogen.sh
@@ -45,5 +45,5 @@ From release tarball:
 
 ### Reporting Bugs
 
-Visit the [reporting bugs](https://docs.xfce.org/xfce/gigolo/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
+Visit the [reporting bugs](https://docs.xfce.org/apps/gigolo/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
 
