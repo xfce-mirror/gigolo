@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-DOCFILES = README ChangeLog NEWS COPYING AUTHORS TODO
+DOCFILES = README.md ChangeLog NEWS COPYING AUTHORS TODO
 
 SUBDIRS = src po
 
