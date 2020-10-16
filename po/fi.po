@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Jari Rahkonen <inactive+jari@transifex.com>, 2012
+# 9e06e299e74d2541309887ba0f7d6eee_126c110 <673225c2b34f8d31a8e0b8e4dc2dd62e_1152>, 2012
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2013,2019
 # Pasi Lallinaho <pasi@shimmerproject.org>, 2019
 msgid ""
