@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Georg Eckert <eckert.georg@gmx.de>, 2013
-# Marcel Michael Kapfer <inactive+mmk96@transifex.com>, 2013
+# aa415eb7a9ec6f300ac64b4df45ddda6_b022cc9 <7d9fba179517190a4b0e29c6f1fcd97b_108726>, 2013
 # Markus, 2013
 # Tobias Bannert <tobannert@gmail.com>, 2014-2015
 # Vinzenz Vietzke <vinz@vinzv.de>, 2018
