@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-06-10 18:20+0000\n"
+"PO-Revision-Date: 2020-08-09 07:58+0000\n"
 "Last-Translator: Caarmi\n"
 "Language-Team: Interlingue (http://www.transifex.com/xfce/xfce-apps/language/ie/)\n"
 "MIME-Version: 1.0\n"
@@ -435,11 +435,11 @@ msgstr "Memorar e restituer li geometrie del fenestre"
 
 #: ../src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
-msgstr ""
+msgstr "Monstrar un _icone in li area de notificationes"
 
 #: ../src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
-msgstr ""
+msgstr "Lansar _minimisat in li area de notificationes"
 
 #: ../src/preferencesdialog.c:403
 msgid "Show side panel"
@@ -449,7 +449,7 @@ msgstr "Panel _lateral"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr ""
+msgstr "Monstrar un panel lateral por navigation del local rete por partites de Windows/Samba, e por un liste de marca-págines"
 
 #: ../src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
