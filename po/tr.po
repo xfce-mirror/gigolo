@@ -5,7 +5,7 @@
 # Translators:
 # Ayhan YALÇINSOY <ayhanyalcinsoy@gmail.com>, 2010
 # Demiray Muhterem <mdemiray@msn.com>, 2018
-# Mustafa TEKKOYUN <inactive+tekotek@transifex.com>, 2013
+# efa1997c46de3f3ae3660d9ff15ebb10_d43e846 <59fbee64543f2ea2aa5bccfc0fc9e4a4_119162>, 2013
 # Serdar Sağlam <teknomobil@msn.com>, 2019
 # Volkan Gezer <volkangezer@gmail.com>, 2013
 msgid ""
