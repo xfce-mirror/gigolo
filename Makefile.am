@@ -2,7 +2,10 @@
 
 DOCFILES = README.md ChangeLog NEWS COPYING AUTHORS TODO
 
-SUBDIRS = src po
+SUBDIRS =                       \
+    icons                       \
+    po                          \
+    src
 
 EXTRA_DIST =					\
 	autogen.sh					\
