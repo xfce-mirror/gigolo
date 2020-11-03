@@ -2,7 +2,17 @@
 
 DOCFILES = README.md ChangeLog NEWS COPYING AUTHORS TODO
 
-SUBDIRS = src po
+SUBDIRS =                       \
+    icons                       \
+    po                          \
+    src
+
+distclean-local:
+	rm -rf *.spec *.cache *~
+
+distuninstallcheck_listfiles = 						\ 
+	find . -type f -print | grep -v ./share/icons/hicolor/icon-theme.cache
+
 
 EXTRA_DIST =					\
 	autogen.sh					\

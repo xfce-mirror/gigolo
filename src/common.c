@@ -37,7 +37,7 @@ const gchar *gigolo_get_application_icon_name(void)
 	static const gchar *icon_name = NULL;
 
 	if (icon_name == NULL)
-		icon_name = gigolo_find_icon_name("gtk-network", "gtk-connect");
+		icon_name = gigolo_find_icon_name("org.xfce.Gigolo", "org.xfce.Gigolo");
 
 	return icon_name;
 }
