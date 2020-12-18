@@ -2,7 +2,7 @@
 Type=Application
 Version=1.0
 _Name=Gigolo
-_GenericName=Gigolo
+_GenericName=Frontend for GIO/GVfs
 _Comment=A simple frontend to easily connect to remote filesystems
 Exec=gigolo
 Icon=org.xfce.Gigolo
