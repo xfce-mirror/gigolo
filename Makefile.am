@@ -19,7 +19,8 @@ EXTRA_DIST =					\
 	gigolo.desktop.in			\
 	intltool-extract.in			\
 	intltool-merge.in			\
-	intltool-update.in
+	intltool-update.in			\
+	src/gigolo.ui
 
 
 DISTCLEANFILES =				\
