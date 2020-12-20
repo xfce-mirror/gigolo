@@ -13,4 +13,5 @@ src/backendgvfs.c
 src/mountdialog.c
 src/browsenetworkpanel.c
 src/bookmarkpanel.c
+[type: gettext/glade]src/gigolo.ui
 gigolo.desktop.in
