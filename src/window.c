@@ -458,7 +458,7 @@ static void supported_schemes_cb(GtkWidget *widget, GigoloWindow *window)
 		description = gigolo_describe_scheme(supported[j]);
 		if (description != NULL)
 		{
-			// Translators: This is a list of "protocol description (protocol)"
+			/* Translators: This is a list of "protocol description (protocol)" */
 			items = g_list_prepend (items, g_strdup_printf (_("%s (%s)"), description, supported[j]));
 		}
 	}
