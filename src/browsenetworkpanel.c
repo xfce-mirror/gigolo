@@ -226,8 +226,9 @@ static void gigolo_browse_network_panel_refresh(GigoloBrowseNetworkPanel *panel)
 }
 
 
-static gboolean delay_refresh(GigoloBrowseNetworkPanel *panel)
+static gboolean delay_refresh(gpointer user_data)
 {
+	GigoloBrowseNetworkPanel *panel = user_data;
 	GigoloBrowseNetworkPanelPrivate *priv = gigolo_browse_network_panel_get_instance_private(panel);
 
 	gdk_window_set_cursor(gtk_widget_get_window(GTK_WIDGET(panel)), priv->wait_cursor);
@@ -241,7 +242,7 @@ static gboolean delay_refresh(GigoloBrowseNetworkPanel *panel)
 
 static void button_refresh_click_cb(G_GNUC_UNUSED GtkToolButton *btn, GigoloBrowseNetworkPanel *panel)
 {
-	g_idle_add((GSourceFunc) delay_refresh, panel);
+	g_idle_add(delay_refresh, panel);
 }
 
 
@@ -459,7 +460,7 @@ static void tree_prepare(GigoloBrowseNetworkPanel *panel)
 
 static void realize_cb(GigoloBrowseNetworkPanel *panel, G_GNUC_UNUSED gpointer data)
 {
-	g_timeout_add(250, (GSourceFunc) delay_refresh, panel);
+	g_timeout_add(250, delay_refresh, panel);
 }
 
 
