@@ -9,14 +9,14 @@
 # jc1 <jc1.quebecos@gmail.com>, 2013
 # Maximilian Schleiss <maximilian@xfce.org>, 2008
 # Urien Desterres <urien.desterres@gmail.com>, 2014
-# Yannick Le Guen <leguen.yannick@gmail.com>, 2014
+# Yannick Le Guen <leguen.yannick@gmail.com>, 2014,2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-10-28 20:52+0000\n"
-"Last-Translator: Charles Monzat <c.monzat@laposte.net>\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-23 18:43+0000\n"
+"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/xfce/xfce-apps/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -124,7 +124,7 @@ msgstr "%s (%s)"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo peut utiliser les protocoles suivants fournis par GVfs :"
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Protocoles pris en charge"
 
@@ -153,8 +153,8 @@ msgstr "Aucun emplacement par défaut pour « %s »"
 msgid "Edit _Bookmark"
 msgstr "Modifier un _signet"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Créer un _signet"
 
@@ -174,7 +174,8 @@ msgstr "Nom"
 msgid "Bookmarks"
 msgstr "Signets"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -242,6 +243,7 @@ msgid "_Add"
 msgstr "_Ajouter"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "É_dition"
 
@@ -274,92 +276,92 @@ msgstr "Vous devez saisir un nom de partage."
 msgid "You must enter a valid URI for the connection."
 msgstr "Vous devez saisir un URI valide pour la connexion."
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "_Périphérique :"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "_Serveur :"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "Créer un signet"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "Modifier le signet"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Connexion au serveur"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
 msgstr "Paramètres de signet"
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
 msgstr "_Nom :"
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "_Couleur :"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
 msgstr "Connexion au_tomatique :"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
 msgstr "Paramères de connexion"
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
 msgstr "T_ype de service :"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "_Emplacement (URI) :"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "_Chemin :"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "Pa_rtage :"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
 msgstr "Informations facultatives"
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "_Port :"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr "Régler le port à 0 pour utiliser le port par défaut"
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "_Dossier :"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Ceci n’est pas utilisé pour le montage actuel, seulement nécessaire pour l’ouverture du point de montage dans un explorateur de fichiers"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "_Domaine :"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "Nom d’_utilisateur :"
 
@@ -542,23 +544,23 @@ msgstr "Aucun partage trouvé"
 msgid "No Hosts found"
 msgstr "Aucun serveur trouvé"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr "_Connexion"
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "Se connecter au partage sélectionné"
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "Créer un signet pour le partage sélectionné"
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "Actualiser la liste des réseaux"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Fermer le panneau"
 
@@ -570,6 +572,130 @@ msgstr "Aucun signet"
 msgid "Connect to the selected bookmark"
 msgstr "Se connecter au signet sélectionné"
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "_Fichier"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "_Quitter"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "_Modifier les signets"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "_Préférences"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "Affic_hage"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "Barre d’o_utils"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "_Panneau latéral"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "_Icône d’état"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "Vue en i_cônes"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr "Vue en liste _détaillée"
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "A_ctions"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr ""
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "_Signets"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "_Ouvrir"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "Ouvrir dans un _terminal"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr ""
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "Aid_e"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "Aide en ligne"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr "À propos"
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "Choisir un signet auquel se connecter"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr "Déconnecter la ressource sélectionnée"
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Ouvrir le gestionnaire de signets pour ajouter, modifier ou supprimer des signets"
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr "Ouvrir la ressource sélectionnée avec un gestionnaire de fichiers"
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr "Démarrer un terminal depuis cet emplacement"
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr ""
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "Quitter Gigolo"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr "page 1"
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr "page 2"
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr "page 3"
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr ""
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr ""
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Une interface simple pour se connecter facilement à des systèmes de fichiers à distance"
