@@ -6,14 +6,15 @@
 # Alex Nordlund <deep.alexander@gmail.com>, 2013
 # Arve Eriksson <031299870@telia.com>, 2019
 # Daniel Nylander <po@danielnylander.se>, 2008-2009
+# Luna Jernberg <bittin@cafe8bitar.se>, 2020
 # Påvel Nicklasson <pavel2@frimix.se>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-02-06 05:06+0000\n"
-"Last-Translator: Arve Eriksson <031299870@telia.com>\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-26 13:13+0000\n"
+"Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/xfce/xfce-apps/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -121,7 +122,7 @@ msgstr "%s (%s)"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo kan använda följande protokoll som tillhandahålls av GVfs:"
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Protokoll som stöds"
 
@@ -150,8 +151,8 @@ msgstr "Ingen standardplats tillgänglig för \"%s\""
 msgid "Edit _Bookmark"
 msgstr "Redigera _bokmärke"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Skapa _bokmärke"
 
@@ -171,7 +172,8 @@ msgstr "Namn"
 msgid "Bookmarks"
 msgstr "Bokmärken"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -239,6 +241,7 @@ msgid "_Add"
 msgstr "_Lägg till"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "R_edigera"
 
@@ -271,92 +274,92 @@ msgstr "Du måste ange ett utdelningsnamn."
 msgid "You must enter a valid URI for the connection."
 msgstr "Du måste ange en giltig URI för anslutningen."
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "_Enhet:"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "Skapa bokmärke"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "Redigera bokmärke"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Anslut till server"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
 msgstr "Bokmärkesinställningar"
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
 msgstr "_Namn:"
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "_Färg:"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
 msgstr "Au_toanslut:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
 msgstr "Anslutningsinställningar"
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
 msgstr "Tjänste_typ:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "_Plats (URI):"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "Sökvä_g:"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "_Utdelning:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
 msgstr "Valfri information"
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr "Ställ in porten till 0 för att använda standardporten"
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "_Mapp:"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Detta används inte för själva monteringen, bara nödvändigt för att öppna monteringspunkten i en filhanterare"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "_Domän:"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "_Användarnamn:"
 
@@ -539,23 +542,23 @@ msgstr "Inga utdelningar hittades"
 msgid "No Hosts found"
 msgstr "Inga värdar hittades"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr "A_nslut"
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "Anslut till markerad utdelning"
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "Skapa ett bokmärke från den markerade utdelningen"
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "Uppdatera nätverkslistan"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Stäng panelen"
 
@@ -567,6 +570,130 @@ msgstr "Inga bokmärken"
 msgid "Connect to the selected bookmark"
 msgstr "Anslut till markerat bokmärke"
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "_Arkiv"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "_Avsluta"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "_Redigera bokmärken"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "Inställningar"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "_Visa"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "Verk_tygsrad"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "Sido_panel"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "Status_ikon"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "Visa som _symboler"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr "Visa som _detaljerad lista"
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "_Åtgärder"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr "_Koppla ner"
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "_Bokmärken"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "_Öppna"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "Öppna i _Terminal"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr "_Kopiera URI"
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "Hjälp på nätet"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr "Om"
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "Välj ett bokmärke att ansluta till"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr "Koppla från markerad resurs"
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Öppna bokmärkeshanteraren för att lägga till, redigera eller ta bort bokmärken"
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr "Öppna markerad resurs med en filhanterare"
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr "Starta en terminal härifrån"
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr "Öppna _Terminal"
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "Avsluta Gigolo"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr "sida 1"
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr "sida 2"
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr "sida 3"
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr "_Redigera Bokmärke"
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr "Frontend för GIO/GVfs"
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Ett enkelt gränssnitt för att enkelt ansluta till fjärrfilsystem"
