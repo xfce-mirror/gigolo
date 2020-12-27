@@ -232,7 +232,7 @@ gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 					}
 				}
 			}
-			if (! error && gtk_widget_get_parent(priv->host_entry) != NULL)
+			if (gtk_widget_is_visible(priv->host_entry) && ! error && gtk_widget_get_parent(priv->host_entry) != NULL)
 			{
 				tmp = gtk_entry_get_text(GTK_ENTRY(priv->host_entry));
 				if (! *tmp)
