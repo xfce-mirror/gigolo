@@ -4,4 +4,4 @@ EXTRA_DIST =				\
 Datadir = $(datadir)/icons/hicolor/16x16/apps
 
 Data_DATA =				\
-	org.xfce.Gigolo.png
+	org.xfce.gigolo.png
