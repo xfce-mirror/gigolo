@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2020-05-04 17:52+0000\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-27 17:08+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/xfce-apps/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -121,7 +121,7 @@ msgstr "%s (%s)"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "O Gigolo pode utilizar os seguintes protocolos GVfs:"
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Protocolos suportados"
 
@@ -150,8 +150,8 @@ msgstr "Nenhum local predefinido disponível para \"%s\""
 msgid "Edit _Bookmark"
 msgstr "Editar marca_dor"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Criar _marcador"
 
@@ -171,7 +171,8 @@ msgstr "Nome"
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -239,6 +240,7 @@ msgid "_Add"
 msgstr "_Adicionar"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "_Editar"
 
@@ -271,92 +273,92 @@ msgstr "Tem que indicar um nome de partilha."
 msgid "You must enter a valid URI for the connection."
 msgstr "Tem que indicar uma URI válida para a ligação."
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "_Dispositivo:"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "_Servidor:"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "Criar marcador"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "Editar marcador"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Ligar ao servidor"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
 msgstr "Definições do marcador"
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
 msgstr "_Nome:"
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "_Cor:"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
 msgstr "Ligação au_tomática:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
 msgstr "Definições da ligação"
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
-msgstr "Tipo do ser_viço"
+msgstr "Tipo do ser_viço:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "_Localização (URI):"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "C_aminho:"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "Partil_ha:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
 msgstr "Informação opcional"
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "_Porta:"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr "Defina a porta para 0 para a usar por predefinição"
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "_Pasta:"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Isto não é utilizado para o ponto de montagem e só é necessário para abrir o ponto de montagem no gestor de ficheiros."
+msgstr "Isto não é utilizado para o ponto de montagem e só é necessário para abrir o ponto de montagem no gestor de ficheiros"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "_Domínio:"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "Nome de _utilizador:"
 
@@ -539,23 +541,23 @@ msgstr "Nenhuma partilha encontrada"
 msgid "No Hosts found"
 msgstr "Nenhum anfitrião encontrado"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr "_Ligar"
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "Ligar à partilha seleccionada"
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "Criar um marcador para a partilha selecionada"
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "Atualizar lista de redes"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Fechar painel"
 
@@ -567,6 +569,130 @@ msgstr "Sem marcadores"
 msgid "Connect to the selected bookmark"
 msgstr "Ligar ao marcador selecionado"
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "_Ficheiro"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "_Sair"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "_Editar marcadores"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "_Preferências"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "_Ver"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "_Barra de ferramentas"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "_Painel lateral"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "Í_cone de estado"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "Ver como _símbolos"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr "Ver como lista _detalhada"
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "_Ações"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr "_Desligar"
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "Mar_cadores"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "_Abrir"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "Abrir no _terminal"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr "_Copiar URI"
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "_Ajuda"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "Ajuda online"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr "Sobre"
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "Escolha o marcador para ligar"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr "Desligar o recurso selecionado"
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Abrir o gestor de marcadores para adicionar, editar ou apagar marcadores"
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr "Abrir o recurso selecionado com um gestor de ficheiros"
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr "Abrir um terminal aqui"
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr "Abrir _terminal"
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "Sair do Gigolo"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr "página 1"
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr "página 2"
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr "página 3"
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr "_Editar marcador"
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr "Frontend para GIO/GVfs"
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Uma interface simples para ligar facilmente a sistemas de ficheiros remotos"
