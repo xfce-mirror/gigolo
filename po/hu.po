@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-12-01 11:04+0000\n"
-"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-22 23:47+0000\n"
+"Last-Translator: Gábor P.\n"
 "Language-Team: Hungarian (http://www.transifex.com/xfce/xfce-apps/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -119,7 +119,7 @@ msgstr "%s (%s)"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "A Gigolo a következő, a GVFS által biztosított protokollokat képes használni:"
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Támogatott protokollok"
 
@@ -148,8 +148,8 @@ msgstr "Nem érhető el alapértelmezett hely a következőhöz: „%s”"
 msgid "Edit _Bookmark"
 msgstr "Könyvjelző s_zerkesztése"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Kö_nyvjelző létrehozása"
 
@@ -169,7 +169,8 @@ msgstr "Név"
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -237,6 +238,7 @@ msgid "_Add"
 msgstr "Hozzá_adás"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "S_zerkesztés"
 
@@ -269,92 +271,92 @@ msgstr "Meg kell adnia egy megosztásnevet."
 msgid "You must enter a valid URI for the connection."
 msgstr "Meg kell adnia egy érvényes URI címet a kapcsolathoz."
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "_Eszköz:"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "_Kiszolgáló:"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "Könyvjelző létrehozása"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "Könyvjelző szerkesztése"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Kapcsolódás kiszolgálóhoz"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
 msgstr "Könyvjelző beállítások"
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
 msgstr "_Név:"
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "S_zín:"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
 msgstr "Au_tomatikus kapcsolódás:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
 msgstr "Kapcsolódási beállítások"
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
 msgstr "Sz_olgáltatástípus:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "He_ly (URI):"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "Út_vonal:"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "Meg_osztás:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
 msgstr "Elhagyható információk"
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr "Az alapértelmezett port használatához a 0 értéket adja meg"
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "_Mappa:"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Ez nem használatos az aktuális csatoláshoz, csak a csatolási pont fájlkezelőben történő megnyitásához szükséges"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "_Tartomány:"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "_Felhasználónév:"
 
@@ -537,23 +539,23 @@ msgstr "Nem találhatók megosztások"
 msgid "No Hosts found"
 msgstr "Nem találhatók gépek"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr "_Kapcsolódás"
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "Csatlakozás a kiválasztott megosztáshoz"
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "Könyvjelző készítése a kiválasztott megosztásból"
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "Hálózatlista frissítése"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Panel bezárása"
 
@@ -565,6 +567,130 @@ msgstr "Nincsenek könyvjelzők"
 msgid "Connect to the selected bookmark"
 msgstr "Csatlakozás a kiválasztott könyvjelzőhöz"
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "_Fájl"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "Könyvjelzők s_zerkesztése"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "_Beállítások"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "_Nézet"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "_Eszköztár"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "Oldal_panel"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "Állapotik_on"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "Megjelenítés szimból_umokként"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr "Megjelenítés _részletes listaként"
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "_Műveletek"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr ""
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "_Könyvjelzők"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "_Megnyitás"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "Megnyitás _terminálban"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr ""
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "Online súgó"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr "Névjegy"
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "Válasszon könyvjelzőt a kapcsolódáshoz"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr "Kiválasztott erőforrás leválasztása"
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "A könyvjelzőkezelő megnyitása könyvjelzők hozzáadásához, szerkesztéséhez vagy törléséhez"
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr "A kiválasztott erőforrás megnyitása fájlkezelőben"
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr "Terminál indítása innen"
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr ""
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "Kilépés a Gigoloból"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr ""
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr ""
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr ""
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr ""
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr ""
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Egyszerű felület távoli fájlrendszerekhez való egyszerű csatlakozáshoz"
