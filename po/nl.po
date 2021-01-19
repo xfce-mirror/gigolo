@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Pjotr <pjotrvertaalt@gmail.com>, 2014,2018
+# Pjotr <pjotrvertaalt@gmail.com>, 2014,2018,2020
 # Pjotr pjotrvertaalt@gmail.com , 2011,2013
 # Timo Verbeek, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-10-25 21:10+0000\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-23 09:38+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/xfce/xfce-apps/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -120,7 +120,7 @@ msgstr "%s (%s)"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo kan de volgende door GVfs verstrekte protocollen gebruiken:"
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Ondersteunde protocollen"
 
@@ -149,8 +149,8 @@ msgstr "Geen standaardlocatie beschikbaar voor '%s'"
 msgid "Edit _Bookmark"
 msgstr "Bewerk bladwijzer"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Maak _bladwijzer"
 
@@ -170,7 +170,8 @@ msgstr "Naam"
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -238,6 +239,7 @@ msgid "_Add"
 msgstr "_Toevoegen"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "Be_werken"
 
@@ -270,92 +272,92 @@ msgstr "U moet een Deel-naam invullen."
 msgid "You must enter a valid URI for the connection."
 msgstr "U moet een geldige URI voor de verbinding invullen."
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "_Apparaat:"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "Maak bladwijzer"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "Bewerk bladwijzer"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Verbind met server"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
 msgstr "Bladwijzer-instellingen"
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
 msgstr "_Naam:"
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "_Kleur:"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
 msgstr "Automatisch verbinden:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
 msgstr "Verbindingsinstellingen"
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
 msgstr "Diensttype:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "_Locatie (URI):"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "P_ad:"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "_Deel:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
 msgstr "Optionele informatie"
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "_Poort :"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr "Stel de poort in op 0 om de standaardpoort te gebruiken"
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "_Map:"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Dit wordt niet gebruikt voor de eigenlijke aankoppeling, het is slechts benodigd voor het openen van het koppelpunt in een bestandbeheerder"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "_Domein :"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "_Gebruikersnaam:"
 
@@ -538,23 +540,23 @@ msgstr "Geen Delen gevonden"
 msgid "No Hosts found"
 msgstr "Geen gastheercomputers gevonden"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr "Ver_binden"
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "Verbinden met het gekozen Deel"
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "Maak een bladwijzer van het gekozen Deel"
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "Ververs de netwerklijst"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Sluit paneel"
 
@@ -566,6 +568,130 @@ msgstr "Geen bladwijzers"
 msgid "Connect to the selected bookmark"
 msgstr "Verbind met de gekozen bladwijzer"
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "_Bestand"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "_Afsluiten"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "Bladwijzers bewerken"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "_Voorkeuren"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "_Tonen"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "Werkbalk"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "Zijpa_neel"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "Status_pictogram"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "Bekijk als _symbolen"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr "Bekijk als _gedetailleerde lijst"
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "_Acties"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr "Verbinding ver_breken"
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "Blad_wijzers"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "_Openen"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "Openen in _terminalvenster"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr "URI _kopiëren"
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "_Hulp"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "Hulp op het internet"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr "Over"
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "Kies een bladwijzer om verbinding mee te maken"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr "Koppel de gekozen bron los"
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Open de bladwijzerbeheerder om bladwijzers toe te voegen, te bewerken of te verwijderen"
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr "Open de gekozen bron met een bestandbeheerder"
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr "Start vanuit hier een terminalvenster"
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr "_Terminalvenster openen"
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "Sluit Gigolo"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr "pagina 1"
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr "pagina 2"
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr "pagina 3"
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr "Bladwijzer be_werken"
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr "Bedieningsschil voor GIO/GVfs"
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Een eenvoudige grafische schil om makkelijk te verbinden met bestandssystemen op afstand"
