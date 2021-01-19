@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# beriain, 2020
 # Piarres Beobide <pi@beobide.net>, 2009
 # Piarres Beobide <pi+debian@beobide.net>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-08-29 18:37+0000\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-23 09:17+0000\n"
 "Last-Translator: beriain\n"
 "Language-Team: Basque (http://www.transifex.com/xfce/xfce-apps/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -113,13 +114,13 @@ msgstr "Piarres Beobide <pi@beobide.net>"
 #: ../src/window.c:462
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #: ../src/window.c:467
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolok GVfs-ek euskarri ematen dien hurrengo protokoloak erabili ditzake:"
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Onartutako protokoloak"
 
@@ -148,8 +149,8 @@ msgstr "Ez dago lehenetsiriko kokapenik eskuragarri \"%s\" -rentzat"
 msgid "Edit _Bookmark"
 msgstr "Editatu _laster-marka"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Sortu _laster-markak"
 
@@ -169,7 +170,8 @@ msgstr "Izena"
 msgid "Bookmarks"
 msgstr "Laster-markak"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -237,6 +239,7 @@ msgid "_Add"
 msgstr "Gehitu"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "_Editatu"
 
@@ -269,92 +272,92 @@ msgstr "Partekatze izena idatzi behar duzu."
 msgid "You must enter a valid URI for the connection."
 msgstr "Baliozko URI bat idatzi behar duzu konexioarentzat."
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "_Gailua:"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "_Zerbitzaria:"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "Sortu laster-marka"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "Editatu laster-marka"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Konektatu zerbitzarira"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "Laster-marka ezarpenak"
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
-msgstr ""
+msgstr "Ize_na:"
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "_Kolorea:"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
-msgstr ""
+msgstr "Au_to-konektatu:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
-msgstr ""
+msgstr "Konexio ezarpenak"
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
 msgstr "Zerbitzu m_ota:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "_Kokalekua (URI):"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "_Bidea:"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "_Partekatzea:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
-msgstr ""
+msgstr "Hautazko informazioa"
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "_Ataka:"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr "Ezarri 0 ataka zenbakian lehenetsitakoa erabiltzeko"
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "_Karpeta:"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Hau ez da erabiltzen oraingo muntaketan, bakarrik fitxategi arakatzaile batean irekitzeko da beharrezkoa"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "_Domeinua:"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "_Erabiltzaile-izena:"
 
@@ -537,23 +540,23 @@ msgstr "Ez da partekatzerik aurkitu"
 msgid "No Hosts found"
 msgstr "Ez da ostalaririk aurkitu"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
-msgstr ""
+msgstr "Konektatu"
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "Deskonektatu hautaturiko errekurtsoa"
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "Sortu laster-marka bat hautatutako partekatzearentzat"
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "Berritu sare zerrenda"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Itxi panela"
 
@@ -565,6 +568,130 @@ msgstr "Laster-markarik ez"
 msgid "Connect to the selected bookmark"
 msgstr "Konektatu hautatutako laster-markara"
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "_Fitxategia"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "Irte_n"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "_Editatu laster-markak"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "_Hobespenak"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "_Ikusi"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "_Tresna-barra"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "Alboko _panela"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "Egoera _ikonoa"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "Ikusi _sinbolo gisa"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr "Ikusi _zehaztutako zerrenda gisa"
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "Ekintz_ak"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr "_Deskonektatu"
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "_Laster-markak"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "_Ireki"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "Ireki _terminalean"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr "URIa kopiatu"
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "_Laguntza"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "Sare-bidezko laguntza"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr "Honi buruz"
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "Hautatu konektatzeko laster-marka bat"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr "Deskonektatu hautatutako errekurtsoa"
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Ireki laster-marka kudeatzailea laster-markak gehitu. editatu edo ezabatzeko"
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr "Ireki hautatutako errekurtsoa fitxategi kudeatzaile batekin"
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr "Ireki terminal bat hemen"
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr "_Terminala ireki"
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "Itxi Gigolo"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr "1. orria"
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr "2. orria"
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr "3. orria"
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr "Laster-marka _editatu"
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr "GIO/GVfs-rako erabiltzaile interfazea"
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Urruneko fitxategi-sistemetara konektatzeko interfaze sinple bat"
