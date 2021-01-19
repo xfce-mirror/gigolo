@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Besnik Bleta <besnik@programeshqip.org>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2020-01-27 11:48+0000\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-23 07:47+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/xfce/xfce-apps/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -117,7 +118,7 @@ msgstr "%s (%s)"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo mund të përdorë protokollet vijues të furnizuar nga GVfs:"
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Protokolle Që Mbulohen"
 
@@ -146,8 +147,8 @@ msgstr "S’ka vendndodhje parazgjedhje të gatshme për \"%s\""
 msgid "Edit _Bookmark"
 msgstr "Përpunoni _Faqerojtës"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Krijoni _Faqerojtës"
 
@@ -167,7 +168,8 @@ msgstr "Emër"
 msgid "Bookmarks"
 msgstr "Faqerojtës"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -235,6 +237,7 @@ msgid "_Add"
 msgstr "_Shtoje"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "_Përpunoni"
 
@@ -267,92 +270,92 @@ msgstr "Duhet të jepni një emër pjese."
 msgid "You must enter a valid URI for the connection."
 msgstr "Duhet të jepni një URI të vlefshëm për lidhjen."
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "_Pajisje:"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "_Shërbyes:"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "Krijoni Faqerojtës"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "Përpunoni Faqerojtës"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Lidhu te Shërbyesi"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
 msgstr "Rregullime Faqerojtësi"
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
 msgstr "_Emër:"
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "_Ngjyrë:"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
 msgstr "Vetëlidhi:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
 msgstr "Rregullime Lidhjeje"
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
 msgstr "_Lloj shërbimi:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "_Vendndodhje (URI):"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "_Shteg:"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "_Pjesë:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
 msgstr "Të dhëna Opsionale"
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "_Portë:"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr "Që të përdoret porta parazgjedhje, caktoni 0 për portën"
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "_Dosje:"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Kjo s’përdoret për montimin faktik, është e nevojshme vetëm për hapjen e pikës së montimit në një shfletues kartelash"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "_Përkatësi:"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "_Emër përdoruesi:"
 
@@ -535,23 +538,23 @@ msgstr "S’u gjetën Ndarje"
 msgid "No Hosts found"
 msgstr "S’u gjetën Strehë"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr "_Lidhu"
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "Lidhu te pjesa e përzgjedhur"
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "Krijoni një faqerojtës për pjesën e përzgjedhur"
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "Rifresko listën e rrjetit"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Mbylle panelin"
 
@@ -563,6 +566,130 @@ msgstr "S’ka faqerojtës"
 msgid "Connect to the selected bookmark"
 msgstr "Lidhu me faqerojtësin e përzgjedhur"
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "_Kartelë"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "_Dil"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "_Përpunoni Faqerojtës"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "_Parapëlqime"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "_Parje"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "_Panel"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "_Panel Anësor"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "_Ikonë Gjendjeje"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "Shihni si _Simbole"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr "Shihini si Listë të _Hollësishme"
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "_Veprime"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr "_Shkëputu"
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "_Faqerojtës"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "_Hape"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "Hape në _Terminal"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr "_Kopjo URI-n"
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "_Ndihmë"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "Ndihmë Në Internet"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr "Mbi"
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "Zgjidhni një faqerojtës ku të lidhet"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr "Shkëpute burimin e përzgjedhur"
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Hapni përgjegjësin e faqerojtësve që të shtoni, përpunoni ose fshini faqerojtës"
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr "Hape burimin e përzgjedhur me një përgjegjës kartelash"
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr "Nisni një terminal nga këtu"
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr "Hapni _Terminal"
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "Mbylle Gigolo-në"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr "faqja 1"
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr "faqja 2"
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr "faqja 3"
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr "_Përpunoni Faqerojtës"
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr "Pjesë e përparme për GIO/GVfs"
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Një ndërfaqe e thjeshtë për të lidhur lehtësisht sisteme të largët kartelash"
