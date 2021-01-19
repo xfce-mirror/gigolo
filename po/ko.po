@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2019-04-01 02:37+0000\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-22 23:47+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
 "Language-Team: Korean (http://www.transifex.com/xfce/xfce-apps/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -119,7 +119,7 @@ msgstr "%s (%s)"
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "기골로는 GVfs에서 지원하는 다음 프로토콜을 사용할 수 있습니다:"
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "지원하는 프로토콜"
 
@@ -148,8 +148,8 @@ msgstr "\"%s\"에 대해 사용할 수 있는 기본 위치가 없습니다"
 msgid "Edit _Bookmark"
 msgstr "북마크 편집(_B)"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "북마크 만들기(_B)"
 
@@ -169,7 +169,8 @@ msgstr "이름"
 msgid "Bookmarks"
 msgstr "북마크"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -237,6 +238,7 @@ msgid "_Add"
 msgstr "추가(_A)"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "편집(_E)"
 
@@ -269,92 +271,92 @@ msgstr "공유 이름을 입력하여야 합니다."
 msgid "You must enter a valid URI for the connection."
 msgstr "연결에 대한 유효한 URI를 입력하여야 합니다."
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "장치(_D):"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "서버(_S):"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "북마크 만들기"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "북마크 편집"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "서버로 연결"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
 msgstr "책갈피 설정"
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
 msgstr "이름(_N):"
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "색(_C):"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
 msgstr "자동 연결(_T):"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
 msgstr "연결 설정"
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
 msgstr "서비스 유형(_Y):"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "위치 (URI)(_L):"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "경로(_A):"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "공유(_S):"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
 msgstr "추가 정보"
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "포트(_P):"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr "기본 포트를 사용하기 위해 0으로 포트를 설정"
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "폴더(_F):"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "실제 마운트에 사용하는 것이 아니라, 파일 탐색기에서 마운트 지점을 열 때만 필요합니다"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "도메인(_D):"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "사용자 이름(_U):"
 
@@ -537,23 +539,23 @@ msgstr "공유물을 찾을 수 없습니다"
 msgid "No Hosts found"
 msgstr "호스트를 찾을 수 없습니다"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr "연결(_C)"
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "선택한 공유물로 연결"
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "선택한 공유물에 대한 북마크 만들기"
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "네트워크 목록을 새로 고침"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "패널 닫기"
 
@@ -565,6 +567,130 @@ msgstr "북마크 없음"
 msgid "Connect to the selected bookmark"
 msgstr "선택한 북마크로 연결"
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "파일(_F)"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "북마크 편집(_E)"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "기본 설정(_P)"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "보기(_V)"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "도구 모음(_T)"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "측면 패널(_P)"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "상태 아이콘(_I)"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "심볼로 보기(_S)"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr "자세한 목록으로 보기(_D)"
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "동작(_A)"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr ""
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "북마크(_B)"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "열기(_O)"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "터미널에서 열기(_T)"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr ""
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "도움말(_H)"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "온라인 도움말"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr "소개"
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "연결할 북마크를 선택합니다"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr "선택한 자원 연결 해제"
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "북마크를 추가, 편집 또는 삭제하기 위한 북마크 관리자를 엽니다"
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr "파일 관리자로 선택한 자원을 엽니다"
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr "여기서 터미널을 시작합니다"
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr ""
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "Gigolo 끝내기"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr ""
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr ""
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr ""
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr ""
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr ""
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "원격 파일 시스템을 쉽게 연결하기 위한 간단한 프론트엔드"
