@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-10-25 10:31+0000\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-22 23:47+0000\n"
 "Last-Translator: Nick Schermer <nick@xfce.org>\n"
 "Language-Team: Telugu (http://www.transifex.com/xfce/xfce-apps/language/te/)\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr ""
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "సహకరించే పోటోకాల్సు"
 
@@ -147,8 +147,8 @@ msgstr ""
 msgid "Edit _Bookmark"
 msgstr "ఇష్టాంశమును సవరించు (_E)"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "ఇష్టాంశమును సృష్టించు (_E)"
 
@@ -168,7 +168,8 @@ msgstr "పేరు"
 msgid "Bookmarks"
 msgstr "ఇష్టాంశాలు"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "గిగోలో"
 
@@ -236,6 +237,7 @@ msgid "_Add"
 msgstr ""
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "సవరణ (_E)"
 
@@ -268,92 +270,92 @@ msgstr "మీరు తప్పనిసరిగా ఒక భాగస్వ
 msgid "You must enter a valid URI for the connection."
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "పరికరం (_D):"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "సేవిక(_S):"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "ఇష్టాంశమును సృష్టించు"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "ఇష్టాంశమును సవరించు"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "సేవకమునకు అనుసంధానిస్తున్నది"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "రంగు (_C):"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
 msgstr ""
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
 msgstr "సేవ రకము (_y):"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "స్థానము (_L):"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "త్రోవ (_a):"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "భాగస్వామ్యం (_S):"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "పోర్టు(_P):"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "సంచయం(_F):"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "డొమైన్ (_D):"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "వాడుకరి పేరు (_U):"
 
@@ -536,23 +538,23 @@ msgstr "ఏ భాగస్వామ్యాలు కనపడలేదు"
 msgid "No Hosts found"
 msgstr "ఏ హోస్టులు కనపడలేదు"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "నెట్‌వర్క్ జాబితాను తాజాపరుచు"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "ప్యానల్‌ని మూసివేయి"
 
@@ -564,6 +566,130 @@ msgstr "ఏ ఇష్టాంశాలు లేవు"
 msgid "Connect to the selected bookmark"
 msgstr ""
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "దస్త్రం (_F)"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "నిష్క్రమించు (_Q)"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "ఇష్టాంశములను సవరించు (_E)"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "అభిరుచులు (_P)"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "చూడటం (_V)"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "సాధనపట్టీ (_T)"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "పక్క ప్యానల్ (_P)"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "స్థితి ప్రతీక (_I)"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr ""
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr ""
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "చర్యలు (_A)"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr ""
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "ఇష్టాంశాలు (_B)"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "తెరువు (_O)"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr ""
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr ""
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "సహాయం (_H)"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "ఆన్‌లైన్ సహాయం"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr ""
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "దీనికి అనుసంధానించుటకు ఒక ఇష్టాంశమును ఎంచుకోండి"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr ""
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr ""
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr ""
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr ""
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr ""
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "గిగోలో నిష్క్రమించు"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr ""
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr ""
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr ""
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr ""
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr ""
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr ""
