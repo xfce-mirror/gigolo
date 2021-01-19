@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2020-03-18 10:51+0000\n"
-"Last-Translator: Ioannis LM\n"
+"POT-Creation-Date: 2020-12-23 00:47+0100\n"
+"PO-Revision-Date: 2020-12-22 23:47+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/xfce-apps/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -119,7 +119,7 @@ msgstr ""
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Το gigolo δεν μπορεί να κάνει χρήση των ακόλουθων πρωτοκόλλων που παρέχει το GVfs:"
 
-#: ../src/window.c:480
+#: ../src/window.c:480 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Υποστηριζόμενα πρωτόκολλα"
 
@@ -148,8 +148,8 @@ msgstr "Μη διαθέσιμη προεπιλεγμένη τοποθεσία γ
 msgid "Edit _Bookmark"
 msgstr "Επεξεργασία _σελοδοδείκτη"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Δημιουργία συν_δέσμου"
 
@@ -169,7 +169,8 @@ msgstr "Όνομα"
 msgid "Bookmarks"
 msgstr "Σύνδεσμοι"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -237,6 +238,7 @@ msgid "_Add"
 msgstr "_Προσθήκη"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
@@ -269,92 +271,92 @@ msgstr "Πρέπει να εισάγετε ένα όνομα κοινόχρησ�
 msgid "You must enter a valid URI for the connection."
 msgstr "Πρέπει να εισάγετε ένα έγκυρο URI για την σύνδεση."
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:528
 msgid "_Device:"
 msgstr "_Συσκευή:"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
 msgid "_Server:"
 msgstr "_Διακομιστής:"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:790
 msgid "Create Bookmark"
 msgstr "Δημιουργία συνδέμου"
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:797
 msgid "Edit Bookmark"
 msgstr "Επεξεργασία συνδέσμου"
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Σύνδεση στο διακομιστή"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:960
 msgid "Bookmark Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:966
 msgid "_Name:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:975
 msgid "_Color:"
 msgstr "_Χρώμα:"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:984
 msgid "Au_to-Connect:"
 msgstr ""
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:995
 msgid "Connection Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
 msgstr "Τ_ύπος υπηρεσίας:"
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
 msgstr "_Τοποθεσία (URI):"
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1029
 msgid "P_ath:"
 msgstr "_Διαδρομή:"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1035
 msgid "_Share:"
 msgstr "_Κοινόχρηστος Πόρος:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1054
 msgid "Optional Information"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1060
 msgid "_Port:"
 msgstr "_Πόρτα:"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Set the port to 0 to use the default port"
 msgstr "Ορίστε την πόρτα σε 0 για χρήση της προεπιλεγμένης πόρτας"
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1068
 msgid "_Folder:"
 msgstr "_Φάκελος:"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1074
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Αυτό δεν χρησιμοποιείται για πραγματική προσάρτηση, είναι μόνο απαραίτητο για άνοιγμα του σημείου προσάρτησης στον διαχειριστή αρχείων"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
 msgstr "_Τομέας:"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1083
 msgid "_User Name:"
 msgstr "_Όνομα χρήστη:"
 
@@ -537,23 +539,23 @@ msgstr "Δεν βρέθηκαν κοινόχρηστοι πόροι"
 msgid "No Hosts found"
 msgstr "Δεν βρέθηκαν διακομιστές"
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "Σύνδεση σε επιλεγμένο πόρο"
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "Δημιουργία συνδέσμου από τον επιλεγμένο πόρο"
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "Ανανέωση της λίστας δικτύου"
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "Κλείσιμο ταμπλό"
 
@@ -565,6 +567,130 @@ msgstr "Όχι σύνδεσμοι"
 msgid "Connect to the selected bookmark"
 msgstr "Σύνδεση σε επιλεγμένο σύνδεσμο"
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "_Αρχείο"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "_Έξοδος"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr "_Επεξεργασία συνδέσμων"
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr "_Προτιμήσεις"
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "_Προβολή"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "_Εργαλειοθήκη"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "_Πλαϊνό ταμπλό"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "Εικ_ονίδιο κατάστασης"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "Εμφάνιση ως _σύμβολα"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr "Εμφάνιση ως _λεπτομερή λίστα"
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "Ε_νέργειες"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr ""
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr "_Σύνδεσμοι"
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "Άν_οιγμα"
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "Άνοιγμα σε _Τερματικό"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr ""
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "Διαδικτυακή βοήθεια"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr "Σχετικά"
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr "Επιλογή ενός συνδέσμου για σύνδεση"
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr "Αποσύνδεση του επιλεγμένου πόρου"
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Άνοιγμα του διαχειριστή συνδέσμων για προσθήκη, επεξεργασία ή διαγραφή συνδέσμων"
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr "Άνοιγμα της επιλεγμένης πηγής με έναν διαχειριστή αρχείων"
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr "Έναρξη τερματικού από εδώ"
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr ""
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr "Έξοδος"
+
+#: ../src/gigolo.ui.h:31
+msgid "page 1"
+msgstr ""
+
+#: ../src/gigolo.ui.h:32
+msgid "page 2"
+msgstr ""
+
+#: ../src/gigolo.ui.h:33
+msgid "page 3"
+msgstr ""
+
+#: ../src/gigolo.ui.h:34
+msgid "_Edit Bookmark"
+msgstr ""
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr ""
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Ένα απλό εργαλείο για την εύκολο σύνδεση σε απομακρυσμένα συστήματα αρχείων"
