@@ -475,7 +475,6 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 {
 	struct MethodInfo *meth;
 	guint idx;
-	GtkWidget *table;
 	GtkTreeIter iter;
 	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 
@@ -904,7 +903,7 @@ static GtkWidget *make_frame (const gchar *label)
 }
 
 
-static GtkWidget *make_table ()
+static GtkWidget *make_table (void)
 {
 	GtkWidget *table = gtk_grid_new ();
 	gtk_grid_set_row_spacing (GTK_GRID (table), 6);
@@ -927,7 +926,6 @@ static GtkWidget *make_label (const gchar *text, GtkSizeGroup *sg)
 static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 {
 	GtkWidget *label;
-	GtkWidget *label_tmp;
 	GtkWidget *table;
 	GtkWidget *combo;
 	GtkWidget *entry;
