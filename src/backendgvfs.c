@@ -316,8 +316,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 		g_object_unref(file);
 		g_object_unref(icon);
 	}
-	g_list_foreach(mounts, (GFunc) g_object_unref, NULL);
-	g_list_free(mounts);
+	g_list_free_full(mounts, g_object_unref);
 
 	/* list volumes */
 	volumes = g_volume_monitor_get_volumes(vm);
@@ -349,8 +348,7 @@ static void mount_volume_changed_cb(GVolumeMonitor *vm, G_GNUC_UNUSED GMount *mn
 		else
 			g_object_unref(mount);
 	}
-	g_list_foreach(volumes, (GFunc) g_object_unref, NULL);
-	g_list_free(volumes);
+	g_list_free_full(volumes, g_object_unref);
 
 	g_signal_emit(backend, signals[MOUNTS_CHANGED], 0);
 }
@@ -875,9 +873,7 @@ static void browse_host_real(BrowseData *bd)
 	/* propagate our results */
 	g_signal_emit(bd->self, signals[BROWSE_HOST_FINISHED], 0, list);
 
-	g_slist_foreach(list, (GFunc) g_free, NULL);
-	g_slist_free(list);
-
+	g_slist_free_full(list, g_free);
 	g_object_unref(file);
 	g_free(bd->uri);
 	g_free(bd);
