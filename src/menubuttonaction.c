@@ -55,15 +55,20 @@ static void delegate_item_activated(GtkMenuItem *item, GigoloMenubuttonAction *a
 }
 
 
+static void gigolo_widget_destroy(GtkWidget *widget, gpointer data)
+{
+	gtk_widget_destroy(widget);
+}
+
+
 static void update_menus(GigoloMenubuttonAction *menu, GigoloSettings *settings)
 {
-	GSList *l;
 	guint i;
 	GtkWidget *item;
 	GigoloBookmark *bm;
 	GigoloBookmarkList *bml = gigolo_settings_get_bookmarks(settings);
 
-	gtk_container_foreach(GTK_CONTAINER(menu), (GtkCallback) gtk_widget_destroy, NULL);
+	gtk_container_foreach(GTK_CONTAINER(menu), gigolo_widget_destroy, NULL);
 
 	for (i = 0; i < bml->len; i++)
 	{

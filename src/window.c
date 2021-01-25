@@ -200,6 +200,12 @@ static void systray_icon_popup_menu_cb(G_GNUC_UNUSED GtkStatusIcon *status_icon,
 }
 
 
+static void gigolo_tree_path_free(gpointer data)
+{
+	gtk_tree_path_free((GtkTreePath *) data);
+}
+
+
 /* Convenience function to get the selected GtkTreeIter from the icon view or the treeview
  * whichever is currently used for display. */
 static void get_selected_iter(GigoloWindow *window, GtkTreeIter *iter)
@@ -225,8 +231,7 @@ static void get_selected_iter(GigoloWindow *window, GtkTreeIter *iter)
 			 * and we simply choose the first item */
 			gtk_tree_model_get_iter(model, iter, items->data);
 		}
-		g_list_foreach(items, (GFunc) gtk_tree_path_free, NULL);
-		g_list_free(items);
+		g_list_free_full(items, gigolo_tree_path_free);
 	}
 }
 
@@ -813,8 +818,7 @@ static void iconview_selection_changed_cb(GtkIconView *view, GigoloWindow *windo
 	if (items == NULL)
 		update_sensitive_buttons(window, model, NULL);
 
-	g_list_foreach(items, (GFunc) gtk_tree_path_free, NULL);
-	g_list_free(items);
+	g_list_free_full(items, gigolo_tree_path_free);
 }
 
 
@@ -918,8 +922,7 @@ static gboolean iconview_button_press_event_cb(GtkWidget *widget, GdkEventButton
 
 		items = gtk_icon_view_get_selected_items(GTK_ICON_VIEW(widget));
 		have_sel = (items != NULL) && (g_list_length(items) > 0);
-		g_list_foreach(items, (GFunc) gtk_tree_path_free, NULL);
-		g_list_free(items);
+		g_list_free_full(items, gigolo_tree_path_free);
 
 		if (have_sel)
 			gtk_menu_popup_at_pointer (GTK_MENU(priv->tree_popup_menu),
