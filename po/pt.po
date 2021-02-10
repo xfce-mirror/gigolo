@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2019-2020
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2019-2021
 # José Vieira <jvieira33@sapo.pt>, 2018,2020
 # Nuno Miguel <nunis@netcabo.pt>, 2009
 # Nuno Miguel <nunomgue@gmail.com>, 2013,2019
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-23 00:47+0100\n"
-"PO-Revision-Date: 2020-12-27 17:08+0000\n"
+"PO-Revision-Date: 2021-02-10 15:54+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/xfce-apps/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -317,7 +317,7 @@ msgstr "Definições da ligação"
 
 #: ../src/bookmarkeditdialog.c:1001
 msgid "Service t_ype:"
-msgstr "Tipo do ser_viço:"
+msgstr "Tipo de ser_viço:"
 
 #: ../src/bookmarkeditdialog.c:1017
 msgid "_Location (URI):"
@@ -352,7 +352,7 @@ msgstr "_Pasta:"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Isto não é utilizado para o ponto de montagem e só é necessário para abrir o ponto de montagem no gestor de ficheiros"
+msgstr "Isto não é utilizado para o ponto de montagem e só é necessário para abrir o ponto de montagem num explorador de ficheiros"
 
 #: ../src/bookmarkeditdialog.c:1077
 msgid "_Domain:"
@@ -599,7 +599,7 @@ msgstr "_Painel lateral"
 
 #: ../src/gigolo.ui.h:10
 msgid "Status _Icon"
-msgstr "Í_cone de estado"
+msgstr "_Ícone de estado"
 
 #: ../src/gigolo.ui.h:11
 msgid "View as _Symbols"
@@ -655,7 +655,7 @@ msgstr "Desligar o recurso selecionado"
 
 #: ../src/gigolo.ui.h:26
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Abrir o gestor de marcadores para adicionar, editar ou apagar marcadores"
+msgstr "Abrir o gestor de marcadores para adicionar, editar ou eliminar marcadores"
 
 #: ../src/gigolo.ui.h:27
 msgid "Open the selected resource with a file manager"
