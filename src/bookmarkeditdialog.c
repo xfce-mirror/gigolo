@@ -391,9 +391,7 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 	gchar *uri, *user;
 	const gchar *tmp;
-	guint port;
 	guint idx;
-
 	/* Name */
 	tmp = gigolo_bookmark_get_name(priv->bookmark_init);
 	if (tmp != NULL)
@@ -454,18 +452,12 @@ static void init_values(GigoloBookmarkEditDialog *dialog)
 	tmp = gigolo_bookmark_get_path(priv->bookmark_init);
 	if (tmp != NULL)
 		gtk_entry_set_text(GTK_ENTRY(priv->path_entry), tmp);
-	/* Port */
-	port = gigolo_bookmark_get_port(priv->bookmark_init);
 
 	idx = scheme_to_index(gigolo_bookmark_get_scheme(priv->bookmark_init));
 
 	gtk_switch_set_active(
 		GTK_SWITCH(priv->autoconnect_switch),
 		gigolo_bookmark_get_autoconnect(priv->bookmark_init));
-
-	if (port == 0)
-		port = methods[idx].port;
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), port);
 
 	combo_set_active(priv->type_combo, idx);
 }
@@ -475,6 +467,7 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 {
 	struct MethodInfo *meth;
 	guint idx;
+	guint port = 0;
 	GtkWidget *table;
 	GtkTreeIter iter;
 	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
@@ -486,7 +479,6 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 			    &iter, COLUMN_INDEX, &idx, -1);
 	g_return_if_fail(idx < methods_len);
 	meth = &(methods[idx]);
-	gtk_spin_button_set_value (GTK_SPIN_BUTTON (priv->port_spin), meth->port);
 
 	gtk_widget_hide (priv->uri_label);
 	gtk_widget_hide (priv->uri_entry);
@@ -524,6 +516,11 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 	}
 	else
 	{
+		port = meth->port;
+		if (priv->bookmark_init && idx == scheme_to_index(gigolo_bookmark_get_scheme(priv->bookmark_init)))
+			port = gigolo_bookmark_get_port(priv->bookmark_init);
+		gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), port);
+
 		if (meth->flags & SHOW_DEVICE)
 			gtk_label_set_text_with_mnemonic(GTK_LABEL(priv->host_label), _("_Device:"));
 		else
