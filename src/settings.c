@@ -542,7 +542,6 @@ static void gigolo_settings_finalize(GObject* object)
 
 	g_free(priv->geometry);
 
-	g_ptr_array_foreach(priv->bookmarks, (GFunc) g_object_unref, NULL);
 	g_ptr_array_free(priv->bookmarks, TRUE);
 
 	g_free(priv->config_filename);
@@ -715,7 +714,7 @@ static void gigolo_settings_init(GigoloSettings *self)
 	priv->config_filename = g_build_filename(priv->config_path, "config", NULL);
 	priv->bookmarks_filename = g_build_filename(priv->config_path, "bookmarks", NULL);
 
-	priv->bookmarks = g_ptr_array_new();
+	priv->bookmarks = g_ptr_array_new_with_free_func(g_object_unref);
 
 	check_for_old_dir(priv);
 
