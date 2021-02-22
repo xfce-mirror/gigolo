@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Arnold Marko <arnold.marko@gmail.com>, 2019-2020
+# Arnold Marko <arnold.marko@gmail.com>, 2019-2021
 # Klemen Košir <klemen.kosir@kream.io>, 2013
 # Nenad Latinović <latinovic87@gmail.com>, 2013
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-23 00:47+0100\n"
-"PO-Revision-Date: 2020-12-25 10:59+0000\n"
+"PO-Revision-Date: 2021-02-22 11:34+0000\n"
 "Last-Translator: Arnold Marko <arnold.marko@gmail.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/xfce/xfce-apps/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -614,7 +614,7 @@ msgstr "D_ejanja"
 
 #: ../src/gigolo.ui.h:15
 msgid "_Disconnect"
-msgstr ""
+msgstr "_Prekini povezavo"
 
 #: ../src/gigolo.ui.h:16
 msgid "_Bookmarks"
@@ -630,7 +630,7 @@ msgstr "Odpri v _terminalu"
 
 #: ../src/gigolo.ui.h:19
 msgid "_Copy URI"
-msgstr ""
+msgstr "_Kopiraj URI"
 
 #: ../src/gigolo.ui.h:20
 msgid "_Help"
@@ -666,7 +666,7 @@ msgstr "Odpri terminal tukaj"
 
 #: ../src/gigolo.ui.h:29
 msgid "Open _Terminal"
-msgstr ""
+msgstr "Odpri _terminal"
 
 #: ../src/gigolo.ui.h:30
 msgid "Quit Gigolo"
@@ -674,23 +674,23 @@ msgstr "Končaj"
 
 #: ../src/gigolo.ui.h:31
 msgid "page 1"
-msgstr ""
+msgstr "stran 1"
 
 #: ../src/gigolo.ui.h:32
 msgid "page 2"
-msgstr ""
+msgstr "stran 2"
 
 #: ../src/gigolo.ui.h:33
 msgid "page 3"
-msgstr ""
+msgstr "stran 3"
 
 #: ../src/gigolo.ui.h:34
 msgid "_Edit Bookmark"
-msgstr ""
+msgstr "Ur_edi zaznamek"
 
 #: ../gigolo.desktop.in.h:2
 msgid "Frontend for GIO/GVfs"
-msgstr ""
+msgstr "Vmesnik za GIO/GVfs"
 
 #: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
