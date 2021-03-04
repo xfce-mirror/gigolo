@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.1 -->
+<!-- Generated with glade 3.38.2 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkWindow" id="gigolo_window">
     <property name="name">GigoloWindow</property>
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="title" translatable="yes">Gigolo</property>
-    <property name="icon_name">org.xfce.gigolo</property>
-    <child>
-      <placeholder/>
-    </child>
+    <property name="icon-name">org.xfce.gigolo</property>
     <child>
       <object class="GtkBox" id="vbox">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkMenuBar" id="menubar">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <child>
               <object class="GtkMenuItem" id="menu_File">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_File</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_Quit">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">_Quit</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                         <accelerator key="q" signal="activate" modifiers="GDK_CONTROL_MASK"/>
                       </object>
                     </child>
@@ -45,34 +42,34 @@
             <child>
               <object class="GtkMenuItem" id="menu_Edit">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Edit</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_EditBookmarks">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">_Edit Bookmarks</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                         <accelerator key="b" signal="activate" modifiers="GDK_CONTROL_MASK"/>
                       </object>
                     </child>
                     <child>
                       <object class="GtkSeparatorMenuItem">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_Preferences">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">_Preferences</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                         <accelerator key="p" signal="activate" modifiers="GDK_CONTROL_MASK"/>
                       </object>
                     </child>
@@ -83,59 +80,59 @@
             <child>
               <object class="GtkMenuItem" id="menu_View">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_View</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <child>
                       <object class="GtkCheckMenuItem" id="menuitem_ShowToolbar">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">_Toolbar</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkCheckMenuItem" id="menuitem_ShowPanel">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">Side _Panel</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkCheckMenuItem" id="menuitem_ShowInSystray">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">Status _Icon</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkSeparatorMenuItem">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkRadioMenuItem" id="menuitem_ViewSymbols">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">View as _Symbols</property>
-                        <property name="use_underline">True</property>
-                        <property name="draw_as_radio">True</property>
+                        <property name="use-underline">True</property>
+                        <property name="draw-as-radio">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkRadioMenuItem" id="menuitem_ViewDetailed">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">View as _Detailed List</property>
-                        <property name="use_underline">True</property>
-                        <property name="draw_as_radio">True</property>
+                        <property name="use-underline">True</property>
+                        <property name="draw-as-radio">True</property>
                         <property name="group">menuitem_ViewSymbols</property>
                       </object>
                     </child>
@@ -146,68 +143,68 @@
             <child>
               <object class="GtkMenuItem" id="menu_Actions">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Actions</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_Connect">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">_Connect</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_Disconnect">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">_Disconnect</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkMenuItem" id="menu_Bookmarks">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="action_name">Bookmarks</property>
+                        <property name="can-focus">False</property>
+                        <property name="action-name">Bookmarks</property>
                         <property name="label" translatable="yes">_Bookmarks</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkSeparatorMenuItem">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_Open">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">_Open</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                         <accelerator key="o" signal="activate" modifiers="GDK_CONTROL_MASK"/>
                       </object>
                     </child>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_OpenTerminal">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">Open in _Terminal</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                         <accelerator key="t" signal="activate" modifiers="GDK_CONTROL_MASK"/>
                       </object>
                     </child>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_CopyURI">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">_Copy URI</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                         <accelerator key="c" signal="activate" modifiers="GDK_CONTROL_MASK"/>
                       </object>
                     </child>
@@ -218,41 +215,41 @@
             <child>
               <object class="GtkMenuItem" id="menu_Help">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Help</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_OnlineHelp">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">Online Help</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_SupportedSchemes">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">Supported Protocols</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkSeparatorMenuItem">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_About">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                         <property name="label" translatable="yes">About</property>
-                        <property name="use_underline">True</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                   </object>
@@ -269,15 +266,15 @@
         <child>
           <object class="GtkToolbar" id="toolbar">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <child>
               <object class="GtkMenuToolButton" id="toolitem_Bookmarks">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Choose a bookmark to connect to</property>
+                <property name="can-focus">False</property>
+                <property name="tooltip-text" translatable="yes">Choose a bookmark to connect to</property>
                 <property name="label" translatable="yes">_Bookmarks</property>
-                <property name="use_underline">True</property>
-                <property name="icon_name">gtk-connect</property>
+                <property name="use-underline">True</property>
+                <property name="icon-name">gtk-connect</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -287,11 +284,11 @@
             <child>
               <object class="GtkToolButton" id="toolitem_Disconnect">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Disconnect the selected resource</property>
+                <property name="can-focus">False</property>
+                <property name="tooltip-text" translatable="yes">Disconnect the selected resource</property>
                 <property name="label" translatable="yes">_Disconnect</property>
-                <property name="use_underline">True</property>
-                <property name="icon_name">gtk-disconnect</property>
+                <property name="use-underline">True</property>
+                <property name="icon-name">gtk-disconnect</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -301,7 +298,7 @@
             <child>
               <object class="GtkSeparatorToolItem">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -311,11 +308,11 @@
             <child>
               <object class="GtkToolButton" id="toolitem_EditBookmarks">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Open the bookmark manager to add, edit or delete bookmarks</property>
+                <property name="can-focus">False</property>
+                <property name="tooltip-text" translatable="yes">Open the bookmark manager to add, edit or delete bookmarks</property>
                 <property name="label" translatable="yes">_Edit Bookmarks</property>
-                <property name="use_underline">True</property>
-                <property name="icon_name">gtk-edit</property>
+                <property name="use-underline">True</property>
+                <property name="icon-name">gtk-edit</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -325,7 +322,7 @@
             <child>
               <object class="GtkSeparatorToolItem">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -335,11 +332,11 @@
             <child>
               <object class="GtkToolButton" id="toolitem_Open">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Open the selected resource with a file manager</property>
+                <property name="can-focus">False</property>
+                <property name="tooltip-text" translatable="yes">Open the selected resource with a file manager</property>
                 <property name="label" translatable="yes">_Open</property>
-                <property name="use_underline">True</property>
-                <property name="icon_name">document-open</property>
+                <property name="use-underline">True</property>
+                <property name="icon-name">document-open</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -349,11 +346,11 @@
             <child>
               <object class="GtkToolButton" id="toolitem_OpenTerminal">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Start a terminal from here</property>
+                <property name="can-focus">False</property>
+                <property name="tooltip-text" translatable="yes">Start a terminal from here</property>
                 <property name="label" translatable="yes">Open _Terminal</property>
-                <property name="use_underline">True</property>
-                <property name="icon_name">utilities-terminal</property>
+                <property name="use-underline">True</property>
+                <property name="icon-name">utilities-terminal</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -363,7 +360,7 @@
             <child>
               <object class="GtkSeparatorToolItem">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -373,11 +370,11 @@
             <child>
               <object class="GtkToolButton" id="toolitem_Quit">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Quit Gigolo</property>
+                <property name="can-focus">False</property>
+                <property name="tooltip-text" translatable="yes">Quit Gigolo</property>
                 <property name="label" translatable="yes">_Quit</property>
-                <property name="use_underline">True</property>
-                <property name="icon_name">application-exit</property>
+                <property name="use-underline">True</property>
+                <property name="icon-name">application-exit</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -394,18 +391,18 @@
         <child>
           <object class="GtkBox" id="hbox_view">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <child>
               <object class="GtkPaned" id="panel_pane">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="position">200</property>
                 <child>
                   <object class="GtkNotebook" id="notebook_panel">
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="tab_pos">left</property>
-                    <property name="show_border">False</property>
+                    <property name="can-focus">True</property>
+                    <property name="tab-pos">left</property>
+                    <property name="show-border">False</property>
                     <child>
                       <placeholder/>
                     </child>
@@ -433,32 +430,22 @@
                 <child>
                   <object class="GtkNotebook" id="notebook_store">
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="show_tabs">False</property>
-                    <property name="show_border">False</property>
+                    <property name="can-focus">True</property>
+                    <property name="show-tabs">False</property>
+                    <property name="show-border">False</property>
                     <child>
                       <object class="GtkScrolledWindow" id="swin_treeview">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
+                        <property name="can-focus">True</property>
                         <child>
                           <placeholder/>
                         </child>
                       </object>
-                    </child>
-                    <child type="tab">
-                      <object class="GtkLabel">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">page 1</property>
-                      </object>
-                      <packing>
-                        <property name="tab_fill">False</property>
-                      </packing>
                     </child>
                     <child>
                       <object class="GtkScrolledWindow" id="swin_iconview">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
+                        <property name="can-focus">True</property>
                         <child>
                           <placeholder/>
                         </child>
@@ -467,30 +454,8 @@
                         <property name="position">1</property>
                       </packing>
                     </child>
-                    <child type="tab">
-                      <object class="GtkLabel">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">page 2</property>
-                      </object>
-                      <packing>
-                        <property name="position">1</property>
-                        <property name="tab_fill">False</property>
-                      </packing>
-                    </child>
                     <child>
                       <placeholder/>
-                    </child>
-                    <child type="tab">
-                      <object class="GtkLabel">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">page 3</property>
-                      </object>
-                      <packing>
-                        <property name="position">2</property>
-                        <property name="tab_fill">False</property>
-                      </packing>
                     </child>
                   </object>
                   <packing>
@@ -517,103 +482,103 @@
   </object>
   <object class="GtkMenu" id="systray_icon_popup_menu">
     <property name="visible">True</property>
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <child>
       <object class="GtkMenuItem" id="systray_Connect">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Connect</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="systray_Bookmarks">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Bookmarks</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="systray_EditBookmarks">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Edit Bookmarks</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="systray_Preferences">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Preferences</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="systray_Quit">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Quit</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
   </object>
   <object class="GtkMenu" id="tree_popup_menu">
     <property name="visible">True</property>
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <child>
       <object class="GtkMenuItem" id="popupitem_Open">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Open</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="popupitem_OpenTerminal">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">Open in _Terminal</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="popupitem_CopyURI">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Copy URI</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="popupitem_EditBookmark">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Edit Bookmark</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
     <child>
       <object class="GtkSeparatorMenuItem">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="popupitem_Connect">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Connect</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="popupitem_Disconnect">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">_Disconnect</property>
-        <property name="use_underline">True</property>
+        <property name="use-underline">True</property>
       </object>
     </child>
   </object>
