@@ -1,3 +1,33 @@
+Gigolo 0.5.2 (March 24, 2020)
+======
+- Update TODO
+- Refresh Glade file, drop unused tab labels (fixes #13)
+- move the logic setting GtkSpin port value to setup_for_type() (#11)
+- Use new icon in window titlebar
+- Fix compilation warnings
+- autoconf: Some updates
+- Only show an error dialog if the host field is visible/required
+- Remove capitalization from icon name
+- Update GenericName (#2)
+- Fix comment style.
+- Remove GSourceFunc casts
+- Update Makefile.am
+- Add gigolo.ui to POTFILES.in (Issue #6)
+- Added new icons following new style and reverse DNS format.
+- Add new README.md and update AM_INIT_AUTOMAKE
+- Add basic GitLab pipeline
+- Bug #16717: Move from exo-csource to xdt-csource
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, English (Australia), English (Canada),
+  Estonian, Finnish, French, Galician, German, Greek, Hebrew,
+  Hungarian, Icelandic, Indonesian, Interlingue, Italian, Japanese,
+  Kazakh, Korean, Latvian, Lithuanian, Malay, Norwegian Bokmål, Occitan
+  (post 1500), Polish, Portuguese (Brazil), Portuguese, Russian,
+  Serbian, Slovak, Slovenian, Spanish, Swedish, Telugu, Thai, Turkish,
+  Ukrainian, Urdu (Pakistan), Urdu, Uyghur
+
 Gigolo 0.5.1 (March 14, 2020)
 	* ensure port is always reset when changing method type (bug #15455)
 
@@ -128,4 +158,3 @@ Gigolo 0.2.0 (February 12, 2009)
 Sion 0.1.0 (January 02, 2009)
 
 	* First public release of Sion.
-
