@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-23 00:47+0100\n"
-"PO-Revision-Date: 2020-12-23 13:35+0000\n"
-"Last-Translator: Emanuele Petriglia <transifex@emanuelepetriglia.com>\n"
+"POT-Creation-Date: 2021-03-04 12:48+0100\n"
+"PO-Revision-Date: 2021-03-04 11:48+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Italian (http://www.transifex.com/xfce/xfce-apps/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -78,7 +78,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (sicuro)"
 
-#: ../src/common.c:93 ../src/window.c:1595
+#: ../src/common.c:93 ../src/window.c:1598
 msgid "Network"
 msgstr "Rete"
 
@@ -94,105 +94,105 @@ msgstr "Foto"
 msgid "Custom Location"
 msgstr "Posizione personalizzata"
 
-#: ../src/window.c:255
+#: ../src/window.c:260
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Connessione a \"%s\" in corso"
 
-#: ../src/window.c:409
+#: ../src/window.c:414
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Una semplice interfaccia per connettere e montare i file system remoti"
 
-#: ../src/window.c:410
+#: ../src/window.c:415
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "Copyright © 2008-2011 Enrico Tröger"
 
-#: ../src/window.c:413
+#: ../src/window.c:418
 msgid "translator-credits"
 msgstr "Emanuele Petriglia <inbox@emanuelepetriglia.com>\nMuflone <muflone@vbsimple.net>\nGianluca Foddis <gianluca.foddis@gmail.com>\nVincenzo Reale <smart2128@baslug.org>"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:462
+#: ../src/window.c:467
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:467
+#: ../src/window.c:472
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo può utilizzare i seguenti protocolli forniti da GVfs:"
 
-#: ../src/window.c:480 ../src/gigolo.ui.h:22
+#: ../src/window.c:485 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Protocolli supportati"
 
-#: ../src/window.c:582 ../src/window.c:641
+#: ../src/window.c:587 ../src/window.c:646
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Il comando '%s' è fallito"
 
-#: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
-#: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:588 ../src/window.c:621 ../src/window.c:634
+#: ../src/window.c:647 ../src/window.c:844 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Errore"
 
-#: ../src/window.c:616
+#: ../src/window.c:621
 msgid "Invalid terminal command"
 msgstr "Comando del terminale non valido"
 
-#: ../src/window.c:628
+#: ../src/window.c:633
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "Nessuna posizione predefinita disponibile per \"%s\""
 
-#: ../src/window.c:748
+#: ../src/window.c:753
 msgid "Edit _Bookmark"
 msgstr "_Modifica segnalibro"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:755 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Crea un s_egnalibro"
 
-#: ../src/window.c:1505
+#: ../src/window.c:1508
 msgid "Connected"
 msgstr "Connesso"
 
-#: ../src/window.c:1514 ../src/bookmarkdialog.c:310
+#: ../src/window.c:1517 ../src/bookmarkdialog.c:310
 msgid "Service Type"
 msgstr "Tipo di servizio"
 
-#: ../src/window.c:1522 ../src/bookmarkdialog.c:302
+#: ../src/window.c:1525 ../src/bookmarkdialog.c:302
 msgid "Name"
 msgstr "Nome"
 
-#: ../src/window.c:1587
+#: ../src/window.c:1590
 msgid "Bookmarks"
 msgstr "Segnalibri"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../src/window.c:1635 ../src/window.c:1668 ../src/gigolo.ui.h:1
 #: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:691
+#: ../src/settings.c:690
 msgid "Move it now?"
 msgstr "Spostare adesso?"
 
-#: ../src/settings.c:692
+#: ../src/settings.c:691
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo ha bisogno di spostare la vecchia cartella di configurazione prima di avviarsi."
 
-#: ../src/settings.c:700
+#: ../src/settings.c:699
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr "La precedente cartella di configurazione \"%s\" non può essere spostata su \"%s\" (%s). Spostare manualmente la cartella al nuovo percorso."
 
-#: ../src/settings.c:703
+#: ../src/settings.c:702
 msgid "Warning"
 msgstr "Attenzione"
 
@@ -274,92 +274,92 @@ msgstr "Occorre inserire il nome di una condivisione."
 msgid "You must enter a valid URI for the connection."
 msgstr "Occorre inserire un URI valido per la connessione."
 
-#: ../src/bookmarkeditdialog.c:528
+#: ../src/bookmarkeditdialog.c:524
 msgid "_Device:"
 msgstr "_Dispositivo:"
 
-#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
+#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1018
 msgid "_Server:"
 msgstr "_Server:"
 
-#: ../src/bookmarkeditdialog.c:790
+#: ../src/bookmarkeditdialog.c:786
 msgid "Create Bookmark"
 msgstr "Crea segnalibro"
 
-#: ../src/bookmarkeditdialog.c:797
+#: ../src/bookmarkeditdialog.c:793
 msgid "Edit Bookmark"
 msgstr "Modifica segnalibro"
 
-#: ../src/bookmarkeditdialog.c:805
+#: ../src/bookmarkeditdialog.c:801
 msgid "Connect to Server"
 msgstr "Connetti al server"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:960
+#: ../src/bookmarkeditdialog.c:955
 msgid "Bookmark Settings"
 msgstr "Impostazioni dei segnalibri"
 
-#: ../src/bookmarkeditdialog.c:966
+#: ../src/bookmarkeditdialog.c:961
 msgid "_Name:"
 msgstr "_Nome:"
 
-#: ../src/bookmarkeditdialog.c:975
+#: ../src/bookmarkeditdialog.c:970
 msgid "_Color:"
 msgstr "_Colore:"
 
-#: ../src/bookmarkeditdialog.c:984
+#: ../src/bookmarkeditdialog.c:979
 msgid "Au_to-Connect:"
 msgstr "Connessione automatica:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:995
+#: ../src/bookmarkeditdialog.c:990
 msgid "Connection Settings"
 msgstr "Impostazioni di connessione"
 
-#: ../src/bookmarkeditdialog.c:1001
+#: ../src/bookmarkeditdialog.c:996
 msgid "Service t_ype:"
 msgstr "Tipo di servi_zio:"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1012
 msgid "_Location (URI):"
 msgstr "_Posizione (URI):"
 
-#: ../src/bookmarkeditdialog.c:1029
+#: ../src/bookmarkeditdialog.c:1024
 msgid "P_ath:"
 msgstr "_Percorso:"
 
-#: ../src/bookmarkeditdialog.c:1035
+#: ../src/bookmarkeditdialog.c:1030
 msgid "_Share:"
 msgstr "_Condivisione:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1054
+#: ../src/bookmarkeditdialog.c:1049
 msgid "Optional Information"
 msgstr "Informazioni opzionali"
 
-#: ../src/bookmarkeditdialog.c:1060
+#: ../src/bookmarkeditdialog.c:1055
 msgid "_Port:"
 msgstr "_Porta:"
 
-#: ../src/bookmarkeditdialog.c:1066
+#: ../src/bookmarkeditdialog.c:1061
 msgid "Set the port to 0 to use the default port"
 msgstr "Inserire il numero di porta 0 per usare la porta predefinita"
 
-#: ../src/bookmarkeditdialog.c:1068
+#: ../src/bookmarkeditdialog.c:1063
 msgid "_Folder:"
 msgstr "Carte_lla:"
 
-#: ../src/bookmarkeditdialog.c:1074
+#: ../src/bookmarkeditdialog.c:1069
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Questo non è usato per il montaggio, è solo necessario per aprire il punto di montaggio in un gestore di file."
 
-#: ../src/bookmarkeditdialog.c:1077
+#: ../src/bookmarkeditdialog.c:1072
 msgid "_Domain:"
 msgstr "_Dominio:"
 
-#: ../src/bookmarkeditdialog.c:1083
+#: ../src/bookmarkeditdialog.c:1078
 msgid "_User Name:"
 msgstr "Nome _utente:"
 
@@ -512,16 +512,16 @@ msgstr "<b>%s</b>\n\nURI: %s\nConnesso: Sì\nTipo di servizio: %s\nSegnalibro: %
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Dispositivo Unix: %s</b>"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:486
+#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:484
 msgid "unknown"
 msgstr "sconosciuto"
 
-#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
+#: ../src/backendgvfs.c:451 ../src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Connessione a \"%s\" fallita."
 
-#: ../src/backendgvfs.c:490
+#: ../src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Disconnessione da \"%s\" fallita."
@@ -675,18 +675,6 @@ msgid "Quit Gigolo"
 msgstr "Esci da Gigolo"
 
 #: ../src/gigolo.ui.h:31
-msgid "page 1"
-msgstr "pagina 1"
-
-#: ../src/gigolo.ui.h:32
-msgid "page 2"
-msgstr "pagina 2"
-
-#: ../src/gigolo.ui.h:33
-msgid "page 3"
-msgstr "pagina 3"
-
-#: ../src/gigolo.ui.h:34
 msgid "_Edit Bookmark"
 msgstr "_Modifica segnalibro"
 
