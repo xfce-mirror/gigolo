@@ -4,7 +4,7 @@
 # 
 # Translators:
 # محمد الحرقان <malham1@gmail.com>, 2012
-# Osama Chibani <ma5356868@gmail.com>, 2021
+# e11374d2c4c13fb7b6526712036ef095_2465a65, 2021
 # كريم أولاد الشلحة <herr.linux88@gmail.com>, 2013
 # محمد الحرقان <malham1@gmail.com>, 2012
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-04 12:48+0100\n"
 "PO-Revision-Date: 2021-04-12 05:02+0000\n"
-"Last-Translator: Osama Chibani <ma5356868@gmail.com>\n"
+"Last-Translator: e11374d2c4c13fb7b6526712036ef095_2465a65\n"
 "Language-Team: Arabic (http://www.transifex.com/xfce/xfce-apps/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
