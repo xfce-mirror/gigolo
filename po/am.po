@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 12:30+0200\n"
-"PO-Revision-Date: 2018-10-25 10:31+0000\n"
-"Last-Translator: samson <sambelet@yahoo.com>\n"
+"POT-Creation-Date: 2021-03-04 12:48+0100\n"
+"PO-Revision-Date: 2021-03-04 11:48+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Amharic (http://www.transifex.com/xfce/xfce-apps/language/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,7 +74,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (secure)"
 
-#: ../src/common.c:93 ../src/window.c:1595
+#: ../src/common.c:93 ../src/window.c:1598
 msgid "Network"
 msgstr "ኔትዎርክ"
 
@@ -90,104 +90,105 @@ msgstr "ፎቶዎች"
 msgid "Custom Location"
 msgstr "አካባቢ ማስተካከያ"
 
-#: ../src/window.c:255
+#: ../src/window.c:260
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "በ መገናኘት ላይ ወደ \"%s\""
 
-#: ../src/window.c:409
+#: ../src/window.c:414
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr ""
 
-#: ../src/window.c:410
+#: ../src/window.c:415
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr ""
 
-#: ../src/window.c:413
+#: ../src/window.c:418
 msgid "translator-credits"
 msgstr "ምስጋና-ለ ተርጓሚዎች"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:462
+#: ../src/window.c:467
 #, c-format
 msgid "%s (%s)"
 msgstr ""
 
-#: ../src/window.c:467
+#: ../src/window.c:472
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr ""
 
-#: ../src/window.c:480
+#: ../src/window.c:485 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "የ ተደገፉ አሰራሮች"
 
-#: ../src/window.c:582 ../src/window.c:641
+#: ../src/window.c:587 ../src/window.c:646
 #, c-format
 msgid "The command '%s' failed"
 msgstr "ይህ ትእዛዝ '%s' ወድቋል"
 
-#: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
-#: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:588 ../src/window.c:621 ../src/window.c:634
+#: ../src/window.c:647 ../src/window.c:844 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "ስህተት"
 
-#: ../src/window.c:616
+#: ../src/window.c:621
 msgid "Invalid terminal command"
 msgstr ""
 
-#: ../src/window.c:628
+#: ../src/window.c:633
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr ""
 
-#: ../src/window.c:748
+#: ../src/window.c:753
 msgid "Edit _Bookmark"
 msgstr ""
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:445
-#: ../src/browsenetworkpanel.c:488
+#: ../src/window.c:755 ../src/browsenetworkpanel.c:446
+#: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr ""
 
-#: ../src/window.c:1505
+#: ../src/window.c:1508
 msgid "Connected"
 msgstr "ተገናኝቷል"
 
-#: ../src/window.c:1514 ../src/bookmarkdialog.c:310
+#: ../src/window.c:1517 ../src/bookmarkdialog.c:310
 msgid "Service Type"
 msgstr "የ ግልጋሎት አይነት"
 
-#: ../src/window.c:1522 ../src/bookmarkdialog.c:302
+#: ../src/window.c:1525 ../src/bookmarkdialog.c:302
 msgid "Name"
 msgstr "ስም"
 
-#: ../src/window.c:1587
+#: ../src/window.c:1590
 msgid "Bookmarks"
 msgstr ""
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../gigolo.desktop.in.h:1
+#: ../src/window.c:1635 ../src/window.c:1668 ../src/gigolo.ui.h:1
+#: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr ""
 
-#: ../src/settings.c:691
+#: ../src/settings.c:690
 msgid "Move it now?"
 msgstr "አሁን ላንቀሳቅሰው?"
 
-#: ../src/settings.c:692
+#: ../src/settings.c:691
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr ""
 
-#: ../src/settings.c:700
+#: ../src/settings.c:699
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr ""
 
-#: ../src/settings.c:703
+#: ../src/settings.c:702
 msgid "Warning"
 msgstr "ማስጠንቀቂያ"
 
@@ -236,6 +237,7 @@ msgid "_Add"
 msgstr ""
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "_ማረሚያ"
 
@@ -268,92 +270,92 @@ msgstr ""
 msgid "You must enter a valid URI for the connection."
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:527
+#: ../src/bookmarkeditdialog.c:524
 msgid "_Device:"
 msgstr "_አካል:"
 
-#: ../src/bookmarkeditdialog.c:529 ../src/bookmarkeditdialog.c:1022
+#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1018
 msgid "_Server:"
 msgstr "_ሰርቨር:"
 
-#: ../src/bookmarkeditdialog.c:789
+#: ../src/bookmarkeditdialog.c:786
 msgid "Create Bookmark"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:796
+#: ../src/bookmarkeditdialog.c:793
 msgid "Edit Bookmark"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:804
+#: ../src/bookmarkeditdialog.c:801
 msgid "Connect to Server"
 msgstr "ወደ ሰርቨር መገናኛ"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:959
+#: ../src/bookmarkeditdialog.c:955
 msgid "Bookmark Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:965
+#: ../src/bookmarkeditdialog.c:961
 msgid "_Name:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:974
+#: ../src/bookmarkeditdialog.c:970
 msgid "_Color:"
 msgstr "_ቀለም:"
 
-#: ../src/bookmarkeditdialog.c:983
+#: ../src/bookmarkeditdialog.c:979
 msgid "Au_to-Connect:"
 msgstr ""
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:994
+#: ../src/bookmarkeditdialog.c:990
 msgid "Connection Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1000
+#: ../src/bookmarkeditdialog.c:996
 msgid "Service t_ype:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1016
+#: ../src/bookmarkeditdialog.c:1012
 msgid "_Location (URI):"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1028
+#: ../src/bookmarkeditdialog.c:1024
 msgid "P_ath:"
 msgstr "መ_ንገድ:"
 
-#: ../src/bookmarkeditdialog.c:1034
+#: ../src/bookmarkeditdialog.c:1030
 msgid "_Share:"
 msgstr "_ማካፈያ:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1053
+#: ../src/bookmarkeditdialog.c:1049
 msgid "Optional Information"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1059
+#: ../src/bookmarkeditdialog.c:1055
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:1065
+#: ../src/bookmarkeditdialog.c:1061
 msgid "Set the port to 0 to use the default port"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1067
+#: ../src/bookmarkeditdialog.c:1063
 msgid "_Folder:"
 msgstr "_ፎልደር:"
 
-#: ../src/bookmarkeditdialog.c:1073
+#: ../src/bookmarkeditdialog.c:1069
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1076
+#: ../src/bookmarkeditdialog.c:1072
 msgid "_Domain:"
 msgstr "_ግዛት:"
 
-#: ../src/bookmarkeditdialog.c:1082
+#: ../src/bookmarkeditdialog.c:1078
 msgid "_User Name:"
 msgstr "የ _ተጠቃሚ ስም:"
 
@@ -506,16 +508,16 @@ msgstr ""
 msgid "<b>Unix device: %s</b>"
 msgstr ""
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:486
+#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:484
 msgid "unknown"
 msgstr "ያልታወቀ"
 
-#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
+#: ../src/backendgvfs.c:451 ../src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "መገናኘት ወደ \"%s\" ወድቋል"
 
-#: ../src/backendgvfs.c:490
+#: ../src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr ""
@@ -536,23 +538,23 @@ msgstr "ምንም ማካፈያ አልተገኘም"
 msgid "No Hosts found"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:438
+#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:481
+#: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:489
+#: ../src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:499
+#: ../src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:511 ../src/bookmarkpanel.c:265
+#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "ክፍል መዝጊያ"
 
@@ -564,6 +566,118 @@ msgstr ""
 msgid "Connect to the selected bookmark"
 msgstr ""
 
+#: ../src/gigolo.ui.h:2
+msgid "_File"
+msgstr "_ፋይል"
+
+#: ../src/gigolo.ui.h:3
+msgid "_Quit"
+msgstr "_ማጥፊያ"
+
+#: ../src/gigolo.ui.h:5
+msgid "_Edit Bookmarks"
+msgstr ""
+
+#: ../src/gigolo.ui.h:6
+msgid "_Preferences"
+msgstr ""
+
+#: ../src/gigolo.ui.h:7
+msgid "_View"
+msgstr "_መመልከቻ"
+
+#: ../src/gigolo.ui.h:8
+msgid "_Toolbar"
+msgstr "_እቃ መደርደሪያ"
+
+#: ../src/gigolo.ui.h:9
+msgid "Side _Panel"
+msgstr "የ ጎን _ክፍል"
+
+#: ../src/gigolo.ui.h:10
+msgid "Status _Icon"
+msgstr "የ ሁኔታዎች _ምልክት"
+
+#: ../src/gigolo.ui.h:11
+msgid "View as _Symbols"
+msgstr "እንደ _ምልክት መመልከቻ"
+
+#: ../src/gigolo.ui.h:12
+msgid "View as _Detailed List"
+msgstr ""
+
+#: ../src/gigolo.ui.h:13
+msgid "_Actions"
+msgstr "_ተግባሮች"
+
+#: ../src/gigolo.ui.h:15
+msgid "_Disconnect"
+msgstr ""
+
+#: ../src/gigolo.ui.h:16
+msgid "_Bookmarks"
+msgstr ""
+
+#: ../src/gigolo.ui.h:17
+msgid "_Open"
+msgstr "_መክፈቻ "
+
+#: ../src/gigolo.ui.h:18
+msgid "Open in _Terminal"
+msgstr "በ _ተርሚናል ውስጥ መክፈቻ"
+
+#: ../src/gigolo.ui.h:19
+msgid "_Copy URI"
+msgstr ""
+
+#: ../src/gigolo.ui.h:20
+msgid "_Help"
+msgstr "_እርዳታ"
+
+#: ../src/gigolo.ui.h:21
+msgid "Online Help"
+msgstr "በ መስመር ላይ እርዳታ"
+
+#: ../src/gigolo.ui.h:23
+msgid "About"
+msgstr ""
+
+#: ../src/gigolo.ui.h:24
+msgid "Choose a bookmark to connect to"
+msgstr ""
+
+#: ../src/gigolo.ui.h:25
+msgid "Disconnect the selected resource"
+msgstr ""
+
+#: ../src/gigolo.ui.h:26
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr ""
+
+#: ../src/gigolo.ui.h:27
+msgid "Open the selected resource with a file manager"
+msgstr ""
+
+#: ../src/gigolo.ui.h:28
+msgid "Start a terminal from here"
+msgstr ""
+
+#: ../src/gigolo.ui.h:29
+msgid "Open _Terminal"
+msgstr ""
+
+#: ../src/gigolo.ui.h:30
+msgid "Quit Gigolo"
+msgstr ""
+
+#: ../src/gigolo.ui.h:31
+msgid "_Edit Bookmark"
+msgstr ""
+
 #: ../gigolo.desktop.in.h:2
+msgid "Frontend for GIO/GVfs"
+msgstr ""
+
+#: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr ""
