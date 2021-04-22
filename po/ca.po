@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-23 00:47+0100\n"
-"PO-Revision-Date: 2020-12-23 13:42+0000\n"
-"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
+"POT-Creation-Date: 2021-03-04 12:48+0100\n"
+"PO-Revision-Date: 2021-03-04 11:48+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-apps/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,7 +77,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (segur)"
 
-#: ../src/common.c:93 ../src/window.c:1595
+#: ../src/common.c:93 ../src/window.c:1598
 msgid "Network"
 msgstr "Xarxa"
 
@@ -93,105 +93,105 @@ msgstr "Fotos"
 msgid "Custom Location"
 msgstr "Ubicació personalitzada"
 
-#: ../src/window.c:255
+#: ../src/window.c:260
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "S'està connectant a «%s»"
 
-#: ../src/window.c:409
+#: ../src/window.c:414
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Una interfície simple per connectar i muntar sistemes de fitxers remots"
 
-#: ../src/window.c:410
+#: ../src/window.c:415
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "Drets d'autor 2008-2011 Enrico Tröger"
 
-#: ../src/window.c:413
+#: ../src/window.c:418
 msgid "translator-credits"
 msgstr "Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.\nHarald Servat <redcrash@gmail.com>, 2009-2010.\nRobert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2019."
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:462
+#: ../src/window.c:467
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:467
+#: ../src/window.c:472
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo pot utilitzar els següents protocols mitjançant GVfs:"
 
-#: ../src/window.c:480 ../src/gigolo.ui.h:22
+#: ../src/window.c:485 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Protocols admesos"
 
-#: ../src/window.c:582 ../src/window.c:641
+#: ../src/window.c:587 ../src/window.c:646
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Ha fallat l'ordre «%s»"
 
-#: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
-#: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:588 ../src/window.c:621 ../src/window.c:634
+#: ../src/window.c:647 ../src/window.c:844 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Error"
 
-#: ../src/window.c:616
+#: ../src/window.c:621
 msgid "Invalid terminal command"
 msgstr "Ordre incorrecta de terminal"
 
-#: ../src/window.c:628
+#: ../src/window.c:633
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "No hi ha disponible cap ubicació predeterminada per «%s»"
 
-#: ../src/window.c:748
+#: ../src/window.c:753
 msgid "Edit _Bookmark"
 msgstr "Edita el marca_dor"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:755 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Crea un m_arcador"
 
-#: ../src/window.c:1505
+#: ../src/window.c:1508
 msgid "Connected"
 msgstr "Connectat"
 
-#: ../src/window.c:1514 ../src/bookmarkdialog.c:310
+#: ../src/window.c:1517 ../src/bookmarkdialog.c:310
 msgid "Service Type"
 msgstr "Tipus de servei"
 
-#: ../src/window.c:1522 ../src/bookmarkdialog.c:302
+#: ../src/window.c:1525 ../src/bookmarkdialog.c:302
 msgid "Name"
 msgstr "Nom"
 
-#: ../src/window.c:1587
+#: ../src/window.c:1590
 msgid "Bookmarks"
 msgstr "Marcadors"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../src/window.c:1635 ../src/window.c:1668 ../src/gigolo.ui.h:1
 #: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:691
+#: ../src/settings.c:690
 msgid "Move it now?"
 msgstr "Moure'l ara?"
 
-#: ../src/settings.c:692
+#: ../src/settings.c:691
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo ha de moure el vostre directori de configuració antic abans d'inicialitzar-se."
 
-#: ../src/settings.c:700
+#: ../src/settings.c:699
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr "El vostre directori de configuració antic «%s» no s'ha pogut moure a «%s» (%s). Moveu manualment el directori a la ubicació nova."
 
-#: ../src/settings.c:703
+#: ../src/settings.c:702
 msgid "Warning"
 msgstr "Advertència"
 
@@ -273,92 +273,92 @@ msgstr "Heu d'introduir el nom d'una compartició."
 msgid "You must enter a valid URI for the connection."
 msgstr "Heu d'introduir un URI vàlid per a la connexió."
 
-#: ../src/bookmarkeditdialog.c:528
+#: ../src/bookmarkeditdialog.c:524
 msgid "_Device:"
 msgstr "_Dispositiu:"
 
-#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
+#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1018
 msgid "_Server:"
 msgstr "_Servidor:"
 
-#: ../src/bookmarkeditdialog.c:790
+#: ../src/bookmarkeditdialog.c:786
 msgid "Create Bookmark"
 msgstr "Crea un marcador"
 
-#: ../src/bookmarkeditdialog.c:797
+#: ../src/bookmarkeditdialog.c:793
 msgid "Edit Bookmark"
 msgstr "Edita el marcador"
 
-#: ../src/bookmarkeditdialog.c:805
+#: ../src/bookmarkeditdialog.c:801
 msgid "Connect to Server"
 msgstr "Connecta al servidor"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:960
+#: ../src/bookmarkeditdialog.c:955
 msgid "Bookmark Settings"
 msgstr "Ajusts del marcador"
 
-#: ../src/bookmarkeditdialog.c:966
+#: ../src/bookmarkeditdialog.c:961
 msgid "_Name:"
 msgstr "_Nom:"
 
-#: ../src/bookmarkeditdialog.c:975
+#: ../src/bookmarkeditdialog.c:970
 msgid "_Color:"
 msgstr "_Color:"
 
-#: ../src/bookmarkeditdialog.c:984
+#: ../src/bookmarkeditdialog.c:979
 msgid "Au_to-Connect:"
 msgstr "Connexió automàtica:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:995
+#: ../src/bookmarkeditdialog.c:990
 msgid "Connection Settings"
 msgstr "Ajusts de la connexió"
 
-#: ../src/bookmarkeditdialog.c:1001
+#: ../src/bookmarkeditdialog.c:996
 msgid "Service t_ype:"
 msgstr "_Tipus de servei:"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1012
 msgid "_Location (URI):"
 msgstr "_Ubicació (URI):"
 
-#: ../src/bookmarkeditdialog.c:1029
+#: ../src/bookmarkeditdialog.c:1024
 msgid "P_ath:"
 msgstr "_Camí:"
 
-#: ../src/bookmarkeditdialog.c:1035
+#: ../src/bookmarkeditdialog.c:1030
 msgid "_Share:"
 msgstr "_Compartició:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1054
+#: ../src/bookmarkeditdialog.c:1049
 msgid "Optional Information"
 msgstr "Informació opcional"
 
-#: ../src/bookmarkeditdialog.c:1060
+#: ../src/bookmarkeditdialog.c:1055
 msgid "_Port:"
 msgstr "_Port:"
 
-#: ../src/bookmarkeditdialog.c:1066
+#: ../src/bookmarkeditdialog.c:1061
 msgid "Set the port to 0 to use the default port"
 msgstr "Establiu el port a 0 per utilitzar el port predeterminat"
 
-#: ../src/bookmarkeditdialog.c:1068
+#: ../src/bookmarkeditdialog.c:1063
 msgid "_Folder:"
 msgstr "Carpe_ta:"
 
-#: ../src/bookmarkeditdialog.c:1074
+#: ../src/bookmarkeditdialog.c:1069
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "No s'utilitza per al muntatge real, només és necessari per obrir el punt de muntatge en un navegador de fitxers"
 
-#: ../src/bookmarkeditdialog.c:1077
+#: ../src/bookmarkeditdialog.c:1072
 msgid "_Domain:"
 msgstr "_Domini:"
 
-#: ../src/bookmarkeditdialog.c:1083
+#: ../src/bookmarkeditdialog.c:1078
 msgid "_User Name:"
 msgstr "Nom d'_usuari:"
 
@@ -511,16 +511,16 @@ msgstr "<b>%s</b>\n\nURI: %s\nConnectat: Sí\nTipus de servei: %s\nMarcador: %s"
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Dispositiu Unix: %s</b>"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:486
+#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:484
 msgid "unknown"
 msgstr "desconegut"
 
-#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
+#: ../src/backendgvfs.c:451 ../src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Ha fallat la connexió amb «%s»."
 
-#: ../src/backendgvfs.c:490
+#: ../src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Ha fallat la desconnexió amb «%s»."
@@ -674,18 +674,6 @@ msgid "Quit Gigolo"
 msgstr "Surt de Gigolo"
 
 #: ../src/gigolo.ui.h:31
-msgid "page 1"
-msgstr "pàgina 1"
-
-#: ../src/gigolo.ui.h:32
-msgid "page 2"
-msgstr "pàgina 2"
-
-#: ../src/gigolo.ui.h:33
-msgid "page 3"
-msgstr "pàgina 3"
-
-#: ../src/gigolo.ui.h:34
 msgid "_Edit Bookmark"
 msgstr "_Edita els marcadors"
 
