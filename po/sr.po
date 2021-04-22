@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-23 00:47+0100\n"
-"PO-Revision-Date: 2020-12-23 13:12+0000\n"
-"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"POT-Creation-Date: 2021-03-04 12:48+0100\n"
+"PO-Revision-Date: 2021-03-04 11:48+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Serbian (http://www.transifex.com/xfce/xfce-apps/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,7 +74,7 @@ msgstr "ВебДАВ"
 msgid "WebDAV (secure)"
 msgstr "ВебДАВ(безбедни)"
 
-#: ../src/common.c:93 ../src/window.c:1595
+#: ../src/common.c:93 ../src/window.c:1598
 msgid "Network"
 msgstr "Мрежа"
 
@@ -90,105 +90,105 @@ msgstr "Слике"
 msgid "Custom Location"
 msgstr "Прилагођено место"
 
-#: ../src/window.c:255
+#: ../src/window.c:260
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Повезивање са „%s“"
 
-#: ../src/window.c:409
+#: ../src/window.c:414
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Једноставно сучеље за лако повезивање/качење на местне и удаљене системе датотека"
 
-#: ../src/window.c:410
+#: ../src/window.c:415
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "Ауторска права 2008-2011 Enrico Tröger"
 
-#: ../src/window.c:413
+#: ../src/window.c:418
 msgid "translator-credits"
 msgstr "Саша Петровић <salepetronije@gmail.com>"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:462
+#: ../src/window.c:467
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:467
+#: ../src/window.c:472
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Жиголо може користити следеће протоколе које обезбеђује ГВфс:"
 
-#: ../src/window.c:480 ../src/gigolo.ui.h:22
+#: ../src/window.c:485 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Подржани протоколи"
 
-#: ../src/window.c:582 ../src/window.c:641
+#: ../src/window.c:587 ../src/window.c:646
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Нисам успео да извршим наредбу „%s“"
 
-#: ../src/window.c:583 ../src/window.c:616 ../src/window.c:629
-#: ../src/window.c:642 ../src/window.c:840 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:588 ../src/window.c:621 ../src/window.c:634
+#: ../src/window.c:647 ../src/window.c:844 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Грeшкa"
 
-#: ../src/window.c:616
+#: ../src/window.c:621
 msgid "Invalid terminal command"
 msgstr "Неисправна нареба у терминалу"
 
-#: ../src/window.c:628
+#: ../src/window.c:633
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "Није доступно предвиђено место за „%s“"
 
-#: ../src/window.c:748
+#: ../src/window.c:753
 msgid "Edit _Bookmark"
 msgstr "Уреди _забелешке"
 
-#: ../src/window.c:750 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:755 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Направи _забелешку"
 
-#: ../src/window.c:1505
+#: ../src/window.c:1508
 msgid "Connected"
 msgstr "Повезан"
 
-#: ../src/window.c:1514 ../src/bookmarkdialog.c:310
+#: ../src/window.c:1517 ../src/bookmarkdialog.c:310
 msgid "Service Type"
 msgstr "Врста услуге"
 
-#: ../src/window.c:1522 ../src/bookmarkdialog.c:302
+#: ../src/window.c:1525 ../src/bookmarkdialog.c:302
 msgid "Name"
 msgstr "Назив"
 
-#: ../src/window.c:1587
+#: ../src/window.c:1590
 msgid "Bookmarks"
 msgstr "Забелешке"
 
-#: ../src/window.c:1632 ../src/window.c:1665 ../src/gigolo.ui.h:1
+#: ../src/window.c:1635 ../src/window.c:1668 ../src/gigolo.ui.h:1
 #: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Жиголо"
 
-#: ../src/settings.c:691
+#: ../src/settings.c:690
 msgid "Move it now?"
 msgstr "Преместити је сада?"
 
-#: ../src/settings.c:692
+#: ../src/settings.c:691
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Жиголу је потребно да премести стару фасциклу подешавања пре покретања."
 
-#: ../src/settings.c:700
+#: ../src/settings.c:699
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr "Ваша стара фасцикла с подешавањима „%s“ није могла бити премештена на „%s“ (%s). Молим, преместите фасциклу ручно на ново место."
 
-#: ../src/settings.c:703
+#: ../src/settings.c:702
 msgid "Warning"
 msgstr "Упозорење"
 
@@ -270,92 +270,92 @@ msgstr "Морате унети име дељења."
 msgid "You must enter a valid URI for the connection."
 msgstr "Морате унети исправни УРИ за повезивање."
 
-#: ../src/bookmarkeditdialog.c:528
+#: ../src/bookmarkeditdialog.c:524
 msgid "_Device:"
 msgstr "_Уређај:"
 
-#: ../src/bookmarkeditdialog.c:530 ../src/bookmarkeditdialog.c:1023
+#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1018
 msgid "_Server:"
 msgstr "_Служитељ:"
 
-#: ../src/bookmarkeditdialog.c:790
+#: ../src/bookmarkeditdialog.c:786
 msgid "Create Bookmark"
 msgstr "Направи забелешку"
 
-#: ../src/bookmarkeditdialog.c:797
+#: ../src/bookmarkeditdialog.c:793
 msgid "Edit Bookmark"
 msgstr "Уреди забелешку"
 
-#: ../src/bookmarkeditdialog.c:805
+#: ../src/bookmarkeditdialog.c:801
 msgid "Connect to Server"
 msgstr "Повежи се са сервером"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:960
+#: ../src/bookmarkeditdialog.c:955
 msgid "Bookmark Settings"
 msgstr "Поставке ознака"
 
-#: ../src/bookmarkeditdialog.c:966
+#: ../src/bookmarkeditdialog.c:961
 msgid "_Name:"
 msgstr "_Име:"
 
-#: ../src/bookmarkeditdialog.c:975
+#: ../src/bookmarkeditdialog.c:970
 msgid "_Color:"
 msgstr "_Боја:"
 
-#: ../src/bookmarkeditdialog.c:984
+#: ../src/bookmarkeditdialog.c:979
 msgid "Au_to-Connect:"
 msgstr "Сам повежи:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:995
+#: ../src/bookmarkeditdialog.c:990
 msgid "Connection Settings"
 msgstr "Поставке везе"
 
-#: ../src/bookmarkeditdialog.c:1001
+#: ../src/bookmarkeditdialog.c:996
 msgid "Service t_ype:"
 msgstr "В_рста услуге:"
 
-#: ../src/bookmarkeditdialog.c:1017
+#: ../src/bookmarkeditdialog.c:1012
 msgid "_Location (URI):"
 msgstr "_Место (адреса):"
 
-#: ../src/bookmarkeditdialog.c:1029
+#: ../src/bookmarkeditdialog.c:1024
 msgid "P_ath:"
 msgstr "Пу_тања:"
 
-#: ../src/bookmarkeditdialog.c:1035
+#: ../src/bookmarkeditdialog.c:1030
 msgid "_Share:"
 msgstr "_Дељење:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1054
+#: ../src/bookmarkeditdialog.c:1049
 msgid "Optional Information"
 msgstr "Додатни подаци"
 
-#: ../src/bookmarkeditdialog.c:1060
+#: ../src/bookmarkeditdialog.c:1055
 msgid "_Port:"
 msgstr "_Прикључник:"
 
-#: ../src/bookmarkeditdialog.c:1066
+#: ../src/bookmarkeditdialog.c:1061
 msgid "Set the port to 0 to use the default port"
 msgstr "Постави прикључник на 0 да би се користио задати прикључник"
 
-#: ../src/bookmarkeditdialog.c:1068
+#: ../src/bookmarkeditdialog.c:1063
 msgid "_Folder:"
 msgstr "_Фасцикла:"
 
-#: ../src/bookmarkeditdialog.c:1074
+#: ../src/bookmarkeditdialog.c:1069
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Ово се не користи заправо за качење, већ је неопходно за отварање тачке качења у прегледнику датотека"
 
-#: ../src/bookmarkeditdialog.c:1077
+#: ../src/bookmarkeditdialog.c:1072
 msgid "_Domain:"
 msgstr "_Домен:"
 
-#: ../src/bookmarkeditdialog.c:1083
+#: ../src/bookmarkeditdialog.c:1078
 msgid "_User Name:"
 msgstr "_Корисничко име:"
 
@@ -508,16 +508,16 @@ msgstr "<b>%s</b>\n\nАдреса: %s\nПовезан: да\nВрста услу
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Уникс уређај: %s</b>"
 
-#: ../src/backendgvfs.c:447 ../src/backendgvfs.c:486
+#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:484
 msgid "unknown"
 msgstr "непознато"
 
-#: ../src/backendgvfs.c:453 ../src/backendgvfs.c:561
+#: ../src/backendgvfs.c:451 ../src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "Повезивање са „%s“ неуспело."
 
-#: ../src/backendgvfs.c:490
+#: ../src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "Прекид везе са „%s“ није успео."
@@ -671,18 +671,6 @@ msgid "Quit Gigolo"
 msgstr "Напусти Жигола"
 
 #: ../src/gigolo.ui.h:31
-msgid "page 1"
-msgstr "страна 1"
-
-#: ../src/gigolo.ui.h:32
-msgid "page 2"
-msgstr "страна 2"
-
-#: ../src/gigolo.ui.h:33
-msgid "page 3"
-msgstr "страна 3"
-
-#: ../src/gigolo.ui.h:34
 msgid "_Edit Bookmark"
 msgstr "_Уреди забелешку"
 
