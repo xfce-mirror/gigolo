@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-04 12:48+0100\n"
-"PO-Revision-Date: 2021-04-18 09:45+0000\n"
+"PO-Revision-Date: 2021-05-22 18:52+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-apps/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +112,7 @@ msgstr "Una interfaz sencilla para la conexión y el montaje de sistemas de arch
 
 #: ../src/window.c:415
 msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Copyright 2008-2011 Enrico Tröger"
+msgstr "Copyright © 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:418
 msgid "translator-credits"
