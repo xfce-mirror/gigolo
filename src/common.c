@@ -82,7 +82,7 @@ const gchar *gigolo_describe_scheme(const gchar *scheme)
 	else if (gigolo_str_equal(scheme, "http"))
 		return _("HTTP");
 	else if (gigolo_str_equal(scheme, "sftp"))
-		return _("SSH");
+		return _("SSH / SFTP");
 	else if (gigolo_str_equal(scheme, "obex"))
 		return _("Obex");
 	else if (gigolo_str_equal(scheme, "dav"))
