@@ -28,7 +28,8 @@ DISTCLEANFILES =				\
 	gigolo.desktop				\
 	intltool-extract			\
 	intltool-merge				\
-	intltool-update
+	intltool-update				\
+	po/.intltool-merge-cache.lock
 
 install-data-local:
 	@$(NORMAL_INSTALL)
