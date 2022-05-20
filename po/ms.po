@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-04 12:48+0100\n"
+"POT-Creation-Date: 2022-05-20 12:51+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>, 2014,2018,2022\n"
 "Language-Team: Malay (http://www.transifex.com/xfce/xfce-apps/language/ms/)\n"
@@ -59,8 +59,8 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #: ../src/common.c:85
-msgid "SSH"
-msgstr "SSH"
+msgid "SSH / SFTP"
+msgstr ""
 
 #: ../src/common.c:87
 msgid "Obex"
