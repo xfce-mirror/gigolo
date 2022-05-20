@@ -4,15 +4,16 @@
 # 
 # Translators:
 # Dušan Kazik <prescott66@gmail.com>, 2020
+# Jan Ziak <0xe2.0x9a.0x9b@gmail.com>, 2022
 # Robert Hartl <hartl.robert@gmail.com>, 2009
 # 7dcd6f74323fe8d9c477949ff8fcbb1c_c427b63 <3fcd202e3dfab15fda15b8e88e54d449_7173>, 2011-2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-04 12:48+0100\n"
-"PO-Revision-Date: 2021-03-04 11:48+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"POT-Creation-Date: 2022-05-20 12:51+0200\n"
+"PO-Revision-Date: 2013-07-03 18:23+0000\n"
+"Last-Translator: Jan Ziak <0xe2.0x9a.0x9b@gmail.com>, 2022\n"
 "Language-Team: Slovak (http://www.transifex.com/xfce/xfce-apps/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,8 +62,8 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #: ../src/common.c:85
-msgid "SSH"
-msgstr "SSH"
+msgid "SSH / SFTP"
+msgstr "SSH / SFTP"
 
 #: ../src/common.c:87
 msgid "Obex"
@@ -678,7 +679,7 @@ msgstr "_Upraviť záložku"
 
 #: ../gigolo.desktop.in.h:2
 msgid "Frontend for GIO/GVfs"
-msgstr ""
+msgstr "Frontend pre GIO/GVfs"
 
 #: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
