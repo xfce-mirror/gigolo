@@ -64,7 +64,7 @@ msgstr "HTTP"
 
 #: ../src/common.c:85
 msgid "SSH / SFTP"
-msgstr ""
+msgstr "SSH / SFTP"
 
 #: ../src/common.c:87
 msgid "Obex"
