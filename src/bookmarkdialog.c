@@ -402,7 +402,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(dialog);
 
 	g_object_set(dialog,
-		"icon-name", gigolo_find_icon_name("bookmark-new", "gtk-edit"),
+		"icon-name", gigolo_find_icon_name("bookmark-new", "edit-select-all"),
 		"title", _("Edit Bookmarks"),
 		NULL);
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
@@ -420,7 +420,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	gtk_button_set_use_underline (GTK_BUTTON (button_add), TRUE);
 	g_signal_connect(button_add, "clicked", G_CALLBACK(add_button_click_cb), dialog);
 
-	priv->button_edit = gtk_button_new_from_icon_name ("gtk-edit", GTK_ICON_SIZE_BUTTON);
+	priv->button_edit = gtk_button_new_from_icon_name ("edit-select-all", GTK_ICON_SIZE_BUTTON);
 	gtk_button_set_label (GTK_BUTTON (priv->button_edit), _("_Edit"));
 	gtk_button_set_use_underline (GTK_BUTTON (priv->button_edit), TRUE);
 	g_signal_connect(priv->button_edit, "clicked", G_CALLBACK(edit_button_click_cb), dialog);
