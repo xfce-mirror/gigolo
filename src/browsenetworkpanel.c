@@ -477,7 +477,7 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	gtk_toolbar_set_style(GTK_TOOLBAR(toolbar), GTK_TOOLBAR_BOTH_HORIZ);
 	gtk_toolbar_set_icon_size(GTK_TOOLBAR(toolbar), GTK_ICON_SIZE_BUTTON);
 
-	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-connect",
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("media-playback-start",
 		gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Connect to the selected share"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
@@ -495,7 +495,7 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	toolitem = gtk_separator_tool_item_new();
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 
-	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-refresh",
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("view-refresh",
 		gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Refresh the network list"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
@@ -507,7 +507,7 @@ static void gigolo_browse_network_panel_init(GigoloBrowseNetworkPanel *panel)
 	gtk_tool_item_set_expand(toolitem, TRUE);
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
 
-	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("gtk-close",
+	toolitem = gtk_tool_button_new(gtk_image_new_from_icon_name ("window-close-symbolic",
 		gtk_toolbar_get_icon_size(GTK_TOOLBAR(toolbar))), NULL);
 	gtk_widget_set_tooltip_text(GTK_WIDGET(toolitem), _("Close panel"));
 	gtk_toolbar_insert(GTK_TOOLBAR(toolbar), toolitem, -1);
