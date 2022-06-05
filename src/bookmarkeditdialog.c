@@ -1036,7 +1036,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 
 	priv->share_button = gtk_button_new();
 	gtk_button_set_image(GTK_BUTTON(priv->share_button),
-						 gtk_image_new_from_icon_name("gtk-refresh", GTK_ICON_SIZE_MENU));
+						 gtk_image_new_from_icon_name("view-refresh", GTK_ICON_SIZE_MENU));
 	gtk_widget_set_sensitive(priv->share_button, FALSE);
 	g_signal_connect(priv->share_button, "clicked", G_CALLBACK(share_button_clicked_cb), dialog);
 
