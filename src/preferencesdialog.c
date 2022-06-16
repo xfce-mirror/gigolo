@@ -221,11 +221,11 @@ static void entry_check_input(GtkEntry *entry)
 			gtk_image_set_from_icon_name(icon, first_part, GTK_ICON_SIZE_MENU);
 		}
 		else
-			gtk_image_set_from_icon_name(icon, "gtk-execute", GTK_ICON_SIZE_MENU);
+			gtk_image_set_from_icon_name(icon, "system-run", GTK_ICON_SIZE_MENU);
 		g_free(path);
 	}
 	else
-		gtk_image_set_from_icon_name(icon, "gtk-stop", GTK_ICON_SIZE_MENU);
+		gtk_image_set_from_icon_name(icon, "process-stop", GTK_ICON_SIZE_MENU);
 
 	g_free(first_part);
 
@@ -492,7 +492,7 @@ static void gigolo_preferences_dialog_class_init(GigoloPreferencesDialogClass *k
 static void gigolo_preferences_dialog_init(GigoloPreferencesDialog *dialog)
 {
     g_object_set(dialog,
-		"icon-name", "gtk-preferences",
+		"icon-name", "preferences-system",
 		"title", _("Preferences"),
 		NULL);
 	gtk_dialog_add_buttons(GTK_DIALOG(dialog), "gtk-close", GTK_RESPONSE_CLOSE, NULL);
