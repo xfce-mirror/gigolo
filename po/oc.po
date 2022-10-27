@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013
-# Quentin PAGÈS, 2020
+# Quentin PAGÈS, 2020,2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-20 12:51+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Quentin PAGÈS, 2020\n"
+"Last-Translator: Quentin PAGÈS, 2020,2022\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/xfce/xfce-apps/language/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -641,7 +641,7 @@ msgstr "Ajuda en linha"
 
 #: ../src/gigolo.ui.h:23
 msgid "About"
-msgstr ""
+msgstr "A prepaus"
 
 #: ../src/gigolo.ui.h:24
 msgid "Choose a bookmark to connect to"
@@ -665,7 +665,7 @@ msgstr "Aviar un terminal dempuèi aqueste emplaçament"
 
 #: ../src/gigolo.ui.h:29
 msgid "Open _Terminal"
-msgstr ""
+msgstr "Dobrir lo _terminal"
 
 #: ../src/gigolo.ui.h:30
 msgid "Quit Gigolo"
