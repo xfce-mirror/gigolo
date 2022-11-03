@@ -640,7 +640,7 @@ msgstr "ఆన్‌లైన్ సహాయం"
 
 #: ../src/gigolo.ui.h:23
 msgid "About"
-msgstr ""
+msgstr "గురించి"
 
 #: ../src/gigolo.ui.h:24
 msgid "Choose a bookmark to connect to"
