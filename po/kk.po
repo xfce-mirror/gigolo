@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010,2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-20 12:51+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010,2022\n"
 "Language-Team: Kazakh (http://www.transifex.com/xfce/xfce-apps/language/kk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +60,7 @@ msgstr "HTTP"
 
 #: ../src/common.c:85
 msgid "SSH / SFTP"
-msgstr ""
+msgstr "SSH / SFTP"
 
 #: ../src/common.c:87
 msgid "Obex"
@@ -120,7 +120,7 @@ msgstr ""
 
 #: ../src/window.c:485 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
-msgstr ""
+msgstr "Қолдауы бар хаттамалар"
 
 #: ../src/window.c:587 ../src/window.c:646
 #, c-format
@@ -136,7 +136,7 @@ msgstr "Қате"
 
 #: ../src/window.c:621
 msgid "Invalid terminal command"
-msgstr ""
+msgstr "Жарамсыз терминал командасы"
 
 #: ../src/window.c:633
 #, c-format
@@ -158,7 +158,7 @@ msgstr "Байланысқан"
 
 #: ../src/window.c:1517 ../src/bookmarkdialog.c:310
 msgid "Service Type"
-msgstr ""
+msgstr "Қызмет түрі"
 
 #: ../src/window.c:1525 ../src/bookmarkdialog.c:302
 msgid "Name"
@@ -171,7 +171,7 @@ msgstr "Бетбелгілер"
 #: ../src/window.c:1635 ../src/window.c:1668 ../src/gigolo.ui.h:1
 #: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
-msgstr ""
+msgstr "Gigolo"
 
 #: ../src/settings.c:690
 msgid "Move it now?"
@@ -222,7 +222,7 @@ msgstr "Порты"
 
 #: ../src/bookmarkdialog.c:334
 msgid "Auto-Connect"
-msgstr ""
+msgstr "Автобайланысу"
 
 #: ../src/bookmarkdialog.c:342
 msgid "Username"
@@ -230,11 +230,11 @@ msgstr "Пайдаланушы аты"
 
 #: ../src/bookmarkdialog.c:350
 msgid "Other information"
-msgstr ""
+msgstr "Басқа ақпарат"
 
 #: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
 msgid "_Add"
-msgstr ""
+msgstr "Қ_осу"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
 #: ../src/gigolo.ui.h:4
@@ -280,7 +280,7 @@ msgstr "_Сервер:"
 
 #: ../src/bookmarkeditdialog.c:786
 msgid "Create Bookmark"
-msgstr ""
+msgstr "Бетбелгі жасау"
 
 #: ../src/bookmarkeditdialog.c:793
 msgid "Edit Bookmark"
@@ -293,11 +293,11 @@ msgstr "Серверге байланысты орнату"
 #. Bookmark Settings
 #: ../src/bookmarkeditdialog.c:955
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "Бетбелгі баптаулары"
 
 #: ../src/bookmarkeditdialog.c:961
 msgid "_Name:"
-msgstr ""
+msgstr "_Аты:"
 
 #: ../src/bookmarkeditdialog.c:970
 msgid "_Color:"
