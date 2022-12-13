@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Andre Miranda <andre42m@gmail.com>, 2019
+# Andre Miranda <andre42m@gmail.com>, 2019,2022
 # Andre Miranda <andre42m@gmail.com>, 2013-2014
 # filiperosset <rosset.filipe@gmail.com>, 2009
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2013
@@ -12,15 +12,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-20 12:51+0200\n"
+"POT-Creation-Date: 2022-11-28 15:01+0100\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: The Cat, 2020\n"
+"Last-Translator: Andre Miranda <andre42m@gmail.com>, 2019,2022\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/xfce-apps/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -64,7 +64,7 @@ msgstr "HTTP"
 
 #: ../src/common.c:85
 msgid "SSH / SFTP"
-msgstr ""
+msgstr "SSH / SFTP"
 
 #: ../src/common.c:87
 msgid "Obex"
