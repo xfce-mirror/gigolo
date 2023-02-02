@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Steve Harris <steve@jbs.ca>, 2018
+# Steve Harris <steve@jbs.ca>, 2023
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-20 12:51+0200\n"
+"POT-Creation-Date: 2022-11-28 15:01+0100\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Steve Harris <steve@jbs.ca>, 2018\n"
+"Last-Translator: Steve Harris <steve@jbs.ca>, 2023\n"
 "Language-Team: English (Canada) (http://www.transifex.com/xfce/xfce-apps/language/en_CA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +61,7 @@ msgstr "HTTP"
 
 #: ../src/common.c:85
 msgid "SSH / SFTP"
-msgstr ""
+msgstr "SSH / SFTP"
 
 #: ../src/common.c:87
 msgid "Obex"
@@ -112,7 +113,7 @@ msgstr "translator-credits"
 #: ../src/window.c:467
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #: ../src/window.c:472
 msgid "Gigolo can use the following protocols provided by GVfs:"
@@ -234,7 +235,7 @@ msgstr "Other information"
 
 #: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
 msgid "_Add"
-msgstr ""
+msgstr "_Add"
 
 #: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
 #: ../src/gigolo.ui.h:4
@@ -243,7 +244,7 @@ msgstr "_Edit"
 
 #: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
 msgid "_Delete"
-msgstr ""
+msgstr "_Delete"
 
 #: ../src/bookmarkdialog.c:406
 msgid "Edit Bookmarks"
@@ -293,11 +294,11 @@ msgstr "Connect to Server"
 #. Bookmark Settings
 #: ../src/bookmarkeditdialog.c:955
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "Bookmark Settings"
 
 #: ../src/bookmarkeditdialog.c:961
 msgid "_Name:"
-msgstr ""
+msgstr "_Name:"
 
 #: ../src/bookmarkeditdialog.c:970
 msgid "_Color:"
@@ -305,12 +306,12 @@ msgstr "_Color:"
 
 #: ../src/bookmarkeditdialog.c:979
 msgid "Au_to-Connect:"
-msgstr ""
+msgstr "Au_to-Connect:"
 
 #. Connection Settings
 #: ../src/bookmarkeditdialog.c:990
 msgid "Connection Settings"
-msgstr ""
+msgstr "Connection Settings"
 
 #: ../src/bookmarkeditdialog.c:996
 msgid "Service t_ype:"
@@ -331,7 +332,7 @@ msgstr "_Share:"
 #. Optional Information
 #: ../src/bookmarkeditdialog.c:1049
 msgid "Optional Information"
-msgstr ""
+msgstr "Optional Information"
 
 #: ../src/bookmarkeditdialog.c:1055
 msgid "_Port:"
@@ -540,7 +541,7 @@ msgstr "No Hosts found"
 
 #: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
 msgid "_Connect"
-msgstr ""
+msgstr "_Connect"
 
 #: ../src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
@@ -580,7 +581,7 @@ msgstr "_Edit Bookmarks"
 
 #: ../src/gigolo.ui.h:6
 msgid "_Preferences"
-msgstr ""
+msgstr "_Preferences"
 
 #: ../src/gigolo.ui.h:7
 msgid "_View"
@@ -612,7 +613,7 @@ msgstr "_Actions"
 
 #: ../src/gigolo.ui.h:15
 msgid "_Disconnect"
-msgstr ""
+msgstr "_Disconnect"
 
 #: ../src/gigolo.ui.h:16
 msgid "_Bookmarks"
@@ -620,7 +621,7 @@ msgstr "_Bookmarks"
 
 #: ../src/gigolo.ui.h:17
 msgid "_Open"
-msgstr ""
+msgstr "_Open"
 
 #: ../src/gigolo.ui.h:18
 msgid "Open in _Terminal"
@@ -628,7 +629,7 @@ msgstr "Open in _Terminal"
 
 #: ../src/gigolo.ui.h:19
 msgid "_Copy URI"
-msgstr ""
+msgstr "_Copy URI"
 
 #: ../src/gigolo.ui.h:20
 msgid "_Help"
@@ -640,7 +641,7 @@ msgstr "Online Help"
 
 #: ../src/gigolo.ui.h:23
 msgid "About"
-msgstr ""
+msgstr "About"
 
 #: ../src/gigolo.ui.h:24
 msgid "Choose a bookmark to connect to"
@@ -664,7 +665,7 @@ msgstr "Start a terminal from here"
 
 #: ../src/gigolo.ui.h:29
 msgid "Open _Terminal"
-msgstr ""
+msgstr "Open _Terminal"
 
 #: ../src/gigolo.ui.h:30
 msgid "Quit Gigolo"
@@ -672,11 +673,11 @@ msgstr "Quit Gigolo"
 
 #: ../src/gigolo.ui.h:31
 msgid "_Edit Bookmark"
-msgstr ""
+msgstr "_Edit Bookmark"
 
 #: ../gigolo.desktop.in.h:2
 msgid "Frontend for GIO/GVfs"
-msgstr ""
+msgstr "Frontend for GIO/GVfs"
 
 #: ../gigolo.desktop.in.h:3
 msgid "A simple frontend to easily connect to remote filesystems"
