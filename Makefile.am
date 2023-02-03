@@ -10,7 +10,7 @@ SUBDIRS =                       \
 distclean-local:
 	rm -rf *.spec *.cache *~
 
-distuninstallcheck_listfiles = 						\ 
+distuninstallcheck_listfiles = 						\
 	find . -type f -print | grep -v ./share/icons/hicolor/icon-theme.cache
 
 

@@ -15,7 +15,7 @@ install-sh
 intltool*.in
 missing
 po/*.gmo
-po/.intltool-merge-cache
+po/.intltool-merge-cache*
 po/LINGUAS
 po/POTFILES
 po/stamp-it

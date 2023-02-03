@@ -20,9 +20,16 @@ gigolo_SOURCES =								\
 
 AM_CFLAGS = -DLOCALEDIR=\""$(localedir)"\"
 
-AM_CPPFLAGS = @GTK_CFLAGS@
+AM_CPPFLAGS = \
+	$(LIBX11_CFLAGS) \
+	$(GLIB_CFLAGS) \
+	$(GTK_CFLAGS)
 
-gigolo_LDADD = @GTK_LIBS@ $(INTLLIBS)
+gigolo_LDADD = \
+	$(INTLLIBS) \
+	$(LIBX11_LIBS) \
+	$(GLIB_LIBS) \
+	$(GTK_LIBS)
 
 if MAINTAINER_MODE
 
