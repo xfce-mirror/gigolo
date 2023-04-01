@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Andrei Stepanov, 2022
+# Andrei Stepanov, 2022-2023
 # Andrey Novikov <cooking95@yandex.ru>, 2021
 # Igor <f2404@yandex.ru>, 2016,2018
 # Sergey Alyoshin <alyoshin.s@gmail.com>, 2013,2016
@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-20 12:51+0200\n"
+"POT-Creation-Date: 2022-11-28 15:01+0100\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Andrei Stepanov, 2022\n"
+"Last-Translator: Andrei Stepanov, 2022-2023\n"
 "Language-Team: Russian (http://www.transifex.com/xfce/xfce-apps/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -148,7 +148,7 @@ msgstr "Для «%s» нет местонахождения по умолчан�
 
 #: ../src/window.c:753
 msgid "Edit _Bookmark"
-msgstr "_Редактировать закладку"
+msgstr "_Изменить закладку"
 
 #: ../src/window.c:755 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
@@ -675,7 +675,7 @@ msgstr "Выход из Gigolo"
 
 #: ../src/gigolo.ui.h:31
 msgid "_Edit Bookmark"
-msgstr "_Редактировать закладки"
+msgstr "Изменить закладк_у"
 
 #: ../gigolo.desktop.in.h:2
 msgid "Frontend for GIO/GVfs"
