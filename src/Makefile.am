@@ -21,13 +21,11 @@ gigolo_SOURCES =								\
 AM_CFLAGS = -DLOCALEDIR=\""$(localedir)"\"
 
 AM_CPPFLAGS = \
-	$(LIBX11_CFLAGS) \
 	$(GLIB_CFLAGS) \
 	$(GTK_CFLAGS)
 
 gigolo_LDADD = \
 	$(INTLLIBS) \
-	$(LIBX11_LIBS) \
 	$(GLIB_LIBS) \
 	$(GTK_LIBS)
 
