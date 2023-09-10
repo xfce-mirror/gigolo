@@ -211,7 +211,7 @@ static gchar *get_tooltip_text(GigoloBackendGVFS *backend, gpointer ref, gint re
 	{
 		case GIGOLO_WINDOW_REF_TYPE_MOUNT:
 		{
-			gchar *uri, *name, *clean_uri;
+			gchar *uri = NULL, *name = NULL, *clean_uri;
 			const gchar *bookmark_name = _("No bookmark");
 			GigoloBookmark *b;
 			GigoloSettings *settings;
@@ -434,7 +434,7 @@ static void volume_mount_finished_cb(GObject *src, GAsyncResult *res, gpointer b
 	{
 		if (! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_FAILED_HANDLED))
 		{
-			gchar *name, *msg;
+			gchar *name = NULL, *msg;
 
 			if (G_IS_VOLUME(src))
 				name = g_volume_get_name(G_VOLUME(src));
@@ -473,7 +473,7 @@ static void unmount_finished_cb(GObject *src, GAsyncResult *res, gpointer backen
 	{
 		if (! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_FAILED_HANDLED))
 		{
-			gchar *name, *msg;
+			gchar *name = NULL, *msg;
 
 			if (G_IS_VOLUME(src))
 				name = g_volume_get_name(G_VOLUME(src));
