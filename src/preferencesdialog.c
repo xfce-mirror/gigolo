@@ -221,11 +221,11 @@ static void entry_check_input(GtkEntry *entry)
 			gtk_image_set_from_icon_name(icon, first_part, GTK_ICON_SIZE_MENU);
 		}
 		else
-			gtk_image_set_from_icon_name(icon, "gtk-execute", GTK_ICON_SIZE_MENU);
+			gtk_image_set_from_icon_name(icon, "system-run", GTK_ICON_SIZE_MENU);
 		g_free(path);
 	}
 	else
-		gtk_image_set_from_icon_name(icon, "gtk-stop", GTK_ICON_SIZE_MENU);
+		gtk_image_set_from_icon_name(icon, "process-stop", GTK_ICON_SIZE_MENU);
 
 	g_free(first_part);
 
