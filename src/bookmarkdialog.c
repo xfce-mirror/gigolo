@@ -199,7 +199,6 @@ static void delete_button_click_cb(G_GNUC_UNUSED GtkButton *button, gpointer use
 	gtk_list_store_remove(priv->store, &iter);
 	g_ptr_array_remove(bml, bm);
 	gigolo_window_update_bookmarks(GIGOLO_WINDOW(priv->parent));
-	g_object_unref(bm);
 }
 
 
