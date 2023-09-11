@@ -401,14 +401,18 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	GigoloBookmarkDialogPrivate *priv = gigolo_bookmark_dialog_get_instance_private(dialog);
 
 	g_object_set(dialog,
-		"icon-name", gigolo_find_icon_name("bookmark-new", "gtk-edit"),
+		"icon-name", gigolo_find_icon_name("bookmark-new", "accessories-text-editor"),
 		"title", _("Edit Bookmarks"),
 		NULL);
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
 	vbox = gtk_dialog_get_content_area(GTK_DIALOG(dialog));
 	gtk_box_set_spacing(GTK_BOX(vbox), 2);
 
-	gtk_dialog_add_button(GTK_DIALOG(dialog), "gtk-close", GTK_RESPONSE_CLOSE);
+	button_add = gtk_button_new_from_icon_name("window-close", GTK_ICON_SIZE_BUTTON);
+	gtk_button_set_label(GTK_BUTTON(button_add), _("_Close"));
+	gtk_button_set_use_underline(GTK_BUTTON(button_add), TRUE);
+	gtk_dialog_add_action_widget(GTK_DIALOG(dialog), button_add, GTK_RESPONSE_CLOSE);
+	gtk_widget_set_can_default(button_add, TRUE);
 
 	gtk_window_set_destroy_with_parent(GTK_WINDOW(dialog), TRUE);
 	gtk_window_set_default_size(GTK_WINDOW(dialog), 550, 350);
@@ -419,7 +423,7 @@ static void gigolo_bookmark_dialog_init(GigoloBookmarkDialog *dialog)
 	gtk_button_set_use_underline (GTK_BUTTON (button_add), TRUE);
 	g_signal_connect(button_add, "clicked", G_CALLBACK(add_button_click_cb), dialog);
 
-	priv->button_edit = gtk_button_new_from_icon_name ("gtk-edit", GTK_ICON_SIZE_BUTTON);
+	priv->button_edit = gtk_button_new_from_icon_name ("accessories-text-editor", GTK_ICON_SIZE_BUTTON);
 	gtk_button_set_label (GTK_BUTTON (priv->button_edit), _("_Edit"));
 	gtk_button_set_use_underline (GTK_BUTTON (priv->button_edit), TRUE);
 	g_signal_connect(priv->button_edit, "clicked", G_CALLBACK(edit_button_click_cb), dialog);

@@ -774,9 +774,11 @@ static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop
 		break;
     case PROP_MODE:
     {
+		GtkWidget *button;
 		const gchar *title;
-		const gchar *stock_id;
-		const gchar *button_stock_id;
+		const gchar *dialog_icon;
+		const gchar *button_icon;
+		const gchar *button_label;
 		gint mode = g_value_get_int(value);
 
 		switch (mode)
@@ -784,22 +786,25 @@ static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop
 			case GIGOLO_BE_MODE_CREATE:
 			{
 				title = _("Create Bookmark");
-				button_stock_id = stock_id = "gtk-add";
+				button_icon = dialog_icon = "list-add";
+				button_label = _("_Add");
 				combo_set_active(priv->type_combo, 0);
 				break;
 			}
 			case GIGOLO_BE_MODE_EDIT:
 			{
 				title = _("Edit Bookmark");
-				stock_id = "gtk-edit";
-				button_stock_id = "gtk-ok";
+				dialog_icon = "accessories-text-editor";
+				button_icon = NULL;
+				button_label = _("_OK");
 				break;
 			}
 			case GIGOLO_BE_MODE_CONNECT:
 			default:
 			{
 				title = _("Connect to Server");
-				button_stock_id = stock_id = "gtk-connect";
+				button_icon = dialog_icon = "network-receive";
+				button_label = _("Co_nnect");
 				combo_set_active(priv->type_combo, 0);
 				gtk_widget_hide(priv->name_label);
 				gtk_widget_hide(priv->name_entry);
@@ -811,8 +816,17 @@ static void gigolo_bookmark_edit_dialog_set_property(GObject *object, guint prop
 			}
 		}
 		gtk_window_set_title(GTK_WINDOW(dialog), title);
-		gtk_window_set_icon_name(GTK_WINDOW(dialog), stock_id);
-		gtk_dialog_add_buttons(GTK_DIALOG(dialog), button_stock_id, GTK_RESPONSE_OK, NULL);
+		gtk_window_set_icon_name(GTK_WINDOW(dialog), dialog_icon);
+		if (button_icon != NULL)
+		{
+			button = gtk_button_new_from_icon_name(button_icon, GTK_ICON_SIZE_BUTTON);
+			gtk_button_set_label(GTK_BUTTON (button), button_label);
+			gtk_button_set_use_underline(GTK_BUTTON(button), TRUE);
+		}
+		else
+			button = gtk_button_new_with_mnemonic(button_label);
+		gtk_widget_show(button);
+		gtk_dialog_add_action_widget(GTK_DIALOG(dialog), button, GTK_RESPONSE_OK);
 		priv->dialog_type = mode;
 
 		setup_for_type(dialog);
@@ -929,6 +943,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	GtkWidget *hbox;
 	GtkWidget *vbox;
 	GtkWidget *frame;
+	GtkWidget *button;
 	GtkSizeGroup *sg;
 	GtkCellRenderer *renderer;
 	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
@@ -941,7 +956,9 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 	gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
 	gtk_box_set_spacing(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(dialog))), 2);
 
-	gtk_dialog_add_buttons(GTK_DIALOG(dialog), "gtk-cancel", GTK_RESPONSE_CANCEL, NULL);
+	button = gtk_button_new_with_mnemonic(_("_Cancel"));
+	gtk_widget_show(button);
+	gtk_dialog_add_action_widget(GTK_DIALOG(dialog), button, GTK_RESPONSE_CANCEL);
 	gtk_window_set_destroy_with_parent(GTK_WINDOW(dialog), TRUE);
 
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
@@ -1036,7 +1053,7 @@ static void gigolo_bookmark_edit_dialog_init(GigoloBookmarkEditDialog *dialog)
 
 	priv->share_button = gtk_button_new();
 	gtk_button_set_image(GTK_BUTTON(priv->share_button),
-						 gtk_image_new_from_icon_name("gtk-refresh", GTK_ICON_SIZE_MENU));
+						 gtk_image_new_from_icon_name("view-refresh", GTK_ICON_SIZE_MENU));
 	gtk_widget_set_sensitive(priv->share_button, FALSE);
 	g_signal_connect(priv->share_button, "clicked", G_CALLBACK(share_button_clicked_cb), dialog);
 

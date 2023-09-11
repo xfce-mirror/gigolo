@@ -274,7 +274,7 @@
                 <property name="tooltip-text" translatable="yes">Choose a bookmark to connect to</property>
                 <property name="label" translatable="yes">_Bookmarks</property>
                 <property name="use-underline">True</property>
-                <property name="icon-name">gtk-connect</property>
+                <property name="icon-name">network-receive</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -288,7 +288,7 @@
                 <property name="tooltip-text" translatable="yes">Disconnect the selected resource</property>
                 <property name="label" translatable="yes">_Disconnect</property>
                 <property name="use-underline">True</property>
-                <property name="icon-name">gtk-disconnect</property>
+                <property name="icon-name">network-offline</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -312,7 +312,7 @@
                 <property name="tooltip-text" translatable="yes">Open the bookmark manager to add, edit or delete bookmarks</property>
                 <property name="label" translatable="yes">_Edit Bookmarks</property>
                 <property name="use-underline">True</property>
-                <property name="icon-name">gtk-edit</property>
+                <property name="icon-name">accessories-text-editor</property>
               </object>
               <packing>
                 <property name="expand">False</property>

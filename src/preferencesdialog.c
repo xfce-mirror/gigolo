@@ -491,11 +491,15 @@ static void gigolo_preferences_dialog_class_init(GigoloPreferencesDialogClass *k
 
 static void gigolo_preferences_dialog_init(GigoloPreferencesDialog *dialog)
 {
-    g_object_set(dialog,
-		"icon-name", "gtk-preferences",
+	GtkWidget *button;
+	g_object_set(dialog,
+		"icon-name", "preferences-system",
 		"title", _("Preferences"),
 		NULL);
-	gtk_dialog_add_buttons(GTK_DIALOG(dialog), "gtk-close", GTK_RESPONSE_CLOSE, NULL);
+	button = gtk_button_new_from_icon_name("window-close", GTK_ICON_SIZE_BUTTON);
+	gtk_button_set_label(GTK_BUTTON (button), _("_Close"));
+	gtk_button_set_use_underline(GTK_BUTTON(button), TRUE);
+	gtk_dialog_add_action_widget(GTK_DIALOG(dialog), button, GTK_RESPONSE_CLOSE);
 }
 
 
