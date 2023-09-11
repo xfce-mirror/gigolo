@@ -15,10 +15,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-20 12:51+0200\n"
+"POT-Creation-Date: 2023-09-11 12:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: Demiray Muhterem <mdemiray@msn.com>, 2018,2022\n"
-"Language-Team: Turkish (http://www.transifex.com/xfce/xfce-apps/language/tr/)\n"
+"Language-Team: Turkish (http://app.transifex.com/xfce/xfce-apps/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,133 +49,133 @@ msgstr "Sürüm bilgisini göster"
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- uzak dosya sistemlerine bağlanmak için tasarlanmış basit arayüz uygulaması"
 
-#: ../src/common.c:77
+#: ../src/common.c:73
 msgid "Unix Device"
 msgstr "Unix Aygıtı"
 
-#: ../src/common.c:79
+#: ../src/common.c:75
 msgid "Windows Share"
 msgstr "Windows Paylaşımı"
 
-#: ../src/common.c:81
+#: ../src/common.c:77
 msgid "FTP"
 msgstr "FTP"
 
-#: ../src/common.c:83
+#: ../src/common.c:79
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/common.c:85
+#: ../src/common.c:81
 msgid "SSH / SFTP"
 msgstr "SSH / SFTP"
 
-#: ../src/common.c:87
+#: ../src/common.c:83
 msgid "Obex"
 msgstr "Obex"
 
-#: ../src/common.c:89
+#: ../src/common.c:85
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: ../src/common.c:91
+#: ../src/common.c:87
 msgid "WebDAV (secure)"
 msgstr "WebDAV (güvenli)"
 
-#: ../src/common.c:93 ../src/window.c:1598
+#: ../src/common.c:89 ../src/window.c:1611
 msgid "Network"
 msgstr "Ağ"
 
-#: ../src/common.c:95
+#: ../src/common.c:91
 msgid "Archive"
 msgstr "Arşiv"
 
-#: ../src/common.c:97
+#: ../src/common.c:93
 msgid "Photos"
 msgstr "Resimler"
 
-#: ../src/common.c:99
+#: ../src/common.c:95
 msgid "Custom Location"
 msgstr "Özel Konum"
 
-#: ../src/window.c:260
+#: ../src/window.c:269
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "\"%s\" dosya sistemine bağlanılıyor"
 
-#: ../src/window.c:414
+#: ../src/window.c:423
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Uzak ve yerel dosya sistemlerini bağlanmak/bağlamak için basit arayüz"
 
-#: ../src/window.c:415
+#: ../src/window.c:424
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "Telif Hakkı 2008-2010 Enrico Tröge"
 
-#: ../src/window.c:418
+#: ../src/window.c:427
 msgid "translator-credits"
 msgstr "Samed Beyribey <ras0ir@eventualis.org>, 2009 Ayhan YALÇINSOY<ayhanyalcinsoy@gmail.com>,2010"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:467
+#: ../src/window.c:476
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:472
+#: ../src/window.c:481
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo, Gvfs tarafından sağlanan aşağıdaki iletişim kuralları kullanabilir:"
 
-#: ../src/window.c:485 ../src/gigolo.ui.h:22
+#: ../src/window.c:494 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Desteklenen İletişim Kuralları"
 
-#: ../src/window.c:587 ../src/window.c:646
+#: ../src/window.c:596 ../src/window.c:655
 #, c-format
 msgid "The command '%s' failed"
 msgstr "'%s' komutu başarısız"
 
-#: ../src/window.c:588 ../src/window.c:621 ../src/window.c:634
-#: ../src/window.c:647 ../src/window.c:844 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:597 ../src/window.c:630 ../src/window.c:643
+#: ../src/window.c:656 ../src/window.c:853 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Hata"
 
-#: ../src/window.c:621
+#: ../src/window.c:630
 msgid "Invalid terminal command"
 msgstr "Geçersiz uçbirim komutu"
 
-#: ../src/window.c:633
+#: ../src/window.c:642
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "\"%s\" için uygun öntanımlı konum bulunmamakta"
 
-#: ../src/window.c:753
+#: ../src/window.c:762
 msgid "Edit _Bookmark"
 msgstr "Sık Kullanılanı Düzenle"
 
-#: ../src/window.c:755 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:764 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Sık Kullanılan Oluş_tur"
 
-#: ../src/window.c:1508
+#: ../src/window.c:1521
 msgid "Connected"
 msgstr "Bağlandı"
 
-#: ../src/window.c:1517 ../src/bookmarkdialog.c:310
+#: ../src/window.c:1530 ../src/bookmarkdialog.c:309
 msgid "Service Type"
 msgstr "Servis Türü"
 
-#: ../src/window.c:1525 ../src/bookmarkdialog.c:302
+#: ../src/window.c:1538 ../src/bookmarkdialog.c:301
 msgid "Name"
 msgstr "Ad"
 
-#: ../src/window.c:1590
+#: ../src/window.c:1603
 msgid "Bookmarks"
 msgstr "Yer İmleri"
 
-#: ../src/window.c:1635 ../src/window.c:1668 ../src/gigolo.ui.h:1
+#: ../src/window.c:1648 ../src/window.c:1683 ../src/gigolo.ui.h:1
 #: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Gigolo"
@@ -219,42 +219,47 @@ msgstr "Dizin: %s"
 msgid "Path: %s"
 msgstr "Yol: %s"
 
-#: ../src/bookmarkdialog.c:318
+#: ../src/bookmarkdialog.c:317
 msgid "Host"
 msgstr "Sunucu"
 
-#: ../src/bookmarkdialog.c:326
+#: ../src/bookmarkdialog.c:325
 msgid "Port"
 msgstr "Bağlantı Noktası"
 
-#: ../src/bookmarkdialog.c:334
+#: ../src/bookmarkdialog.c:333
 msgid "Auto-Connect"
 msgstr "Kendiliğinden Bağlan"
 
-#: ../src/bookmarkdialog.c:342
+#: ../src/bookmarkdialog.c:341
 msgid "Username"
 msgstr "Kullanıcı Adı"
 
-#: ../src/bookmarkdialog.c:350
+#: ../src/bookmarkdialog.c:349
 msgid "Other information"
 msgstr "Diğer bilgi"
 
-#: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
+#: ../src/bookmarkdialog.c:370 ../src/bookmarkdialog.c:422
+#: ../src/bookmarkeditdialog.c:790
 msgid "_Add"
 msgstr "_Ekle"
 
-#: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/bookmarkdialog.c:377 ../src/bookmarkdialog.c:427
 #: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "_Düzenle"
 
-#: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
+#: ../src/bookmarkdialog.c:384 ../src/bookmarkdialog.c:432
 msgid "_Delete"
 msgstr "_Sil"
 
-#: ../src/bookmarkdialog.c:406
+#: ../src/bookmarkdialog.c:405
 msgid "Edit Bookmarks"
 msgstr "Sık Kullanılanları Düzenle"
+
+#: ../src/bookmarkdialog.c:412 ../src/preferencesdialog.c:500
+msgid "_Close"
+msgstr "_Kapat"
 
 #: ../src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
@@ -281,88 +286,100 @@ msgstr "Bağlantı kurmak için geçerli değeri girmelisiniz."
 msgid "_Device:"
 msgstr "Ay_gıt:"
 
-#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1035
 msgid "_Server:"
 msgstr "_Sunucu:"
 
-#: ../src/bookmarkeditdialog.c:786
+#: ../src/bookmarkeditdialog.c:788
 msgid "Create Bookmark"
 msgstr "Sık Kullanılan Oluştur"
 
-#: ../src/bookmarkeditdialog.c:793
+#: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
 msgstr "Sık Kullanılanı Düzenle"
 
-#: ../src/bookmarkeditdialog.c:801
+#: ../src/bookmarkeditdialog.c:799
+msgid "_OK"
+msgstr "_Tamam"
+
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Sunucuya Bağlan"
 
+#: ../src/bookmarkeditdialog.c:807
+msgid "Co_nnect"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:959
+msgid "_Cancel"
+msgstr "_İptal"
+
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:955
+#: ../src/bookmarkeditdialog.c:972
 msgid "Bookmark Settings"
 msgstr "Yer İmleri Ayarları"
 
-#: ../src/bookmarkeditdialog.c:961
+#: ../src/bookmarkeditdialog.c:978
 msgid "_Name:"
 msgstr "_Ad:"
 
-#: ../src/bookmarkeditdialog.c:970
+#: ../src/bookmarkeditdialog.c:987
 msgid "_Color:"
 msgstr "_Renk:"
 
-#: ../src/bookmarkeditdialog.c:979
+#: ../src/bookmarkeditdialog.c:996
 msgid "Au_to-Connect:"
 msgstr "_Kendiliğinden Bağlan:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:990
+#: ../src/bookmarkeditdialog.c:1007
 msgid "Connection Settings"
 msgstr "Bağlantı Ayarları"
 
-#: ../src/bookmarkeditdialog.c:996
+#: ../src/bookmarkeditdialog.c:1013
 msgid "Service t_ype:"
 msgstr "Servis tü_rü:"
 
-#: ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:1029
 msgid "_Location (URI):"
 msgstr "K_onum (URI):"
 
-#: ../src/bookmarkeditdialog.c:1024
+#: ../src/bookmarkeditdialog.c:1041
 msgid "P_ath:"
 msgstr "_Yol:"
 
-#: ../src/bookmarkeditdialog.c:1030
+#: ../src/bookmarkeditdialog.c:1047
 msgid "_Share:"
 msgstr "P_aylaşım:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1049
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Optional Information"
 msgstr "İsteğe Bağlı Bilgi"
 
-#: ../src/bookmarkeditdialog.c:1055
+#: ../src/bookmarkeditdialog.c:1072
 msgid "_Port:"
 msgstr "_Bağlantı Noktası:"
 
-#: ../src/bookmarkeditdialog.c:1061
+#: ../src/bookmarkeditdialog.c:1078
 msgid "Set the port to 0 to use the default port"
 msgstr "Öntanımlı bağlantı noktası kullanmak için 0 yazabilirsiniz"
 
-#: ../src/bookmarkeditdialog.c:1063
+#: ../src/bookmarkeditdialog.c:1080
 msgid "_Folder:"
 msgstr "_Dizin:"
 
-#: ../src/bookmarkeditdialog.c:1069
+#: ../src/bookmarkeditdialog.c:1086
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Bu asıl bağlama için kullanılmaz, yalnızca bağlama noktasının dosya tarayıcısında açılması için gereklidir"
 
-#: ../src/bookmarkeditdialog.c:1072
+#: ../src/bookmarkeditdialog.c:1089
 msgid "_Domain:"
 msgstr "_Alan Adı:"
 
-#: ../src/bookmarkeditdialog.c:1078
+#: ../src/bookmarkeditdialog.c:1095
 msgid "_User Name:"
 msgstr "_Kullanıcı Adı:"
 
@@ -491,7 +508,7 @@ msgstr "Görünü_m"
 msgid "_Orientation"
 msgstr "_Dizilim"
 
-#: ../src/preferencesdialog.c:496
+#: ../src/preferencesdialog.c:497
 msgid "Preferences"
 msgstr "Tercihler"
 
