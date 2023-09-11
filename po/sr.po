@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-20 12:51+0200\n"
+"POT-Creation-Date: 2023-09-11 12:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>, 2012,2019\n"
-"Language-Team: Serbian (http://www.transifex.com/xfce/xfce-apps/language/sr/)\n"
+"Language-Team: Serbian (http://app.transifex.com/xfce/xfce-apps/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,133 +42,133 @@ msgstr "Прикажи податке о издању"
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- једноставно сучеље за лако повезивање са удаљеним системима датотека"
 
-#: ../src/common.c:77
+#: ../src/common.c:73
 msgid "Unix Device"
 msgstr "Униксов уређај"
 
-#: ../src/common.c:79
+#: ../src/common.c:75
 msgid "Windows Share"
 msgstr "Виндоусово дељење"
 
-#: ../src/common.c:81
+#: ../src/common.c:77
 msgid "FTP"
 msgstr "ФТП"
 
-#: ../src/common.c:83
+#: ../src/common.c:79
 msgid "HTTP"
 msgstr "ХТТП"
 
-#: ../src/common.c:85
+#: ../src/common.c:81
 msgid "SSH / SFTP"
 msgstr "ССХ / СФТП"
 
-#: ../src/common.c:87
+#: ../src/common.c:83
 msgid "Obex"
 msgstr "Обекс"
 
-#: ../src/common.c:89
+#: ../src/common.c:85
 msgid "WebDAV"
 msgstr "ВебДАВ"
 
-#: ../src/common.c:91
+#: ../src/common.c:87
 msgid "WebDAV (secure)"
 msgstr "ВебДАВ(безбедни)"
 
-#: ../src/common.c:93 ../src/window.c:1598
+#: ../src/common.c:89 ../src/window.c:1611
 msgid "Network"
 msgstr "Мрежа"
 
-#: ../src/common.c:95
+#: ../src/common.c:91
 msgid "Archive"
 msgstr "Складиште"
 
-#: ../src/common.c:97
+#: ../src/common.c:93
 msgid "Photos"
 msgstr "Слике"
 
-#: ../src/common.c:99
+#: ../src/common.c:95
 msgid "Custom Location"
 msgstr "Прилагођено место"
 
-#: ../src/window.c:260
+#: ../src/window.c:269
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Повезивање са „%s“"
 
-#: ../src/window.c:414
+#: ../src/window.c:423
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Једноставно сучеље за лако повезивање/качење на местне и удаљене системе датотека"
 
-#: ../src/window.c:415
+#: ../src/window.c:424
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "Ауторска права 2008-2011 Enrico Tröger"
 
-#: ../src/window.c:418
+#: ../src/window.c:427
 msgid "translator-credits"
 msgstr "Саша Петровић <salepetronije@gmail.com>"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:467
+#: ../src/window.c:476
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:472
+#: ../src/window.c:481
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Жиголо може користити следеће протоколе које обезбеђује ГВфс:"
 
-#: ../src/window.c:485 ../src/gigolo.ui.h:22
+#: ../src/window.c:494 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "Подржани протоколи"
 
-#: ../src/window.c:587 ../src/window.c:646
+#: ../src/window.c:596 ../src/window.c:655
 #, c-format
 msgid "The command '%s' failed"
 msgstr "Нисам успео да извршим наредбу „%s“"
 
-#: ../src/window.c:588 ../src/window.c:621 ../src/window.c:634
-#: ../src/window.c:647 ../src/window.c:844 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:597 ../src/window.c:630 ../src/window.c:643
+#: ../src/window.c:656 ../src/window.c:853 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Грeшкa"
 
-#: ../src/window.c:621
+#: ../src/window.c:630
 msgid "Invalid terminal command"
 msgstr "Неисправна нареба у терминалу"
 
-#: ../src/window.c:633
+#: ../src/window.c:642
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "Није доступно предвиђено место за „%s“"
 
-#: ../src/window.c:753
+#: ../src/window.c:762
 msgid "Edit _Bookmark"
 msgstr "Уреди _забелешке"
 
-#: ../src/window.c:755 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:764 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Направи _забелешку"
 
-#: ../src/window.c:1508
+#: ../src/window.c:1521
 msgid "Connected"
 msgstr "Повезан"
 
-#: ../src/window.c:1517 ../src/bookmarkdialog.c:310
+#: ../src/window.c:1530 ../src/bookmarkdialog.c:309
 msgid "Service Type"
 msgstr "Врста услуге"
 
-#: ../src/window.c:1525 ../src/bookmarkdialog.c:302
+#: ../src/window.c:1538 ../src/bookmarkdialog.c:301
 msgid "Name"
 msgstr "Назив"
 
-#: ../src/window.c:1590
+#: ../src/window.c:1603
 msgid "Bookmarks"
 msgstr "Забелешке"
 
-#: ../src/window.c:1635 ../src/window.c:1668 ../src/gigolo.ui.h:1
+#: ../src/window.c:1648 ../src/window.c:1683 ../src/gigolo.ui.h:1
 #: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "Жиголо"
@@ -212,42 +212,47 @@ msgstr "Фасцикла: %s"
 msgid "Path: %s"
 msgstr "Путања: %s"
 
-#: ../src/bookmarkdialog.c:318
+#: ../src/bookmarkdialog.c:317
 msgid "Host"
 msgstr "Домаћин"
 
-#: ../src/bookmarkdialog.c:326
+#: ../src/bookmarkdialog.c:325
 msgid "Port"
 msgstr "Прикључник"
 
-#: ../src/bookmarkdialog.c:334
+#: ../src/bookmarkdialog.c:333
 msgid "Auto-Connect"
 msgstr "Самоповежи"
 
-#: ../src/bookmarkdialog.c:342
+#: ../src/bookmarkdialog.c:341
 msgid "Username"
 msgstr "Корисничко име"
 
-#: ../src/bookmarkdialog.c:350
+#: ../src/bookmarkdialog.c:349
 msgid "Other information"
 msgstr "Други подаци"
 
-#: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
+#: ../src/bookmarkdialog.c:370 ../src/bookmarkdialog.c:422
+#: ../src/bookmarkeditdialog.c:790
 msgid "_Add"
 msgstr "_Додај"
 
-#: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/bookmarkdialog.c:377 ../src/bookmarkdialog.c:427
 #: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "_Уреди"
 
-#: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
+#: ../src/bookmarkdialog.c:384 ../src/bookmarkdialog.c:432
 msgid "_Delete"
 msgstr "_Обриши"
 
-#: ../src/bookmarkdialog.c:406
+#: ../src/bookmarkdialog.c:405
 msgid "Edit Bookmarks"
 msgstr "Уреди забелешке"
+
+#: ../src/bookmarkdialog.c:412 ../src/preferencesdialog.c:500
+msgid "_Close"
+msgstr "_Затвори"
 
 #: ../src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
@@ -274,88 +279,100 @@ msgstr "Морате унети исправни УРИ за повезивањ�
 msgid "_Device:"
 msgstr "_Уређај:"
 
-#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1035
 msgid "_Server:"
 msgstr "_Служитељ:"
 
-#: ../src/bookmarkeditdialog.c:786
+#: ../src/bookmarkeditdialog.c:788
 msgid "Create Bookmark"
 msgstr "Направи забелешку"
 
-#: ../src/bookmarkeditdialog.c:793
+#: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
 msgstr "Уреди забелешку"
 
-#: ../src/bookmarkeditdialog.c:801
+#: ../src/bookmarkeditdialog.c:799
+msgid "_OK"
+msgstr "_У реду"
+
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "Повежи се са сервером"
 
+#: ../src/bookmarkeditdialog.c:807
+msgid "Co_nnect"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:959
+msgid "_Cancel"
+msgstr "_Откажи"
+
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:955
+#: ../src/bookmarkeditdialog.c:972
 msgid "Bookmark Settings"
 msgstr "Поставке ознака"
 
-#: ../src/bookmarkeditdialog.c:961
+#: ../src/bookmarkeditdialog.c:978
 msgid "_Name:"
 msgstr "_Име:"
 
-#: ../src/bookmarkeditdialog.c:970
+#: ../src/bookmarkeditdialog.c:987
 msgid "_Color:"
 msgstr "_Боја:"
 
-#: ../src/bookmarkeditdialog.c:979
+#: ../src/bookmarkeditdialog.c:996
 msgid "Au_to-Connect:"
 msgstr "Сам повежи:"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:990
+#: ../src/bookmarkeditdialog.c:1007
 msgid "Connection Settings"
 msgstr "Поставке везе"
 
-#: ../src/bookmarkeditdialog.c:996
+#: ../src/bookmarkeditdialog.c:1013
 msgid "Service t_ype:"
 msgstr "В_рста услуге:"
 
-#: ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:1029
 msgid "_Location (URI):"
 msgstr "_Место (адреса):"
 
-#: ../src/bookmarkeditdialog.c:1024
+#: ../src/bookmarkeditdialog.c:1041
 msgid "P_ath:"
 msgstr "Пу_тања:"
 
-#: ../src/bookmarkeditdialog.c:1030
+#: ../src/bookmarkeditdialog.c:1047
 msgid "_Share:"
 msgstr "_Дељење:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1049
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Optional Information"
 msgstr "Додатни подаци"
 
-#: ../src/bookmarkeditdialog.c:1055
+#: ../src/bookmarkeditdialog.c:1072
 msgid "_Port:"
 msgstr "_Прикључник:"
 
-#: ../src/bookmarkeditdialog.c:1061
+#: ../src/bookmarkeditdialog.c:1078
 msgid "Set the port to 0 to use the default port"
 msgstr "Постави прикључник на 0 да би се користио задати прикључник"
 
-#: ../src/bookmarkeditdialog.c:1063
+#: ../src/bookmarkeditdialog.c:1080
 msgid "_Folder:"
 msgstr "_Фасцикла:"
 
-#: ../src/bookmarkeditdialog.c:1069
+#: ../src/bookmarkeditdialog.c:1086
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Ово се не користи заправо за качење, већ је неопходно за отварање тачке качења у прегледнику датотека"
 
-#: ../src/bookmarkeditdialog.c:1072
+#: ../src/bookmarkeditdialog.c:1089
 msgid "_Domain:"
 msgstr "_Домен:"
 
-#: ../src/bookmarkeditdialog.c:1078
+#: ../src/bookmarkeditdialog.c:1095
 msgid "_User Name:"
 msgstr "_Корисничко име:"
 
@@ -484,7 +501,7 @@ msgstr "Нач_ин"
 msgid "_Orientation"
 msgstr "_Усмерење"
 
-#: ../src/preferencesdialog.c:496
+#: ../src/preferencesdialog.c:497
 msgid "Preferences"
 msgstr "Поставке"
 
