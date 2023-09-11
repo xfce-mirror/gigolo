@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-20 12:51+0200\n"
+"POT-Creation-Date: 2023-09-11 12:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Uyghur (http://www.transifex.com/xfce/xfce-apps/language/ug/)\n"
+"Language-Team: Uyghur (http://app.transifex.com/xfce/xfce-apps/language/ug/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,133 +41,133 @@ msgstr "نەشر ئۇچۇرىنى كۆرسەت"
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- يىراقتىكى ھۆججەت سىستېمىسىغا باغلىنىشنى ئاسانلاشتۇرىدىغان ئاددىي ئالدى ئۇچ"
 
-#: ../src/common.c:77
+#: ../src/common.c:73
 msgid "Unix Device"
 msgstr "يۇنىكىس(Unix) ئۈسكۈنىسى"
 
-#: ../src/common.c:79
+#: ../src/common.c:75
 msgid "Windows Share"
 msgstr "ۋىندوۋس(Windows) ھەمبەھىر"
 
-#: ../src/common.c:81
+#: ../src/common.c:77
 msgid "FTP"
 msgstr "FTP"
 
-#: ../src/common.c:83
+#: ../src/common.c:79
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/common.c:85
+#: ../src/common.c:81
 msgid "SSH / SFTP"
 msgstr ""
 
-#: ../src/common.c:87
+#: ../src/common.c:83
 msgid "Obex"
 msgstr "Obex"
 
-#: ../src/common.c:89
+#: ../src/common.c:85
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: ../src/common.c:91
+#: ../src/common.c:87
 msgid "WebDAV (secure)"
 msgstr "WebDAV(بىخەتەر)"
 
-#: ../src/common.c:93 ../src/window.c:1598
+#: ../src/common.c:89 ../src/window.c:1611
 msgid "Network"
 msgstr "تور"
 
-#: ../src/common.c:95
+#: ../src/common.c:91
 msgid "Archive"
 msgstr "ئارخىپ"
 
-#: ../src/common.c:97
+#: ../src/common.c:93
 msgid "Photos"
 msgstr "سۈرەتلەر"
 
-#: ../src/common.c:99
+#: ../src/common.c:95
 msgid "Custom Location"
 msgstr "ئىختىيارى ئورۇن"
 
-#: ../src/window.c:260
+#: ../src/window.c:269
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "باغلىنىۋاتقان ئورۇن «%s»"
 
-#: ../src/window.c:414
+#: ../src/window.c:423
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "يەرلىك ۋە يىراقتىكى ھۆججەت سىستېمىسىغا ئوڭاي باغلىنىدىغان/ئېگەرلەيدىغان ئاددىي ئالدى ئۇچ پروگراممىسى"
 
-#: ../src/window.c:415
+#: ../src/window.c:424
 msgid "Copyright 2008-2011 Enrico Tröger"
 msgstr "نەشر ھوقۇقى 2008-2011 Enrico Tröger غا تەۋە"
 
-#: ../src/window.c:418
+#: ../src/window.c:427
 msgid "translator-credits"
 msgstr "غەيرەت ت.كەنجى <gheyret@gmail.com>"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:467
+#: ../src/window.c:476
 #, c-format
 msgid "%s (%s)"
 msgstr ""
 
-#: ../src/window.c:472
+#: ../src/window.c:481
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "گىگولو(Gigolo) دا GVfs تەمىنلىگەن تۆۋەندىكى كېلىشىملەرنى ئىشلەتكىلى بولىدۇ"
 
-#: ../src/window.c:485 ../src/gigolo.ui.h:22
+#: ../src/window.c:494 ../src/gigolo.ui.h:22
 msgid "Supported Protocols"
 msgstr "قوللايدىغان كېلىشىملەر"
 
-#: ../src/window.c:587 ../src/window.c:646
+#: ../src/window.c:596 ../src/window.c:655
 #, c-format
 msgid "The command '%s' failed"
 msgstr "بۇيرۇق ‹%s› مەغلۇپ بولدى"
 
-#: ../src/window.c:588 ../src/window.c:621 ../src/window.c:634
-#: ../src/window.c:647 ../src/window.c:844 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:597 ../src/window.c:630 ../src/window.c:643
+#: ../src/window.c:656 ../src/window.c:853 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "خاتالىق"
 
-#: ../src/window.c:621
+#: ../src/window.c:630
 msgid "Invalid terminal command"
 msgstr "ئىناۋەتسىز تېرمىنال بۇيرۇقى"
 
-#: ../src/window.c:633
+#: ../src/window.c:642
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "«%s» نىڭ كۆڭۈلدىكى ئورنى يوق"
 
-#: ../src/window.c:753
+#: ../src/window.c:762
 msgid "Edit _Bookmark"
 msgstr "خەتكۈش تەھرىرلەش(_B)"
 
-#: ../src/window.c:755 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:764 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "خەتكۈش قۇرۇش(_B)"
 
-#: ../src/window.c:1508
+#: ../src/window.c:1521
 msgid "Connected"
 msgstr "باغلاندى"
 
-#: ../src/window.c:1517 ../src/bookmarkdialog.c:310
+#: ../src/window.c:1530 ../src/bookmarkdialog.c:309
 msgid "Service Type"
 msgstr "مۇلازىمەت تىپى"
 
-#: ../src/window.c:1525 ../src/bookmarkdialog.c:302
+#: ../src/window.c:1538 ../src/bookmarkdialog.c:301
 msgid "Name"
 msgstr "ئاتى"
 
-#: ../src/window.c:1590
+#: ../src/window.c:1603
 msgid "Bookmarks"
 msgstr "خەتكۈش"
 
-#: ../src/window.c:1635 ../src/window.c:1668 ../src/gigolo.ui.h:1
+#: ../src/window.c:1648 ../src/window.c:1683 ../src/gigolo.ui.h:1
 #: ../gigolo.desktop.in.h:1
 msgid "Gigolo"
 msgstr "گىگولو(Gigolo)"
@@ -211,42 +211,47 @@ msgstr "قىسقۇچ: %s"
 msgid "Path: %s"
 msgstr "يول: %s"
 
-#: ../src/bookmarkdialog.c:318
+#: ../src/bookmarkdialog.c:317
 msgid "Host"
 msgstr "كومپيۇتېر"
 
-#: ../src/bookmarkdialog.c:326
+#: ../src/bookmarkdialog.c:325
 msgid "Port"
 msgstr "ئېغىز"
 
-#: ../src/bookmarkdialog.c:334
+#: ../src/bookmarkdialog.c:333
 msgid "Auto-Connect"
 msgstr "ئاپتوماتىك باغلىنىش"
 
-#: ../src/bookmarkdialog.c:342
+#: ../src/bookmarkdialog.c:341
 msgid "Username"
 msgstr "ئىشلەتكۈچى ئاتى"
 
-#: ../src/bookmarkdialog.c:350
+#: ../src/bookmarkdialog.c:349
 msgid "Other information"
 msgstr "باشقا ئۇچۇرلار"
 
-#: ../src/bookmarkdialog.c:371 ../src/bookmarkdialog.c:419
+#: ../src/bookmarkdialog.c:370 ../src/bookmarkdialog.c:422
+#: ../src/bookmarkeditdialog.c:790
 msgid "_Add"
 msgstr ""
 
-#: ../src/bookmarkdialog.c:378 ../src/bookmarkdialog.c:424
+#: ../src/bookmarkdialog.c:377 ../src/bookmarkdialog.c:427
 #: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "تەھرىر(_E)"
 
-#: ../src/bookmarkdialog.c:385 ../src/bookmarkdialog.c:429
+#: ../src/bookmarkdialog.c:384 ../src/bookmarkdialog.c:432
 msgid "_Delete"
 msgstr "ئۆچۈر(_D)"
 
-#: ../src/bookmarkdialog.c:406
+#: ../src/bookmarkdialog.c:405
 msgid "Edit Bookmarks"
 msgstr "خەتكۈش تەھرىرلەش"
+
+#: ../src/bookmarkdialog.c:412 ../src/preferencesdialog.c:500
+msgid "_Close"
+msgstr "تاقا(_C)"
 
 #: ../src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
@@ -273,88 +278,100 @@ msgstr "باغلىنىدىغان ئىناۋەتلىك URI نى كىرگۈزۈش�
 msgid "_Device:"
 msgstr "ئۈسكۈنە(_D):"
 
-#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1018
+#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1035
 msgid "_Server:"
 msgstr "مۇلازىمېتىر(_S):"
 
-#: ../src/bookmarkeditdialog.c:786
+#: ../src/bookmarkeditdialog.c:788
 msgid "Create Bookmark"
 msgstr "خەتكۈش قۇرۇش"
 
-#: ../src/bookmarkeditdialog.c:793
+#: ../src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
 msgstr "خەتكۈش تەھرىرلەش"
 
-#: ../src/bookmarkeditdialog.c:801
+#: ../src/bookmarkeditdialog.c:799
+msgid "_OK"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "مۇلازىمېتىرغا باغلىنىش"
 
+#: ../src/bookmarkeditdialog.c:807
+msgid "Co_nnect"
+msgstr ""
+
+#: ../src/bookmarkeditdialog.c:959
+msgid "_Cancel"
+msgstr ""
+
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:955
+#: ../src/bookmarkeditdialog.c:972
 msgid "Bookmark Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:961
+#: ../src/bookmarkeditdialog.c:978
 msgid "_Name:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:970
+#: ../src/bookmarkeditdialog.c:987
 msgid "_Color:"
 msgstr "رەڭ(_C):"
 
-#: ../src/bookmarkeditdialog.c:979
+#: ../src/bookmarkeditdialog.c:996
 msgid "Au_to-Connect:"
 msgstr ""
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:990
+#: ../src/bookmarkeditdialog.c:1007
 msgid "Connection Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:996
+#: ../src/bookmarkeditdialog.c:1013
 msgid "Service t_ype:"
 msgstr "مۇلازىمەت تىپى(_Y):"
 
-#: ../src/bookmarkeditdialog.c:1012
+#: ../src/bookmarkeditdialog.c:1029
 msgid "_Location (URI):"
 msgstr "ئورۇن(URI)(_L):"
 
-#: ../src/bookmarkeditdialog.c:1024
+#: ../src/bookmarkeditdialog.c:1041
 msgid "P_ath:"
 msgstr "يول(_P):"
 
-#: ../src/bookmarkeditdialog.c:1030
+#: ../src/bookmarkeditdialog.c:1047
 msgid "_Share:"
 msgstr "ھەمبەھىر(_S):"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1049
+#: ../src/bookmarkeditdialog.c:1066
 msgid "Optional Information"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1055
+#: ../src/bookmarkeditdialog.c:1072
 msgid "_Port:"
 msgstr "ئېغىز(_P):"
 
-#: ../src/bookmarkeditdialog.c:1061
+#: ../src/bookmarkeditdialog.c:1078
 msgid "Set the port to 0 to use the default port"
 msgstr "ئېغىز نومۇرى 0 بولسا كۆڭۈلدىكى ئېغىز ئىشلىتىلىدۇ"
 
-#: ../src/bookmarkeditdialog.c:1063
+#: ../src/bookmarkeditdialog.c:1080
 msgid "_Folder:"
 msgstr "مۇندەرىجە(_F):"
 
-#: ../src/bookmarkeditdialog.c:1069
+#: ../src/bookmarkeditdialog.c:1086
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "بۇ رەسمىي ئېگەرلەشتە ئىشلىتىلمەيدۇ، پەقەتلا ھۆججەت كۆرگۈدە ئېگەرلەش نۇقتىسىنى ئېچىش ئۈچۈن كېرەك بولىدۇ."
 
-#: ../src/bookmarkeditdialog.c:1072
+#: ../src/bookmarkeditdialog.c:1089
 msgid "_Domain:"
 msgstr "دائىرە(_D):"
 
-#: ../src/bookmarkeditdialog.c:1078
+#: ../src/bookmarkeditdialog.c:1095
 msgid "_User Name:"
 msgstr "ئىشلەتكۈچى ئاتى(_U):"
 
@@ -483,7 +500,7 @@ msgstr "ئۇسلۇب(_Y)"
 msgid "_Orientation"
 msgstr "يۆنىلىشى(_O)"
 
-#: ../src/preferencesdialog.c:496
+#: ../src/preferencesdialog.c:497
 msgid "Preferences"
 msgstr "تەڭشەكلەر"
 
