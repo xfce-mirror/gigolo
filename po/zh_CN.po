@@ -7,14 +7,14 @@
 # Hunt Xu <huntxu@live.cn>, 2009-2010
 # Jiahua Huang <jhuangjiahua@gmail.com>, 2009
 # Levi Zhou <congzhou821@gmail.com>, 2016
-# 玉堂白鹤 <yjwork@qq.com>, 2018,2020,2022
+# 玉堂白鹤 <yjwork@qq.com>, 2018,2020,2022-2023
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 12:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2018,2020,2022\n"
+"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2018,2020,2022-2023\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/xfce/xfce-apps/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -305,7 +305,7 @@ msgstr "与服务器连接"
 
 #: ../src/bookmarkeditdialog.c:807
 msgid "Co_nnect"
-msgstr ""
+msgstr "连接(_N)"
 
 #: ../src/bookmarkeditdialog.c:959
 msgid "_Cancel"
