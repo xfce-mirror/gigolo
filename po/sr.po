@@ -301,7 +301,7 @@ msgstr "Повежи се са сервером"
 
 #: ../src/bookmarkeditdialog.c:807
 msgid "Co_nnect"
-msgstr ""
+msgstr "По_вежи"
 
 #: ../src/bookmarkeditdialog.c:959
 msgid "_Cancel"
