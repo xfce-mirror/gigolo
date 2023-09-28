@@ -131,8 +131,7 @@ gint main(gint argc, gchar** argv)
 	if (show_version)
 	{
 		g_print("%s %s\n\n", PACKAGE, VERSION);
-		g_print("%s\n", "Copyright (c) 2008-2011");
-		g_print("\tEnrico Tröger <enrico@xfce.org>\n\n");
+		g_print("%s\n", "Copyright \302\251 2008-2023 The Xfce development team");
 		g_print("\n");
 
 		return EXIT_SUCCESS;

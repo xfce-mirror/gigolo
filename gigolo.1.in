@@ -10,7 +10,7 @@ Gigolo is a frontend to easily manage connections to local and remote filesystem
 GIO/GVfs. It allows you to quickly mount a remote filesystem and manage
 bookmarks to such.
 .PP
-Homepage: http://www.uvena.de/gigolo/
+Homepage: https://docs.xfce.org/apps/gigolo/start
 .SH "OPTIONS"
 If called without any arguments, the Gigolo main window is shown.
 .IP "\fB-a\fP, \fB\-\-auto\-connect\fP         " 10
