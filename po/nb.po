@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 12:48+0200\n"
+"POT-Creation-Date: 2023-09-29 00:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: heskjestad <cato@heskjestad.xyz>, 2022-2023\n"
 "Language-Team: Norwegian Bokmål (http://app.transifex.com/xfce/xfce-apps/language/nb/)\n"
@@ -103,10 +103,6 @@ msgstr "Kobler til «%s»"
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "En enkel grenseflate for å enkelt koble til/montere lokale og fjerntliggende filsystem"
-
-#: ../src/window.c:424
-msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Kopirett © 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:427
 msgid "translator-credits"
