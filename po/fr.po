@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 12:48+0200\n"
+"POT-Creation-Date: 2023-09-29 00:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: jc1 <jc1.quebecos@gmail.com>, 2013,2020,2023\n"
 "Language-Team: French (http://app.transifex.com/xfce/xfce-apps/language/fr/)\n"
@@ -106,10 +106,6 @@ msgstr "Connexion à « %s » en cours"
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Une interface simple pour connecter / monter facilement des systèmes de fichiers locaux et distants"
-
-#: ../src/window.c:424
-msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:427
 msgid "translator-credits"
