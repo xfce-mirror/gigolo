@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 12:48+0200\n"
+"POT-Creation-Date: 2023-09-29 00:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020,2022-2023\n"
 "Language-Team: Chinese (Taiwan) (http://app.transifex.com/xfce/xfce-apps/language/zh_TW/)\n"
@@ -101,10 +101,6 @@ msgstr "正在連接「%s」"
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "讓您連接／掛載本機和遠端檔案系統的簡易前端程式"
-
-#: ../src/window.c:424
-msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "著作權 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:427
 msgid "translator-credits"
