@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 12:48+0200\n"
+"POT-Creation-Date: 2023-09-29 00:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>, 2014,2019,2021\n"
 "Language-Team: Thai (http://app.transifex.com/xfce/xfce-apps/language/th/)\n"
@@ -99,10 +99,6 @@ msgstr "กำลังเชื่อมต่อไปยัง \"%s\""
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "โปรแกรมฉากหน้าที่เรียบง่ายสำหรับเชื่อมต่อ/เมานท์ระบบแฟ้มในเครื่องและในเครือข่ายอย่างง่ายดาย"
-
-#: ../src/window.c:424
-msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:427
 msgid "translator-credits"
