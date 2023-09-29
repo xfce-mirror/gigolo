@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 12:48+0200\n"
+"POT-Creation-Date: 2023-09-29 00:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2013,2018,2022\n"
 "Language-Team: Korean (http://app.transifex.com/xfce/xfce-apps/language/ko/)\n"
@@ -100,10 +100,6 @@ msgstr "\"%s\"(으)로 연결하는중"
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "로컬과 원격 파일 시스템에 쉽게 연결하고 마운트하기 위한 간단한 프론트엔드"
-
-#: ../src/window.c:424
-msgid "Copyright 2008-2011 Enrico Tröger"
-msgstr "Copyright 2008-2011 Enrico Tröger"
 
 #: ../src/window.c:427
 msgid "translator-credits"
