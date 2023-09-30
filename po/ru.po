@@ -300,7 +300,7 @@ msgstr "Подключиться к серверу"
 
 #: ../src/bookmarkeditdialog.c:807
 msgid "Co_nnect"
-msgstr ""
+msgstr "Подключи_ть"
 
 #: ../src/bookmarkeditdialog.c:959
 msgid "_Cancel"
