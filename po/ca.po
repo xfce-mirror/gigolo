@@ -301,7 +301,7 @@ msgstr "Connecta al servidor"
 
 #: ../src/bookmarkeditdialog.c:807
 msgid "Co_nnect"
-msgstr ""
+msgstr "Co_nnecta"
 
 #: ../src/bookmarkeditdialog.c:959
 msgid "_Cancel"
