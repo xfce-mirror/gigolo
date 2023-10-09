@@ -28,8 +28,9 @@
 #include <gtk/gtk.h>
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
+#define WINDOWING_IS_X11() GDK_IS_X11_DISPLAY (gdk_display_get_default ())
 #else
-#define GDK_IS_X11_DISPLAY(display) FALSE
+#define WINDOWING_IS_X11() FALSE
 #endif
 
 #include "common.h"
@@ -1440,7 +1441,7 @@ static void create_ui_elements(GigoloWindow *window)
 	priv->swin_iconview = GTK_WIDGET (gtk_builder_get_object (priv->builder, "swin_iconview"));
 	priv->tree_popup_menu = GTK_WIDGET (gtk_builder_get_object (priv->builder, "tree_popup_menu"));
 	priv->toolbar = GTK_WIDGET (gtk_builder_get_object (priv->builder, "toolbar"));
-	if (GDK_IS_X11_DISPLAY (gdk_display_get_default ()))
+	if (WINDOWING_IS_X11 ())
 		priv->systray_icon_popup_menu = GTK_WIDGET (gtk_builder_get_object (priv->builder, "systray_icon_popup_menu"));
 	priv->notebook_store = GTK_WIDGET (gtk_builder_get_object (priv->builder, "notebook_store"));
 	priv->menubar_bookmarks_menu = gigolo_menu_button_action_new("Bookmarks");
@@ -1676,7 +1677,7 @@ static void gigolo_window_init(GigoloWindow *window)
 	gtk_widget_show_all(priv->swin_iconview);
 
 	/* Status icon */
-	if (GDK_IS_X11_DISPLAY(gdk_display_get_default()))
+	if (WINDOWING_IS_X11())
 	{
 		G_GNUC_BEGIN_IGNORE_DEPRECATIONS /* Gtk 3.14 */
 		priv->systray_icon = gtk_status_icon_new_from_icon_name(gigolo_get_application_icon_name());
