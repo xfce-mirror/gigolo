@@ -9,6 +9,7 @@
 # Emin Tufan Çetin <etcetin@gmail.com>, 2020
 # Emin Tufan Çetin <etcetin@gmail.com>, 2020
 # efa1997c46de3f3ae3660d9ff15ebb10_d43e846 <59fbee64543f2ea2aa5bccfc0fc9e4a4_119162>, 2013
+# Sabri Ünal <libreajans@gmail.com>, 2023
 # Serdar Sağlam <teknomobil@msn.com>, 2019
 # Volkan Gezer <volkangezer@gmail.com>, 2013
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-29 00:48+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Demiray Muhterem <mdemiray@msn.com>, 2018,2022\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>, 2023\n"
 "Language-Team: Turkish (http://app.transifex.com/xfce/xfce-apps/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -308,7 +309,7 @@ msgstr ""
 
 #: ../src/bookmarkeditdialog.c:959
 msgid "_Cancel"
-msgstr "_İptal"
+msgstr "İ_ptal"
 
 #. Bookmark Settings
 #: ../src/bookmarkeditdialog.c:972
