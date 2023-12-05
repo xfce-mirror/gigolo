@@ -302,7 +302,7 @@ msgstr ""
 
 #: ../src/bookmarkeditdialog.c:959
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancel"
 
 #. Bookmark Settings
 #: ../src/bookmarkeditdialog.c:972
