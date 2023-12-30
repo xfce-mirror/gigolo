@@ -305,7 +305,7 @@ msgstr "Sunucuya Bağlan"
 
 #: ../src/bookmarkeditdialog.c:807
 msgid "Co_nnect"
-msgstr ""
+msgstr "_Bağlan"
 
 #: ../src/bookmarkeditdialog.c:959
 msgid "_Cancel"
