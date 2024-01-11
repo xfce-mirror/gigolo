@@ -118,7 +118,9 @@ gint main(gint argc, gchar** argv)
 	GOptionContext *context;
 
 	bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
+#ifdef HAVE_BIND_TEXTDOMAIN_CODESET
 	bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
+#endif
 	textdomain(GETTEXT_PACKAGE);
 
 	context = g_option_context_new(_("- a simple frontend to easily connect to remote filesystems"));
