@@ -1,7 +1,8 @@
 dnl Process this file with autoconf to produce a configure script.
+XDT_VERSION_INIT([0.5.3], [git])
 
 AC_COPYRIGHT([Copyright (c) 2008-2023 The Xfce development team. All rights reserved.])
-AC_INIT([gigolo], [0.5.3], [https://gitlab.xfce.org/apps/gigolo])
+AC_INIT([gigolo], [xdt_version], [https://gitlab.xfce.org/apps/gigolo])
 AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip foreign])
 
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -14,6 +15,8 @@ AC_USE_SYSTEM_EXTENSIONS
 AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_LN_S
+AC_PREREQ([2.69])
+AC_REVISION([xdt_version_build])
 
 # GTK checks
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.38.0])
@@ -36,7 +39,7 @@ AC_SEARCH_LIBS([bind_textdomain_codeset], [intl],
                [AC_DEFINE([HAVE_BIND_TEXTDOMAIN_CODESET], [1], [Define to 1 if you have the 'bind_textdomain_codeset' function.])],
                [])
 
-XDT_FEATURE_DEBUG()
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 AC_CONFIG_FILES([
 Makefile
