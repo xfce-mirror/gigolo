@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 00:48+0200\n"
+"POT-Creation-Date: 2024-04-06 12:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: Elishai Eliyahu <elishai@mailfence.com>, 2020,2022-2023\n"
 "Language-Team: Hebrew (http://app.transifex.com/xfce/xfce-apps/language/he/)\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
 
 #: ../src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
@@ -42,7 +42,7 @@ msgstr "הרבה מלל"
 msgid "Show version information"
 msgstr "הצג מידע גרסה"
 
-#: ../src/main.c:124
+#: ../src/main.c:126
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- מגשר חזיתי פשוט לחיבור בקלות למערכות קבצים רחוקות"
 
@@ -78,7 +78,7 @@ msgstr "‫WebDAV‏"
 msgid "WebDAV (secure)"
 msgstr "‏WebDAV (מאובטח)"
 
-#: ../src/common.c:89 ../src/window.c:1611
+#: ../src/common.c:89 ../src/window.c:1612
 msgid "Network"
 msgstr "רשת"
 
@@ -94,82 +94,81 @@ msgstr "תצלומים"
 msgid "Custom Location"
 msgstr "מיקום מותאם"
 
-#: ../src/window.c:269
+#: ../src/window.c:270
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "מתחבר כעת אל \"%s\""
 
-#: ../src/window.c:423
+#: ../src/window.c:424
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "מגשר חזיתי פשוט לצורך התחברות/עגינה קלה למערכות קבצים מקומיות ומרוחקות"
 
-#: ../src/window.c:427
+#: ../src/window.c:428
 msgid "translator-credits"
 msgstr "שבחים-מתרגמים"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:476
+#: ../src/window.c:477
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:481
+#: ../src/window.c:482
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "‏Gigolo מסוגל להשתמש בפרוטוקולים הבאים אשר מסופקים באמצעות GVfs:"
 
-#: ../src/window.c:494 ../src/gigolo.ui.h:22
+#: ../src/window.c:495
 msgid "Supported Protocols"
 msgstr "פרוטוקולים נתמכים"
 
-#: ../src/window.c:596 ../src/window.c:655
+#: ../src/window.c:597 ../src/window.c:656
 #, c-format
 msgid "The command '%s' failed"
 msgstr "הפקודה '%s' נכשלה"
 
-#: ../src/window.c:597 ../src/window.c:630 ../src/window.c:643
-#: ../src/window.c:656 ../src/window.c:853 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:598 ../src/window.c:631 ../src/window.c:644
+#: ../src/window.c:657 ../src/window.c:854 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "שגיאה"
 
-#: ../src/window.c:630
+#: ../src/window.c:631
 msgid "Invalid terminal command"
 msgstr "פקודת מסוף שגויה"
 
-#: ../src/window.c:642
+#: ../src/window.c:643
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "אין מקום שגרתי עבור \"%s\""
 
-#: ../src/window.c:762
+#: ../src/window.c:763
 msgid "Edit _Bookmark"
 msgstr "ע_רוך סימנייה"
 
-#: ../src/window.c:764 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:765 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "צור _סימנייה"
 
-#: ../src/window.c:1521
+#: ../src/window.c:1522
 msgid "Connected"
 msgstr "מחובר"
 
-#: ../src/window.c:1530 ../src/bookmarkdialog.c:309
+#: ../src/window.c:1531 ../src/bookmarkdialog.c:309
 msgid "Service Type"
 msgstr "טיפוס שירות"
 
-#: ../src/window.c:1538 ../src/bookmarkdialog.c:301
+#: ../src/window.c:1539 ../src/bookmarkdialog.c:301
 msgid "Name"
 msgstr "שם"
 
-#: ../src/window.c:1603
+#: ../src/window.c:1604
 msgid "Bookmarks"
 msgstr "סימניות"
 
-#: ../src/window.c:1648 ../src/window.c:1683 ../src/gigolo.ui.h:1
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:1649 ../src/window.c:1684
 msgid "Gigolo"
 msgstr "‏Gigolo"
 
@@ -238,7 +237,6 @@ msgid "_Add"
 msgstr "_הוסף"
 
 #: ../src/bookmarkdialog.c:377 ../src/bookmarkdialog.c:427
-#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "ע_ריכה"
 
@@ -555,7 +553,7 @@ msgstr "לא נמצאו חלקי Share"
 msgid "No Hosts found"
 msgstr "לא נמצאו מארחים"
 
-#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
+#: ../src/browsenetworkpanel.c:439
 msgid "_Connect"
 msgstr "הת_חבר"
 
@@ -582,119 +580,3 @@ msgstr "אין סימניות"
 #: ../src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr "התחבר אל הסימנייה הנבחרת"
-
-#: ../src/gigolo.ui.h:2
-msgid "_File"
-msgstr "_קובץ"
-
-#: ../src/gigolo.ui.h:3
-msgid "_Quit"
-msgstr "_הפסק"
-
-#: ../src/gigolo.ui.h:5
-msgid "_Edit Bookmarks"
-msgstr "_ערוך סימניות"
-
-#: ../src/gigolo.ui.h:6
-msgid "_Preferences"
-msgstr "_העדפות"
-
-#: ../src/gigolo.ui.h:7
-msgid "_View"
-msgstr "_תצוגה"
-
-#: ../src/gigolo.ui.h:8
-msgid "_Toolbar"
-msgstr "סרגל _כלים"
-
-#: ../src/gigolo.ui.h:9
-msgid "Side _Panel"
-msgstr "_לוח צד"
-
-#: ../src/gigolo.ui.h:10
-msgid "Status _Icon"
-msgstr "_סמל מצב"
-
-#: ../src/gigolo.ui.h:11
-msgid "View as _Symbols"
-msgstr "הצג בתור _סמלים"
-
-#: ../src/gigolo.ui.h:12
-msgid "View as _Detailed List"
-msgstr "הצג בתור רשימה מ_פורטת"
-
-#: ../src/gigolo.ui.h:13
-msgid "_Actions"
-msgstr "_פעולות"
-
-#: ../src/gigolo.ui.h:15
-msgid "_Disconnect"
-msgstr "_התנתק"
-
-#: ../src/gigolo.ui.h:16
-msgid "_Bookmarks"
-msgstr "_סימניות"
-
-#: ../src/gigolo.ui.h:17
-msgid "_Open"
-msgstr "_פתח"
-
-#: ../src/gigolo.ui.h:18
-msgid "Open in _Terminal"
-msgstr "פתח בתוך _מסוף"
-
-#: ../src/gigolo.ui.h:19
-msgid "_Copy URI"
-msgstr "ה_עתק URI"
-
-#: ../src/gigolo.ui.h:20
-msgid "_Help"
-msgstr "_עזרה"
-
-#: ../src/gigolo.ui.h:21
-msgid "Online Help"
-msgstr "עזרה מקוונת"
-
-#: ../src/gigolo.ui.h:23
-msgid "About"
-msgstr "על אודות"
-
-#: ../src/gigolo.ui.h:24
-msgid "Choose a bookmark to connect to"
-msgstr "בחר סימנייה להתחבר אליה"
-
-#: ../src/gigolo.ui.h:25
-msgid "Disconnect the selected resource"
-msgstr "נתק את המקור הנבחר"
-
-#: ../src/gigolo.ui.h:26
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "פתח את מנהל הסימניות כדי להוסיף, לערוך או למחוק סימניות"
-
-#: ../src/gigolo.ui.h:27
-msgid "Open the selected resource with a file manager"
-msgstr "פתח את המקור הנבחר בעזרת מנהל קבצים"
-
-#: ../src/gigolo.ui.h:28
-msgid "Start a terminal from here"
-msgstr "התחל מסוף מכאן"
-
-#: ../src/gigolo.ui.h:29
-msgid "Open _Terminal"
-msgstr "פתח _מסוף"
-
-#: ../src/gigolo.ui.h:30
-msgid "Quit Gigolo"
-msgstr "צא מתוך Gigolo"
-
-#: ../src/gigolo.ui.h:31
-msgid "_Edit Bookmark"
-msgstr "ע_רוך סימנייה"
-
-#: ../gigolo.desktop.in.h:2
-msgid "Frontend for GIO/GVfs"
-msgstr "מגשר חזיתי עבור GIO/GVfs"
-
-#: ../gigolo.desktop.in.h:3
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "מגשר חזיתי פשוט לצורך התחברות קלה למערכות קבצים מרוחקות"
