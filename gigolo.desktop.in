@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-_Name=Gigolo
-_GenericName=Frontend for GIO/GVfs
-_Comment=A simple frontend to easily connect to remote filesystems
+Name=Gigolo
+GenericName=Frontend for GIO/GVfs
+Comment=A simple frontend to easily connect to remote filesystems
 Exec=gigolo
 Icon=org.xfce.gigolo
 Terminal=false
