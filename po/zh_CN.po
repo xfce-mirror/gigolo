@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 00:48+0200\n"
+"POT-Creation-Date: 2024-04-06 12:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2018,2020,2022-2023\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/xfce/xfce-apps/language/zh_CN/)\n"
@@ -42,7 +42,7 @@ msgstr "冗长"
 msgid "Show version information"
 msgstr "显示版本信息"
 
-#: ../src/main.c:124
+#: ../src/main.c:126
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "-易于与远程文件系统连接的简单前端"
 
@@ -78,7 +78,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV(安全的)"
 
-#: ../src/common.c:89 ../src/window.c:1611
+#: ../src/common.c:89 ../src/window.c:1612
 msgid "Network"
 msgstr "网络"
 
@@ -94,82 +94,81 @@ msgstr "照片"
 msgid "Custom Location"
 msgstr "自定义位置"
 
-#: ../src/window.c:269
+#: ../src/window.c:270
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "正在连接到 “%s” "
 
-#: ../src/window.c:423
+#: ../src/window.c:424
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "易于连接和挂载本地或远程文件系统的简单前端"
 
-#: ../src/window.c:427
+#: ../src/window.c:428
 msgid "translator-credits"
 msgstr "Hunt Xu <huntxu@live.cn>, 2009, 2010.\nJiahua Huang <jhuangjiahua@gmail.com>, 2009.\nChipong Luo <chipong.luo@yahoo.com>, 2011, 2012."
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:476
+#: ../src/window.c:477
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:481
+#: ../src/window.c:482
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo 可以使用 GVfs 提供的下列协议："
 
-#: ../src/window.c:494 ../src/gigolo.ui.h:22
+#: ../src/window.c:495
 msgid "Supported Protocols"
 msgstr "支持的协议"
 
-#: ../src/window.c:596 ../src/window.c:655
+#: ../src/window.c:597 ../src/window.c:656
 #, c-format
 msgid "The command '%s' failed"
 msgstr "无法执行命令 ‘%s’"
 
-#: ../src/window.c:597 ../src/window.c:630 ../src/window.c:643
-#: ../src/window.c:656 ../src/window.c:853 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:598 ../src/window.c:631 ../src/window.c:644
+#: ../src/window.c:657 ../src/window.c:854 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "错误"
 
-#: ../src/window.c:630
+#: ../src/window.c:631
 msgid "Invalid terminal command"
 msgstr "无效的终端命令"
 
-#: ../src/window.c:642
+#: ../src/window.c:643
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "“%s” 无可用的默认位置"
 
-#: ../src/window.c:762
+#: ../src/window.c:763
 msgid "Edit _Bookmark"
 msgstr "编辑书签(_B)"
 
-#: ../src/window.c:764 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:765 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "创建书签(_B)"
 
-#: ../src/window.c:1521
+#: ../src/window.c:1522
 msgid "Connected"
 msgstr "已连接"
 
-#: ../src/window.c:1530 ../src/bookmarkdialog.c:309
+#: ../src/window.c:1531 ../src/bookmarkdialog.c:309
 msgid "Service Type"
 msgstr "服务类型"
 
-#: ../src/window.c:1538 ../src/bookmarkdialog.c:301
+#: ../src/window.c:1539 ../src/bookmarkdialog.c:301
 msgid "Name"
 msgstr "名称"
 
-#: ../src/window.c:1603
+#: ../src/window.c:1604
 msgid "Bookmarks"
 msgstr "书签"
 
-#: ../src/window.c:1648 ../src/window.c:1683 ../src/gigolo.ui.h:1
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:1649 ../src/window.c:1684
 msgid "Gigolo"
 msgstr "Gigolo 远程连接"
 
@@ -238,7 +237,6 @@ msgid "_Add"
 msgstr "增加(_A)"
 
 #: ../src/bookmarkdialog.c:377 ../src/bookmarkdialog.c:427
-#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "编辑(_E)"
 
@@ -555,7 +553,7 @@ msgstr "未找到共享"
 msgid "No Hosts found"
 msgstr "未找到主机"
 
-#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
+#: ../src/browsenetworkpanel.c:439
 msgid "_Connect"
 msgstr "连接(_C)"
 
@@ -582,119 +580,3 @@ msgstr "无书签"
 #: ../src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr "与选中的书签连接"
-
-#: ../src/gigolo.ui.h:2
-msgid "_File"
-msgstr "文件(_F)"
-
-#: ../src/gigolo.ui.h:3
-msgid "_Quit"
-msgstr "退出(_Q)"
-
-#: ../src/gigolo.ui.h:5
-msgid "_Edit Bookmarks"
-msgstr "编辑书签(_E)"
-
-#: ../src/gigolo.ui.h:6
-msgid "_Preferences"
-msgstr "首选项(_P)"
-
-#: ../src/gigolo.ui.h:7
-msgid "_View"
-msgstr "视图(_V)"
-
-#: ../src/gigolo.ui.h:8
-msgid "_Toolbar"
-msgstr "工具栏(_T)"
-
-#: ../src/gigolo.ui.h:9
-msgid "Side _Panel"
-msgstr "侧边栏(_P)"
-
-#: ../src/gigolo.ui.h:10
-msgid "Status _Icon"
-msgstr "状态图标(_I)"
-
-#: ../src/gigolo.ui.h:11
-msgid "View as _Symbols"
-msgstr "以符号方式查看(_S)"
-
-#: ../src/gigolo.ui.h:12
-msgid "View as _Detailed List"
-msgstr "以详细列表方式查看(_D)"
-
-#: ../src/gigolo.ui.h:13
-msgid "_Actions"
-msgstr "动作(_A)"
-
-#: ../src/gigolo.ui.h:15
-msgid "_Disconnect"
-msgstr "断开(_D)"
-
-#: ../src/gigolo.ui.h:16
-msgid "_Bookmarks"
-msgstr "书签(_B)"
-
-#: ../src/gigolo.ui.h:17
-msgid "_Open"
-msgstr "打开(&O)"
-
-#: ../src/gigolo.ui.h:18
-msgid "Open in _Terminal"
-msgstr "在终端打开(_T)"
-
-#: ../src/gigolo.ui.h:19
-msgid "_Copy URI"
-msgstr "复制 URI(_C)"
-
-#: ../src/gigolo.ui.h:20
-msgid "_Help"
-msgstr "帮助(_H)"
-
-#: ../src/gigolo.ui.h:21
-msgid "Online Help"
-msgstr "在线帮助"
-
-#: ../src/gigolo.ui.h:23
-msgid "About"
-msgstr "关于"
-
-#: ../src/gigolo.ui.h:24
-msgid "Choose a bookmark to connect to"
-msgstr "选择要连接的书签"
-
-#: ../src/gigolo.ui.h:25
-msgid "Disconnect the selected resource"
-msgstr "断开选中的资源"
-
-#: ../src/gigolo.ui.h:26
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "打开书签管理器以添加、编辑或删除书签"
-
-#: ../src/gigolo.ui.h:27
-msgid "Open the selected resource with a file manager"
-msgstr "用文件管理器打开选中的资源"
-
-#: ../src/gigolo.ui.h:28
-msgid "Start a terminal from here"
-msgstr "在此启动终端"
-
-#: ../src/gigolo.ui.h:29
-msgid "Open _Terminal"
-msgstr "打开终端(_T)"
-
-#: ../src/gigolo.ui.h:30
-msgid "Quit Gigolo"
-msgstr "退出 Gigolo"
-
-#: ../src/gigolo.ui.h:31
-msgid "_Edit Bookmark"
-msgstr "编辑书签(_E)"
-
-#: ../gigolo.desktop.in.h:2
-msgid "Frontend for GIO/GVfs"
-msgstr "GIO/GVfs 前端"
-
-#: ../gigolo.desktop.in.h:3
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "易于与远程文件系统连接的简单前端"
