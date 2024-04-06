@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 00:48+0200\n"
+"POT-Creation-Date: 2024-04-06 12:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2014,2018,2020,2022-2023\n"
 "Language-Team: Dutch (http://app.transifex.com/xfce/xfce-apps/language/nl/)\n"
@@ -40,7 +40,7 @@ msgstr "Wees spraakzaam"
 msgid "Show version information"
 msgstr "Toon versie-informatie"
 
-#: ../src/main.c:124
+#: ../src/main.c:126
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- een eenvoudige grafische schil om makkelijk te verbinden met bestandssystemen op afstand"
 
@@ -76,7 +76,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (beveiligd)"
 
-#: ../src/common.c:89 ../src/window.c:1611
+#: ../src/common.c:89 ../src/window.c:1612
 msgid "Network"
 msgstr "Netwerk"
 
@@ -92,82 +92,81 @@ msgstr "Foto's"
 msgid "Custom Location"
 msgstr "Aangepaste locatie"
 
-#: ../src/window.c:269
+#: ../src/window.c:270
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Verbinding aan het maken met '%s'"
 
-#: ../src/window.c:423
+#: ../src/window.c:424
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Een eenvoudige grafische schil om gemakkelijk verbinding te maken met bestandssystemen op afstand en om partities op uw harde schijf aan te koppelen"
 
-#: ../src/window.c:427
+#: ../src/window.c:428
 msgid "translator-credits"
 msgstr "Timo Verbeek\nPjotr <pjotrvertaalt@gmail.com>"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:476
+#: ../src/window.c:477
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:481
+#: ../src/window.c:482
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo kan de volgende door GVfs verstrekte protocollen gebruiken:"
 
-#: ../src/window.c:494 ../src/gigolo.ui.h:22
+#: ../src/window.c:495
 msgid "Supported Protocols"
 msgstr "Ondersteunde protocollen"
 
-#: ../src/window.c:596 ../src/window.c:655
+#: ../src/window.c:597 ../src/window.c:656
 #, c-format
 msgid "The command '%s' failed"
 msgstr "De opdracht '%s' is mislukt"
 
-#: ../src/window.c:597 ../src/window.c:630 ../src/window.c:643
-#: ../src/window.c:656 ../src/window.c:853 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:598 ../src/window.c:631 ../src/window.c:644
+#: ../src/window.c:657 ../src/window.c:854 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Fout"
 
-#: ../src/window.c:630
+#: ../src/window.c:631
 msgid "Invalid terminal command"
 msgstr "Ongeldige terminalopdracht"
 
-#: ../src/window.c:642
+#: ../src/window.c:643
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "Geen standaardlocatie beschikbaar voor '%s'"
 
-#: ../src/window.c:762
+#: ../src/window.c:763
 msgid "Edit _Bookmark"
 msgstr "Bewerk bladwijzer"
 
-#: ../src/window.c:764 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:765 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Maak _bladwijzer"
 
-#: ../src/window.c:1521
+#: ../src/window.c:1522
 msgid "Connected"
 msgstr "Verbonden"
 
-#: ../src/window.c:1530 ../src/bookmarkdialog.c:309
+#: ../src/window.c:1531 ../src/bookmarkdialog.c:309
 msgid "Service Type"
 msgstr "Diensttype"
 
-#: ../src/window.c:1538 ../src/bookmarkdialog.c:301
+#: ../src/window.c:1539 ../src/bookmarkdialog.c:301
 msgid "Name"
 msgstr "Naam"
 
-#: ../src/window.c:1603
+#: ../src/window.c:1604
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
-#: ../src/window.c:1648 ../src/window.c:1683 ../src/gigolo.ui.h:1
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:1649 ../src/window.c:1684
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -236,7 +235,6 @@ msgid "_Add"
 msgstr "_Toevoegen"
 
 #: ../src/bookmarkdialog.c:377 ../src/bookmarkdialog.c:427
-#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "Be_werken"
 
@@ -553,7 +551,7 @@ msgstr "Geen Delen gevonden"
 msgid "No Hosts found"
 msgstr "Geen gastheercomputers gevonden"
 
-#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
+#: ../src/browsenetworkpanel.c:439
 msgid "_Connect"
 msgstr "Ver_binden"
 
@@ -580,119 +578,3 @@ msgstr "Geen bladwijzers"
 #: ../src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr "Verbind met de gekozen bladwijzer"
-
-#: ../src/gigolo.ui.h:2
-msgid "_File"
-msgstr "_Bestand"
-
-#: ../src/gigolo.ui.h:3
-msgid "_Quit"
-msgstr "_Afsluiten"
-
-#: ../src/gigolo.ui.h:5
-msgid "_Edit Bookmarks"
-msgstr "Bladwijzers bewerken"
-
-#: ../src/gigolo.ui.h:6
-msgid "_Preferences"
-msgstr "_Voorkeuren"
-
-#: ../src/gigolo.ui.h:7
-msgid "_View"
-msgstr "_Tonen"
-
-#: ../src/gigolo.ui.h:8
-msgid "_Toolbar"
-msgstr "Werkbalk"
-
-#: ../src/gigolo.ui.h:9
-msgid "Side _Panel"
-msgstr "Zijpa_neel"
-
-#: ../src/gigolo.ui.h:10
-msgid "Status _Icon"
-msgstr "Status_pictogram"
-
-#: ../src/gigolo.ui.h:11
-msgid "View as _Symbols"
-msgstr "Bekijk als _symbolen"
-
-#: ../src/gigolo.ui.h:12
-msgid "View as _Detailed List"
-msgstr "Bekijk als _gedetailleerde lijst"
-
-#: ../src/gigolo.ui.h:13
-msgid "_Actions"
-msgstr "_Acties"
-
-#: ../src/gigolo.ui.h:15
-msgid "_Disconnect"
-msgstr "Verbinding ver_breken"
-
-#: ../src/gigolo.ui.h:16
-msgid "_Bookmarks"
-msgstr "Blad_wijzers"
-
-#: ../src/gigolo.ui.h:17
-msgid "_Open"
-msgstr "_Openen"
-
-#: ../src/gigolo.ui.h:18
-msgid "Open in _Terminal"
-msgstr "Openen in _terminalvenster"
-
-#: ../src/gigolo.ui.h:19
-msgid "_Copy URI"
-msgstr "URI _kopiëren"
-
-#: ../src/gigolo.ui.h:20
-msgid "_Help"
-msgstr "_Hulp"
-
-#: ../src/gigolo.ui.h:21
-msgid "Online Help"
-msgstr "Hulp op het internet"
-
-#: ../src/gigolo.ui.h:23
-msgid "About"
-msgstr "Over"
-
-#: ../src/gigolo.ui.h:24
-msgid "Choose a bookmark to connect to"
-msgstr "Kies een bladwijzer om verbinding mee te maken"
-
-#: ../src/gigolo.ui.h:25
-msgid "Disconnect the selected resource"
-msgstr "Koppel de gekozen bron los"
-
-#: ../src/gigolo.ui.h:26
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Open de bladwijzerbeheerder om bladwijzers toe te voegen, te bewerken of te verwijderen"
-
-#: ../src/gigolo.ui.h:27
-msgid "Open the selected resource with a file manager"
-msgstr "Open de gekozen bron met een bestandbeheerder"
-
-#: ../src/gigolo.ui.h:28
-msgid "Start a terminal from here"
-msgstr "Start vanuit hier een terminalvenster"
-
-#: ../src/gigolo.ui.h:29
-msgid "Open _Terminal"
-msgstr "_Terminalvenster openen"
-
-#: ../src/gigolo.ui.h:30
-msgid "Quit Gigolo"
-msgstr "Sluit Gigolo"
-
-#: ../src/gigolo.ui.h:31
-msgid "_Edit Bookmark"
-msgstr "Bladwijzer be_werken"
-
-#: ../gigolo.desktop.in.h:2
-msgid "Frontend for GIO/GVfs"
-msgstr "Bedieningsschil voor GIO/GVfs"
-
-#: ../gigolo.desktop.in.h:3
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Een eenvoudige grafische schil om makkelijk te verbinden met bestandssystemen op afstand"
