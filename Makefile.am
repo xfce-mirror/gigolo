@@ -17,19 +17,12 @@ distuninstallcheck_listfiles = 						\
 EXTRA_DIST =					\
 	autogen.sh					\
 	gigolo.desktop.in			\
-	intltool-extract.in			\
-	intltool-merge.in			\
-	intltool-update.in			\
 	src/gigolo.ui
 
 
 DISTCLEANFILES =				\
 	gigolo.1					\
-	gigolo.desktop				\
-	intltool-extract			\
-	intltool-merge				\
-	intltool-update				\
-	po/.intltool-merge-cache.lock
+	gigolo.desktop
 
 install-data-local:
 	@$(NORMAL_INSTALL)
@@ -49,4 +42,6 @@ man_MANS=gigolo.1
 desktopdir = $(datadir)/applications
 desktop_in_files = gigolo.desktop
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-@INTLTOOL_DESKTOP_RULE@
+
+gigolo.desktop: gigolo.desktop.in
+	$(AM_V_GEN)$(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@

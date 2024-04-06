@@ -1,19 +1,22 @@
 dnl Process this file with autoconf to produce a configure script.
+XDT_VERSION_INIT([0.5.3], [git])
 
 AC_COPYRIGHT([Copyright (c) 2008-2023 The Xfce development team. All rights reserved.])
-AC_INIT([gigolo], [0.5.3], [https://gitlab.xfce.org/apps/gigolo])
+AC_INIT([gigolo], [xdt_version], [https://gitlab.xfce.org/apps/gigolo])
 AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip foreign])
 
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADERS(config.h)
+AC_CONFIG_MACRO_DIRS([m4])
 AM_MAINTAINER_MODE()
 AC_USE_SYSTEM_EXTENSIONS
 AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_LN_S
-
+AC_PREREQ([2.69])
+AC_REVISION([xdt_version_build])
 
 # GTK checks
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.38.0])
@@ -26,22 +29,17 @@ AC_ARG_ENABLE(deprecated, [  --disable-deprecated    Disable deprecated GTK func
 GTK_VERSION=`$PKG_CONFIG --modversion gtk+-3.0`
 
 # i18n
-XDT_I18N([@LINGUAS@])
+GETTEXT_PACKAGE="$PACKAGE"
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Name of default gettext domain])
+AC_SUBST([GETTEXT_PACKAGE])
 
-XDT_FEATURE_DEBUG()
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AC_SEARCH_LIBS([bind_textdomain_codeset], [intl],
+               [AC_DEFINE([HAVE_BIND_TEXTDOMAIN_CODESET], [1], [Define to 1 if you have the 'bind_textdomain_codeset' function.])],
+               [])
 
-IT_PROG_INTLTOOL([0.35.0])
-# workaround for intltool bug (http://bugzilla.gnome.org/show_bug.cgi?id=490845)
-if test "x$MSGFMT" = "xno"; then
-	AC_MSG_ERROR([msgfmt not found. Please install the gettext package.])
-fi
-
-# intltool hack to define install_sh on Debian/Ubuntu systems
-if test "x$install_sh" = "x"; then
-	install_sh="`pwd`/install-sh"
-	AC_SUBST(install_sh)
-fi
-
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 AC_CONFIG_FILES([
 Makefile
