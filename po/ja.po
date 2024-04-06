@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 00:48+0200\n"
+"POT-Creation-Date: 2024-04-06 12:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2023\n"
 "Language-Team: Japanese (http://app.transifex.com/xfce/xfce-apps/language/ja/)\n"
@@ -39,7 +39,7 @@ msgstr "詳細情報を出力する"
 msgid "Show version information"
 msgstr "バージョン情報を表示する"
 
-#: ../src/main.c:124
+#: ../src/main.c:126
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- リモートファイルシステムに簡単に接続するシンプルなフロントエンド"
 
@@ -75,7 +75,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (セキュア)"
 
-#: ../src/common.c:89 ../src/window.c:1611
+#: ../src/common.c:89 ../src/window.c:1612
 msgid "Network"
 msgstr "ネットワーク"
 
@@ -91,82 +91,81 @@ msgstr "写真"
 msgid "Custom Location"
 msgstr "個別に指定した場所"
 
-#: ../src/window.c:269
+#: ../src/window.c:270
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "接続しています: \"%s\""
 
-#: ../src/window.c:423
+#: ../src/window.c:424
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "ローカルおよびリモートファイルシステムに簡単に接続/マウントできるシンプルなフロントエンド"
 
-#: ../src/window.c:427
+#: ../src/window.c:428
 msgid "translator-credits"
 msgstr "Masato Hashimoto <hashimo@xfce.org>"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:476
+#: ../src/window.c:477
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:481
+#: ../src/window.c:482
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo は GVFS により以下のプロトコルを使用することができます:"
 
-#: ../src/window.c:494 ../src/gigolo.ui.h:22
+#: ../src/window.c:495
 msgid "Supported Protocols"
 msgstr "サポートプロトコル"
 
-#: ../src/window.c:596 ../src/window.c:655
+#: ../src/window.c:597 ../src/window.c:656
 #, c-format
 msgid "The command '%s' failed"
 msgstr "コマンド '%s' が失敗しました"
 
-#: ../src/window.c:597 ../src/window.c:630 ../src/window.c:643
-#: ../src/window.c:656 ../src/window.c:853 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:598 ../src/window.c:631 ../src/window.c:644
+#: ../src/window.c:657 ../src/window.c:854 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "エラー"
 
-#: ../src/window.c:630
+#: ../src/window.c:631
 msgid "Invalid terminal command"
 msgstr "不正なターミナルコマンドです"
 
-#: ../src/window.c:642
+#: ../src/window.c:643
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "\"%s\" に対する利用可能なデフォルトの場所はありません"
 
-#: ../src/window.c:762
+#: ../src/window.c:763
 msgid "Edit _Bookmark"
 msgstr "ブックマークの編集(_B)"
 
-#: ../src/window.c:764 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:765 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "ブックマークの作成(_B)"
 
-#: ../src/window.c:1521
+#: ../src/window.c:1522
 msgid "Connected"
 msgstr "接続中"
 
-#: ../src/window.c:1530 ../src/bookmarkdialog.c:309
+#: ../src/window.c:1531 ../src/bookmarkdialog.c:309
 msgid "Service Type"
 msgstr "サービスタイプ"
 
-#: ../src/window.c:1538 ../src/bookmarkdialog.c:301
+#: ../src/window.c:1539 ../src/bookmarkdialog.c:301
 msgid "Name"
 msgstr "名前"
 
-#: ../src/window.c:1603
+#: ../src/window.c:1604
 msgid "Bookmarks"
 msgstr "ブックマーク"
 
-#: ../src/window.c:1648 ../src/window.c:1683 ../src/gigolo.ui.h:1
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:1649 ../src/window.c:1684
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -235,7 +234,6 @@ msgid "_Add"
 msgstr "追加(_A)"
 
 #: ../src/bookmarkdialog.c:377 ../src/bookmarkdialog.c:427
-#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "編集(_E)"
 
@@ -552,7 +550,7 @@ msgstr "共有が見つかりません"
 msgid "No Hosts found"
 msgstr "ホストが見つかりません"
 
-#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
+#: ../src/browsenetworkpanel.c:439
 msgid "_Connect"
 msgstr "接続(_C)"
 
@@ -579,119 +577,3 @@ msgstr "ブックマークはありません"
 #: ../src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr "選択されたブックマークに接続します"
-
-#: ../src/gigolo.ui.h:2
-msgid "_File"
-msgstr "ファイル(_F)"
-
-#: ../src/gigolo.ui.h:3
-msgid "_Quit"
-msgstr "終了(_Q)"
-
-#: ../src/gigolo.ui.h:5
-msgid "_Edit Bookmarks"
-msgstr "ブックマークの編集(_E)"
-
-#: ../src/gigolo.ui.h:6
-msgid "_Preferences"
-msgstr "設定(_P)"
-
-#: ../src/gigolo.ui.h:7
-msgid "_View"
-msgstr "表示(_V)"
-
-#: ../src/gigolo.ui.h:8
-msgid "_Toolbar"
-msgstr "ツールバー(_T)"
-
-#: ../src/gigolo.ui.h:9
-msgid "Side _Panel"
-msgstr "サイドパネル(_P)"
-
-#: ../src/gigolo.ui.h:10
-msgid "Status _Icon"
-msgstr "ステータスアイコン(_I)"
-
-#: ../src/gigolo.ui.h:11
-msgid "View as _Symbols"
-msgstr "シンボルで表示(_S)"
-
-#: ../src/gigolo.ui.h:12
-msgid "View as _Detailed List"
-msgstr "詳細リストで表示(_D)"
-
-#: ../src/gigolo.ui.h:13
-msgid "_Actions"
-msgstr "アクション(_A)"
-
-#: ../src/gigolo.ui.h:15
-msgid "_Disconnect"
-msgstr "切断する(_D)"
-
-#: ../src/gigolo.ui.h:16
-msgid "_Bookmarks"
-msgstr "ブックマーク(_B)"
-
-#: ../src/gigolo.ui.h:17
-msgid "_Open"
-msgstr "開く(_O)"
-
-#: ../src/gigolo.ui.h:18
-msgid "Open in _Terminal"
-msgstr "ターミナルで開く(_T)"
-
-#: ../src/gigolo.ui.h:19
-msgid "_Copy URI"
-msgstr "URI をコピー(_C)"
-
-#: ../src/gigolo.ui.h:20
-msgid "_Help"
-msgstr "ヘルプ(_H)"
-
-#: ../src/gigolo.ui.h:21
-msgid "Online Help"
-msgstr "オンラインヘルプ"
-
-#: ../src/gigolo.ui.h:23
-msgid "About"
-msgstr "xfce4-dict について"
-
-#: ../src/gigolo.ui.h:24
-msgid "Choose a bookmark to connect to"
-msgstr "接続するブックマークを選択します"
-
-#: ../src/gigolo.ui.h:25
-msgid "Disconnect the selected resource"
-msgstr "選択されたリソースとの接続を切ります"
-
-#: ../src/gigolo.ui.h:26
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "ブックマークマネージャーを開き、ブックマークの追加、編集、または削除を行います"
-
-#: ../src/gigolo.ui.h:27
-msgid "Open the selected resource with a file manager"
-msgstr "選択されたリソースをファイルマネージャーで開きます"
-
-#: ../src/gigolo.ui.h:28
-msgid "Start a terminal from here"
-msgstr "ここからターミナルで開きます"
-
-#: ../src/gigolo.ui.h:29
-msgid "Open _Terminal"
-msgstr "ターミナルを開く(_T)"
-
-#: ../src/gigolo.ui.h:30
-msgid "Quit Gigolo"
-msgstr "Gigolo を終了します"
-
-#: ../src/gigolo.ui.h:31
-msgid "_Edit Bookmark"
-msgstr "ブックマークの編集(_E)"
-
-#: ../gigolo.desktop.in.h:2
-msgid "Frontend for GIO/GVfs"
-msgstr "GIO/GVfs 向けフロントエンド"
-
-#: ../gigolo.desktop.in.h:3
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "リモートファイルシステムに簡単に接続するシンプルなフロントエンド"
