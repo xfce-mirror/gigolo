@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 00:48+0200\n"
+"POT-Creation-Date: 2024-04-06 12:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: Andrei Stepanov, 2022-2023\n"
 "Language-Team: Russian (http://app.transifex.com/xfce/xfce-apps/language/ru/)\n"
@@ -41,7 +41,7 @@ msgstr "Подробный вывод"
 msgid "Show version information"
 msgstr "Информация о версии"
 
-#: ../src/main.c:124
+#: ../src/main.c:126
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- простой интерфейс для подключения удалённых файловых систем"
 
@@ -77,7 +77,7 @@ msgstr "WebDAV"
 msgid "WebDAV (secure)"
 msgstr "WebDAV (защищённый)"
 
-#: ../src/common.c:89 ../src/window.c:1611
+#: ../src/common.c:89 ../src/window.c:1612
 msgid "Network"
 msgstr "Сеть"
 
@@ -93,82 +93,81 @@ msgstr "Фотографии"
 msgid "Custom Location"
 msgstr "Указать расположение"
 
-#: ../src/window.c:269
+#: ../src/window.c:270
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Подключение к «%s»"
 
-#: ../src/window.c:423
+#: ../src/window.c:424
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Простой интерфейс для подключения локальных и удалённых файловых систем"
 
-#: ../src/window.c:427
+#: ../src/window.c:428
 msgid "translator-credits"
 msgstr "Alexandr Ponomarenko, 2009"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:476
+#: ../src/window.c:477
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:481
+#: ../src/window.c:482
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo может использовать следующие протоколы, предоставляемые GVfs:"
 
-#: ../src/window.c:494 ../src/gigolo.ui.h:22
+#: ../src/window.c:495
 msgid "Supported Protocols"
 msgstr "Поддерживаемые протоколы"
 
-#: ../src/window.c:596 ../src/window.c:655
+#: ../src/window.c:597 ../src/window.c:656
 #, c-format
 msgid "The command '%s' failed"
 msgstr "При выполнении команды «%s» произошёл сбой"
 
-#: ../src/window.c:597 ../src/window.c:630 ../src/window.c:643
-#: ../src/window.c:656 ../src/window.c:853 ../src/bookmarkeditdialog.c:209
+#: ../src/window.c:598 ../src/window.c:631 ../src/window.c:644
+#: ../src/window.c:657 ../src/window.c:854 ../src/bookmarkeditdialog.c:209
 #: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
 #: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../src/window.c:630
+#: ../src/window.c:631
 msgid "Invalid terminal command"
 msgstr "Неверная команда терминала"
 
-#: ../src/window.c:642
+#: ../src/window.c:643
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "Для «%s» нет местонахождения по умолчанию"
 
-#: ../src/window.c:762
+#: ../src/window.c:763
 msgid "Edit _Bookmark"
 msgstr "_Изменить закладку"
 
-#: ../src/window.c:764 ../src/browsenetworkpanel.c:446
+#: ../src/window.c:765 ../src/browsenetworkpanel.c:446
 #: ../src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "Создать _закладку"
 
-#: ../src/window.c:1521
+#: ../src/window.c:1522
 msgid "Connected"
 msgstr "Подключён"
 
-#: ../src/window.c:1530 ../src/bookmarkdialog.c:309
+#: ../src/window.c:1531 ../src/bookmarkdialog.c:309
 msgid "Service Type"
 msgstr "Тип службы"
 
-#: ../src/window.c:1538 ../src/bookmarkdialog.c:301
+#: ../src/window.c:1539 ../src/bookmarkdialog.c:301
 msgid "Name"
 msgstr "Имя"
 
-#: ../src/window.c:1603
+#: ../src/window.c:1604
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: ../src/window.c:1648 ../src/window.c:1683 ../src/gigolo.ui.h:1
-#: ../gigolo.desktop.in.h:1
+#: ../src/window.c:1649 ../src/window.c:1684
 msgid "Gigolo"
 msgstr "Gigolo"
 
@@ -237,7 +236,6 @@ msgid "_Add"
 msgstr "До_бавить"
 
 #: ../src/bookmarkdialog.c:377 ../src/bookmarkdialog.c:427
-#: ../src/gigolo.ui.h:4
 msgid "_Edit"
 msgstr "_Правка"
 
@@ -554,7 +552,7 @@ msgstr "Ресурсы не найдены"
 msgid "No Hosts found"
 msgstr "Серверы не найдены"
 
-#: ../src/browsenetworkpanel.c:439 ../src/gigolo.ui.h:14
+#: ../src/browsenetworkpanel.c:439
 msgid "_Connect"
 msgstr "_Подключиться"
 
@@ -581,119 +579,3 @@ msgstr "Отсутствуют"
 #: ../src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr "Подключиться к этому ресурсу"
-
-#: ../src/gigolo.ui.h:2
-msgid "_File"
-msgstr "_Файл"
-
-#: ../src/gigolo.ui.h:3
-msgid "_Quit"
-msgstr "_Выйти"
-
-#: ../src/gigolo.ui.h:5
-msgid "_Edit Bookmarks"
-msgstr "П_равка закладок"
-
-#: ../src/gigolo.ui.h:6
-msgid "_Preferences"
-msgstr "Па_раметры"
-
-#: ../src/gigolo.ui.h:7
-msgid "_View"
-msgstr "_Вид"
-
-#: ../src/gigolo.ui.h:8
-msgid "_Toolbar"
-msgstr "_Панель инструментов"
-
-#: ../src/gigolo.ui.h:9
-msgid "Side _Panel"
-msgstr "_Боковая панель"
-
-#: ../src/gigolo.ui.h:10
-msgid "Status _Icon"
-msgstr "_Значок состояния"
-
-#: ../src/gigolo.ui.h:11
-msgid "View as _Symbols"
-msgstr "_Список"
-
-#: ../src/gigolo.ui.h:12
-msgid "View as _Detailed List"
-msgstr "_Таблица"
-
-#: ../src/gigolo.ui.h:13
-msgid "_Actions"
-msgstr "_Действия"
-
-#: ../src/gigolo.ui.h:15
-msgid "_Disconnect"
-msgstr "_Отключить"
-
-#: ../src/gigolo.ui.h:16
-msgid "_Bookmarks"
-msgstr "_Закладки"
-
-#: ../src/gigolo.ui.h:17
-msgid "_Open"
-msgstr "_Открыть"
-
-#: ../src/gigolo.ui.h:18
-msgid "Open in _Terminal"
-msgstr "Открыть в _терминале"
-
-#: ../src/gigolo.ui.h:19
-msgid "_Copy URI"
-msgstr "_Копировать URI"
-
-#: ../src/gigolo.ui.h:20
-msgid "_Help"
-msgstr "_Справка"
-
-#: ../src/gigolo.ui.h:21
-msgid "Online Help"
-msgstr "Справка в _Интернете"
-
-#: ../src/gigolo.ui.h:23
-msgid "About"
-msgstr "О программе"
-
-#: ../src/gigolo.ui.h:24
-msgid "Choose a bookmark to connect to"
-msgstr "Выбрать ресурс для подключения"
-
-#: ../src/gigolo.ui.h:25
-msgid "Disconnect the selected resource"
-msgstr "Отключить выбранный ресурс"
-
-#: ../src/gigolo.ui.h:26
-msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Открыть менеджер закладок для их добавления, изменения или удаления"
-
-#: ../src/gigolo.ui.h:27
-msgid "Open the selected resource with a file manager"
-msgstr "Открыть выбранный ресурс в файловом менеджере"
-
-#: ../src/gigolo.ui.h:28
-msgid "Start a terminal from here"
-msgstr "Открыть окно терминала в данном каталоге"
-
-#: ../src/gigolo.ui.h:29
-msgid "Open _Terminal"
-msgstr "Открыть _Терминал"
-
-#: ../src/gigolo.ui.h:30
-msgid "Quit Gigolo"
-msgstr "Выход из Gigolo"
-
-#: ../src/gigolo.ui.h:31
-msgid "_Edit Bookmark"
-msgstr "Изменить закладк_у"
-
-#: ../gigolo.desktop.in.h:2
-msgid "Frontend for GIO/GVfs"
-msgstr "Интерфейс для GIO/GVFS"
-
-#: ../gigolo.desktop.in.h:3
-msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Простой интерфейс для подключения удалённых файловых систем"
