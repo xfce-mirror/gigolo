@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.gigolo package.
 # 
 # Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 12:49+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-04-07 00:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Urdu (Pakistan) (http://app.transifex.com/xfce/xfce-apps/language/ur_PK/)\n"
@@ -17,492 +17,491 @@ msgstr ""
 "Language: ur_PK\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/main.c:48
+#: src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
 msgstr ""
 
-#: ../src/main.c:49
+#: src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "چلتی حالتوں کو نظر انداز کریں اور نئی حالتوں کو کھولنے پر زور دیں"
 
-#: ../src/main.c:50
+#: src/main.c:50
 msgid "Print a list of supported URI schemes"
 msgstr "معاونت رکھنے والے URI سکیموں کی فہرست طبع کریں"
 
-#: ../src/main.c:51
+#: src/main.c:51
 msgid "Be verbose"
 msgstr "مضطرب ہوں"
 
-#: ../src/main.c:52
+#: src/main.c:52
 msgid "Show version information"
 msgstr "ورژن کی معلومات دکھائیں"
 
-#: ../src/main.c:126
+#: src/main.c:126
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- آسانی سے بعید فائل سسٹمز سے متصل ہونے کے لی سادہ فرنٹ اینڈ"
 
-#: ../src/common.c:73
+#: src/common.c:73
 msgid "Unix Device"
 msgstr "یونیکس ڈیوائسیں"
 
-#: ../src/common.c:75
+#: src/common.c:75
 msgid "Windows Share"
 msgstr "ونڈوز شیئر"
 
-#: ../src/common.c:77
+#: src/common.c:77
 msgid "FTP"
 msgstr "FTP"
 
-#: ../src/common.c:79
+#: src/common.c:79
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/common.c:81
+#: src/common.c:81
 msgid "SSH / SFTP"
 msgstr ""
 
-#: ../src/common.c:83
+#: src/common.c:83
 msgid "Obex"
 msgstr "Obex"
 
-#: ../src/common.c:85
+#: src/common.c:85
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: ../src/common.c:87
+#: src/common.c:87
 msgid "WebDAV (secure)"
 msgstr "WebDAV (محفوظ)"
 
-#: ../src/common.c:89 ../src/window.c:1612
+#: src/common.c:89 src/window.c:1612
 msgid "Network"
 msgstr "نیٹ ورک"
 
-#: ../src/common.c:91
+#: src/common.c:91
 msgid "Archive"
 msgstr "محفوظہ"
 
-#: ../src/common.c:93
+#: src/common.c:93
 msgid "Photos"
 msgstr ""
 
-#: ../src/common.c:95
+#: src/common.c:95
 msgid "Custom Location"
 msgstr "صوابدیدی مقام"
 
-#: ../src/window.c:270
+#: src/window.c:270
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "متصل ہوں تا \"%s\""
 
-#: ../src/window.c:424
+#: src/window.c:424
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr ""
 
-#: ../src/window.c:428
+#: src/window.c:428
 msgid "translator-credits"
 msgstr "محمد علی مکی\nmakki.ma@gmail.com\nاردو کوڈر لینکس فورم\nhttp://www.urducoder.com\nمکی کا بلاگ\nhttp://makki.urducoder.com"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:477
+#: src/window.c:477
 #, c-format
 msgid "%s (%s)"
 msgstr ""
 
-#: ../src/window.c:482
+#: src/window.c:482
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "گیگولو مندرجہ پروٹوکول استعمال کر سکتا ہے جو GVfs کی طرف سے فراہم کردہ ہیں:"
 
-#: ../src/window.c:495
+#: src/window.c:495 src/gigolo.ui:237
 msgid "Supported Protocols"
 msgstr "معاونت شدہ پروٹوکولز"
 
-#: ../src/window.c:597 ../src/window.c:656
+#: src/window.c:597 src/window.c:656
 #, c-format
 msgid "The command '%s' failed"
 msgstr ""
 
-#: ../src/window.c:598 ../src/window.c:631 ../src/window.c:644
-#: ../src/window.c:657 ../src/window.c:854 ../src/bookmarkeditdialog.c:209
-#: ../src/bookmarkeditdialog.c:228 ../src/bookmarkeditdialog.c:241
-#: ../src/bookmarkeditdialog.c:252 ../src/bookmarkeditdialog.c:263
+#: src/window.c:598 src/window.c:631 src/window.c:644 src/window.c:657
+#: src/window.c:854 src/bookmarkeditdialog.c:209 src/bookmarkeditdialog.c:228
+#: src/bookmarkeditdialog.c:241 src/bookmarkeditdialog.c:252
+#: src/bookmarkeditdialog.c:263
 msgid "Error"
 msgstr "غلطی"
 
-#: ../src/window.c:631
+#: src/window.c:631
 msgid "Invalid terminal command"
 msgstr ""
 
-#: ../src/window.c:643
+#: src/window.c:643
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr ""
 
-#: ../src/window.c:763
+#: src/window.c:763
 msgid "Edit _Bookmark"
 msgstr ""
 
-#: ../src/window.c:765 ../src/browsenetworkpanel.c:446
-#: ../src/browsenetworkpanel.c:489
+#: src/window.c:765 src/browsenetworkpanel.c:446 src/browsenetworkpanel.c:489
 msgid "Create _Bookmark"
 msgstr "_پسندیدہ بنائیں"
 
-#: ../src/window.c:1522
+#: src/window.c:1522
 msgid "Connected"
 msgstr "متصل"
 
-#: ../src/window.c:1531 ../src/bookmarkdialog.c:309
+#: src/window.c:1531 src/bookmarkdialog.c:309
 msgid "Service Type"
 msgstr "سروس نوعیت"
 
-#: ../src/window.c:1539 ../src/bookmarkdialog.c:301
+#: src/window.c:1539 src/bookmarkdialog.c:301
 msgid "Name"
 msgstr "نام"
 
-#: ../src/window.c:1604
+#: src/window.c:1604
 msgid "Bookmarks"
 msgstr ""
 
-#: ../src/window.c:1649 ../src/window.c:1684
+#: src/window.c:1649 src/window.c:1684 src/gigolo.ui:8 gigolo.desktop.in:5
 msgid "Gigolo"
 msgstr "گیگولو"
 
-#: ../src/settings.c:690
+#: src/settings.c:690
 msgid "Move it now?"
 msgstr "اسے ابھی منتقل کریں؟"
 
-#: ../src/settings.c:691
+#: src/settings.c:691
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "چلنے سے پہلے لازم ہے کہ گیگولو آپ کی پرانی ترتیبات ڈائریکٹری کو منتقل کرے."
 
-#: ../src/settings.c:699
+#: src/settings.c:699
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr "آپ کی پرانی ترتیبات کی ڈائریکٹری \"%s\" نئی جگہ \"%s\" (%s) منتقل نہیں ہوسکتی. ڈائریکٹری کو نئے مقام پر خود منتقل کریں."
 
-#: ../src/settings.c:702
+#: src/settings.c:702
 msgid "Warning"
 msgstr "انتباہ"
 
-#: ../src/bookmarkdialog.c:90
+#: src/bookmarkdialog.c:90
 #, c-format
 msgid "Domain: %s"
 msgstr "ڈومین: %s"
 
-#: ../src/bookmarkdialog.c:95
+#: src/bookmarkdialog.c:95
 #, c-format
 msgid "Share: %s"
 msgstr "شیئر: %s"
 
-#: ../src/bookmarkdialog.c:101
+#: src/bookmarkdialog.c:101
 #, c-format
 msgid "Folder: %s"
 msgstr ""
 
-#: ../src/bookmarkdialog.c:107
+#: src/bookmarkdialog.c:107
 #, c-format
 msgid "Path: %s"
 msgstr ""
 
-#: ../src/bookmarkdialog.c:317
+#: src/bookmarkdialog.c:317
 msgid "Host"
 msgstr "ہوسٹ"
 
-#: ../src/bookmarkdialog.c:325
+#: src/bookmarkdialog.c:325
 msgid "Port"
 msgstr "پورٹ"
 
-#: ../src/bookmarkdialog.c:333
+#: src/bookmarkdialog.c:333
 msgid "Auto-Connect"
 msgstr "خودکار-اتصال"
 
-#: ../src/bookmarkdialog.c:341
+#: src/bookmarkdialog.c:341
 msgid "Username"
 msgstr "اسمِ صارف"
 
-#: ../src/bookmarkdialog.c:349
+#: src/bookmarkdialog.c:349
 msgid "Other information"
 msgstr "دیگر معلومات"
 
-#: ../src/bookmarkdialog.c:370 ../src/bookmarkdialog.c:422
-#: ../src/bookmarkeditdialog.c:790
+#: src/bookmarkdialog.c:370 src/bookmarkdialog.c:422
+#: src/bookmarkeditdialog.c:790
 msgid "_Add"
 msgstr ""
 
-#: ../src/bookmarkdialog.c:377 ../src/bookmarkdialog.c:427
+#: src/bookmarkdialog.c:377 src/bookmarkdialog.c:427 src/gigolo.ui:46
 msgid "_Edit"
 msgstr "_تدوین"
 
-#: ../src/bookmarkdialog.c:384 ../src/bookmarkdialog.c:432
+#: src/bookmarkdialog.c:384 src/bookmarkdialog.c:432
 msgid "_Delete"
 msgstr ""
 
-#: ../src/bookmarkdialog.c:405
+#: src/bookmarkdialog.c:405
 msgid "Edit Bookmarks"
 msgstr "پسندیدہ مدون کریں"
 
-#: ../src/bookmarkdialog.c:412 ../src/preferencesdialog.c:500
+#: src/bookmarkdialog.c:412 src/preferencesdialog.c:500
 msgid "_Close"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:210
+#: src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
 msgstr "پسندیدہ کا نام لکھنا لازمی ہے."
 
-#: ../src/bookmarkeditdialog.c:229
+#: src/bookmarkeditdialog.c:229
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
 msgstr "داخل کردہ پسندیدہ کا نام پہلے ہی استعمال میں ہے. براہ مہربانی دوسرا منتخب کریں."
 
-#: ../src/bookmarkeditdialog.c:242
+#: src/bookmarkeditdialog.c:242
 msgid "You must enter a server address or name."
 msgstr "سرور کا پتہ یا نام لکھنا لازمی ہے."
 
-#: ../src/bookmarkeditdialog.c:253
+#: src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
 msgstr "شیئر نام لکھنا لازمی ہے."
 
-#: ../src/bookmarkeditdialog.c:264
+#: src/bookmarkeditdialog.c:264
 msgid "You must enter a valid URI for the connection."
 msgstr "کنکشن کے لیے موزوں URI لکھنا لازمی ہے."
 
-#: ../src/bookmarkeditdialog.c:524
+#: src/bookmarkeditdialog.c:524
 msgid "_Device:"
 msgstr "_ڈیوائس:"
 
-#: ../src/bookmarkeditdialog.c:526 ../src/bookmarkeditdialog.c:1035
+#: src/bookmarkeditdialog.c:526 src/bookmarkeditdialog.c:1035
 msgid "_Server:"
 msgstr "_سرور:"
 
-#: ../src/bookmarkeditdialog.c:788
+#: src/bookmarkeditdialog.c:788
 msgid "Create Bookmark"
 msgstr "پسندیدہ بنائیں"
 
-#: ../src/bookmarkeditdialog.c:796
+#: src/bookmarkeditdialog.c:796
 msgid "Edit Bookmark"
 msgstr "پسندیدہ مدون کریں"
 
-#: ../src/bookmarkeditdialog.c:799
+#: src/bookmarkeditdialog.c:799
 msgid "_OK"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:805
+#: src/bookmarkeditdialog.c:805
 msgid "Connect to Server"
 msgstr "سرور سے متصل ہوں"
 
-#: ../src/bookmarkeditdialog.c:807
+#: src/bookmarkeditdialog.c:807
 msgid "Co_nnect"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:959
+#: src/bookmarkeditdialog.c:959
 msgid "_Cancel"
 msgstr ""
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:972
+#: src/bookmarkeditdialog.c:972
 msgid "Bookmark Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:978
+#: src/bookmarkeditdialog.c:978
 msgid "_Name:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:987
+#: src/bookmarkeditdialog.c:987
 msgid "_Color:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:996
+#: src/bookmarkeditdialog.c:996
 msgid "Au_to-Connect:"
 msgstr ""
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:1007
+#: src/bookmarkeditdialog.c:1007
 msgid "Connection Settings"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1013
+#: src/bookmarkeditdialog.c:1013
 msgid "Service t_ype:"
 msgstr "سروس کی _نوعیت:"
 
-#: ../src/bookmarkeditdialog.c:1029
+#: src/bookmarkeditdialog.c:1029
 msgid "_Location (URI):"
 msgstr "_مقام (URI):"
 
-#: ../src/bookmarkeditdialog.c:1041
+#: src/bookmarkeditdialog.c:1041
 msgid "P_ath:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1047
+#: src/bookmarkeditdialog.c:1047
 msgid "_Share:"
 msgstr "_شیئر:"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1066
+#: src/bookmarkeditdialog.c:1066
 msgid "Optional Information"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1072
+#: src/bookmarkeditdialog.c:1072
 msgid "_Port:"
 msgstr "_پورٹ:"
 
-#: ../src/bookmarkeditdialog.c:1078
+#: src/bookmarkeditdialog.c:1078
 msgid "Set the port to 0 to use the default port"
 msgstr "طے شدہ پورٹ کے استعمال کے لیے پورٹ کو 0 پر سیٹ کریں"
 
-#: ../src/bookmarkeditdialog.c:1080
+#: src/bookmarkeditdialog.c:1080
 msgid "_Folder:"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1086
+#: src/bookmarkeditdialog.c:1086
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr ""
 
-#: ../src/bookmarkeditdialog.c:1089
+#: src/bookmarkeditdialog.c:1089
 msgid "_Domain:"
 msgstr "_ڈومین:"
 
-#: ../src/bookmarkeditdialog.c:1095
+#: src/bookmarkeditdialog.c:1095
 msgid "_User Name:"
 msgstr "_اسمِ صارف"
 
-#: ../src/preferencesdialog.c:146
+#: src/preferencesdialog.c:146
 msgid "Icons"
 msgstr "آئکن"
 
-#: ../src/preferencesdialog.c:147
+#: src/preferencesdialog.c:147
 msgid "Text"
 msgstr "متن"
 
-#: ../src/preferencesdialog.c:148
+#: src/preferencesdialog.c:148
 msgid "Both"
 msgstr "دونوں"
 
-#: ../src/preferencesdialog.c:149
+#: src/preferencesdialog.c:149
 msgid "Both horizontal"
 msgstr "دونوں افقی"
 
-#: ../src/preferencesdialog.c:168
+#: src/preferencesdialog.c:168
 msgid "Horizontal"
 msgstr "افقی"
 
-#: ../src/preferencesdialog.c:169
+#: src/preferencesdialog.c:169
 msgid "Vertical"
 msgstr "عمودی"
 
-#: ../src/preferencesdialog.c:188
+#: src/preferencesdialog.c:188
 msgid "Symbols"
 msgstr "سمبل"
 
-#: ../src/preferencesdialog.c:189
+#: src/preferencesdialog.c:189
 msgid "Detailed List"
 msgstr "تفصیلی فہرست"
 
-#: ../src/preferencesdialog.c:333
+#: src/preferencesdialog.c:333
 msgid "General"
 msgstr "عام"
 
 #. Row
-#: ../src/preferencesdialog.c:336
+#: src/preferencesdialog.c:336
 msgid "_File Manager"
 msgstr "_فائل منیجر"
 
-#: ../src/preferencesdialog.c:347
+#: src/preferencesdialog.c:347
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr "ماؤنٹ پؤائنٹس کو دیکھنے یا کھولنے کے لیے استعمال ہونے والے پروگرام کا نام لکھیں"
 
 #. Row
-#: ../src/preferencesdialog.c:354
+#: src/preferencesdialog.c:354
 msgid "_Terminal"
 msgstr "_ٹرمنل"
 
-#: ../src/preferencesdialog.c:365
+#: src/preferencesdialog.c:365
 msgid "Enter the name of a program to open mount points in a terminal"
 msgstr ""
 
 #. Row
-#: ../src/preferencesdialog.c:372
+#: src/preferencesdialog.c:372
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "_پسندیدہ خودکار-اتصال وقفہ"
 
-#: ../src/preferencesdialog.c:378
+#: src/preferencesdialog.c:378
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
 msgstr "کس طرح عموماً پسندیدہ خودکار اتصال کی کوشش کی جائے، سیکنڈ میں، صفر چیکنگ کو معطل کرتا ہے."
 
-#: ../src/preferencesdialog.c:389
+#: src/preferencesdialog.c:389
 msgid "Interface"
 msgstr "مواجہ"
 
-#: ../src/preferencesdialog.c:391
+#: src/preferencesdialog.c:391
 msgid "_Save window position and geometry"
 msgstr "ونڈو کا مقام اور جیومیٹری م_حفوظ کریں"
 
-#: ../src/preferencesdialog.c:392
+#: src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr "ونڈو کا مقام اور جیومیٹری محفوظ کرتا ہے اور چلنے پر اسے بحال کرتا ہے"
 
-#: ../src/preferencesdialog.c:395
+#: src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
 msgstr "اطلاعی علاقے میں حالت _آئکن دکھائیں"
 
-#: ../src/preferencesdialog.c:398
+#: src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
 msgstr "اطلاعی علاقے میں _منمائز حالت میں چلائیں"
 
-#: ../src/preferencesdialog.c:403
+#: src/preferencesdialog.c:403
 msgid "Show side panel"
 msgstr ""
 
-#: ../src/preferencesdialog.c:404
+#: src/preferencesdialog.c:404
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
 msgstr ""
 
-#: ../src/preferencesdialog.c:407
+#: src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
 msgstr "خودکار-اتصال کے غلطی کے پیغامات دکھائیں"
 
-#: ../src/preferencesdialog.c:408
+#: src/preferencesdialog.c:408
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
 msgstr "جب پسندیدہ کا خودکار-اتصال ناکام ہوجائے تو غلطی کے پیغامات کا ڈائیلاگ کس طرح دکھایا جائے"
 
-#: ../src/preferencesdialog.c:411
+#: src/preferencesdialog.c:411
 msgid "_Connection List Mode"
 msgstr "_اتصال فہرست موڈ"
 
-#: ../src/preferencesdialog.c:427
+#: src/preferencesdialog.c:427
 msgid "Toolbar"
 msgstr "اوزار پٹی"
 
-#: ../src/preferencesdialog.c:429
+#: src/preferencesdialog.c:429
 msgid "Show _toolbar"
 msgstr "_اوزار پٹی دکھائیں"
 
-#: ../src/preferencesdialog.c:432
+#: src/preferencesdialog.c:432
 msgid "St_yle"
 msgstr "ا_نداز"
 
-#: ../src/preferencesdialog.c:441
+#: src/preferencesdialog.c:441
 msgid "_Orientation"
 msgstr "_جہتیابی"
 
-#: ../src/preferencesdialog.c:497
+#: src/preferencesdialog.c:497
 msgid "Preferences"
 msgstr "ترجیحات"
 
-#: ../src/backendgvfs.c:215
+#: src/backendgvfs.c:215
 msgid "No bookmark"
 msgstr ""
 
-#: ../src/backendgvfs.c:233
+#: src/backendgvfs.c:233
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -513,65 +512,182 @@ msgid ""
 "Bookmark: %s"
 msgstr ""
 
-#: ../src/backendgvfs.c:248
+#: src/backendgvfs.c:248
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>یونیکس ڈیوائس: %s</b>"
 
-#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:484
+#: src/backendgvfs.c:445 src/backendgvfs.c:484
 msgid "unknown"
 msgstr "نامعلوم"
 
-#: ../src/backendgvfs.c:451 ../src/backendgvfs.c:559
+#: src/backendgvfs.c:451 src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "\"%s\" سے متصل ہونے میں ناکامی."
 
-#: ../src/backendgvfs.c:488
+#: src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "\"%s\" سے غیر متصل ہونے میں ناکامی."
 
-#: ../src/mountdialog.c:95
+#: src/mountdialog.c:95
 msgid "Connecting"
 msgstr "اتصال قائم کیا جارہا ہے"
 
-#: ../src/browsenetworkpanel.c:183
+#: src/browsenetworkpanel.c:183
 msgid "No Workgroups found"
 msgstr "کوئی ورک گروپ نہیں پایا گیا"
 
-#: ../src/browsenetworkpanel.c:194
+#: src/browsenetworkpanel.c:194
 msgid "No Shares found"
 msgstr "کوئی شیئرز نہیں پائے گئے"
 
-#: ../src/browsenetworkpanel.c:199
+#: src/browsenetworkpanel.c:199
 msgid "No Hosts found"
 msgstr "کوئی ہوسٹ نہیں پائے گئے"
 
-#: ../src/browsenetworkpanel.c:439
+#: src/browsenetworkpanel.c:439 src/gigolo.ui:157 src/gigolo.ui:490
+#: src/gigolo.ui:572
 msgid "_Connect"
 msgstr ""
 
-#: ../src/browsenetworkpanel.c:482
+#: src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
 msgstr "منتخب کردہ شیئر سے متصل ہوں"
 
-#: ../src/browsenetworkpanel.c:490
+#: src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
 msgstr "منتخب کردہ شیئر کا پسندیدہ بنائیں"
 
-#: ../src/browsenetworkpanel.c:500
+#: src/browsenetworkpanel.c:500
 msgid "Refresh the network list"
 msgstr "نیٹ ورک فہرست تازہ کریں"
 
-#: ../src/browsenetworkpanel.c:512 ../src/bookmarkpanel.c:265
+#: src/browsenetworkpanel.c:512 src/bookmarkpanel.c:265
 msgid "Close panel"
 msgstr "پینل بند کریں"
 
-#: ../src/bookmarkpanel.c:90
+#: src/bookmarkpanel.c:90
 msgid "No bookmarks"
 msgstr ""
 
-#: ../src/bookmarkpanel.c:253
+#: src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
 msgstr ""
+
+#: src/gigolo.ui:23
+msgid "_File"
+msgstr "_فائل"
+
+#: src/gigolo.ui:33 src/gigolo.ui:375 src/gigolo.ui:522
+msgid "_Quit"
+msgstr "_برخاست"
+
+#: src/gigolo.ui:56 src/gigolo.ui:313 src/gigolo.ui:506
+msgid "_Edit Bookmarks"
+msgstr "پسندیدہ _مدون کریں"
+
+#: src/gigolo.ui:71 src/gigolo.ui:514
+msgid "_Preferences"
+msgstr ""
+
+#: src/gigolo.ui:84
+msgid "_View"
+msgstr "_منظر"
+
+#: src/gigolo.ui:94
+msgid "_Toolbar"
+msgstr "_اوزار پٹی"
+
+#: src/gigolo.ui:102
+msgid "Side _Panel"
+msgstr "سائیڈ _پینل"
+
+#: src/gigolo.ui:110
+msgid "Status _Icon"
+msgstr "حالت _آئکن"
+
+#: src/gigolo.ui:124
+msgid "View as _Symbols"
+msgstr "دکھائیں بطور _سمبل"
+
+#: src/gigolo.ui:133
+msgid "View as _Detailed List"
+msgstr "دکھائیں بطور _طے شدہ فہرست"
+
+#: src/gigolo.ui:147
+msgid "_Actions"
+msgstr "_حرکات"
+
+#: src/gigolo.ui:165 src/gigolo.ui:289 src/gigolo.ui:580
+msgid "_Disconnect"
+msgstr ""
+
+#: src/gigolo.ui:174 src/gigolo.ui:275 src/gigolo.ui:498
+msgid "_Bookmarks"
+msgstr "_پسندیدہ"
+
+#: src/gigolo.ui:188 src/gigolo.ui:337 src/gigolo.ui:534
+msgid "_Open"
+msgstr ""
+
+#: src/gigolo.ui:197 src/gigolo.ui:542
+msgid "Open in _Terminal"
+msgstr ""
+
+#: src/gigolo.ui:206 src/gigolo.ui:550
+msgid "_Copy URI"
+msgstr ""
+
+#: src/gigolo.ui:219
+msgid "_Help"
+msgstr "_ہدایات"
+
+#: src/gigolo.ui:229
+msgid "Online Help"
+msgstr "آن لائن مدد"
+
+#: src/gigolo.ui:251
+msgid "About"
+msgstr ""
+
+#: src/gigolo.ui:274
+msgid "Choose a bookmark to connect to"
+msgstr "متصل ہونے کے لیے پسندیدہ منتخب کریں"
+
+#: src/gigolo.ui:288
+msgid "Disconnect the selected resource"
+msgstr "منتخب کردہ مصدر سے رابطہ منقع کریں"
+
+#: src/gigolo.ui:312
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "پسندیدہ شامل، مدون یا حذف کرنے کے لیے پسندیدہ منیجر کھولیں"
+
+#: src/gigolo.ui:336
+msgid "Open the selected resource with a file manager"
+msgstr "منتخب کردہ مصدر فائل منیجر سے کھولیں"
+
+#: src/gigolo.ui:350
+msgid "Start a terminal from here"
+msgstr ""
+
+#: src/gigolo.ui:351
+msgid "Open _Terminal"
+msgstr ""
+
+#: src/gigolo.ui:374
+msgid "Quit Gigolo"
+msgstr "گیگولو کو برخاست کریں"
+
+#: src/gigolo.ui:558
+msgid "_Edit Bookmark"
+msgstr ""
+
+#: gigolo.desktop.in:6
+msgid "Frontend for GIO/GVfs"
+msgstr ""
+
+#: gigolo.desktop.in:7
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "آسانی سے بعید فائل سسٹمز سے متصل ہونے کے لی سادہ فرنٹ اینڈ"
