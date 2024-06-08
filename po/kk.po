@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the xfce-apps.gigolo package.
 # 
 # Translators:
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010,2022
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010,2022,2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-04-07 00:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010,2022\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010,2022,2024\n"
 "Language-Team: Kazakh (http://app.transifex.com/xfce/xfce-apps/language/kk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -567,7 +567,7 @@ msgstr ""
 
 #: src/browsenetworkpanel.c:512 src/bookmarkpanel.c:265
 msgid "Close panel"
-msgstr ""
+msgstr "Панельді жабу"
 
 #: src/bookmarkpanel.c:90
 msgid "No bookmarks"
