@@ -482,7 +482,7 @@ msgstr "_Widok listy połączeń:"
 
 #: src/preferencesdialog.c:427
 msgid "Toolbar"
-msgstr "Pasek narzędziowy"
+msgstr "Pasek narzędzi"
 
 #: src/preferencesdialog.c:429
 msgid "Show _toolbar"
@@ -513,7 +513,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr "<b>%s</b>\n\nAdres URI: %s\nPołączony: Tak\nTyp usługi: %s\nBookmark: %s"
+msgstr "<b>%s</b>\n\nAdres URI: %s\nPołączony: Tak\nTyp usługi: %s\nZakładka: %s"
 
 #: src/backendgvfs.c:248
 #, c-format
@@ -601,7 +601,7 @@ msgstr "_Widok"
 
 #: src/gigolo.ui:94
 msgid "_Toolbar"
-msgstr "_Pasek narzędziowy"
+msgstr "_Pasek narzędzi"
 
 #: src/gigolo.ui:102
 msgid "Side _Panel"
