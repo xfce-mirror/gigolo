@@ -9,3 +9,4 @@ Icon=org.xfce.gigolo
 Terminal=false
 Categories=System;GTK;Filesystem;
 StartupNotify=true
+Keywords=remote;filesystem;connect;network;GIO;GVfs;file;manager;
