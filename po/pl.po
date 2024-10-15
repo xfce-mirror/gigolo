@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-07 00:49+0200\n"
+"POT-Creation-Date: 2024-10-15 00:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: Marek Adamski, 2022-2024\n"
 "Language-Team: Polish (http://app.transifex.com/xfce/xfce-apps/language/pl/)\n"
@@ -694,3 +694,7 @@ msgstr "Nakładka na GIO/GVfs"
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Łączy z lokalnymi i zdalnymi systemami plików"
+
+#: gigolo.desktop.in:13
+msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
+msgstr "zdalny;system plików;połącz;sieć;GIO;GVfs;plik;menedżer;"
