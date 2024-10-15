@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the xfce-apps.gigolo package.
 # 
 # Translators:
-# Priit Jõerüüt <transifex@joeruut.com>, 2020,2022-2023
+# Priit Jõerüüt <transifex@joeruut.com>, 2020,2022-2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-07 00:49+0200\n"
+"POT-Creation-Date: 2024-10-15 00:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Priit Jõerüüt <transifex@joeruut.com>, 2020,2022-2023\n"
+"Last-Translator: Priit Jõerüüt <transifex@joeruut.com>, 2020,2022-2024\n"
 "Language-Team: Estonian (http://app.transifex.com/xfce/xfce-apps/language/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,7 +48,7 @@ msgstr "Unixi-põhine seade"
 
 #: src/common.c:75
 msgid "Windows Share"
-msgstr "Windows'i võrgukaust"
+msgstr "Windowsi võrgukaust"
 
 #: src/common.c:77
 msgid "FTP"
@@ -68,11 +68,11 @@ msgstr "Obex"
 
 #: src/common.c:85
 msgid "WebDAV"
-msgstr "WebDAV (krüpteerimata)"
+msgstr "WebDAV (krüptimata)"
 
 #: src/common.c:87
 msgid "WebDAV (secure)"
-msgstr "WebDAV (krüpteeritud)"
+msgstr "WebDAV (krüptitud)"
 
 #: src/common.c:89 src/window.c:1612
 msgid "Network"
@@ -93,7 +93,7 @@ msgstr "Kohandatud asukoht"
 #: src/window.c:270
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Loon ühendust \"%s\""
+msgstr "Loon ühendust seadmega „%s“"
 
 #: src/window.c:424
 msgid ""
@@ -102,7 +102,7 @@ msgstr "Lihtne kasutajaliides ühenduse loomiseks väliste failisüsteemidega v�
 
 #: src/window.c:428
 msgid "translator-credits"
-msgstr "Kristjan Siimson <epost@ksiimson.se> &amp; tolge.pingviin.org\nPriit Jõerüüt 2020"
+msgstr "Kristjan Siimson <epost@ksiimson.se> &amp; tolge.pingviin.org\nPriit Jõerüüt 2024"
 
 #. Translators: This is a list of "protocol description (protocol)"
 #: src/window.c:477
@@ -112,7 +112,7 @@ msgstr "%s (%s)"
 
 #: src/window.c:482
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Kasutades GVfs'i suudab Gigolo kasutada järgnevaid protokolle:"
+msgstr "GVfsi abil suudab Gigolo kasutada järgnevaid protokolle:"
 
 #: src/window.c:495 src/gigolo.ui:237
 msgid "Supported Protocols"
@@ -121,7 +121,7 @@ msgstr "Toetatud protokollid"
 #: src/window.c:597 src/window.c:656
 #, c-format
 msgid "The command '%s' failed"
-msgstr "Käsk '%s' ebaõnnestus"
+msgstr "Käsk „%s“ ebaõnnestus"
 
 #: src/window.c:598 src/window.c:631 src/window.c:644 src/window.c:657
 #: src/window.c:854 src/bookmarkeditdialog.c:209 src/bookmarkeditdialog.c:228
@@ -137,7 +137,7 @@ msgstr "Vigane käsk terminalis"
 #: src/window.c:643
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "Vaikimisi asukoht \"%s\" jaoks pole saadaval"
+msgstr "Vaikimisi asukoht „%s“ jaoks pole saadaval"
 
 #: src/window.c:763
 msgid "Edit _Bookmark"
@@ -180,7 +180,7 @@ msgstr "Enne käivitumist peab Gigolo tõstma ära sinu vanad seadistusfailid."
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "Sinu vana seadistuste kausta \"%s\" ei õnnestunud tõsta uude asukohta \"%s\" (%s). Palun tõsta kaust uude kohta käsitsi."
+msgstr "Sinu vana seadistuste kausta „%s“ ei õnnestunud tõsta uude asukohta „%s“ (%s). Palun tõsta kaust uude kohta käsitsi."
 
 #: src/settings.c:702
 msgid "Warning"
@@ -258,7 +258,7 @@ msgstr "Sisestatud järjehoidja nimi on juba kasutusel. Palun pane mõni muu nim
 
 #: src/bookmarkeditdialog.c:242
 msgid "You must enter a server address or name."
-msgstr "Sa pead sisestama server aadressi või nime."
+msgstr "Sa pead sisestama serveri aadressi või nime."
 
 #: src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
@@ -525,12 +525,12 @@ msgstr "teadmata"
 #: src/backendgvfs.c:451 src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Ühendus \"%s\"-ga ebaõnnestus."
+msgstr "Ühenduse loomine seadmega „%s“ ei õnnestunud."
 
 #: src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Ühenduse katkestamine \"%s\"-ga ebaõnnestus."
+msgstr "Ühenduse katkestamine seadmega „%s“ ei õnnestunud."
 
 #: src/mountdialog.c:95
 msgid "Connecting"
@@ -692,3 +692,7 @@ msgstr "Graafiline kasutajaliides GIO/GVfs jaoks"
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Lihtne kasutajaliides ühenduse loomiseks väliste failisüsteemidega"
+
+#: gigolo.desktop.in:13
+msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
+msgstr "kaugseade;kaugühendus;failisüsteem;ühendus;võrk;GIO;GVfs;fail;haldur;failihaldur;"
