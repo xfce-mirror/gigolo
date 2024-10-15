@@ -5,14 +5,14 @@
 # Translators:
 # 黃柏諺 <s8321414@gmail.com>, 2018
 # Walter Cheuk <wwycheuk@gmail.com>, 2013
-# 黃柏諺 <s8321414@gmail.com>, 2020,2022-2023
+# 黃柏諺 <s8321414@gmail.com>, 2020,2022-2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-07 00:49+0200\n"
+"POT-Creation-Date: 2024-10-15 00:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020,2022-2023\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020,2022-2024\n"
 "Language-Team: Chinese (Taiwan) (http://app.transifex.com/xfce/xfce-apps/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -694,3 +694,7 @@ msgstr "GIO/GVfs 的前端"
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "讓您連接遠端檔案系統的簡易前端程式"
+
+#: gigolo.desktop.in:13
+msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
+msgstr "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
