@@ -4,15 +4,15 @@
 # 
 # Translators:
 # Adrian Dimitrov <Enzo_01@abv.bg>, 2009
-# Kiril Kirilov <cybercop_montana@abv.bg>, 2018,2020,2022-2023
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2018,2020,2022-2024
 # Любомир Василев, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-07 00:49+0200\n"
+"POT-Creation-Date: 2024-10-15 00:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>, 2018,2020,2022-2023\n"
+"Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>, 2018,2020,2022-2024\n"
 "Language-Team: Bulgarian (http://app.transifex.com/xfce/xfce-apps/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -694,3 +694,7 @@ msgstr "Интерфейс за GIO/GVfs"
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Прост интерфейс за лесно свързване към отдалечени файлови системи"
+
+#: gigolo.desktop.in:13
+msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
+msgstr "отдалечен достъп;файлова система;свързване;мрежа,GIO;GVfs;файл;мениджър;"
