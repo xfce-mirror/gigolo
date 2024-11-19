@@ -22,11 +22,11 @@ msgstr ""
 
 #: src/main.c:48
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr "Łączy wszystkie zakładki oznaczone jako „Automatyczne nawiązywanie połączenia” i kończy"
+msgstr "Łączy wszystkie zakładki oznaczone jako „Automatyczne połączenie” i kończy"
 
 #: src/main.c:49
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Ignoruje uruchomione wystąpienia programu i uruchamia nowe wystąpienie"
+msgstr "Ignoruje uruchomione wystąpienia programu i uruchamia nowe wystąpienie"
 
 #: src/main.c:50
 msgid "Print a list of supported URI schemes"
@@ -38,11 +38,11 @@ msgstr "Wypisuje szczegółowe komunikaty"
 
 #: src/main.c:52
 msgid "Show version information"
-msgstr "Wyświetla informacje o wersji i kończy"
+msgstr "Wyświetla informacje o wersji i kończy"
 
 #: src/main.c:126
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- Łączy z lokalnymi i zdalnymi systemami plików"
+msgstr "- łączy z lokalnymi i​ zdalnymi systemami plików"
 
 #: src/common.c:73
 msgid "Unix Device"
@@ -95,12 +95,12 @@ msgstr "Własne położenie"
 #: src/window.c:270
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Nawiązywanie połączenia z „%s”"
+msgstr "Nawiązywanie połączenia z „%s”"
 
 #: src/window.c:424
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "Łączy z lokalnymi i zdalnymi systemami plików"
+msgstr "Łączy z lokalnymi i​ zdalnymi systemami plików"
 
 #: src/window.c:428
 msgid "translator-credits"
@@ -218,7 +218,7 @@ msgstr "Port"
 
 #: src/bookmarkdialog.c:333
 msgid "Auto-Connect"
-msgstr "Automatyczne nawiązywanie połączenia"
+msgstr "Automatyczne połączenie"
 
 #: src/bookmarkdialog.c:341
 msgid "Username"
@@ -317,7 +317,7 @@ msgstr "_Kolor:"
 
 #: src/bookmarkeditdialog.c:996
 msgid "Au_to-Connect:"
-msgstr "Au_tomatyczne nawiązywanie połączenia:"
+msgstr "Au_tomatyczne połączenie:"
 
 #. Connection Settings
 #: src/bookmarkeditdialog.c:1007
@@ -330,7 +330,7 @@ msgstr "_Typ usługi:"
 
 #: src/bookmarkeditdialog.c:1029
 msgid "_Location (URI):"
-msgstr "_Położenie (URI):"
+msgstr "_Położenie (adres URI):"
 
 #: src/bookmarkeditdialog.c:1041
 msgid "P_ath:"
@@ -419,11 +419,11 @@ msgstr "Wprowadza nazwę programu używanego do przeglądania systemów plików"
 #. Row
 #: src/preferencesdialog.c:354
 msgid "_Terminal"
-msgstr "_Terminal"
+msgstr "_Terminal:"
 
 #: src/preferencesdialog.c:365
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr "Wprowadza nazwę programu używanego do przeglądania systemów plików"
+msgstr "Wprowadza nazwę programu używanego do otwierania w terminalu punktów montowania"
 
 #. Row
 #: src/preferencesdialog.c:372
@@ -434,7 +434,7 @@ msgstr "Odstęp czasu pomiędzy próbami nawiązania\nautomatycznego połączeni
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr "Określa czas pomiędzy próbami nawiązywania połączenia z zasobami, wyrażony w sekundach. Wprowadzenie wartości 0 wyłącza automatyczne nawiązywanie połączenia."
+msgstr "Określa czas pomiędzy próbami nawiązywania połączenia z zasobami, wyrażony w sekundach. Wprowadzenie wartości 0 wyłącza automatyczne nawiązywanie połączenia."
 
 #: src/preferencesdialog.c:389
 msgid "Interface"
@@ -442,11 +442,11 @@ msgstr "Interfejs"
 
 #: src/preferencesdialog.c:391
 msgid "_Save window position and geometry"
-msgstr "_Zachowanie pozycji i rozmiaru okna"
+msgstr "_Zachowanie pozycji i rozmiaru okna"
 
 #: src/preferencesdialog.c:392
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Zapisuje pozycję oraz rozmiar okna i przywraca je po uruchomieniu programu"
+msgstr "Zapisuje pozycję oraz rozmiar okna i przywraca je po uruchomieniu programu"
 
 #: src/preferencesdialog.c:395
 msgid "Show status _icon in the Notification Area"
@@ -464,17 +464,17 @@ msgstr "Panel boczny"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Wyświetla panel boczny służący do przeglądania zakładek i dostępnych udziałów Samba/Windows"
+msgstr "Wyświetla panel boczny służący do przeglądania zakładek i dostępnych udziałów Samba/Windows"
 
 #: src/preferencesdialog.c:407
 msgid "Show auto-connect error messages"
-msgstr "Komunikaty błędów automatycznego łączenia"
+msgstr "Komunikaty błędów automatycznego połączenia"
 
 #: src/preferencesdialog.c:408
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
-msgstr "Wyświetla komunikaty błędów automatycznego nawiązywania połączeń"
+msgstr "Wyświetla komunikaty błędów automatycznego połączenia"
 
 #: src/preferencesdialog.c:411
 msgid "_Connection List Mode"
@@ -527,12 +527,12 @@ msgstr "nieznany"
 #: src/backendgvfs.c:451 src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Nie udało się połączyć z „%s”."
+msgstr "Nie udało się połączyć z „%s”."
 
 #: src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Nie udało się przerwać połączenia z „%s”."
+msgstr "Nie udało się przerwać połączenia z „%s”."
 
 #: src/mountdialog.c:95
 msgid "Connecting"
@@ -557,7 +557,7 @@ msgstr "_Połącz"
 
 #: src/browsenetworkpanel.c:482
 msgid "Connect to the selected share"
-msgstr "Nawiązuje połączenie z zaznaczonym udziałem"
+msgstr "Nawiązuje połączenie z zaznaczonym udziałem"
 
 #: src/browsenetworkpanel.c:490
 msgid "Create a bookmark from the selected share"
@@ -577,7 +577,7 @@ msgstr "Brak"
 
 #: src/bookmarkpanel.c:253
 msgid "Connect to the selected bookmark"
-msgstr "Nawiązuje połączenie z zasobem wskazywanym przez zakładkę"
+msgstr "Nawiązuje połączenie z zasobem wskazywanym przez zakładkę"
 
 #: src/gigolo.ui:23
 msgid "_File"
@@ -641,7 +641,7 @@ msgstr "Otwórz w _terminalu"
 
 #: src/gigolo.ui:206 src/gigolo.ui:550
 msgid "_Copy URI"
-msgstr "_Skopiuj URI"
+msgstr "_Skopiuj adres URI"
 
 #: src/gigolo.ui:219
 msgid "_Help"
@@ -657,11 +657,11 @@ msgstr "O programie"
 
 #: src/gigolo.ui:274
 msgid "Choose a bookmark to connect to"
-msgstr "Łączy z zasobem wskazywanym przez zakładkę"
+msgstr "Łączy z​ zasobem wskazywanym przez zakładkę"
 
 #: src/gigolo.ui:288
 msgid "Disconnect the selected resource"
-msgstr "Przerywa połączenie z zaznaczonymi zasobami"
+msgstr "Przerywa połączenie z zaznaczonymi zasobami"
 
 #: src/gigolo.ui:312
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
@@ -693,7 +693,7 @@ msgstr "Nakładka na GIO/GVfs"
 
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Łączy z lokalnymi i zdalnymi systemami plików"
+msgstr "Łączy z lokalnymi i zdalnymi systemami plików"
 
 #: gigolo.desktop.in:13
 msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
