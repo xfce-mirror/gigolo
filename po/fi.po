@@ -4,15 +4,15 @@
 # 
 # Translators:
 # 9e06e299e74d2541309887ba0f7d6eee_126c110 <673225c2b34f8d31a8e0b8e4dc2dd62e_1152>, 2012
-# Jiri Grönroos <jiri.gronroos@iki.fi>, 2013,2019
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2013,2019,2024
 # Pasi Lallinaho <pasi@shimmerproject.org>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-07 00:49+0200\n"
+"POT-Creation-Date: 2024-10-15 00:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2013,2019\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2013,2019,2024\n"
 "Language-Team: Finnish (http://app.transifex.com/xfce/xfce-apps/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,7 +62,7 @@ msgstr "HTTP"
 
 #: src/common.c:81
 msgid "SSH / SFTP"
-msgstr ""
+msgstr "SSH / SFTP"
 
 #: src/common.c:83
 msgid "Obex"
@@ -296,7 +296,7 @@ msgstr "Yhdistä palvelimeen"
 
 #: src/bookmarkeditdialog.c:807
 msgid "Co_nnect"
-msgstr ""
+msgstr "_Yhdistä"
 
 #: src/bookmarkeditdialog.c:959
 msgid "_Cancel"
@@ -625,7 +625,7 @@ msgstr "T_oiminnot"
 
 #: src/gigolo.ui:165 src/gigolo.ui:289 src/gigolo.ui:580
 msgid "_Disconnect"
-msgstr ""
+msgstr "_Katkaise yhteys"
 
 #: src/gigolo.ui:174 src/gigolo.ui:275 src/gigolo.ui:498
 msgid "_Bookmarks"
@@ -641,7 +641,7 @@ msgstr "Avaa _päätteessä"
 
 #: src/gigolo.ui:206 src/gigolo.ui:550
 msgid "_Copy URI"
-msgstr ""
+msgstr "_Kopioi URI"
 
 #: src/gigolo.ui:219
 msgid "_Help"
@@ -677,7 +677,7 @@ msgstr "Avaa pääte tässä kansiossa"
 
 #: src/gigolo.ui:351
 msgid "Open _Terminal"
-msgstr ""
+msgstr "Avaa _pääte"
 
 #: src/gigolo.ui:374
 msgid "Quit Gigolo"
@@ -685,12 +685,16 @@ msgstr "Sulje Gigolo"
 
 #: src/gigolo.ui:558
 msgid "_Edit Bookmark"
-msgstr ""
+msgstr "_Muokkaa kirjanmerkkiä"
 
 #: gigolo.desktop.in:6
 msgid "Frontend for GIO/GVfs"
-msgstr ""
+msgstr "Käyttöliittymä GIO:lle/GVfs:lle"
 
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "Käyttöliittymä, jonka avulla yhdistät helposti verkkojakoihin"
+
+#: gigolo.desktop.in:13
+msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
+msgstr "remote;filesystem;connect;network;GIO;GVfs;file;manager;tiedostojärjestelmä;verkko;tiedosto;"
