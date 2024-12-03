@@ -182,7 +182,7 @@ msgstr "Należy przenieść dotychczasowy katalog konfiguracji przed uruchomieni
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "Nie można przenieść katalogu konfiguracji „%s” do położenia „%s” (%s). Proszę przenieść katalog samodzielnie."
+msgstr "Nie można przenieść katalogu konfiguracji „%s” do położenia „%s” (%s). Przenieś katalog samodzielnie."
 
 #: src/settings.c:702
 msgid "Warning"
@@ -251,24 +251,24 @@ msgstr "_Zamknij"
 
 #: src/bookmarkeditdialog.c:210
 msgid "You must enter a name for the bookmark."
-msgstr "Proszę wprowadzić nazwę zakładki."
+msgstr "Wprowadź nazwę zakładki."
 
 #: src/bookmarkeditdialog.c:229
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "Wprowadzona nazwa zakładki jest już używana. Proszę wybrać inną."
+msgstr "Wprowadzona nazwa zakładki jest już używana. Wybierz inną."
 
 #: src/bookmarkeditdialog.c:242
 msgid "You must enter a server address or name."
-msgstr "Proszę wprowadzić adres lub nazwę serwera."
+msgstr "Wprowadź adres lub nazwę serwera."
 
 #: src/bookmarkeditdialog.c:253
 msgid "You must enter a share name."
-msgstr "Proszę wprowadzić nazwę udziału."
+msgstr "Wprowadź nazwę udziału."
 
 #: src/bookmarkeditdialog.c:264
 msgid "You must enter a valid URI for the connection."
-msgstr "Proszę wprowadzić poprawny adres URI, aby nawiązać połączenie."
+msgstr "Wprowadź poprawny adres URI, aby nawiązać połączenie."
 
 #: src/bookmarkeditdialog.c:524
 msgid "_Device:"
@@ -454,7 +454,7 @@ msgstr "_Ikona obszaru powiadamiania"
 
 #: src/preferencesdialog.c:398
 msgid "Start _minimized in the Notification Area"
-msgstr "Uruchamianie w obszarze p_owiadamiania"
+msgstr "Uruchamianie w obszarze p_owiadamiania"
 
 #: src/preferencesdialog.c:403
 msgid "Show side panel"
