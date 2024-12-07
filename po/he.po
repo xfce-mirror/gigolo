@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Elishai Eliyahu <elishai@mailfence.com>, 2016,2018
-# Elishai Eliyahu <elishai@mailfence.com>, 2020,2022-2023
+# Elishai Eliyahu <elishai@mailfence.com>, 2020,2022-2024
 # gk <genghiskhan@gmx.ca>, 2015-2016
 # 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021
 # 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2020
@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-07 00:49+0200\n"
+"POT-Creation-Date: 2024-10-15 00:49+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Elishai Eliyahu <elishai@mailfence.com>, 2020,2022-2023\n"
+"Last-Translator: Elishai Eliyahu <elishai@mailfence.com>, 2020,2022-2024\n"
 "Language-Team: Hebrew (http://app.transifex.com/xfce/xfce-apps/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -696,3 +696,7 @@ msgstr "מגשר חזיתי עבור GIO/GVfs"
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
 msgstr "מגשר חזיתי פשוט לצורך התחברות קלה למערכות קבצים מרוחקות"
+
+#: gigolo.desktop.in:13
+msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
+msgstr "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
