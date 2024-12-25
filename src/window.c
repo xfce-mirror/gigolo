@@ -422,7 +422,7 @@ static void about_cb(GtkWidget *widget, GigoloWindow *window)
 		"authors", authors,
 		"logo-icon-name", gigolo_get_application_icon_name(),
 		"comments", _("A simple frontend to easily connect/mount to local and remote filesystems"),
-		"copyright", "Copyright \302\251 2008-2023 The Xfce development team",
+		"copyright", "Copyright \302\251 2008-2024 The Xfce development team",
 		"website", "https://docs.xfce.org/apps/gigolo/start",
 		"version", VERSION,
 		"translator-credits", _("translator-credits"),

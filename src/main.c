@@ -133,7 +133,7 @@ gint main(gint argc, gchar** argv)
 	if (show_version)
 	{
 		g_print("%s %s\n\n", PACKAGE, VERSION);
-		g_print("%s\n", "Copyright \302\251 2008-2023 The Xfce development team");
+		g_print("%s\n", "Copyright \302\251 2008-2024 The Xfce development team");
 		g_print("\n");
 
 		return EXIT_SUCCESS;

@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 XDT_VERSION_INIT([0.5.3], [git])
 
-AC_COPYRIGHT([Copyright (c) 2008-2023 The Xfce development team. All rights reserved.])
+AC_COPYRIGHT([Copyright (c) 2008-2024 The Xfce development team. All rights reserved.])
 AC_INIT([gigolo], [xdt_version], [https://gitlab.xfce.org/apps/gigolo])
 AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip foreign])
 
