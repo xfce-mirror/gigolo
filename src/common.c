@@ -160,14 +160,25 @@ gboolean gigolo_message_dialog(gpointer parent, gint type, const gchar *title,
 }
 
 
-/* Can open URLs and email addresses using xdg/exo/gnome-open */
+/* Can open URLs and email addresses using xdg/xfce/gnome-open */
 void gigolo_show_uri(const gchar *uri)
 {
 	gchar *cmd;
 	gchar *open_cmd = g_find_program_in_path("xdg-open");
 
 	if (open_cmd == NULL)
-		open_cmd = g_strdup((gigolo_is_desktop_xfce()) ? "exo-open" : "gnome-open");
+  {
+    if (gigolo_is_desktop_xfce())
+    {
+      open_cmd = g_find_program_in_path("xfce-open");
+      if (open_cmd == NULL)
+        open_cmd = g_strdup("exo-open");
+    }
+    else
+    {
+		  open_cmd = g_strdup("gnome-open");
+    }
+  }
 
 	cmd = g_strconcat(open_cmd, " ", uri, NULL);
 	g_spawn_command_line_async(cmd, NULL);
