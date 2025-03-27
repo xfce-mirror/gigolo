@@ -19,8 +19,8 @@ AC_PREREQ([2.69])
 AC_REVISION([xdt_version_build])
 
 # GTK checks
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.38.0])
-XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.14.0])
+XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.66.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.24.0])
 
 # --disable-deprecated switch for GTK2 purification
 AC_ARG_ENABLE(deprecated, [  --disable-deprecated    Disable deprecated GTK functions. ],
