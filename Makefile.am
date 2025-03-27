@@ -18,6 +18,8 @@ EXTRA_DIST =					\
 	autogen.sh					\
 	gigolo.desktop.in			\
 	src/gigolo.ui				\
+	xfce-revision.h.in			\
+	meson_options.txt			\
 	meson.build
 
 
