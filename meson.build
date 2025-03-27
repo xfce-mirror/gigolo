@@ -136,6 +136,23 @@ i18n.merge_file(
   install_dir: get_option('prefix') / get_option('datadir') / 'applications',
 )
 
+docdir = get_option('docdir')
+if docdir == ''
+    docdir = get_option('datadir') / 'doc' / meson.project_name()
+endif
+
+install_data(
+  files(
+    'AUTHORS',
+    'ChangeLog',
+    'COPYING',
+    'NEWS',
+    'README.md',
+    'TODO',
+  ),
+  install_dir: get_option('prefix') / docdir,
+)
+
 subdir('po')
 subdir('icons')
 subdir('src')

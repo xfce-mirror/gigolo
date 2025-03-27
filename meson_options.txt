@@ -1,0 +1,5 @@
+option(
+  'docdir',
+  type: 'string',
+  description: 'Directory where the documentation should be installed to',
+)
