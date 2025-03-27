@@ -1428,12 +1428,17 @@ static void bind_actions (GigoloWindow *window)
 
 static void create_ui_elements(GigoloWindow *window)
 {
-	GError *error = NULL;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkWidget *widget;
 	priv->builder = gtk_builder_new();
+#ifdef HAVE_G_RESOURCE
+	gtk_builder_add_from_resource (GTK_BUILDER (priv->builder),
+		"/org/xfce/gigolo/gigolo.ui",
+		NULL);
+#else
 	gtk_builder_add_from_string(priv->builder, gigolo_ui,
-								gigolo_ui_length, &error);
+								gigolo_ui_length, NULL);
+#endif
 
 	priv->vbox = GTK_WIDGET (gtk_builder_get_object (priv->builder, "vbox"));
 	priv->hbox_view = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_view"));
