@@ -29,6 +29,9 @@ gigolo_LDADD = \
 	$(GLIB_LIBS) \
 	$(GTK_LIBS)
 
+EXTRA_DIST =	\
+	meson.build
+
 if MAINTAINER_MODE
 
 BUILT_SOURCES = \

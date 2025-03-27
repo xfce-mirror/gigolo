@@ -17,7 +17,8 @@ distuninstallcheck_listfiles = 						\
 EXTRA_DIST =					\
 	autogen.sh					\
 	gigolo.desktop.in			\
-	src/gigolo.ui
+	src/gigolo.ui				\
+	meson.build
 
 
 DISTCLEANFILES =				\
