@@ -24,6 +24,9 @@
 #ifdef HAVE_XFCE_REVISION_H
 #include "xfce-revision.h"
 #endif
+#ifndef HAVE_G_RESOURCE
+#include "gigolo_ui.h"
+#endif
 
 #include <string.h>
 #include <glib.h>
@@ -51,7 +54,6 @@
 #include "browsenetworkpanel.h"
 #include "bookmarkpanel.h"
 
-#include "gigolo_ui.h"
 
 
 typedef struct _GigoloWindowPrivate			GigoloWindowPrivate;

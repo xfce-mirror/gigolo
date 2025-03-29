@@ -117,7 +117,7 @@ extra_cflags += [
   '-DSBINDIR="@0@"'.format(get_option('prefix') / get_option('sbindir')),
   '-DSYSCONFDIR="@0@"'.format(get_option('prefix') / get_option('sysconfdir')),
   '-DHAVE_XFCE_REVISION_H=1',
-  '-DHAVE_G_RESOURCE=1',
+  '-DHAVE_G_RESOURCE=1', # Remove and references when autotools supported is removed
 ]
 
 add_project_arguments(cc.get_supported_arguments(extra_cflags_check), language: 'c')
