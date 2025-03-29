@@ -151,7 +151,7 @@ i18n.merge_file(
 
 docdir = get_option('docdir')
 if docdir == ''
-    docdir = get_option('datadir') / 'doc' / meson.project_name()
+  docdir = get_option('datadir') / 'doc' / meson.project_name()
 endif
 
 install_data(
