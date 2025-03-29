@@ -18,7 +18,15 @@
  */
 
 
+#ifdef HAVE_CONFIG_H
 #include "config.h"
+#endif
+#ifdef HAVE_XFCE_REVISION_H
+#include "xfce-revision.h"
+#endif
+#ifndef HAVE_G_RESOURCE
+#include "gigolo_ui.h"
+#endif
 
 #include <string.h>
 #include <glib.h>
@@ -46,7 +54,6 @@
 #include "browsenetworkpanel.h"
 #include "bookmarkpanel.h"
 
-#include "gigolo_ui.h"
 
 
 typedef struct _GigoloWindowPrivate			GigoloWindowPrivate;
@@ -422,9 +429,9 @@ static void about_cb(GtkWidget *widget, GigoloWindow *window)
 		"authors", authors,
 		"logo-icon-name", gigolo_get_application_icon_name(),
 		"comments", _("A simple frontend to easily connect/mount to local and remote filesystems"),
-		"copyright", "Copyright \302\251 2008-2024 The Xfce development team",
+		"copyright", "Copyright \302\251 2008-" COPYRIGHT_YEAR " The Xfce development team",
 		"website", "https://docs.xfce.org/apps/gigolo/start",
-		"version", VERSION,
+		"version", VERSION_FULL,
 		"translator-credits", _("translator-credits"),
 		"license",  "Copyright 2008-2011 Enrico Tröger <enrico@xfce.org>\n\n"
 					"This program is free software; you can redistribute it and/or modify\n"
@@ -1426,12 +1433,17 @@ static void bind_actions (GigoloWindow *window)
 
 static void create_ui_elements(GigoloWindow *window)
 {
-	GError *error = NULL;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	GtkWidget *widget;
 	priv->builder = gtk_builder_new();
+#ifdef HAVE_G_RESOURCE
+	gtk_builder_add_from_resource (GTK_BUILDER (priv->builder),
+		"/org/xfce/gigolo/gigolo.ui",
+		NULL);
+#else
 	gtk_builder_add_from_string(priv->builder, gigolo_ui,
-								gigolo_ui_length, &error);
+								gigolo_ui_length, NULL);
+#endif
 
 	priv->vbox = GTK_WIDGET (gtk_builder_get_object (priv->builder, "vbox"));
 	priv->hbox_view = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_view"));
