@@ -27,6 +27,18 @@ dependency_versions = {
 glib = dependency('glib-2.0', version: dependency_versions['glib'])
 gtk = dependency('gtk+-3.0', version: dependency_versions['gtk'])
 
+feature_cflags = []
+
+if cc.has_function('bind_textdomain_codeset')
+  feature_cflags += '-DHAVE_BIND_TEXTDOMAIN_CODESET=1'
+  libintl = dependency('', required: false)
+else
+  libintl = cc.find_library('intl', required: false)
+  if libintl.found() and cc.has_function('bind_textdomain_codeset', dependencies: libintl)
+    feature_cflags += '-DHAVE_BIND_TEXTDOMAIN_CODESET=1'
+  endif
+endif
+
 extra_cflags = []
 extra_cflags_check = [
   '-Wmissing-declarations',
@@ -110,6 +122,7 @@ extra_cflags += [
 
 add_project_arguments(cc.get_supported_arguments(extra_cflags_check), language: 'c')
 add_project_arguments(extra_cflags, language: 'c')
+add_project_arguments(feature_cflags, language: 'c')
 
 xfce_revision_h = vcs_tag(
   command: ['git', 'rev-parse', '--short', 'HEAD'],
