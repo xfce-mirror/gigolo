@@ -1,7 +1,8 @@
 dnl Process this file with autoconf to produce a configure script.
 XDT_VERSION_INIT([0.5.4], [git])
+m4_define([copyright_year], [2025])
 
-AC_COPYRIGHT([Copyright (c) 2008-2024 The Xfce development team. All rights reserved.])
+AC_COPYRIGHT([Copyright (c) 2008-copyright_year() The Xfce development team. All rights reserved.])
 AC_INIT([gigolo], [xdt_version], [https://gitlab.xfce.org/apps/gigolo])
 AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip foreign])
 
@@ -17,6 +18,10 @@ AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PREREQ([2.69])
 AC_REVISION([xdt_version_build])
+AC_DEFINE([VERSION_FULL], [PACKAGE_VERSION], [Alias for VERSION and PACKAGE_VERSION for meson compatibility])
+COPYRIGHT_YEAR=copyright_year()
+AC_DEFINE_UNQUOTED([COPYRIGHT_YEAR], ["$COPYRIGHT_YEAR"], [Copyright year])
+AC_SUBST([COPYRIGHT_YEAR])
 
 # GTK checks
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.66.0])

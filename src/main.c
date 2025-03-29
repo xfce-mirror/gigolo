@@ -21,6 +21,9 @@
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
+#ifdef HAVE_XFCE_REVISION_H
+#include "xfce-revision.h"
+#endif
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -134,8 +137,8 @@ gint main(gint argc, gchar** argv)
 
 	if (show_version)
 	{
-		g_print("%s %s\n\n", PACKAGE, VERSION);
-		g_print("%s\n", "Copyright \302\251 2008-2024 The Xfce development team");
+		g_print("%s %s\n\n", PACKAGE, VERSION_FULL);
+		g_print("%s\n", "Copyright \302\251 2008-" COPYRIGHT_YEAR " The Xfce development team");
 		g_print("\n");
 
 		return EXIT_SUCCESS;
@@ -156,7 +159,7 @@ gint main(gint argc, gchar** argv)
 	}
 
 	verbose("Gigolo %s (GTK+ %u.%u.%u, GLib %u.%u.%u)",
-		VERSION,
+		VERSION_FULL,
 		gtk_major_version, gtk_minor_version, gtk_micro_version,
 		glib_major_version, glib_minor_version, glib_micro_version);
 

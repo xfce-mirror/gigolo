@@ -21,6 +21,9 @@
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
+#ifdef HAVE_XFCE_REVISION_H
+#include "xfce-revision.h"
+#endif
 
 #include <string.h>
 #include <glib.h>
@@ -424,9 +427,9 @@ static void about_cb(GtkWidget *widget, GigoloWindow *window)
 		"authors", authors,
 		"logo-icon-name", gigolo_get_application_icon_name(),
 		"comments", _("A simple frontend to easily connect/mount to local and remote filesystems"),
-		"copyright", "Copyright \302\251 2008-2024 The Xfce development team",
+		"copyright", "Copyright \302\251 2008-" COPYRIGHT_YEAR " The Xfce development team",
 		"website", "https://docs.xfce.org/apps/gigolo/start",
-		"version", VERSION,
+		"version", VERSION_FULL,
 		"translator-credits", _("translator-credits"),
 		"license",  "Copyright 2008-2011 Enrico Tröger <enrico@xfce.org>\n\n"
 					"This program is free software; you can redistribute it and/or modify\n"
