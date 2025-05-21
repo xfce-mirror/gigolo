@@ -31,17 +31,17 @@ See [NEWS](https://gitlab.xfce.org/apps/gigolo/-/blob/master/NEWS) for details o
 From source code repository: 
 
     % cd gigolo
-    % ./autogen.sh
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 From release tarball:
 
-    % tar xf gigolo-<version>.tar.bz2
+    % tar xf gigolo-<version>.tar.xz
     % cd gigolo-<version>
-    % ./configure
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 ### Reporting Bugs
 
