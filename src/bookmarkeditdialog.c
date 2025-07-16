@@ -19,10 +19,6 @@
 
 /* The code is mainly based on Nautilus' 'Connect to server' dialog, thanks */
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
-
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
