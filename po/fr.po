@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.gigolo package.
 # 
 # Translators:
 # Charles Monzat <c.monzat@laposte.net>, 2018
@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 12:48+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:00+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
 "Last-Translator: Wallon Wallon, 2022,2024\n"
 "Language-Team: French (http://app.transifex.com/xfce/xfce-apps/language/fr/)\n"
@@ -25,492 +25,491 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../src/main.c:50
+#: src/main.c:50
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
 msgstr "Connecter tous les signets marqués en « connexion automatique » et quitter"
 
-#: ../src/main.c:51
+#: src/main.c:51
 msgid "Ignore running instances, enforce opening a new instance"
 msgstr "Ignorer les instances en cours d’exécution, forcer l’ouverture d’une nouvelle instance"
 
-#: ../src/main.c:52
+#: src/main.c:52
 msgid "Print a list of supported URI schemes"
 msgstr "Afficher la liste des schémas URI pris en charge"
 
-#: ../src/main.c:53
+#: src/main.c:53
 msgid "Be verbose"
 msgstr "Mode bavard"
 
-#: ../src/main.c:54
+#: src/main.c:54
 msgid "Show version information"
 msgstr "Afficher les informations de version"
 
-#: ../src/main.c:128
+#: src/main.c:128
 msgid "- a simple frontend to easily connect to remote filesystems"
 msgstr "- une interface simple pour se connecter facilement à des systèmes de fichiers distants"
 
-#: ../src/common.c:71
+#: src/common.c:71
 msgid "Unix Device"
 msgstr "Périphérique Unix"
 
-#: ../src/common.c:73
+#: src/common.c:73
 msgid "Windows Share"
 msgstr "Partage Windows"
 
-#: ../src/common.c:75
+#: src/common.c:75
 msgid "FTP"
 msgstr "FTP"
 
-#: ../src/common.c:77
+#: src/common.c:77
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/common.c:79
+#: src/common.c:79
 msgid "SSH / SFTP"
 msgstr "SSH / SFTP"
 
-#: ../src/common.c:81
+#: src/common.c:81
 msgid "Obex"
 msgstr "Obex"
 
-#: ../src/common.c:83
+#: src/common.c:83
 msgid "WebDAV"
 msgstr "WebDAV"
 
-#: ../src/common.c:85
+#: src/common.c:85
 msgid "WebDAV (secure)"
 msgstr "WebDAV (sécurisé)"
 
-#: ../src/common.c:87 ../src/window.c:1621
+#: src/common.c:87 src/window.c:1621
 msgid "Network"
 msgstr "Réseau"
 
-#: ../src/common.c:89
+#: src/common.c:89
 msgid "Archive"
 msgstr "Archive"
 
-#: ../src/common.c:91
+#: src/common.c:91
 msgid "Photos"
 msgstr "Photos"
 
-#: ../src/common.c:93
+#: src/common.c:93
 msgid "Custom Location"
 msgstr "Emplacement personnalisé"
 
-#: ../src/window.c:274
+#: src/window.c:274
 #, c-format
 msgid "Connecting to \"%s\""
 msgstr "Connexion à « %s » en cours"
 
-#: ../src/window.c:428
+#: src/window.c:428
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
 msgstr "Une interface simple pour connecter / monter facilement des systèmes de fichiers locaux et distants"
 
-#: ../src/window.c:432
+#: src/window.c:432
 msgid "translator-credits"
 msgstr "L’équipe de traduction francophone de Xfce"
 
 #. Translators: This is a list of "protocol description (protocol)"
-#: ../src/window.c:481
+#: src/window.c:481
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/window.c:486
+#: src/window.c:486
 msgid "Gigolo can use the following protocols provided by GVfs:"
 msgstr "Gigolo peut utiliser les protocoles suivants fournis par GVfs :"
 
-#: ../src/window.c:499
+#: src/window.c:499 src/gigolo.ui:237
 msgid "Supported Protocols"
 msgstr "Protocoles pris en charge"
 
-#: ../src/window.c:601 ../src/window.c:660
+#: src/window.c:601 src/window.c:660
 #, c-format
 msgid "The command '%s' failed"
 msgstr "La commande « %s » a échoué"
 
-#: ../src/window.c:602 ../src/window.c:635 ../src/window.c:648
-#: ../src/window.c:661 ../src/window.c:858 ../src/bookmarkeditdialog.c:207
-#: ../src/bookmarkeditdialog.c:226 ../src/bookmarkeditdialog.c:239
-#: ../src/bookmarkeditdialog.c:250 ../src/bookmarkeditdialog.c:261
+#: src/window.c:602 src/window.c:635 src/window.c:648 src/window.c:661
+#: src/window.c:858 src/bookmarkeditdialog.c:207 src/bookmarkeditdialog.c:226
+#: src/bookmarkeditdialog.c:239 src/bookmarkeditdialog.c:250
+#: src/bookmarkeditdialog.c:261
 msgid "Error"
 msgstr "Erreur"
 
-#: ../src/window.c:635
+#: src/window.c:635
 msgid "Invalid terminal command"
 msgstr "Commande terminal non valide"
 
-#: ../src/window.c:647
+#: src/window.c:647
 #, c-format
 msgid "No default location available for \"%s\""
 msgstr "Aucun emplacement par défaut pour « %s »"
 
-#: ../src/window.c:767
+#: src/window.c:767
 msgid "Edit _Bookmark"
 msgstr "Modifier un _signet"
 
-#: ../src/window.c:769 ../src/browsenetworkpanel.c:444
-#: ../src/browsenetworkpanel.c:487
+#: src/window.c:769 src/browsenetworkpanel.c:444 src/browsenetworkpanel.c:487
 msgid "Create _Bookmark"
 msgstr "Créer un _signet"
 
-#: ../src/window.c:1531
+#: src/window.c:1531
 msgid "Connected"
 msgstr "Connecté"
 
-#: ../src/window.c:1540 ../src/bookmarkdialog.c:307
+#: src/window.c:1540 src/bookmarkdialog.c:307
 msgid "Service Type"
 msgstr "Type de service"
 
-#: ../src/window.c:1548 ../src/bookmarkdialog.c:299
+#: src/window.c:1548 src/bookmarkdialog.c:299
 msgid "Name"
 msgstr "Nom"
 
-#: ../src/window.c:1613
+#: src/window.c:1613
 msgid "Bookmarks"
 msgstr "Signets"
 
-#: ../src/window.c:1658 ../src/window.c:1693
+#: src/window.c:1658 src/window.c:1693 src/gigolo.ui:8 gigolo.desktop.in:5
 msgid "Gigolo"
 msgstr "Gigolo"
 
-#: ../src/settings.c:688
+#: src/settings.c:688
 msgid "Move it now?"
 msgstr "Le déplacer maintenant ?"
 
-#: ../src/settings.c:689
+#: src/settings.c:689
 msgid "Gigolo needs to move your old configuration directory before starting."
 msgstr "Gigolo doit déplacer votre ancien répertoire de configuration avant de démarrer."
 
-#: ../src/settings.c:697
+#: src/settings.c:697
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
 msgstr "Votre ancien répertoire de configuration « %s » n’a pu être déplacé vers « %s » (%s). Veuillez le déplacer manuellement vers le nouvel emplacement."
 
-#: ../src/settings.c:700
+#: src/settings.c:700
 msgid "Warning"
 msgstr "Avertissement"
 
-#: ../src/bookmarkdialog.c:88
+#: src/bookmarkdialog.c:88
 #, c-format
 msgid "Domain: %s"
 msgstr "Domaine : %s"
 
-#: ../src/bookmarkdialog.c:93
+#: src/bookmarkdialog.c:93
 #, c-format
 msgid "Share: %s"
 msgstr "Partage : %s"
 
-#: ../src/bookmarkdialog.c:99
+#: src/bookmarkdialog.c:99
 #, c-format
 msgid "Folder: %s"
 msgstr "Dossier : %s"
 
-#: ../src/bookmarkdialog.c:105
+#: src/bookmarkdialog.c:105
 #, c-format
 msgid "Path: %s"
 msgstr "Chemin : %s"
 
-#: ../src/bookmarkdialog.c:315
+#: src/bookmarkdialog.c:315
 msgid "Host"
 msgstr "Hôte"
 
-#: ../src/bookmarkdialog.c:323
+#: src/bookmarkdialog.c:323
 msgid "Port"
 msgstr "Port"
 
-#: ../src/bookmarkdialog.c:331
+#: src/bookmarkdialog.c:331
 msgid "Auto-Connect"
 msgstr "Connexion automatique"
 
-#: ../src/bookmarkdialog.c:339
+#: src/bookmarkdialog.c:339
 msgid "Username"
 msgstr "Nom d’utilisateur"
 
-#: ../src/bookmarkdialog.c:347
+#: src/bookmarkdialog.c:347
 msgid "Other information"
 msgstr "Autres informations"
 
-#: ../src/bookmarkdialog.c:368 ../src/bookmarkdialog.c:420
-#: ../src/bookmarkeditdialog.c:788
+#: src/bookmarkdialog.c:368 src/bookmarkdialog.c:420
+#: src/bookmarkeditdialog.c:788
 msgid "_Add"
 msgstr "_Ajouter"
 
-#: ../src/bookmarkdialog.c:375 ../src/bookmarkdialog.c:425
+#: src/bookmarkdialog.c:375 src/bookmarkdialog.c:425 src/gigolo.ui:46
 msgid "_Edit"
 msgstr "É_dition"
 
-#: ../src/bookmarkdialog.c:382 ../src/bookmarkdialog.c:430
+#: src/bookmarkdialog.c:382 src/bookmarkdialog.c:430
 msgid "_Delete"
 msgstr "_Supprimer"
 
-#: ../src/bookmarkdialog.c:403
+#: src/bookmarkdialog.c:403
 msgid "Edit Bookmarks"
 msgstr "Modifier les signets"
 
-#: ../src/bookmarkdialog.c:410 ../src/preferencesdialog.c:498
+#: src/bookmarkdialog.c:410 src/preferencesdialog.c:498
 msgid "_Close"
 msgstr "_Fermer"
 
-#: ../src/bookmarkeditdialog.c:208
+#: src/bookmarkeditdialog.c:208
 msgid "You must enter a name for the bookmark."
 msgstr "Vous devez entrer un nom pour le signet."
 
-#: ../src/bookmarkeditdialog.c:227
+#: src/bookmarkeditdialog.c:227
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
 msgstr "Le nom du signet saisi est déjà utilisé. Veuillez en choisir un autre."
 
-#: ../src/bookmarkeditdialog.c:240
+#: src/bookmarkeditdialog.c:240
 msgid "You must enter a server address or name."
 msgstr "Vous devez saisir un nom ou une adresse de serveur."
 
-#: ../src/bookmarkeditdialog.c:251
+#: src/bookmarkeditdialog.c:251
 msgid "You must enter a share name."
 msgstr "Vous devez saisir un nom de partage."
 
-#: ../src/bookmarkeditdialog.c:262
+#: src/bookmarkeditdialog.c:262
 msgid "You must enter a valid URI for the connection."
 msgstr "Vous devez saisir un URI valide pour la connexion."
 
-#: ../src/bookmarkeditdialog.c:522
+#: src/bookmarkeditdialog.c:522
 msgid "_Device:"
 msgstr "_Périphérique :"
 
-#: ../src/bookmarkeditdialog.c:524 ../src/bookmarkeditdialog.c:1033
+#: src/bookmarkeditdialog.c:524 src/bookmarkeditdialog.c:1033
 msgid "_Server:"
 msgstr "_Serveur :"
 
-#: ../src/bookmarkeditdialog.c:786
+#: src/bookmarkeditdialog.c:786
 msgid "Create Bookmark"
 msgstr "Créer un signet"
 
-#: ../src/bookmarkeditdialog.c:794
+#: src/bookmarkeditdialog.c:794
 msgid "Edit Bookmark"
 msgstr "Modifier le signet"
 
-#: ../src/bookmarkeditdialog.c:797
+#: src/bookmarkeditdialog.c:797
 msgid "_OK"
 msgstr "_Valider"
 
-#: ../src/bookmarkeditdialog.c:803
+#: src/bookmarkeditdialog.c:803
 msgid "Connect to Server"
 msgstr "Connexion au serveur"
 
-#: ../src/bookmarkeditdialog.c:805
+#: src/bookmarkeditdialog.c:805
 msgid "Co_nnect"
 msgstr "Co_nnecter"
 
-#: ../src/bookmarkeditdialog.c:957
+#: src/bookmarkeditdialog.c:957
 msgid "_Cancel"
 msgstr "A_nnuler"
 
 #. Bookmark Settings
-#: ../src/bookmarkeditdialog.c:970
+#: src/bookmarkeditdialog.c:970
 msgid "Bookmark Settings"
 msgstr "Paramètres de signet"
 
-#: ../src/bookmarkeditdialog.c:976
+#: src/bookmarkeditdialog.c:976
 msgid "_Name:"
 msgstr "_Nom :"
 
-#: ../src/bookmarkeditdialog.c:985
+#: src/bookmarkeditdialog.c:985
 msgid "_Color:"
 msgstr "_Couleur :"
 
-#: ../src/bookmarkeditdialog.c:994
+#: src/bookmarkeditdialog.c:994
 msgid "Au_to-Connect:"
 msgstr "Connexion au_tomatique :"
 
 #. Connection Settings
-#: ../src/bookmarkeditdialog.c:1005
+#: src/bookmarkeditdialog.c:1005
 msgid "Connection Settings"
 msgstr "Paramères de connexion"
 
-#: ../src/bookmarkeditdialog.c:1011
+#: src/bookmarkeditdialog.c:1011
 msgid "Service t_ype:"
 msgstr "T_ype de service :"
 
-#: ../src/bookmarkeditdialog.c:1027
+#: src/bookmarkeditdialog.c:1027
 msgid "_Location (URI):"
 msgstr "_Emplacement (URI) :"
 
-#: ../src/bookmarkeditdialog.c:1039
+#: src/bookmarkeditdialog.c:1039
 msgid "P_ath:"
 msgstr "_Chemin :"
 
-#: ../src/bookmarkeditdialog.c:1045
+#: src/bookmarkeditdialog.c:1045
 msgid "_Share:"
 msgstr "Pa_rtage :"
 
 #. Optional Information
-#: ../src/bookmarkeditdialog.c:1064
+#: src/bookmarkeditdialog.c:1064
 msgid "Optional Information"
 msgstr "Informations facultatives"
 
-#: ../src/bookmarkeditdialog.c:1070
+#: src/bookmarkeditdialog.c:1070
 msgid "_Port:"
 msgstr "_Port :"
 
-#: ../src/bookmarkeditdialog.c:1076
+#: src/bookmarkeditdialog.c:1076
 msgid "Set the port to 0 to use the default port"
 msgstr "Régler le port à 0 pour utiliser le port par défaut"
 
-#: ../src/bookmarkeditdialog.c:1078
+#: src/bookmarkeditdialog.c:1078
 msgid "_Folder:"
 msgstr "_Dossier :"
 
-#: ../src/bookmarkeditdialog.c:1084
+#: src/bookmarkeditdialog.c:1084
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
 msgstr "Ceci n’est pas utilisé pour le montage actuel, seulement nécessaire pour l’ouverture du point de montage dans un explorateur de fichiers"
 
-#: ../src/bookmarkeditdialog.c:1087
+#: src/bookmarkeditdialog.c:1087
 msgid "_Domain:"
 msgstr "_Domaine :"
 
-#: ../src/bookmarkeditdialog.c:1093
+#: src/bookmarkeditdialog.c:1093
 msgid "_User Name:"
 msgstr "Nom d’_utilisateur :"
 
-#: ../src/preferencesdialog.c:144
+#: src/preferencesdialog.c:144
 msgid "Icons"
 msgstr "Icônes"
 
-#: ../src/preferencesdialog.c:145
+#: src/preferencesdialog.c:145
 msgid "Text"
 msgstr "Texte"
 
-#: ../src/preferencesdialog.c:146
+#: src/preferencesdialog.c:146
 msgid "Both"
 msgstr "Icônes et texte"
 
-#: ../src/preferencesdialog.c:147
+#: src/preferencesdialog.c:147
 msgid "Both horizontal"
 msgstr "Icônes et texte horizontalement"
 
-#: ../src/preferencesdialog.c:166
+#: src/preferencesdialog.c:166
 msgid "Horizontal"
 msgstr "Horizontale"
 
-#: ../src/preferencesdialog.c:167
+#: src/preferencesdialog.c:167
 msgid "Vertical"
 msgstr "Verticale"
 
-#: ../src/preferencesdialog.c:186
+#: src/preferencesdialog.c:186
 msgid "Symbols"
 msgstr "Icônes"
 
-#: ../src/preferencesdialog.c:187
+#: src/preferencesdialog.c:187
 msgid "Detailed List"
 msgstr "Liste détaillée"
 
-#: ../src/preferencesdialog.c:331
+#: src/preferencesdialog.c:331
 msgid "General"
 msgstr "Général"
 
 #. Row
-#: ../src/preferencesdialog.c:334
+#: src/preferencesdialog.c:334
 msgid "_File Manager"
 msgstr "Gestionnaire de _fichiers"
 
-#: ../src/preferencesdialog.c:345
+#: src/preferencesdialog.c:345
 msgid "Enter the name of a program to use to open or view mount points"
 msgstr "Saisissez le nom de l’application à utiliser pour ouvrir ou afficher les points de montage"
 
 #. Row
-#: ../src/preferencesdialog.c:352
+#: src/preferencesdialog.c:352
 msgid "_Terminal"
 msgstr "_Terminal"
 
-#: ../src/preferencesdialog.c:363
+#: src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
 msgstr "Saisissez le nom d’un programme à utiliser pour ouvrir les points de montage dans un terminal"
 
 #. Row
-#: ../src/preferencesdialog.c:370
+#: src/preferencesdialog.c:370
 msgid "_Bookmark Auto-Connect Interval"
 msgstr "Intervalle de connexion automatique aux _signets"
 
-#: ../src/preferencesdialog.c:376
+#: src/preferencesdialog.c:376
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
 msgstr "La fréquence des tentatives de connexions automatiques aux signets, en secondes. Zéro désactive la vérification."
 
-#: ../src/preferencesdialog.c:387
+#: src/preferencesdialog.c:387
 msgid "Interface"
 msgstr "Interface"
 
-#: ../src/preferencesdialog.c:389
+#: src/preferencesdialog.c:389
 msgid "_Save window position and geometry"
 msgstr "_Enregistrer la position et la géométrie de la fenêtre"
 
-#: ../src/preferencesdialog.c:390
+#: src/preferencesdialog.c:390
 msgid "Saves the window position and geometry and restores it at the start"
 msgstr "Enregistre la position et la géométrie de la fenêtre pour les restaurer ultérieurement"
 
-#: ../src/preferencesdialog.c:393
+#: src/preferencesdialog.c:393
 msgid "Show status _icon in the Notification Area"
 msgstr "Afficher l’_icône d’état dans la zone de notification"
 
-#: ../src/preferencesdialog.c:396
+#: src/preferencesdialog.c:396
 msgid "Start _minimized in the Notification Area"
 msgstr "Démarrer _minimisé dans la zone de notification"
 
-#: ../src/preferencesdialog.c:401
+#: src/preferencesdialog.c:401
 msgid "Show side panel"
 msgstr "Afficher le panneau latéral"
 
-#: ../src/preferencesdialog.c:402
+#: src/preferencesdialog.c:402
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
 msgstr "Afficher ou non un panneau latéral pour parcourir le réseau local afin de trouver les partages Samba / Windows disponibles et une liste de signets"
 
-#: ../src/preferencesdialog.c:405
+#: src/preferencesdialog.c:405
 msgid "Show auto-connect error messages"
 msgstr "Afficher les messages d’erreur de connexion automatique"
 
-#: ../src/preferencesdialog.c:406
+#: src/preferencesdialog.c:406
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
 msgstr "Afficher ou non les messages d’erreur lorsque la connexion automatique d’un signet échoue."
 
-#: ../src/preferencesdialog.c:409
+#: src/preferencesdialog.c:409
 msgid "_Connection List Mode"
 msgstr "Mode liste des _connexions"
 
-#: ../src/preferencesdialog.c:425
+#: src/preferencesdialog.c:425
 msgid "Toolbar"
 msgstr "Barre d’outils"
 
-#: ../src/preferencesdialog.c:427
+#: src/preferencesdialog.c:427
 msgid "Show _toolbar"
 msgstr "Afficher la barre d’ou_tils"
 
-#: ../src/preferencesdialog.c:430
+#: src/preferencesdialog.c:430
 msgid "St_yle"
 msgstr "St_yle"
 
-#: ../src/preferencesdialog.c:439
+#: src/preferencesdialog.c:439
 msgid "_Orientation"
 msgstr "_Orientation"
 
-#: ../src/preferencesdialog.c:495
+#: src/preferencesdialog.c:495
 msgid "Preferences"
 msgstr "Préférences"
 
-#: ../src/backendgvfs.c:215
+#: src/backendgvfs.c:215
 msgid "No bookmark"
 msgstr "Aucun signet"
 
-#: ../src/backendgvfs.c:233
+#: src/backendgvfs.c:233
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -521,65 +520,186 @@ msgid ""
 "Bookmark: %s"
 msgstr "<b>%s</b>\n\nURI : %s\nMonté : Oui\nType de service : %s\nSignet : %s"
 
-#: ../src/backendgvfs.c:248
+#: src/backendgvfs.c:248
 #, c-format
 msgid "<b>Unix device: %s</b>"
 msgstr "<b>Périphérique Unix : %s</b>"
 
-#: ../src/backendgvfs.c:445 ../src/backendgvfs.c:484
+#: src/backendgvfs.c:445 src/backendgvfs.c:484
 msgid "unknown"
 msgstr "inconnu"
 
-#: ../src/backendgvfs.c:451 ../src/backendgvfs.c:559
+#: src/backendgvfs.c:451 src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
 msgstr "La connexion à « %s » a échoué."
 
-#: ../src/backendgvfs.c:488
+#: src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
 msgstr "La déconnexion de « %s » a échoué."
 
-#: ../src/mountdialog.c:93
+#: src/mountdialog.c:93
 msgid "Connecting"
 msgstr "Connexion en cours"
 
-#: ../src/browsenetworkpanel.c:181
+#: src/browsenetworkpanel.c:181
 msgid "No Workgroups found"
 msgstr "Aucun groupe de travail n’a été trouvé"
 
-#: ../src/browsenetworkpanel.c:192
+#: src/browsenetworkpanel.c:192
 msgid "No Shares found"
 msgstr "Aucun partage trouvé"
 
-#: ../src/browsenetworkpanel.c:197
+#: src/browsenetworkpanel.c:197
 msgid "No Hosts found"
 msgstr "Aucun serveur trouvé"
 
-#: ../src/browsenetworkpanel.c:437
+#: src/browsenetworkpanel.c:437 src/gigolo.ui:157 src/gigolo.ui:490
+#: src/gigolo.ui:572
 msgid "_Connect"
 msgstr "_Connexion"
 
-#: ../src/browsenetworkpanel.c:480
+#: src/browsenetworkpanel.c:480
 msgid "Connect to the selected share"
 msgstr "Se connecter au partage sélectionné"
 
-#: ../src/browsenetworkpanel.c:488
+#: src/browsenetworkpanel.c:488
 msgid "Create a bookmark from the selected share"
 msgstr "Créer un signet pour le partage sélectionné"
 
-#: ../src/browsenetworkpanel.c:498
+#: src/browsenetworkpanel.c:498
 msgid "Refresh the network list"
 msgstr "Actualiser la liste des réseaux"
 
-#: ../src/browsenetworkpanel.c:510 ../src/bookmarkpanel.c:263
+#: src/browsenetworkpanel.c:510 src/bookmarkpanel.c:263
 msgid "Close panel"
 msgstr "Fermer le panneau"
 
-#: ../src/bookmarkpanel.c:88
+#: src/bookmarkpanel.c:88
 msgid "No bookmarks"
 msgstr "Aucun signet"
 
-#: ../src/bookmarkpanel.c:251
+#: src/bookmarkpanel.c:251
 msgid "Connect to the selected bookmark"
 msgstr "Se connecter au signet sélectionné"
+
+#: src/gigolo.ui:23
+msgid "_File"
+msgstr "_Fichier"
+
+#: src/gigolo.ui:33 src/gigolo.ui:375 src/gigolo.ui:522
+msgid "_Quit"
+msgstr "_Quitter"
+
+#: src/gigolo.ui:56 src/gigolo.ui:313 src/gigolo.ui:506
+msgid "_Edit Bookmarks"
+msgstr "_Modifier les signets"
+
+#: src/gigolo.ui:71 src/gigolo.ui:514
+msgid "_Preferences"
+msgstr "_Préférences"
+
+#: src/gigolo.ui:84
+msgid "_View"
+msgstr "Affic_hage"
+
+#: src/gigolo.ui:94
+msgid "_Toolbar"
+msgstr "Barre d’o_utils"
+
+#: src/gigolo.ui:102
+msgid "Side _Panel"
+msgstr "_Panneau latéral"
+
+#: src/gigolo.ui:110
+msgid "Status _Icon"
+msgstr "_Icône d’état"
+
+#: src/gigolo.ui:124
+msgid "View as _Symbols"
+msgstr "Vue en i_cônes"
+
+#: src/gigolo.ui:133
+msgid "View as _Detailed List"
+msgstr "Vue en liste _détaillée"
+
+#: src/gigolo.ui:147
+msgid "_Actions"
+msgstr "A_ctions"
+
+#: src/gigolo.ui:165 src/gigolo.ui:289 src/gigolo.ui:580
+msgid "_Disconnect"
+msgstr "_Deconnexion"
+
+#: src/gigolo.ui:174 src/gigolo.ui:275 src/gigolo.ui:498
+msgid "_Bookmarks"
+msgstr "_Signets"
+
+#: src/gigolo.ui:188 src/gigolo.ui:337 src/gigolo.ui:534
+msgid "_Open"
+msgstr "_Ouvrir"
+
+#: src/gigolo.ui:197 src/gigolo.ui:542
+msgid "Open in _Terminal"
+msgstr "Ouvrir dans un _terminal"
+
+#: src/gigolo.ui:206 src/gigolo.ui:550
+msgid "_Copy URI"
+msgstr "_Copier URI"
+
+#: src/gigolo.ui:219
+msgid "_Help"
+msgstr "Aid_e"
+
+#: src/gigolo.ui:229
+msgid "Online Help"
+msgstr "Aide en ligne"
+
+#: src/gigolo.ui:251
+msgid "About"
+msgstr "À propos"
+
+#: src/gigolo.ui:274
+msgid "Choose a bookmark to connect to"
+msgstr "Choisir un signet auquel se connecter"
+
+#: src/gigolo.ui:288
+msgid "Disconnect the selected resource"
+msgstr "Déconnecter la ressource sélectionnée"
+
+#: src/gigolo.ui:312
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Ouvrir le gestionnaire de signets pour ajouter, modifier ou supprimer des signets"
+
+#: src/gigolo.ui:336
+msgid "Open the selected resource with a file manager"
+msgstr "Ouvrir la ressource sélectionnée avec un gestionnaire de fichiers"
+
+#: src/gigolo.ui:350
+msgid "Start a terminal from here"
+msgstr "Démarrer un terminal depuis cet emplacement"
+
+#: src/gigolo.ui:351
+msgid "Open _Terminal"
+msgstr "Ouvrir le _Terminal"
+
+#: src/gigolo.ui:374
+msgid "Quit Gigolo"
+msgstr "Quitter Gigolo"
+
+#: src/gigolo.ui:558
+msgid "_Edit Bookmark"
+msgstr "_Éditer le signet"
+
+#: gigolo.desktop.in:6
+msgid "Frontend for GIO/GVfs"
+msgstr "Interface pour GIO/GVfs"
+
+#: gigolo.desktop.in:7
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Une interface simple pour se connecter facilement à des systèmes de fichiers à distance"
+
+#: gigolo.desktop.in:13
+msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
+msgstr "remote;filesystem;connect;network;GIO;GVfs;file;manager;à distance;système de fichiers;connexion;réseau;fichier;gestionnaire;"
