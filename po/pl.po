@@ -100,7 +100,7 @@ msgstr "Nawiązywanie połączenia z „%s”"
 #: src/window.c:428
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "Łączy z lokalnymi i​ zdalnymi systemami plików"
+msgstr "Prosty interfejs do połączeń z lokalnymi i​ zdalnymi systemami plików."
 
 #: src/window.c:432
 msgid "translator-credits"
