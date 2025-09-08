@@ -7,6 +7,7 @@
 # Andre Miranda <andre@andreldm.com>, 2013-2014
 # filiperosset <rosset.filipe@gmail.com>, 2009
 # Michael Martins, 2024
+# Michael Martins, 2025
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2013
 # The Cat, 2023
 # The Cat, 2020
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-07-18 11:00+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Michael Martins, 2024\n"
+"Last-Translator: Michael Martins, 2025\n"
 "Language-Team: Portuguese (Brazil) (http://app.transifex.com/xfce/xfce-apps/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -617,11 +618,11 @@ msgstr "Í_cone de status"
 
 #: src/gigolo.ui:124
 msgid "View as _Symbols"
-msgstr "Visualizar como _símbolos"
+msgstr "Ver como _símbolos"
 
 #: src/gigolo.ui:133
 msgid "View as _Detailed List"
-msgstr "Visualizar como lista _detalhada"
+msgstr "Ver como lista _detalhada"
 
 #: src/gigolo.ui:147
 msgid "_Actions"
@@ -641,7 +642,7 @@ msgstr "Abrir"
 
 #: src/gigolo.ui:197 src/gigolo.ui:542
 msgid "Open in _Terminal"
-msgstr "Abrir no _Terminal"
+msgstr "Abrir no _terminal"
 
 #: src/gigolo.ui:206 src/gigolo.ui:550
 msgid "_Copy URI"
@@ -661,7 +662,7 @@ msgstr "Sobre"
 
 #: src/gigolo.ui:274
 msgid "Choose a bookmark to connect to"
-msgstr "Escolha o marcador para conectar"
+msgstr "Escolha um marcador para se conectar"
 
 #: src/gigolo.ui:288
 msgid "Disconnect the selected resource"
@@ -669,7 +670,7 @@ msgstr "Desconectar o recurso selecionado"
 
 #: src/gigolo.ui:312
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Abrir o gerenciador de marcadores para adicionar, editar ou apagar marcadores"
+msgstr "Abrir o gerenciador de marcadores para adicionar, editar ou excluir marcadores"
 
 #: src/gigolo.ui:336
 msgid "Open the selected resource with a file manager"
@@ -681,7 +682,7 @@ msgstr "Iniciar um terminal a partir daqui"
 
 #: src/gigolo.ui:351
 msgid "Open _Terminal"
-msgstr "Abrir_Terminal"
+msgstr "Abrir _terminal"
 
 #: src/gigolo.ui:374
 msgid "Quit Gigolo"
@@ -689,7 +690,7 @@ msgstr "Sair do Gigolo"
 
 #: src/gigolo.ui:558
 msgid "_Edit Bookmark"
-msgstr "_Editar Marcador"
+msgstr "_Editar marcador"
 
 #: gigolo.desktop.in:6
 msgid "Frontend for GIO/GVfs"
