@@ -297,7 +297,7 @@ msgstr ""
 
 #: src/bookmarkeditdialog.c:957
 msgid "_Cancel"
-msgstr ""
+msgstr "ۋاز كەچ(_C)"
 
 #. Bookmark Settings
 #: src/bookmarkeditdialog.c:970
@@ -590,7 +590,7 @@ msgstr "خەتكۈش تەھرىرلەش(_E)"
 
 #: src/gigolo.ui:71 src/gigolo.ui:514
 msgid "_Preferences"
-msgstr ""
+msgstr "مايىللىق(_P)"
 
 #: src/gigolo.ui:84
 msgid "_View"
@@ -650,7 +650,7 @@ msgstr "توردىكى ياردەم"
 
 #: src/gigolo.ui:251
 msgid "About"
-msgstr ""
+msgstr "ھەققىدە"
 
 #: src/gigolo.ui:274
 msgid "Choose a bookmark to connect to"
