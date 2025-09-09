@@ -43,11 +43,11 @@ msgstr "- يىراقتىكى ھۆججەت سىستېمىسىغا باغلىنى�
 
 #: src/common.c:71
 msgid "Unix Device"
-msgstr "يۇنىكىس(Unix) ئۈسكۈنىسى"
+msgstr "‫Unix ئۈسكۈنىسى"
 
 #: src/common.c:73
 msgid "Windows Share"
-msgstr "ۋىندوۋس(Windows) ھەمبەھىر"
+msgstr "‫Windows ھەمبەھىر"
 
 #: src/common.c:75
 msgid "FTP"
@@ -59,7 +59,7 @@ msgstr "HTTP"
 
 #: src/common.c:79
 msgid "SSH / SFTP"
-msgstr ""
+msgstr "SSH / SFTP"
 
 #: src/common.c:81
 msgid "Obex"
@@ -83,7 +83,7 @@ msgstr "ئارخىپ"
 
 #: src/common.c:91
 msgid "Photos"
-msgstr "سۈرەتلەر"
+msgstr "سۈرەت"
 
 #: src/common.c:93
 msgid "Custom Location"
@@ -97,21 +97,21 @@ msgstr "باغلىنىۋاتقان ئورۇن «%s»"
 #: src/window.c:428
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr "يەرلىك ۋە يىراقتىكى ھۆججەت سىستېمىسىغا ئوڭاي باغلىنىدىغان/ئېگەرلەيدىغان ئاددىي ئالدى ئۇچ پروگراممىسى"
+msgstr "يەرلىك ۋە يىراقتىكى ھۆججەت سىستېمىسىغا ئوڭاي باغلىنىدىغان/ئېگەرلەيدىغان ئاددىي ئالدى ئۇچ پىروگراممىسى"
 
 #: src/window.c:432
 msgid "translator-credits"
-msgstr "غەيرەت ت.كەنجى <gheyret@gmail.com>"
+msgstr "غەيرەت ت.كەنجى <gheyret@gmail.com>\nئابدۇقادىر ئابلىز <sahranbay@gmail.com>"
 
 #. Translators: This is a list of "protocol description (protocol)"
 #: src/window.c:481
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #: src/window.c:486
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "گىگولو(Gigolo) دا GVfs تەمىنلىگەن تۆۋەندىكى كېلىشىملەرنى ئىشلەتكىلى بولىدۇ"
+msgstr "Gigolo دا GVfs تەمىنلىگەن تۆۋەندىكى كېلىشىملەرنى ئىشلەتكىلى بولىدۇ:"
 
 #: src/window.c:499 src/gigolo.ui:237
 msgid "Supported Protocols"
@@ -140,11 +140,11 @@ msgstr "«%s» نىڭ كۆڭۈلدىكى ئورنى يوق"
 
 #: src/window.c:767
 msgid "Edit _Bookmark"
-msgstr "خەتكۈش تەھرىرلەش(_B)"
+msgstr "خەتكۈش تەھرىر(_B)"
 
 #: src/window.c:769 src/browsenetworkpanel.c:444 src/browsenetworkpanel.c:487
 msgid "Create _Bookmark"
-msgstr "خەتكۈش قۇرۇش(_B)"
+msgstr "خەتكۈش قۇر(_B)"
 
 #: src/window.c:1531
 msgid "Connected"
@@ -164,7 +164,7 @@ msgstr "خەتكۈش"
 
 #: src/window.c:1658 src/window.c:1693 src/gigolo.ui:8 gigolo.desktop.in:5
 msgid "Gigolo"
-msgstr "گىگولو(Gigolo)"
+msgstr "Gigolo"
 
 #: src/settings.c:688
 msgid "Move it now?"
@@ -172,7 +172,7 @@ msgstr "ھازىر يۆتكىسۇنمۇ؟"
 
 #: src/settings.c:689
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "گىگولو(Gigolo) نى قوزغىتىشتىن بۇرۇن كونا تەڭشەك مۇندەرىجىسىنى يۆتكىۋېتىش كېرەك."
+msgstr "‫Gigolo نى قوزغىتىشتىن بۇرۇن كونا تەڭشەك مۇندەرىجىسىنى يۆتكىۋېتىش كېرەك."
 
 #: src/settings.c:697
 #, c-format
@@ -183,7 +183,7 @@ msgstr "كونا تەڭشەك مۇندەرىجىسى «%s» نى «%s» (%s) گ�
 
 #: src/settings.c:700
 msgid "Warning"
-msgstr "دىققەت"
+msgstr "ئاگاھلاندۇرۇش"
 
 #: src/bookmarkdialog.c:88
 #, c-format
@@ -223,12 +223,12 @@ msgstr "ئىشلەتكۈچى ئاتى"
 
 #: src/bookmarkdialog.c:347
 msgid "Other information"
-msgstr "باشقا ئۇچۇرلار"
+msgstr "باشقا ئۇچۇر"
 
 #: src/bookmarkdialog.c:368 src/bookmarkdialog.c:420
 #: src/bookmarkeditdialog.c:788
 msgid "_Add"
-msgstr ""
+msgstr "قوش(_A)"
 
 #: src/bookmarkdialog.c:375 src/bookmarkdialog.c:425 src/gigolo.ui:46
 msgid "_Edit"
@@ -240,11 +240,11 @@ msgstr "ئۆچۈر(_D)"
 
 #: src/bookmarkdialog.c:403
 msgid "Edit Bookmarks"
-msgstr "خەتكۈش تەھرىرلەش"
+msgstr "خەتكۈش تەھرىر"
 
 #: src/bookmarkdialog.c:410 src/preferencesdialog.c:498
 msgid "_Close"
-msgstr "تاقا(_C)"
+msgstr "ياپ(_C)"
 
 #: src/bookmarkeditdialog.c:208
 msgid "You must enter a name for the bookmark."
@@ -285,7 +285,7 @@ msgstr "خەتكۈش تەھرىرلەش"
 
 #: src/bookmarkeditdialog.c:797
 msgid "_OK"
-msgstr ""
+msgstr "جەزملە(_O)"
 
 #: src/bookmarkeditdialog.c:803
 msgid "Connect to Server"
@@ -293,7 +293,7 @@ msgstr "مۇلازىمېتىرغا باغلىنىش"
 
 #: src/bookmarkeditdialog.c:805
 msgid "Co_nnect"
-msgstr ""
+msgstr "باغلا(_N)"
 
 #: src/bookmarkeditdialog.c:957
 msgid "_Cancel"
@@ -302,11 +302,11 @@ msgstr "ۋاز كەچ(_C)"
 #. Bookmark Settings
 #: src/bookmarkeditdialog.c:970
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "خەتكۈش تەڭشەك"
 
 #: src/bookmarkeditdialog.c:976
 msgid "_Name:"
-msgstr ""
+msgstr "ئاتى(_N):"
 
 #: src/bookmarkeditdialog.c:985
 msgid "_Color:"
@@ -314,12 +314,12 @@ msgstr "رەڭ(_C):"
 
 #: src/bookmarkeditdialog.c:994
 msgid "Au_to-Connect:"
-msgstr ""
+msgstr "ئۆزلۈكىدىن باغلاش(_T):"
 
 #. Connection Settings
 #: src/bookmarkeditdialog.c:1005
 msgid "Connection Settings"
-msgstr ""
+msgstr "باغلىنىش تەڭشىكى"
 
 #: src/bookmarkeditdialog.c:1011
 msgid "Service t_ype:"
@@ -340,7 +340,7 @@ msgstr "ھەمبەھىر(_S):"
 #. Optional Information
 #: src/bookmarkeditdialog.c:1064
 msgid "Optional Information"
-msgstr ""
+msgstr "تاللانما ئۇچۇر"
 
 #: src/bookmarkeditdialog.c:1070
 msgid "_Port:"
@@ -358,7 +358,7 @@ msgstr "مۇندەرىجە(_F):"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "بۇ رەسمىي ئېگەرلەشتە ئىشلىتىلمەيدۇ، پەقەتلا ھۆججەت كۆرگۈدە ئېگەرلەش نۇقتىسىنى ئېچىش ئۈچۈن كېرەك بولىدۇ."
+msgstr "بۇ رەسمىي ئېگەرلەشتە ئىشلىتىلمەيدۇ، پەقەتلا ھۆججەت كۆرگۈدە ئېگەرلەش نۇقتىسىنى ئېچىش ئۈچۈن كېرەك بولىدۇ"
 
 #: src/bookmarkeditdialog.c:1087
 msgid "_Domain:"
@@ -370,7 +370,7 @@ msgstr "ئىشلەتكۈچى ئاتى(_U):"
 
 #: src/preferencesdialog.c:144
 msgid "Icons"
-msgstr "سىنبەلگىلەر"
+msgstr "سىنبەلگە"
 
 #: src/preferencesdialog.c:145
 msgid "Text"
@@ -382,19 +382,19 @@ msgstr "ئىككىلىسى"
 
 #: src/preferencesdialog.c:147
 msgid "Both horizontal"
-msgstr "ئىككىلىسى گورىزونتال"
+msgstr "ئىككىلىسى توغرىسىغا"
 
 #: src/preferencesdialog.c:166
 msgid "Horizontal"
-msgstr "گورىزونتال"
+msgstr "توغرىسىغا"
 
 #: src/preferencesdialog.c:167
 msgid "Vertical"
-msgstr "ۋېرتىكال"
+msgstr "بويىغا"
 
 #: src/preferencesdialog.c:186
 msgid "Symbols"
-msgstr "بەلگىلەر"
+msgstr "بەلگە"
 
 #: src/preferencesdialog.c:187
 msgid "Detailed List"
@@ -407,11 +407,11 @@ msgstr "ئادەتتىكى"
 #. Row
 #: src/preferencesdialog.c:334
 msgid "_File Manager"
-msgstr "ھۆججەت باشقۇرغۇ(_F)"
+msgstr "ھۆججەت باشقۇرغۇچ(_F)"
 
 #: src/preferencesdialog.c:345
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "ئېچىش ياكى ئېگەرلەش نۇقتىسىنى كۆرۈش ئۈچۈن پروگرامما ئاتىنى كىرگۈزۈڭ"
+msgstr "ئېچىش ياكى ئېگەرلەش نۇقتىسىنى كۆرۈش ئۈچۈن پىروگرامما ئاتىنى كىرگۈزۈڭ"
 
 #. Row
 #: src/preferencesdialog.c:352
@@ -420,18 +420,18 @@ msgstr "تېرمىنال(_T)"
 
 #: src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr "تېرمىنالدا ئېگەرلەش نۇقتىسىنى ئاچىدىغان پروگرامما ئاتىنى كىرگۈزۈڭ"
+msgstr "تېرمىنالدا ئېگەرلەش نۇقتىسىنى ئاچىدىغان پىروگرامما ئاتىنى كىرگۈزۈڭ"
 
 #. Row
 #: src/preferencesdialog.c:370
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "ئاپتوماتىك-باغلىنىشىنى خەتكۈشلەش ئىنتېرۋالى(_B)"
+msgstr "ئاپتوماتىك-باغلىنىشىنى خەتكۈشلەش ئارىلىقى(_B)"
 
 #: src/preferencesdialog.c:376
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr "ئاپتوماتىك باغلىنىشنىڭ ئىنتېرۋالىنى كىرگۈزۈڭ، 0 بولسا تەكشۈرۈش ئىناۋەتسىز بولىدۇ. بىرلىكى سېكۇنت."
+msgstr "ئاپتوماتىك باغلىنىشنىڭ ئارىلىقىنى كىرگۈزۈڭ، 0 بولسا تەكشۈرۈش ئىناۋەتسىز بولىدۇ. بىرلىكى سېكۇنت."
 
 #: src/preferencesdialog.c:387
 msgid "Interface"
@@ -439,7 +439,7 @@ msgstr "ئارايۈز"
 
 #: src/preferencesdialog.c:389
 msgid "_Save window position and geometry"
-msgstr "كۆزنەكنىڭ ئورنى ۋە شەكلىنى ساقلىسۇن(_S)"
+msgstr "كۆزنەكنىڭ ئورنى ۋە شەكلىنى ساقلايدۇ(_S)"
 
 #: src/preferencesdialog.c:390
 msgid "Saves the window position and geometry and restores it at the start"
@@ -447,7 +447,7 @@ msgstr "كۆزنەكنىڭ ئورنى ۋە شەكلىنى ساقلاپ قوزغ�
 
 #: src/preferencesdialog.c:393
 msgid "Show status _icon in the Notification Area"
-msgstr "ئۇقتۇرۇش رايونىدا ھالەت سىنبەلگىسىنى كۆرسەتسۇن(_I)"
+msgstr "ئۇقتۇرۇش رايونىدا ھالەت سىنبەلگىسىنى كۆرسىتىدۇ(_I)"
 
 #: src/preferencesdialog.c:396
 msgid "Start _minimized in the Notification Area"
@@ -455,7 +455,7 @@ msgstr "ئۇقتۇرۇش رايونىدا ئەڭ كىچىك قىلىپ باشل�
 
 #: src/preferencesdialog.c:401
 msgid "Show side panel"
-msgstr "يان كۆزنەكنى كۆرسەتسۇن"
+msgstr "يان كۆزنەكنى كۆرسىتىدۇ"
 
 #: src/preferencesdialog.c:402
 msgid ""
@@ -465,7 +465,7 @@ msgstr "يەرلىك توردىكى ئىشلەتكىلى بولىدىغان Samb
 
 #: src/preferencesdialog.c:405
 msgid "Show auto-connect error messages"
-msgstr "ئاپتوماتىك باغلىنىشتا كۆرۈلگەن خاتالىقلارنى كۆرسەتسۇن"
+msgstr "ئاپتوماتىك باغلىنىشتا كۆرۈلگەن خاتالىقلارنى كۆرسىتىدۇ"
 
 #: src/preferencesdialog.c:406
 msgid ""
@@ -483,7 +483,7 @@ msgstr "قورال بالداق"
 
 #: src/preferencesdialog.c:427
 msgid "Show _toolbar"
-msgstr "قورال بالداقنى كۆرسەتسۇن(_T)"
+msgstr "قورال بالداقنى كۆرسىتىدۇ(_T)"
 
 #: src/preferencesdialog.c:430
 msgid "St_yle"
@@ -495,7 +495,7 @@ msgstr "يۆنىلىشى(_O)"
 
 #: src/preferencesdialog.c:495
 msgid "Preferences"
-msgstr "تەڭشەكلەر"
+msgstr "مايىللىق"
 
 #: src/backendgvfs.c:215
 msgid "No bookmark"
@@ -519,7 +519,7 @@ msgstr "<b>يۇنىكىس(Unix) ئۈسكۈنىسى: %s</b>"
 
 #: src/backendgvfs.c:445 src/backendgvfs.c:484
 msgid "unknown"
-msgstr "نامەلۇم"
+msgstr "يوچۇن"
 
 #: src/backendgvfs.c:451 src/backendgvfs.c:559
 #, c-format
@@ -550,7 +550,7 @@ msgstr "كومپيۇتېرلار(Hosts) يوق ئىكەن"
 #: src/browsenetworkpanel.c:437 src/gigolo.ui:157 src/gigolo.ui:490
 #: src/gigolo.ui:572
 msgid "_Connect"
-msgstr ""
+msgstr "باغلا(_C)"
 
 #: src/browsenetworkpanel.c:480
 msgid "Connect to the selected share"
@@ -582,7 +582,7 @@ msgstr "ھۆججەت(_F)"
 
 #: src/gigolo.ui:33 src/gigolo.ui:375 src/gigolo.ui:522
 msgid "_Quit"
-msgstr "ئاخىرلاشتۇر(_Q)"
+msgstr "چېكىن(_Q)"
 
 #: src/gigolo.ui:56 src/gigolo.ui:313 src/gigolo.ui:506
 msgid "_Edit Bookmarks"
@@ -622,7 +622,7 @@ msgstr "مەشغۇلاتلار(_A)"
 
 #: src/gigolo.ui:165 src/gigolo.ui:289 src/gigolo.ui:580
 msgid "_Disconnect"
-msgstr ""
+msgstr "ئۈز(_D)"
 
 #: src/gigolo.ui:174 src/gigolo.ui:275 src/gigolo.ui:498
 msgid "_Bookmarks"
@@ -638,7 +638,7 @@ msgstr "تېرمىنالدا ئاچ(_T)"
 
 #: src/gigolo.ui:206 src/gigolo.ui:550
 msgid "_Copy URI"
-msgstr ""
+msgstr "URI كۆچۈر(_C)"
 
 #: src/gigolo.ui:219
 msgid "_Help"
@@ -662,11 +662,11 @@ msgstr "تاللانغان مەنبەدىن ئۈزۈلىدۇ"
 
 #: src/gigolo.ui:312
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "خەتكۈش باشقۇرغۇنى ئېچىپ، خەتكۈشلەرنى تەھرىرلەيدۇ، قوشىدۇ ياكى ئۆچۈرىدۇ"
+msgstr "خەتكۈش باشقۇرغۇچنى ئېچىپ، خەتكۈشلەرنى تەھرىرلەيدۇ، قوشىدۇ ياكى ئۆچۈرىدۇ"
 
 #: src/gigolo.ui:336
 msgid "Open the selected resource with a file manager"
-msgstr "ھۆججەت باشقۇرغۇدا تاللانغان مەنبەنى ئاچىدۇ"
+msgstr "ھۆججەت باشقۇرغۇچتا تاللانغان مەنبەنى ئاچىدۇ"
 
 #: src/gigolo.ui:350
 msgid "Start a terminal from here"
@@ -674,24 +674,24 @@ msgstr "تېرمىنالنى بۇ يەردىن قوزغىتىدۇ"
 
 #: src/gigolo.ui:351
 msgid "Open _Terminal"
-msgstr ""
+msgstr "تېرمىنال ئاچ(_T)"
 
 #: src/gigolo.ui:374
 msgid "Quit Gigolo"
-msgstr "گىگولو(Gigolo) نى ئاخىرلاشتۇر"
+msgstr "‫Gigolo نى ئاخىرلاشتۇر"
 
 #: src/gigolo.ui:558
 msgid "_Edit Bookmark"
-msgstr ""
+msgstr "خەتكۈش تەھرىرلە(_E)"
 
 #: gigolo.desktop.in:6
 msgid "Frontend for GIO/GVfs"
-msgstr ""
+msgstr "GIO/GVfs نىڭ ئارقا ئۇچى"
 
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "يىراقتىكى ھۆججەت سىستېمىسىغا ئوڭاي باغلىنىدىغان ئالدى ئۇچ پروگراممىسى"
+msgstr "يىراقتىكى ھۆججەت سىستېمىسىغا ئوڭاي باغلىنىدىغان ئالدى ئۇچ پىروگراممىسى"
 
 #: gigolo.desktop.in:13
 msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
-msgstr ""
+msgstr "remote;filesystem;connect;network;GIO;GVfs;file;manager;يىراقتىكى؛ھۆججەت سىستېمىسى؛باغلا؛تور؛ھۆججەت؛باشقۇرغۇچى؛"
