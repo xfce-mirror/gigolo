@@ -460,13 +460,13 @@ msgstr "Inicia _minimitzat a l'àrea de les notificacions del sistema"
 
 #: src/preferencesdialog.c:401
 msgid "Show side panel"
-msgstr "Mostra el plafó lateral"
+msgstr "Mostra el panell lateral"
 
 #: src/preferencesdialog.c:402
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Si s'ha de mostrar un plafó lateral per navegar per les comparticions Samba/Windows de la xarxa local i una llista dels marcadors"
+msgstr "Si s'ha de mostrar un panell lateral per navegar per les comparticions Samba/Windows de la xarxa local i una llista dels marcadors"
 
 #: src/preferencesdialog.c:405
 msgid "Show auto-connect error messages"
@@ -571,7 +571,7 @@ msgstr "Refresca la llista de xarxes"
 
 #: src/browsenetworkpanel.c:510 src/bookmarkpanel.c:263
 msgid "Close panel"
-msgstr "Tanca el plafó"
+msgstr "Tanca el panell"
 
 #: src/bookmarkpanel.c:88
 msgid "No bookmarks"
@@ -607,7 +607,7 @@ msgstr "Barra d'_eines"
 
 #: src/gigolo.ui:102
 msgid "Side _Panel"
-msgstr "_Plafó lateral"
+msgstr "_Panell lateral"
 
 #: src/gigolo.ui:110
 msgid "Status _Icon"
