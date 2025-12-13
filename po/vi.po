@@ -1,0 +1,698 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.gigolo package.
+# 
+# Translators:
+# Loc Huynh <https://github.com/hthienloc>, 2025
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Apps\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:00+0200\n"
+"PO-Revision-Date: 2013-07-03 18:23+0000\n"
+"Last-Translator: Loc Huynh <https://github.com/hthienloc>, 2025\n"
+"Language-Team: Vietnamese (http://app.transifex.com/xfce/xfce-apps/language/vi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/main.c:50
+msgid "Connect all bookmarks marked as 'auto connect' and exit"
+msgstr "Kết nối tất cả dấu trang được đánh dấu là 'tự động kết nối' và thoát"
+
+#: src/main.c:51
+msgid "Ignore running instances, enforce opening a new instance"
+msgstr "Bỏ qua các phiên bản đang chạy, buộc mở phiên bản mới"
+
+#: src/main.c:52
+msgid "Print a list of supported URI schemes"
+msgstr "In danh sách các lược đồ URI được hỗ trợ"
+
+#: src/main.c:53
+msgid "Be verbose"
+msgstr "Hiển thị chi tiết"
+
+#: src/main.c:54
+msgid "Show version information"
+msgstr "Hiện thông tin phiên bản"
+
+#: src/main.c:128
+msgid "- a simple frontend to easily connect to remote filesystems"
+msgstr "- giao diện đơn giản để dễ dàng kết nối đến hệ thống tệp từ xa"
+
+#: src/common.c:71
+msgid "Unix Device"
+msgstr "Thiết bị Unix"
+
+#: src/common.c:73
+msgid "Windows Share"
+msgstr "Chia sẻ Windows"
+
+#: src/common.c:75
+msgid "FTP"
+msgstr "FTP"
+
+#: src/common.c:77
+msgid "HTTP"
+msgstr "HTTP"
+
+#: src/common.c:79
+msgid "SSH / SFTP"
+msgstr "SSH / SFTP"
+
+#: src/common.c:81
+msgid "Obex"
+msgstr "Obex"
+
+#: src/common.c:83
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: src/common.c:85
+msgid "WebDAV (secure)"
+msgstr "WebDAV (bảo mật)"
+
+#: src/common.c:87 src/window.c:1621
+msgid "Network"
+msgstr "Mạng"
+
+#: src/common.c:89
+msgid "Archive"
+msgstr "Tệp nén"
+
+#: src/common.c:91
+msgid "Photos"
+msgstr "Ảnh"
+
+#: src/common.c:93
+msgid "Custom Location"
+msgstr "Vị trí tùy chỉnh"
+
+#: src/window.c:274
+#, c-format
+msgid "Connecting to \"%s\""
+msgstr "Đang kết nối đến \"%s\""
+
+#: src/window.c:428
+msgid ""
+"A simple frontend to easily connect/mount to local and remote filesystems"
+msgstr "Giao diện đơn giản để dễ dàng kết nối/gắn kết đến hệ thống tệp cục bộ và từ xa"
+
+#: src/window.c:432
+msgid "translator-credits"
+msgstr "giới thiêu người dịch"
+
+#. Translators: This is a list of "protocol description (protocol)"
+#: src/window.c:481
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: src/window.c:486
+msgid "Gigolo can use the following protocols provided by GVfs:"
+msgstr "Gigolo có thể sử dụng các giao thức sau do GVfs cung cấp:"
+
+#: src/window.c:499 src/gigolo.ui:237
+msgid "Supported Protocols"
+msgstr "Giao thức được hỗ trợ"
+
+#: src/window.c:601 src/window.c:660
+#, c-format
+msgid "The command '%s' failed"
+msgstr "Lệnh '%s' thất bại"
+
+#: src/window.c:602 src/window.c:635 src/window.c:648 src/window.c:661
+#: src/window.c:858 src/bookmarkeditdialog.c:207 src/bookmarkeditdialog.c:226
+#: src/bookmarkeditdialog.c:239 src/bookmarkeditdialog.c:250
+#: src/bookmarkeditdialog.c:261
+msgid "Error"
+msgstr "Lỗi"
+
+#: src/window.c:635
+msgid "Invalid terminal command"
+msgstr "Lệnh terminal không hợp lệ"
+
+#: src/window.c:647
+#, c-format
+msgid "No default location available for \"%s\""
+msgstr "Không có vị trí mặc định cho \"%s\""
+
+#: src/window.c:767
+msgid "Edit _Bookmark"
+msgstr "Sửa dấu _trang"
+
+#: src/window.c:769 src/browsenetworkpanel.c:444 src/browsenetworkpanel.c:487
+msgid "Create _Bookmark"
+msgstr "Tạo dấu _trang"
+
+#: src/window.c:1531
+msgid "Connected"
+msgstr "Đã kết nối"
+
+#: src/window.c:1540 src/bookmarkdialog.c:307
+msgid "Service Type"
+msgstr "Loại dịch vụ"
+
+#: src/window.c:1548 src/bookmarkdialog.c:299
+msgid "Name"
+msgstr "Tên"
+
+#: src/window.c:1613
+msgid "Bookmarks"
+msgstr "Dấu trang"
+
+#: src/window.c:1658 src/window.c:1693 src/gigolo.ui:8 gigolo.desktop.in:5
+msgid "Gigolo"
+msgstr "Gigolo"
+
+#: src/settings.c:688
+msgid "Move it now?"
+msgstr "Di chuyển ngay bây giờ?"
+
+#: src/settings.c:689
+msgid "Gigolo needs to move your old configuration directory before starting."
+msgstr "Gigolo cần di chuyển thư mục cấu hình cũ của bạn trước khi khởi động."
+
+#: src/settings.c:697
+#, c-format
+msgid ""
+"Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
+"Please move manually the directory to the new location."
+msgstr "Thư mục cấu hình cũ của bạn \"%s\" không thể di chuyển đến \"%s\" (%s). Vui lòng di chuyển thủ công thư mục đến vị trí mới."
+
+#: src/settings.c:700
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#: src/bookmarkdialog.c:88
+#, c-format
+msgid "Domain: %s"
+msgstr "Miền: %s"
+
+#: src/bookmarkdialog.c:93
+#, c-format
+msgid "Share: %s"
+msgstr "Chia sẻ: %s"
+
+#: src/bookmarkdialog.c:99
+#, c-format
+msgid "Folder: %s"
+msgstr "Thư mục: %s"
+
+#: src/bookmarkdialog.c:105
+#, c-format
+msgid "Path: %s"
+msgstr "Đường dẫn: %s"
+
+#: src/bookmarkdialog.c:315
+msgid "Host"
+msgstr "Máy chủ"
+
+#: src/bookmarkdialog.c:323
+msgid "Port"
+msgstr "Cổng"
+
+#: src/bookmarkdialog.c:331
+msgid "Auto-Connect"
+msgstr "Tự động kết nối"
+
+#: src/bookmarkdialog.c:339
+msgid "Username"
+msgstr "Tên người dùng"
+
+#: src/bookmarkdialog.c:347
+msgid "Other information"
+msgstr "Thông tin khác"
+
+#: src/bookmarkdialog.c:368 src/bookmarkdialog.c:420
+#: src/bookmarkeditdialog.c:788
+msgid "_Add"
+msgstr "_Thêm"
+
+#: src/bookmarkdialog.c:375 src/bookmarkdialog.c:425 src/gigolo.ui:46
+msgid "_Edit"
+msgstr "Chỉnh _sửa"
+
+#: src/bookmarkdialog.c:382 src/bookmarkdialog.c:430
+msgid "_Delete"
+msgstr "_Xóa"
+
+#: src/bookmarkdialog.c:403
+msgid "Edit Bookmarks"
+msgstr "Chỉnh sửa dấu trang"
+
+#: src/bookmarkdialog.c:410 src/preferencesdialog.c:498
+msgid "_Close"
+msgstr "Đóng l_ại"
+
+#: src/bookmarkeditdialog.c:208
+msgid "You must enter a name for the bookmark."
+msgstr "Bạn phải nhập tên cho dấu trang."
+
+#: src/bookmarkeditdialog.c:227
+msgid ""
+"The entered bookmark name is already in use. Please choose another one."
+msgstr "Tên dấu trang đã nhập đang được sử dụng. Vui lòng chọn tên khác."
+
+#: src/bookmarkeditdialog.c:240
+msgid "You must enter a server address or name."
+msgstr "Bạn phải nhập địa chỉ hoặc tên máy chủ."
+
+#: src/bookmarkeditdialog.c:251
+msgid "You must enter a share name."
+msgstr "Bạn phải nhập tên chia sẻ."
+
+#: src/bookmarkeditdialog.c:262
+msgid "You must enter a valid URI for the connection."
+msgstr "Bạn phải nhập URI hợp lệ cho kết nối."
+
+#: src/bookmarkeditdialog.c:522
+msgid "_Device:"
+msgstr "Thiết _bị:"
+
+#: src/bookmarkeditdialog.c:524 src/bookmarkeditdialog.c:1033
+msgid "_Server:"
+msgstr "_Máy chủ:"
+
+#: src/bookmarkeditdialog.c:786
+msgid "Create Bookmark"
+msgstr "Tạo dấu trang"
+
+#: src/bookmarkeditdialog.c:794
+msgid "Edit Bookmark"
+msgstr "Chỉnh sửa dấu trang"
+
+#: src/bookmarkeditdialog.c:797
+msgid "_OK"
+msgstr "_OK"
+
+#: src/bookmarkeditdialog.c:803
+msgid "Connect to Server"
+msgstr "Kết nối đến máy chủ"
+
+#: src/bookmarkeditdialog.c:805
+msgid "Co_nnect"
+msgstr "Kết _nối"
+
+#: src/bookmarkeditdialog.c:957
+msgid "_Cancel"
+msgstr "_Hủy bỏ"
+
+#. Bookmark Settings
+#: src/bookmarkeditdialog.c:970
+msgid "Bookmark Settings"
+msgstr "Cài đặt dấu trang"
+
+#: src/bookmarkeditdialog.c:976
+msgid "_Name:"
+msgstr "_Tên:"
+
+#: src/bookmarkeditdialog.c:985
+msgid "_Color:"
+msgstr "_Màu sắc:"
+
+#: src/bookmarkeditdialog.c:994
+msgid "Au_to-Connect:"
+msgstr "_Tự động kết nối:"
+
+#. Connection Settings
+#: src/bookmarkeditdialog.c:1005
+msgid "Connection Settings"
+msgstr "Cài đặt kết nối"
+
+#: src/bookmarkeditdialog.c:1011
+msgid "Service t_ype:"
+msgstr "_Loại dịch vụ:"
+
+#: src/bookmarkeditdialog.c:1027
+msgid "_Location (URI):"
+msgstr "_Vị trí (URI):"
+
+#: src/bookmarkeditdialog.c:1039
+msgid "P_ath:"
+msgstr "Đường _dẫn:"
+
+#: src/bookmarkeditdialog.c:1045
+msgid "_Share:"
+msgstr "_Chia sẻ:"
+
+#. Optional Information
+#: src/bookmarkeditdialog.c:1064
+msgid "Optional Information"
+msgstr "Thông tin tùy chọn"
+
+#: src/bookmarkeditdialog.c:1070
+msgid "_Port:"
+msgstr "_Cổng:"
+
+#: src/bookmarkeditdialog.c:1076
+msgid "Set the port to 0 to use the default port"
+msgstr "Đặt cổng thành 0 để sử dụng cổng mặc định"
+
+#: src/bookmarkeditdialog.c:1078
+msgid "_Folder:"
+msgstr "_Thư mục:"
+
+#: src/bookmarkeditdialog.c:1084
+msgid ""
+"This is not used for the actual mount, only necessary for opening the mount "
+"point in a file browser"
+msgstr "Điều này không được sử dụng cho việc gắn kết thực tế, chỉ cần thiết để mở điểm gắn kết trong trình duyệt tập tin"
+
+#: src/bookmarkeditdialog.c:1087
+msgid "_Domain:"
+msgstr "_Miền:"
+
+#: src/bookmarkeditdialog.c:1093
+msgid "_User Name:"
+msgstr "_Tên người dùng:"
+
+#: src/preferencesdialog.c:144
+msgid "Icons"
+msgstr "Biểu tượng"
+
+#: src/preferencesdialog.c:145
+msgid "Text"
+msgstr "Chữ"
+
+#: src/preferencesdialog.c:146
+msgid "Both"
+msgstr "Cả hai"
+
+#: src/preferencesdialog.c:147
+msgid "Both horizontal"
+msgstr "Cả hai theo chiều ngang"
+
+#: src/preferencesdialog.c:166
+msgid "Horizontal"
+msgstr "Chiều ngang"
+
+#: src/preferencesdialog.c:167
+msgid "Vertical"
+msgstr "Chiều dọc"
+
+#: src/preferencesdialog.c:186
+msgid "Symbols"
+msgstr "Ký hiệu"
+
+#: src/preferencesdialog.c:187
+msgid "Detailed List"
+msgstr "Danh sách chi tiết"
+
+#: src/preferencesdialog.c:331
+msgid "General"
+msgstr "Chung"
+
+#. Row
+#: src/preferencesdialog.c:334
+msgid "_File Manager"
+msgstr "_Trình quản lý tập tin"
+
+#: src/preferencesdialog.c:345
+msgid "Enter the name of a program to use to open or view mount points"
+msgstr "Nhập tên chương trình để mở hoặc xem điểm gắn kết"
+
+#. Row
+#: src/preferencesdialog.c:352
+msgid "_Terminal"
+msgstr "_Terminal"
+
+#: src/preferencesdialog.c:363
+msgid "Enter the name of a program to open mount points in a terminal"
+msgstr "Nhập tên chương trình để mở điểm gắn kết trong terminal"
+
+#. Row
+#: src/preferencesdialog.c:370
+msgid "_Bookmark Auto-Connect Interval"
+msgstr "_Khoảng thời gian tự động kết nối dấu trang"
+
+#: src/preferencesdialog.c:376
+msgid ""
+"How often to try auto connecting bookmarks, in seconds. Zero disables "
+"checking."
+msgstr "Tần suất thử tự động kết nối dấu trang, tính bằng giây. Số 0 sẽ tắt kiểm tra."
+
+#: src/preferencesdialog.c:387
+msgid "Interface"
+msgstr "Giao diện"
+
+#: src/preferencesdialog.c:389
+msgid "_Save window position and geometry"
+msgstr "_Lưu vị trí và kích thước cửa sổ"
+
+#: src/preferencesdialog.c:390
+msgid "Saves the window position and geometry and restores it at the start"
+msgstr "Lưu vị trí và kích thước cửa sổ và khôi phục khi khởi động"
+
+#: src/preferencesdialog.c:393
+msgid "Show status _icon in the Notification Area"
+msgstr "Hiển thị bểu tượng trạng thái trong vùng thông _báo"
+
+#: src/preferencesdialog.c:396
+msgid "Start _minimized in the Notification Area"
+msgstr "Khởi động _thu nhỏ trong vùng thông báo"
+
+#: src/preferencesdialog.c:401
+msgid "Show side panel"
+msgstr "Hiển thị bảng bên"
+
+#: src/preferencesdialog.c:402
+msgid ""
+"Whether to show a side panel for browsing the local network for available "
+"Samba/Windows shares and a bookmark list"
+msgstr "Hiển thị bảng bên để duyệt mạng nội bộ tìm các thư mục chia sẻ Samba/Windows khả dụng và danh sách dấu trang"
+
+#: src/preferencesdialog.c:405
+msgid "Show auto-connect error messages"
+msgstr "Hiển thị thông báo lỗi tự động kết nối"
+
+#: src/preferencesdialog.c:406
+msgid ""
+"Whether to show error message dialogs when auto-connecting of bookmarks "
+"fails"
+msgstr "Hiển thị hộp thoại thông báo lỗi khi tự động kết nối dấu trang thất bại"
+
+#: src/preferencesdialog.c:409
+msgid "_Connection List Mode"
+msgstr "_Chế độ danh sách kết nối"
+
+#: src/preferencesdialog.c:425
+msgid "Toolbar"
+msgstr "Thanh công cụ"
+
+#: src/preferencesdialog.c:427
+msgid "Show _toolbar"
+msgstr "Hiển thị _thanh công cụ"
+
+#: src/preferencesdialog.c:430
+msgid "St_yle"
+msgstr "Ki_ểu"
+
+#: src/preferencesdialog.c:439
+msgid "_Orientation"
+msgstr "Hướng"
+
+#: src/preferencesdialog.c:495
+msgid "Preferences"
+msgstr "Tuỳ chỉnh"
+
+#: src/backendgvfs.c:215
+msgid "No bookmark"
+msgstr "Không có dấu trang"
+
+#: src/backendgvfs.c:233
+#, c-format
+msgid ""
+"<b>%s</b>\n"
+"\n"
+"URI: %s\n"
+"Connected: Yes\n"
+"Service Type: %s\n"
+"Bookmark: %s"
+msgstr "<b>%s</b>\nURI: %s\nĐã kết nối: Có\nLoại dịch vụ: %s\nDấu trang: %s"
+
+#: src/backendgvfs.c:248
+#, c-format
+msgid "<b>Unix device: %s</b>"
+msgstr "<b>Thiết bị Unix: %s</b>"
+
+#: src/backendgvfs.c:445 src/backendgvfs.c:484
+msgid "unknown"
+msgstr "không rõ"
+
+#: src/backendgvfs.c:451 src/backendgvfs.c:559
+#, c-format
+msgid "Connecting to \"%s\" failed."
+msgstr "Kết nối đến \"%s\" thất bại."
+
+#: src/backendgvfs.c:488
+#, c-format
+msgid "Disconnecting from \"%s\" failed."
+msgstr "Ngắt kết nối khỏi \"%s\" thất bại."
+
+#: src/mountdialog.c:93
+msgid "Connecting"
+msgstr "Đang kết nối"
+
+#: src/browsenetworkpanel.c:181
+msgid "No Workgroups found"
+msgstr "Không tìm thấy nhóm làm việc"
+
+#: src/browsenetworkpanel.c:192
+msgid "No Shares found"
+msgstr "Không tìm thấy thư mục chia sẻ"
+
+#: src/browsenetworkpanel.c:197
+msgid "No Hosts found"
+msgstr "Không tìm thấy máy chủ"
+
+#: src/browsenetworkpanel.c:437 src/gigolo.ui:157 src/gigolo.ui:490
+#: src/gigolo.ui:572
+msgid "_Connect"
+msgstr "_Kết nối"
+
+#: src/browsenetworkpanel.c:480
+msgid "Connect to the selected share"
+msgstr "Kết nối đến thư mục chia sẻ đã chọn"
+
+#: src/browsenetworkpanel.c:488
+msgid "Create a bookmark from the selected share"
+msgstr "Tạo dấu trang từ thư mục chia sẻ đã chọn"
+
+#: src/browsenetworkpanel.c:498
+msgid "Refresh the network list"
+msgstr "Làm mới danh sách mạng"
+
+#: src/browsenetworkpanel.c:510 src/bookmarkpanel.c:263
+msgid "Close panel"
+msgstr "Đóng bảng"
+
+#: src/bookmarkpanel.c:88
+msgid "No bookmarks"
+msgstr "Không có dấu trang"
+
+#: src/bookmarkpanel.c:251
+msgid "Connect to the selected bookmark"
+msgstr "Kết nối đến dấu trang đã chọn"
+
+#: src/gigolo.ui:23
+msgid "_File"
+msgstr "_Tệp tin"
+
+#: src/gigolo.ui:33 src/gigolo.ui:375 src/gigolo.ui:522
+msgid "_Quit"
+msgstr "_Thoát"
+
+#: src/gigolo.ui:56 src/gigolo.ui:313 src/gigolo.ui:506
+msgid "_Edit Bookmarks"
+msgstr "_Chỉnh sửa dấu trang"
+
+#: src/gigolo.ui:71 src/gigolo.ui:514
+msgid "_Preferences"
+msgstr "_Tuỳ chỉnh"
+
+#: src/gigolo.ui:84
+msgid "_View"
+msgstr "_Xem"
+
+#: src/gigolo.ui:94
+msgid "_Toolbar"
+msgstr "_Thanh công cụ"
+
+#: src/gigolo.ui:102
+msgid "Side _Panel"
+msgstr "Bảng _bên"
+
+#: src/gigolo.ui:110
+msgid "Status _Icon"
+msgstr "Biểu tượng _trạng thái"
+
+#: src/gigolo.ui:124
+msgid "View as _Symbols"
+msgstr "Xem dạng _ký hiệu"
+
+#: src/gigolo.ui:133
+msgid "View as _Detailed List"
+msgstr "Xem dạng _danh sách chi tiết"
+
+#: src/gigolo.ui:147
+msgid "_Actions"
+msgstr "_Thao tác"
+
+#: src/gigolo.ui:165 src/gigolo.ui:289 src/gigolo.ui:580
+msgid "_Disconnect"
+msgstr "_Ngắt kết nối"
+
+#: src/gigolo.ui:174 src/gigolo.ui:275 src/gigolo.ui:498
+msgid "_Bookmarks"
+msgstr "_Dấu trang"
+
+#: src/gigolo.ui:188 src/gigolo.ui:337 src/gigolo.ui:534
+msgid "_Open"
+msgstr "_Mở"
+
+#: src/gigolo.ui:197 src/gigolo.ui:542
+msgid "Open in _Terminal"
+msgstr "Mở trong _terminal"
+
+#: src/gigolo.ui:206 src/gigolo.ui:550
+msgid "_Copy URI"
+msgstr "_Sao chép URI"
+
+#: src/gigolo.ui:219
+msgid "_Help"
+msgstr "Trợ _giúp"
+
+#: src/gigolo.ui:229
+msgid "Online Help"
+msgstr "Trợ giúp trực tuyến"
+
+#: src/gigolo.ui:251
+msgid "About"
+msgstr "Giới thiệu"
+
+#: src/gigolo.ui:274
+msgid "Choose a bookmark to connect to"
+msgstr "Chọn dấu trang để kết nối"
+
+#: src/gigolo.ui:288
+msgid "Disconnect the selected resource"
+msgstr "Ngắt kết nối tài nguyên đã chọn"
+
+#: src/gigolo.ui:312
+msgid "Open the bookmark manager to add, edit or delete bookmarks"
+msgstr "Mở trình quản lý dấu trang để thêm, chỉnh sửa hoặc xóa dấu trang"
+
+#: src/gigolo.ui:336
+msgid "Open the selected resource with a file manager"
+msgstr "Mở tài nguyên đã chọn bằng trình quản lý tập tin"
+
+#: src/gigolo.ui:350
+msgid "Start a terminal from here"
+msgstr "Khởi động terminal từ đây"
+
+#: src/gigolo.ui:351
+msgid "Open _Terminal"
+msgstr "Mở _terminal"
+
+#: src/gigolo.ui:374
+msgid "Quit Gigolo"
+msgstr "Thoát Gigolo"
+
+#: src/gigolo.ui:558
+msgid "_Edit Bookmark"
+msgstr "_Chỉnh sửa dấu trang"
+
+#: gigolo.desktop.in:6
+msgid "Frontend for GIO/GVfs"
+msgstr "Giao diện cho GIO/GVfs"
+
+#: gigolo.desktop.in:7
+msgid "A simple frontend to easily connect to remote filesystems"
+msgstr "Giao diện đơn giản để kết nối dễ dàng tới hệ thống tập tin từ xa"
+
+#: gigolo.desktop.in:13
+msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
+msgstr "remote;filesystem;connect;network;GIO;GVfs;file;manager;từ xa;hệ thống tập tin;kết nối;mạng;tập tin;quản lý;"
