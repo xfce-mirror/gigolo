@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the xfce-apps.gigolo package.
 # 
 # Translators:
+# Junghee Lee <daemul72@gmail.com>, 2026
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2013,2018,2022,2024
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2011-2012
 msgid ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-07-18 11:00+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2013,2018,2022,2024\n"
+"Last-Translator: Junghee Lee <daemul72@gmail.com>, 2026\n"
 "Language-Team: Korean (http://app.transifex.com/xfce/xfce-apps/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -696,4 +697,4 @@ msgstr "원격 파일 시스템을 쉽게 연결하기 위한 간단한 프론�
 
 #: gigolo.desktop.in:13
 msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
-msgstr ""
+msgstr "remote;filesystem;connect;network;GIO;GVfs;file;manager;원격;파일시스템;네트워크;파일;관리자;"
