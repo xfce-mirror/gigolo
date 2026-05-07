@@ -1649,6 +1649,15 @@ static void update_side_panel(GigoloWindow *window)
 }
 
 
+static void
+icon_theme_changed_cb (GtkIconTheme *icon_theme, GtkStatusIcon *systray_icon)
+{
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+	gtk_status_icon_set_from_icon_name(systray_icon, gigolo_get_application_icon_name());
+	G_GNUC_END_IGNORE_DEPRECATIONS
+}
+
+
 static void gigolo_window_init(GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
@@ -1695,6 +1704,7 @@ static void gigolo_window_init(GigoloWindow *window)
 		g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
 		g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
 		g_signal_connect(priv->systray_icon, "notify", G_CALLBACK(gigolo_window_systray_notify_cb), window);
+		g_signal_connect_object(gtk_icon_theme_get_default(), "changed", G_CALLBACK(icon_theme_changed_cb), priv->systray_icon, 0);
 	}
 }
 
