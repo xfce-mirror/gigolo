@@ -5,7 +5,7 @@
 # Translators:
 # Jan Hrdina <jan.hrdka@gmail.com>, 2009
 # b537cbea55af75c3f49fe8b21c4cf8ea_f0ce149, 2023
-# Michal Várady <miko.vaji@gmail.com>, 2020,2024
+# Michal Várady <miko.vaji@gmail.com>, 2020,2024,2026
 # Pavel Borecki <pavel.borecki@gmail.com>, 2018
 msgid ""
 msgstr ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-07-18 11:00+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2020,2024\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2020,2024,2026\n"
 "Language-Team: Czech (http://app.transifex.com/xfce/xfce-apps/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,7 +47,7 @@ msgstr "- jednoduché rozhraní pro snadné připojení ke vzdáleným systémů
 
 #: src/common.c:71
 msgid "Unix Device"
-msgstr "Zařízení Unixu"
+msgstr "Unixové zařízení"
 
 #: src/common.c:73
 msgid "Windows Share"
@@ -96,7 +96,7 @@ msgstr "Vlastní umístění"
 #: src/window.c:274
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Připojování k \"%s\""
+msgstr "Připojování k „%s“"
 
 #: src/window.c:428
 msgid ""
@@ -115,7 +115,7 @@ msgstr "%s (%s)"
 
 #: src/window.c:486
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Aplikace Gigolo může používat následující protokoly poskytované systémem souborů GVfs:"
+msgstr "Gigolo může používat následující protokoly poskytované GVfs:"
 
 #: src/window.c:499 src/gigolo.ui:237
 msgid "Supported Protocols"
@@ -124,7 +124,7 @@ msgstr "Podporované protokoly"
 #: src/window.c:601 src/window.c:660
 #, c-format
 msgid "The command '%s' failed"
-msgstr "Provedení příkazu \"%s\" se nezdařilo"
+msgstr "Provedení příkazu „%s“ se nezdařilo"
 
 #: src/window.c:602 src/window.c:635 src/window.c:648 src/window.c:661
 #: src/window.c:858 src/bookmarkeditdialog.c:207 src/bookmarkeditdialog.c:226
@@ -140,11 +140,11 @@ msgstr "Neplatný příkaz terminálu"
 #: src/window.c:647
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr "Není dostupné výchozí umístění pro \"%s\""
+msgstr "Není dostupné výchozí umístění pro „%s“"
 
 #: src/window.c:767
 msgid "Edit _Bookmark"
-msgstr "Upravit záložku"
+msgstr "Upravit _záložku"
 
 #: src/window.c:769 src/browsenetworkpanel.c:444 src/browsenetworkpanel.c:487
 msgid "Create _Bookmark"
@@ -183,7 +183,7 @@ msgstr "Aplikace Gigolo potřebuje před spuštěním přesunout starý adresá�
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "Starý adresář s nastavením \"%s\" nemohl být přesunut do \"%s\" (%s). Přesuňte jej do nového umístění ručně."
+msgstr "Starý adresář s nastavením „%s“ se nepodařilo přesunout do „%s“ (%s). Přesuňte jej do nového umístění ručně."
 
 #: src/settings.c:700
 msgid "Warning"
@@ -219,7 +219,7 @@ msgstr "Port"
 
 #: src/bookmarkdialog.c:331
 msgid "Auto-Connect"
-msgstr "Připojit au_tomaticky"
+msgstr "Automatické připojení"
 
 #: src/bookmarkdialog.c:339
 msgid "Username"
@@ -227,7 +227,7 @@ msgstr "Uživatelské jméno"
 
 #: src/bookmarkdialog.c:347
 msgid "Other information"
-msgstr "Jiné informace"
+msgstr "Další informace"
 
 #: src/bookmarkdialog.c:368 src/bookmarkdialog.c:420
 #: src/bookmarkeditdialog.c:788
@@ -240,7 +240,7 @@ msgstr "_Upravit"
 
 #: src/bookmarkdialog.c:382 src/bookmarkdialog.c:430
 msgid "_Delete"
-msgstr "_Vymazat"
+msgstr "_Odstranit"
 
 #: src/bookmarkdialog.c:403
 msgid "Edit Bookmarks"
@@ -248,7 +248,7 @@ msgstr "Upravit záložky"
 
 #: src/bookmarkdialog.c:410 src/preferencesdialog.c:498
 msgid "_Close"
-msgstr "%Zavřít"
+msgstr "_Zavřít"
 
 #: src/bookmarkeditdialog.c:208
 msgid "You must enter a name for the bookmark."
@@ -285,7 +285,7 @@ msgstr "Vytvořit záložku"
 
 #: src/bookmarkeditdialog.c:794
 msgid "Edit Bookmark"
-msgstr "Upravit záložky"
+msgstr "Upravit záložku"
 
 #: src/bookmarkeditdialog.c:797
 msgid "_OK"
@@ -297,7 +297,7 @@ msgstr "Připojit se k serveru"
 
 #: src/bookmarkeditdialog.c:805
 msgid "Co_nnect"
-msgstr "Připojit"
+msgstr "_Připojit"
 
 #: src/bookmarkeditdialog.c:957
 msgid "_Cancel"
@@ -362,11 +362,11 @@ msgstr "_Složka:"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr "Tato volba se pro skutečné připojení nepoužívá, je pouze nutná k otevření bodu připojení ve správci souborů"
+msgstr "Nepoužívá se pro vlastní připojení, je potřeba jen k otevření přípojného bodu ve správci souborů"
 
 #: src/bookmarkeditdialog.c:1087
 msgid "_Domain:"
-msgstr "_Doména"
+msgstr "_Doména:"
 
 #: src/bookmarkeditdialog.c:1093
 msgid "_User Name:"
@@ -429,13 +429,13 @@ msgstr "Zadejte název programu používaného pro otevření přípojných bod�
 #. Row
 #: src/preferencesdialog.c:370
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "_Interval automatického připojení záložky"
+msgstr "_Interval automatického připojení záložek"
 
 #: src/preferencesdialog.c:376
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr "Četnost automaticky opakovaných připojení záložek, v sekundách. Nula opakované připojování zakáže."
+msgstr "Jak často se má zkoušet automatické připojování záložek, v sekundách. Nula kontrolu vypne."
 
 #: src/preferencesdialog.c:387
 msgid "Interface"
@@ -469,13 +469,13 @@ msgstr "Zobrazování postranního panelu pro prohlížení dostupných sdílen�
 
 #: src/preferencesdialog.c:405
 msgid "Show auto-connect error messages"
-msgstr "Zobrazit chybové zprávy automatického připojení"
+msgstr "Zobrazovat chybové zprávy při automatickém připojování"
 
 #: src/preferencesdialog.c:406
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
-msgstr "Zobrazování chybových dialogů při selhání automatického připojení záložek"
+msgstr "Určuje, zda zobrazovat chybová dialogová okna při selhání automatického připojování záložek"
 
 #: src/preferencesdialog.c:409
 msgid "_Connection List Mode"
@@ -503,7 +503,7 @@ msgstr "Předvolby"
 
 #: src/backendgvfs.c:215
 msgid "No bookmark"
-msgstr "Žádné záložky"
+msgstr "Žádná záložka"
 
 #: src/backendgvfs.c:233
 #, c-format
@@ -514,12 +514,12 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr "<b>%s</b>\n\nURI: %s\nPřipojen: Yes\nTyp služby: %s\nZáložka: %s"
+msgstr "<b>%s</b>\n\nURI: %s\nPřipojeno: Ano\nTyp služby: %s\nZáložka: %s"
 
 #: src/backendgvfs.c:248
 #, c-format
 msgid "<b>Unix device: %s</b>"
-msgstr "<b>Zařízení Unixu: %s</b>"
+msgstr "<b>Unixové zařízení: %s</b>"
 
 #: src/backendgvfs.c:445 src/backendgvfs.c:484
 msgid "unknown"
@@ -594,7 +594,7 @@ msgstr "_Upravit záložky"
 
 #: src/gigolo.ui:71 src/gigolo.ui:514
 msgid "_Preferences"
-msgstr "_Nastavení"
+msgstr "_Předvolby"
 
 #: src/gigolo.ui:84
 msgid "_View"
@@ -674,11 +674,11 @@ msgstr "Otevřít vybraný prostředek správcem souborů"
 
 #: src/gigolo.ui:350
 msgid "Start a terminal from here"
-msgstr "Spustit terminál zde"
+msgstr "Spustit terminál v tomto umístění"
 
 #: src/gigolo.ui:351
 msgid "Open _Terminal"
-msgstr "Otevřít _Terminál"
+msgstr "Otevřít _terminál"
 
 #: src/gigolo.ui:374
 msgid "Quit Gigolo"
@@ -690,7 +690,7 @@ msgstr "_Upravit záložku"
 
 #: gigolo.desktop.in:6
 msgid "Frontend for GIO/GVfs"
-msgstr "Front-end pro knihovnu GIO/systém souborů GVfs"
+msgstr "Rozhraní pro GIO/GVfs"
 
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
@@ -698,4 +698,4 @@ msgstr "Jednoduché rozhraní pro snadné připojení ke vzdáleným systémům 
 
 #: gigolo.desktop.in:13
 msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
-msgstr "vzdálený,vzdálená;vzdálené;vzdáleně;systém souborů;připojit;připojení;síť;GIO;GVfs;soubor;správce;"
+msgstr "vzdálený;vzdálená;vzdálené;vzdáleně;systém souborů;připojit;připojení;síť;GIO;GVfs;soubor;správce;správce souborů;"
