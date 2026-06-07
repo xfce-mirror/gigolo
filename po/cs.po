@@ -152,7 +152,7 @@ msgstr "Vytvořit _záložku"
 
 #: src/window.c:1531
 msgid "Connected"
-msgstr "Připojen"
+msgstr "Připojeno"
 
 #: src/window.c:1540 src/bookmarkdialog.c:307
 msgid "Service Type"
@@ -415,7 +415,7 @@ msgstr "_Správce souborů"
 
 #: src/preferencesdialog.c:345
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Zadejte název programu používaného pro zobrazování přípojných bodů"
+msgstr "Zadejte název programu používaného pro otevírání nebo zobrazování přípojných bodů"
 
 #. Row
 #: src/preferencesdialog.c:352
@@ -429,7 +429,7 @@ msgstr "Zadejte název programu používaného pro otevření přípojných bod�
 #. Row
 #: src/preferencesdialog.c:370
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "_Interval automatického připojení záložek"
+msgstr "_Interval automatického připojování záložek"
 
 #: src/preferencesdialog.c:376
 msgid ""
@@ -451,7 +451,7 @@ msgstr "Uloží pozici a rozměry okna a obnoví je při startu"
 
 #: src/preferencesdialog.c:393
 msgid "Show status _icon in the Notification Area"
-msgstr "Zobrazovat ikonu v _oznamovací oblasti"
+msgstr "Zobrazovat stavovou _ikonu v oznamovací oblasti"
 
 #: src/preferencesdialog.c:396
 msgid "Start _minimized in the Notification Area"
@@ -566,7 +566,7 @@ msgstr "Vytvořit záložku z vybrané sdílené složky"
 
 #: src/browsenetworkpanel.c:498
 msgid "Refresh the network list"
-msgstr "Obnovit seznam sítí"
+msgstr "Obnovit seznam síťových prostředků"
 
 #: src/browsenetworkpanel.c:510 src/bookmarkpanel.c:263
 msgid "Close panel"
@@ -642,7 +642,7 @@ msgstr "Otevřít v _terminálu"
 
 #: src/gigolo.ui:206 src/gigolo.ui:550
 msgid "_Copy URI"
-msgstr "Z_kopírovat identifikátor URI"
+msgstr "Z_kopírovat URI"
 
 #: src/gigolo.ui:219
 msgid "_Help"
