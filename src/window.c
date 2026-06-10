@@ -64,6 +64,7 @@ struct _GigoloWindowPrivate
 	GigoloSettings	*settings;
 	GigoloBackendGVFS	*backend_gvfs;
 	GtkBuilder      *builder;
+	GtkWidget *settings_dialog;
 
 	GtkWidget		*vbox;
 	GtkWidget		*hbox_view;
@@ -123,10 +124,18 @@ static void remove_autoconnect_timeout(GigoloWindow *window)
 }
 
 
-static void gigolo_window_destroy(GigoloWindow *window)
+static gboolean gigolo_window_destroy(GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gint geo[5];
+
+	if (priv->settings_dialog != NULL)
+	{
+		/* close settings dialog and let things end there before re-entering here */
+		gtk_dialog_response(GTK_DIALOG(priv->settings_dialog), GTK_RESPONSE_CLOSE);
+		g_idle_add((GSourceFunc)gigolo_window_destroy, window);
+		return FALSE;
+	}
 
 	remove_autoconnect_timeout(window);
 
@@ -162,6 +171,7 @@ static void gigolo_window_destroy(GigoloWindow *window)
 	gtk_widget_destroy(GTK_WIDGET(window));
 
 	gtk_main_quit();
+	return FALSE;
 }
 
 
@@ -329,16 +339,15 @@ static void mount_cb(G_GNUC_UNUSED GtkWidget *widget, GigoloWindow *window)
 
 static void preferences_cb(GtkWidget *widget, GigoloWindow *window)
 {
-	GtkWidget *dialog;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 
-	dialog = gigolo_preferences_dialog_new(GTK_WINDOW(window), priv->settings);
+	priv->settings_dialog = gigolo_preferences_dialog_new(GTK_WINDOW(window), priv->settings);
 
-	gtk_dialog_run(GTK_DIALOG(dialog));
+	gtk_dialog_run(GTK_DIALOG(priv->settings_dialog));
 	gigolo_window_do_autoconnect(window);
 	gigolo_settings_write(priv->settings, GIGOLO_SETTINGS_PREFERENCES);
 
-	gtk_widget_destroy(dialog);
+	g_clear_pointer(&priv->settings_dialog, gtk_widget_destroy);
 }
 
 
