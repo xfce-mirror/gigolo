@@ -148,18 +148,9 @@ static void gigolo_window_destroy(GigoloWindow *window)
 	g_object_set(priv->settings, "last-panel-page",
 		gtk_notebook_get_current_page(GTK_NOTEBOOK(priv->notebook_panel)), NULL);
 
-	gtk_widget_destroy(priv->tree_popup_menu);
-	gtk_widget_destroy(priv->swin_treeview);
-	gtk_widget_destroy(priv->swin_iconview);
-	g_object_unref(priv->toolbar);
-	if (priv->systray_icon != NULL)
-	{
-		g_object_unref(priv->systray_icon);
-		g_object_unref(priv->systray_icon_popup_menu);
-		gtk_widget_destroy(priv->systray_icon_popup_menu);
-	}
-	g_object_unref(priv->backend_gvfs);
-	priv->backend_gvfs = NULL;
+	g_clear_object(&priv->systray_icon);
+	g_clear_object(&priv->backend_gvfs);
+	g_clear_object(&priv->builder);
 
 	gtk_widget_destroy(GTK_WIDGET(window));
 
