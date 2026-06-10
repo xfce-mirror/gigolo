@@ -155,8 +155,6 @@ static void gigolo_window_destroy(GigoloWindow *window)
 	if (priv->systray_icon != NULL)
 	{
 		g_object_unref(priv->systray_icon);
-		g_object_unref(priv->systray_icon_popup_menu);
-		gtk_widget_destroy(priv->systray_icon_popup_menu);
 	}
 	g_object_unref(priv->backend_gvfs);
 	priv->backend_gvfs = NULL;
