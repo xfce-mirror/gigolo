@@ -1699,7 +1699,7 @@ static void update_side_panel(GigoloWindow *window)
 		gigolo_settings_get_integer(priv->settings, "last-panel-page"));
 
 	panel_position = gigolo_settings_get_integer(priv->settings, "panel-position");
-	if (panel_position <= 0)
+	if (panel_position == 0)
 		panel_position = 200;
 	gtk_paned_set_position(GTK_PANED(priv->panel_pane), panel_position);
 }
