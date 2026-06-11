@@ -154,7 +154,7 @@ static void gigolo_backend_gvfs_class_init(GigoloBackendGVFSClass *klass)
 										"Parent",
 										"Parent window",
 										GTK_TYPE_WINDOW,
-										G_PARAM_WRITABLE));
+										G_PARAM_WRITABLE | G_PARAM_STATIC_STRINGS));
 
 	g_object_class_install_property(g_object_class,
 										PROP_STORE,
@@ -163,7 +163,7 @@ static void gigolo_backend_gvfs_class_init(GigoloBackendGVFSClass *klass)
 										"Liststore",
 										"The list store",
 										GTK_TYPE_LIST_STORE,
-										G_PARAM_WRITABLE));
+										G_PARAM_WRITABLE | G_PARAM_STATIC_STRINGS));
 
 	signals[MOUNTS_CHANGED] = g_signal_new("mounts-changed",
 										G_TYPE_FROM_CLASS(klass),

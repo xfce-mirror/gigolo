@@ -311,7 +311,7 @@ static void gigolo_bookmark_edit_dialog_class_init(GigoloBookmarkEditDialogClass
 									"Mode",
 									"Operation mode",
 									0, G_MAXINT, GIGOLO_BE_MODE_CREATE,
-									G_PARAM_WRITABLE));
+									G_PARAM_WRITABLE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(g_object_class,
 									PROP_BOOKMARK_INIT,
 									g_param_spec_object(
@@ -319,7 +319,7 @@ static void gigolo_bookmark_edit_dialog_class_init(GigoloBookmarkEditDialogClass
 									"Bookmark-init",
 									"Bookmark instance to provide default values",
 									GIGOLO_BOOKMARK_TYPE,
-									G_PARAM_WRITABLE));
+									G_PARAM_WRITABLE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(g_object_class,
 									PROP_BOOKMARK_UPDATE,
 									g_param_spec_object(
@@ -327,7 +327,7 @@ static void gigolo_bookmark_edit_dialog_class_init(GigoloBookmarkEditDialogClass
 									"Bookmark-update",
 									"Bookmark instance",
 									GIGOLO_BOOKMARK_TYPE,
-									G_PARAM_WRITABLE));
+									G_PARAM_WRITABLE | G_PARAM_STATIC_STRINGS));
 }
 
 

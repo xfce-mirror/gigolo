@@ -225,7 +225,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"Save window position and geometry",
 									"Saves the window position and geometry and restores it at the start",
 									TRUE,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_SHOW_IN_SYSTRAY,
 									g_param_spec_boolean(
@@ -233,7 +233,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"show-in-systray",
 									"Whether to show an icon in the notification area",
 									TRUE,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_START_IN_SYSTRAY,
 									g_param_spec_boolean(
@@ -241,7 +241,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"start-in-systray",
 									"Whether to start the application minimised in the notification area",
 									FALSE,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_SHOW_TOOLBAR,
 									g_param_spec_boolean(
@@ -249,7 +249,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"show-toolbar",
 									"Whether to show the toolbar",
 									TRUE,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_TOOLBAR_STYLE,
 									g_param_spec_int(
@@ -257,7 +257,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"toolbar-style",
 									"The style of the toolbar",
 									-1, G_MAXINT, -1,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_TOOLBAR_ORIENTATION,
 									g_param_spec_int(
@@ -265,7 +265,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"toolbar-orientation",
 									"The orientation of the toolbar",
 									-1, G_MAXINT, -1,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_VIEW_MODE,
 									g_param_spec_int(
@@ -273,7 +273,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"view-mode",
 									"Whether to use an IconView or a TreeView",
 									0, G_MAXINT, 0,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_FILE_MANAGER,
 									g_param_spec_string(
@@ -281,7 +281,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"file-manager",
 									"A program to use to open mount points",
 									NULL,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_TERMINAL,
 									g_param_spec_string(
@@ -289,7 +289,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"terminal",
 									"A program to use to open mount points in a terminal",
 									NULL,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_AUTOCONNECT_INTERVAL,
 									g_param_spec_int(
@@ -297,7 +297,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"autoconnect-interval",
 									"Autoconnect interval",
 									0, G_MAXINT, 0,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_SHOW_PANEL,
 									g_param_spec_boolean(
@@ -305,7 +305,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"show-panel",
 									"Whether to show the side panel",
 									TRUE,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_LAST_PANEL_PAGE,
 									g_param_spec_uint(
@@ -313,7 +313,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"last-panel-page",
 									"Last displayed panel page",
 									0, G_MAXUINT, 0,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_PANEL_POSITION,
 									g_param_spec_uint(
@@ -321,7 +321,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"panel-position",
 									"Last panel position",
 									0, G_MAXUINT, 0,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property(gobject_class,
 									PROP_SHOW_AUTOCONNECT_ERRORS,
 									g_param_spec_boolean(
@@ -329,7 +329,7 @@ static void gigolo_settings_class_init(GigoloSettingsClass *klass)
 									"show-autoconnect-errors",
 									"Whether to show error messages when auto-connecting bookmarks fails",
 									TRUE,
-									G_PARAM_READWRITE));
+									G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 }
 
 

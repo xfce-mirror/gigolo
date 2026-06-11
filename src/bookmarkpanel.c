@@ -128,7 +128,7 @@ static void gigolo_bookmark_panel_class_init(GigoloBookmarkPanelClass *klass)
 										"Settings",
 										"The associated settings",
 										GIGOLO_SETTINGS_TYPE,
-										G_PARAM_WRITABLE));
+										G_PARAM_WRITABLE | G_PARAM_STATIC_STRINGS));
 }
 
 

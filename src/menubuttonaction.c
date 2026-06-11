@@ -113,7 +113,7 @@ static void gigolo_menu_button_action_class_init(GigoloMenubuttonActionClass *kl
 										"Settings",
 										"The associated settings",
 										GIGOLO_SETTINGS_TYPE,
-										G_PARAM_WRITABLE));
+										G_PARAM_WRITABLE | G_PARAM_STATIC_STRINGS));
 
 	signals[ITEM_CLICKED] = g_signal_new("item-clicked",
 										G_TYPE_FROM_CLASS(klass),

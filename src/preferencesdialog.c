@@ -482,7 +482,7 @@ static void gigolo_preferences_dialog_class_init(GigoloPreferencesDialogClass *k
 									"Settings",
 									"Settings instance to provide properties",
 									GIGOLO_SETTINGS_TYPE,
-									G_PARAM_WRITABLE));
+									G_PARAM_WRITABLE | G_PARAM_STATIC_STRINGS));
 }
 
 
