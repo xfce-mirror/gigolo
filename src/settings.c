@@ -566,8 +566,7 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 	if (! g_key_file_load_from_file(k, priv->config_filename, G_KEY_FILE_NONE, &error))
 	{
 		verbose("Loading configuration file failed (%s).", error->message);
-		g_error_free(error);
-		error = NULL;
+		g_clear_error(&error);
 	}
 
 	priv->file_manager = get_setting_string(k, SECTION_GENERAL, "file_manager", "gio open");
@@ -590,8 +589,7 @@ static void load_settings_read_config(GigoloSettingsPrivate *priv)
 	priv->geometry = g_key_file_get_integer_list(k, SECTION_UI, "geometry", NULL, &error);
 	if (error)
 	{
-		g_error_free(error);
-		error = NULL;
+		g_clear_error(&error);
 		priv->geometry = NULL;
 	}
 	else
@@ -627,8 +625,7 @@ static void load_settings_read_bookmarks(GigoloSettingsPrivate *priv)
 	if (! g_key_file_load_from_file(k, priv->bookmarks_filename, G_KEY_FILE_NONE, &error))
 	{
 		verbose("Loading bookmarks file failed (%s).", error->message);
-		g_error_free(error);
-		error = NULL;
+		g_clear_error(&error);
 	}
 
 	/* read groups for bookmarks */
