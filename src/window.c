@@ -65,6 +65,7 @@ struct _GigoloWindowPrivate
 	GigoloBackendGVFS	*backend_gvfs;
 	GtkBuilder      *builder;
 	GtkWidget *settings_dialog;
+	GtkWidget *bookmarks_dialog;
 
 	GtkWidget		*vbox;
 	GtkWidget		*hbox_view;
@@ -128,12 +129,29 @@ static gboolean gigolo_window_destroy(GigoloWindow *window)
 {
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	gint geo[5];
+	gboolean idled = FALSE;
 
 	if (priv->settings_dialog != NULL)
 	{
 		/* close settings dialog and let things end there before re-entering here */
 		gtk_dialog_response(GTK_DIALOG(priv->settings_dialog), GTK_RESPONSE_CLOSE);
 		g_idle_add((GSourceFunc)gigolo_window_destroy, window);
+		idled = TRUE;
+	}
+
+	if (priv->bookmarks_dialog != NULL)
+	{
+		/* close bookmarks dialog and let things end there before re-entering here */
+		gtk_dialog_response(GTK_DIALOG(priv->bookmarks_dialog), GTK_RESPONSE_CLOSE);
+		if (!idled)
+		{
+			g_idle_add((GSourceFunc)gigolo_window_destroy, window);
+			idled = TRUE;
+		}
+	}
+
+	if (idled)
+	{
 		return FALSE;
 	}
 
@@ -411,15 +429,19 @@ static void quit_cb(GtkWidget *widget, GigoloWindow *window)
 
 static void bookmark_edit_cb(GtkWidget *widget, GigoloWindow *window)
 {
-	GtkWidget *dialog;
 	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
+	if (priv->bookmarks_dialog != NULL)
+	{
+		gtk_window_present(GTK_WINDOW(priv->bookmarks_dialog));
+		return;
+	}
 
-	dialog = gigolo_bookmark_dialog_new(window);
+	priv->bookmarks_dialog = gigolo_bookmark_dialog_new(window);
 
-	gtk_dialog_run(GTK_DIALOG(dialog));
+	gtk_dialog_run(GTK_DIALOG(priv->bookmarks_dialog));
 	gigolo_settings_write(priv->settings, GIGOLO_SETTINGS_BOOKMARKS);
 
-	gtk_widget_destroy(dialog);
+	g_clear_pointer(&priv->bookmarks_dialog, gtk_widget_destroy);
 }
 
 
