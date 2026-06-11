@@ -84,7 +84,7 @@ static void update_row_in_model(GigoloBookmarkDialog *dialog, GtkTreeIter *iter,
 	const gchar *tmp;
 
 	if (gigolo_bookmark_get_port(bm) > 0)
-		g_snprintf(port, sizeof(port), "%d", gigolo_bookmark_get_port(bm));
+		g_snprintf(port, sizeof(port), "%u", gigolo_bookmark_get_port(bm));
 	else
 		port[0] = '\0';
 

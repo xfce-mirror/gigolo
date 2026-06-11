@@ -310,7 +310,7 @@ static gchar *gigolo_bookmark_get_uri_real(GigoloBookmark *bookmark, gboolean es
 
 	if (priv->port > 0 && priv->port != gigolo_get_default_port(priv->scheme))
 	{
-		port = g_strdup_printf(":%d", priv->port);
+		port = g_strdup_printf(":%u", priv->port);
 	}
 
 	/* Escape the userinfo part to allow '@' characters even if RFC3986 doesn't seem to allow them. */

@@ -79,7 +79,7 @@ static gboolean check_if_details_equal(GigoloBookmark *bm, const TestURI *tu)
 	port = gigolo_bookmark_get_port(bm);
 	if (port != tu->port)
 	{
-		g_print("Input: %s\nExpected port: %d\nResult port: %d\n\n", tu->input, tu->port, port);
+		g_print("Input: %s\nExpected port: %u\nResult port: %u\n\n", tu->input, tu->port, port);
 		return FALSE;
 	}
 
