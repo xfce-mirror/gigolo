@@ -66,6 +66,7 @@ struct _GigoloWindowPrivate
 	GtkBuilder      *builder;
 	GtkWidget *settings_dialog;
 	GtkWidget *bookmarks_dialog;
+	GtkWidget *mount_dialog;
 
 	GtkWidget		*vbox;
 	GtkWidget		*hbox_view;
@@ -143,6 +144,17 @@ static gboolean gigolo_window_destroy(GigoloWindow *window)
 	{
 		/* close bookmarks dialog and let things end there before re-entering here */
 		gtk_dialog_response(GTK_DIALOG(priv->bookmarks_dialog), GTK_RESPONSE_CLOSE);
+		if (!idled)
+		{
+			g_idle_add((GSourceFunc)gigolo_window_destroy, window);
+			idled = TRUE;
+		}
+	}
+
+	if (priv->mount_dialog != NULL)
+	{
+		/* close mount dialog and let things end there before re-entering here */
+		gtk_dialog_response(GTK_DIALOG(priv->mount_dialog), GTK_RESPONSE_CLOSE);
 		if (!idled)
 		{
 			g_idle_add((GSourceFunc)gigolo_window_destroy, window);
@@ -316,6 +328,12 @@ static void mount_cb(G_GNUC_UNUSED GtkWidget *widget, GigoloWindow *window)
 	gint ref_type;
 	gboolean handled = FALSE;
 
+	if (priv->mount_dialog != NULL)
+	{
+		gtk_window_present(GTK_WINDOW(priv->mount_dialog));
+		return;
+	}
+
 	get_selected_iter(window, &iter);
 	if (gtk_list_store_iter_is_valid(priv->store, &iter))
 	{
@@ -330,20 +348,19 @@ static void mount_cb(G_GNUC_UNUSED GtkWidget *widget, GigoloWindow *window)
 	if (! handled)
 	{
 		GigoloBookmark *bm = NULL;
-		GtkWidget *dialog;
 
-		dialog = gigolo_bookmark_edit_dialog_new(window, GIGOLO_BE_MODE_CONNECT);
-		if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(dialog)) == GTK_RESPONSE_OK)
+		priv->mount_dialog = gigolo_bookmark_edit_dialog_new(window, GIGOLO_BE_MODE_CONNECT);
+		if (gigolo_bookmark_edit_dialog_run(GIGOLO_BOOKMARK_EDIT_DIALOG(priv->mount_dialog)) == GTK_RESPONSE_OK)
 		{
 			bm = gigolo_bookmark_new();
 			/* this fills the values of the dialog into 'bm' */
-			g_object_set(dialog, "bookmark-update", bm, NULL);
+			g_object_set(priv->mount_dialog, "bookmark-update", bm, NULL);
 
 			gigolo_window_mount_from_bookmark(window, bm, TRUE, TRUE);
 
 			g_object_unref(bm);
 		}
-		gtk_widget_destroy(dialog);
+		g_clear_pointer(&priv->mount_dialog, gtk_widget_destroy);
 	}
 }
 
