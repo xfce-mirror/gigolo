@@ -911,6 +911,7 @@ static GtkWidget *make_frame (const gchar *label)
 
 	formatted = g_markup_printf_escaped ("<b>%s</b>", label);
 	gtk_label_set_markup (GTK_LABEL (widget), formatted);
+	g_free(formatted);
 
 	return frame;
 }

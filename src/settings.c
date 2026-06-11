@@ -343,7 +343,7 @@ static gchar *get_setting_string(GKeyFile *config, const gchar *section, const g
 		return g_strdup(default_value);
 
 	tmp = g_key_file_get_string(config, section, key, &error);
-	if (error != NULL)
+	if (tmp == NULL)
 	{
 		g_error_free(error);
 		return (gchar*) g_strdup(default_value);
@@ -429,6 +429,7 @@ static void write_data(GKeyFile *k, const gchar *filename)
 			g_warning("Writing configuration file to disk failed (%s).", error->message);
 			g_error_free(error);
 			g_free(data);
+			g_free(real_filename);
 			return;
 		}
 	}
