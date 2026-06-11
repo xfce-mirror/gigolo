@@ -465,11 +465,7 @@ static void unmount_finished_cb(GObject *src, GAsyncResult *res, gpointer backen
 {
 	GError *error = NULL;
 
-#if GLIB_CHECK_VERSION(2, 22, 0)
 	if (! g_mount_unmount_with_operation_finish(G_MOUNT(src), res, &error))
-#else
-	if (! g_mount_unmount_finish(G_MOUNT(src), res, &error))
-#endif
 	{
 		if (! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_FAILED_HANDLED))
 		{
@@ -519,21 +515,15 @@ gboolean gigolo_backend_gvfs_mount_volume(GigoloBackendGVFS *backend, GtkWindow 
 
 void gigolo_backend_gvfs_unmount_mount(GigoloBackendGVFS *backend, gpointer mount, GtkWindow *parent)
 {
-#if GLIB_CHECK_VERSION(2, 22, 0)
 	GMountOperation *op;
-#endif
 
 	g_return_if_fail(backend != NULL);
 	g_return_if_fail(mount != NULL);
 
-#if GLIB_CHECK_VERSION(2, 22, 0)
 	op = gtk_mount_operation_new(parent);
 	g_mount_unmount_with_operation(
 		G_MOUNT(mount), G_MOUNT_UNMOUNT_NONE, op, NULL, unmount_finished_cb, backend);
 	g_object_unref(op);
-#else
-	g_mount_unmount(G_MOUNT(mount), G_MOUNT_UNMOUNT_NONE, NULL, unmount_finished_cb, backend);
-#endif
 }
 
 
