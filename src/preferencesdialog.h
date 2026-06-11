@@ -21,32 +21,13 @@
 #ifndef __PREFERENCESDIALOG_H__
 #define __PREFERENCESDIALOG_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_PREFERENCES_DIALOG_TYPE				(gigolo_preferences_dialog_get_type())
-#define GIGOLO_PREFERENCES_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			GIGOLO_PREFERENCES_DIALOG_TYPE, GigoloPreferencesDialog))
-#define GIGOLO_PREFERENCES_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			GIGOLO_PREFERENCES_DIALOG_TYPE, GigoloPreferencesDialogClass))
-#define IS_GIGOLO_PREFERENCES_DIALOG(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			GIGOLO_PREFERENCES_DIALOG_TYPE))
-#define IS_GIGOLO_PREFERENCES_DIALOG_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			GIGOLO_PREFERENCES_DIALOG_TYPE))
+G_DECLARE_FINAL_TYPE(GigoloPreferencesDialog, gigolo_preferences_dialog, GIGOLO, PREFERENCES_DIALOG, GtkDialog)
 
-typedef struct _GigoloPreferencesDialog				GigoloPreferencesDialog;
-typedef struct _GigoloPreferencesDialogClass		GigoloPreferencesDialogClass;
-
-struct _GigoloPreferencesDialog
-{
-	GtkDialog parent;
-};
-
-struct _GigoloPreferencesDialogClass
-{
-	GtkDialogClass parent_class;
-};
-
-GType		gigolo_preferences_dialog_get_type		(void);
 GtkWidget*	gigolo_preferences_dialog_new			(GtkWindow *parent, GigoloSettings *settings);
 
 G_END_DECLS

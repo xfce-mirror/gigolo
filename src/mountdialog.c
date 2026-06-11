@@ -19,7 +19,6 @@
 
 
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
 
 #include "common.h"
 #include "main.h"
@@ -31,11 +30,6 @@ typedef struct _GigoloMountDialogPrivate			GigoloMountDialogPrivate;
 struct _GigoloMountDialog
 {
 	GtkDialog parent;
-};
-
-struct _GigoloMountDialogClass
-{
-	GtkDialogClass parent_class;
 };
 
 struct _GigoloMountDialogPrivate

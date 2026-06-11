@@ -19,13 +19,17 @@
 
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
 
 #include "common.h"
 #include "bookmark.h"
 #include "settings.h"
 #include "menubuttonaction.h"
 
+
+struct _GigoloMenubuttonAction
+{
+	GtkMenu parent;
+};
 
 enum
 {
@@ -41,7 +45,6 @@ enum
 	LAST_SIGNAL
 };
 static guint signals[LAST_SIGNAL];
-
 
 
 G_DEFINE_TYPE(GigoloMenubuttonAction, gigolo_menu_button_action, GTK_TYPE_MENU);

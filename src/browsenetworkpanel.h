@@ -22,33 +22,13 @@
 #ifndef __BROWSENETWORKPANEL_H__
 #define __BROWSENETWORKPANEL_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_BROWSE_NETWORK_PANEL_TYPE				(gigolo_browse_network_panel_get_type())
-#define GIGOLO_BROWSE_NETWORK_PANEL(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			GIGOLO_BROWSE_NETWORK_PANEL_TYPE, GigoloBrowseNetworkPanel))
-#define GIGOLO_BROWSE_NETWORK_PANEL_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			GIGOLO_BROWSE_NETWORK_PANEL_TYPE, GigoloBrowseNetworkPanelClass))
-#define IS_GIGOLO_BROWSE_NETWORK_PANEL(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			GIGOLO_BROWSE_NETWORK_PANEL_TYPE))
-#define IS_GIGOLO_BROWSE_NETWORK_PANEL_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			GIGOLO_BROWSE_NETWORK_PANEL_TYPE))
+G_DECLARE_FINAL_TYPE(GigoloBrowseNetworkPanel, gigolo_browse_network_panel, GIGOLO, BROWSE_NETWORK_PANEL, GtkBox)
 
-typedef struct _GigoloBrowseNetworkPanel			GigoloBrowseNetworkPanel;
-typedef struct _GigoloBrowseNetworkPanelClass		GigoloBrowseNetworkPanelClass;
-
-struct _GigoloBrowseNetworkPanel
-{
-	GtkVBox parent;
-};
-
-struct _GigoloBrowseNetworkPanelClass
-{
-	GtkVBoxClass parent_class;
-};
-
-
-GType		gigolo_browse_network_panel_get_type	(void);
 GtkWidget*	gigolo_browse_network_panel_new			(GigoloWindow *parent);
 
 G_END_DECLS

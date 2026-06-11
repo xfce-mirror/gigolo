@@ -19,7 +19,6 @@
 
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
 #include <string.h>
 
 #include "common.h"
@@ -29,17 +28,17 @@
 #include "preferencesdialog.h"
 
 
-typedef struct _GigoloPreferencesDialogPrivate			GigoloPreferencesDialogPrivate;
-
-#define GIGOLO_PREFERENCES_DIALOG_GET_PRIVATE(obj)		(G_TYPE_INSTANCE_GET_PRIVATE((obj),\
-			GIGOLO_PREFERENCES_DIALOG_TYPE, GigoloPreferencesDialogPrivate))
-
-
 enum
 {
     PROP_0,
     PROP_SETTINGS
 };
+
+struct _GigoloPreferencesDialog
+{
+	GtkDialog parent;
+};
+
 
 G_DEFINE_TYPE(GigoloPreferencesDialog, gigolo_preferences_dialog, GTK_TYPE_DIALOG);
 

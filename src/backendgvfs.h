@@ -21,31 +21,13 @@
 #ifndef __BACKENDGVFS_H__
 #define __BACKENDGVFS_H__
 
+#include <glib-object.h>
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_BACKEND_GVFS_TYPE				(gigolo_backend_gvfs_get_type())
-#define GIGOLO_BACKEND_GVFS(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			GIGOLO_BACKEND_GVFS_TYPE, GigoloBackendGVFS))
-#define GIGOLO_BACKEND_GVFS_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			GIGOLO_BACKEND_GVFS_TYPE, GigoloBackendGVFSClass))
-#define IS_GIGOLO_BACKEND_GVFS(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			GIGOLO_BACKEND_GVFS_TYPE))
-#define IS_GIGOLO_BACKEND_GVFS_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			GIGOLO_BACKEND_GVFS_TYPE))
-
-
-typedef struct _GigoloBackendGVFS				GigoloBackendGVFS;
-typedef struct _GigoloBackendGVFSClass			GigoloBackendGVFSClass;
-
-struct _GigoloBackendGVFS
-{
-	GObject parent;
-};
-
-struct _GigoloBackendGVFSClass
-{
-	GObjectClass parent_class;
-};
+G_DECLARE_FINAL_TYPE(GigoloBackendGVFS, gigolo_backend_gvfs, GIGOLO, BACKEND_GVFS, GObject)
 
 typedef struct
 {
@@ -85,7 +67,6 @@ enum
 };
 
 
-GType				gigolo_backend_gvfs_get_type					(void);
 GigoloBackendGVFS*	gigolo_backend_gvfs_new							(void);
 
 gboolean			gigolo_backend_gvfs_is_mount					(gpointer mount);

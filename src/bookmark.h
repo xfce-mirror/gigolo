@@ -21,36 +21,19 @@
 #ifndef __BOOKMARK_H__
 #define __BOOKMARK_H__
 
+#include <glib-object.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_BOOKMARK_TYPE					(gigolo_bookmark_get_type())
-#define GIGOLO_BOOKMARK(obj)					(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			GIGOLO_BOOKMARK_TYPE, GigoloBookmark))
-#define GIGOLO_BOOKMARK_CLASS(klass)			(G_TYPE_CHECK_CLASS_CAST((klass),\
-			GIGOLO_BOOKMARK_TYPE, GigoloBookmarkClass))
-#define IS_GIGOLO_BOOKMARK(obj)					(G_TYPE_CHECK_INSTANCE_TYPE((obj), GIGOLO_BOOKMARK_TYPE))
-#define IS_GIGOLO_BOOKMARK_CLASS(klass)			(G_TYPE_CHECK_CLASS_TYPE((klass), GIGOLO_BOOKMARK_TYPE))
+G_DECLARE_FINAL_TYPE(GigoloBookmark, gigolo_bookmark, GIGOLO, BOOKMARK, GObject)
 
-typedef struct _GigoloBookmark					GigoloBookmark;
-typedef struct _GigoloBookmarkClass				GigoloBookmarkClass;
-
-struct _GigoloBookmark
-{
-	GObject parent;
-};
-
-struct _GigoloBookmarkClass
-{
-	GObjectClass parent_class;
-};
-
-GType				gigolo_bookmark_get_type		(void);
 GigoloBookmark*		gigolo_bookmark_new				(void);
 GigoloBookmark*		gigolo_bookmark_new_from_uri	(const gchar *name, const gchar *uri);
 
 gboolean			gigolo_bookmark_is_valid		(GigoloBookmark *bookmark);
 
-void				gigolo_bookmark_clone			(GigoloBookmark *dst, const GigoloBookmark *src);
+void				gigolo_bookmark_clone			(GigoloBookmark *dst, GigoloBookmark *src);
 
 gchar*				gigolo_bookmark_get_uri			(GigoloBookmark *bookmark);
 gchar*				gigolo_bookmark_get_uri_escaped	(GigoloBookmark *bookmark);

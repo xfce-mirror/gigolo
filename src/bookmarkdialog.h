@@ -21,32 +21,13 @@
 #ifndef __BOOKMARKDIALOG_H__
 #define __BOOKMARKDIALOG_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_BOOKMARK_DIALOG_TYPE				(gigolo_bookmark_dialog_get_type())
-#define GIGOLO_BOOKMARK_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			GIGOLO_BOOKMARK_DIALOG_TYPE, GigoloBookmarkDialog))
-#define GIGOLO_BOOKMARK_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			GIGOLO_BOOKMARK_DIALOG_TYPE, GigoloBookmarkDialogClass))
-#define IS_GIGOLO_BOOKMARK_DIALOG(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			GIGOLO_BOOKMARK_DIALOG_TYPE))
-#define IS_GIGOLO_BOOKMARK_DIALOG_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			GIGOLO_BOOKMARK_DIALOG_TYPE))
+G_DECLARE_FINAL_TYPE(GigoloBookmarkDialog, gigolo_bookmark_dialog, GIGOLO, BOOKMARK_DIALOG, GtkDialog)
 
-typedef struct _GigoloBookmarkDialog			GigoloBookmarkDialog;
-typedef struct _GigoloBookmarkDialogClass		GigoloBookmarkDialogClass;
-
-struct _GigoloBookmarkDialog
-{
-	GtkDialog parent;
-};
-
-struct _GigoloBookmarkDialogClass
-{
-	GtkDialogClass parent_class;
-};
-
-GType		gigolo_bookmark_dialog_get_type		(void);
 GtkWidget*	gigolo_bookmark_dialog_new			(GigoloWindow *parent);
 
 G_END_DECLS

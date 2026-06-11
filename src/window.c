@@ -29,8 +29,6 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
-#include <gtk/gtk.h>
-#include <gtk/gtk.h>
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
 #define WINDOWING_IS_X11() GDK_IS_X11_DISPLAY (gdk_display_get_default ())
@@ -95,6 +93,11 @@ struct _GigoloWindowPrivate
 	GtkAccelGroup   *accel_group;
 
 	guint			 autoconnect_timeout_id;
+};
+
+struct _GigoloWindow
+{
+	GtkWindow parent;
 };
 
 enum

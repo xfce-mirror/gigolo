@@ -19,7 +19,6 @@
  */
 
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 #include <gio/gio.h>
 
@@ -52,6 +51,11 @@ struct _GigoloBrowseNetworkPanelPrivate
 	gulong browse_network_signal_id;
 };
 
+struct _GigoloBrowseNetworkPanel
+{
+	GtkBox parent;
+};
+
 enum
 {
 	ACTION_BOOKMARK,
@@ -74,7 +78,7 @@ static void gigolo_browse_network_panel_finalize(GObject *object)
 	g_object_unref(priv->wait_cursor);
 
 	backend = gigolo_window_get_backend(priv->parent);
-	if (backend != NULL && IS_GIGOLO_BACKEND_GVFS(backend) && priv->browse_network_signal_id > 0)
+	if (backend != NULL && GIGOLO_IS_BACKEND_GVFS(backend) && priv->browse_network_signal_id > 0)
 	{
 		g_signal_handler_disconnect(gigolo_window_get_backend(priv->parent),
 			priv->browse_network_signal_id);

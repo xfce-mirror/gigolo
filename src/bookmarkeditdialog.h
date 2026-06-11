@@ -21,21 +21,12 @@
 #ifndef __BOOKMARKEDITDIALOG_H__
 #define __BOOKMARKEDITDIALOG_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE				(gigolo_bookmark_edit_dialog_get_type())
-#define GIGOLO_BOOKMARK_EDIT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE, GigoloBookmarkEditDialog))
-#define GIGOLO_BOOKMARK_EDIT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE, GigoloBookmarkEditDialogClass))
-#define IS_GIGOLO_BOOKMARK_EDIT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE))
-#define IS_GIGOLO_BOOKMARK_EDIT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			GIGOLO_BOOKMARK_EDIT_DIALOG_TYPE))
-
-typedef struct _GigoloBookmarkEditDialog				GigoloBookmarkEditDialog;
-typedef struct _GigoloBookmarkEditDialogClass			GigoloBookmarkEditDialogClass;
-
+G_DECLARE_FINAL_TYPE(GigoloBookmarkEditDialog, gigolo_bookmark_edit_dialog, GIGOLO, BOOKMARK_EDIT_DIALOG, GtkDialog)
 
 typedef enum
 {
@@ -44,17 +35,6 @@ typedef enum
 	GIGOLO_BE_MODE_CONNECT
 } GigoloBookmarkEditDialogMode;
 
-struct _GigoloBookmarkEditDialog
-{
-	GtkDialog parent;
-};
-
-struct _GigoloBookmarkEditDialogClass
-{
-	GtkDialogClass parent_class;
-};
-
-GType		gigolo_bookmark_edit_dialog_get_type			(void);
 GtkWidget*	gigolo_bookmark_edit_dialog_new					(GigoloWindow *parent,
 															 GigoloBookmarkEditDialogMode mode);
 GtkWidget*	gigolo_bookmark_edit_dialog_new_with_bookmark	(GigoloWindow *parent,

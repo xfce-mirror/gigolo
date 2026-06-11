@@ -18,7 +18,6 @@
  */
 
 #include <gtk/gtk.h>
-#include <glib-object.h>
 #include <glib/gstdio.h>
 #include <glib/gi18n.h>
 #include <errno.h>
@@ -56,6 +55,11 @@ struct _GigoloSettingsPrivate
 	gint		*geometry; /* window size and position, field 4 is a flag for maximized state */
 
 	GigoloBookmarkList *bookmarks; /* array of known bookmarks */
+};
+
+struct _GigoloSettings
+{
+	GObject parent;
 };
 
 static void gigolo_settings_finalize			(GObject* object);
@@ -498,7 +502,7 @@ static void write_settings_bookmarks(GigoloSettings *settings)
 	for (i = 0; i < bml->len; i++)
 	{
 		bm = g_ptr_array_index(bml, i);
-		if (IS_GIGOLO_BOOKMARK(bm))
+		if (GIGOLO_IS_BOOKMARK(bm))
 		{
 			name = gigolo_bookmark_get_name(bm);
 			set_setting_string(k, name, "host", gigolo_bookmark_get_host(bm));

@@ -19,7 +19,6 @@
 
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
 
 #include "bookmark.h"
 #include "settings.h"
@@ -44,6 +43,11 @@ struct _GigoloBookmarkDialogPrivate
 	GtkWidget *popup_menu;
 	GtkWidget *edit_item;
 	GtkWidget *delete_item;
+};
+
+struct _GigoloBookmarkDialog
+{
+	GtkDialog parent;
 };
 
 enum

@@ -18,7 +18,6 @@
  */
 
 
-#include <glib-object.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gtk/gtk.h>
@@ -84,6 +83,11 @@ struct _GigoloBackendGVFSPrivate
 	GtkListStore *store;
 
 	gint browse_counter;
+};
+
+struct _GigoloBackendGVFS
+{
+	GObject parent;
 };
 
 static void gigolo_backend_gvfs_finalize  			(GObject *object);

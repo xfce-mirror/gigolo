@@ -19,7 +19,6 @@
 
 #include <string.h>
 #include <stdlib.h>
-#include <glib-object.h>
 
 #include "bookmark.h"
 #include "common.h"
@@ -43,6 +42,11 @@ struct _GigoloBookmarkPrivate
 	gboolean should_not_autoconnect;
 
 	gboolean is_valid;
+};
+
+struct _GigoloBookmark
+{
+	GObject parent;
 };
 
 static void gigolo_bookmark_finalize  		(GObject *object);
@@ -267,10 +271,10 @@ GigoloBookmark *gigolo_bookmark_new_from_uri(const gchar *name, const gchar *uri
 
 
 /* Copy the contents of the bookmark 'src' into the existing bookmark 'dest' */
-void gigolo_bookmark_clone(GigoloBookmark *dst, const GigoloBookmark *src)
+void gigolo_bookmark_clone(GigoloBookmark *dst, GigoloBookmark *src)
 {
 	GigoloBookmarkPrivate *priv_dst;
-	const GigoloBookmarkPrivate *priv_src;
+	GigoloBookmarkPrivate *priv_src;
 
 	g_return_if_fail(dst != NULL);
 	g_return_if_fail(src != NULL);

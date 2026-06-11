@@ -22,7 +22,6 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
-#include <gtk/gtk.h>
 
 #include "common.h"
 #include "bookmark.h"
@@ -83,6 +82,11 @@ struct _GigoloBookmarkEditDialogPrivate
 	GigoloBookmark *bookmark_update;
 
 	gulong browse_host_signal_id;
+};
+
+struct _GigoloBookmarkEditDialog
+{
+	GtkDialog parent;
 };
 
 static void gigolo_bookmark_edit_dialog_set_property		(GObject *object, guint prop_id,
@@ -158,7 +162,7 @@ static void gigolo_bookmark_edit_dialog_finalize(GObject *object)
 	GigoloBackendGVFS *backend;
 
 	backend = gigolo_window_get_backend(priv->parent);
-	if (backend != NULL && IS_GIGOLO_BACKEND_GVFS(backend) && priv->browse_host_signal_id > 0)
+	if (backend != NULL && GIGOLO_IS_BACKEND_GVFS(backend) && priv->browse_host_signal_id > 0)
 	{
 		g_signal_handler_disconnect(gigolo_window_get_backend(priv->parent), priv->browse_host_signal_id);
 		priv->browse_host_signal_id = 0;

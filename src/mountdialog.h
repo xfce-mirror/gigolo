@@ -21,23 +21,13 @@
 #ifndef __MOUNTDIALOG_H__
 #define __MOUNTDIALOG_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_MOUNT_DIALOG_TYPE				(gigolo_mount_dialog_get_type())
-#define GIGOLO_MOUNT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			GIGOLO_MOUNT_DIALOG_TYPE, GigoloMountDialog))
-#define GIGOLO_MOUNT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			GIGOLO_MOUNT_DIALOG_TYPE, GigoloMountDialogClass))
-#define IS_GIGOLO_MOUNT_DIALOG(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			GIGOLO_MOUNT_DIALOG_TYPE))
-#define IS_GIGOLO_MOUNT_DIALOG_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			GIGOLO_MOUNT_DIALOG_TYPE))
+G_DECLARE_FINAL_TYPE(GigoloMountDialog, gigolo_mount_dialog, GIGOLO, MOUNT_DIALOG, GtkDialog)
 
-typedef struct _GigoloMountDialog				GigoloMountDialog;
-typedef struct _GigoloMountDialogClass			GigoloMountDialogClass;
-
-
-GType		gigolo_mount_dialog_get_type		(void);
 GtkWidget*	gigolo_mount_dialog_new				(GtkWindow *parent, const gchar *label);
 
 G_END_DECLS

@@ -21,32 +21,13 @@
 #ifndef __MENU_BUTTON_ACTION_H__
 #define __MENU_BUTTON_ACTION_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_MENU_BUTTON_ACTION_TYPE				(gigolo_menu_button_action_get_type())
-#define GIGOLO_MENU_BUTTON_ACTION(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			GIGOLO_MENU_BUTTON_ACTION_TYPE, GigoloMenubuttonAction))
-#define GIGOLO_MENU_BUTTON_ACTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			GIGOLO_MENU_BUTTON_ACTION_TYPE, GigoloMenubuttonActionClass))
-#define IS_GIGOLO_MENU_BUTTON_ACTION(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			GIGOLO_MENU_BUTTON_ACTION_TYPE))
-#define IS_GIGOLO_MENU_BUTTON_ACTION_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			GIGOLO_MENU_BUTTON_ACTION_TYPE))
+G_DECLARE_FINAL_TYPE(GigoloMenubuttonAction, gigolo_menu_button_action, GIGOLO, MENU_BUTTON_ACTION, GtkMenu)
 
-typedef struct _GigoloMenubuttonAction			GigoloMenubuttonAction;
-typedef struct _GigoloMenubuttonActionClass		GigoloMenubuttonActionClass;
-
-struct _GigoloMenubuttonAction
-{
-	GtkMenu parent;
-};
-
-struct _GigoloMenubuttonActionClass
-{
-	GtkMenuClass parent_class;
-};
-
-GType		gigolo_menu_button_action_get_type	(void);
 GtkMenu*	gigolo_menu_button_action_new		(const gchar	*name);
 
 G_END_DECLS

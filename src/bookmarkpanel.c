@@ -19,7 +19,6 @@
  */
 
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
 #include <gio/gio.h>
 
 #include "common.h"
@@ -52,11 +51,6 @@ enum
 struct _GigoloBookmarkPanel
 {
 	GtkBox parent;
-};
-
-struct _GigoloBookmarkPanelClass
-{
-	GtkBoxClass parent_class;
 };
 
 struct _GigoloBookmarkPanelPrivate

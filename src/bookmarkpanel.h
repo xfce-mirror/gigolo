@@ -22,22 +22,13 @@
 #ifndef __BOOKMARKPANEL_H__
 #define __BOOKMARKPANEL_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_BOOKMARK_PANEL_TYPE				(gigolo_bookmark_panel_get_type())
-#define GIGOLO_BOOKMARK_PANEL(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-			GIGOLO_BOOKMARK_PANEL_TYPE, GigoloBookmarkPanel))
-#define GIGOLO_BOOKMARK_PANEL_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-			GIGOLO_BOOKMARK_PANEL_TYPE, GigoloBookmarkPanelClass))
-#define IS_GIGOLO_BOOKMARK_PANEL(obj)			(G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-			GIGOLO_BOOKMARK_PANEL_TYPE))
-#define IS_GIGOLO_BOOKMARK_PANEL_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass),\
-			GIGOLO_BOOKMARK_PANEL_TYPE))
+G_DECLARE_FINAL_TYPE(GigoloBookmarkPanel, gigolo_bookmark_panel, GIGOLO, BOOKMARK_PANEL, GtkBox)
 
-typedef struct _GigoloBookmarkPanel			GigoloBookmarkPanel;
-typedef struct _GigoloBookmarkPanelClass		GigoloBookmarkPanelClass;
-
-GType		gigolo_bookmark_panel_get_type		(void);
 GtkWidget*	gigolo_bookmark_panel_new			(GigoloWindow *parent);
 
 G_END_DECLS

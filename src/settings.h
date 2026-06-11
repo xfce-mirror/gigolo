@@ -21,18 +21,13 @@
 #ifndef __SETTINGS_H__
 #define __SETTINGS_H__
 
+#include <glib-object.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_SETTINGS_TYPE				(gigolo_settings_get_type())
-#define GIGOLO_SETTINGS(obj)				(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-		GIGOLO_SETTINGS_TYPE, GigoloSettings))
-#define GIGOLO_SETTINGS_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST((klass),\
-		GIGOLO_SETTINGS_TYPE, GigoloSettingsClass))
-#define IS_GIGOLO_SETTINGS(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj), GIGOLO_SETTINGS_TYPE))
-#define IS_GIGOLO_SETTINGS_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass), GIGOLO_SETTINGS_TYPE))
+G_DECLARE_FINAL_TYPE(GigoloSettings, gigolo_settings, GIGOLO, SETTINGS, GObject)
 
-typedef struct _GigoloSettings			GigoloSettings;
-typedef struct _GigoloSettingsClass		GigoloSettingsClass;
 typedef 	   GPtrArray				GigoloBookmarkList;
 
 typedef enum
@@ -41,17 +36,6 @@ typedef enum
 	GIGOLO_SETTINGS_BOOKMARKS		= (1 << 1)
 } GigoloSettingsFlags;
 
-struct _GigoloSettings
-{
-	GObject parent;
-};
-
-struct _GigoloSettingsClass
-{
-	GObjectClass parent_class;
-};
-
-GType				gigolo_settings_get_type			(void);
 GigoloSettings*		gigolo_settings_new					(void);
 
 void				gigolo_settings_write				(GigoloSettings *settings, GigoloSettingsFlags flags);

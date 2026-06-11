@@ -21,32 +21,13 @@
 #ifndef __WINDOW_H__
 #define __WINDOW_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define GIGOLO_WINDOW_TYPE					(gigolo_window_get_type())
-#define GIGOLO_WINDOW(obj)					(G_TYPE_CHECK_INSTANCE_CAST((obj),\
-		GIGOLO_WINDOW_TYPE, GigoloWindow))
-#define GIGOLO_WINDOW_CLASS(klass)			(G_TYPE_CHECK_CLASS_CAST((klass),\
-		GIGOLO_WINDOW_TYPE, GigoloWindowClass))
-#define IS_GIGOLO_WINDOW(obj)				(G_TYPE_CHECK_INSTANCE_TYPE((obj), GIGOLO_WINDOW_TYPE))
-#define IS_GIGOLO_WINDOW_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE((klass), GIGOLO_WINDOW_TYPE))
+G_DECLARE_FINAL_TYPE(GigoloWindow, gigolo_window, GIGOLO, WINDOW, GtkWindow)
 
-
-
-typedef struct _GigoloWindow				GigoloWindow;
-typedef struct _GigoloWindowClass			GigoloWindowClass;
-
-struct _GigoloWindow
-{
-	GtkWindow parent;
-};
-
-struct _GigoloWindowClass
-{
-	GtkWindowClass parent_class;
-};
-
-GType			gigolo_window_get_type				(void);
 GtkWidget*		gigolo_window_new					(GigoloSettings *settings);
 
 void			gigolo_window_update_bookmarks		(GigoloWindow *window);
