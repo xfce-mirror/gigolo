@@ -188,7 +188,7 @@ static gboolean check_custom_uri(const gchar *uri)
 gint gigolo_bookmark_edit_dialog_run(GigoloBookmarkEditDialog *dialog)
 {
 	gint res;
-	gboolean error = FALSE;
+	gboolean error;
 	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 	const gchar *tmp;
 
@@ -469,7 +469,6 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 {
 	struct MethodInfo *meth;
 	guint idx;
-	guint port = 0;
 	GtkTreeIter iter;
 	GigoloBookmarkEditDialogPrivate *priv = gigolo_bookmark_edit_dialog_get_instance_private(dialog);
 
@@ -517,7 +516,7 @@ static void setup_for_type(GigoloBookmarkEditDialog *dialog)
 	}
 	else
 	{
-		port = meth->port;
+		guint port = meth->port;
 		if (priv->bookmark_init && idx == scheme_to_index(gigolo_bookmark_get_scheme(priv->bookmark_init)))
 			port = gigolo_bookmark_get_port(priv->bookmark_init);
 		gtk_spin_button_set_value(GTK_SPIN_BUTTON(priv->port_spin), port);
