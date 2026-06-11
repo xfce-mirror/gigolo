@@ -56,9 +56,6 @@ GigoloSettings*		gigolo_settings_new					(void);
 
 void				gigolo_settings_write				(GigoloSettings *settings, GigoloSettingsFlags flags);
 
-const gchar*		gigolo_settings_get_vm_impl			(GigoloSettings *settings);
-void				gigolo_settings_set_vm_impl			(GigoloSettings *settings, const gchar *impl);
-
 const gint*			gigolo_settings_get_geometry		(GigoloSettings *settings);
 void				gigolo_settings_set_geometry		(GigoloSettings *settings, const gint *geometry, gsize len);
 

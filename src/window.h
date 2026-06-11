@@ -57,8 +57,6 @@ void			gigolo_window_mount_from_bookmark	(GigoloWindow *window,
 													 gboolean show_dialog,
 													 gboolean show_errors);
 
-GigoloBookmark*	gigolo_window_find_bookmark_by_uri	(GigoloWindow *window, const gchar *uri);
-
 GigoloSettings*	gigolo_window_get_settings			(GigoloWindow *window);
 
 GigoloBackendGVFS*	gigolo_window_get_backend		(GigoloWindow *window);
