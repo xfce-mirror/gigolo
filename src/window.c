@@ -1221,26 +1221,17 @@ static void view_mode_action_set_active(GigoloWindow *window, gint val)
 
 static void gigolo_window_systray_notify_cb(GtkStatusIcon *sicon, GParamSpec *pspec, GtkWindow *window)
 {
-	const gchar *name;
-	GValue *value;
-
 	/* nothing to do if the main window is visible */
 	if (gtk_window_is_active(window))
 		return;
 
-	name = g_intern_string(pspec->name);
-	value = g_new0(GValue, 1);
-	g_value_init(value, pspec->value_type);
-
-	if (name == g_intern_string("embedded"))
+	gboolean embedded = FALSE;
+	g_object_get(G_OBJECT(sicon), "embedded", &embedded, NULL);
+	/* if the icon is not embedded anymore, we display the main window otherwise
+	 * it will be lost */
+	if (!embedded)
 	{
-		g_object_get_property(G_OBJECT(sicon), name, value);
-		/* if the icon is not embedded anymore, we display the main window otherwise
-		 * it will be lost */
-		if (! g_value_get_boolean(value))
-		{
-			gtk_window_present(window);
-		}
+		gtk_window_present(window);
 	}
 }
 
@@ -1708,7 +1699,7 @@ static void gigolo_window_init(GigoloWindow *window)
 		G_GNUC_END_IGNORE_DEPRECATIONS
 		g_signal_connect(priv->systray_icon, "activate", G_CALLBACK(systray_icon_activate_cb), window);
 		g_signal_connect(priv->systray_icon, "popup-menu", G_CALLBACK(systray_icon_popup_menu_cb), window);
-		g_signal_connect(priv->systray_icon, "notify", G_CALLBACK(gigolo_window_systray_notify_cb), window);
+		g_signal_connect(priv->systray_icon, "notify::embedded", G_CALLBACK(gigolo_window_systray_notify_cb), window);
 		g_signal_connect_object(gtk_icon_theme_get_default(), "changed", G_CALLBACK(icon_theme_changed_cb), priv->systray_icon, 0);
 	}
 }
