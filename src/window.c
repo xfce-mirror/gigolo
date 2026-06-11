@@ -67,6 +67,7 @@ struct _GigoloWindowPrivate
 	GtkWidget *settings_dialog;
 	GtkWidget *bookmarks_dialog;
 	GtkWidget *mount_dialog;
+	GtkWidget *schemes_dialog;
 
 	GtkWidget		*vbox;
 	GtkWidget		*hbox_view;
@@ -155,6 +156,17 @@ static gboolean gigolo_window_destroy(GigoloWindow *window)
 	{
 		/* close mount dialog and let things end there before re-entering here */
 		gtk_dialog_response(GTK_DIALOG(priv->mount_dialog), GTK_RESPONSE_CLOSE);
+		if (!idled)
+		{
+			g_idle_add((GSourceFunc)gigolo_window_destroy, window);
+			idled = TRUE;
+		}
+	}
+
+	if (priv->schemes_dialog != NULL)
+	{
+		/* close schemes dialog and let things end there before re-entering here */
+		gtk_dialog_response(GTK_DIALOG(priv->schemes_dialog), GTK_RESPONSE_CLOSE);
 		if (!idled)
 		{
 			g_idle_add((GSourceFunc)gigolo_window_destroy, window);
@@ -506,14 +518,20 @@ static void align_message_dialog (GtkWidget *widget, gpointer ptr)
 
 static void supported_schemes_cb(GtkWidget *widget, GigoloWindow *window)
 {
+	GigoloWindowPrivate *priv = gigolo_window_get_instance_private(window);
 	const gchar* const *supported;
 	const gchar *description;
 	GString *str;
-	GtkWidget *dialog;
 	GtkWidget *message_area;
 	guint j;
 	GList *items = NULL;
 	GList *iter = NULL;
+
+	if (priv->schemes_dialog != NULL)
+	{
+		gtk_window_present(GTK_WINDOW(priv->schemes_dialog));
+		return;
+	}
 
 	supported = gigolo_backend_gvfs_get_supported_uri_schemes();
 	for (j = 0; supported[j] != NULL; j++)
@@ -538,18 +556,18 @@ static void supported_schemes_cb(GtkWidget *widget, GigoloWindow *window)
 
 	g_list_free_full (items, (GDestroyNotify) g_free);
 
-	dialog = gtk_message_dialog_new_with_markup(GTK_WINDOW(window),
+	priv->schemes_dialog = gtk_message_dialog_new_with_markup(GTK_WINDOW(window),
 		GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_INFO,
 		GTK_BUTTONS_OK, "<b>%s</b>", _("Supported Protocols"));
 
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s", str->str);
+	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (priv->schemes_dialog), "%s", str->str);
 
-	message_area = gtk_message_dialog_get_message_area (GTK_MESSAGE_DIALOG (dialog));
+	message_area = gtk_message_dialog_get_message_area (GTK_MESSAGE_DIALOG (priv->schemes_dialog));
 	gtk_container_forall (GTK_CONTAINER (message_area), align_message_dialog, NULL);
 
-	gtk_dialog_run(GTK_DIALOG(dialog));
+	gtk_dialog_run(GTK_DIALOG(priv->schemes_dialog));
 
-	gtk_widget_destroy(dialog);
+	g_clear_pointer(&priv->schemes_dialog, gtk_widget_destroy);
 	g_string_free(str, TRUE);
 }
 
