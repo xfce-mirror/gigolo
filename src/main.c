@@ -56,32 +56,102 @@ static GOptionEntry cli_options[] =
 };
 
 
+typedef struct
+{
+	GMainLoop *loop;
+	gint       pending;
+} AutoConnectData;
+
+static void auto_connect_mount_cb(GObject *source, GAsyncResult *res, gpointer user_data)
+{
+	AutoConnectData *data = (AutoConnectData *) user_data;
+	GError *error = NULL;
+
+	g_return_if_fail(G_IS_FILE(source));
+	g_return_if_fail(G_IS_ASYNC_RESULT(res));
+
+	g_file_mount_enclosing_volume_finish(G_FILE(source), res, &error);
+
+	if (error != NULL)
+	{
+		if (! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_ALREADY_MOUNTED))
+			g_warning("Auto-connect mount failed: %s", error->message);
+		g_error_free(error);
+	}
+
+	data->pending--;
+	if (data->pending <= 0)
+		g_main_loop_quit(data->loop);
+}
+
+
+static gboolean auto_connect_timeout_cb(gpointer user_data)
+{
+	g_main_loop_quit(((AutoConnectData *) user_data)->loop);
+	return G_SOURCE_REMOVE;
+}
+
+
 static gboolean auto_connect_bookmarks(void)
 {
-	GigoloBackendGVFS *backend_gvfs;
 	GigoloSettings *settings;
 	GigoloBookmarkList *bookmarks;
 	GigoloBookmark *bm;
 	guint i;
 	gchar *uri;
+	AutoConnectData *data;
+	guint timeout_id;
 
-	backend_gvfs = gigolo_backend_gvfs_new();
 	settings = gigolo_settings_new();
 	bookmarks = gigolo_settings_get_bookmarks(settings);
+
+	data = g_new0(AutoConnectData, 1);
+	data->loop = g_main_loop_new(NULL, FALSE);
+	data->pending = 0;
 
 	for (i = 0; i < bookmarks->len; i++)
 	{
 		bm = g_ptr_array_index(bookmarks, i);
 		if (gigolo_bookmark_get_autoconnect(bm) && ! gigolo_bookmark_get_should_not_autoconnect(bm))
+			data->pending++;
+	}
+
+	if (data->pending == 0)
+	{
+		g_main_loop_unref(data->loop);
+		g_free(data);
+		g_object_unref(settings);
+		return TRUE;
+	}
+
+	verbose("Auto-connecting %d bookmark(s)", data->pending);
+
+	for (i = 0; i < bookmarks->len; i++)
+	{
+		GFile *file;
+
+		bm = g_ptr_array_index(bookmarks, i);
+		if (gigolo_bookmark_get_autoconnect(bm) && ! gigolo_bookmark_get_should_not_autoconnect(bm))
 		{
 			uri = gigolo_bookmark_get_uri_escaped(bm);
-			/* Mounting happens asynchronously here and so we don't wait until it is finished
-			 * nor de we get any feedback or errors.
-			 * TODO make this synchronous(looping and checking) and check for errors */
-			gigolo_backend_gvfs_mount_uri(backend_gvfs, uri, NULL, NULL, FALSE);
+			file = g_file_new_for_uri(uri);
+			g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, NULL, NULL,
+				(GAsyncReadyCallback) auto_connect_mount_cb, data);
+			g_object_unref(file);
 			g_free(uri);
 		}
 	}
+
+	timeout_id = g_timeout_add(30000, auto_connect_timeout_cb, data);
+
+	g_main_loop_run(data->loop);
+
+	g_source_remove(timeout_id);
+	g_main_loop_unref(data->loop);
+	g_free(data);
+	g_object_unref(settings);
+
+	verbose("Auto-connect finished");
 
 	return TRUE;
 }
