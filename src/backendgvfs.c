@@ -569,15 +569,15 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 }
 
 
-void gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
-								   GtkWindow *parent, GtkWidget *dialog, gboolean show_errors)
+GFile *gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
+									 GtkWindow *parent, GtkWidget *dialog, gboolean show_errors)
 {
 	GMountOperation *op;
 	GFile *file;
 	MountInfo *mi;
 
-	g_return_if_fail(uri != NULL);
-	g_return_if_fail(backend != NULL);
+	g_return_val_if_fail(uri != NULL, NULL);
+	g_return_val_if_fail(backend != NULL, NULL);
 
 	op = gtk_mount_operation_new(GTK_WINDOW(parent));
 	file = g_file_new_for_uri(uri);
@@ -589,8 +589,9 @@ void gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
 	g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
 		(GAsyncReadyCallback) mount_ready_cb, mi);
 
-	g_object_unref(file);
 	g_object_unref(op);
+
+	return file;
 }
 
 

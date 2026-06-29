@@ -77,7 +77,7 @@ void				gigolo_backend_gvfs_unmount_mount				(GigoloBackendGVFS *backend, gpoint
 
 void				gigolo_backend_gvfs_update_mounts_and_volumes	(GigoloBackendGVFS *backend);
 
-void				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
+GFile*				gigolo_backend_gvfs_mount_uri					(GigoloBackendGVFS *backend,
 																	 const gchar *uri,
 																	 GtkWindow *parent,
 																	 GtkWidget *dialog,

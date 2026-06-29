@@ -326,7 +326,7 @@ void gigolo_window_mount_from_bookmark(GigoloWindow *window, GigoloBookmark *boo
 		g_free(label);
 	}
 
-	gigolo_backend_gvfs_mount_uri(priv->backend_gvfs, uri, GTK_WINDOW(window), dialog, show_errors);
+	g_object_unref(gigolo_backend_gvfs_mount_uri(priv->backend_gvfs, uri, GTK_WINDOW(window), dialog, show_errors));
 
 	if (gigolo_bookmark_get_autoconnect(bookmark))
 		gigolo_bookmark_set_should_not_autoconnect(bookmark, FALSE);
