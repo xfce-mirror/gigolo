@@ -100,7 +100,6 @@ static gboolean auto_connect_bookmarks(void)
 			file = gigolo_backend_gvfs_mount_uri(backend_gvfs, uri, NULL, NULL, FALSE);
 			ad.files = g_list_prepend(ad.files, file);
 			g_object_weak_ref(G_OBJECT(file), on_file_released, &ad);
-			g_object_unref(file);
 			g_free(uri);
 		}
 	}

@@ -589,6 +589,7 @@ GFile *gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *ur
 	g_file_mount_enclosing_volume(file, G_MOUNT_MOUNT_NONE, op, NULL,
 		(GAsyncReadyCallback) mount_ready_cb, mi);
 
+	g_object_unref(file);
 	g_object_unref(op);
 
 	return file;
