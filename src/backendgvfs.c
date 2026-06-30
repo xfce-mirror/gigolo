@@ -570,7 +570,7 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 
 
 GFile *gigolo_backend_gvfs_mount_uri(GigoloBackendGVFS *backend, const gchar *uri,
-									 GtkWindow *parent, GtkWidget *dialog, gboolean show_errors)
+								   GtkWindow *parent, GtkWidget *dialog, gboolean show_errors)
 {
 	GMountOperation *op;
 	GFile *file;
