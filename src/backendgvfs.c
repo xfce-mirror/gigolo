@@ -551,6 +551,7 @@ static void mount_ready_cb(GFile *location, GAsyncResult *res, MountInfo *mi)
 	if (error != NULL && ! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_ALREADY_MOUNTED))
 	{
 		gchar *msg = g_strdup_printf(_("Connecting to \"%s\" failed."), uri);
+		g_object_set_data(G_OBJECT(location), "mount-failed", GINT_TO_POINTER(TRUE));
 		if (mi->show_errors && ! g_error_matches(error, G_IO_ERROR, G_IO_ERROR_FAILED_HANDLED))
 			g_signal_emit(mi->self, signals[OPERATION_FAILED], 0, msg, error->message);
 		else

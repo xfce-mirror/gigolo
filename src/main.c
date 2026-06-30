@@ -60,15 +60,27 @@ typedef struct
 {
 	GMainLoop *loop;
 	GList     *files;
+	guint      n_success;
+	guint      n_failed;
 } AutoConnectData;
 
 static void on_file_released(gpointer data, GObject *where_the_object_was)
 {
 	AutoConnectData *ad = (AutoConnectData *) data;
 
+	if (GPOINTER_TO_INT(g_object_get_data(where_the_object_was, "mount-failed")))
+		ad->n_failed++;
+	else
+		ad->n_success++;
+
 	ad->files = g_list_remove(ad->files, where_the_object_was);
 	if (ad->files == NULL)
+	{
+		verbose("%u mounted successfully or already mounted, %u failure%s",
+				ad->n_success, ad->n_failed,
+				ad->n_failed == 1 ? "" : "s");
 		g_main_loop_quit(ad->loop);
+	}
 }
 
 static gboolean auto_connect_bookmarks(void)
@@ -87,6 +99,8 @@ static gboolean auto_connect_bookmarks(void)
 
 	ad.loop = g_main_loop_new(NULL, FALSE);
 	ad.files = NULL;
+	ad.n_success = 0;
+	ad.n_failed = 0;
 
 	for (i = 0; i < bookmarks->len; i++)
 	{
@@ -112,7 +126,7 @@ static gboolean auto_connect_bookmarks(void)
 	g_object_unref(settings);
 	g_object_unref(backend_gvfs);
 
-	return TRUE;
+	return ad.n_failed == 0;
 }
 
 
