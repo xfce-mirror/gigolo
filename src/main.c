@@ -56,6 +56,33 @@ static GOptionEntry cli_options[] =
 };
 
 
+typedef struct
+{
+	GMainLoop *loop;
+	GList     *files;
+	guint      n_success;
+	guint      n_failed;
+} AutoConnectData;
+
+static void on_file_released(gpointer data, GObject *where_the_object_was)
+{
+	AutoConnectData *ad = (AutoConnectData *) data;
+
+	if (GPOINTER_TO_INT(g_object_get_data(where_the_object_was, "mount-failed")))
+		ad->n_failed++;
+	else
+		ad->n_success++;
+
+	ad->files = g_list_remove(ad->files, where_the_object_was);
+	if (ad->files == NULL)
+	{
+		verbose("%u mounted successfully or already mounted, %u failure%s",
+				ad->n_success, ad->n_failed,
+				ad->n_failed == 1 ? "" : "s");
+		g_main_loop_quit(ad->loop);
+	}
+}
+
 static gboolean auto_connect_bookmarks(void)
 {
 	GigoloBackendGVFS *backend_gvfs;
@@ -64,26 +91,41 @@ static gboolean auto_connect_bookmarks(void)
 	GigoloBookmark *bm;
 	guint i;
 	gchar *uri;
+	AutoConnectData ad;
 
 	backend_gvfs = gigolo_backend_gvfs_new();
 	settings = gigolo_settings_new();
 	bookmarks = gigolo_settings_get_bookmarks(settings);
+
+	ad.loop = g_main_loop_new(NULL, FALSE);
+	ad.files = NULL;
+	ad.n_success = 0;
+	ad.n_failed = 0;
 
 	for (i = 0; i < bookmarks->len; i++)
 	{
 		bm = g_ptr_array_index(bookmarks, i);
 		if (gigolo_bookmark_get_autoconnect(bm) && ! gigolo_bookmark_get_should_not_autoconnect(bm))
 		{
+			GFile *file;
+
 			uri = gigolo_bookmark_get_uri_escaped(bm);
-			/* Mounting happens asynchronously here and so we don't wait until it is finished
-			 * nor de we get any feedback or errors.
-			 * TODO make this synchronous(looping and checking) and check for errors */
-			gigolo_backend_gvfs_mount_uri(backend_gvfs, uri, NULL, NULL, FALSE);
+			verbose("Auto-connecting to \"%s\"", uri);
+			file = gigolo_backend_gvfs_mount_uri(backend_gvfs, uri, NULL, NULL, FALSE);
+			ad.files = g_list_prepend(ad.files, file);
+			g_object_weak_ref(G_OBJECT(file), on_file_released, &ad);
 			g_free(uri);
 		}
 	}
 
-	return TRUE;
+	if (ad.files != NULL)
+		g_main_loop_run(ad.loop);
+
+	g_main_loop_unref(ad.loop);
+	g_object_unref(settings);
+	g_object_unref(backend_gvfs);
+
+	return ad.n_failed == 0;
 }
 
 
