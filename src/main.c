@@ -122,7 +122,6 @@ static gboolean auto_connect_bookmarks(void)
 		g_main_loop_run(ad.loop);
 
 	g_main_loop_unref(ad.loop);
-	g_list_free_full(ad.files, g_object_unref);
 	g_object_unref(settings);
 	g_object_unref(backend_gvfs);
 
