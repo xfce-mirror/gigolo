@@ -44,7 +44,7 @@ msgstr ""
 
 #: src/common.c:71
 msgid "Unix Device"
-msgstr ""
+msgstr "Unix მოწყობილობა"
 
 #: src/common.c:73
 msgid "Windows Share"
@@ -93,7 +93,7 @@ msgstr "მდებარეობის ხელით მითითებ�
 #: src/window.c:274
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr ""
+msgstr "\"%s\"-სთან დაკავშირება"
 
 #: src/window.c:428
 msgid ""
@@ -121,7 +121,7 @@ msgstr "მხარდაჭერილი პროტოკოლები"
 #: src/window.c:601 src/window.c:660
 #, c-format
 msgid "The command '%s' failed"
-msgstr ""
+msgstr "ბრძანება \"%s\" ჩავარდა"
 
 #: src/window.c:602 src/window.c:635 src/window.c:648 src/window.c:661
 #: src/window.c:858 src/bookmarkeditdialog.c:207 src/bookmarkeditdialog.c:226
@@ -132,7 +132,7 @@ msgstr "შეცდომა"
 
 #: src/window.c:635
 msgid "Invalid terminal command"
-msgstr ""
+msgstr "არასწორი ტერმინალის ბრძანება"
 
 #: src/window.c:647
 #, c-format
@@ -141,7 +141,7 @@ msgstr ""
 
 #: src/window.c:767
 msgid "Edit _Bookmark"
-msgstr ""
+msgstr "სანიშნეს ჩასწორ_ება"
 
 #: src/window.c:769 src/browsenetworkpanel.c:444 src/browsenetworkpanel.c:487
 msgid "Create _Bookmark"
@@ -169,7 +169,7 @@ msgstr "Gigolo"
 
 #: src/settings.c:688
 msgid "Move it now?"
-msgstr ""
+msgstr "გადავიტანო ახლა?"
 
 #: src/settings.c:689
 msgid "Gigolo needs to move your old configuration directory before starting."
@@ -194,7 +194,7 @@ msgstr "დომენი: %s"
 #: src/bookmarkdialog.c:93
 #, c-format
 msgid "Share: %s"
-msgstr ""
+msgstr "გაზიარება: %s"
 
 #: src/bookmarkdialog.c:99
 #, c-format
@@ -258,11 +258,11 @@ msgstr ""
 
 #: src/bookmarkeditdialog.c:240
 msgid "You must enter a server address or name."
-msgstr ""
+msgstr "უნდა შეიყვანოთ სერვერის მისამართი, ან სახელი."
 
 #: src/bookmarkeditdialog.c:251
 msgid "You must enter a share name."
-msgstr ""
+msgstr "გაზიარების სახელის შეყვანა აუცილებელია."
 
 #: src/bookmarkeditdialog.c:262
 msgid "You must enter a valid URI for the connection."
@@ -303,7 +303,7 @@ msgstr "გაუქმება"
 #. Bookmark Settings
 #: src/bookmarkeditdialog.c:970
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "სანიშნეს მორგება"
 
 #: src/bookmarkeditdialog.c:976
 msgid "_Name:"
@@ -315,7 +315,7 @@ msgstr "_ფერი:"
 
 #: src/bookmarkeditdialog.c:994
 msgid "Au_to-Connect:"
-msgstr ""
+msgstr "ავ_ტოდაკავშირება:"
 
 #. Connection Settings
 #: src/bookmarkeditdialog.c:1005
@@ -324,11 +324,11 @@ msgstr "კავშირის პარამეტრები"
 
 #: src/bookmarkeditdialog.c:1011
 msgid "Service t_ype:"
-msgstr ""
+msgstr "სერვ_ისის ტიპი:"
 
 #: src/bookmarkeditdialog.c:1027
 msgid "_Location (URI):"
-msgstr ""
+msgstr "_მდებარეობა (URI):"
 
 #: src/bookmarkeditdialog.c:1039
 msgid "P_ath:"
@@ -383,7 +383,7 @@ msgstr "ორივე"
 
 #: src/preferencesdialog.c:147
 msgid "Both horizontal"
-msgstr ""
+msgstr "ორივე ჰორიზონტალური"
 
 #: src/preferencesdialog.c:166
 msgid "Horizontal"
@@ -399,7 +399,7 @@ msgstr "სიმბოლოები"
 
 #: src/preferencesdialog.c:187
 msgid "Detailed List"
-msgstr ""
+msgstr "დეტალური სია"
 
 #: src/preferencesdialog.c:331
 msgid "General"
@@ -408,7 +408,7 @@ msgstr "მთავარი"
 #. Row
 #: src/preferencesdialog.c:334
 msgid "_File Manager"
-msgstr ""
+msgstr "ფაილების _მმართველი"
 
 #: src/preferencesdialog.c:345
 msgid "Enter the name of a program to use to open or view mount points"
@@ -426,7 +426,7 @@ msgstr ""
 #. Row
 #: src/preferencesdialog.c:370
 msgid "_Bookmark Auto-Connect Interval"
-msgstr ""
+msgstr "სანიშნეს ავტოდაკავშირე_ბის ინტერვალი"
 
 #: src/preferencesdialog.c:376
 msgid ""
@@ -440,7 +440,7 @@ msgstr "ინტერფეისი"
 
 #: src/preferencesdialog.c:389
 msgid "_Save window position and geometry"
-msgstr ""
+msgstr "ფანჯრი_ს მდებარეობის და გეომეტრიის შენახვა"
 
 #: src/preferencesdialog.c:390
 msgid "Saves the window position and geometry and restores it at the start"
@@ -448,11 +448,11 @@ msgstr ""
 
 #: src/preferencesdialog.c:393
 msgid "Show status _icon in the Notification Area"
-msgstr ""
+msgstr "სტატუსის ხატულას ჩვენება გაფრთხილების არეშ_ი"
 
 #: src/preferencesdialog.c:396
 msgid "Start _minimized in the Notification Area"
-msgstr ""
+msgstr "_სისტემურ საათთან ჩაკეცილი გაშვება"
 
 #: src/preferencesdialog.c:401
 msgid "Show side panel"
@@ -466,7 +466,7 @@ msgstr ""
 
 #: src/preferencesdialog.c:405
 msgid "Show auto-connect error messages"
-msgstr ""
+msgstr "ავტოდაკავშირების შეცდომის შეტყობინებების ჩვენება"
 
 #: src/preferencesdialog.c:406
 msgid ""
@@ -476,7 +476,7 @@ msgstr ""
 
 #: src/preferencesdialog.c:409
 msgid "_Connection List Mode"
-msgstr ""
+msgstr "და_კავშირების სიის რეჟიმი"
 
 #: src/preferencesdialog.c:425
 msgid "Toolbar"
@@ -484,7 +484,7 @@ msgstr "ხელსაწყოთა ზოლი"
 
 #: src/preferencesdialog.c:427
 msgid "Show _toolbar"
-msgstr ""
+msgstr "ხელსაწყოთა ზოლი_ს ჩვენება"
 
 #: src/preferencesdialog.c:430
 msgid "St_yle"
@@ -500,7 +500,7 @@ msgstr "პარამეტრები"
 
 #: src/backendgvfs.c:215
 msgid "No bookmark"
-msgstr ""
+msgstr "სანიშნეს გარეშე"
 
 #: src/backendgvfs.c:233
 #, c-format
@@ -511,12 +511,12 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
+msgstr "<b>%s</b>\n\nURI: %s\nდაკავშირებულია: დიახ\nსერვისის ტიპი: %s\nსანიშნე: %s"
 
 #: src/backendgvfs.c:248
 #, c-format
 msgid "<b>Unix device: %s</b>"
-msgstr ""
+msgstr "<b>Unix მოწყობილობა: %s</b>"
 
 #: src/backendgvfs.c:445 src/backendgvfs.c:484
 msgid "unknown"
@@ -525,12 +525,12 @@ msgstr "უცნობი"
 #: src/backendgvfs.c:451 src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr ""
+msgstr "'%s'-სთან მიერთების შეცდომა."
 
 #: src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr ""
+msgstr "\"%s\"-დან გათიშვა ჩავარდა."
 
 #: src/mountdialog.c:93
 msgid "Connecting"
@@ -538,15 +538,15 @@ msgstr "დაკავშირება"
 
 #: src/browsenetworkpanel.c:181
 msgid "No Workgroups found"
-msgstr ""
+msgstr "სამუშაო ჯგუფები აღმოჩენილი არაა"
 
 #: src/browsenetworkpanel.c:192
 msgid "No Shares found"
-msgstr ""
+msgstr "გაზიარებები აღმოჩენილი არაა"
 
 #: src/browsenetworkpanel.c:197
 msgid "No Hosts found"
-msgstr ""
+msgstr "ჰოსტები ნაპოვნი არაა"
 
 #: src/browsenetworkpanel.c:437 src/gigolo.ui:157 src/gigolo.ui:490
 #: src/gigolo.ui:572
@@ -555,7 +555,7 @@ msgstr "_დაკავშირება"
 
 #: src/browsenetworkpanel.c:480
 msgid "Connect to the selected share"
-msgstr ""
+msgstr "არჩეულ გაზიარებასთან დაკავშირება"
 
 #: src/browsenetworkpanel.c:488
 msgid "Create a bookmark from the selected share"
@@ -563,7 +563,7 @@ msgstr ""
 
 #: src/browsenetworkpanel.c:498
 msgid "Refresh the network list"
-msgstr ""
+msgstr "ქსელთა სიის განახლება"
 
 #: src/browsenetworkpanel.c:510 src/bookmarkpanel.c:263
 msgid "Close panel"
@@ -575,7 +575,7 @@ msgstr "სანიშნეების გარეშე"
 
 #: src/bookmarkpanel.c:251
 msgid "Connect to the selected bookmark"
-msgstr ""
+msgstr "არჩეულ სანიშნესთან დაკავშირება"
 
 #: src/gigolo.ui:23
 msgid "_File"
@@ -587,7 +587,7 @@ msgstr "გასვ_ლა"
 
 #: src/gigolo.ui:56 src/gigolo.ui:313 src/gigolo.ui:506
 msgid "_Edit Bookmarks"
-msgstr ""
+msgstr "სანიშნე_ების ჩასწორება"
 
 #: src/gigolo.ui:71 src/gigolo.ui:514
 msgid "_Preferences"
@@ -607,15 +607,15 @@ msgstr "გვერდითი _პანელი"
 
 #: src/gigolo.ui:110
 msgid "Status _Icon"
-msgstr ""
+msgstr "სტატუს_ის ხატულა"
 
 #: src/gigolo.ui:124
 msgid "View as _Symbols"
-msgstr ""
+msgstr "ხედი _სიმბოლოების სახით"
 
 #: src/gigolo.ui:133
 msgid "View as _Detailed List"
-msgstr ""
+msgstr "ხედი _დეტალური სიის სახით"
 
 #: src/gigolo.ui:147
 msgid "_Actions"
@@ -639,7 +639,7 @@ msgstr "ტერმინალში გახსნა"
 
 #: src/gigolo.ui:206 src/gigolo.ui:550
 msgid "_Copy URI"
-msgstr ""
+msgstr "URI-ის _კოპირება"
 
 #: src/gigolo.ui:219
 msgid "_Help"
@@ -655,11 +655,11 @@ msgstr "შესახებ"
 
 #: src/gigolo.ui:274
 msgid "Choose a bookmark to connect to"
-msgstr ""
+msgstr "აირჩიეთ სანიშნე დასაკავშირებლად"
 
 #: src/gigolo.ui:288
 msgid "Disconnect the selected resource"
-msgstr ""
+msgstr "არჩეული რესურსის გათიშვა"
 
 #: src/gigolo.ui:312
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
@@ -671,7 +671,7 @@ msgstr ""
 
 #: src/gigolo.ui:350
 msgid "Start a terminal from here"
-msgstr ""
+msgstr "ტერმინალის გაშვება აქ"
 
 #: src/gigolo.ui:351
 msgid "Open _Terminal"
@@ -679,15 +679,15 @@ msgstr "გახსენი _ტერმინალი"
 
 #: src/gigolo.ui:374
 msgid "Quit Gigolo"
-msgstr ""
+msgstr "Gigolo-დან გასვლა"
 
 #: src/gigolo.ui:558
 msgid "_Edit Bookmark"
-msgstr ""
+msgstr "სანიშნეს ჩასწორ_ება"
 
 #: gigolo.desktop.in:6
 msgid "Frontend for GIO/GVfs"
-msgstr ""
+msgstr "წინაბოლო GIO/GVfs-სთვის"
 
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
@@ -695,4 +695,4 @@ msgstr ""
 
 #: gigolo.desktop.in:13
 msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
-msgstr ""
+msgstr "remote;filesystem;connect;network;GIO;GVfs;file;manager;მმართველი;დაშორებული;ფაილურისისტემა;დაკავშირება;ქსელი;"
