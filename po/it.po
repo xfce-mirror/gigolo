@@ -7,7 +7,7 @@
 # Emanuele Petriglia <inbox@emanuelepetriglia.com>, 2019-2020,2022-2024
 # gianluca foddis <gianluca.foddis@gmail.com>, 2009
 # Muflone <muflone@vbsimple.net>, 2009
-# Vincenzo Reale <vinx.reale@gmail.com>, 2020
+# Vincenzo Reale <smart2128vr@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Apps\n"
