@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the xfce-apps.gigolo package.
 # 
 # Translators:
+# Dejweed, 2026
 # Arnold Marko <arnold.marko@gmail.com>, 2019-2021,2023
 # Klemen Košir <klemen.kosir@kream.io>, 2013
 # Martin Srebotnjak <miles@filmsi.net>, 2022
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-07-18 11:00+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2019-2021,2023\n"
+"Last-Translator: Dejweed, 2026\n"
 "Language-Team: Slovenian (http://app.transifex.com/xfce/xfce-apps/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -582,7 +583,7 @@ msgstr "Poveži se z izbranim zaznamkom"
 
 #: src/gigolo.ui:23
 msgid "_File"
-msgstr "Datoteka"
+msgstr "_Datoteka"
 
 #: src/gigolo.ui:33 src/gigolo.ui:375 src/gigolo.ui:522
 msgid "_Quit"
@@ -622,7 +623,7 @@ msgstr "_Podroben seznam"
 
 #: src/gigolo.ui:147
 msgid "_Actions"
-msgstr "D_ejanja"
+msgstr "De_janja"
 
 #: src/gigolo.ui:165 src/gigolo.ui:289 src/gigolo.ui:580
 msgid "_Disconnect"
@@ -646,7 +647,7 @@ msgstr "_Kopiraj URI"
 
 #: src/gigolo.ui:219
 msgid "_Help"
-msgstr "Pomoč"
+msgstr "Po_moč"
 
 #: src/gigolo.ui:229
 msgid "Online Help"
@@ -698,4 +699,4 @@ msgstr "Enostavno začelje za povezavo z oddaljenimi datotečnimi sistemi"
 
 #: gigolo.desktop.in:13
 msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
-msgstr ""
+msgstr "oddaljen;datotečni sistem;poveži;omrežje;GIO;GVfs;upravljalnik;datotek;remote;filesystem;connect;network;file;manager;"
