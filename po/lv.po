@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Gatis Kalniņš <>, 2014
+# Rihards Priedītis <rprieditis@gmail.com>, 2026
 # Rūdolfs Mazurs, 2009
 msgid ""
 msgstr ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-07-18 11:00+0200\n"
 "PO-Revision-Date: 2013-07-03 18:23+0000\n"
-"Last-Translator: Gatis Kalniņš <>, 2014\n"
+"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>, 2026\n"
 "Language-Team: Latvian (http://app.transifex.com/xfce/xfce-apps/language/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,19 +22,19 @@ msgstr ""
 
 #: src/main.c:50
 msgid "Connect all bookmarks marked as 'auto connect' and exit"
-msgstr ""
+msgstr "Pievienot visas grāmatzīmes, kas atzīmētas kā „pievienot automātiski”, un iziet"
 
 #: src/main.c:51
 msgid "Ignore running instances, enforce opening a new instance"
-msgstr "Ignorēt jau palaistās instances, uzspiest atvērt jaunu instanci"
+msgstr "Ignorēt darbojošās instances un piespiedu kārtā atvērt jaunu instanci"
 
 #: src/main.c:52
 msgid "Print a list of supported URI schemes"
-msgstr "Izdrukāt sarakstu ar atbalstītajām URI shēmām"
+msgstr "Izdrukāt atbalstīto URI shēmu sarakstu"
 
 #: src/main.c:53
 msgid "Be verbose"
-msgstr "Būt detalizētam"
+msgstr "Izvērsta izvade"
 
 #: src/main.c:54
 msgid "Show version information"
@@ -41,15 +42,15 @@ msgstr "Rādīt versijas informāciju"
 
 #: src/main.c:128
 msgid "- a simple frontend to easily connect to remote filesystems"
-msgstr "- vienkāršs priekšgals lai viegli pieslēgtos attālinātām failu sistēmām"
+msgstr "- vienkārša saskarne ērtai pievienošanai attālām failu sistēmām"
 
 #: src/common.c:71
 msgid "Unix Device"
-msgstr "Unix iekārta"
+msgstr "Unix ierīce"
 
 #: src/common.c:73
 msgid "Windows Share"
-msgstr "Windows koplietotā mape"
+msgstr "Windows koplietojums"
 
 #: src/common.c:75
 msgid "FTP"
@@ -61,7 +62,7 @@ msgstr "HTTP"
 
 #: src/common.c:79
 msgid "SSH / SFTP"
-msgstr ""
+msgstr "SSH / SFTP"
 
 #: src/common.c:81
 msgid "Obex"
@@ -85,35 +86,35 @@ msgstr "Arhīvs"
 
 #: src/common.c:91
 msgid "Photos"
-msgstr "Attēli"
+msgstr "Fotoattēli"
 
 #: src/common.c:93
 msgid "Custom Location"
-msgstr "Pielāgota vieta"
+msgstr "Pielāgota atrašanās vieta"
 
 #: src/window.c:274
 #, c-format
 msgid "Connecting to \"%s\""
-msgstr "Pieslēdzas \"%s\""
+msgstr "Pievienojas „%s”"
 
 #: src/window.c:428
 msgid ""
 "A simple frontend to easily connect/mount to local and remote filesystems"
-msgstr ""
+msgstr "Vienkārša saskarne ērtai pievienošanai/montēšanai lokālām un attālām failu sistēmām"
 
 #: src/window.c:432
 msgid "translator-credits"
-msgstr "Rūdolfs Mazurs, Rihards Prieditis"
+msgstr "Rihards Priedītis <rprieditis@gmail.com>"
 
 #. Translators: This is a list of "protocol description (protocol)"
 #: src/window.c:481
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #: src/window.c:486
 msgid "Gigolo can use the following protocols provided by GVfs:"
-msgstr "Gigolo var izmantot sekojošos GVfs atbalstītos protokolus:"
+msgstr "Gigolo var izmantot šos GVfs nodrošinātos protokolus:"
 
 #: src/window.c:499 src/gigolo.ui:237
 msgid "Supported Protocols"
@@ -122,7 +123,7 @@ msgstr "Atbalstītie protokoli"
 #: src/window.c:601 src/window.c:660
 #, c-format
 msgid "The command '%s' failed"
-msgstr "Komanda \"%s\" neizdevās"
+msgstr "Komanda „%s” neizdevās"
 
 #: src/window.c:602 src/window.c:635 src/window.c:648 src/window.c:661
 #: src/window.c:858 src/bookmarkeditdialog.c:207 src/bookmarkeditdialog.c:226
@@ -133,16 +134,16 @@ msgstr "Kļūda"
 
 #: src/window.c:635
 msgid "Invalid terminal command"
-msgstr ""
+msgstr "Nederīga termināļa komanda"
 
 #: src/window.c:647
 #, c-format
 msgid "No default location available for \"%s\""
-msgstr ""
+msgstr "„%s” nav pieejamas noklusējuma atrašanās vietas"
 
 #: src/window.c:767
 msgid "Edit _Bookmark"
-msgstr "Labot grāmatzīmi"
+msgstr "Rediģēt _grāmatzīmi"
 
 #: src/window.c:769 src/browsenetworkpanel.c:444 src/browsenetworkpanel.c:487
 msgid "Create _Bookmark"
@@ -150,11 +151,11 @@ msgstr "Izveidot _grāmatzīmi"
 
 #: src/window.c:1531
 msgid "Connected"
-msgstr "Pieslēdzies"
+msgstr "Pievienots"
 
 #: src/window.c:1540 src/bookmarkdialog.c:307
 msgid "Service Type"
-msgstr "Pakalpojuma veids"
+msgstr "Pakalpojuma tips"
 
 #: src/window.c:1548 src/bookmarkdialog.c:299
 msgid "Name"
@@ -174,14 +175,14 @@ msgstr "Pārvietot tagad?"
 
 #: src/settings.c:689
 msgid "Gigolo needs to move your old configuration directory before starting."
-msgstr "Gigolo ir nepieciešams pārvietot jūsu veco konfigurācijas mapi pirms palaišanās."
+msgstr "Pirms startēšanas Gigolo jāpārvieto jūsu vecā konfigurācijas mape."
 
 #: src/settings.c:697
 #, c-format
 msgid ""
 "Your old configuration directory \"%s\" could not be moved to \"%s\" (%s). "
 "Please move manually the directory to the new location."
-msgstr "Jūsu veco konfigurācijas mapi \"%s\" nevarēja pārvietot uz \"%s\" (%s). Lūdzu pats pārvietojiet šo mapi uz jauno vietu."
+msgstr "Jūsu veco konfigurācijas mapi „%s” neizdevās pārvietot uz „%s” (%s). Lūdzu, pārvietojiet mapi uz jauno atrašanās vietu pašrocīgi."
 
 #: src/settings.c:700
 msgid "Warning"
@@ -195,7 +196,7 @@ msgstr "Domēns: %s"
 #: src/bookmarkdialog.c:93
 #, c-format
 msgid "Share: %s"
-msgstr "Koplietotā mape: %s"
+msgstr "Koplietojums: %s"
 
 #: src/bookmarkdialog.c:99
 #, c-format
@@ -217,11 +218,11 @@ msgstr "Ports"
 
 #: src/bookmarkdialog.c:331
 msgid "Auto-Connect"
-msgstr "Auto-pieslēgšanās"
+msgstr "Pievienot automātiski"
 
 #: src/bookmarkdialog.c:339
 msgid "Username"
-msgstr "Lietotājs"
+msgstr "Lietotājvārds"
 
 #: src/bookmarkdialog.c:347
 msgid "Other information"
@@ -230,7 +231,7 @@ msgstr "Cita informācija"
 #: src/bookmarkdialog.c:368 src/bookmarkdialog.c:420
 #: src/bookmarkeditdialog.c:788
 msgid "_Add"
-msgstr ""
+msgstr "_Pievienot"
 
 #: src/bookmarkdialog.c:375 src/bookmarkdialog.c:425 src/gigolo.ui:46
 msgid "_Edit"
@@ -246,36 +247,36 @@ msgstr "Rediģēt grāmatzīmes"
 
 #: src/bookmarkdialog.c:410 src/preferencesdialog.c:498
 msgid "_Close"
-msgstr "Ai_zvērt"
+msgstr "_Aizvērt"
 
 #: src/bookmarkeditdialog.c:208
 msgid "You must enter a name for the bookmark."
-msgstr "Jums jāievada grāmatzīmes nosaukums"
+msgstr "Jāievada grāmatzīmes nosaukums."
 
 #: src/bookmarkeditdialog.c:227
 msgid ""
 "The entered bookmark name is already in use. Please choose another one."
-msgstr "Jūsu ievadītais grāmatzīmes nosaukums jau tiek izmantots. Lūdzu izvēlieties citu."
+msgstr "Ievadītais grāmatzīmes nosaukums jau tiek izmantots. Lūdzu, izvēlieties citu."
 
 #: src/bookmarkeditdialog.c:240
 msgid "You must enter a server address or name."
-msgstr "Jums jāievada servera adrese vai vārds."
+msgstr "Jāievada servera adrese vai nosaukums."
 
 #: src/bookmarkeditdialog.c:251
 msgid "You must enter a share name."
-msgstr "Jums jāievada koplietošanas mapes nosaukums."
+msgstr "Jāievada koplietojuma nosaukums."
 
 #: src/bookmarkeditdialog.c:262
 msgid "You must enter a valid URI for the connection."
-msgstr "Jums jāievada derīgs savienojuma URI"
+msgstr "Jāievada derīgs savienojuma URI."
 
 #: src/bookmarkeditdialog.c:522
 msgid "_Device:"
-msgstr "_Iekārta"
+msgstr "_Ierīce:"
 
 #: src/bookmarkeditdialog.c:524 src/bookmarkeditdialog.c:1033
 msgid "_Server:"
-msgstr "_Serveris"
+msgstr "_Serveris:"
 
 #: src/bookmarkeditdialog.c:786
 msgid "Create Bookmark"
@@ -283,53 +284,53 @@ msgstr "Izveidot grāmatzīmi"
 
 #: src/bookmarkeditdialog.c:794
 msgid "Edit Bookmark"
-msgstr "Labot grāmatzīmi"
+msgstr "Rediģēt grāmatzīmi"
 
 #: src/bookmarkeditdialog.c:797
 msgid "_OK"
-msgstr ""
+msgstr "_Labi"
 
 #: src/bookmarkeditdialog.c:803
 msgid "Connect to Server"
-msgstr "Pieslēgties serverim"
+msgstr "Pievienoties serverim"
 
 #: src/bookmarkeditdialog.c:805
 msgid "Co_nnect"
-msgstr ""
+msgstr "_Pievienoties"
 
 #: src/bookmarkeditdialog.c:957
 msgid "_Cancel"
-msgstr ""
+msgstr "A_tcelt"
 
 #. Bookmark Settings
 #: src/bookmarkeditdialog.c:970
 msgid "Bookmark Settings"
-msgstr ""
+msgstr "Grāmatzīmes iestatījumi"
 
 #: src/bookmarkeditdialog.c:976
 msgid "_Name:"
-msgstr ""
+msgstr "_Nosaukums:"
 
 #: src/bookmarkeditdialog.c:985
 msgid "_Color:"
-msgstr "Krāsa:"
+msgstr "_Krāsa:"
 
 #: src/bookmarkeditdialog.c:994
 msgid "Au_to-Connect:"
-msgstr ""
+msgstr "Pievienot _automātiski:"
 
 #. Connection Settings
 #: src/bookmarkeditdialog.c:1005
 msgid "Connection Settings"
-msgstr ""
+msgstr "Savienojuma iestatījumi"
 
 #: src/bookmarkeditdialog.c:1011
 msgid "Service t_ype:"
-msgstr "Pakalpojuma _veids:"
+msgstr "Pakalpojuma _tips:"
 
 #: src/bookmarkeditdialog.c:1027
 msgid "_Location (URI):"
-msgstr "_Vieta (URI):"
+msgstr "_Atrašanās vieta (URI):"
 
 #: src/bookmarkeditdialog.c:1039
 msgid "P_ath:"
@@ -337,12 +338,12 @@ msgstr "_Ceļš:"
 
 #: src/bookmarkeditdialog.c:1045
 msgid "_Share:"
-msgstr "_Koplietotā mape:"
+msgstr "_Koplietojums:"
 
 #. Optional Information
 #: src/bookmarkeditdialog.c:1064
 msgid "Optional Information"
-msgstr ""
+msgstr "Neobligāta informācija"
 
 #: src/bookmarkeditdialog.c:1070
 msgid "_Port:"
@@ -350,7 +351,7 @@ msgstr "_Ports:"
 
 #: src/bookmarkeditdialog.c:1076
 msgid "Set the port to 0 to use the default port"
-msgstr "Uzstādīt portu uz \"0\" lai izmantotu noklusēto portu"
+msgstr "Lai izmantotu noklusējuma portu, iestatiet portu uz 0"
 
 #: src/bookmarkeditdialog.c:1078
 msgid "_Folder:"
@@ -360,7 +361,7 @@ msgstr "_Mape:"
 msgid ""
 "This is not used for the actual mount, only necessary for opening the mount "
 "point in a file browser"
-msgstr ""
+msgstr "Netiek izmantots pašā montēšanā, vajadzīgs tikai montēšanas punkta atvēršanai failu pārlūkā"
 
 #: src/bookmarkeditdialog.c:1087
 msgid "_Domain:"
@@ -368,7 +369,7 @@ msgstr "_Domēns:"
 
 #: src/bookmarkeditdialog.c:1093
 msgid "_User Name:"
-msgstr "_Lietotājs:"
+msgstr "_Lietotājvārds:"
 
 #: src/preferencesdialog.c:144
 msgid "Icons"
@@ -388,11 +389,11 @@ msgstr "Abi horizontāli"
 
 #: src/preferencesdialog.c:166
 msgid "Horizontal"
-msgstr "Horizontāli"
+msgstr "Horizontāls"
 
 #: src/preferencesdialog.c:167
 msgid "Vertical"
-msgstr "Vertikāli"
+msgstr "Vertikāls"
 
 #: src/preferencesdialog.c:186
 msgid "Symbols"
@@ -413,27 +414,27 @@ msgstr "_Failu pārvaldnieks"
 
 #: src/preferencesdialog.c:345
 msgid "Enter the name of a program to use to open or view mount points"
-msgstr "Ievadiet tās programmas nosaukumu, ar kuru atvērt vai apskatīt montēšanas punktus"
+msgstr "Ievadiet tās programmas nosaukumu, ar ko atvērt vai skatīt montēšanas punktus"
 
 #. Row
 #: src/preferencesdialog.c:352
 msgid "_Terminal"
-msgstr "Konsole"
+msgstr "_Terminālis"
 
 #: src/preferencesdialog.c:363
 msgid "Enter the name of a program to open mount points in a terminal"
-msgstr ""
+msgstr "Ievadiet tās programmas nosaukumu, ar ko atvērt montēšanas punktus terminālī"
 
 #. Row
 #: src/preferencesdialog.c:370
 msgid "_Bookmark Auto-Connect Interval"
-msgstr "Sagla_bāt grāmatzīmēs auto-pieslēgšanās intervālu"
+msgstr "Grāmatzīmju _automātiskās pievienošanas intervāls"
 
 #: src/preferencesdialog.c:376
 msgid ""
 "How often to try auto connecting bookmarks, in seconds. Zero disables "
 "checking."
-msgstr "Cik bieži mēģināt automātiski pieslēgties grāmatzīmēm, sekundēs. Nulle atslēdz pārbaudi."
+msgstr "Cik bieži (sekundēs) mēģināt automātiski pievienot grāmatzīmes. Nulle atspējo pārbaudi."
 
 #: src/preferencesdialog.c:387
 msgid "Interface"
@@ -441,19 +442,19 @@ msgstr "Saskarne"
 
 #: src/preferencesdialog.c:389
 msgid "_Save window position and geometry"
-msgstr "_Saglabāt loga atrašanās vietu izmēru"
+msgstr "_Saglabāt loga novietojumu un izmērus"
 
 #: src/preferencesdialog.c:390
 msgid "Saves the window position and geometry and restores it at the start"
-msgstr "Saglabā logs atrašanās vietu un izmēru un atjaunot to palaižoties"
+msgstr "Saglabā loga novietojumu un izmērus un atjauno tos startējot"
 
 #: src/preferencesdialog.c:393
 msgid "Show status _icon in the Notification Area"
-msgstr "Rādīt statusa _ikonu ziņojumu laukā"
+msgstr "Rādīt statusa _ikonu paziņojumu laukā"
 
 #: src/preferencesdialog.c:396
 msgid "Start _minimized in the Notification Area"
-msgstr "Sākt _minimizētu ziņojumu laukā"
+msgstr "Startēt _minimizētu paziņojumu laukā"
 
 #: src/preferencesdialog.c:401
 msgid "Show side panel"
@@ -463,33 +464,33 @@ msgstr "Rādīt sānu paneli"
 msgid ""
 "Whether to show a side panel for browsing the local network for available "
 "Samba/Windows shares and a bookmark list"
-msgstr "Vai rādīt sānu paneli, lai pārlūkotu Samba koplietošanas mapes lokālajā tīklā un grāmatzīmju sarakstu"
+msgstr "Vai rādīt sānu paneli ar lokālajā tīklā pieejamo Samba/Windows koplietojumu pārlūku un grāmatzīmju sarakstu"
 
 #: src/preferencesdialog.c:405
 msgid "Show auto-connect error messages"
-msgstr "Rādīt auto-pieslēgšanās kļūdas ziņojumus"
+msgstr "Rādīt automātiskās pievienošanas kļūdu ziņojumus"
 
 #: src/preferencesdialog.c:406
 msgid ""
 "Whether to show error message dialogs when auto-connecting of bookmarks "
 "fails"
-msgstr "Vai rādīt kļūdu paziņojumu dialogus, kad neizdodas grāmatzīmju auto-pieslēgšanās"
+msgstr "Vai rādīt kļūdu ziņojumu dialoglodziņus, ja grāmatzīmju automātiskā pievienošana neizdodas"
 
 #: src/preferencesdialog.c:409
 msgid "_Connection List Mode"
-msgstr "_Pieslēgšanās sarakstu režīms"
+msgstr "_Savienojumu saraksta režīms"
 
 #: src/preferencesdialog.c:425
 msgid "Toolbar"
-msgstr "Rīku josla"
+msgstr "Rīkjosla"
 
 #: src/preferencesdialog.c:427
 msgid "Show _toolbar"
-msgstr "Rādīt _rīku joslu"
+msgstr "Rādīt _rīkjoslu"
 
 #: src/preferencesdialog.c:430
 msgid "St_yle"
-msgstr "_Stils"
+msgstr "Sti_ls"
 
 #: src/preferencesdialog.c:439
 msgid "_Orientation"
@@ -501,7 +502,7 @@ msgstr "Iestatījumi"
 
 #: src/backendgvfs.c:215
 msgid "No bookmark"
-msgstr ""
+msgstr "Nav grāmatzīmes"
 
 #: src/backendgvfs.c:233
 #, c-format
@@ -512,7 +513,7 @@ msgid ""
 "Connected: Yes\n"
 "Service Type: %s\n"
 "Bookmark: %s"
-msgstr ""
+msgstr "<b>%s</b>\n\nURI: %s\nPievienots: jā\nPakalpojuma tips: %s\nGrāmatzīme: %s"
 
 #: src/backendgvfs.c:248
 #, c-format
@@ -526,41 +527,41 @@ msgstr "nezināms"
 #: src/backendgvfs.c:451 src/backendgvfs.c:559
 #, c-format
 msgid "Connecting to \"%s\" failed."
-msgstr "Neizdevās pieslēgties \"%s\"."
+msgstr "Neizdevās pievienoties „%s”."
 
 #: src/backendgvfs.c:488
 #, c-format
 msgid "Disconnecting from \"%s\" failed."
-msgstr "Atslēgšanās no \"%s\" neizdevās."
+msgstr "Neizdevās atvienoties no „%s”."
 
 #: src/mountdialog.c:93
 msgid "Connecting"
-msgstr "Pieslēdzas"
+msgstr "Pievienojas"
 
 #: src/browsenetworkpanel.c:181
 msgid "No Workgroups found"
-msgstr "Neatradās darba grupas"
+msgstr "Nav atrasta neviena darba grupa"
 
 #: src/browsenetworkpanel.c:192
 msgid "No Shares found"
-msgstr "Neatradās koplietošanas mapes"
+msgstr "Nav atrasts neviens koplietojums"
 
 #: src/browsenetworkpanel.c:197
 msgid "No Hosts found"
-msgstr "Neatradās resursdatori"
+msgstr "Nav atrasts neviens resursdators"
 
 #: src/browsenetworkpanel.c:437 src/gigolo.ui:157 src/gigolo.ui:490
 #: src/gigolo.ui:572
 msgid "_Connect"
-msgstr ""
+msgstr "_Pievienoties"
 
 #: src/browsenetworkpanel.c:480
 msgid "Connect to the selected share"
-msgstr "Pieslēgties izvēlētajai koplietošanas mapei"
+msgstr "Pievienoties atlasītajam koplietojumam"
 
 #: src/browsenetworkpanel.c:488
 msgid "Create a bookmark from the selected share"
-msgstr "Izveidot grāmatzīmi no izvēlētās koplietošanas mapes"
+msgstr "Izveidot grāmatzīmi no atlasītā koplietojuma"
 
 #: src/browsenetworkpanel.c:498
 msgid "Refresh the network list"
@@ -576,7 +577,7 @@ msgstr "Nav grāmatzīmju"
 
 #: src/bookmarkpanel.c:251
 msgid "Connect to the selected bookmark"
-msgstr "Pieslēgties izvēlētajai grāmatzīmei"
+msgstr "Pievienoties atlasītajai grāmatzīmei"
 
 #: src/gigolo.ui:23
 msgid "_File"
@@ -584,15 +585,15 @@ msgstr "_Fails"
 
 #: src/gigolo.ui:33 src/gigolo.ui:375 src/gigolo.ui:522
 msgid "_Quit"
-msgstr "I_ziet"
+msgstr "_Iziet"
 
 #: src/gigolo.ui:56 src/gigolo.ui:313 src/gigolo.ui:506
 msgid "_Edit Bookmarks"
-msgstr "_Labot grāmatzīmes"
+msgstr "_Rediģēt grāmatzīmes"
 
 #: src/gigolo.ui:71 src/gigolo.ui:514
 msgid "_Preferences"
-msgstr ""
+msgstr "_Iestatījumi"
 
 #: src/gigolo.ui:84
 msgid "_View"
@@ -600,7 +601,7 @@ msgstr "_Skats"
 
 #: src/gigolo.ui:94
 msgid "_Toolbar"
-msgstr "_Rīku josla"
+msgstr "_Rīkjosla"
 
 #: src/gigolo.ui:102
 msgid "Side _Panel"
@@ -624,7 +625,7 @@ msgstr "_Darbības"
 
 #: src/gigolo.ui:165 src/gigolo.ui:289 src/gigolo.ui:580
 msgid "_Disconnect"
-msgstr ""
+msgstr "_Atvienot"
 
 #: src/gigolo.ui:174 src/gigolo.ui:275 src/gigolo.ui:498
 msgid "_Bookmarks"
@@ -632,68 +633,68 @@ msgstr "_Grāmatzīmes"
 
 #: src/gigolo.ui:188 src/gigolo.ui:337 src/gigolo.ui:534
 msgid "_Open"
-msgstr ""
+msgstr "_Atvērt"
 
 #: src/gigolo.ui:197 src/gigolo.ui:542
 msgid "Open in _Terminal"
-msgstr "Atvērt konsolē"
+msgstr "Atvērt _terminālī"
 
 #: src/gigolo.ui:206 src/gigolo.ui:550
 msgid "_Copy URI"
-msgstr ""
+msgstr "_Kopēt URI"
 
 #: src/gigolo.ui:219
 msgid "_Help"
-msgstr "Pa_līdzība"
+msgstr "_Palīdzība"
 
 #: src/gigolo.ui:229
 msgid "Online Help"
-msgstr "Palīdzība internetā"
+msgstr "Tiešsaistes palīdzība"
 
 #: src/gigolo.ui:251
 msgid "About"
-msgstr ""
+msgstr "Par"
 
 #: src/gigolo.ui:274
 msgid "Choose a bookmark to connect to"
-msgstr "Izvēlieties, kurai grāmatzīmi pieslēgties"
+msgstr "Izvēlieties grāmatzīmi, kurai pievienoties"
 
 #: src/gigolo.ui:288
 msgid "Disconnect the selected resource"
-msgstr "Atslēgt izvēlēto resursu"
+msgstr "Atvienot atlasīto resursu"
 
 #: src/gigolo.ui:312
 msgid "Open the bookmark manager to add, edit or delete bookmarks"
-msgstr "Atvērt grāmatzīmju pārvaldnieku, lai pievienotu, labotu vai dzēstu grāmatzīmes"
+msgstr "Atvērt grāmatzīmju pārvaldnieku, lai pievienotu, rediģētu vai dzēstu grāmatzīmes"
 
 #: src/gigolo.ui:336
 msgid "Open the selected resource with a file manager"
-msgstr "Atvērt izvēlēto resursu ar failu pārvaldnieku"
+msgstr "Atvērt atlasīto resursu failu pārvaldniekā"
 
 #: src/gigolo.ui:350
 msgid "Start a terminal from here"
-msgstr "Startēt konsoli šeit"
+msgstr "Startēt šeit termināli"
 
 #: src/gigolo.ui:351
 msgid "Open _Terminal"
-msgstr ""
+msgstr "Atvērt _termināli"
 
 #: src/gigolo.ui:374
 msgid "Quit Gigolo"
-msgstr "Iziet no gigolo"
+msgstr "Iziet no Gigolo"
 
 #: src/gigolo.ui:558
 msgid "_Edit Bookmark"
-msgstr ""
+msgstr "_Rediģēt grāmatzīmi"
 
 #: gigolo.desktop.in:6
 msgid "Frontend for GIO/GVfs"
-msgstr ""
+msgstr "GIO/GVfs saskarne"
 
 #: gigolo.desktop.in:7
 msgid "A simple frontend to easily connect to remote filesystems"
-msgstr "Vienkāršs priekšgals, lai viegli pieslēgtos attālinātām failu sistēmām"
+msgstr "Vienkārša saskarne ērtai pievienošanai attālām failu sistēmām"
 
 #: gigolo.desktop.in:13
 msgid "remote;filesystem;connect;network;GIO;GVfs;file;manager;"
-msgstr ""
+msgstr "attāls;failu sistēma;pievienoties;tīkls;fails;pārvaldnieks;remote;filesystem;connect;network;GIO;GVfs;file;manager;"
